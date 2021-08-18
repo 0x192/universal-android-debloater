@@ -1,0 +1,2866 @@
+[
+  {
+    "packageId": "com.android.fmradio",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.gba",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.adups.fota.sysoper",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.camera",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.protips",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.ygps",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.simprocessor",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.mms.appservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.adups.fota",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.st.nfc.dta.mobile",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.launcher3",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.mdmlsample",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.wtk.factory",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.batterywarning",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "ma.android.com.mafactory",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.wtk.stresstest",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.dialer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.calendarimporter",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.thermalmanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.gnssdebugreport",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.elephanttek.faceunlock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.lbs.em2.ui",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.location.mtknlp",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.dataprotection",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.autoinstalls.config.oneplus",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.overlay.target",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.qvaoverlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "cn.oneplus.nvbackup",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "cn.oneplus.oemtcma",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "cn.oneplus.opmms",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.bluetooth.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.cellbroadcastreceiver.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.dialer.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.dialer.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.emergency.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.emergency.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.mms.overlay.ct",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.networkstack.inprocess",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.networkstack.permissionconfig",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.phone.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.phone.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.phone.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.server.telecom.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.server.telecom.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.server.telecom.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.settings.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.settings.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.settings.intelligence.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.settings.intelligence.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.settings.overlay.ct",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.systemui.overlay.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon.circle",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon.square",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.example.rftuner",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.gsma.rcs",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oem.rftoolkit",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.account",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.account.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.account.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aod",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aod.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aod.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aodnotification.overlay.gold",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aodnotification.overlay.purple",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.aodnotification.overlay.red",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.applocker",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.appupgrader",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.asti",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.backuprestore.remoteservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.calculator",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.calculator.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.calendar.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.calendar.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.camera",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.camera.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.card.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.card.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.cloud.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.cloud.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.config",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.contacts",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.contacts.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.contacts.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.coreservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.deskclock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.deskclock.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.deskclock.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.diagnosemanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.dirac.simplemanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.dirac.simplemanager.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.dirac.simplemanager.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.faceunlock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.filemanager.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.filemanager.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.gallery",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.gamespace.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.gamespace.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.ifaaservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.mms",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.mms.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.mms.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.note.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.note.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opbackup",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opbackup.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opbackup.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opwlb.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opwlb.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.screenrecord",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.screenrecord.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.screenrecord.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.screenshot",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.sdcardservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.security",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.security.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.security.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.ses",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.setupwizard",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.simcontacts",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.simcontacts.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.simcontacts.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.sms.smscplugger",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.soundrecorder.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.soundrecorder.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.twspods",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.wallpaper",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.wifiapsettings",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.wifiapsettings.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.wifiapsettings.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.diagservices",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.biometrics.fingerprint.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.improvetouch.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qtisettings",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.recognize.number",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.launcher",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.launcher.black.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.launcher.white.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.weather.basiccolorblack.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.weather.basiccolorwhite.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.systemui.gesture.line.overlay",
+    "oem": null,
+    "description": "\nThese packages seems to be disguished Xiaomi apps and not part of AOSP. Can someone confirm/refute this?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.systemui.navigation.bar.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.wifi.resources",
+    "oem": null,
+    "description": "\n#############AOSP ###############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.auto_generated_rro_product__",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.auto_generated_rro_vendor__",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.hotspot2.osulogin",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.internal.display.cutout.emulation.hole",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.internal.display.cutout.emulation.waterfall",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon.pebble",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon.taperedrect",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon.vessel",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.theme.icon_pack.rounded.themepicker",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.apps.carrier.carrierwifi",
+    "oem": null,
+    "description": "\n############GOOGLE ##############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.as",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.cellbroadcastreceiver",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.cellbroadcastservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.networkstack.tethering",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.networkstack.tethering.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.gmsconfig.common",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.gmsconfig.gsa",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.gmsconfig.photos",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.modules.cellbroadcastservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.modules.documentsui",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.overlay.modules.modulemetadata.forframework",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.android.providers.media.module",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.google.mainline.telemetry",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.qualcomm.deviceinfo",
+    "oem": null,
+    "description": "\n###########QUALCOMM #############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.cne",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.ims",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.performancemode",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.poweroffalarm",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qdma",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.gpudrivers.kona.api30",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.seccamservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.services.secureui",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.services.systemhelper",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.simcontacts",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.uceShimService",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.uimGbaApp",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.workloadclassifier",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.uimremoteclient",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "vendor.qti.hardware.cacert.server",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "vendor.qti.iwlan",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.cloudsetupwizard",
+    "oem": null,
+    "description": "\n#########THIRD PARTY ############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrd.verizonuriintentservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.vzwintents",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.vzwwifioffload",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.easvalidation",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ts.setupwizard.overlay.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrdcom.Elabel.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hawk.android.browser",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hiya.axolotl.tcl",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrdcom.Elabel",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrdcom.Elabel.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrdcom.filemanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.jrdcom.filemanager.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vendor.frameworkresoverlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.srin.indramayu",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.cmfa.framework",
+    "oem": null,
+    "description": "\n############SAMSUNG #############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.incall.contentprovider",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.service.tagservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.camerasdkservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.coldwalletservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.coldwalletservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.digitalkey",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.forest",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.providers.carrier",
+    "oem": null,
+    "description": "\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.providers.carrier",
+    "oem": null,
+    "description": "\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.wifi.resources",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.wifi.softap.resources",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.Cdfs",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.smartfpsadjuster",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.location.nfwlocationprivacy",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.gamedriver.sm8250",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.gpuwatchapp",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.huxplatform",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.qosindicator",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.sait.sohservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.vklayer.sm8250",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.accessibility.talkback",
+    "oem": null,
+    "description": "\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.app.earphonetypec",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.app.sharelive",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.app.telephonyui",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.appseparation",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.brightnessbackupservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.callbgprovider",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.cidmanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.container",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.dialer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.dsms",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.hdmapp",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.localeoverlaymanager",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.mapsagent",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.mcfds",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.motionphoto.viewer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.networkstack",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.networkstack.tethering.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.privateshare",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.providers.contacts",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.providers.media",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.rajaampat",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.scs",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.secsoundpicker",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.server.wifi.mobilewips",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.service.stplatform",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.setting.multisound",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.singletake.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.smartsuggestions",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.sume.nn.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.uwb",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.vtcamerasettings",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.android.wifi.softapwpathree.resources",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.euicc",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.gamedriver.ex2100",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.ims.smk",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.gestural_no_hint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.gestural_no_hint_extra_wide_back",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.gestural_no_hint_narrow_back",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.gestural_no_hint_wide_back",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.sec_gestural",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.internal.systemui.navbar.sec_gestural_no_hint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.pregpudriver.ex2100",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.sec.android.teegris.tui_service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.slsi.audiologging",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.app.uwbtest",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.app.volumemonitorprovider",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.autodoodle.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.systemupdate",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.factory.cameralyzer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.mhs.smarttethering",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.unifiedwfc",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sonymobile.devicesecurity.service",
+    "oem": null,
+    "description": "##############SONY ##############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sonymobile.home.product.res.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sonymobile.swiqisystemservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.evenwell.whitebalance",
+    "oem": null,
+    "description": "#############NOKIA ##############\nNokia users: Please give the apk. I can't find them on the web.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.evenwell.whitebalance.overlay.base",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hmdglobal.enterprise.api",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.gallery3d.refocus",
+    "oem": null,
+    "description": "############TCL ###############\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "android.autoinstalls.config.TCL.PAI",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.providers.tctdatahubprovider",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.android.launcher",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.android.launcher.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.android.launchertheme.res",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.android.launchertheme.res.overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.android.wallpaper.livepicker",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.aota.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.camera",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.camera.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.compass",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.compass.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.demopage",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.entitlement",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.faceunlock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.fmradio",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.fmradio.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.fota.system",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.fota.system.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.healthy",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.logger.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.mibc.tclplus",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.mibc.tclplus.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.nfc.gsma.usermenu",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.screenrecorder",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.screenrecorder.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.screenshotex",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.sos",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.tclswitch.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.token",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.usercare",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tcl.usercare.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tclhz.gallery",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tclhz.gallery.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.aio",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.android.secureinput",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.applock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.batterywarning",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.calculator",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.calculator.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.cellular.arda",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.contacts.transfer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.contacts.transfer.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.diagprotector",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.dialer",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.dialer.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.faceunlock",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.gamemode",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.gdpr",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.iris",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.music",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.onetouchbooster",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.onetouchbooster.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.privacymode",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.privatespace",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.retaildemo",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.retaildemo.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.setupwizard",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.simplelauncher",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.simplelauncher.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.simsettings",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.account",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.aikey",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.cloud",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.drivemode",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.notes",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.switchphone",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.smart.switchphone.service",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.soundrecorder",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.systemservice",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.video",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.weather",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.weather.a_overlay",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tct.wfcwebiew",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]

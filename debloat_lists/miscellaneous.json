@@ -1,0 +1,1850 @@
+[
+  {
+    "packageId": "com.amazon.appmanager",
+    "oem": null,
+    "description": "Mobile Device Information Provider\nSeems related to Kindle\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.avod.thirdpartyclient",
+    "oem": null,
+    "description": "Amazon Prime Video (https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient)\nVOD service from Amazon.\nhttps://en.wikipedia.org/wiki/Prime_Video\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.mShop.android",
+    "oem": null,
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.fv",
+    "oem": null,
+    "description": "Amazon App suite. Provides access to Amazon digital content\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.kindle",
+    "oem": null,
+    "description": "Amazon Kindle (https://play.google.com/store/apps/details?id=com.amazon.kindle)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.mp3",
+    "oem": null,
+    "description": "Amazon Music (https://play.google.com/store/apps/details?id=com.amazon.mp3)\nAmazon streaming app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.venezia",
+    "oem": null,
+    "description": "Amazon AppStore\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.aa",
+    "oem": null,
+    "description": "Amazon Assistant app. Nice spyware ! \nShow you recoomanded products available on Amazon and price compare as you shop across the web.\nNOTE : https://www.gadgetguy.com.au/amazon-assistant-spies-on-you/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.aa.attribution",
+    "oem": null,
+    "description": "Amazon Assistant Attribution. A spyware again !\nTracking tool. Allows sellers to measure the impact of media channels **off Amazon** on sales.\nhttps://www.repricerexpress.com/amazon-attribution/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.mShop.android.shopping.vpl",
+    "oem": null,
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping)\nSame package as com.amazon.mShop.android.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.mShop.android.shopping.vpl",
+    "oem": null,
+    "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping)\nSame package as com.amazon.mShop.android.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.amazon.clouddrive.photos",
+    "oem": null,
+    "description": "Amazon Photos (https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "in.amazon.mShop.android.shopping",
+    "oem": null,
+    "description": "Amazon India (https://play.google.com/store/apps/details?id=in.amazon.mShop.android.shopping)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.facebook.katana",
+    "oem": null,
+    "description": "Facebook app (https://play.google.com/store/apps/details?id=com.facebook.katana)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.facebook.system",
+    "oem": null,
+    "description": "Facebook App Installer (empty shell app which incite you to install the Facebook app)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.facebook.appmanager",
+    "oem": null,
+    "description": "Facebook app manager handles Facebook apps updates.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.facebook.services",
+    "oem": null,
+    "description": "Facebook Services is a tool that lets you manage different Facebook services automatically using your Android device. \nIn particular, the tool focuses on searching for nearby shops and establishments based on your interests.\nI don't know if this a dependency for com.facebook.katana but nobody cares because we all want to delete all the Facebook stuff right ?!!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.facebook.orca",
+    "oem": null,
+    "description": "Facebook Messenger (https://play.google.com/store/apps/details?id=com.facebook.orca)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.instagram.android",
+    "oem": null,
+    "description": "Instagram  (https://play.google.com/store/apps/details?id=com.instagram.android)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.whatsapp",
+    "oem": null,
+    "description": "Whatsapp (https://play.google.com/store/apps/details?id=com.whatsapp)\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.skydrive",
+    "oem": null,
+    "description": "Microsoft OneDrive (Cloud) (https://play.google.com/store/apps/details?id=com.microsoft.skydrive)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.skype.raider",
+    "oem": null,
+    "description": "Skype (https://play.google.com/store/apps/details?id=com.skype.raider)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.powerpoint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.powerpoint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.powerpoint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.powerpoint",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.skype.m2",
+    "oem": null,
+    "description": "Skype Lite (https://play.google.com/store/apps/details?id=com.skype.m2)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.officehubhl",
+    "oem": null,
+    "description": "Office Mobile hub (on Samsung Phone)\nIncludes the complete Word, PowerPoint, and Excel apps to offer a convenient office experience on the go.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.officehub",
+    "oem": null,
+    "description": "Microsoft Office Mobile\nIncludes the complete Word, PowerPoint, and Excel apps to offer a convenient office experience on the go. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.office.officehubrow",
+    "oem": null,
+    "description": "Microsoft Mobile Office Beta\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.appmanager",
+    "oem": null,
+    "description": "Your Phone Companion - Link to Windows (https://play.google.com/store/apps/details?id=com.microsoft.appmanager)\nMicrosoft app for synchronising your phone with a W10 PC.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.microsoft.translator",
+    "oem": null,
+    "description": "Microsoft Translator app (https://play.google.com/store/apps/details?id=com.microsoft.translator)\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.caf.fmradio",
+    "oem": null,
+    "description": "https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/fm/tree/fmapp2/src/com/caf/fmradio\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.codeaurora.gps.gpslogsave",
+    "oem": null,
+    "description": "Saves GPS logs.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.codeaurora.bluetooth",
+    "oem": null,
+    "description": "https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/bluetooth\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.codeaurora.ims",
+    "oem": null,
+    "description": "IMS is an open industry standard for voice and multimedia communications over packet-based IP networks (Volte/VoIP/Wifi calling)\nThis his package is needed for the Volte/VoIP/Wifi calling provided by your carrier.\nThis is not needed by messaging apps (Signal, Telegram, WhatsApp...)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.qualcomm.datastatusnotification",
+    "oem": null,
+    "description": "Can read/send SMS\nAllows to cap data when you've reached the limit of your plan (not 100% sure)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.service.colorservice",
+    "oem": null,
+    "description": "Don't know why but it uses mobile data.\nIt most likely does something to colors on your display. Can someone see the difference ? Is it accessbility feature ?\nNeeded for Blue screen feature ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.confuridialer",
+    "oem": null,
+    "description": "Conference URI dialer. Also a conference call service, for digital signal only, as SIP / VoIP\nhttps://devcondition.com/article/removing-unneeded-miui-applications/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.snapdragon.qdcm_ff",
+    "oem": null,
+    "description": "Qualcomm Display Color Management tool\nWorks in background and \"enhance\" the display\u2019s appearance through an intelligent color adjustment and gamut-mapping system \n\"to make colors look vibrant and true to life\".\nNot really convinced. Can someone see the difference ? \nhttps://www.qualcomm.com/news/onq/2016/05/02/qualcomm-trupalette-brings-your-phones-display-life\n#\nff = FinFet ? (https://en.wikipedia.org/wiki/FinFET)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.atfwd",
+    "oem": null,
+    "description": "Used to send AT command messages from/to the modem\nAttention commands commands are a collection of short-string commands developed in the early 1980s \nthat were designed to be transmitted via phone lines and control modems. Different AT command strings can be merged together \nto tell a modem to dial, hang up, or change connection parameters. \nSmartphones include a basic modem component inside them, which allows the smartphone to connect to the Internet \nvia its telephony function.\nThis can be abused. It's been known for many years that Android devices are vulnerable to attacks carried out via AT commands:\nhttps://www.bleepingcomputer.com/news/security/smartphones-from-11-oems-vulnerable-to-attacks-via-hidden-at-commands/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.cabl",
+    "oem": null,
+    "description": "Content Adaptative Backlight Settings\nCABL will try to adjust the image being displaye by changing the contrast/quality/image backlight depending on \nthe content on the screen.\nDownside to this is loss of dynamic range which results in some colors being washed out/clipped.\nCABL != Auto brightness (which doesn't change the content of the screen, only the brightness)\nNOTE: You may want to remove this. It does not work very well on many phones\nhttps://mobileinternist.com/disable-adaptive-brightness-android\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.embms",
+    "oem": null,
+    "description": "Run in background.\nI guess it add support to LTE Broadcast or eMBMS (evolved Multimedia Broadcast Multicast Service) \nEnables carriers to sends stuff using multicast (same content to be delivered to a large number of users at the same time) instead of LTE.\nIt is a more efficient use of network resources when compared to each user receiving the same content individually.\nPersonally I don't want my carrier to send me stuff.\n#\nFYI : https://en.wikipedia.org/wiki/Multimedia_Broadcast_Multicast_Service\n\thttps://www.one2many.eu/en/lte-broadcast/what-is-embms\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.fastdormancy",
+    "oem": null,
+    "description": "Provide Fast Dormancy feature/setting in the dialer (reduce battery consumption and network utilization during periods of data inactivity) \nhttps://en.wikipedia.org/wiki/Fast_Dormancy\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.location",
+    "oem": null,
+    "description": "May enable your device to determine its location more quickly and accurately, even when your device is unable to get a strong GPS signal. \n**May** also help your device conserve battery power when you use applications or services requiring location data\nIt will periodically downloads data to your device regarding the locations of nearby cellular towers and WiFi access points\n#\nQualcomm Location periodically sends a unique software ID, the location of your device (longitude, latitude and altitude, and its uncertainty) \nand nearby cellular towers and Wi-Fi hotspots, signal strength, and time (collectively, \u201cLocation Data\u201d) to Qualcomm servers. \nAs with any Internet communication, they also receive the IP address your device uses. \nhttps://www.qualcomm.com/site/privacy/services\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qcrilmsgtunnel",
+    "oem": null,
+    "description": "Tunnel between modem and android framework. Related to SMS ? \nFYI : ril = Radio Interface layer. It's the bridge between Android phone framework services and the hardware.\nThere is no noticeable immediate consequences after disabling it but it'd better to know more about.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.simcontacts",
+    "oem": null,
+    "description": "Sim Contacts\nSafe to remove.\n \tI don't exactly know what's the purpose of this package. Import/Export tool?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.svi",
+    "oem": null,
+    "description": "Sunlight Visibility Improvement\nI've heard vaguely that some phones use it for the above purpose? On a LG Q6 there was no effect on functionality after removing.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.uimremoteserver",
+    "oem": null,
+    "description": "UIM Remote Server\nUIM = User Identiy Module\nGiven its name I don't think it is a mandatory and pertinent feature. Can someone test?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.wfd.service",
+    "oem": null,
+    "description": "Wifi Display\nProvides a way to cast your screen to your TV (support for Miracast)\nhttps://en.wikipedia.org/wiki/Miracast\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.auth.fidocryptoservice",
+    "oem": null,
+    "description": "Qualcomm FIDO implementation. \nFIDO : https://en.wikipedia.org/wiki/FIDO_Alliance\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.autoregistration",
+    "oem": null,
+    "description": "Collect device activation data to remotely activate a phone\u2019s warranty\nFYI : In 2019 this package was sending private data (IMEI, CELLID , CCID) in CLEAR text to zzhc.vnet.cn (chinese server). \nAccording to HMD (Nokia) it was a mistake : \nhttps://www.androidauthority.com/nokia-7-plus-user-info-967901/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.callenhancement",
+    "oem": null,
+    "description": "Supposed to enhance call quality (I let you test if it really does)\nFYI : This app can record all your phone call\nA vulnerability was found in 2019, allowing unauthorized microphone audio recording by 3rd-party apps.\nhttps://nvd.nist.gov/vuln/detail/CVE-2019-15472\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.callfeaturessetting",
+    "oem": null,
+    "description": "Not mandatory (according to XDA users)\nCan someone explain what feature does this package add?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.confdialer",
+    "oem": null,
+    "description": "ConfDialer\nLTE Conferencing Service\nHow to use this feature? It is nowhere explained.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.dpmserviceapp",
+    "oem": null,
+    "description": "Data Power Manager for the radio\nUsed to improve energy efficiency\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.networksetting",
+    "oem": null,
+    "description": "Network operators (hidden settings menu)\nLets you select network modes like GSM only, WCDMA only, LTE only etc, toggle VoLTE On/Off...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.optinoverlay",
+    "oem": null,
+    "description": "Overlay for something but what... \n(nothing useful in any case)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qms.service.trustzoneaccess",
+    "oem": null,
+    "description": "Handles access to the Qualcomm/ARM Trustzone?\nYou may not need Qualcomm Trustzone if you don't used OEM trusted apps.\nSee com.trustonic.tuiservice\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.perfdump",
+    "oem": null,
+    "description": "Performance dump (logging)\nEnable a more accurate overview of the running services (and maybe how much power/RAM they take?)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qms.service.connectionsecurity",
+    "oem": null,
+    "description": "Telemetry service\nqms = quality management service\nBackground-Connection to tls.telemetry.swe.quicinc.com (Host/Domain belongs to Qualcomm)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qms.service.telemetry",
+    "oem": null,
+    "description": "Telemetry service.\nYeah obviously it phones to Qualcomm.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qtisystemservice",
+    "oem": null,
+    "description": "Seems to only log stuff related to telephony\nA user removed this without noticing any issues\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.roamingsettings",
+    "oem": null,
+    "description": "Hidden settings menu\nLets to tweak roaming settings (How to access this settings?)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.rcsimsbootstraputil",
+    "oem": null,
+    "description": "RCS Service \nRCS = Rich Communication Services. \nRCS is a communication protocol between mobile telephone carriers and between phone and carrier, aiming at replacing SMS.\nhttps://en.wikipedia.org/wiki/Rich_Communication_Services\nNote that it uses IP protocol so you need to connect to Wifi/3G/4G...  to take advantage of it.\n#\nIt's a hot mess right now. It aims at being universal but you still need to have a Samsung Messages \nor Google Message. 3-party apps can't support it because google hasn't released a public API yet.\n\nIn a lot of country messages go through Google's Jibe servers.\nhttps://jibe.google.com/policies/terms/\n#\nhttps://pocketnow.com/why-you-should-probably-avoid-googles-rcs-text-messaging-chat-feature\n#\nDoes this packages is really needed for VolTE/VoWifi?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.rcsimsbootstraputil",
+    "oem": null,
+    "description": "RCS Service \nRCS = Rich Communication Services. \nRCS is a communication protocol between mobile telephone carriers and between phone and carrier, aiming at replacing SMS.\nhttps://en.wikipedia.org/wiki/Rich_Communication_Services\nNote that it uses IP protocol so you need to connect to Wifi/3G/4G...  to take advantage of it.\n#\nIt's a hot mess right now. It aims at being universal but you still need to have a Samsung Messages \nor Google Message. 3-party apps can't support it because google hasn't released a public API yet.\n\nIn a lot of country messages go through Google's Jibe servers.\nhttps://jibe.google.com/policies/terms/\n#\nhttps://pocketnow.com/why-you-should-probably-avoid-googles-rcs-text-messaging-chat-feature\n#\nDoes this packages is really needed for VolTE/VoWifi?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.services.secureui",
+    "oem": null,
+    "description": "Qualcomm Secure UI Service.\nUncertain role...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.uceshimservice",
+    "oem": null,
+    "description": "UCE shim service \nUCE = User Capability Echange\nUsed for RCS. It provide a service  discovery  with  which  users  can  know  the capabilities of other users.\nUser capability exchange is based on SIP PUBLISH and then SIP SUBSCRIBE/NOTIFY. \nDevices would PUBLISH their capabilities to a presence server and then when another device wants to find out what \nthe other party is able to support, the device would send a SUBSCRIBE to the presence server and the presence server  \nwould then send a NOTIFY to the device of what the other party is able to support.\nSee https://fr.wikipedia.org/wiki/Session_Initiation_Protocol\nSee \"com.samsung.rcs\" in Samsung list for more information on RCS\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.timeservice",
+    "oem": null,
+    "description": "Qualcomm Time Service\nIt maybe keeps the real time clock in the Qualcomm processor synchronised with Android time.\nSeems not safe to remove. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.xdivert",
+    "oem": null,
+    "description": "Smart-Divert\nIf enabled, diverts your calls to another number.\nYou can choose to divert all calls, divert on no reply or divert when the line is busy.\nWhere can you enable/disable this feature? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.quicinc.cne.CNEService",
+    "oem": null,
+    "description": "Qualcomm Connectivity Engine\nAllow seamless calls between VoLTE and VoWiFi\nhttps://www.qualcomm.com/news/onq/2013/07/02/qualcomms-cne-bringing-smarts-3g4g-wi-fi-seamless-interworking\nhttps://programmersought.com/article/35091829299/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.qualcomm.datastatusnotification",
+    "oem": null,
+    "description": "Can read/send SMS\nAllows to cap data when you've reached the limit of your plan (not 100% sure)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.dynamicddsservice",
+    "oem": null,
+    "description": "Dynamic DDS Service\nDDS = Direct Digital Synthesizer\nTo make this very simple, it enables frequencies to be changed quickly without settling time.\nIt is very useful for testing, communications and frequency sweep applications. Not sure you need this in your phone.\nhttps://www.qualcomm.com/news/releases/1996/05/07/qualcomm-introduces-new-high-speed-dual-direct-digital-synthesizer\nIf you want to know more about the use of a DDS : https://www.allaboutcircuits.com/technical-articles/direct-digital-synthesis/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.lpa",
+    "oem": null,
+    "description": "Only useful if you use an esim (virtual sim)\nlpa = Local Profile Assistants. It is a software that allows consumers to choose and change their subscription data when switching between \nnetwork operators/carriers.\nhttps://developer.qualcomm.com/blog/rise-esims-and-isims-and-their-impact-iot\nhttps://source.android.com/devices/tech/connect/esim-overview\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.remoteSimlockAuth",
+    "oem": null,
+    "description": "Enable you to lock/unlock your eSIM remotely.\nSeems more of a security risk to me than anything else.\nIs it related to Safeswitch ? https://www.qualcomm.com/products/features/security/safeswitch\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.simsettings",
+    "oem": null,
+    "description": "Obviously related to SIM settings\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.telephonyservice",
+    "oem": null,
+    "description": "Sound processing during phonecalls\nYou absolutely need this package.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.telephony.vodafonepack",
+    "oem": null,
+    "description": "Related to Vodafone Prepaid Recharge Plan\nIf you're not a Vodafone client but still has this package on your phone you can delete it.\nFor Vodafon client, I don't know what this package does.\nhttps://en.wikipedia.org/wiki/Vodafone\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.uim",
+    "oem": null,
+    "description": "Related to RUIM I guess. It is a kind of SIM card\nhttps://en.wikipedia.org/wiki/Removable_User_Identity_Module\nStill used in China it seems.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.quicinc.fmradio",
+    "oem": null,
+    "description": "quicinc = Qualcomm Innovation Center\nFM Radio app by Qualcomm\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.qti.qmmi",
+    "oem": null,
+    "description": "QMMI is a test app made by Qualcomm. It is used by service center to test the working of the various device components.\nMore info: https://community.phones.nokia.com/discussion/52566/android-10-on-nokia-8-1/p19\nUseless for end-users.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qualcomm.svi",
+    "oem": null,
+    "description": "Sunlight Visibility Improvement\nI've heard vaguely that some phones use it for the above purpose? On a LG Q6 there was no effect on functionality after removing.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.qti.confuridialer",
+    "oem": null,
+    "description": "Conference URI dialer. Also a conference call service, for digital signal only, as SIP / VoIP\nhttps://devcondition.com/article/removing-unneeded-miui-applications/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "vendor.qti.iwlan",
+    "oem": null,
+    "description": "Used for VoLTE/VoWifi (Wifi-calling)\nIwLAN = Interworking wLAN. \nSupport for mobile data offloading (use of complementary network technologies for delivering data originally targeted \nfor cellular networks)\nConcretly, it most of the time it means your phone will switch to use the Wi-Fi connection instead of the cellular data connection. \nhttps://en.wikipedia.org/wiki/Mobile_data_offloading\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "cci.usage",
+    "oem": null,
+    "description": "My Consumer Cellular (https://play.google.com/store/apps/details?id=cci.usage)\nLets you manage your Consumer Cellular account, track your usage, pay your bill.\nConsumer Cellular is an American postpaid mobile virtual network operator\nhttps://en.wikipedia.org/wiki/Consumer_Cellular\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.ld.appstore",
+    "oem": null,
+    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.ld.appstore",
+    "oem": null,
+    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.ld.appstore",
+    "oem": null,
+    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.aspiro.tidal",
+    "oem": null,
+    "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.aspiro.tidal",
+    "oem": null,
+    "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.audible.application",
+    "oem": null,
+    "description": "Cover Audible Audiobooks (https://play.google.com/store/apps/details?id=com.audible.application)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.bleacherreport.android.teamstream",
+    "oem": null,
+    "description": "Bleacher Report (https://play.google.com/store/apps/details?id=com.bleacherreport.android.teamstream)\nSports news site\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.blurb.checkout",
+    "oem": null,
+    "description": "Blurb Checkout \nProvides book purchase and checkout for Samsung\u2019s Story Album app (discontinued)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.booking",
+    "oem": null,
+    "description": "Booking.com app (https://play.google.com/store/apps/details?id=com.booking)\nSeriously, you shouldn't use it !\nhttps://en.wikipedia.org/wiki/Booking.com\nhttps://blog.usejournal.com/why-i-would-never-trust-booking-com-again-so-you-should-too-a2ab535ed915?gi=7ebe86eaa880\nhttps://ro-che.info/articles/2017-09-17-booking-com-manipulation\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.cequint.ecid",
+    "oem": null,
+    "description": "Caller ID from Cequint (https://www.cequint.com/)\nhttps://www.fiercewireless.com/wireless/t-mobile-to-launch-caller-id-service-from-cequint\nNOTE : Never trust a company which promotes call ID/spam blocking features.\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n#\nCequint was acquired by TNS (https://tnsi.com/)\nThat was not a good thing : https://www.geekwire.com/2013/earnouts-bad-cequint-execs-sue-parent-company/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.cnn.mobile.android.phone",
+    "oem": null,
+    "description": "CNN Breaking US & World News app (https://play.google.com/store/apps/details?id=com.cnn.mobile.android.phone)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.contextlogic.wish",
+    "oem": null,
+    "description": "Wish Shopping (https://play.google.com/store/apps/details?id=com.contextlogic.wish)\nYou should not buy with Wish if you want my opinion.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.cootek.smartinputv5.language.spanishus",
+    "oem": null,
+    "description": "TouchPal Keyboard by Cootek a chinese company.\nAdware (lots lots of ads)\nWorth reading : https://www.buzzfeednews.com/article/craigsilverman/google-banned-cootek-adware\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.cootek.smartinputv5.language.spanishus",
+    "oem": null,
+    "description": "TouchPal Keyboard by Cootek a chinese company.\nAdware (lots lots of ads)\nWorth reading : https://www.buzzfeednews.com/article/craigsilverman/google-banned-cootek-adware\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.crowdcare.agent.k",
+    "oem": null,
+    "description": "Crowdcare is now Wysdom.AI (https://nitter.42l.fr/wysdomai)\nFrom their Twitter description : The easiest way for businesses to improve customer satisfaction, contain costs, \nand generate revenue by using #AI to power customer experiences.\nWysdom.AI has joined the Microsoft Partner Network in 2018\nhttps://wysdom.ai/privacy-policy/ (not good)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.devhd.feedly",
+    "oem": null,
+    "description": "Feedly (https://play.google.com/store/apps/details?id=com.devhd.feedly)\nNews aggregator application (RSS)\nRSS aggregator are great but Feedly is really bad, especially privacy-wise.\nhttps://feedly.com/i/legal/privacy\nBetter Alternative : https://github.com/FreshRSS/FreshRSS\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.diotek.sec.lookup.dictionary",
+    "oem": null,
+    "description": "Samsung dictionary from Diotek (Korean company)\nhttp://en.diotek.com/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.directv.dvrscheduler",
+    "oem": null,
+    "description": "DIRECTV (https://play.google.com/store/apps/details?id=com.directv.dvrscheduler)\nOffical app from DIRECTV (subsidiary of AT&T)\nLets you watch Live TV, recorded shows, VODs and schedule recordings on your DVR\nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.discoveryscreen",
+    "oem": null,
+    "description": "Appflash (https://play.google.com/store/apps/details?id=com.discoveryscreen)\nVerizon Spyware.\nhttps://www.eff.org/deeplinks/2017/04/update-verizons-appflash-pre-installed-spyware-still-spyware\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dna.solitaireapp",
+    "oem": null,
+    "description": "Solitaire Game app from DNA company ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.drivemode",
+    "oem": null,
+    "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings\n\nDrivemode (https://play.google.com/store/apps/details?id=com.drivemode.android)\nSimplifies how you manage calls and messages while driving.\nhttps://drivemode.com/privacy-2/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.drivemode",
+    "oem": null,
+    "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings\n\nDrivemode (https://play.google.com/store/apps/details?id=com.drivemode.android)\nSimplifies how you manage calls and messages while driving.\nhttps://drivemode.com/privacy-2/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ebay.mobile",
+    "oem": null,
+    "description": "Ebay app (https://play.google.com/store/apps/details?id=com.ebay.mobile)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ebay.carrier",
+    "oem": null,
+    "description": "Kind of weird ebay apps preinstalled by carriers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ehernandez.radiolainolvidable",
+    "oem": null,
+    "description": "Radio La Inolvidable Peru (no longer exist)\nSpanish Radio app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.emoji.keyboard.touchpal",
+    "oem": null,
+    "description": "TouchPal Emoji Keyboard by Cootek a chinese company\nAdware (lots lots of ads)\nWorth reading : https://www.buzzfeednews.com/article/craigsilverman/google-banned-cootek-adware\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.eterno",
+    "oem": null,
+    "description": "Daily hunts News. (https://play.google.com/store/apps/details?id=com.eterno&hl=en)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.evernote",
+    "oem": null,
+    "description": "Evernote app (https://play.google.com/store/apps/details?id=com.evernote)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.galaxyfirsatlari",
+    "oem": null,
+    "description": "Galaxy F\u0131rsatlar\u0131 (https://play.google.com/store/apps/details?id=com.galaxyfirsatlari)\nSamsung-only app for Turkish people\nRecommands you stuff to buy. You are supposed to save money but we all know this kind of apps\nencourages consumption.\nExodus found 10 trackers and 17 permissions : https://reports.exodus-privacy.eu.org/fr/reports/143830/ \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.generalmobi.go2pay",
+    "oem": null,
+    "description": "Go2Pay (https://play.google.com/store/apps/details?id=com.generalmobi.go2pay)\nPayment app that offers mobile pre-paid recharges and post-paid bill payment, data card recharges and bill payment, \nDTH recharges through cashless transactions.\nDTH = Direct To Home Television \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.gotv.nflgamecenter.us.lite",
+    "oem": null,
+    "description": "Football NFL (https://play.google.com/store/apps/details?id=com.gotv.nflgamecenter.us.lite)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.groupon",
+    "oem": null,
+    "description": "Groupon (https://play.google.com/store/apps/details?id=com.groupon)\nOnline shopping deals and coupons.\nWorth reading : https://en.wikipedia.org/wiki/Groupon#Reception\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hancom.office.editor.hidden",
+    "oem": null,
+    "description": "Legacy Hancom Office Editor (Korean alternative to Microsoft Office). Featured in Samsung and LG phones\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.handmark.expressweather.vpl",
+    "oem": null,
+    "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.handmark.expressweather.vpl",
+    "oem": null,
+    "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hulu.plus",
+    "oem": null,
+    "description": "Hulu (https://play.google.com/store/apps/details?id=com.hulu.plus&hl)\nNetflix competitor.\nFYI : Hulu is owned by Disney.\nhttps://en.wikipedia.org/wiki/Hulu\nhttps://www.digitaltrends.com/home-theater/hulu-vs-disney-plus/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ideashower.readitlater.pro",
+    "oem": null,
+    "description": "Pocket (https://play.google.com/store/apps/details?id=com.ideashower.readitlater.pro)\nAllows you to save an article or web page to remote servers for later reading\nWas purchased by Mozilla in 2017 but is still close source for now.\nhttps://getpocket.com/privacy\nOpen-source alternative : https://wallabag.org/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.imdb.mobile",
+    "oem": null,
+    "description": "IMDb mobile app (https://play.google.com/store/apps/details?id=com.imdb.mobile)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.infraware.polarisoffice5",
+    "oem": null,
+    "description": "Polaris Office from US Infraware Inc company (Microsoft Office like)\nhttps://en.wikipedia.org/wiki/Polaris_Office\nhttps://play.google.com/store/apps/details?id=com.infraware.office.link\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ironsource.appcloud.oobe",
+    "oem": null,
+    "description": "AppCloud (discontinued) from ironSource, an advertising company.\nWorth reading : https://en.wikipedia.org/wiki/IronSource.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ironsource.appcloud.oobe.huawei",
+    "oem": null,
+    "description": "Essentials apps\nApp who promotes some other apps (and encourages you to install them)\nThis is developped by IronSource, a \"next-generation advertising company\" \nhttps://aura.ironsrc.com/ (app) | https://company.ironsrc.com/ (company)\nWhen you try to read their privacy policy you arrive to an outstanding blank PDF file!\n(http://www.ironsrc.com/wp-content/uploads/2019/03/ironSource-Privacy-Policy.pdf)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.king.candycrush4",
+    "oem": null,
+    "description": "Candy Crush Friends Saga (https://play.google.com/store/apps/details?id=com.king.candycrush4)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.king.candycrushsodasaga",
+    "oem": null,
+    "description": "Candy Crush Soda Saga (https://play.google.com/store/apps/details?id=com.king.candycrushsodasaga)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.king.candycrushsaga",
+    "oem": null,
+    "description": "Candy Crush Saga (https://play.google.com/store/apps/details?id=com.king.candycrushsaga)\nI don't understand why this game is so popular (I guess the fact it is preinstalled in a lot of phone helps)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.linkedin.android",
+    "oem": null,
+    "description": "Linkedin app (https://play.google.com/store/apps/details?id=com.linkedin.android)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lookout",
+    "oem": null,
+    "description": "Lookout Security & Antivirus (https://play.google.com/store/apps/details?id=com.lookout)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.micredit.in",
+    "oem": null,
+    "description": "Mi Credit. Personal Loan app (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.netflix.mediaclient",
+    "oem": null,
+    "description": "Netflix app (https://play.google.com/store/apps/details?id=com.netflix.mediaclient)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.netflix.partner.activation",
+    "oem": null,
+    "description": "Netflix activation via partner manufacturer ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.niksoftware.snapseed",
+    "oem": null,
+    "description": "Snapseed (https://play.google.com/store/apps/details?id=com.niksoftware.snapseed)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.nuance.swype.input",
+    "oem": null,
+    "description": "Swype keyboard by Nuance\nhttps://www.nuance.com/mobile/mobile-applications/swype/android.html\nhttps://en.wikipedia.org/wiki/Swype\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.branding",
+    "oem": null,
+    "description": "Opera Branding Provider\nDon't know what it really does.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.branding.news",
+    "oem": null,
+    "description": "Opera News Branding Provider\nDon't know what it really does.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.mini.native",
+    "oem": null,
+    "description": "Opera Mini web browser (https://play.google.com/store/apps/details?id=com.opera.mini.native)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.preinstall",
+    "oem": null,
+    "description": "Opera Preinstall Data\nGenerate utm tracking stuff\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.max.preinstall",
+    "oem": null,
+    "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera\u2019s servers to compress images and videos \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.opera.max.preinstall",
+    "oem": null,
+    "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera\u2019s servers to compress images and videos \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.particlenews.newsbreak",
+    "oem": null,
+    "description": "News Break: Local & Breaking (https://play.google.com/store/apps/details?id=com.particlenews.newsbreak)\nNews provided by NewsBreak (https://www.newsbreak.com/)\n#\nFYI : https://reports.exodus-privacy.eu.org/en/reports/com.particlenews.newsbreak/latest/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.phonepe.app",
+    "oem": null,
+    "description": "PhonePe (https://play.google.com/store/apps/details?id=com.phonepe.app)\nPhonePe is a payments app that allows indian users to use BHIM UPI, your credit card and debit card or wallet to recharge your mobile phone, \npay your utility bills and also make instant payments at offline and online stores.\nPhonePe is an indian company (https://en.wikipedia.org/wiki/PhonePe)\nBHIM = Bharat Interface for Money : https://en.wikipedia.org/wiki/BHIM\nUPI = Unified Payement Interface : https://en.wikipedia.org/wiki/Unified_Payments_Interface\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.pinsight.v1",
+    "oem": null,
+    "description": "App Spotlight\nMakes you discover new apps from the Google Play store. The selection criteria are unkown.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.playphone.gamestore",
+    "oem": null,
+    "description": "Playphone Gamestore (https://www.playphone.com/)\n\"Helps\" you discover the \"best\" Android games and connects you to a global gaming community. Sounds Amazing !\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.playphone.gamestore.loot",
+    "oem": null,
+    "description": "Loot \nPremium service from playphone ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.pure.indosat.care",
+    "oem": null,
+    "description": "myIM3 (https://play.google.com/store/apps/details?id=com.pure.indosat.care)\nApp provided by Indosat Ooredoo, an Internet provider from Indonesia. \nEnables Indosat users to manage prepaid and postpaid numbers and check their credit and payments, purchase data packs, calls, SMS...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.huaqin.FM",
+    "oem": null,
+    "description": "Radio app from huaqin a chinese company\nNOTE : Transistor [https://f-droid.org/en/packages/org.y20k.transistor/] is much better\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.nextradioapp.nextradio",
+    "oem": null,
+    "description": "NextRadio (https://play.google.com/store/apps/details?id=com.nextradioapp.nextradio)\n3-party app which lets you experience live and local FM radio on your smartphone.\nhttps://nextradioapp.com/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.pinsight.dw",
+    "oem": null,
+    "description": "App Stack \nForce-installed app by Sprint. Pinsight is an advertising company (https://pinsightmedia.com/)\nNote : Sprint sold Pinsight to InMobi in 2018.\nhttps://www.fiercewireless.com/wireless/sprint-sells-mobile-ad-biz-pinsight-media-to-inmobi\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.realvnc.android.remote",
+    "oem": null,
+    "description": "Remote controle service by Realvnc (https://en.wikipedia.org/wiki/RealVNC)\nhttps://www.realvnc.com/en/legal/#privacy\nNot sure having a remote control app installed as a system app is a good idea\nThis application is no longer maintained, besides.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.remotefairy4",
+    "oem": null,
+    "description": "AnyMote Universal Remote + Wifi Smart Home Control (https://play.google.com/store/apps/details?id=com.remotefairy4)\nIR Remote control app \nLots of trackers and permissions : https://reports.exodus-privacy.eu.org/en/reports/com.remotefairy4/latest/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.republicwireless.tel",
+    "oem": null,
+    "description": "Republic (https://play.google.com/store/apps/details?id=com.republicwireless.tel&hl)\nLets you manage your Republic wireless account.\nRepublic Wireless is an american mobile virtual network operator (https://en.wikipedia.org/wiki/Republic_Wireless)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.rhapsody.vpl",
+    "oem": null,
+    "description": "Napster Music (https://play.google.com/store/apps/details?id=com.rhapsody)\nNapster streaming app\nhttps://en.wikipedia.org/wiki/Napster\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.rhapsody.vpl",
+    "oem": null,
+    "description": "Napster Music (https://play.google.com/store/apps/details?id=com.rhapsody)\nNapster streaming app\nhttps://en.wikipedia.org/wiki/Napster\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.roaming.android.gsimcontentprovider",
+    "oem": null,
+    "description": "GSIM = Generic Statistical Information Model ? I don't think so but I can't find anything.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.roaming.android.gsimcontentprovider",
+    "oem": null,
+    "description": "GSIM = Generic Statistical Information Model ? I don't think so but I can't find anything.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sem.factoryapp",
+    "oem": null,
+    "description": "SEMFactoryApp\nCall home (172.217.168.14 --> Google IP). Need NFC permission.\nThis package is maybe used to test NFC.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.servicemagic.consumer",
+    "oem": null,
+    "description": "HomeAdvisor: Contractors for Home Improvement (https://play.google.com/store/apps/details?id=com.servicemagic.consumer)\nHelp you find local contractors from the service Home Advisor network\nHomeAdvisor collects users data when a request is made and then sells that data to local contractors in exchange for money.\nWorth Reading : https://en.wikipedia.org/wiki/HomeAdvisor#Critism\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.setk.widget",
+    "oem": null,
+    "description": "Galaxy Bizz (https://play.google.com/store/apps/details?id=com.setk.widget)\nUseless app that recommands you stuff to do/buy nearby your area\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sharecare.askmd",
+    "oem": null,
+    "description": "AskMD (discontinued) provided by Sharecare\nSymptom checker app. Lets you see what might be causing your symptoms and helps you find a nearby physician \nWorth Reading : https://en.wikipedia.org/wiki/Sharecare#Criticisms\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.slacker.radio",
+    "oem": null,
+    "description": "LiveXLive - Streaming Music and Live Events (https://play.google.com/store/apps/details?id=com.slacker.radio)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.shopee.id",
+    "oem": null,
+    "description": "Shopee 2.2 (https://play.google.com/store/apps/details?id=com.shopee.id)\nofficial app from Shopee, an e-commerce online shopping platform in Southeast Asian.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.smithmicro.netwise.director.comcast.oem",
+    "oem": null,
+    "description": "XFINITY Wifi settings (https://play.google.com/store/apps/details?id=com.smithmicro.netwise.director.comcast.oem)\nAuto-connects you to XFINITY WiFi hotspot.\nXFINITY is a subsidiary of the Comcast Corporation (https://en.wikipedia.org/wiki/Xfinity)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.spotify.music",
+    "oem": null,
+    "description": "Spotify app (https://play.google.com/store/apps/details?id=com.spotify.music)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.swiftkey.swiftkeyconfigurator",
+    "oem": null,
+    "description": "SwiftKey factory settings\nUsed by commercial swiftkey partners to configure the SwiftKey app.\nSwiftkey is a keyboard developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.synchronoss.dcs.att.r2g",
+    "oem": null,
+    "description": "AT&T Ready2Go (discontinued)\nIts purpose was to help you migrating your data to your new Android device.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.s.antivirus",
+    "oem": null,
+    "description": "AVG Antivirus (https://play.google.com/store/apps/details?id=com.s.antivirus) for Sony Xperia.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.telenav.app.android.cingular",
+    "oem": null,
+    "description": "AT&T Navigator (https://play.google.com/store/apps/details?id=com.telenav.app.android.cingular)\nCrappy GPS app provided by Telenav and rebranded by AT&T.\nWorth reading : https://www.telenav.com/legal/policies-privacy-policy\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.telenav.app.android.scout_us",
+    "oem": null,
+    "description": "Scout GPS Navigation & Meet Up (https://play.google.com/store/apps/details?id=com.telenav.app.android.scout_us)\nBad GPS with bad chat features on top of that. \nhttps://www.scoutgps.com/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.touchtype.swiftkey.res.overlay",
+    "oem": null,
+    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.touchtype.swiftkey.res.overlay",
+    "oem": null,
+    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.touchtype.swiftkey.res.overlay",
+    "oem": null,
+    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tracker.t",
+    "oem": null,
+    "description": "WTF is this ?? Given its name I think you can take the risk to delete it.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.turner.cnvideoapp",
+    "oem": null,
+    "description": "Cartoon network App (https://play.google.com/store/apps/details?id=com.turner.cnvideoapp)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tripadvisor.tripadvisor",
+    "oem": null,
+    "description": "Trip advisor (https://play.google.com/store/apps/details?id=com.tripadvisor.tripadvisor)\nYou should never trust and use trip advisor\nhttps://en.wikipedia.org/wiki/TripAdvisor (see 'Controversy and fraudulent reviews' section)\nhttps://nypost.com/2016/03/01/why-you-should-never-ever-trust-tripadvisor/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ubercab.eats",
+    "oem": null,
+    "description": "Uber (https://play.google.com/store/apps/details?id=com.ubercab)\nUber Driver (https://play.google.com/store/apps/details?id=com.ubercab.driver)\nUber Eats (https://play.google.com/store/apps/details?id=com.ubercab.eats)\nUber does not protect personal user data and has a questionable ethic.\nWorth reading : https://en.wikipedia.org/wiki/Uber#Criticism\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ubercab.eats",
+    "oem": null,
+    "description": "Uber (https://play.google.com/store/apps/details?id=com.ubercab)\nUber Driver (https://play.google.com/store/apps/details?id=com.ubercab.driver)\nUber Eats (https://play.google.com/store/apps/details?id=com.ubercab.eats)\nUber does not protect personal user data and has a questionable ethic.\nWorth reading : https://en.wikipedia.org/wiki/Uber#Criticism\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ubercab.eats",
+    "oem": null,
+    "description": "Uber (https://play.google.com/store/apps/details?id=com.ubercab)\nUber Driver (https://play.google.com/store/apps/details?id=com.ubercab.driver)\nUber Eats (https://play.google.com/store/apps/details?id=com.ubercab.eats)\nUber does not protect personal user data and has a questionable ethic.\nWorth reading : https://en.wikipedia.org/wiki/Uber#Criticism\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.UCMobile.intl",
+    "oem": null,
+    "description": "UC Browser by Alibaba (https://play.google.com/store/apps/details?id=com.UCMobile.intl)\n!! Unsecure chinese web browser !!\nhttps://www.quora.com/Whats-wrong-with-UC-Browser\nhttps://www.digitalinformationworld.com/2019/05/url-spoofing-uc-browser-android.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.ume.browser.northamerica",
+    "oem": null,
+    "description": "UME Web Browser (https://play.google.com/store/apps/details?id=com.ume.browser.northamerica)\nTrackers and a LOT of permissions (https://reports.exodus-privacy.eu.org/en/reports/com.ume.browser.cust/latest/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vlingo.midas",
+    "oem": null,
+    "description": "Speech recognition app forthe personal assistant by Vlingo \nVlingo : https://en.wikipedia.org/wiki/Vlingo\nFYI : In January 2012 AndroidPit discovered that Vlingo sended packets of information containing the users GPS co-ordinates,\nIMEI (unique device identifier), contact list and the title of every song stored on the device back to Nuance without.\nSource : https://www.androidpit.com/Vlingo-Privacy-Breach\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.wb.goog.got.conquest",
+    "oem": null,
+    "description": "Game of Thrones: Conquest (https://play.google.com/store/apps/details?id=com.wb.goog.got.conquest)\nMobile game\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.yahoo.mobile.client.android.liveweather",
+    "oem": null,
+    "description": "Yahoo Weather (https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.weather)\nPlease boycott Yahoo ! (all of their services are crappy so it's not so difficult)\nIf you're not aware : https://en.wikipedia.org/wiki/Criticism_of_Yahoo!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.yellowpages.android.ypmobile",
+    "oem": null,
+    "description": "Yellow Pages (https://play.google.com/store/apps/details?id=com.yellowpages.android.ypmobile)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.zhiliaoapp.musically",
+    "oem": null,
+    "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses. \nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation\n\nTikTok App \nWorth reading : https://en.wikipedia.org/wiki/TikTok#Privacy,_cyberbullying_and_addiction_concerns\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.zhiliaoapp.musically",
+    "oem": null,
+    "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses. \nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation\n\nTikTok App \nWorth reading : https://en.wikipedia.org/wiki/TikTok#Privacy,_cyberbullying_and_addiction_concerns\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "de.axelspringer.yana.zeropage",
+    "oem": null,
+    "description": "Upday news for Samsung (https://play.google.com/store/apps/details?id=de.axelspringer.yana)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "flipboard.app",
+    "oem": null,
+    "description": "Flipboard News App (https://play.google.com/store/apps/details?id=flipboard.app)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "flipboard.boxer.app",
+    "oem": null,
+    "description": "Briefing app (https://play.google.com/store/apps/details?id=flipboard.boxer.app)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "id.co.babe",
+    "oem": null,
+    "description": "BaBe (https://play.google.com/store/apps/details?id=id.co.babe)\nIndonesian news app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "in.mohalla.sharechat",
+    "oem": null,
+    "description": "ShareChat (https://play.google.com/store/apps/details?id=in.mohalla.sharechat)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "in.playsimple.wordtrip",
+    "oem": null,
+    "description": "World Trip (https://play.google.com/store/apps/details?id=in.playsimple.wordtrip)\nWord Count & word streak puzzle game\n19 trackers + 11 permissions (https://reports.exodus-privacy.eu.org/en/reports/in.playsimple.wordtrip/latest/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "jp.co.omronsoft.openwnn",
+    "oem": null,
+    "description": "Japanese keyboard/IME (Don't know why it's preinstalled on US/european devices)\nNote : IME = input method editor \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "jp.gocro.smartnews.android",
+    "oem": null,
+    "description": "SmartNews: Local Breaking News (https://play.google.com/store/apps/details?id=jp.gocro.smartnews.android)\nDelivers the top trending news stories from others publishers (NBC News, The Verges etc...)\n7 Trackers + 10 permissions (https://reports.exodus-privacy.eu.org/en/reports/jp.gocro.smartnews.android/latest/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "msgplus.jibe.sca.vpl",
+    "oem": null,
+    "description": "Messaging Plus. Messings using the RCS protocol (https://en.wikipedia.org/wiki/Rich_Communication_Services)\n \tRelated to Google Jibe (https://jibe.google.com/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.sharewire.parkmobilev2",
+    "oem": null,
+    "description": "ParkMobile - Find Parking (https://play.google.com/store/apps/details?id=net.sharewire.parkmobilev2)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "pl.zdunex25.updater",
+    "oem": null,
+    "description": "Updater for the zdnex25's theme\nhttps://www.deviantart.com/zdunex25/gallery/26889741/themes\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "se.dirac.acs",
+    "oem": null,
+    "description": "Earphone audio quality improvement from the Swedish company Dirac.\nThe technology relies on impulse and magnitude frequency response correction to deliver a more dynamic soundstage, \neven when connected to budget headphones. \nThe goal is to improve overall sound clarity and bass fidelity while correcting the frequency response so as to deliver a flat curve.\nCan be disabled in Settings/Additional settings/Headphone and audio effects (to try to hear the difference)\nhttps://www.androidcentral.com/heres-how-dirac-enabling-xiaomi-create-better-audio-products\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "tv.fubo.mobile.vpl",
+    "oem": null,
+    "description": "fuboTV (https://play.google.com/store/apps/details?id=tv.fubo.mobile)\nLets you Watch live Sports, TV Shows, Movies & News\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "tv.peel.app",
+    "oem": null,
+    "description": "Peel Universal Smart TV Remote Control (discontinued)\nLets you remotely control devices like your TV, DVD or Blu-ray player.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "zpub.res",
+    "oem": null,
+    "description": "3-party app preinstalled in ZTE phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.monotype.android.font.rosemary",
+    "oem": null,
+    "description": "###FONTS ####\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.monotype.android.font.rosemary",
+    "oem": null,
+    "description": "###FONTS ####\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.monotype.android.font.rosemary",
+    "oem": null,
+    "description": "###FONTS ####\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.monotype.android.font.rosemary",
+    "oem": null,
+    "description": "###FONTS ####\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dsi.ant.sample.acquirechannels",
+    "oem": null,
+    "description": "I don't know why there is \"sample\" in the name. Is this package really useful to find ANT channels ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dsi.ant.sample.acquirechannels",
+    "oem": null,
+    "description": "I don't know why there is \"sample\" in the name. Is this package really useful to find ANT channels ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dsi.ant.server",
+    "oem": null,
+    "description": "ANT HAL(Hardware Abstraction Layer) Server\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dsi.ant.service.socket",
+    "oem": null,
+    "description": "ANT Radio Service (https://play.google.com/store/apps/details?id=com.dsi.ant.service.socket)\nit is NOT related to Radio FM !\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "co.sitic.pp",
+    "oem": null,
+    "description": "Designed to remotely lock the phone (by sending a simple SMS) in case you don't pay your bill \nhttps://www.reddit.com/r/Android/comments/fde3l6/3rd_party_telemetry_found_in_nokia_smartphones/fjh4zbx/?context=3\nThis app was preinstalled on phone not served by that carrier (Am\u00e9rica M\u00f3vil) from South America. \nNormally you should not have this app anymore because it was removed by Nokia during an Android 10 update.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.gd.mobicore.pa",
+    "oem": null,
+    "description": "Mobicore is now Trustonic\nTrustonic is a small OS running on the CPU providing a TEE, an isolated environment that runs in parallel \nwith the operating system, guaranteeing code and data loaded inside to be protected.\nThat's sound great but it's closed source and \"normal\" devs can't use it for their apps.\nSee \"com.trustonic.tuiservice\"\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.trustonic.teeservice",
+    "oem": null,
+    "description": "TEE = Trusted Execution Environment\nSee below\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.trustonic.tuiservice",
+    "oem": null,
+    "description": "The tuiService (Trusted User Interface) is a new security layer implemented by Trustonic.\nAllows a Trusted Application to interact directly with the user via a common display and touch screen, completely isolated from the main device OS.\nSeems like a good idea but it's closed source and \"normal\" devs can't use it for their apps. \nhttps://stackoverflow.com/questions/16909576/how-to-make-use-of-arm-trust-zone-in-android-application\nIt is basically only used by manufacturer apps like Samsung Pay and for DRM stuff.\nGoogle implemented their own TUI in Android Pie : https://android-developers.googleblog.com/search/label/Trusted%20User%20Interface\n\nhttps://www.trustonic.com/news/blog/benefits-trusted-user-interface/\nhttps://en.wikipedia.org/wiki/Trusted_execution_environment\n#\nIf you're wondering, deleting theses packages will not cause security issues. It will break Trustonic TEE for sure\nbut if you don't use Trusted Apps. You won't need this ! \nDeleting this **may** reduce attack surface if your phone still has Trusted apps... because yeah, Trustonic TEE isn't foolproof (as it was claimed)\nhttps://en.wikipedia.org/wiki/ARM_architecture#Security_extensions\nhttps://googleprojectzero.blogspot.com/2017/07/trust-issues-exploiting-trustzone-tees.html\nhttps://www.synacktiv.com/posts/exploit/kinibi-tee-trusted-application-exploitation.html\nhttps://blog.quarkslab.com/introduction-to-trusted-execution-environment-arms-trustzone.html\n#\nGood ressources : \nhttps://medium.com/@nimronagy/arm-trustzone-on-android-975bfe7497d2\nhttps://www.gsd.inesc-id.pt/~nsantos/papers/pinto_acsur19.pdf\nhttps://blog.quarkslab.com/introduction-to-trusted-execution-environment-arms-trustzone.html\nhttps://medium.com/taszksec/unbox-your-phone-part-i-331bbf44c30c\n#\nNOTE : Trustonic TEE (called Kinibi) is used in Samsung, Vivo, Oppo, Xiaomi, Meizu and LG devices.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.simalliance.openmobileapi.uicc2terminal",
+    "oem": null,
+    "description": "Open Mobile API (\"interface\") to access UICC secure elements \nUICC stands for Universal Integrated Circuit Card. \nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.simalliance.openmobileapi.uicc2terminal",
+    "oem": null,
+    "description": "Open Mobile API (\"interface\") to access UICC secure elements \nUICC stands for Universal Integrated Circuit Card. \nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "org.simalliance.openmobileapi.service",
+    "oem": null,
+    "description": "The SmartCard API is a reference implementation of the SIMalliance Open Mobile API specification that enables Android applications \nto communicate with Secure Elements, (SIM card, embedded Secure Elements, Mobile Security Card or others)\nhttps://github.com/seek-for-android/pool/wiki/SmartcardAPI\nSafe to remove if you think you don't need this\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek",
+    "oem": null,
+    "description": "Mediatek is a Taiwanese chipset manufacturer.\nCan someone share the apk? This package name is really weird.\nIt is most likely a set of general APIs for accessing general mediatek functionalities.\nCan someone share the apk?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.atmwifimeta",
+    "oem": null,
+    "description": "wifi data logger you don't want.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.callrecorder",
+    "oem": null,
+    "description": "This is not the kind of feature expected from a Soc company.\nIf you remove this I guess you will not be able to record your calls from the stock dialer\nCan someone share the apk and verify this?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.engineermode",
+    "oem": null,
+    "description": "Enigneer mode you can access by dialing a secret code (*#*#3646633#*#* on some Xiaomi phones for instance)\nIt enables you to access to debug/logged data and some hidden firmware settings. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.gpslocationupdate",
+    "oem": null,
+    "description": "I wonder if it is really only a logging app. \nCan someone try to remove it and use a GPS app to see it still works?\nCan someone share the apk? (from a Xiaomi/Huawei phone)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.location.lppe.main",
+    "oem": null,
+    "description": "LPPE = LTE Positioning Protocol enhancements/extensions (LTE = \"4G\")\nPositioning and assistance protocol between E-SMLC (mobile location center) and UE (User Equipement = phone)\nhttps://www.gpsworld.com/wirelessexpert-advice-positioning-protocol-next-gen-cell-phones-11125/\nI don't know the app has the permission to read SMS\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.ims",
+    "oem": null,
+    "description": "Mediatek's implementation of IMS\nhttps://www.programmersought.com/article/50164530665/\nNote: IMS is an open industry standard for voice and multimedia communications over packet-based IP networks (Volte/VoIP/Wifi calling).\nUnless you use VolTE (wifi calling) or RCS from Google or your carrier you don't need IMS.\nI'm also not sure to understand the purpose of this package because there already is \"com.google.android.ims\" on the phone.\nCan someone remove this package and test if IMS still works?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.mdmconfig",
+    "oem": null,
+    "description": "Mobile Device Management (MDM) allows company\u2019s IT department to reach inside your phone in the background, allowing them to ensure \nyour device is secure, know where it is, and remotely erase your data if the phone is stolen.\nIt's a way to ensure employees stay productive and do not breach corporate policies\nYou should NEVER have a MDM tool on your personal phone. Never.\nhttps://blog.cdemi.io/never-accept-an-mdm-policy-on-your-personal-phone/\nThis package probably isn't a MDM tool on its own but you definitively don't need it on your phone.\nCan someone share the apk?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.mtklogger",
+    "oem": null,
+    "description": "Logs debug data. Has a lot of permissions and run in background all the time.\nDon't keep useless apps: reduce the attack surface\nVulnerability found in this app in 2016: https://nvd.nist.gov/vuln/detail/CVE-2016-10135\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.nlpservice",
+    "oem": null,
+    "description": "Mediatek Network Location Provider\nProvides periodic reports on the geographical location of the device. Each provider has a set of criteria under which it may be used.\nFor example, some providers require GPS hardware and visibility to a number of satellites others require the use of \nthe cellular radio, or access to a specific carrier's network, or to the internet. \nThey may also have different battery consumption characteristics or monetary costs to the user.\n\nI don't really understand why you would need this as there is already one in 'com.google.android.gms'\nI wonder if NLP can be replaced by https://github.com/microg/UnifiedNlp\nI suggest to test if you get a better signal/battery performance with Mediatek NLP, if not you can get rid of it.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.omacp",
+    "oem": null,
+    "description": "omacp = OMA Client Provisioning. It is a protocol specified by the Open Mobile Alliance (OMA).\nConfiguration messages parser. Used for provisioning APN settings to devices via SMS \nIn my case, it was automatic and I never needed configuration messages.\nMaybe it's useful if carriers change their APN. But you still can change the config manually, it's not difficult.\nDunno why Mediatek handles this kind of things. Safe to remove. At worst, you'll need to manually config your APN.\nNote: OMACP can be abused. Be careful:\nhttps://research.checkpoint.com/2019/advanced-sms-phishing-attacks-against-modern-android-based-smartphones/\nhttps://www.zdnet.com/article/samsung-huawei-lg-and-sony-phones-vulnerable-to-rogue-provisioning-messages/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.providers.drm",
+    "oem": null,
+    "description": "DRM provider (actually Beep Science is the MediaTek\u2019s default DRM vendor)\nYou probably need this if you want to watch Netflix & others stuff in high-res \nREMINDER : DRM = all the things that restrict the use of proprietary hardware and copyrighted works.\n==> https://en.wikipedia.org/wiki/Digital_rights_management\n==> https://creativecommons.org/2017/07/09/terrible-horrible-no-good-bad-drm/\n==> https://fckdrm.com/\n==> http://www.info-mech.com/drm_flaws.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mediatek.wfo.impl",
+    "oem": null,
+    "description": "According to olorin (https://www.olorin.me/2019/09/08/debloating-the-umidigi-f1-play/)\nit's the MediaTek\u2019s default fingerprint app (and he removed it)\nCan someone confirm what does this package exactly do? \nRemember that any preinstalled apps you don't actually need just increase the surface attack.\nVulnerability found in 2019: https://nvd.nist.gov/vuln/detail/CVE-2019-15368\nAny app co-located on the device could modify a system property through an exported interface without proper authorization.\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]

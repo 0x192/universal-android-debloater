@@ -1,0 +1,562 @@
+[
+  {
+    "packageId": "android.autoinstalls.config.motorola.layout",
+    "oem": null,
+    "description": "\nDevice configuration for Motorola \nAutoInstall allows manufacturers to force installation of apps.\nJust a layout ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lenovo.lsf.user",
+    "oem": null,
+    "description": "Lenovo ID adds an option in Settings>Accounts where you can login to a Lenovo ID account.\nFeatures include \"exclusive features directly from Lenovo and our partners\" and \"syncing users information across devices\"\nlsf = Lenovo Service Framework\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lmi.motorola.rescuesecurity",
+    "oem": null,
+    "description": "Rescue Security by LogMeIn (https://www.logmeinrescue.com/)\nRemote support app. Motorola made a partnership with LogMeIn : https://www.logmeinrescue.com/customer-stories/motorola\nIt enables motorola representatives to login and remotely control the device for technical support.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.fmradio",
+    "oem": null,
+    "description": "FMRadioService \nRequired by \"com.motorola.fmplayer\"\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.jvtcmd",
+    "oem": null,
+    "description": "Java Tcmd Helper\ntcmd = commandes types. Seems to be a tools wich help find Java commands types.\nUseless for normal user.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.nativedropboxagent",
+    "oem": null,
+    "description": "Native DropBox Agent.\nIt is not related to Cloud Dropbox company but to Android logging. It is used during development.\nhttps://stackoverflow.com/questions/4434192/dropboxmanager-use-cases\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.providers.chromehomepage",
+    "oem": null,
+    "description": "Seems to only prodive the \"home\" symbol in Chrome.\nhttps://forum.xda-developers.com/android/apps-games/app-chrome-homepage-t3695804\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.provisioning",
+    "oem": null,
+    "description": "OMA Client Provisioning\nIt is a protocol specified by the Open Mobile Alliance (OMA).\nIt is used by carrier to send \"configuration SMS\" which can setup network settings (such as APN).\nIn my case, it was automatic and I never needed configuration messages. I'm pretty sure that in France this package is useless.\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n#\nNote : These special \"confirguration SMS\" can be abused : \nhttps://www.zdnet.fr/actualites/les-smartphones-samsung-huawei-lg-et-sony-vulnerables-a-des-attaques-par-provisioning-39890045.htm\nhttps://www.csoonline.com/article/3435729/sms-based-provisioning-messages-enable-advanced-phishing-on-android-phones.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.settings.diag_mdlog",
+    "oem": null,
+    "description": "diag_mdlog is a small proprietary Qualcomm program which can store DIAG logs on the filesystem.\nNo longer in Android 10 image\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.settings.modemdebug",
+    "oem": null,
+    "description": "Provide modem debug settings menu ?\nNo longer in Android 10 image\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.appdirectedsmsproxy",
+    "oem": null,
+    "description": "An Application directed SMS (or rather a Port directed SMS) is an SMS directed to a specific port. \nApps need to listen to this port to get the SMS message.\nI don't know if this package allows port directed SMS or if it just provide a proxy feature.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.bach.modemstats",
+    "oem": null,
+    "description": "ModemStatsService\nStatistics and events logs from the modem activity.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.brapps",
+    "oem": null,
+    "description": "Motorola App Box (https://play.google.com/store/apps/details?id=com.motorola.brapps)\nOffers you a selection of applications developed by Brazilians and also apps selected for you.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.bug2go",
+    "oem": null,
+    "description": "Bugs reporting app that sends info about crash report.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ccc.devicemanagement",
+    "oem": null,
+    "description": "Mobile Device Management (MDM) allows company\u2019s IT department to reach inside your phone in the background, allowing them to ensure \nyour device is secure, know where it is, and remotely erase your data if the phone is stolen.\nYou should NEVER install a MDM tool on your phone. Never.\nhttps://onezero.medium.com/dont-put-your-work-email-on-your-personal-phone-ef7fef956c2f\nhttps://blog.cdemi.io/never-accept-an-mdm-policy-on-your-personal-phone/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ccc.mainplm",
+    "oem": null,
+    "description": "plm = Product Lifecycle Management ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ccc.notification",
+    "oem": null,
+    "description": "Motorola Notifications (https://play.google.com/store/apps/details?id=com.motorola.ccc.notification)\nIf you opt-in, it sends periodic product-related information, including notifications on software updates, tips & tricks, survey and information\nabout new Motorola products and services.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.contacts.preloadcontacts",
+    "oem": null,
+    "description": "Preloaded Contacts\nProvides contacts preset by carriers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.demo",
+    "oem": null,
+    "description": "Moto Demo Mode \nEnable retail demonstration mode.\nhttps://source.android.com/devices/tech/display/retail-mode\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.demo.env",
+    "oem": null,
+    "description": "Needed for Moto Demo Mode\nenv = environment\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.email",
+    "oem": null,
+    "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)\n\nMoto Email (https://play.google.com/store/apps/details?id=com.motorola.email)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.email",
+    "oem": null,
+    "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)\n\nMoto Email (https://play.google.com/store/apps/details?id=com.motorola.email)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.fmplayer",
+    "oem": null,
+    "description": "FM Radio (https://play.google.com/store/apps/details?id=com.motorola.fmplayer)\nRadio app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.frameworks.singlehand",
+    "oem": null,
+    "description": "Provide the Single/One hand mode\nI don't know why frameworks appears in the package name because it's not only the framework.\nhttps://support.motorola.com/us/en/documents/MS116403/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.genie",
+    "oem": null,
+    "description": "Device Help (previously Moto Help) (https://play.google.com/store/apps/details?id=com.motorola.genie)\nAn app that checks hardware status and gives the user contacts for support.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.gesture",
+    "oem": null,
+    "description": "Gesture navigation tutorial added in Android 10.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.help",
+    "oem": null,
+    "description": "Moto feedback (https://play.google.com/store/apps/details?id=com.motorola.help)\nLets you rate your device and share feedback with Motorola.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.lifetimedata",
+    "oem": null,
+    "description": "Not 100% sure but it's most likely the Total Call Timer or more generally it handles info like the date of manufacture of your device,\nusage time since first boot etc... \nTotal Call Timer gives you the time you spent calling.\nI don't know how to access to these info. It's surely a hidden menu (and may be accessible through the dialer with a special code)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.hiddenmenuapp",
+    "oem": null,
+    "description": "Added in Android 10. Safe to remove.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.moto",
+    "oem": null,
+    "description": "Moto (https://play.google.com/store/apps/details?id=com.motorola.moto)\nApp providing Moto Actions, Moto Display, and other feature families that let you customize the way you interact with your device. \nMoto Actions is another app (https://play.google.com/store/apps/details?id=com.motorola.actions). Gestures set with \"Moto\" prior will continue to work provided \"Moto Actions\" remains installed.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.motocare",
+    "oem": null,
+    "description": "Moto Care was renamed in \"Moto Help\" and then in \"Device Help\"\nProvide support features.\nhttps://mobile.softpedia.com/blog/Moto-Care-App-Gets-Updated-Now-Called-Motorola-Help-432827.shtml\nHowever you can both have com.motorola.genie (Device Help) and this package so it's strange.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.motocit",
+    "oem": null,
+    "description": "CQATest\nCQA = Custom Quality Assurance\nHidden menu (accessible by typing *#*#2486#*#* in the Moto Dialer) which lets you run hardware tests.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.motocit",
+    "oem": null,
+    "description": "CQATest\nCQA = Custom Quality Assurance\nHidden menu (accessible by typing *#*#2486#*#* in the Moto Dialer) which lets you run hardware tests.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.motodisplay",
+    "oem": null,
+    "description": "Moto Display (https://play.google.com/store/apps/details?id=com.motorola.motodisplay)\nDisplays notifications with the screen off (it's like the Always On Display feature from Samsung)\nhttps://support.motorola.com/uk/en/solution/ms108519\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.paks",
+    "oem": null,
+    "description": "ADB: Package Protected.\nMy Q Paks \nThird-party application bundles\nhttps://www.financialmirror.com/2007/10/31/motorola-packs-moto-q-9h-global-smart-device-with-third-party-applications/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.programmenu",
+    "oem": null,
+    "description": "Programming Menu\nHidden menu (accessible by typing  ##7764726 in the dialer) providing additionnal features for developers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ptt.prip",
+    "oem": null,
+    "description": "Prip (https://play.google.com/store/apps/details?id=com.motorola.ptt.prip)\nPush-To-Talk app. Allows to you send calls over any wireless carrier\u2019s 3G or 4G networks or a WiFi connection.\nIt offers unlimited calling between other users and Nextel phone owners, rather than universal calling credit, \nand works on a monthly subscription basis.\nhttps://prip.me/#get\nNo longer in Android 10 image\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.setup",
+    "oem": null,
+    "description": "Related to Motorola Account setup (only during first boot ?)\nSafe to remove according to xda users.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.slpc_sys",
+    "oem": null,
+    "description": "Motorola Slpc System\nWould be weird if it's not related to Motorola Modality Services (https://play.google.com/store/apps/details?id=com.motorola.slpc)\nHelps your Motorola phone respond more intelligently to motion, phone orientation (e.g. face up/down) and stowed state (e.g in/out-of-pocket).\nHas a noticeable impact on battery ? (https://forum.xda-developers.com/moto-x-2014/help/location-modality-services-battery-t2982752)\nFYI : It uses location services.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.timeweatherwidget",
+    "oem": null,
+    "description": "Provides time/weather widget on the home screen.\nhttps://en.wikipedia.org/wiki/Widget\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.camera2",
+    "oem": null,
+    "description": "Moto Camera 2 (https://play.google.com/store/apps/details?id=com.motorola.camera)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.actions",
+    "oem": null,
+    "description": "Moto Actions (https://play.google.com/store/apps/details?id=com.motorola.actions)\nAllows you to perform specific gestures to perform certain tasks. Frontend to change settings provided by \"com.motorola.moto\".\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.carriersettingsext",
+    "oem": null,
+    "description": "Seems safe to remove for now.\nCarrier settings ext\next = extension ?\nCarrier settings contains APN settings for instance.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.callredirectionservice",
+    "oem": null,
+    "description": "Added in Android 10. Safe to remove.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ccc.ota",
+    "oem": null,
+    "description": "Motorola Update Services\nProvide OTA system updates.\nOTA (Over-The-Air) updates allow manufacturers to remotely install new software updates, features and services.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.comcast.settings.extensions",
+    "oem": null,
+    "description": "Most likely provides a special settings menu for Comcast stuff.\nI think it's installed on Xfinity branded phones.\nSafe to remove (tested only on non-Comcast phone).\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.visualvoicemail",
+    "oem": null,
+    "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".\nSafe to remove (tested only on non-Comcast phone).\n\nADB: Marked as non-disable\nVerizon Visual Voicemail (https://play.google.com/store/apps/details?id=com.motorola.visualvoicemail)\nOn non-Verizon phones it has a generic \"Voicemail\" name and icon, and doesn't seem to active.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.visualvoicemail",
+    "oem": null,
+    "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".\nSafe to remove (tested only on non-Comcast phone).\n\nADB: Marked as non-disable\nVerizon Visual Voicemail (https://play.google.com/store/apps/details?id=com.motorola.visualvoicemail)\nOn non-Verizon phones it has a generic \"Voicemail\" name and icon, and doesn't seem to active.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.entitlement",
+    "oem": null,
+    "description": "Enable WiFi tethering/hotspot functionality. \nWhat you can do is preventing the phone from notifying the carrier about when you use hotspot. It will bypass mobile carriers tethering restrictions.\nFrom an ADB shell : settings put global tether_dun_required 0\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.faceunlock",
+    "oem": null,
+    "description": "Moto Face Unlock (https://play.google.com/store/apps/details?id=com.motorola.faceunlock)\nLets you conveniently unlock your device by simply looking at the display. \nNote : Using face unlock is a really bad idea (security and privacy wise) : \nhttps://www.ubergizmo.com/2017/03/galaxy-s8-facial-unlock-photograph/\nhttps://www.kaspersky.com/blog/face-unlock-insecurity/21618/\nhttps://www.freecodecamp.org/news/why-you-should-never-unlock-your-phone-with-your-face-79c07772a28/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.faceunlocktrustagent",
+    "oem": null,
+    "description": "Motorola Face Unlock Agent\nTrust agent is a service that notifies the system about whether it believes the environment of the device to be trusted.\nThe exact meaning of 'trusted' is up to the trust agent to define. \nThe system lockscreen listens for trust events, it can change its behaviour based on the trust state of the current user\n(e.g detection of a trusted face)\nhttps://nelenkov.blogspot.com/2014/12/dissecting-lollipops-smart-lock.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.imagertuning_lake",
+    "oem": null,
+    "description": "Imager Tuning (https://play.google.com/store/apps/details?id=com.motorola.imagertuning_athene)\nNaming convention: imagertuning_[PHONE CODENAME]\nIt's supposed to improve color, sharpness, noise when taking photo with the stock camera. \nThe results are not that good (see reviews). I let you see the difference with/without the camera tuning.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.imagertuning_lake",
+    "oem": null,
+    "description": "Imager Tuning (https://play.google.com/store/apps/details?id=com.motorola.imagertuning_athene)\nNaming convention: imagertuning_[PHONE CODENAME]\nIt's supposed to improve color, sharpness, noise when taking photo with the stock camera. \nThe results are not that good (see reviews). I let you see the difference with/without the camera tuning.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.imagertuning_lake",
+    "oem": null,
+    "description": "Imager Tuning (https://play.google.com/store/apps/details?id=com.motorola.imagertuning_athene)\nNaming convention: imagertuning_[PHONE CODENAME]\nIt's supposed to improve color, sharpness, noise when taking photo with the stock camera. \nThe results are not that good (see reviews). I let you see the difference with/without the camera tuning.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.invisiblenet",
+    "oem": null,
+    "description": "Invisible net\nHard to find info about this one. I only found something from a patent (http://www.freepatentsonline.com/5469497.html).\nIt's a Google patent and Google owned Motorola so maybe it is that's it.\nIt seems to implement the ICMS local area network. ICMS means Interactive Call Management Subsystems.\nI couldn't find more info about ICMS. It's strange that this is so badly documented. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.launcher3",
+    "oem": null,
+    "description": "Motorola system Launcher\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER !\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.launcherconfig",
+    "oem": null,
+    "description": "Config file of the motorola launcher ? \nI guess launcher will not work anymore if you delete this package. Can someone confirm ?\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER !\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.launcher.secondarydisplay[MOREINFONEEDED]",
+    "oem": null,
+    "description": "ADB: package is non-disable\nAppears to enable support for a secondary display with Moto's launcher.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.motosignature.app",
+    "oem": null,
+    "description": "Appears safe to remove.\nMaybe it's the service which check whether app's signature is trusted or not.\nNot useful if you know what you're doing (malwares apps are in PlayStore. This package will not protect you)\nMaybe I'm mistaken and this package does not handles app signatures. Can someone test it.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.nfc",
+    "oem": null,
+    "description": "Support for NFC protocol.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.omadm.service",
+    "oem": null,
+    "description": "Appears safe to remove.\nCarrier Provisioning Service\nProvisioning involves the process of preparing and equipping a network to allow it to provide new services to its users.\nOMADM  = OMA Device Management\nBasically, it handles configuration of the device (including first time use), enabling and disabling features provided by carriers.\nhttps://en.wikipedia.org/wiki/OMA_Device_Management\nUse case seems very limited : https://www.androidpolice.com/2015/03/10/android-5-1-includes-new-carrier-provisioning-api-allows-carriers-easier-methods-of-setting-up-services-on-devices-they-dont-control/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.pgmsystem2",
+    "oem": null,
+    "description": "Appears safe to remove\nPGM System\nI didn't find info about this package. \nFor Me PGM = Peak Gate Power (for MOSFET transistor) but I'm not convinced it has this meaning here.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.systemserver",
+    "oem": null,
+    "description": "Appears safe to remove. Maybe it's only needed for Motorola apps?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.VirtualUiccPayment",
+    "oem": null,
+    "description": "Virtual UICC Payment\nUICC stands for Universal Integrated Circuit Card. \nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nI guess this package provides support for NFC payement.\nNote: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.config.wifi",
+    "oem": null,
+    "description": "Appears safe to remove.\nWPA config App\nWi-Fi not affected after removal.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.coresettingsext",
+    "oem": null,
+    "description": "Core Settings extension\nSafe to remove (no bootloop) but its usefulness remains unkown.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.android.providers.settings",
+    "oem": null,
+    "description": "Removal causes bootloop. Which is fairly common with settings providers.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.msimsettings",
+    "oem": null,
+    "description": "Dual SIM Settings\nProvides Dual SIM feature.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.timezonedata",
+    "oem": null,
+    "description": "/!\\ Causes bootloop on Moto G7 Power (Android 9/10)\nTime Zone Data (https://play.google.com/store/apps/details?id=com.motorola.timezonedata)\nUpdate timezone when traveling to foreign countries.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.audiofx",
+    "oem": null,
+    "description": "/!\\ Removal causes bootloop on Moto G7 Power (Android 10)\nAudio effects\nProvide features like Equalizer, Surround sound...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]

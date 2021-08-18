@@ -1,0 +1,266 @@
+[
+  {
+    "packageId": "cn.oneplus.photos",
+    "oem": null,
+    "description": "Shot On OnePlus\nAccessible through the Wallpapers selection menu.\nProvide photos uploaded by OnePlus users, allowing you to set them as your current wallpaper. \nEach day, one new photo appears within the application.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.example.wifirftest",
+    "oem": null,
+    "description": "Wifi Radio Frequency test\nProbably used in factory. No hidden test menu to use it.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.fingerprints.fingerprintsensortest",
+    "oem": null,
+    "description": "Sensor Test Tool \nProvide fingerprint hidden test menu (type *#806 in OnePlus dialer)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oem.autotest",
+    "oem": null,
+    "description": "Auto Test Server\nUsed to test the hardware of your device and change hidden settings.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oem.logkitsdservice",
+    "oem": null,
+    "description": "Used by a Shady logging app (com.oem.oemlogkit) which can be activated a bit too easily.\nNo good reason why this app is on customer devices.\nIt can log WiFi traffic, Bluetooth traffic, NFC activity, GPS coordinates over time, power consumption, modem signal/data details, \"lag issues,\" and more.\nhttps://thehackernews.com/2017/11/oneplus-logkit-app.html\nhttps://www.bleepingcomputer.com/news/security/second-oneplus-factory-app-discovered-this-one-dumps-photos-wifi-and-gps-logs/\nSource : https://nitter.net/fs0c131y/status/930773795656396801\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oem.nfc",
+    "oem": null,
+    "description": "OnePlus NFC tester\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oem.oemlogkit",
+    "oem": null,
+    "description": "OnePlusLogKit \nSee \"com.oem.logkitsdservice\"\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.backuprestore",
+    "oem": null,
+    "description": "OnePlus Switch (https://play.google.com/store/apps/details?id=com.oneplus.backuprestore)\nLets you migrate your contacts, text messages, photos, and other data from your previous phone to a OnePlus phone. \nIt can also help backup your data of the OnePlus phone as a compressed archive.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.brickmode",
+    "oem": null,
+    "description": "OnePlus Zen Mode (https://play.google.com/store/apps/details?id=com.oneplus.brickmode)\nZen Mode will help you put down your phone and enjoy your life.\nIn Zen Mode you will only be able to take photos and answer calls.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.bttestmode",
+    "oem": null,
+    "description": "OnePlus Bluetooth test mode\nType *#*#232339#*#* in the OnePlus dialer to access this hidden test menu.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.card",
+    "oem": null,
+    "description": "Card Package\nWidget which lets you add membership card in Shelf.\nYou enter numbers for a club card or something and it'll store it and generate a barcode for you.\n#\nNote : Shelf is essentially a page on your home screen that allows you to take memos, add widgets, gain access to your most-used apps, \nand get a quick glimpse of the weather. Swipe right (from the left edge of your OnePlus screen) and you'll see Shelf in action.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.factorymode",
+    "oem": null,
+    "description": "EngineeringMode/ FactoryMode\nUsed by the operator in the factory to test the devices.\nYou only need to type *#808in the OnePlus dialer to acess the hidden menu.\nPotential security risk : https://nitter.net/fs0c131y/status/930115188988182531\nIt's now possible for an app to enable root access on any device with the APK preinstalled. \nFor now, this only works in ADB, which requires local access to the device.\n#\nOnePlus decided to remove this app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.factorymode.specialtest",
+    "oem": null,
+    "description": "Engineering Mode Special Test\nUsed by the operator in the factory to test the devices.\n#\nSee above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.gamespace",
+    "oem": null,
+    "description": "OnePlus Game Space\nUseless. Game launcher.\nAllows you to launch your game library as well as checking out several stats about the game, such as how long you have played.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.note",
+    "oem": null,
+    "description": "OnePlus Notes app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opbugreportlite",
+    "oem": null,
+    "description": "OPBugReportLite \nSends silently, every 6 hours, the battery stats, kernel panics, watchdogs, ANRs and all crashes of your device to Singapore.\nhttps://www.androidpit.com/oneplus-opbugreportlite-data-collection\nSource (yeah it's Elliot Alderson again :D) : https://nitter.net/fs0c131y/status/933037531066785797\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.soundrecorder",
+    "oem": null,
+    "description": "OnePlus voice recording app \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tencent.soter.soterserver",
+    "oem": null,
+    "description": "Soter is a biometric authentication standard and platform in Android held by Tencent.\nhttps://github.com/Tencent/soter#a-quick-look-at-tencent-soter\nFYI : Tencent is a Chinese multinational conglomerate holding company (https://en.wikipedia.org/wiki/Tencent#Controversies)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.wapi.wapicertmanage",
+    "oem": null,
+    "description": "WAPI certificate manager\nWAPI = WLAN Authentication and Privacy Infrastructure. \nIt's a Chinese National Standard for Wireless LAN (local area network : within a limited area such as a home)\nNot very useful if you don't live in China.\nFYI : https://en.wikipedia.org/wiki/WLAN_Authentication_and_Privacy_Infrastructure\n#\nDigital certificates identify computers, phones, and apps for security. Just like you'd use your driver\u2019s license \nto show that you can legally drive, a digital certificate identifies your device and confirms that it should be able to access something.\nFYI : https://security.stackexchange.com/questions/102550/what-are-wifi-certificates-used-for-what-are-they \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.commonlogtool",
+    "oem": null,
+    "description": "OnePlus Common Log Tool\n9 permissions and given what we know about OnePlus logging apps, it's a good idea to remove this \nSee \"com.oneplus.opbugreportlite\", \"com.oneplus.factorymode\", \"com.oem.logkitsdservice\".\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.forums",
+    "oem": null,
+    "description": "OnePlus Community (https://play.google.com/store/apps/details?id=net.oneplus.forums)\nLets you access to OnePlus forum... wah that great !\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.opsports",
+    "oem": null,
+    "description": "Cricket Scores (https://play.google.com/store/apps/details?id=com.oneplus.opsports)\nLets you access and follow cricket teams and tournaments\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.odm.provider",
+    "oem": null,
+    "description": "Shady analytic app... again.\nSends A LOT of data to OnePlus' servers including the phone's IMEI number, the phone number, MAC addresses, \nmobile network names and IMSI prefixes, Wi-Fi connection info, the phone's serial number and every time an app was opened.\nPress : https://www.androidpolice.com/2017/10/10/never-settle-oneplus-found-collecting-personally-identifiable-analytics-data-phone-owners/\nSource : https://www.chrisdcmoore.co.uk/post/oneplus-analytics/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.odm.provider",
+    "oem": null,
+    "description": "Shady analytic app... again.\nSends A LOT of data to OnePlus' servers including the phone's IMEI number, the phone number, MAC addresses, \nmobile network names and IMSI prefixes, Wi-Fi connection info, the phone's serial number and every time an app was opened.\nPress : https://www.androidpolice.com/2017/10/10/never-settle-oneplus-found-collecting-personally-identifiable-analytics-data-phone-owners/\nSource : https://www.chrisdcmoore.co.uk/post/oneplus-analytics/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.provider.appcategoryprovider",
+    "oem": null,
+    "description": "AppCategoryProvider\nUsed to regroup app in category in the OnePlus launcher ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.push",
+    "oem": null,
+    "description": "OnePlus push notification. \nIt only concern OnePlus useless preinstalled apps (\"surveys and other junks\" according a user)\nhttps://forums.oneplus.com/threads/psa-non-root-root-stop-oneplus-push-notifications.580058/\nOnePlus can remotely sends you push notification :\nhttps://www.androidpolice.com/2019/07/01/oneplus-accidentally-pushed-a-cryptic-notification-to-all-7-pro-users/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.weather",
+    "oem": null,
+    "description": "OnePlus weather app (https://play.google.com/store/apps/details?id=net.oneplus.weather)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.oneplus.widget",
+    "oem": null,
+    "description": "OnePlus Widget\nLets you use OnePlus widgets on the home screen.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.iconpack.circle",
+    "oem": null,
+    "description": "OnePlus Icon Pack - Round (https://play.google.com/store/apps/details?id=com.oneplus.iconpack.circle)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.iconpack.oneplus",
+    "oem": null,
+    "description": "OnePlus Icon Pack (https://play.google.com/store/apps/details?id=com.oneplus.iconpack.oneplus)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.iconpack.square",
+    "oem": null,
+    "description": "OnePlus Icon Pack - Square (https://play.google.com/store/apps/details?id=com.oneplus.iconpack.square)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "cn.oneplus.oem_tcma",
+    "oem": null,
+    "description": "TCMA stands for Tiered Contention Multiple Access, which is a cellular traffic management protocol.\nTCMA is a CSMA/CA protocol which schedules transmission of different types of traffic. \nI don't know if it's a good idea to remove given a CSMA/CA protocol improve QoS (https://en.wikipedia.org/wiki/Quality_of_service)\nAt the same time, it is most likely only used in China (ch.oneplus ==> China version) and for OnePlus apps.\nFYI : https://en.wikipedia.org/wiki/Carrier-sense_multiple_access_with_collision_avoidance\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.oneplus.filemanager",
+    "oem": null,
+    "description": "OnePlus file manager\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]

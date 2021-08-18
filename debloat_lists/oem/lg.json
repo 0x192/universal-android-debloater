@@ -1,0 +1,762 @@
+[
+  {
+    "packageId": "com.android.LGSetupWizard",
+    "oem": null,
+    "description": "The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for LG services.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.appbox.client",
+    "oem": null,
+    "description": "LG Application manager\nInstalls/Updates LG related apps ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.bnr",
+    "oem": null,
+    "description": "LG Backup\nCan backup your mobile devices LG Home screen, device settings, apps, and contacts to your computer.\nhttps://www.lg.com/us/support/help-library/lg-android-backup-CT10000025-20150104708841\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.cic.eden.service",
+    "oem": null,
+    "description": "Memories album\nGallery automatically creates a Memories album with pictures and videos saved in the phone. \nMemories is a virtual album of pictures saved in the phone or SD card.\nSource : https://www.lg.com/hk_en/support/product-help/CT30019000-1433767985158-others\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.drmservice",
+    "oem": null,
+    "description": "LG Cloud\nBackup tool, which gives you the option to backup LG phone settings, apps, contacts and Home screen \nto your phone internal storage, SD card, computer or cloud.\nSource : https://www.apeaksoft.com/backup/lg-cloud-backup.html\n\nDRM Service\nNeeded to read DRM content playback. It manages the DRM Client, which holds a particular type of information required to get a license key. \nREMINDER : DRM = all the things that restrict the use of proprietary hardware and copyrighted works.\n==> https://en.wikipedia.org/wiki/Digital_rights_management\n==> https://creativecommons.org/2017/07/09/terrible-horrible-no-good-bad-drm/\n==> https://fckdrm.com/\n==> http://www.info-mech.com/drm_flaws.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.drmservice",
+    "oem": null,
+    "description": "LG Cloud\nBackup tool, which gives you the option to backup LG phone settings, apps, contacts and Home screen \nto your phone internal storage, SD card, computer or cloud.\nSource : https://www.apeaksoft.com/backup/lg-cloud-backup.html\n\nDRM Service\nNeeded to read DRM content playback. It manages the DRM Client, which holds a particular type of information required to get a license key. \nREMINDER : DRM = all the things that restrict the use of proprietary hardware and copyrighted works.\n==> https://en.wikipedia.org/wiki/Digital_rights_management\n==> https://creativecommons.org/2017/07/09/terrible-horrible-no-good-bad-drm/\n==> https://fckdrm.com/\n==> http://www.info-mech.com/drm_flaws.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.easyhome",
+    "oem": null,
+    "description": "LG EasyHome\nEasyHome is a more simplified version of the Home screen that you can choose to use on your phone.\nIt displays the Home screen like a remote control device. T\nSource : https://www.lg.com/us/mobile-phones/VS985/Userguide/048.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.eltest",
+    "oem": null,
+    "description": "ELTest\nDevice hardware tests settings\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.email",
+    "oem": null,
+    "description": "LG Email app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.eula",
+    "oem": null,
+    "description": "LG EULA (Terms of Use) accessible in the settings.\nEULA = https://en.wikipedia.org/wiki/End-user_license_agreement\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.eulaprovider",
+    "oem": null,
+    "description": "License Provider\nNeeded by com.lge.eula.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.fmradio",
+    "oem": null,
+    "description": "FM radio app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.friendsmanager",
+    "oem": null,
+    "description": "LG Friends Manager (https://play.google.com/store/apps/details?id=com.lge.friendsmanager)\nWTF ? Completly useless app.\nNot sure but I think it enables you to download an app for a friend LG user.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gallery.collagewallpaper",
+    "oem": null,
+    "description": "LG Collage Wallpapers\nAllows you to create patchwork wallpaper from several photos.\nhttps://www.lg.com/uk/support/product-help/CT00008356-20150332136499-others\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gallery.vr.wallpaper",
+    "oem": null,
+    "description": "LG 360 Image Wallpaper\nProvied VR (360\u00b0) wallpapers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gcuv",
+    "oem": null,
+    "description": "GCUV\nNot 100% sure but @siraltus from XDA thinks it refers to \"Gauce Components\" which seems to be the LG's version of CSC \n(carrier sales code - automatic carrier-specific customization).\nIt gets run on first boot after factory reset, sets up the ROM features based on which carrier and country code is specified \nin the build.prop, and then gets frozen so it doesn't reconfigure things on subsequent boots.\nIt's basically the only person to mention \"Gauce components\" on the web (other than restricted LG webpages when using Google dorks).\nhttps://forum.xda-developers.com/tmobile-lg-v10/development/rom-lg-v10-h901-10c-debranded-debloated-t3277305/page12/page12\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gestureanswering",
+    "oem": null,
+    "description": "Answer me 2.0\nAllows you to bring the phone to your ear to answer an incoming call automatically.\nhttps://www.lg.com/us/mobile-phones/VS980/Userguide/109-1.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gnss.airtest",
+    "oem": null,
+    "description": "GNSS Air Test\nGNSS test, used to test... GNSS. Not needed, and GPNSS will continue to work.\nNOTE : GNSS = Global Navigation Satellite System and is the standard generic term for satellite navigation systems.\nThis term includes e.g. the GPS, GLONASS, Galileo, Beidou and other regional systems.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gnsslogcat",
+    "oem": null,
+    "description": "GNSS Logcat\nUsed to dump GNSS logs.  \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gnsspostest",
+    "oem": null,
+    "description": "GNSS Position test\nGNSS test again.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.gnsstest",
+    "oem": null,
+    "description": "GNSS Test\nWoh ! Why does LG need so many GNSS test packages?! \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.hifirecorder",
+    "oem": null,
+    "description": "LG Audio Recorder\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.hotspotlauncher",
+    "oem": null,
+    "description": "LG Mobile Hotspot\nProvide hotsport feature enabling you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ia.task.incalagent",
+    "oem": null,
+    "description": "InCalAgent\nRelated to interface while you're in a call. Seemes also related to tasks list stuff.\nCan someone tells me what happens when you delete it ? I think it is safe.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ia.task.smartcare",
+    "oem": null,
+    "description": "LIA SmartDoctor Engine\nNeeded by SmartDoctor (com.lge.phonemanagement) ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ia.task.smartsetting",
+    "oem": null,
+    "description": "SmartSetting\nTurns on/off or changes features, settings and more according to where you are or what you do.\nhttps://www.lg.com/us/support/help-library/lg-android-smart-settings-CT10000025-20150103623722\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.iftttmanager",
+    "oem": null,
+    "description": "LG Smart settings\nIFTTT = \u201cif this, then that.\u201d. Smart Settings can be seens as IFTTT.\nSome events automatically triggers actions.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ime",
+    "oem": null,
+    "description": "LG Stock Keyboard\nDo not remove if you don't have an alternate keyboard available. Personally, I keep the stock keyboard just in case the keyboard app crash/fails (this happened to me once) locking me out of entering password.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ime.solution.handwriting",
+    "oem": null,
+    "description": "Handwriting feature on the LG keyboard\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.ime.solution.text",
+    "oem": null,
+    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young) : https://en.wikipedia.org/wiki/XT9\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.launcher2.theme.optimus",
+    "oem": null,
+    "description": "\"Optimus\" theme for the LG launcher (v2)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.leccp",
+    "oem": null,
+    "description": "LG Connectivity Service\nI didn't find any info about this package.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgaccount",
+    "oem": null,
+    "description": "LG Account\nEnable you to create and manage you completly useless LG account.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgdrm.permission",
+    "oem": null,
+    "description": "Handle permissions for LG DRM (com.lge.drmservice).\nWhy does LG need a whole package for this ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lginstallservies",
+    "oem": null,
+    "description": "LG Install Service\nUsed by LG to install some of its apps on the phone. Not needed unless you use the LG apps manager.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgmapui",
+    "oem": null,
+    "description": "LGMapUI\nUser Interface (UI) for displaying location tracking reccord on the Health app (com.lge.lifetracker) ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.LGSetupView",
+    "oem": null,
+    "description": "Setup View\nLG first setup (related to com.android.LGSetupWizard). \nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.LGSetupView",
+    "oem": null,
+    "description": "Setup View\nLG first setup (related to com.android.LGSetupWizard). \nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgworld",
+    "oem": null,
+    "description": "LG SmartWorld\nLG Store. Enables you to nstall LG apps, theme, keyboard layout, fonts...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lifetracker",
+    "oem": null,
+    "description": "LG Health (https://play.google.com/store/apps/details?id=com.lge.lifetracker)\nAccording to users reviews, it is a very bad activity tracking app. \nPrivacy wise, you should never use this kind of thing obviously. \nhttps://www.lg.com/us/support/help-library/lg-android-lg-health-CT30013120-20150103629401\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.mirrorlink",
+    "oem": null,
+    "description": "MirrorLink\nEnable you to connect your phone to a car to provide audio streaming, GPS navigation...\nhttps://www.lg.com/ca_en/support/product-help/CT30014940-1440413573040-others\nhttps://mirrorlink.com/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.mlt",
+    "oem": null,
+    "description": "LG MLT\nRun in background all the time and probably serves purpose to help LG remote support. The thing is this acts as a good spyware. \nIt tries to track all your activity and logs GPS position together with the details gathered, and that includes calls, apps starting etc...\nAll data is collected and placed on /mpt partition, it seems not to be per reboot, but actually kept during flash and upgrades.\n#\nhttps://forum.xda-developers.com/showthread.php?t=2187920\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.mtalk.sf",
+    "oem": null,
+    "description": "Voice Mate Speech Pack\nVoice Mate (now Q Vocie) is the LG Personal assistant (https://en.wikipedia.org/wiki/Voice_Mate)\nThis package provides speech pack. Is it the main Q-voice package ? I don't think so but I need confirmation.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.musicshare",
+    "oem": null,
+    "description": "LG Audio Share \nEnables you to connect two devices so that you can share the sound from music or video files with another LG devices.\nhttps://www.lg.com/hk_en/support/product-help/CT30007700-20150123957406-others\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.myplace",
+    "oem": null,
+    "description": "My Place\nAnalyses the place you stay the most and recognises it as My Place (or your home) automatically.\nhttps://www.lg.com/uk/support/product-help/CT00008356-1433767701724-setting\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.myplace.engine",
+    "oem": null,
+    "description": "My Places Engine\nNeeded by com.lge.myplace. See above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.phonemanagement",
+    "oem": null,
+    "description": "Smart Doctor App\nEnables you to shut down idle apps and delete temporary files.\nLets you also see phone battery, mobile data, apps, network status and usage patterns.\nOn the paper it seems good but in practise, Android handle 8+ handles very well idles apps. \nhttps://www.lg.com/ca_en/support/product-help/CT20098088-20150129256824-others\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.privacylock",
+    "oem": null,
+    "description": "LG Content lock\nYou can lock the LG Gallery with a password or pattern. When connected to a PC, Content Lock prevents file previews.\nhttps://www.lg.com/us/support/help-library/lg-g4-content-lock-CT10000027-1432774759427\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.qhelp",
+    "oem": null,
+    "description": "Quick Help\nApp who provide you support articles (FAQ section that walks you through most of the major features of the phone).\nYou can request support via email or request a call from LG.\nhttps://www.lg.com/us/support/help-library/lg-android-quick-help-CT10000026-20150103624836\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.qhelp.application",
+    "oem": null,
+    "description": "Quick Help application\nI think this package is the real Quick Help app. The package above only provides help contents IMO.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.qmemoplus",
+    "oem": null,
+    "description": "LG QuickMemo+\nAllows you to capture screen shots and use them to create memos. You can also insert a reminder, location information, image, video, and audio.\nhttps://www.lg.com/us/support/help-library/lg-android-quickmemo-CT10000025-20150103629575\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.remote.setting",
+    "oem": null,
+    "description": "LG AirDrive\nLets you to control files in your device via a wireless connection. \nTo use, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.remote.setting",
+    "oem": null,
+    "description": "LG AirDrive\nLets you to control files in your device via a wireless connection. \nTo use, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.sizechangable.weather",
+    "oem": null,
+    "description": "Music widget\nNot sure if it only manages Music widget for the launcher or also for the lockscreen.\n\nWeather widget for the home screen.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.sizechangable.weather",
+    "oem": null,
+    "description": "Music widget\nNot sure if it only manages Music widget for the launcher or also for the lockscreen.\n\nWeather widget for the home screen.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.sizechangable.weather.platform",
+    "oem": null,
+    "description": "Weather Service\nProvide weather data for the weather app/widget.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.sizechangable.weather.theme.optimus",
+    "oem": null,
+    "description": "\"Optimus\" theme for the weather app/widget.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.smartdoctor.webview",
+    "oem": null,
+    "description": "Smart Doctor Webview\nREMINDER : A WebView is acomponent that allows Android apps to display content from the web directly inside an application.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.smartshare",
+    "oem": null,
+    "description": "SmartShare \nFeature that uses DLNA technology to stream multimedia contents between DLNA devices.\nDLNA is a non-profit trade organisation which defines standards that enable devices to share stuff with each other.\nBasically LG provides a way to stream multimedia contents from your phone to your smart TV (or via a DLNA plugin)\nhttps://www.lg.com/ca_en/support/product-help/CT31903570-1428542236040-file-media-transfer-pictures-music-etc\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.smartshare.provider",
+    "oem": null,
+    "description": "Provider for Smart Share. \nNeeded by com.lge.smartshare.\nREMINDER : content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.smartsharepush",
+    "oem": null,
+    "description": "Smart Share Push\nObviously related to Smart Share but I don't know its exact purpose. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.snappage",
+    "oem": null,
+    "description": "Snap Page\nPart of the QuickMemo+ app, lets you capture the text/images/URL from a web page without grabbing ads.\nIt\u2019s much like instapaper or pocket app, but it works locally, like reading mode on some browsers, saving only the body of the article. \nhttp://www.lg.com/us/mobile-phones/g4/display\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.springcleaning",
+    "oem": null,
+    "description": "Smart cleaning\nDisplays the space in use and free space in your phone and allows you to selectively clean up your files.\nhttps://www.lg.com/us/mobile-phones/VS986/Userguide/339.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.sync",
+    "oem": null,
+    "description": "LG Bridge Service\nUsed to backup, restore, update your LG phone, and transfer files wirelessly between computer and LG phone. \nYou will need to install LG Bridge software on your PC.\nNOTE : Cause noticable battery drain.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.video.vr.wallpaper",
+    "oem": null,
+    "description": "Video Wallpaper\nLG 360\u00b0 VR Wallpapers\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.videoplayer",
+    "oem": null,
+    "description": "LG Video Player\nNB : This is a bad one. VLC is much better.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.videostudio",
+    "oem": null,
+    "description": "Quick Video Editor\nAllows you to create and edit video files using the videos (and photos) stored on the phone.\nhttps://www.lg.com/us/mobile-phones/VS980/Userguide/281.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.voicecare",
+    "oem": null,
+    "description": "LG Voice care\nAllows you to use your device if the touch screen or display is damaged. \nYou must agree to location-based information use and personal information collection to use Voice Care. \nhttps://www.lg.com/hk_en/support/product-help/CT20136018-20150122834174-others\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.vrplayer",
+    "oem": null,
+    "description": "LG VR player\nEnables you to watch 360\u00b0 pictures/videos.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.wernicke",
+    "oem": null,
+    "description": "QVoice Engine\nNeeded by Q-voice (the LG Q Voice voice assistant) to work.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.wernicke.nlp",
+    "oem": null,
+    "description": "Natural-language processing for LG intelligent assistant.\nUsed to understand what says an human when he speaks.\nNeeded by QVoice\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.wfd.spmirroring.source",
+    "oem": null,
+    "description": "Provide wifi-direct feature\nNote : Wifi-direct is Wi-Fi standard enabling devices to easily connect with each other without requiring a wireless access point.\nIt allows allows two devices to establish a direct Wi-Fi connection without requiring a wireless router\nhttps://en.wikipedia.org/wiki/Wi-Fi_Direct\nspmirroring = ??? screen p... mirroring ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.wfds.service.v3",
+    "oem": null,
+    "description": "Wifi-direct service (v3)\nSee above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.wifi.p2p",
+    "oem": null,
+    "description": "LG P2p Service \nWifi-drect P2P allows the device to discover the services of nearby devices directly, without being connected to a network.\nNeeded for LG Wifi-direct feature.\nhttps://developer.android.com/training/connect-devices-wirelessly/nsd-wifi-direct\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.lgfmservice",
+    "oem": null,
+    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.bnr.launcher",
+    "oem": null,
+    "description": "LG Mobile Switch Launcher\nThis doesn't remove the default launchers.\nIt is most likely to backup/restore the user's launcher configuration.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.clock",
+    "oem": null,
+    "description": "LG Clock app\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.filemanager",
+    "oem": null,
+    "description": "Stock file manager\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.homeselector",
+    "oem": null,
+    "description": "LG Home selector\nThis is the settings menu for the home launcher (present in the settings app as \"Home launcher\")\nIf you remove this app, the Home screen settings menu is gone from settings app. (not needed if you use external launcher)\n    You can still switch between installed launchers, the package name is a bit misleading.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.launcher2",
+    "oem": null,
+    "description": "LG Home (v2)\nStock launcher\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER!\nNOTE : Yeah there is another package described as \"launcher\". Normally, you only have one of them on your phone. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.launcher3",
+    "oem": null,
+    "description": "LG Home (v3)\nStock launcher\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER!\nNOTE : Yeah there is 3 packages described as \"launcher\". Normally, you only have one of them on your phone. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.music",
+    "oem": null,
+    "description": "Stock music player\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.floatingbar",
+    "oem": null,
+    "description": "LG Floating bar\nLets you put shortcuts to apps or features, as well as quick access to contacts and music player controls on a \"floating bar\" on the Home screen.\nhttps://www.neowin.net/news/lg-v30-closer-look-floating-bar/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.theme.titan",
+    "oem": null,
+    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.theme.titan",
+    "oem": null,
+    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.theme.titan",
+    "oem": null,
+    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.lge.theme.titan",
+    "oem": null,
+    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]

@@ -1,0 +1,986 @@
+[
+  {
+    "packageId": "com.mobitv.client.tmobiletvhd",
+    "oem": null,
+    "description": "T-Mobile TV (discontinued, replaced by nl.tmobiletv.vinson) provided by mobitv (https://en.wikipedia.org/wiki/MobiTV)\nhttps://play.google.com/store/apps/details?id=nl.tmobiletv.vinson&hl=en\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tmobile.pr.adapt",
+    "oem": null,
+    "description": "Diagnostic tool. \nThis app can see all your installed apps, that you have allowed unknown sources on, that your rooted, \nand will deny your warranty saying your rooted. It constantly runs in the background.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tmobile.pr.mytmobile",
+    "oem": null,
+    "description": "T-mobile app (https://play.google.com/store/apps/details?id=com.tmobile.pr.mytmobile)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tmobile.services.nameid",
+    "oem": null,
+    "description": "Name ID T-Mobile (powered by Hiya or cequint if on Samsung devices)\nNOTE : Never trust a company which promotes call ID/spam blocking features.\nhttps://techcrunch.com/2019/08/09/many-robocall-blocking-apps-send-your-private-data-without-permission/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tmobile.simlock",
+    "oem": null,
+    "description": "Device Unlock.\nAllows you to request and apply a mobile device unlock directly from the device.\nhttps://support.t-mobile.com/docs/DOC-14011\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.tmobile.vvm.application",
+    "oem": null,
+    "description": "T-Mobile Visual VoiceMail (https://play.google.com/store/apps/details?id=com.tmobile.vvm.application)\nLets you use your voice mail and manage your inbox without dialing into your voicemail. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.whitepages.nameid.tmobile",
+    "oem": null,
+    "description": "T-mobile NAME ID by WhitePages (https://www.whitepages.com/)\nDiscontinued. Replaced by com.tmobile.services.nameid\nhttps://www.fiercewireless.com/wireless/t-mobile-to-offer-name-id-service-from-whitepages\nhttps://www.geekwire.com/2016/whitepages-spins-caller-id-spam-blocking-app-startup-hiya/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "us.com.dt.iq.appsource.tmobile",
+    "oem": null,
+    "description": "App Source (discontinued)\nThis app aimed at organizing all of your existing apps on the phone by category and helping you discover \nnew apps through search and recommendations.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.android.verizon.vms",
+    "oem": null,
+    "description": "Verizon Digital Secure (https://play.google.com/store/apps/details?id=com.asurion.android.verizon.vms)\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.customermobile.preload.vzw",
+    "oem": null,
+    "description": "Verizon Store/Retail Demo Mode\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.LogiaGroup.LogiaDeck",
+    "oem": null,
+    "description": "Mobile Services Manager\nSeems to be a spyware. \nGood explainantion from someone who worked for carrier : \nhttps://www.reddit.com/r/lgv20/comments/6u0wnf/what_is_mobile_services_manager_did_i_catch_a/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motricity.verizon.ssodownloadable",
+    "oem": null,
+    "description": "Verizon Login by Motricity (now Voltari)\nVoltari provides relevance-driven mobile advertising, mobile marketing, mobile merchandising, and predictive analytics solutions.\nNeeded for My Verizon.\nhttps://en.wikipedia.org/wiki/Voltari\nhttps://www.lightreading.com/motricity-holds-on-to-verizon-account/d/d-id/678478?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.securityandprivacy.android.verizon.vms",
+    "oem": null,
+    "description": "Digital Secure (https://play.google.com/store/apps/details?id=com.securityandprivacy.android.verizon.vms&hl=en)\nI don't know why this apps is released twice on the Play store under 2 different package name.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.telecomsys.directedsms.android.SCG",
+    "oem": null,
+    "description": "Verizon Location Agent\nLocation tracking (does not impact GPS function if deleted, don't worry)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vcast.mediamanager",
+    "oem": null,
+    "description": "Verizon Cloud (https://play.google.com/store/apps/details?id=com.vcast.mediamanager)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.llkagent",
+    "oem": null,
+    "description": "Used for Verizon store demo mode.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.loginengine.unbranded",
+    "oem": null,
+    "description": "Carrier Login Engine\nNeeded for wifi-calling. (To be confirmed)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.messaging.vzmsgs",
+    "oem": null,
+    "description": "Verizon Messages (https://play.google.com/store/apps/details?id=com.verizon.messaging.vzmsgs)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.mips.services",
+    "oem": null,
+    "description": "My Verizon Services \nRelated to My Verizon app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.obdm_permissions",
+    "oem": null,
+    "description": "D-MAT.\nHas a LOT of permissions ! (https://knowledge.protektoid.com/apps/com.verizon.obdm/d48680955d8d58bade2e6620ccb1e30b9bf23cb8e50055e10de3466da558c0ee)\nDMAT Account ? It is used to hold shares and securities in dematerialised/electronic format.\nSeems weird that Verizon provide this so it's likely not this.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.obdm_permissions",
+    "oem": null,
+    "description": "D-MAT.\nHas a LOT of permissions ! (https://knowledge.protektoid.com/apps/com.verizon.obdm/d48680955d8d58bade2e6620ccb1e30b9bf23cb8e50055e10de3466da558c0ee)\nDMAT Account ? It is used to hold shares and securities in dematerialised/electronic format.\nSeems weird that Verizon provide this so it's likely not this.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.permissions.vzwappapn",
+    "oem": null,
+    "description": "Custom permissions for some verizon stuff ?  \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.permissions.vzwappapn",
+    "oem": null,
+    "description": "Custom permissions for some verizon stuff ?  \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizon.vzwavs",
+    "oem": null,
+    "description": "Has a scary list of permissions in any case.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.verizontelematics.verizonhum",
+    "oem": null,
+    "description": "Hum Family Locator (https://play.google.com/store/apps/details?id=com.verizontelematics.verizonhum)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vznavigator.Generic",
+    "oem": null,
+    "description": "VZ Navigator (GPS app) (https://play.google.com/store/apps/details?id=com.vznavigator.Generic)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.apnlib",
+    "oem": null,
+    "description": "Kind of library for Verizon APN ?\nREMINDER : https://developer.android.com/reference/android/telephony/data/ApnSetting\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.apnservice",
+    "oem": null,
+    "description": "APN Services.\nREMINDER : https://developer.android.com/reference/android/telephony/data/ApnSetting\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.hss.myverizon",
+    "oem": null,
+    "description": "Verizon Call Filter (https://play.google.com/store/apps/details?id=com.vzw.ecid)\nNOTE : Never trust a company which promotes call ID/spam blocking features.\n \nMy Verizon (https://play.google.com/store/apps/details?id=com.vzw.hss.myverizon)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.hss.myverizon",
+    "oem": null,
+    "description": "Verizon Call Filter (https://play.google.com/store/apps/details?id=com.vzw.ecid)\nNOTE : Never trust a company which promotes call ID/spam blocking features.\n \nMy Verizon (https://play.google.com/store/apps/details?id=com.vzw.hss.myverizon)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.hss.widgets.infozone.large",
+    "oem": null,
+    "description": "My InfoZone Widget\nGives weekly tips, access to device info and account information.\nhttps://www.droid-life.com/2013/02/12/verizon-introduces-my-infozone-widget-allows-easy-access-to-tips-device-info-and-account-information/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.vzw.qualitydatalog",
+    "oem": null,
+    "description": "Logging stuff\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.mot5gmod",
+    "oem": null,
+    "description": "5G Moto Mod (https://play.google.com/store/apps/details?id=com.motorola.mot5gmod)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.mot5gmod",
+    "oem": null,
+    "description": "5G Moto Mod (https://play.google.com/store/apps/details?id=com.motorola.mot5gmod)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.phone.extensions",
+    "oem": null,
+    "description": "Protocol Configuration Options.\nRelated to APN configuration. \nhttps://www.freshpatents.com/-dt20180607ptan20180159824.php\n\nFree HD wallpaper from verizon\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.phone.extensions",
+    "oem": null,
+    "description": "Protocol Configuration Options.\nRelated to APN configuration. \nhttps://www.freshpatents.com/-dt20180607ptan20180159824.php\n\nFree HD wallpaper from verizon\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.service.vzw.entitlement",
+    "oem": null,
+    "description": "Deleting this package whill disable Hotspot functionality if you're a Verizon client. \nWhat you can do is preventing the phone from notifying the carrier about when you use hotspot :\nhttps://android.stackexchange.com/questions/226580/how-is-verizon-suddenly-tracking-my-hot-spot-usage-on-android-and-how-do-i-disab\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.cloudsetup",
+    "oem": null,
+    "description": "Cloud setup \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.ltebroadcastservices_vzw",
+    "oem": null,
+    "description": "????\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.loader",
+    "oem": null,
+    "description": "????\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.omadm.vzw",
+    "oem": null,
+    "description": "OMA Device Management for Verizon \nHandles configuration of the device (including first time use), enabling and disabling features provided by carriers.\nhttps://en.wikipedia.org/wiki/OMA_Device_Management\nI believe it's only useful if you want to use a Verizon service with a non branded phone (not sure at all)\nhttps://www.androidpolice.com/2015/03/10/android-5-1-includes-new-carrier-provisioning-api-allows-carriers-easier-methods-of-setting-up-services-on-devices-they-dont-control/\nDisplays annoying notifications if you unlocked your bootloader\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.vzw.provider",
+    "oem": null,
+    "description": "????\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.visualvoicemail",
+    "oem": null,
+    "description": "Verizon Visual Voicemail (https://play.google.com/store/apps/details?id=com.motorola.visualvoicemail)\nLets you manage your voicemail messages without dialing. It shows all of your messages in a list and lets you manage them on your phone\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.android.sprint.hiddenmenuapp",
+    "oem": null,
+    "description": "Lets you access hidden features tests/settings (you need to type a special code in the dialer)\nhttps://bestcellular.com/dial-codes/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.home.sprint.vpl",
+    "oem": null,
+    "description": "Tech Expert (for VPL devices/employees) ?\nNow \"Sprint Complete\" (see below).\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.home.sprint",
+    "oem": null,
+    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)\n\nSprint Complete (https://play.google.com/store/apps/details?id=com.asurion.home.sprint)\nLets you call or chat with live tech experts ! Maybe you will find the love of your life ! \nNote : See note above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.home.sprint",
+    "oem": null,
+    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)\n\nSprint Complete (https://play.google.com/store/apps/details?id=com.asurion.home.sprint)\nLets you call or chat with live tech experts ! Maybe you will find the love of your life ! \nNote : See note above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.home.sprint",
+    "oem": null,
+    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)\n\nSprint Complete (https://play.google.com/store/apps/details?id=com.asurion.home.sprint)\nLets you call or chat with live tech experts ! Maybe you will find the love of your life ! \nNote : See note above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hyperlync.Sprint.Backup",
+    "oem": null,
+    "description": "Sprint Backup\" (https://play.google.com/store/apps/details?id=com.hyperlync.Sprint.Backup)\nLets you backup your phone\u2019s content to your Sprint Backup account.\nFYI : This app is developped by Hyperlync Technologies an Israel-based company which provide cyber-security solutions. \nIt is now owned by Edition Ltd a big Singapour based company (https://www.reuters.com/companies/EDITol.SI)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.hyperlync.Sprint.CloudBinder",
+    "oem": null,
+    "description": "Sprint Cloud Binder (https://play.google.com/store/apps/details?id=com.hyperlync.Sprint.CloudBinder)\nHub for all you cloud accounts.\nSee package above.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.locationlabs.finder.sprint",
+    "oem": null,
+    "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\n    https://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\n    https://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.locationlabs.finder.sprint",
+    "oem": null,
+    "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\n    https://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\n    https://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.mobitv.client.sprinttvng",
+    "oem": null,
+    "description": "Sprint TV & Movies provided by mobitv (https://en.wikipedia.org/wiki/MobiTV)\nLets you watch live TV and VOD.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.omadm.sprint",
+    "oem": null,
+    "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it. \nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN : \nhttps://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n\nOMA Device Management for Sprint \nHandles configuration of the device (including first time use), enabling and disabling features provided by carriers.\nI believe it's only useful if you want to use a Sprint service with a non branded phone (not sure at all)\nhttps://www.androidpolice.com/2015/03/10/android-5-1-includes-new-carrier-provisioning-api-allows-carriers-easier-methods-of-setting-up-services-on-devices-they-dont-control/\nDisplays annoying notifications if you unlocked your bootloader\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.omadm.sprint",
+    "oem": null,
+    "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it. \nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN : \nhttps://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n\nOMA Device Management for Sprint \nHandles configuration of the device (including first time use), enabling and disabling features provided by carriers.\nI believe it's only useful if you want to use a Sprint service with a non branded phone (not sure at all)\nhttps://www.androidpolice.com/2015/03/10/android-5-1-includes-new-carrier-provisioning-api-allows-carriers-easier-methods-of-setting-up-services-on-devices-they-dont-control/\nDisplays annoying notifications if you unlocked your bootloader\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.sprintwfc",
+    "oem": null,
+    "description": "Sprint Wifi Calling\nProvides wifi calling to Sprint customers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.sprint.wfcstub",
+    "oem": null,
+    "description": "Seems to be related to Wifi-Calling on Samsung phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.android.musicplus2033.vpl",
+    "oem": null,
+    "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint\u2019s official Music Store and player\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.android.musicplus2033.vpl",
+    "oem": null,
+    "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint\u2019s official Music Store and player\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.ecid",
+    "oem": null,
+    "description": "Enhanced Caller ID\nEnable you to hide name and phone number when you make phone calls\nhttps://www.sprint.com/en/support/solutions/services/restrict-your-caller-id-information.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.care",
+    "oem": null,
+    "description": "My Sprint (https://play.google.com/store/apps/details?id=com.sprint.care)\nLets you manage your Sprint Account and pay your bill.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.ce.updater",
+    "oem": null,
+    "description": "Mobile Installer\nUsed by Sprint to (force) install/update Sprint apps.\nhttps://community.sprint.com/t5/Samsung/How-to-stop-quot-Mobile-Installer-quot-from-pushing-apps-to/td-p/1036387\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.fng",
+    "oem": null,
+    "description": "Sprint Spot (https://play.google.com/store/apps/details?id=com.sprint.fng)\nProvides Sprint customers a way to discover and access apps, services, games, TV & video, music, and more.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.international.message",
+    "oem": null,
+    "description": "Sprint Worldwide \nJust an help page for international travelers.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.psdg.sw",
+    "oem": null,
+    "description": "Carrier Setup Wizard\nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nHere it handles the setup of Sprint features/services.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.ms.cdm",
+    "oem": null,
+    "description": "Sprint Device Manager\nMobile Device Management (MDM) allows company\u2019s IT department to reach inside your phone in the background, allowing them to ensure \nyour device is secure, know where it is, and remotely erase your data if the phone is stolen.\nYou should NEVER install a MDM tool on your phone. Never.\nhttps://onezero.medium.com/dont-put-your-work-email-on-your-personal-phone-ef7fef956c2f\nhttps://blog.cdemi.io/never-accept-an-mdm-policy-on-your-personal-phone/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.ms.cnap",
+    "oem": null,
+    "description": "Caller ID\ncnap = Caller Name Presentation (https://en.wikipedia.org/wiki/Calling_Name_Presentation)\nLets you change the name that is displayed on caller ID when making a call.\nStrange is it the same thing than \"com.sprint.ecid\" ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.ms.smf.services",
+    "oem": null,
+    "description": "Sprint Hub (https://play.google.com/store/apps/details?id=com.sprint.ms.smf.services)\nEnables Sprint features (including Wifi calling) and products for devices operating on the Sprint network.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.safefound.vpl",
+    "oem": null,
+    "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.safefound.vpl",
+    "oem": null,
+    "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.topup",
+    "oem": null,
+    "description": "Doesn't exist anymore ? Now Sprint Pay (https://play.google.com/store/apps/details?id=com.sprintpay)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.w.installer",
+    "oem": null,
+    "description": "Sprint ID\nProvides mobile ID Packs featuring apps, ringers, wallpapers, widgets and more.\nCan (and do) force install apps you disabled.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sprint.w.v8",
+    "oem": null,
+    "description": "Old app Discover App (discontinued / new package name)\nLets you discover Sprint apps ? \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.aetherpal.attdh.se",
+    "oem": null,
+    "description": "Device Help for AT&T Samsung device\nDeveloped by Aetherpal, a company which sells smart remote controls tools (https://en.wikipedia.org/wiki/AetherPal)\nI guess this app is used for tech support.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.aetherpal.attdh.zte",
+    "oem": null,
+    "description": "Device Help for AT&T ZTE devices.\nDeveloped by Aetherpal, a company which sells smart remote controls tools (https://en.wikipedia.org/wiki/AetherPal)\nI guess this app is used for tech support.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "net.aetherpal.device",
+    "oem": null,
+    "description": "AT&T Remote Support provided by aetherpal (was acquired by VMware)\nAllows an AT&T Advanced Support representative to assist you by accessing your device remotely.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.android.mobilerecovery.att",
+    "oem": null,
+    "description": "AT&T Protect Plus (discontinued. Replaced by AT&T ProTech : com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support expert\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.asurion.android.protech.att",
+    "oem": null,
+    "description": "AT&T ProTech (https://play.google.com/store/apps/details?id=com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support \"expert\".\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.android.attsmartwifi",
+    "oem": null,
+    "description": "AT&T Smart Wi-Fi (https://play.google.com/store/apps/details?id=com.att.android.attsmartwifi)\nFinds and auto-connects to available hotspots to minimize cellular data consumption.\nAuto-connects is not a godd idea.\nWorth reading : \nhttps://www.europol.europa.eu/activities-services/public-awareness-and-prevention-guides/risks-of-using-public-wi-fi\nhttps://www.eff.org/deeplinks/2020/01/why-public-wi-fi-lot-safer-you-think\nYou are ok if you go on HTTPS websites.\nUse a VPN if you want to hide the domain names you visit, avoid usage restriction (no P2P, blacklisted websites...) and encrypt HTTP traffic.\n==> https://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.callprotect",
+    "oem": null,
+    "description": "AT&T Call Protect (https://play.google.com/store/apps/details?id=com.att.callprotect)\nSpam call blocking app provided by Hiya \nNOTE : You should never trust spam blocking apps (https://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.csoiam.mobilekey",
+    "oem": null,
+    "description": "AT&T Sign in Helper (https://play.google.com/store/apps/details?id=com.att.csoiam.mobilekey)\nAllows AT&T applications to securely authenticate on Android devices\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.dh",
+    "oem": null,
+    "description": "Device Help (https://play.google.com/store/apps/details?id=com.att.dh)\nTroubleshooting app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.dtv.shaderemote",
+    "oem": null,
+    "description": "DIRECTV Remote App (https://play.google.com/store/apps/details?id=com.att.dtv.shaderemote)\nLets you control DIRECTV HD receivers in your home that are connected to Internet, from your phone.\nFYI : DIRECTV is a susbsidiary of AT&T \nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.iqi",
+    "oem": null,
+    "description": "Carrier IQ / Device Health \nGathers, stores and forwards diagnostic measurements on its behalf (see https://en.wikipedia.org/wiki/Carrier_IQ)\nGreat ! A rootkit : https://en.wikipedia.org/wiki/Carrier_IQ#Rootkit_discovery_and_media_attention\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.mobiletransfer",
+    "oem": null,
+    "description": "AT&T Mobile Transfer\nLets you transfert user data from an older AT&T phone to a new one.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.myWireless",
+    "oem": null,
+    "description": "My AT&T (https://play.google.com/store/apps/details?id=com.att.myWireless)\nLets you manage your AT&T account.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.mobilesecurity",
+    "oem": null,
+    "description": "AT&T Mobile Security (https://play.google.com/store/apps/details?id=com.att.mobilesecurity)\nAT&T android antivirus.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.mobile.android.vvm",
+    "oem": null,
+    "description": "AT&T Visual Voicemail (https://play.google.com/store/apps/details?id=com.att.mobile.android.vvm)\nLets you manage your voicemail directly from the app without the need to dial into your mailbox.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.personalcloud",
+    "oem": null,
+    "description": "AT&T Personal Cloud (https://play.google.com/store/apps/details?id=com.att.personalcloud)\nNote: it's a paid extra feature and data are obviously not E2EE (i.e AT&T can access them)\nDon't keep this app. It's a privacy nightmare and was poorly coded:\nhttps://beta.pithus.org/report/bc54b5e2446ace90d9f992278d0ec320befe4983a76cb4fdcf47e565366e67b6\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.tv",
+    "oem": null,
+    "description": "AT&T TV (https://play.google.com/store/apps/details?id=com.att.tv)\nLets you Stream TV live and on demand from your phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.att.tv.watchtv",
+    "oem": null,
+    "description": "AT&T WatchTV (https://play.google.com/store/apps/details?id=com.att.tv.watchtv)\nLets you stream TV live and VOD form your phone.\nNo it's not the same thing than AT&T TV. Yes it's a mess. \nDifferences with AT&T TV : https://www.cordcuttersnews.com/att-tv-vs-att-tv-now-whats-the-difference/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.matchboxmobile.wisp",
+    "oem": null,
+    "description": "AT&T Hot Spots\nRun in background. Automatically connects you to a free AT&T wifi hotspot at one of their participating partner locations \nsuch as Starbucks.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.dti.att",
+    "oem": null,
+    "description": "AT&T App Select\nI guess it lets you choose AT&T apps to install.\nIt has a LOT of permissions : https://knowledge.protektoid.com/apps/com.dti.att/7a36d4f5f00bae044566221400719c75ea2f4f33bc2578a7f8210f36d718a8d6\nSomeone knows what \"dti\" is/means ?\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.locationlabs.cni.att",
+    "oem": null,
+    "description": "AT&T Smart Limits\nParental Control tool.\nhttps://m.att.com/shopmobile/wireless/features/smart-limits.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.matchboxmobile.wisp",
+    "oem": null,
+    "description": "AT&T Hot Spots\nRun in background. Automatically connects you to a free AT&T wifi hotspot at one of their participating partner locations \nsuch as Starbucks.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.att.phone.extensions",
+    "oem": null,
+    "description": "Provide acess to AT&T extensions in you dialer. I'm not sure tho. It's only a supposition.\nhttps://asecare.att.com/tutorials/adding-and-deleting-an-extension-on-your-officehand-mobile-app-2990/?product=AT&T%20Office@Hand\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.motorola.attvowifi",
+    "oem": null,
+    "description": "AT&T Wifi-calling\nhttps://www.att.com/shop/wireless/features/wifi-calling.html\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.wavemarket.waplauncher",
+    "oem": null,
+    "description": "AT&T Secure Family (https://play.google.com/store/apps/details?id=com.wavemarket.waplauncher)\nParental control app.\n7 trackers + 16 permissions (https://reports.exodus-privacy.eu.org/en/reports/com.wavemarket.waplauncher/latest/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.samsung.attvvm",
+    "oem": null,
+    "description": "Visual Voicemail\nSimple GUI for voicemail\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sec.android.app.ewidgetatt",
+    "oem": null,
+    "description": "Entertainment Widget\nAT&T Widget for OneUI\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.synchronoss.dcs.att.r2g",
+    "oem": null,
+    "description": "Setup & Transfer\nApp for transferring \"contacts, photos, videos, music, call logs, and documents\" from another device\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "fr.bouyguestelecom.ecm.android",
+    "oem": null,
+    "description": "Espace Client (https://play.google.com/store/apps/details?id=fr.bouyguestelecom.ecm.android)\nLets you manage your Bouygues account.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "fr.bouyguestelecom.tv.android",
+    "oem": null,
+    "description": "B.tv (https://play.google.com/store/apps/details?id=fr.bouyguestelecom.tv.android)\nLets you watch TV from your phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "fr.bouyguestelecom.vvmandroid",
+    "oem": null,
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.aura.oobe",
+    "oem": null,
+    "description": "oobe = out-of-box-experience\nhttps://en.wikipedia.org/wiki/Out-of-box_experience\n???\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.mail.fr",
+    "oem": null,
+    "description": "Mail Orange (https://play.google.com/store/apps/details?id=com.orange.mail.fr)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.miorange",
+    "oem": null,
+    "description": "Lets you access to your Orange account\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.mylivebox.fr",
+    "oem": null,
+    "description": "Ma Livebox (https://play.google.com/store/apps/details?id=com.orange.mylivebox.fr)\nLets you manage your livebox from your phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.mysosh",
+    "oem": null,
+    "description": "My Sosh (https://play.google.com/store/apps/details?id=com.orange.mysosh)\nLets you access to your Sosh account\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.orangeetmoi",
+    "oem": null,
+    "description": "Orange Et Moi (https://play.google.com/store/apps/details?id=com.orange.orangeetmoi)\nOrange customer space\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.owtv",
+    "oem": null,
+    "description": "TV d'Orange (https://play.google.com/store/apps/details?id=com.orange.owtv)\nLets you watch TV/VOD on your phone.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.tdd",
+    "oem": null,
+    "description": "Transfert de donn\u00e9es (https://play.google.com/store/apps/details?id=com.orange.tdd)\nLets you transfer wirelessly: contacts, SMS, call log, calendar, photos, videos, audio files, etc., all from your old Android\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.update",
+    "oem": null,
+    "description": "Handles Orange apps updates.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.update.OrangeUpdateApplication",
+    "oem": null,
+    "description": "Obviously related to update...\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.vvm",
+    "oem": null,
+    "description": "Messagerie vocale visuelle (https://play.google.com/store/apps/details?id=com.orange.vvm)\nLets you manage your voicemail with an app.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.orange.wifiorange",
+    "oem": null,
+    "description": "Mon Reseau (https://play.google.com/store/apps/details?id=com.orange.wifiorange)\nLets you measure your speed connection and find better Orange wifi hotspots.\nInforms you also about near network incidents.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "fr.orange.cineday",
+    "oem": null,
+    "description": "Orange cineday (https://play.google.com/store/apps/details?id=fr.orange.cineday)\nUseless app but cineday is pretty nice. \nEvery tuesday you can invite the person of your choice in movies (within the limit of available seats).\nYou can just use https://cineday.orange.fr/cineday/\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sfr.android.moncompte",
+    "oem": null,
+    "description": "SFR & Moi (https://play.google.com/store/apps/details?id=com.sfr.android.moncompte)\nLets you manage your SFR account\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sfr.android.sfrcloud",
+    "oem": null,
+    "description": "SFR Cloud (https://play.google.com/store/apps/details?id=com.sfr.android.sfrcloud)\nCloud provided by SFR\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sfr.android.sfrmail",
+    "oem": null,
+    "description": "SFR Mail (https://play.google.com/store/apps/details?id=com.sfr.android.sfrmail)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sfr.android.sfrplay",
+    "oem": null,
+    "description": "SFR Play (https://play.google.com/store/apps/details?id=com.sfr.android.sfrplay)\nVOD streaming from SFR.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "com.sfr.android.vvm",
+    "oem": null,
+    "description": "SFR R\u00e9pondeur + (https://play.google.com/store/apps/details?id=com.sfr.android.vvm)\nLets you use your voice mail and manage your inbox without dialing into your voicemail.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "packageId": "de.telekom.tsc",
+    "oem": null,
+    "description": "AppEnabler\ntsc = Telecom Service Center\nUsed to display ads in notifications panel.\n)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  }
+]
