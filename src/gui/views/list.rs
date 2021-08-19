@@ -3,11 +3,11 @@ use crate::core::uad_lists::{ UadLists, PackageState };
 
 use iced::{
     scrollable, Align, Column, Command, Container, Element, Space,
-    Length, Row, Scrollable, Text, text_input, TextInput,
-    PickList, pick_list,
+    Length, Row, Scrollable, Text, text_input, TextInput, Svg,
+    PickList, pick_list, Button, button, HorizontalAlignment,
 };
 
-use crate::core::sync::list_phone_packages;
+use crate::core::sync::{ list_phone_packages, uninstall_package };
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
@@ -34,7 +34,9 @@ pub enum Message {
     ListInputChanged(String),
     LoadPackages,
     ListSelected(UadLists),
-    PackageStateSelected(PackageState)
+    PackageStateSelected(PackageState),
+    List(usize, RowMessage),
+    NoEvent,
 }
 
 
@@ -46,7 +48,7 @@ impl List {
             }
 
             Message::LoadPackages => {
-                self.packages = test();
+                self.packages = list_phone_packages();
                 self.p_row = Vec::new();
                 for p_name in self.packages.lines() {
                     let package_row = PackageRow::new(
@@ -69,7 +71,11 @@ impl List {
             Message::PackageStateSelected(package_state) => {
                 self.selected_package_state = Some(package_state);
                 Command::none()
-            }
+            },
+            Message::List(i, row_message) => self.p_row[i]
+                .update(row_message)
+                .map(move |row_message| Message::List(i, row_message)),
+            Message::NoEvent => Command::none(),
         }
     }
     pub fn view(&mut self) -> Element<Message> {
@@ -125,8 +131,8 @@ impl List {
                 let test = self.p_row
                     .iter_mut()
                     .enumerate()
-                    .fold(Column::new().spacing(5), |col, (_, p)| {
-                        col.push(p.view())
+                    .fold(Column::new().spacing(5), |col, (i, p)| {
+                        col.push(p.view().map(move |msg| Message::List(i, msg)))
                     });
 
                 let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
@@ -156,11 +162,16 @@ pub struct PackageRow {
     pub name: String,
     pub state: String,
     pub advice: String,
+
+    remove_restore_btn_state: button::State,
 }
 
 #[derive(Clone, Debug)]
 pub enum RowMessage {
     NoEvent,
+    RemovePressed(PackageRow),
+    RestorePressed(PackageRow),
+    Uninstall(String)
 }
 
 impl PackageRow {
@@ -168,27 +179,56 @@ impl PackageRow {
         name: &str,
         state: &str,
         advice: &str,
+
     ) -> Self {
         Self {
             name: name.to_string(),
             state: "Installed".to_string(),
             advice: advice.to_string(),
+            remove_restore_btn_state: button::State::default(),
         }
     }
 
-/*    pub fn update(&mut self, message: RowMessage) -> Command<RowMessage> {
+    pub fn update(&mut self, message: RowMessage) -> Command<RowMessage> {
         match message {
+            RowMessage::RemovePressed(package) => Command::perform(
+                uninstall_package(package.name),
+                RowMessage::Uninstall
+            ),
+            RowMessage::RestorePressed(package) => Command::none(),
             RowMessage::NoEvent => Command::none(),
+            RowMessage::Uninstall(_) => Command::none(),
         }
-    }*/
+    }
 
-    pub fn view(&mut self) -> Element<Message> {
+    pub fn view(&mut self) -> Element<RowMessage> {
+        let package = self.clone();
+        let add_svg_path = format!("{}/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
 
         let content = Row::new()
             .align_items(Align::Center)
             .push(Text::new(&self.name).width(Length::FillPortion(6)))
             .push(Text::new(&self.state).width(Length::FillPortion(3)))
-            .push(Text::new(&self.advice).width(Length::FillPortion(3)));
+            .push(Text::new(&self.advice).width(Length::FillPortion(3)))
+            .push(if self.state == "Installed" {
+                                        Button::new(
+                                            &mut self.remove_restore_btn_state,
+                                            Svg::from_path(add_svg_path)
+                                                .width(Length::Fill)
+                                                .height(Length::Fill),
+                                        )
+                                        .on_press(RowMessage::RemovePressed(package))
+                                        .style(style::PrimaryButton::Enabled)
+                                    } else {
+                                        Button::new(
+                                            &mut self.remove_restore_btn_state,
+                                            Text::new("Restore")
+                                                .width(Length::Fill)
+                                                .horizontal_alignment(HorizontalAlignment::Center),
+                                        )
+                                        .on_press(RowMessage::RestorePressed(package))
+                                        .style(style::PrimaryButton::Enabled)
+                                    });
 
         let p_row = Container::new(content)
             .padding(10)
@@ -198,9 +238,4 @@ impl PackageRow {
 
 
     }
-}
-
-
-pub fn test() -> String {
-        list_phone_packages()
 }

@@ -21,3 +21,24 @@ pub fn list_phone_packages() -> String {
 }
 
 
+pub async fn uninstall_package(package: String) -> String {
+    let output = Command::new("adb")
+                .arg("shell")
+                .arg("pm")
+                .arg("uninstall")
+                .arg("--user")
+                .arg("0")
+                .arg(package)
+                .output()
+                .expect("adb command failed");
+
+    if !output.status.success() {
+        let error = String::from_utf8(output.stderr).unwrap();
+        println!("[DEBUG] {:?}", error);
+        error
+    } else {
+        let adb_return = String::from_utf8(output.stdout).unwrap();
+        println!("[DEBUG] - Uninstall: {:?}", adb_return);
+        adb_return
+    }
+}

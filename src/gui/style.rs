@@ -150,7 +150,7 @@ impl scrollable::StyleSheet for Scrollable {
     }
 }
 
-/*pub enum InstallButton {
+pub enum InstallButton {
     Enabled,
     Disabled,
 }
@@ -171,4 +171,4 @@ impl button::StyleSheet for InstallButton {
             Self::Enabled | Self::Disabled => button::Style { ..self.active() },
         }
     }
-} */
+} 
