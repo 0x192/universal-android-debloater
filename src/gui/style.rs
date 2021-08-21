@@ -50,38 +50,6 @@ impl button::StyleSheet for PrimaryButton {
     }
 }
 
-pub enum TransparentButton {
-    Enabled,
-    Disabled,
-}
-
-impl button::StyleSheet for TransparentButton {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Enabled | Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::TRANSPARENT)),
-                text_color: Color::TRANSPARENT,
-                ..button::Style::default()
-            },
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Enabled => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
-                text_color: Color::WHITE,
-                ..self.active()
-            },
-            Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..self.active()
-            },
-        }
-    }
-}
-
 pub struct Content;
 impl container::StyleSheet for Content {
     fn style(&self) -> container::Style {
@@ -165,26 +133,3 @@ impl scrollable::StyleSheet for Scrollable {
         }
     }
 }
-
-pub enum InstallButton {
-    Enabled,
-    Disabled,
-}
-
-impl button::StyleSheet for InstallButton {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Enabled | Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::TRANSPARENT)),
-                text_color: Color::WHITE,
-                ..button::Style::default()
-            },
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Enabled | Self::Disabled => button::Style { ..self.active() },
-        }
-    }
-} 

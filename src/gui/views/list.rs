@@ -8,7 +8,10 @@ use iced::{
     PickList, pick_list, Button, button, HorizontalAlignment,
 };
 
-use crate::core::sync::{ list_phone_packages, uninstall_package };
+use crate::core::sync::{ 
+    list_all_system_packages, hashset_installed_system_packages, 
+    uninstall_package, restore_package,
+};
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
@@ -43,7 +46,7 @@ impl List {
                     let mut filtered_packages = Vec::new();
                     self.input_value = letter;
 
-                    for element in &self.p_row {
+                    for element in &self.phone_packages_row {
                         if element
                             .name
                             .to_lowercase()
@@ -58,22 +61,29 @@ impl List {
                 }
 
             Message::LoadPackages(uad_lists) => {
-                self.packages = list_phone_packages();
+                self.packages = list_all_system_packages();
                 self.p_row = Vec::new();
-                let mut description = "";
+
+                let installed_system_packages = hashset_installed_system_packages();
+                let mut description = "No description";
                 let mut uad_list = "";
+                let mut state;
+
                 for p_name in self.packages.lines() {
+                    state = "installed";
 
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
                         uad_list = &uad_lists.get(p_name).unwrap().list;
-                    } else {
-                        description = "No description";
+                    }
+
+                    if !installed_system_packages.contains(p_name) {
+                        state = "uninstalled";
                     }
 
                     let package_row = PackageRow::new(
                         &p_name,
-                        "installed",
+                        &state,
                         &description,
                         &uad_list,
                     );
@@ -89,11 +99,7 @@ impl List {
                 let mut filtered_packages = Vec::new();
                 if list != UadLists::All {
                     for element in &self.phone_packages_row {
-                        if element
-                            .uad_list
-                            .to_lowercase()
-                            .contains(&list.to_string().to_lowercase())
-                        {
+                        if element.uad_list.to_string() == list.to_string() {
                             filtered_packages.push(element.clone());
                         }
                     }
@@ -110,11 +116,7 @@ impl List {
                 let mut filtered_packages = Vec::new();
 
                 for element in &self.phone_packages_row {
-                    if element
-                        .state
-                        .to_lowercase()
-                        .contains(&package_state.to_string().to_lowercase())
-                    {
+                    if element.state.to_string() == package_state.to_string() {
                         filtered_packages.push(element.clone());
                     }
                 }
@@ -169,15 +171,13 @@ impl List {
 
                 let package_name = Text::new("Package").width(Length::FillPortion(6));
                 let package_state = Text::new("State").width(Length::FillPortion(3));
-                let advice = Text::new("Advice").width(Length::FillPortion(3));
 
                 let package_panel = Row::new()
                     .width(Length::Fill)
                     .align_items(Align::Center)
                     .padding(5)
                     .push(package_name)
-                    .push(package_state)
-                    .push(advice);
+                    .push(package_state);
                     
                 // let mut packages_v: Vec<&str> = self.packages.lines().collect();
                 let description_panel = Row::new()
@@ -245,7 +245,7 @@ impl PackageRow {
     ) -> Self {
         Self {
             name: name.to_string(),
-            state: "Installed".to_string(),
+            state: state.to_string(),
             description: description.to_string(),
             uad_list: uad_list.to_string(),
             remove_restore_btn_state: button::State::default(),
@@ -255,11 +255,16 @@ impl PackageRow {
 
     pub fn update(&mut self, message: RowMessage) -> Command<RowMessage> {
         match message {
-            RowMessage::RemovePressed(package) => Command::perform(
-                uninstall_package(package.name),
-                RowMessage::Uninstall
-            ),
-            RowMessage::RestorePressed(package) => Command::none(),
+            RowMessage::RemovePressed(package) => {
+                uninstall_package(package.name);
+                self.state = "uninstalled".to_string();
+                Command::none()
+            }
+            RowMessage::RestorePressed(package) => {
+                restore_package(package.name);
+                self.state = "installed".to_string();
+                Command::none()
+            }
             RowMessage::NoEvent => Command::none(),
             RowMessage::Uninstall(_) => Command::none(),
         }
@@ -275,7 +280,7 @@ impl PackageRow {
                 .align_items(Align::Center)
                 .push(Text::new(&self.name).width(Length::FillPortion(6)))
                 .push(Text::new(&self.state).width(Length::FillPortion(3)))
-                .push(if self.state == "Installed" {
+                .push(if self.state == "installed" {
                                             Button::new(
                                                 &mut self.remove_restore_btn_state,
                                                 Svg::from_path(add_svg_path)

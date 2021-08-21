@@ -9,9 +9,9 @@ use std::{collections::HashMap};
 use static_init::{dynamic};
 
 use iced::{
-    button, Align, Application, Button, Clipboard, Column, Command, Space, settings,
-    Container, Element, Length, Row, Settings, Text, HorizontalAlignment, VerticalAlignment,
-    window::Settings as Window,
+    button, Align, Application, Button, Clipboard, Column, Command, Space,
+    Container, Element, Length, Row, Settings, Text, HorizontalAlignment, 
+    VerticalAlignment, window::Settings as Window,
 };
 
 #[dynamic]
