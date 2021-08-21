@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.sony.tvsideview.videoph",
-    "oem": null,
+    "oem": true,
     "description": "Video & TV SideView (replaced by https://play.google.com/store/apps/details?id=com.sony.tvsideview.phone)\nLets you use your smartphone or tablet as a TV remote control for the home. \n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.sonyericsson.android.addoncamera.artfilter",
-    "oem": null,
+    "oem": true,
     "description": "Sony Creative effect\nGives options for various photographic toning effects in the Sony camera app.\nI'm not 100% sure for this one. Can someone confirm ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.sonyericsson.android.omacp",
-    "oem": null,
+    "oem": true,
     "description": "omacp = OMA Client Provisioning. It is a protocol specified by the Open Mobile Alliance (OMA).\nIt is used by carrier to send \"configuration SMS\" which can setup network settings (such as APN).\nIn my case, it was automatic and I never needed configuration messages. I'm pretty sure that in France this package is useless.\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\nThese special \"confirguration SMS\" can be abused : \nhttps://www.zdnet.fr/actualites/les-smartphones-samsung-huawei-lg-et-sony-vulnerables-a-des-attaques-par-provisioning-39890045.htm\nhttps://www.csoonline.com/article/3435729/sms-based-provisioning-messages-enable-advanced-phishing-on-android-phones.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "com.sonyericsson.conversations.res.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "com.sonyericsson.conversations.res.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "com.sonyericsson.idd.agent",
-    "oem": null,
+    "oem": true,
     "description": "Anonymous Usage Stats\nUsed to send \"anonymous\" information about how you use your Sony Smartphone to Sony servers.\nNobody knows how these info are anonymized...\n",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.sonyericsson.mtp",
-    "oem": null,
+    "oem": true,
     "description": "MTP extension service\nI think it's needed transfert data from you phone to a PC when using the Media Transfert Protocol (MTP).\nDoes MTP still works if you delete this package ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.sonyericsson.mtp.extension.backuprestore",
-    "oem": null,
+    "oem": true,
     "description": "Backup/Restore Sony feature.\nIt enable you to backup (Contacts, call logs, text messages, calendar, settings, bookmarks & media files)\nNOTE : I don't think this feature can backup your messages or calendars for instance if you don't use the Sony stock app.\nhttps://support.sonymobile.com/global-en/xperiaz2/userguide/backing-up-and-restoring-content-on-a-device/\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.sonyericsson.mtp.extension.update",
-    "oem": null,
+    "oem": true,
     "description": "Update service for MTP Extension.\nI don't know what it really does. Update drivers ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.sonyericsson.music",
-    "oem": null,
+    "oem": true,
     "description": "Sony music player (https://play.google.com/store/apps/details?id=com.sonyericsson.music)\n",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.sonyericsson.settings.res.overlay_305",
-    "oem": null,
+    "oem": true,
     "description": "Some people removed this package. I guess it's only an (useless) overlay the the settings ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.sonyericsson.startupflagservice",
-    "oem": null,
+    "oem": true,
     "description": "Startup Flag Service\nUsed during the production of the phone to verify that the touch input works. \nIt can be triggered when a specific TA-parameter is not set. This should never be triggered and if it does well it doesn't have any use for you.\n\nTA means Timing Advance and its value correspond to the length of time a signal takes to reach the base station from a mobile phone.\nhttps://www.telecomhall.net/t/parameter-timing-advance-ta/6390\n",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.sonyericsson.textinput.chinese",
-    "oem": null,
+    "oem": true,
     "description": "Sony chinese keyboard\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.sonyericsson.trackid.res.overlay_305",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for Sony trackid\nTrackid was a mobile music and audio search engine (like Shazam). It has been discontinued by Sony.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.sonyericsson.trackid.res.overlay_305",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for Sony trackid\nTrackid was a mobile music and audio search engine (like Shazam). It has been discontinued by Sony.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.sonyericsson.unsupportedheadsetnotifier",
-    "oem": null,
+    "oem": true,
     "description": "Given its name, it think it diplays a notification when a insert a headset not compatible with you phone.\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.sonyericsson.wappush",
-    "oem": null,
+    "oem": true,
     "description": "WAP Push\nUsed to display annoying WAP push.\nWAP push is a type of text message that contains a direct link to a particular Web page. \nWhen a user is sent a WAP-push message, he receives an alert, once clicked, directs him to the Web page via his browser.\nPersonally, I don't like this. URLs are now recognized by the SMS instant messaging apps and you just have to click on it.\n",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.sonyericsson.xhs",
-    "oem": null,
+    "oem": true,
     "description": "Sony Xperia Lounge (discontinued by Sony on August 2019)\nThe Xperia Lounge app was meant to provide loyal fans with various rewards for their Xperia smartphones, \nsuch as exclusive Xperia Themes and wallpapers, as well as competitions.\n",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.sonyericsson.xhs",
-    "oem": null,
+    "oem": true,
     "description": "Sony Xperia Lounge (discontinued by Sony on August 2019)\nThe Xperia Lounge app was meant to provide loyal fans with various rewards for their Xperia smartphones, \nsuch as exclusive Xperia Themes and wallpapers, as well as competitions.\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.sonymobile.advancedlogging",
-    "oem": null,
+    "oem": true,
     "description": "Advanced Logging\nSends logs to Sony Mobile. These logs contain a wide range of personal information such as unique device IDs, your location, \ndetails regarding running applications, and events/input leading up to a crash.\nLogging is only active for a short time and automatically disabled once logging has been completed. \nLogs are uploaded when connected to Wi-Fi and automatically deleted when the upload is complete.\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.sonymobile.advancedwidget.topcontacts",
-    "oem": null,
+    "oem": true,
     "description": "Top Contacts widget\nIt will show pictures of your most frequently used contacts right on your home screen.\nREMINDER : Widgets are small applications that you can use directly on the window screen. They also function as shortcuts\n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.sonymobile.android.addoncamera.soundphoto",
-    "oem": null,
+    "oem": true,
     "description": "Sony Sound Photo\nLets you record a background sound and take a photo at the same time with the Sound Photo app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.sonymobile.androidapp.cameraaddon.areffect",
-    "oem": null,
+    "oem": true,
     "description": "Old package for AR Effect (https://play.google.com/store/apps/details?id=com.sonymobile.androidapp.cameraaddon.areffect)\nLets you add AR (Augmented Reality) effects to your pictures and videos.\n",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.sonymobile.android.externalkeyboard",
-    "oem": null,
+    "oem": true,
     "description": "International keyboard layouts\nUseless if you use latin keyboard\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.sonymobile.android.contacts.res.overlay_305",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for Sony contacts.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.sonymobile.android.externalkeyboardjp",
-    "oem": null,
+    "oem": true,
     "description": "Japanese layout for Sony keyboard.\n",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.sonymobile.anondata",
-    "oem": null,
+    "oem": true,
     "description": "Anonymous Usage Stats (yes just as com.sonyericsson.idd.agent but it's for other phones)\nUsed to send \"anonymous\" information about how you use your Sony Smartphone to Sony servers.\nNobody knows how these info are anonymized...\n",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.sonymobile.apnupdater",
-    "oem": null,
+    "oem": true,
     "description": "I guess it automatically updates your APN settings if your carrier changes it ?\nI thought it was the role of com.android.carrierconfig.\nNOTE : The probability that your carrier's APN change is very low.\nAPN : https://tamingthedroid.com/what-apn-settings-mean\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.sonymobile.apnupdater.res.overlay_305",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for APN Updater. Useful ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "com.sonymobile.aptx.notifier",
-    "oem": null,
+    "oem": true,
     "description": "Aptx Notifier\naptX (formerly apt-X) is a family of proprietary audio codec compression algorithms owned by Qualcomm.\nIf you don't mind closed source codec, aptX has lower latency and is less of a drain on your battery than default codec (AAC)\nThis package is used to display a notification when a device using aptX (bluetooth headphone typically) is connected.\nIts only use is to tell you that you use aptX bluetooth with the connected device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "com.sonymobile.assist",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Assist (https://play.google.com/store/apps/details?id=com.sonymobile.assist)\nLearns how you use your phone.\n",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.sonymobile.assist.persistent",
-    "oem": null,
+    "oem": true,
     "description": "Related to Xperia Assist (see just above) but I don't know its purpose.\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.sonymobile.cameracommon.wearablebridge",
-    "oem": null,
+    "oem": true,
     "description": "Camera Wearable bridge\nLets you take pictures with your phone by using Sony SmartWatch.\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.sonymobile.cellbroadcast.notification",
-    "oem": null,
+    "oem": true,
     "description": "Cell information\nCell broadcast is a method of sending messages to multiple mobile telephone users in a defined area at the same time.\nIt is often used for regional emergency alerts.\nI think this package only handles notifications for broadcast cell, not the implementation.\nIt seems to me that broadcast SMS use normal notifications so there is chances that this package provide special notification for Sony SMS app ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.sonymobile.coverapp2",
-    "oem": null,
+    "oem": true,
     "description": "Style Cover\nThemes for lockscreen.\n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.sonymobile.demoappchecker",
-    "oem": null,
+    "oem": true,
     "description": "Demo app checker\nLets you enter/exit (in) the demonstration mode.\nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.sonymobile.deviceconfigtool",
-    "oem": null,
+    "oem": true,
     "description": "Configuration agent\nSeems to do things related cloud but it's unclear.\nhttps://knowledge.protektoid.com/apps/com.sonymobile.deviceconfigtool/91e44f1e19b364411776d758ff3b27f703bd4b60c9399c43c124f37d0c30df27\n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.sonymobile.dualshockmanager",
-    "oem": null,
+    "oem": true,
     "description": "DUALSHOCK\nProvide PlayStation DualShock controller support for Android (Settings > Device connection > Dualshock)\n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.sonymobile.email",
-    "oem": null,
+    "oem": true,
     "description": "Sony Email app\n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.sonymobile.entrance",
-    "oem": null,
+    "oem": true,
     "description": "What's New (discontinued in 2014)\nProvided news from Sony products through extremely annoying automated notifications.\n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.sonymobile.getmore.client",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Tips (https://play.google.com/store/apps/details?id=com.sonymobile.getmore.client)\nGives you tips for your Xperia device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -329,7 +329,7 @@
   },
   {
     "packageId": "com.sonymobile.getset",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Actions (discontinued)\nLets you automate some actions (only a few) \nhttps://support.sonymobile.com/global-en/xperiaxz/userguide/xperia-actions/\n",
     "dependencies": null,
     "neededBy": null,
@@ -337,7 +337,7 @@
   },
   {
     "packageId": "com.sonymobile.getset.priv",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Actions System\nSame thing as the package above.\n",
     "dependencies": null,
     "neededBy": null,
@@ -345,7 +345,7 @@
   },
   {
     "packageId": "com.sonymobile.gettoknowit",
-    "oem": null,
+    "oem": true,
     "description": "Introduction to Xperia (discontinued)\nIntroduces you the features of your phone.\n",
     "dependencies": null,
     "neededBy": null,
@@ -353,7 +353,7 @@
   },
   {
     "packageId": "com.sonymobile.glovemode",
-    "oem": null,
+    "oem": true,
     "description": "Sony Glove mode\nLets you use your smart phone and touch the screen while wearing regular gloves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -361,7 +361,7 @@
   },
   {
     "packageId": "com.sonymobile.googleanalyticsproxy",
-    "oem": null,
+    "oem": true,
     "description": "Google Analytics Proxy\nAllows you to publicly share your Google Analytics reporting data\nhttps://developers.google.com/analytics/solutions/google-analytics-super-proxy\n",
     "dependencies": null,
     "neededBy": null,
@@ -369,7 +369,7 @@
   },
   {
     "packageId": "com.sonymobile.intelligent.backlight",
-    "oem": null,
+    "oem": true,
     "description": "Smart backlight control\nKeeps the screen on as long as the device is held in your hand. Once you put down the device, the screen turns off according to your sleep setting.\n",
     "dependencies": null,
     "neededBy": null,
@@ -377,7 +377,7 @@
   },
   {
     "packageId": "com.sonymobile.indeviceintelligence",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Intelligence Engine\nThis app is supposed to understand how you use the phone, the apps you prefer, and will suggest tips \nand options based on app usage, how often you use an app, what time of day...\nFor me this just looks like a AI bullshit app who has a huge list of permissions and launch in background at boot\nThis app performs geofencing (check if your are located in a certain perimeter, near your home for instance) \nand this doesn't looks great privacy-wise (https://en.wikipedia.org/wiki/Geo-fence)\n",
     "dependencies": null,
     "neededBy": null,
@@ -385,7 +385,7 @@
   },
   {
     "packageId": "com.sonymobile.intelligent.gesture",
-    "oem": null,
+    "oem": true,
     "description": "Smart call handling\nLets you handle incoming calls without touching the screen.\nhttps://support.sonymobile.com/global-en/xperiaxz/userguide/smart-call-handling/\n",
     "dependencies": null,
     "neededBy": null,
@@ -393,7 +393,7 @@
   },
   {
     "packageId": "com.sonymobile.intelligent.iengine",
-    "oem": null,
+    "oem": true,
     "description": "According to a sony user it is part of Smart Screen rotation (auto screen rotation based on the gyroscope).\nSeems not reliable.\nDoes it break the screen-rotation if removed?\n",
     "dependencies": null,
     "neededBy": null,
@@ -401,7 +401,7 @@
   },
   {
     "packageId": "com.sonymobile.intelligent.observer",
-    "oem": null,
+    "oem": true,
     "description": "IntelligentObserver\n???? (but intelligent stuff are safe to remove)\n",
     "dependencies": null,
     "neededBy": null,
@@ -409,7 +409,7 @@
   },
   {
     "packageId": "com.sonymobile.lifelog",
-    "oem": null,
+    "oem": true,
     "description": "Lifelog (https://play.google.com/store/apps/details?id=com.sonymobile.lifelog)\nAnother activity tracker app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -417,7 +417,7 @@
   },
   {
     "packageId": "com.sonymobile.moviecreator.rmm",
-    "oem": null,
+    "oem": true,
     "description": "Movie Creator (https://play.google.com/store/apps/details?id=com.sonymobile.moviecreator.rmm)\nAutomatically creates short movies using your photos and videos.\n",
     "dependencies": null,
     "neededBy": null,
@@ -425,7 +425,7 @@
   },
   {
     "packageId": "com.sonymobile.mtp.extension.fotaupdate",
-    "oem": null,
+    "oem": true,
     "description": "fota update service\nFOTA = Firmware Over-The-Air \nFOTA allows manufacturers to remotely install new software updates, features and services.\nGiven there is \"mtp.extension\" in the package name, I think it lets you update your phone via your PC.\nWhat's weird is that it should be called SEUS then (https://www.mobilefun.co.uk/blog/2008/06/software-updates-sony-ericsson/)\n",
     "dependencies": null,
     "neededBy": null,
@@ -433,7 +433,7 @@
   },
   {
     "packageId": "com.sonymobile.music.googlelyricsplugin",
-    "oem": null,
+    "oem": true,
     "description": "Google lyrics plugin\nProvides lycris from Google in the sony music app\n",
     "dependencies": null,
     "neededBy": null,
@@ -441,7 +441,7 @@
   },
   {
     "packageId": "com.sonymobile.music.wikipediaplugin",
-    "oem": null,
+    "oem": true,
     "description": "Wikipedia plugin for sony music app\n",
     "dependencies": null,
     "neededBy": null,
@@ -449,7 +449,7 @@
   },
   {
     "packageId": "com.sonymobile.music.youtubekaraokeplugin",
-    "oem": null,
+    "oem": true,
     "description": "Youtube karaoke plugin for sony music app\n",
     "dependencies": null,
     "neededBy": null,
@@ -457,7 +457,7 @@
   },
   {
     "packageId": "com.sonymobile.music.youtubeplugin",
-    "oem": null,
+    "oem": true,
     "description": "Youtube plugin for sony music app\n",
     "dependencies": null,
     "neededBy": null,
@@ -465,7 +465,7 @@
   },
   {
     "packageId": "com.sonymobile.pip",
-    "oem": null,
+    "oem": true,
     "description": "Sony pip (Picture in Picture)\nAllows videos to shrink down to a small resizable window.\nOnly useful bere Android Oreo which provide native support for Pip ?\nhttps://developer.android.com/guide/topics/ui/picture-in-picture\nhttps://support.sonymobile.com/global-en/xperiaxz1compact/faq/apps-&-settings/8019307455ff6184015e92f63324005926/\n",
     "dependencies": null,
     "neededBy": null,
@@ -473,7 +473,7 @@
   },
   {
     "packageId": "com.sonymobile.pobox",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Japanese keyboard\nDoes someone know what \"popox\" means ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -481,7 +481,7 @@
   },
   {
     "packageId": "com.sonymobile.prediction",
-    "oem": null,
+    "oem": true,
     "description": "Sony text prediction (for Sony keyboard) \nIt's only a supposition. Can someone confirm ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -489,7 +489,7 @@
   },
   {
     "packageId": "com.sonymobile.retaildemo",
-    "oem": null,
+    "oem": true,
     "description": "Retail Demo\nRetail demonstration mode.\nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -497,7 +497,7 @@
   },
   {
     "packageId": "com.sonymobile.scan3d",
-    "oem": null,
+    "oem": true,
     "description": "Sony 3D Creator (https://play.google.com/store/apps/details?id=com.sonymobile.scan3d)\nLets you capture your stuff in 3D, from your smartphone, and turn people and objects into high-resolution 3D avatars.\nhttps://www.sonymobile.com/global-en/apps-services/3d-creator/\n",
     "dependencies": null,
     "neededBy": null,
@@ -505,7 +505,7 @@
   },
   {
     "packageId": "com.sonymobile.simlockunlockapp",
-    "oem": null,
+    "oem": true,
     "description": "Sim Lock\nProvide menu (type *#*#7378423#*#* in dialer) to see if your device is locked to a network carrier\nIt need confirmation because it also could be related to SIM network unlock code.\n",
     "dependencies": null,
     "neededBy": null,
@@ -513,7 +513,7 @@
   },
   {
     "packageId": "com.sonymobile.smartcharger",
-    "oem": null,
+    "oem": true,
     "description": "Battery Care\nDetects your charging patterns and estimates the start and end time of your regular charging period. \nThe rate of charging is controlled so that your battery reaches 100% just before you disconnect the charger.\nhttps://support.sonymobile.com/gb/xperiaxz/userguide/battery-and-power-management/\n",
     "dependencies": null,
     "neededBy": null,
@@ -521,7 +521,7 @@
   },
   {
     "packageId": "com.sonymobile.support",
-    "oem": null,
+    "oem": true,
     "description": "Sony Support (https://play.google.com/store/apps/details?id=com.sonymobile.support)\nUseless support app. \n",
     "dependencies": null,
     "neededBy": null,
@@ -529,7 +529,7 @@
   },
   {
     "packageId": "com.sonymobile.synchub",
-    "oem": null,
+    "oem": true,
     "description": "Sony Backup & restore feature to/from Google drive ? \nCan someone confirm ? Does it impact com.sonyericsson.mtp.extension.backuprestore ?\nhttps://support.sonymobile.com/global-en/xperia10/faq/apps-&-settings/801930747866b72a016b307df3b6007faf/\n",
     "dependencies": null,
     "neededBy": null,
@@ -537,7 +537,7 @@
   },
   {
     "packageId": "com.sonymobile.themes.xperialoops2",
-    "oem": null,
+    "oem": true,
     "description": "Sony themes\n",
     "dependencies": null,
     "neededBy": null,
@@ -545,7 +545,7 @@
   },
   {
     "packageId": "com.sonymobile.themes.xperialoops2",
-    "oem": null,
+    "oem": true,
     "description": "Sony themes\n",
     "dependencies": null,
     "neededBy": null,
@@ -553,7 +553,7 @@
   },
   {
     "packageId": "com.sonymobile.themes.xperialoops2",
-    "oem": null,
+    "oem": true,
     "description": "Sony themes\n",
     "dependencies": null,
     "neededBy": null,
@@ -561,7 +561,7 @@
   },
   {
     "packageId": "com.sonymobile.themes.xperialoops2",
-    "oem": null,
+    "oem": true,
     "description": "Sony themes\n",
     "dependencies": null,
     "neededBy": null,
@@ -569,7 +569,7 @@
   },
   {
     "packageId": "com.sonymobile.themes.xperialoops2",
-    "oem": null,
+    "oem": true,
     "description": "Sony themes\n",
     "dependencies": null,
     "neededBy": null,
@@ -577,7 +577,7 @@
   },
   {
     "packageId": "com.sonymobile.xperialounge.services",
-    "oem": null,
+    "oem": true,
     "description": "Xperia\u2122 Lounge Pass service (discontinued)\nThe Xperia Lounge app was meant to provide loyal fans with various rewards for their Xperia smartphones, \nsuch as exclusive Xperia Themes and wallpapers, as well as competitions.\nhttps://www.phonearena.com/news/Sony-Xperia-Lounge-shutting-down_id118252\n",
     "dependencies": null,
     "neededBy": null,
@@ -585,7 +585,7 @@
   },
   {
     "packageId": "com.sonymobile.xperiaxlivewallpaper.product.res.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.\n",
     "dependencies": null,
     "neededBy": null,
@@ -593,7 +593,7 @@
   },
   {
     "packageId": "com.sonymobile.xperiaxlivewallpaper.product.res.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.\n",
     "dependencies": null,
     "neededBy": null,
@@ -601,7 +601,7 @@
   },
   {
     "packageId": "com.sonymobile.xperiaservices",
-    "oem": null,
+    "oem": true,
     "description": "Xperia services\nI guess it provides things for Sony apps but I don't know what.\nSafe to remove but it'd be to know what Sony apps work without it.\n",
     "dependencies": null,
     "neededBy": null,
@@ -609,7 +609,7 @@
   },
   {
     "packageId": "com.sonymobile.xperiatransfermobile",
-    "oem": null,
+    "oem": true,
     "description": "Xperia Transfer Mobile (https://play.google.com/store/apps/details?id=com.sonymobile.xperiatransfermobile)\nHelps you move your contacts, messages, photos, and much more from your old Android, iOS or Windows Phone device to your new Xperia from Sony.\n",
     "dependencies": null,
     "neededBy": null,
@@ -617,7 +617,7 @@
   },
   {
     "packageId": "com.sonymobile.xperiaweather",
-    "oem": null,
+    "oem": true,
     "description": "Sony weather app (https://play.google.com/store/apps/details?id=com.sonymobile.xperiaweather)\nNote : Not all location are supported.\n",
     "dependencies": null,
     "neededBy": null,
@@ -625,7 +625,7 @@
   },
   {
     "packageId": "com.sonyericsson.album",
-    "oem": null,
+    "oem": true,
     "description": "Sony gallery app (https://play.google.com/store/apps/details?id=com.sonyericsson.album)\n",
     "dependencies": null,
     "neededBy": null,
@@ -633,7 +633,7 @@
   },
   {
     "packageId": "com.sonymobile.camera",
-    "oem": null,
+    "oem": true,
     "description": "Sony camera app\n",
     "dependencies": null,
     "neededBy": null,
@@ -641,7 +641,7 @@
   },
   {
     "packageId": "com.sonymobile.camera",
-    "oem": null,
+    "oem": true,
     "description": "Sony camera app\n",
     "dependencies": null,
     "neededBy": null,
@@ -649,7 +649,7 @@
   },
   {
     "packageId": "com.sonymobile.android.contacts",
-    "oem": null,
+    "oem": true,
     "description": "Sony contacts\n",
     "dependencies": null,
     "neededBy": null,

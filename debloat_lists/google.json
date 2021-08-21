@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.android.hotwordenrollment.xgoogle",
-    "oem": null,
+    "oem": false,
     "description": "\"OK Google\" detection service.\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.android.hotwordenrollment.xgoogle",
-    "oem": null,
+    "oem": false,
     "description": "\"OK Google\" detection service.\n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.android.partnerbrowsercustomizations.chromeHomepage",
-    "oem": null,
+    "oem": false,
     "description": "Horrible stuff for Google Chrome. This package bypass your DNS settings (for letting pass Google ads)\n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "com.android.chrome",
-    "oem": null,
+    "oem": false,
     "description": "Google Chrome app (https://play.google.com/store/apps/details?id=com.android.chrome)\n",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "com.chrome.beta",
-    "oem": null,
+    "oem": false,
     "description": "Google Chrome Beta (https://play.google.com/store/apps/details?id=com.chrome.beta)\n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "com.chrome.canary",
-    "oem": null,
+    "oem": false,
     "description": "Google Chrome Canary (Nightly build) (https://play.google.com/store/apps/details?id=com.chrome.canary)\n",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.chrome.dev",
-    "oem": null,
+    "oem": false,
     "description": "Google Chrome (developer)\t(https://play.google.com/store/apps/details?id=com.chrome.dev)\n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.google.android.apps.access.wifi.consumer",
-    "oem": null,
+    "oem": false,
     "description": "Google Wifi app (https://play.google.com/store/apps/details?id=com.google.android.apps.access.wifi.consumer)\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.google.android.apps.adm",
-    "oem": null,
+    "oem": false,
     "description": "Google Find my device app (https://play.google.com/store/apps/details?id=com.google.android.apps.adm)\n",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.google.android.apps.ads.publisher",
-    "oem": null,
+    "oem": false,
     "description": "Google Adsense app (https://play.google.com/store/apps/details?id=com.google.android.apps.ads.publisher) \n",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.google.android.apps.adwords",
-    "oem": null,
+    "oem": false,
     "description": "Google Ads app (https://play.google.com/store/apps/details?id=com.google.android.apps.adwords)\n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.google.android.apps.authenticator2",
-    "oem": null,
+    "oem": false,
     "description": "Google authentificator app (https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)\n",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.google.android.apps.blogger",
-    "oem": null,
+    "oem": false,
     "description": "Google blogger app (https://play.google.com/store/apps/details?id=com.google.android.apps.blogger)\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.google.android.apps.books",
-    "oem": null,
+    "oem": false,
     "description": "Google Play Books (https://play.google.com/store/apps/details?id=com.google.android.apps.books)\n",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.google.android.apps.chromecast.app",
-    "oem": null,
+    "oem": false,
     "description": "Google Home (https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.google.android.apps.cloudprint",
-    "oem": null,
+    "oem": false,
     "description": "Cloud print (https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint)\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.google.android.apps.cultural",
-    "oem": null,
+    "oem": false,
     "description": "Google Arts & Culture (https://play.google.com/store/apps/details?id=com.google.android.apps.cultural_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.google.android.apps.currents",
-    "oem": null,
+    "oem": false,
     "description": "Google Currents (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.google.android.apps.docs",
-    "oem": null,
+    "oem": false,
     "description": "Google Drive (https://play.google.com/store/apps/details?id=com.google.android.apps.docs_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.google.android.apps.docs.editors.docs",
-    "oem": null,
+    "oem": false,
     "description": "Google Docs (https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs)\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.google.android.apps.docs.editors.sheets",
-    "oem": null,
+    "oem": false,
     "description": "Google sheets\n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.google.android.apps.docs.editors.slides",
-    "oem": null,
+    "oem": false,
     "description": "Google slides (for presentation)\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.google.android.apps.dynamite",
-    "oem": null,
+    "oem": false,
     "description": "Hangout chat (https://play.google.com/store/apps/details?id=com.google.android.apps.dynamite)\n",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.google.android.apps.enterprise.cpanel",
-    "oem": null,
+    "oem": false,
     "description": "Google Admin (https://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.cpanel)\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.google.android.apps.enterprise.dmagent",
-    "oem": null,
+    "oem": false,
     "description": "Google apps device policy (https://play.google.com/store/apps/details?id=com.google.android.apps.enterprise.dmagent)\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.google.android.apps.fireball",
-    "oem": null,
+    "oem": false,
     "description": "Google Allo (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.google.android.apps.fitness",
-    "oem": null,
+    "oem": false,
     "description": "Google Fit (https://play.google.com/store/apps/details?id=com.google.android.apps.fitness)\n",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.google.android.apps.freighter",
-    "oem": null,
+    "oem": false,
     "description": "Google Datally (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.google.android.apps.giant",
-    "oem": null,
+    "oem": false,
     "description": "Google Analytics (https://play.google.com/store/apps/details?id=com.google.android.apps.giant)\n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "com.google.android.apps.googleassistant",
-    "oem": null,
+    "oem": false,
     "description": "Google Assistant (https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "com.google.android.apps.handwriting.ime",
-    "oem": null,
+    "oem": false,
     "description": "Google Handwriting Input (https://play.google.com/store/apps/details?id=com.google.android.apps.handwriting.ime)\n",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.google.android.apps.hangoutsdialer",
-    "oem": null,
+    "oem": false,
     "description": "Google Hangout Dialer (https://play.google.com/store/apps/details?id=com.google.android.apps.hangoutsdialer)\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.google.android.apps.kids.familylink",
-    "oem": null,
+    "oem": false,
     "description": "Inbox by Gmail (Discontinued)\nGoogle Family Link (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylink)\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.google.android.apps.kids.familylink",
-    "oem": null,
+    "oem": false,
     "description": "Inbox by Gmail (Discontinued)\nGoogle Family Link (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylink)\n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.google.android.apps.kids.familylinkhelper",
-    "oem": null,
+    "oem": false,
     "description": "Google Family Link for children & teens (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylinkhelper)\n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.google.android.apps.m4b",
-    "oem": null,
+    "oem": false,
     "description": "Google My Maps (https://play.google.com/store/apps/details?id=com.google.android.apps.m4b)\nIt is NOT Google Maps\n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.google.android.apps.magazines",
-    "oem": null,
+    "oem": false,
     "description": "Google News (https://play.google.com/store/apps/details?id=com.google.android.apps.magazines)\n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.google.android.apps.mapslite",
-    "oem": null,
+    "oem": false,
     "description": "Google Maps Go (lite web app of Maps) (https://play.google.com/store/apps/details?id=com.google.android.apps.mapslite)\n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.google.android.apps.meetings",
-    "oem": null,
+    "oem": false,
     "description": "Hangout Meet (https://play.google.com/store/apps/details?id=com.google.android.apps.meetings)\n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.google.android.apps.messaging",
-    "oem": null,
+    "oem": false,
     "description": "Google Messaging (SMS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.google.android.apps.nbu.files",
-    "oem": null,
+    "oem": false,
     "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)\nFile Management (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)\n",
     "dependencies": null,
     "neededBy": null,
@@ -329,7 +329,7 @@
   },
   {
     "packageId": "com.google.android.apps.nbu.files",
-    "oem": null,
+    "oem": false,
     "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)\nFile Management (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)\n",
     "dependencies": null,
     "neededBy": null,
@@ -337,7 +337,7 @@
   },
   {
     "packageId": "com.google.android.apps.paidtasks",
-    "oem": null,
+    "oem": false,
     "description": "Google Opinion Rewards (https://play.google.com/store/apps/details?id=com.google.android.apps.paidtasks)\n",
     "dependencies": null,
     "neededBy": null,
@@ -345,7 +345,7 @@
   },
   {
     "packageId": "com.google.android.apps.pdfviewer",
-    "oem": null,
+    "oem": false,
     "description": "Google PDF Viewer (https://play.google.com/store/apps/details?id=com.google.android.apps.pdfviewer)\n",
     "dependencies": null,
     "neededBy": null,
@@ -353,7 +353,7 @@
   },
   {
     "packageId": "com.google.android.apps.photos",
-    "oem": null,
+    "oem": false,
     "description": "Google photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)\n",
     "dependencies": null,
     "neededBy": null,
@@ -361,7 +361,7 @@
   },
   {
     "packageId": "com.google.android.apps.photos.scanner",
-    "oem": null,
+    "oem": false,
     "description": "PhotoScan app (https://play.google.com/store/apps/details?id=com.google.android.apps.photos.scanner)\n",
     "dependencies": null,
     "neededBy": null,
@@ -369,7 +369,7 @@
   },
   {
     "packageId": "com.google.android.apps.plus",
-    "oem": null,
+    "oem": false,
     "description": "Google+ (https://play.google.com/store/apps/details?id=com.google.android.apps.plus_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -377,7 +377,7 @@
   },
   {
     "packageId": "com.google.android.apps.podcasts",
-    "oem": null,
+    "oem": false,
     "description": "Google Podcasts (https://play.google.com/store/apps/details?id=com.google.android.apps.podcasts)\n",
     "dependencies": null,
     "neededBy": null,
@@ -385,7 +385,7 @@
   },
   {
     "packageId": "com.google.android.apps.restore",
-    "oem": null,
+    "oem": false,
     "description": "This is the backup restore wizard used for pulling Android system backups from your Google account. \nYou only need this if you factory restore the phone, in which case it\u2019s automatically reinstalled for you.\n",
     "dependencies": null,
     "neededBy": null,
@@ -393,7 +393,7 @@
   },
   {
     "packageId": "com.google.android.apps.recorder",
-    "oem": null,
+    "oem": false,
     "description": "Google (audio) recorder (https://play.google.com/store/apps/details?id=com.google.android.apps.recorder)\n",
     "dependencies": null,
     "neededBy": null,
@@ -401,7 +401,7 @@
   },
   {
     "packageId": "com.google.android.apps.setupwizard.searchselector",
-    "oem": null,
+    "oem": false,
     "description": "Most likely add a search bar to the setupwizard (com.google.android.setupwizard)\n",
     "dependencies": null,
     "neededBy": null,
@@ -409,7 +409,7 @@
   },
   {
     "packageId": "com.google.android.apps.santatracker",
-    "oem": null,
+    "oem": false,
     "description": "Google Santa Tracker WTF ??? (https://play.google.com/store/apps/details?id=com.google.android.apps.santatracker)\n",
     "dependencies": null,
     "neededBy": null,
@@ -417,7 +417,7 @@
   },
   {
     "packageId": "com.google.android.apps.subscriptions.red",
-    "oem": null,
+    "oem": false,
     "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red_US)\n",
     "dependencies": null,
     "neededBy": null,
@@ -425,7 +425,7 @@
   },
   {
     "packageId": "com.google.android.apps.tachyon",
-    "oem": null,
+    "oem": false,
     "description": "Google Duo (Video Calls) (https://play.google.com/store/apps/details?id=com.google.android.apps.tachyon)\n",
     "dependencies": null,
     "neededBy": null,
@@ -433,7 +433,7 @@
   },
   {
     "packageId": "com.google.android.apps.tasks",
-    "oem": null,
+    "oem": false,
     "description": "Google Task (TODO list) (https://play.google.com/store/apps/details?id=com.google.android.apps.tasks)\n",
     "dependencies": null,
     "neededBy": null,
@@ -441,7 +441,7 @@
   },
   {
     "packageId": "com.google.android.apps.translate",
-    "oem": null,
+    "oem": false,
     "description": "Google Translate (https://play.google.com/store/apps/details?id=com.google.android.apps.translate)\n",
     "dependencies": null,
     "neededBy": null,
@@ -449,7 +449,7 @@
   },
   {
     "packageId": "com.google.android.apps.travel.onthego",
-    "oem": null,
+    "oem": false,
     "description": "Google Trip (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -457,7 +457,7 @@
   },
   {
     "packageId": "com.google.android.apps.uploader",
-    "oem": null,
+    "oem": false,
     "description": "Picasa Uploader (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -465,7 +465,7 @@
   },
   {
     "packageId": "com.google.android.apps.vega",
-    "oem": null,
+    "oem": false,
     "description": "Google My Business (https://play.google.com/store/apps/details?id=com.google.android.apps.vega)\n",
     "dependencies": null,
     "neededBy": null,
@@ -473,7 +473,7 @@
   },
   {
     "packageId": "com.google.android.apps.walletnfcrel",
-    "oem": null,
+    "oem": false,
     "description": "Google Pay (https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel)\n",
     "dependencies": null,
     "neededBy": null,
@@ -481,7 +481,7 @@
   },
   {
     "packageId": "com.google.android.apps.wallpaper",
-    "oem": null,
+    "oem": false,
     "description": "Google Wallpapers (https://play.google.com/store/apps/details?id=com.google.android.apps.wallpaper)\n",
     "dependencies": null,
     "neededBy": null,
@@ -489,7 +489,7 @@
   },
   {
     "packageId": "com.google.android.apps.wellbeing",
-    "oem": null,
+    "oem": false,
     "description": "Digital Wellbeing (habits tracking tool) (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\n",
     "dependencies": null,
     "neededBy": null,
@@ -497,7 +497,7 @@
   },
   {
     "packageId": "com.google.android.apps.youtube.creator",
-    "oem": null,
+    "oem": false,
     "description": "Youtube Studio (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.creator)\n",
     "dependencies": null,
     "neededBy": null,
@@ -505,7 +505,7 @@
   },
   {
     "packageId": "com.google.android.apps.youtube.gaming",
-    "oem": null,
+    "oem": false,
     "description": "Youtube Gaming -(discontinued in March 2019, features integrated in main youtube app)\n",
     "dependencies": null,
     "neededBy": null,
@@ -513,7 +513,7 @@
   },
   {
     "packageId": "com.google.android.apps.youtube.kids",
-    "oem": null,
+    "oem": false,
     "description": "Youtube Kid (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids)\n",
     "dependencies": null,
     "neededBy": null,
@@ -521,7 +521,7 @@
   },
   {
     "packageId": "com.google.android.apps.youtube.music",
-    "oem": null,
+    "oem": false,
     "description": "Youtube Music (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)\n",
     "dependencies": null,
     "neededBy": null,
@@ -529,7 +529,7 @@
   },
   {
     "packageId": "com.google.android.apps.youtube.vr",
-    "oem": null,
+    "oem": false,
     "description": "Youtube VR (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.vr)\n",
     "dependencies": null,
     "neededBy": null,
@@ -537,7 +537,7 @@
   },
   {
     "packageId": "com.google.android.backuptransport",
-    "oem": null,
+    "oem": false,
     "description": "Allows Android apps to back up their data on Google servers.\n",
     "dependencies": null,
     "neededBy": null,
@@ -545,7 +545,7 @@
   },
   {
     "packageId": "com.google.android.backuptransport",
-    "oem": null,
+    "oem": false,
     "description": "Allows Android apps to back up their data on Google servers.\n",
     "dependencies": null,
     "neededBy": null,
@@ -553,7 +553,7 @@
   },
   {
     "packageId": "com.google.android.calculator",
-    "oem": null,
+    "oem": false,
     "description": "Google Calculator (https://play.google.com/store/apps/details?id=com.google.android.calculator)\n",
     "dependencies": null,
     "neededBy": null,
@@ -561,7 +561,7 @@
   },
   {
     "packageId": "com.google.android.calendar",
-    "oem": null,
+    "oem": false,
     "description": "Google Calendar (https://play.google.com/store/apps/details?id=com.google.android.calendar)\n",
     "dependencies": null,
     "neededBy": null,
@@ -569,7 +569,7 @@
   },
   {
     "packageId": "com.google.android.configupdater",
-    "oem": null,
+    "oem": false,
     "description": "Related to carrier config\nAuto updates certificates for TLS connection, firewall configuration, time zone info...\nSee : https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/os/ConfigUpdate.java\nThis is configuration stuff for Google services only.\n",
     "dependencies": null,
     "neededBy": null,
@@ -577,7 +577,7 @@
   },
   {
     "packageId": "com.google.android.deskclock",
-    "oem": null,
+    "oem": false,
     "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n",
     "dependencies": null,
     "neededBy": null,
@@ -585,7 +585,7 @@
   },
   {
     "packageId": "com.google.android.feedback",
-    "oem": null,
+    "oem": false,
     "description": "When an app crashes, this is the app that briefly asks you if you want to feedback the crash on the market, Google Play Store.\n",
     "dependencies": null,
     "neededBy": null,
@@ -593,7 +593,7 @@
   },
   {
     "packageId": "com.google.android.googlequicksearchbox",
-    "oem": null,
+    "oem": false,
     "description": "Google Search box (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)\n",
     "dependencies": null,
     "neededBy": null,
@@ -601,7 +601,7 @@
   },
   {
     "packageId": "com.google.android.instantapps.supervisor",
-    "oem": null,
+    "oem": false,
     "description": "Lets you try new games directly on Google Play.\nhttps://www.zdnet.com/article/googles-instant-apps-goes-live-now-you-can-try-android-apps-before-installing-them/\n",
     "dependencies": null,
     "neededBy": null,
@@ -609,7 +609,7 @@
   },
   {
     "packageId": "com.google.android.keep",
-    "oem": null,
+    "oem": false,
     "description": "Google Keep (https://play.google.com/store/apps/details?id=com.google.android.keep)\n",
     "dependencies": null,
     "neededBy": null,
@@ -617,7 +617,7 @@
   },
   {
     "packageId": "com.google.android.markup",
-    "oem": null,
+    "oem": false,
     "description": "Google Markup app made for modifying pictures, ships by default on every Pie+ device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -625,7 +625,7 @@
   },
   {
     "packageId": "com.google.android.marvin.talkback",
-    "oem": null,
+    "oem": false,
     "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)\nHelps blind and vision-impaired users.\n",
     "dependencies": null,
     "neededBy": null,
@@ -633,7 +633,7 @@
   },
   {
     "packageId": "com.google.android.music",
-    "oem": null,
+    "oem": false,
     "description": "Google Play Music (https://play.google.com/store/apps/details?id=com.google.android.music)\n",
     "dependencies": null,
     "neededBy": null,
@@ -641,7 +641,7 @@
   },
   {
     "packageId": "com.google.android.onetimeinitializer",
-    "oem": null,
+    "oem": false,
     "description": "Provides first time setup, safe to remove.\n",
     "dependencies": null,
     "neededBy": null,
@@ -649,7 +649,7 @@
   },
   {
     "packageId": "com.google.android.play.games",
-    "oem": null,
+    "oem": false,
     "description": "Google Play Games (https://play.google.com/store/apps/details?id=com.google.android.play.games)\n",
     "dependencies": null,
     "neededBy": null,
@@ -657,7 +657,7 @@
   },
   {
     "packageId": "com.google.android.printservice.recommendation",
-    "oem": null,
+    "oem": false,
     "description": "Print recommendation service. \nNot clear, seems to help you to find printers but it's not mandatory. \nSafe to remove\n",
     "dependencies": null,
     "neededBy": null,
@@ -665,7 +665,7 @@
   },
   {
     "packageId": "com.google.android.projection.gearhead",
-    "oem": null,
+    "oem": false,
     "description": "Android auto (https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead)\n",
     "dependencies": null,
     "neededBy": null,
@@ -673,7 +673,7 @@
   },
   {
     "packageId": "com.google.android.pixel.setupwizard",
-    "oem": null,
+    "oem": false,
     "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.\n",
     "dependencies": null,
     "neededBy": null,
@@ -681,7 +681,7 @@
   },
   {
     "packageId": "com.google.android.pixel.setupwizard",
-    "oem": null,
+    "oem": false,
     "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.\n",
     "dependencies": null,
     "neededBy": null,
@@ -689,7 +689,7 @@
   },
   {
     "packageId": "com.google.android.pixel.setupwizard",
-    "oem": null,
+    "oem": false,
     "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.\n",
     "dependencies": null,
     "neededBy": null,
@@ -697,7 +697,7 @@
   },
   {
     "packageId": "com.google.android.soundpicker",
-    "oem": null,
+    "oem": false,
     "description": "Google Sounds. Removable if you already have another media select service.\n",
     "dependencies": null,
     "neededBy": null,
@@ -705,7 +705,7 @@
   },
   {
     "packageId": "com.google.android.street",
-    "oem": null,
+    "oem": false,
     "description": "Google Street View (https://play.google.com/store/apps/details?id=com.google.android.street)\n",
     "dependencies": null,
     "neededBy": null,
@@ -713,7 +713,7 @@
   },
   {
     "packageId": "com.google.android.syncadapters.bookmarks",
-    "oem": null,
+    "oem": false,
     "description": "Synchronisation for Google Chrome bookmarks\n",
     "dependencies": null,
     "neededBy": null,
@@ -721,7 +721,7 @@
   },
   {
     "packageId": "com.google.android.syncadapters.calendar",
-    "oem": null,
+    "oem": false,
     "description": "Synchronisation for Google Calendar.\n",
     "dependencies": null,
     "neededBy": null,
@@ -729,7 +729,7 @@
   },
   {
     "packageId": "com.google.android.syncadapters.contacts",
-    "oem": null,
+    "oem": false,
     "description": "Synchronisation for Google Contacts.\n",
     "dependencies": null,
     "neededBy": null,
@@ -737,7 +737,7 @@
   },
   {
     "packageId": "com.google.android.talk",
-    "oem": null,
+    "oem": false,
     "description": "Google Hangouts (https://play.google.com/store/apps/details?id=com.google.android.talk)\n",
     "dependencies": null,
     "neededBy": null,
@@ -745,7 +745,7 @@
   },
   {
     "packageId": "com.google.android.tts",
-    "oem": null,
+    "oem": false,
     "description": "Text-to-speech (https://play.google.com/store/apps/details?id=com.google.android.tts)\nPowers apps to read text on your scream aloud, in many languages\n",
     "dependencies": null,
     "neededBy": null,
@@ -753,7 +753,7 @@
   },
   {
     "packageId": "com.google.android.tv.remote",
-    "oem": null,
+    "oem": false,
     "description": "Android TV remote control (https://play.google.com/store/apps/details?id=com.google.android.tv.remote)\n",
     "dependencies": null,
     "neededBy": null,
@@ -761,7 +761,7 @@
   },
   {
     "packageId": "com.google.android.videoeditor",
-    "oem": null,
+    "oem": false,
     "description": "Google Movie Studio (discontinued)\n",
     "dependencies": null,
     "neededBy": null,
@@ -769,7 +769,7 @@
   },
   {
     "packageId": "com.google.android.videos",
-    "oem": null,
+    "oem": false,
     "description": "Google Play Movies & TV (https://play.google.com/store/apps/details?id=com.google.android.videos)\n",
     "dependencies": null,
     "neededBy": null,
@@ -777,7 +777,7 @@
   },
   {
     "packageId": "com.google.android.voicesearch",
-    "oem": null,
+    "oem": false,
     "description": "Google Voice Search (Speech-To-Text)\n",
     "dependencies": null,
     "neededBy": null,
@@ -785,7 +785,7 @@
   },
   {
     "packageId": "com.google.android.vr.home",
-    "oem": null,
+    "oem": false,
     "description": "Daydream (VR stuff) (https://play.google.com/store/apps/details?id=com.google.android.vr.home)\n",
     "dependencies": null,
     "neededBy": null,
@@ -793,7 +793,7 @@
   },
   {
     "packageId": "com.google.android.vr.inputmethod",
-    "oem": null,
+    "oem": false,
     "description": "Daydream virtual keyboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.android.vr.inputmethod)\n",
     "dependencies": null,
     "neededBy": null,
@@ -801,7 +801,7 @@
   },
   {
     "packageId": "com.google.android.wearable.app",
-    "oem": null,
+    "oem": false,
     "description": "Wear OS Smartwatch (https://play.google.com/store/apps/details?id=com.google.android.wearable.app)\n",
     "dependencies": null,
     "neededBy": null,
@@ -809,7 +809,7 @@
   },
   {
     "packageId": "com.google.ar.core",
-    "oem": null,
+    "oem": false,
     "description": "YouTube app (https://play.google.com/store/apps/details?id=com.google.android.youtube)\nGoogle Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\n",
     "dependencies": null,
     "neededBy": null,
@@ -817,7 +817,7 @@
   },
   {
     "packageId": "com.google.ar.core",
-    "oem": null,
+    "oem": false,
     "description": "YouTube app (https://play.google.com/store/apps/details?id=com.google.android.youtube)\nGoogle Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\n",
     "dependencies": null,
     "neededBy": null,
@@ -825,7 +825,7 @@
   },
   {
     "packageId": "com.google.ar.lens",
-    "oem": null,
+    "oem": false,
     "description": "Google Lens (for AR too) (https://play.google.com/store/apps/details?id=com.google.ar.lens)\n",
     "dependencies": null,
     "neededBy": null,
@@ -833,7 +833,7 @@
   },
   {
     "packageId": "com.google.chromeremotedesktop",
-    "oem": null,
+    "oem": false,
     "description": "Chrome Remote Desktop (https://play.google.com/store/apps/details?id=com.google.chromeremotedesktop)\n",
     "dependencies": null,
     "neededBy": null,
@@ -841,7 +841,7 @@
   },
   {
     "packageId": "com.google.earth",
-    "oem": null,
+    "oem": false,
     "description": "Google Earth (https://play.google.com/store/apps/details?id=com.google.earth)\n",
     "dependencies": null,
     "neededBy": null,
@@ -849,7 +849,7 @@
   },
   {
     "packageId": "com.google.marvin.talkback",
-    "oem": null,
+    "oem": false,
     "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)\n",
     "dependencies": null,
     "neededBy": null,
@@ -857,7 +857,7 @@
   },
   {
     "packageId": "com.google.samples.apps.cardboarddemo",
-    "oem": null,
+    "oem": false,
     "description": "Google Cardboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.samples.apps.cardboarddemo)\n",
     "dependencies": null,
     "neededBy": null,
@@ -865,7 +865,7 @@
   },
   {
     "packageId": "com.google.tango.measure",
-    "oem": null,
+    "oem": false,
     "description": "Google Measure (https://play.google.com/store/apps/details?id=com.google.tango.measure)\n",
     "dependencies": null,
     "neededBy": null,
@@ -873,7 +873,7 @@
   },
   {
     "packageId": "com.google.vr.cyclops",
-    "oem": null,
+    "oem": false,
     "description": "Google Cardboard Camera (VR stuff) (https://play.google.com/store/apps/details?id=com.google.vr.cyclops)\n",
     "dependencies": null,
     "neededBy": null,
@@ -881,7 +881,7 @@
   },
   {
     "packageId": "com.google.vr.expeditions",
-    "oem": null,
+    "oem": false,
     "description": "Google Expedition (VR stuff) (https://play.google.com/store/apps/details?id=com.google.vr.expeditions)\n",
     "dependencies": null,
     "neededBy": null,
@@ -889,7 +889,7 @@
   },
   {
     "packageId": "com.google.vr.vrcore",
-    "oem": null,
+    "oem": false,
     "description": "Google VR services (https://play.google.com/store/apps/details?id=com.google.vr.vrcore)\n",
     "dependencies": null,
     "neededBy": null,
@@ -897,7 +897,7 @@
   },
   {
     "packageId": "com.google.zxing.client.android",
-    "oem": null,
+    "oem": false,
     "description": "Google Barcode Scanner (Discontinued) (https://play.google.com/store/apps/details?id=com.google.zxing.client.android)\n",
     "dependencies": null,
     "neededBy": null,
@@ -905,7 +905,7 @@
   },
   {
     "packageId": "com.google.android.apps.maps",
-    "oem": null,
+    "oem": false,
     "description": "Google maps (https://play.google.com/store/apps/details?id=com.google.android.apps.maps)\n",
     "dependencies": null,
     "neededBy": null,
@@ -913,7 +913,7 @@
   },
   {
     "packageId": "com.google.android.apps.nexuslauncher",
-    "oem": null,
+    "oem": false,
     "description": "Nexus Launcher (https://play.google.com/store/apps/details?id=com.google.android.apps.nexuslauncher)\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER ! \n",
     "dependencies": null,
     "neededBy": null,
@@ -921,7 +921,7 @@
   },
   {
     "packageId": "com.google.android.apps.photos",
-    "oem": null,
+    "oem": false,
     "description": "Google photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)\n",
     "dependencies": null,
     "neededBy": null,
@@ -929,7 +929,7 @@
   },
   {
     "packageId": "com.google.android.apps.turbo",
-    "oem": null,
+    "oem": false,
     "description": "Device Health Services (discontinued ?)\nCalculates your remaining battery percentage based on your usage\nReviews for this app were... funny (https://www.reddit.com/r/google/comments/ajnbmh/the_reviews_for_device_health_services_are_quite/)\nNote: this app needs com.google.android.gms\n",
     "dependencies": null,
     "neededBy": null,
@@ -937,7 +937,7 @@
   },
   {
     "packageId": "com.google.android.apps.work.oobconfig",
-    "oem": null,
+    "oem": false,
     "description": "Needs internet to fetchs enterprise and carrier lock config via internet.\nRun in background and is triggered when a SIM card is added/removed/replaced. \nIt also has Gcm receiver (Google Cloud Messaging receiver)\nHas a lot of permissions (16).\nTalks to websites providing SSL certificates.\nNeeds Google Play Services to work.\nhttps://www.hybrid-analysis.com/sample/71bcaf2e71d78665fc5bc53db39df5309f24dd4ecab6402cf6ca20027dc6ecad?environmentId=200\n",
     "dependencies": null,
     "neededBy": null,
@@ -945,7 +945,7 @@
   },
   {
     "packageId": "com.google.android.carrierconfig",
-    "oem": null,
+    "oem": false,
     "description": "Provides network overrides for carrier configuration.\nThe configuration available through CarrierConfigManager is a combination of default values, default network overrides, \nand carrier overrides. The default network overrides are provided by this service.\nWhat's the difference between com.android.carrierconfig and this package?\n",
     "dependencies": null,
     "neededBy": null,
@@ -953,7 +953,7 @@
   },
   {
     "packageId": "com.google.android.contacts",
-    "oem": null,
+    "oem": false,
     "description": "Google Contacts (https://play.google.com/store/apps/details?id=com.google.android.contacts)\n",
     "dependencies": null,
     "neededBy": null,
@@ -961,7 +961,7 @@
   },
   {
     "packageId": "com.google.android.dialer",
-    "oem": null,
+    "oem": false,
     "description": "Google Dialer (https://play.google.com/store/apps/details?id=com.google.android.dialer)\nIt's not default but seriously, don't use the Google dialer there are Google Analytics embedded inside\nhttps://www.virustotal.com/gui/file/a978d90f27d5947dca33ed59b73bd8efbac67253f9ef7a343beb9197c8913d1a/details\n",
     "dependencies": null,
     "neededBy": null,
@@ -969,7 +969,7 @@
   },
   {
     "packageId": "com.google.android.documentsui",
-    "oem": null,
+    "oem": false,
     "description": "Google File manager\n",
     "dependencies": null,
     "neededBy": null,
@@ -977,7 +977,7 @@
   },
   {
     "packageId": "com.google.android.ext.shared",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm\n\nGoogle shared library (used to share common code between apps)\nFor now the library (android.ext.shared is empty). So this apk is useless. \nThis apk has the same role than the one above.\n",
     "dependencies": null,
     "neededBy": null,
@@ -985,7 +985,7 @@
   },
   {
     "packageId": "com.google.android.ext.shared",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm\n\nGoogle shared library (used to share common code between apps)\nFor now the library (android.ext.shared is empty). So this apk is useless. \nThis apk has the same role than the one above.\n",
     "dependencies": null,
     "neededBy": null,
@@ -993,7 +993,7 @@
   },
   {
     "packageId": "com.google.android.GoogleCamera",
-    "oem": null,
+    "oem": false,
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\nGoogle Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1001,7 +1001,7 @@
   },
   {
     "packageId": "com.google.android.GoogleCamera",
-    "oem": null,
+    "oem": false,
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\nGoogle Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1009,7 +1009,7 @@
   },
   {
     "packageId": "com.google.android.gms",
-    "oem": null,
+    "oem": false,
     "description": "Google Play Services\ngms = Google Mobile Services\nIt is a layer that sits on top of the OS and provide a bunch of Google APIs, giving developers access to various Google Services.\nIf you remove it all the apps relying on Google Play Services whill either : \n- detect the lack of play services and refuse to run\n- detect the lack of play services but allow you to run (not properly) by dismissing a annoying popup\nWith some phones, removing Google Play Services bootloop the device so be careful.\nNOTE : Deleting this package will improve a LOT your battery life !\n#\nIMPORTANT : You need to uncheck Find My Device from the \"Device admin apps\" settings panel to be able to uninstall this package\nSearch \"admin\" in the settings search bar.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1017,7 +1017,7 @@
   },
   {
     "packageId": "com.google.android.overlay.gmsgsaconfig",
-    "oem": null,
+    "oem": false,
     "description": "Probably RROs (https://source.android.com/devices/architecture/rros?hl=en) tied to \"com.google.android.gms\" (Google Play Services)\nIf you remove com.google.android.gms you can remove those 2 packages as well.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1025,7 +1025,7 @@
   },
   {
     "packageId": "com.google.android.overlay.gmsgsaconfig",
-    "oem": null,
+    "oem": false,
     "description": "Probably RROs (https://source.android.com/devices/architecture/rros?hl=en) tied to \"com.google.android.gms\" (Google Play Services)\nIf you remove com.google.android.gms you can remove those 2 packages as well.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1033,7 +1033,7 @@
   },
   {
     "packageId": "com.google.android.gms.location.history",
-    "oem": null,
+    "oem": false,
     "description": "Google Location history\nhttps://support.google.com/accounts/answer/3118687?hl=en\n",
     "dependencies": null,
     "neededBy": null,
@@ -1041,7 +1041,7 @@
   },
   {
     "packageId": "com.google.android.gms.policy_sidecar_aps",
-    "oem": null,
+    "oem": false,
     "description": "Talks to Gmail.com and Google.com.\nNeeds a Google Account and Google Play Services to work correctly.\nI don't know much more but it's sufficient to know you can debloat it.\nGiven its name maybe it is related to Android auto? \nhttps://www.hybrid-analysis.com/sample/c710b66d043026007666966d933e3a1ed29720c5009764c01b5f056232a3518a?environmentId=200\n",
     "dependencies": null,
     "neededBy": null,
@@ -1049,7 +1049,7 @@
   },
   {
     "packageId": "com.google.android.gsf",
-    "oem": null,
+    "oem": false,
     "description": "Google Services Framework\nSupports the Play Services application in a variety of ways from application updates, user authentication, location services, user searches & more \nhttps://android.stackexchange.com/questions/216176/what-is-the-exact-functionality-of-google-play-services-google-services-framew\nhttps://stackoverflow.com/questions/37337448/what-is-the-difference-between-google-service-frameworkgsfgoogle-mobile-servi\nSame recommendation than com.google.android.gms except that I've never seen a bootloop because of deleting this package.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1057,7 +1057,7 @@
   },
   {
     "packageId": "com.google.android.gsf.login",
-    "oem": null,
+    "oem": false,
     "description": "Support for managing Google accounts\nSafe to remove if you don't use a Google account.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1065,7 +1065,7 @@
   },
   {
     "packageId": "com.google.android.location",
-    "oem": null,
+    "oem": false,
     "description": "Handles location services on older devices. On newer ones Google location services is part of Google Play Services and\nAndroid location service is provided by com.android.location.fused or com.android.location.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1073,7 +1073,7 @@
   },
   {
     "packageId": "com.google.android.partnersetup",
-    "oem": null,
+    "oem": false,
     "description": "Enables applications to perform functionality that requires access to your Google account information\nSafe to remove if you don't have a Google account\n",
     "dependencies": null,
     "neededBy": null,
@@ -1081,7 +1081,7 @@
   },
   {
     "packageId": "com.google.android.webview",
-    "oem": null,
+    "oem": false,
     "description": "Android WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\nhttps://play.google.com/store/apps/details?id=com.google.android.webview\n",
     "dependencies": null,
     "neededBy": null,
@@ -1089,7 +1089,7 @@
   },
   {
     "packageId": "com.google.android.launcher",
-    "oem": null,
+    "oem": false,
     "description": "Google Now Launcher (https://play.google.com/store/apps/details?id=com.google.android.launcher)\nDO NOT REMOVE THIS IF YOU DON'T HAVE ANOTHER LAUNCHER INSTALLED.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1097,7 +1097,7 @@
   },
   {
     "packageId": "com.google.android.gm",
-    "oem": null,
+    "oem": false,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -1105,7 +1105,7 @@
   },
   {
     "packageId": "com.google.android.ims",
-    "oem": null,
+    "oem": false,
     "description": "Carrier Services (for Google phones) (https://play.google.com/store/apps/details?id=com.google.android.ims)\nIMS is an open industry standard for voice and multimedia communications over packet-based IP networks (Volte/VoIP/Wifi calling).\n",
     "dependencies": null,
     "neededBy": null,
@@ -1113,7 +1113,7 @@
   },
   {
     "packageId": "com.google.audio.hearing.visualization.accessibility.scribe",
-    "oem": null,
+    "oem": false,
     "description": "Live Transcribe & Sound Notifications (https://play.google.com/store/apps/details?id=com.google.audio.hearing.visualization.accessibility.scribe)\nProvides push notifications for critical sounds around you. This feature can be helpful for people with hearing loss.\nhttps://blog.google/products/android/new-sound-notifications-on-android/\nWorks offline\n",
     "dependencies": null,
     "neededBy": null,
@@ -1121,7 +1121,7 @@
   },
   {
     "packageId": "com.android.vending",
-    "oem": null,
+    "oem": false,
     "description": "######GOOGLE KEYBOARD  ########\nI'm not sure if you can delete Google keyboard on Google phone without having issue to unlock your phone on boot.\nIf someone can test it, that will be great ! :D\n",
     "dependencies": null,
     "neededBy": null,
@@ -1129,7 +1129,7 @@
   },
   {
     "packageId": "com.google.android.inputmethod.latin",
-    "oem": null,
+    "oem": false,
     "description": "Google Keyboard (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1137,7 +1137,7 @@
   },
   {
     "packageId": "com.google.android.apps.inputmethod.hindi",
-    "oem": null,
+    "oem": false,
     "description": "Google Keyboard + Hinndi characters (https://play.google.com/store/apps/details?id=com.google.android.apps.inputmethod.hindi)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1145,7 +1145,7 @@
   },
   {
     "packageId": "com.google.android.inputmethod.japanese",
-    "oem": null,
+    "oem": false,
     "description": "Google Keyboard + Japanese characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.japanese)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1153,7 +1153,7 @@
   },
   {
     "packageId": "com.google.android.inputmethod.korean",
-    "oem": null,
+    "oem": false,
     "description": "Google Keyboard + Korean characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.korean)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1161,7 +1161,7 @@
   },
   {
     "packageId": "com.google.android.inputmethod.pinyin",
-    "oem": null,
+    "oem": false,
     "description": "Google Keyboard + Pinyin (chinese) characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)\n)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1169,7 +1169,7 @@
   },
   {
     "packageId": "com.google.android.captiveportallogin",
-    "oem": null,
+    "oem": false,
     "description": "Support for captive portal : https://en.wikipedia.org/wiki/Captive_portal\nA captive portal login is a web page where the users have to input their login information or accept the displayed terms of use. \nSome networks (typically public wifi network) use the captive portal login to block access until the user inputs \nsome necessary information\nNOTE : This package is a now a mandatory mainline module (https://www.xda-developers.com/android-project-mainline-modules-explanation/)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1177,7 +1177,7 @@
   },
   {
     "packageId": "com.google.android.modulemetadata",
-    "oem": null,
+    "oem": false,
     "description": "Module that contains ... metadata about the list of modules on the device. And that\u2019s about it.\nI wouldn't advise you to mess with it as it could break the proper working of other important modules (see #37)\nGood explanation of what android modules are : https://www.xda-developers.com/android-project-mainline-modules-explanation/\n",
     "dependencies": null,
     "neededBy": null,
@@ -1185,7 +1185,7 @@
   },
   {
     "packageId": "com.google.android.overlay.modules.ext.services",
-    "oem": null,
+    "oem": false,
     "description": "Android Services Library that contains an \"Android Notification Ranking Service.\" \nIt sorts notifications by \"importance\" based on things like freshness, app type (IM apps come first), and by contact. \nThe library android.ext.services is open-source. Google probably uses it to update its API without having to rely to the OEM\nIt is a mainline module and is needed to boot since Android 11! NO NOT REMOVE IT!\nhttps://source.android.com/devices/architecture/modular-system/extservices\nhttps://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/\n",
     "dependencies": null,
     "neededBy": null,
@@ -1193,7 +1193,7 @@
   },
   {
     "packageId": "com.google.android.overlay.modules.ext.services",
-    "oem": null,
+    "oem": false,
     "description": "Android Services Library that contains an \"Android Notification Ranking Service.\" \nIt sorts notifications by \"importance\" based on things like freshness, app type (IM apps come first), and by contact. \nThe library android.ext.services is open-source. Google probably uses it to update its API without having to rely to the OEM\nIt is a mainline module and is needed to boot since Android 11! NO NOT REMOVE IT!\nhttps://source.android.com/devices/architecture/modular-system/extservices\nhttps://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/\n",
     "dependencies": null,
     "neededBy": null,
@@ -1201,7 +1201,7 @@
   },
   {
     "packageId": "com.google.android.networkstack",
-    "oem": null,
+    "oem": false,
     "description": "Network Stack Components\nhttps://source.android.com/devices/architecture/modular-system/networking\nProvides common IP services, network connectivity monitoring, and captive login portal detection.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1209,7 +1209,7 @@
   },
   {
     "packageId": "com.google.android.networkstack.permissionconfig",
-    "oem": null,
+    "oem": false,
     "description": "Network Stack Permission Configuration\nDefines a permission that enables modules to perform network-related tasks.\nhttps://source.android.com/devices/architecture/modular-system/networking\n",
     "dependencies": null,
     "neededBy": null,
@@ -1217,7 +1217,7 @@
   },
   {
     "packageId": "com.google.android.packageinstaller.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "Gives ability to install, update or remove applications on the device.\nIf you delete this package, your phone will probably bootloop.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1225,7 +1225,7 @@
   },
   {
     "packageId": "com.google.android.packageinstaller.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "Gives ability to install, update or remove applications on the device.\nIf you delete this package, your phone will probably bootloop.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1233,7 +1233,7 @@
   },
   {
     "packageId": "com.google.android.overlay.modules.permissioncontroller.forframework",
-    "oem": null,
+    "oem": false,
     "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
     "dependencies": null,
     "neededBy": null,
@@ -1241,7 +1241,7 @@
   },
   {
     "packageId": "com.google.android.overlay.modules.permissioncontroller.forframework",
-    "oem": null,
+    "oem": false,
     "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
     "dependencies": null,
     "neededBy": null,
@@ -1249,7 +1249,7 @@
   },
   {
     "packageId": "com.google.android.overlay.modules.permissioncontroller.forframework",
-    "oem": null,
+    "oem": false,
     "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
     "dependencies": null,
     "neededBy": null,
@@ -1257,7 +1257,7 @@
   },
   {
     "packageId": "com.google.mainline.telemetry",
-    "oem": null,
+    "oem": false,
     "description": "It's a set of metrics-related modules. Google Play uses the version of the Telemetry module to determine\nif updates are available for metrics-related modules and which security patch version to display to the end user. \nThis module doesn\u2019t contain active code and has no functionality on its own. \nRemoving modules-related packages may not be safe since Android 11\nhttps://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436\n",
     "dependencies": null,
     "neededBy": null,

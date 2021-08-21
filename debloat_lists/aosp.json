@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.android.bluetoothmidiservice",
-    "oem": null,
+    "oem": false,
     "description": "Default print Service.\nSafe to remove if you don't plan to print from your phone.\n\nProvides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.android.bluetoothmidiservice",
-    "oem": null,
+    "oem": false,
     "description": "Default print Service.\nSafe to remove if you don't plan to print from your phone.\n\nProvides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.android.bookmarkprovider",
-    "oem": null,
+    "oem": false,
     "description": "Only exists for compatibility reasons to prevent apps querying it from getting null cursors they do not expect and crash.\n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "com.android.carrierdefaultapp",
-    "oem": null,
+    "oem": false,
     "description": "Allows carrier customization. Carrier action upon specific signal.\n",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "com.android.companiondevicemanager",
-    "oem": null,
+    "oem": false,
     "description": "Companion Device Manager that comes by default in every Oreo+ device. \nThis handles connections to other devices, like Bluetooth Headphones, desktop Operative Systems, ecc.\nOnly needed Google smart IoT devices (WearOS/Android Wear)\n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "com.android.dreams.basic",
-    "oem": null,
+    "oem": false,
     "description": "Daydream (not Google Daydream VR) is an interactive screensaver mode built into Android. \nWhen you dock your Android phone or tablet or charge it, its screen normally stays off. \nWhen you enable Daydream mode, the device\u2019s screen will stay on and display the Daydream app you choose. \nYou can use this to display the time, weather, quotes, photos, news, tweets, or anything else that developers write a Daydream app for.\nhttps://developer.android.com/reference/android/service/dreams/DreamService\n",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.android.dreams.phototable",
-    "oem": null,
+    "oem": false,
     "description": "Photographic screensavers (Daydream stuff, see above)\n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.android.dreams.phototable.overlay",
-    "oem": null,
+    "oem": false,
     "description": "Overlay for com.android.dreams.phototable\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.android.egg",
-    "oem": null,
+    "oem": false,
     "description": "Android build's easter egg feature (when you click 5 times on the android version in the settings)\n",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.android.galaxy4",
-    "oem": null,
+    "oem": false,
     "description": "built-in Dynamic wallpaper\n",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.android.htmlviewer",
-    "oem": null,
+    "oem": false,
     "description": "In-built HTML viewer. Basically lets you read HTML files stored on your device.\nREMINDER : A web-browser can also read HTML files...\n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.android.magicsmoke",
-    "oem": null,
+    "oem": false,
     "description": "\"Magic smoke\" Live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.android.musicvis",
-    "oem": null,
+    "oem": false,
     "description": "Music Visualization Wallpapers\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.android.noisefield",
-    "oem": null,
+    "oem": false,
     "description": "\"Noise filed\" live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.android.phasebeam",
-    "oem": null,
+    "oem": false,
     "description": "\"Phase beam\" live wallpaper\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.android.email.partnerprovider.overlay",
-    "oem": null,
+    "oem": false,
     "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.android.email.partnerprovider.overlay",
-    "oem": null,
+    "oem": false,
     "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")\n",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.android.providers.partnerbookmarks",
-    "oem": null,
+    "oem": false,
     "description": "Provides bookmarks about partners of Google in Chrome.\n",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.android.runintest.ddrtest",
-    "oem": null,
+    "oem": false,
     "description": "DDR Test\nRAM Stress tester\nCan be run from the bootloader\nNOTE: I'm not sure it's really from AOSP (seen in TCL Plex phone)\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.android.simappdialog",
-    "oem": null,
+    "oem": false,
     "description": "Sim App Dialog\nUsed to install the carrier SIM app when the SIM is inserted.\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.android.soundrecorder",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Sound recorder. OEM often use their own solution\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own browser app.\nThere are better apps (on F-droid) anyway \n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.android.stk2",
-    "oem": null,
+    "oem": false,
     "description": "SIM toolkit \nSIM toolkit app. Enable carriers to make SIM cards initiate \"value-added services\" (== some crappy stuff)\nBasically, Some operators give SIMs which has applications installed in it. \nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas already be abused : \n- SimJacker : https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack : https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.android.stk2",
-    "oem": null,
+    "oem": false,
     "description": "SIM toolkit \nSIM toolkit app. Enable carriers to make SIM cards initiate \"value-added services\" (== some crappy stuff)\nBasically, Some operators give SIMs which has applications installed in it. \nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas already be abused : \n- SimJacker : https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack : https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\n",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.android.traceur",
-    "oem": null,
+    "oem": false,
     "description": "System Tracing\nRecording device activity over a short period of time is known as system tracing. System tracing produces a trace file that can be used to generate \na system report.\nNot useful if you're not a developer.\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.android.wallpaper.holospiral",
-    "oem": null,
+    "oem": false,
     "description": "\"Holo spiral\" Live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.android.wallpaper.livepicker.overlay",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to pick a live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.android.wallpaper.livepicker.overlay",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to pick a live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.android.wallpapercropper",
-    "oem": null,
+    "oem": false,
     "description": "Wallpaper cropper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.example.android.notepad",
-    "oem": null,
+    "oem": false,
     "description": "(Bad) notepad app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "android.auto_generated_vendor_",
-    "oem": null,
+    "oem": false,
     "description": "Auto generated vendor's stuff for Android Auto (https://www.android.com/intl/en_en/auto/)\nNote: You don't need this if you don't use Android auto\n",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "android.auto_generated_rro__",
-    "oem": null,
+    "oem": false,
     "description": "rro = Runtime Resources Overlay.\nChanges values of a package config, based in the overlay definitions (heavily used by OEM for custom themming android) \nLink: https://source.android.com/devices/architecture/rros and https://code.tutsplus.com/tutorials/quick-tip-theme-android-with-the-runtime-resource-overlay-framework--cms-29708\n",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.android.apps.tag",
-    "oem": null,
+    "oem": false,
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.android.backupconfirm",
-    "oem": null,
+    "oem": false,
     "description": "Restore google settings with Google Backup restore function.\nAlso display confirmation popup when doing ADB backup. If you remove this package you couldn't do ADB Backup.\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.android.backupconfirm",
-    "oem": null,
+    "oem": false,
     "description": "Restore google settings with Google Backup restore function.\nAlso display confirmation popup when doing ADB backup. If you remove this package you couldn't do ADB Backup.\n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.android.bio.face.service",
-    "oem": null,
+    "oem": false,
     "description": "Handles facial regognition. \n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.android.bluetooth",
-    "oem": null,
+    "oem": false,
     "description": "Bluetooth service\n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.android.browser",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Browser. You honeslty shoud use something else. It is no longer maintained and lacks a lot of features.\nIf you have this package you most likely have an old android version (< Android KitKat v4.4) so you can't really install\nanother browser. \nYour android device is insecure so you really shouldn't use this device to browse the web.\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own browser app (e.g Mi browser)\n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.android.browser.provider",
-    "oem": null,
+    "oem": false,
     "description": "Strange package. It is old (2014) and there is a hardcoded Picasa URL in the code\nhttps://android.googlesource.com/platform/packages/apps/Browser/+/refs/heads/master/src/com/android/browser/provider/BrowserProvider.java\nRelated to bookmarks but removing it doesn't seems to affect anything visible.\n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.android.calendar",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Calendar app\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own calendar app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.android.calculator2",
-    "oem": null,
+    "oem": false,
     "description": "AOSP calculator app.\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own calculator app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.android.calllogbackup",
-    "oem": null,
+    "oem": false,
     "description": "Call Logs Backup/Restore feature.\nhttps://android.googlesource.com/platform/packages/providers/CallLogProvider/+/refs/heads/master/src/com/android/calllogbackup\n",
     "dependencies": null,
     "neededBy": null,
@@ -329,7 +329,7 @@
   },
   {
     "packageId": "com.android.captiveportallogin",
-    "oem": null,
+    "oem": false,
     "description": "Support for captive portal : https://en.wikipedia.org/wiki/Captive_portal\nA captive portal login is a web page where the users have to input their login information or accept the displayed terms of use. \nSome networks (typically public wifi network) use the captive portal login to block access until the user inputs \nsome necessary information\n",
     "dependencies": null,
     "neededBy": null,
@@ -337,7 +337,7 @@
   },
   {
     "packageId": "com.android.carrierconfig",
-    "oem": null,
+    "oem": false,
     "description": "Gives carriers and OEMs the ability to dynamically provide carrier configuration (APN settings) trough their app.\nNOTE : The probability that your carrier's APN change is very low. If you change your carrier and insert a new SIM card\nThis package will be triggered to automatically choose the suitable APN.\nhttps://source.android.com/devices/tech/config/carrier\nhttps://android.googlesource.com/platform/packages/apps/CarrierConfig/+/refs/heads/master/src/com/android/carrierconfig/DefaultCarrierConfigService.java\n",
     "dependencies": null,
     "neededBy": null,
@@ -345,7 +345,7 @@
   },
   {
     "packageId": "com.android.cellbroadcastreceiver",
-    "oem": null,
+    "oem": false,
     "description": "Cell broadcast has been designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts. This package handles the situation on occurence of this event.\nRuns at boot time and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver\n",
     "dependencies": null,
     "neededBy": null,
@@ -353,7 +353,7 @@
   },
   {
     "packageId": "com.android.contacts",
-    "oem": null,
+    "oem": false,
     "description": "AOSP contacts app (it is not Google contacts)\nNOTE: On some phones Huawei & Xiaomi also use this package name for their contacts app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -361,7 +361,7 @@
   },
   {
     "packageId": "com.android.cts.priv.ctsshim",
-    "oem": null,
+    "oem": false,
     "description": "Compatibility Test Service. The CTS shim that verify certain upgrade scenarios. Could mess up witch OTA updates.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)\n",
     "dependencies": null,
     "neededBy": null,
@@ -369,7 +369,7 @@
   },
   {
     "packageId": "com.android.cts.priv.ctsshim",
-    "oem": null,
+    "oem": false,
     "description": "Compatibility Test Service. The CTS shim that verify certain upgrade scenarios. Could mess up witch OTA updates.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)\n",
     "dependencies": null,
     "neededBy": null,
@@ -377,7 +377,7 @@
   },
   {
     "packageId": "com.android.deskclock",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Clock app\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own clock app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -385,7 +385,7 @@
   },
   {
     "packageId": "com.android.email",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Email app (it is NOT gmail).\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own EMAIL app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -393,7 +393,7 @@
   },
   {
     "packageId": "com.android.emergency",
-    "oem": null,
+    "oem": false,
     "description": "Emergency informations. Safe to remove if you don't want this feature.\n",
     "dependencies": null,
     "neededBy": null,
@@ -401,7 +401,7 @@
   },
   {
     "packageId": "com.android.exchange",
-    "oem": null,
+    "oem": false,
     "description": "Handles all aspects of starting, maintaining, and stopping the various sync adapters for the email accounts.\nIs it only needed for the email stock app?\n",
     "dependencies": null,
     "neededBy": null,
@@ -409,7 +409,7 @@
   },
   {
     "packageId": "com.android.facelock",
-    "oem": null,
+    "oem": false,
     "description": "Essential if you wanna use Face Unlock features, removable if you don't want to.\n",
     "dependencies": null,
     "neededBy": null,
@@ -417,7 +417,7 @@
   },
   {
     "packageId": "com.android.gallery3d",
-    "oem": null,
+    "oem": false,
     "description": "Gallery app. \nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own Gallery app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -425,7 +425,7 @@
   },
   {
     "packageId": "com.android.hotspot2",
-    "oem": null,
+    "oem": false,
     "description": "Provides wifi tethering (lets you share your mobile device's Internet connection with other devices)\nhttps://en.wikipedia.org/wiki/Tethering)\n",
     "dependencies": null,
     "neededBy": null,
@@ -433,7 +433,7 @@
   },
   {
     "packageId": "com.android.inputdevices",
-    "oem": null,
+    "oem": false,
     "description": "Only contains a receiver named \"Android keyboard\", possibly for an external keyboard.\nLocates available keyboard layouts. \nAn application can offer additional keyboard layouts to the user by declaring a suitable broadcast receiver in its manifest.\n",
     "dependencies": null,
     "neededBy": null,
@@ -441,7 +441,7 @@
   },
   {
     "packageId": "com.android.inputmethod.latin",
-    "oem": null,
+    "oem": false,
     "description": "AOSP keyboard. (This is not Google Keyboard).\n",
     "dependencies": null,
     "neededBy": null,
@@ -449,7 +449,7 @@
   },
   {
     "packageId": "com.android.internal.display.cutout.emulation.tall",
-    "oem": null,
+    "oem": false,
     "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
     "dependencies": null,
     "neededBy": null,
@@ -457,7 +457,7 @@
   },
   {
     "packageId": "com.android.internal.display.cutout.emulation.tall",
-    "oem": null,
+    "oem": false,
     "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
     "dependencies": null,
     "neededBy": null,
@@ -465,7 +465,7 @@
   },
   {
     "packageId": "com.android.internal.display.cutout.emulation.tall",
-    "oem": null,
+    "oem": false,
     "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
     "dependencies": null,
     "neededBy": null,
@@ -473,7 +473,7 @@
   },
   {
     "packageId": "com.android.internal.display.cutout.emulation.tall",
-    "oem": null,
+    "oem": false,
     "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
     "dependencies": null,
     "neededBy": null,
@@ -481,7 +481,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.gestural",
-    "oem": null,
+    "oem": false,
     "description": "Gesture navigation\nLets you use swipes and other actions to control your phone, rather than tapping on buttons.\nOption -> System -> Gestures -> System Navigation\nhttps://android-developers.googleblog.com/2019/08/gesture-navigation-backstory.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -489,7 +489,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.gestural_wide_back",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
     "dependencies": null,
     "neededBy": null,
@@ -497,7 +497,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.gestural_wide_back",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
     "dependencies": null,
     "neededBy": null,
@@ -505,7 +505,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.gestural_wide_back",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
     "dependencies": null,
     "neededBy": null,
@@ -513,7 +513,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.twobutton",
-    "oem": null,
+    "oem": false,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -521,7 +521,7 @@
   },
   {
     "packageId": "com.android.internal.systemui.navbar.twobutton",
-    "oem": null,
+    "oem": false,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -529,7 +529,7 @@
   },
   {
     "packageId": "com.android.musicfx",
-    "oem": null,
+    "oem": false,
     "description": "Audio equalizer. Some 3-party music apps can use it to provide you equalizing features.\n",
     "dependencies": null,
     "neededBy": null,
@@ -537,7 +537,7 @@
   },
   {
     "packageId": "com.android.mms",
-    "oem": null,
+    "oem": false,
     "description": "AOSP SMS app.\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own SMS app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -545,7 +545,7 @@
   },
   {
     "packageId": "com.android.nfc",
-    "oem": null,
+    "oem": false,
     "description": "NFC service\n",
     "dependencies": null,
     "neededBy": null,
@@ -553,7 +553,7 @@
   },
   {
     "packageId": "com.android.ons",
-    "oem": null,
+    "oem": false,
     "description": "Opportunistic Network Service\nOpportunistic networks are networks which are formed when devices come into contact opportunistically through \nphysical proximity, and communicate wirelessly to share each other\u2019s content, resources and services.\nThis kind of networks leads to a set of challenging issues (congestion, transfer ordering, and resilience)\nBasically, this package implements ions (asynchronous networking) to resolve these issues.\nRun in background after booting the phone.\nhttps://en.wikipedia.org/wiki/Opportunistic_mobile_social_network\nSafe to remove if you want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -561,7 +561,7 @@
   },
   {
     "packageId": "com.android.managedprovisioning",
-    "oem": null,
+    "oem": false,
     "description": "Manage separate profile on devices. \nThe typical example is setting up a corporate profile that is controlled by their employer on a users personal device \nto keep personal and work data separate.\nhttps://support.google.com/work/android/answer/6191949?\nhttps://developers.google.com/android/work/requirements/work-profile\nNeeded for sandbox's apps like Shelter/Island.\n",
     "dependencies": null,
     "neededBy": null,
@@ -569,7 +569,7 @@
   },
   {
     "packageId": "com.android.otaprovisioningclient",
-    "oem": null,
+    "oem": false,
     "description": "OTA Access Point Configuration\nOTA (Over the air : https://fr.wikipedia.org/wiki/Over-the-air_programming) is the method used by OEM to push updates on\nyour phone.\nAn OTA access point is used to run system software updates over a special gateway. This package is most likely customized\nby your OEM.\n",
     "dependencies": null,
     "neededBy": null,
@@ -577,7 +577,7 @@
   },
   {
     "packageId": "com.android.pacprocessor",
-    "oem": null,
+    "oem": false,
     "description": "A PAC (Proxy Auto-Config) is a file which defines how an app can automatically define the correct proxy server for fetching an URL. \nShould be safe to remove if you don't use Auto-proxy (with PAC file config)\nhttps://en.wikipedia.org/wiki/Proxy_auto-config\n",
     "dependencies": null,
     "neededBy": null,
@@ -585,7 +585,7 @@
   },
   {
     "packageId": "com.android.phone.recorder",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Call recorder function. Most of the time OEM use their own code for this.\nNOTE: On some phones, Huawei & Xiaomi also use this package name for their own closed-source recorder app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -593,7 +593,7 @@
   },
   {
     "packageId": "com.android.printservice.recommendation",
-    "oem": null,
+    "oem": false,
     "description": "Used to discover and interact one or more printers via one or more protocols. \nYou can remove it if you don't need to print directly from your phone.\n",
     "dependencies": null,
     "neededBy": null,
@@ -601,7 +601,7 @@
   },
   {
     "packageId": "com.android.printspooler",
-    "oem": null,
+    "oem": false,
     "description": "Print spooler. Manage the printing process. \nSafe to remove if you don't plan to print from your phone\nNote: Break connection preferences from the settings app on some phones (Pixel 4a / Android 11)\n",
     "dependencies": null,
     "neededBy": null,
@@ -609,7 +609,7 @@
   },
   {
     "packageId": "com.android.providers.blockednumber",
-    "oem": null,
+    "oem": false,
     "description": "Handles blocked numbers storage\nOn some devices this packages seems to be tied to recent apps menu (see https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/6)\n",
     "dependencies": null,
     "neededBy": null,
@@ -617,7 +617,7 @@
   },
   {
     "packageId": "com.android.providers.calendar",
-    "oem": null,
+    "oem": false,
     "description": "Necessary to sync stock Calendar app and lets it work correctly.\n",
     "dependencies": null,
     "neededBy": null,
@@ -625,7 +625,7 @@
   },
   {
     "packageId": "com.android.providers.drm",
-    "oem": null,
+    "oem": false,
     "description": "DRM Protected Content Storage \nProvides DRM functions to stop you from copying things like ringtones, live wallpapers, etc.\nMay be needed to access media files (to be verified)\n",
     "dependencies": null,
     "neededBy": null,
@@ -633,7 +633,7 @@
   },
   {
     "packageId": "com.android.providers.userdictionary",
-    "oem": null,
+    "oem": false,
     "description": "Handles user dictionary for keyboard apps. \n",
     "dependencies": null,
     "neededBy": null,
@@ -641,7 +641,7 @@
   },
   {
     "packageId": "com.android.proxyhandler",
-    "oem": null,
+    "oem": false,
     "description": "Handles proxy config\nSafe to remove if you don't use a proxy.\n",
     "dependencies": null,
     "neededBy": null,
@@ -649,7 +649,7 @@
   },
   {
     "packageId": "com.android.quicksearchbox",
-    "oem": null,
+    "oem": false,
     "description": "Google quick search box.\n",
     "dependencies": null,
     "neededBy": null,
@@ -657,7 +657,7 @@
   },
   {
     "packageId": "com.android.se",
-    "oem": null,
+    "oem": false,
     "description": "Underlying implementation for Open Mobile API SEService (OMAPI SE)\nEnables apps to use the OMAPI API to access secure elements (SE) to enable smart-card payments and other secure services.\n\nA SE is a special chip (e.g SIM-card) whose the main purpose is to store cryptographic secrets in such a way \nthat illicit use is hard or impossible to do.\n#\nFYI : The Open Mobile Alliance (OPA) is a standards organization which develops open standards for the mobile phone industry.\n",
     "dependencies": null,
     "neededBy": null,
@@ -665,7 +665,7 @@
   },
   {
     "packageId": "com.android.settings.intelligence",
-    "oem": null,
+    "oem": false,
     "description": "Setting search feature \nNote: Settings app may crash when searching for a setting if you removed this package (it depends on the phone)\nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/51\n",
     "dependencies": null,
     "neededBy": null,
@@ -673,7 +673,7 @@
   },
   {
     "packageId": "com.android.sharedstoragebackup",
-    "oem": null,
+    "oem": false,
     "description": "Used during backup. Fetch shared storage (files accessible by every apps with STORAGE permission)\nThings have changed with Android 10. Don't know if this package is still relevant for new phones.\nhttps://blog.mindorks.com/understanding-the-scoped-storage-in-android.\n",
     "dependencies": null,
     "neededBy": null,
@@ -681,7 +681,7 @@
   },
   {
     "packageId": "com.android.smspush",
-    "oem": null,
+    "oem": false,
     "description": "This service is used to push/send specially formatted SMS messages that display an alert message to the user, \nand give the user the option of connecting directly to a particular app.\nFor instance, a SMS notifying the user he as a new e-mail, with a URL link to connect directly to the e-mail application\nhttps://web.archive.org/web/20200915164901/https://www.nowsms.com/doc/submitting-sms-messages/sending-wap-push-messages\n",
     "dependencies": null,
     "neededBy": null,
@@ -689,7 +689,7 @@
   },
   {
     "packageId": "com.android.systemui.theme.dark",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to use Android dark theme.\n",
     "dependencies": null,
     "neededBy": null,
@@ -697,7 +697,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -705,7 +705,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -713,7 +713,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -721,7 +721,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -729,7 +729,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -737,7 +737,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -745,7 +745,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -753,7 +753,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -761,7 +761,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -769,7 +769,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -777,7 +777,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -785,7 +785,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -793,7 +793,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -801,7 +801,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -809,7 +809,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -817,7 +817,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -825,7 +825,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -833,7 +833,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -841,7 +841,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -849,7 +849,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -857,7 +857,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -865,7 +865,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -873,7 +873,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -881,7 +881,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -889,7 +889,7 @@
   },
   {
     "packageId": "com.android.theme.icon_pack.rounded.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Android themes / icons pack / fonts\n",
     "dependencies": null,
     "neededBy": null,
@@ -897,7 +897,7 @@
   },
   {
     "packageId": "com.android.timezone.updater",
-    "oem": null,
+    "oem": false,
     "description": "Time Zone Updater\nAutomatically updates the clock to correspond to your current time zone\nThis *may* causes a bootloop if removed. Timezone packages often causes that. \n",
     "dependencies": null,
     "neededBy": null,
@@ -905,7 +905,7 @@
   },
   {
     "packageId": "com.android.voicedialer",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Voice dialer. Let's you call someone or open an app with your voice from the dialer.\nOEM often use their own code (embeded in their voice-controlled digital assistant)\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own voice dialer app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -913,7 +913,7 @@
   },
   {
     "packageId": "com.android.wallpaperpicker",
-    "oem": null,
+    "oem": false,
     "description": "Enables you to pick a wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
@@ -921,7 +921,7 @@
   },
   {
     "packageId": "com.android.wallpaperbackup",
-    "oem": null,
+    "oem": false,
     "description": "Backup your wallapaper and load this backup instead of the original file in case you delete it.\nSafe to remove if you really want to.\n",
     "dependencies": null,
     "neededBy": null,
@@ -929,7 +929,7 @@
   },
   {
     "packageId": "com.android.webview",
-    "oem": null,
+    "oem": false,
     "description": "AOSP webview\nIt's a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. \nThis package is no longer used in recent phones as it was replaced by com.google.android.webview\n#\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n)\n",
     "dependencies": null,
     "neededBy": null,
@@ -937,7 +937,7 @@
   },
   {
     "packageId": "com.android.certinstaller",
-    "oem": null,
+    "oem": false,
     "description": "Certificate installer. Identifies your device and confirms that it should be able to access something.\nHere it is used for accepting and revoking of Internet certificates. Break wifi if removed.\n",
     "dependencies": null,
     "neededBy": null,
@@ -945,7 +945,7 @@
   },
   {
     "packageId": "com.android.defcontainer",
-    "oem": null,
+    "oem": false,
     "description": "Package Access Helper \nDetermine the recommended install location for packages and if there is enough free space for the package.\n",
     "dependencies": null,
     "neededBy": null,
@@ -953,7 +953,7 @@
   },
   {
     "packageId": "com.android.documentsui",
-    "oem": null,
+    "oem": false,
     "description": "Interface for apps wishing to access access files outside of their own storage area.\n",
     "dependencies": null,
     "neededBy": null,
@@ -961,7 +961,7 @@
   },
   {
     "packageId": "com.android.documentsui.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "DocumentsUI Overlay\nThe DocumentsUI controls access to specific files for components that handle document permissions \n(such as attaching a file to an email)\nhttps://source.android.com/devices/architecture/modular-system/documentsui?hl=en\n",
     "dependencies": null,
     "neededBy": null,
@@ -969,7 +969,7 @@
   },
   {
     "packageId": "com.android.dynsystem",
-    "oem": null,
+    "oem": false,
     "description": "Dynamic System Updates\nTreble gived the ability to boot an AOSP Generic System Image (GSI) on any supported device. \nDynamic System Updates allows to boot into a Generic System Image (GSI) without interfering with the current installation.\nThat means the bootloader doesn\u2019t need to be unlocked and the user data doesn\u2019t need to be wiped.\nhttps://developer.android.com/topic/dsu\n",
     "dependencies": null,
     "neededBy": null,
@@ -977,7 +977,7 @@
   },
   {
     "packageId": "com.android.externalstorage",
-    "oem": null,
+    "oem": false,
     "description": "Needed by apps to access external storage (SD card)\n",
     "dependencies": null,
     "neededBy": null,
@@ -985,7 +985,7 @@
   },
   {
     "packageId": "com.android.keychain",
-    "oem": null,
+    "oem": false,
     "description": "Enable apps to use system wide credential KeyChain (shared credentials between apps)\nhttps://security.stackexchange.com/questions/216716/android-keychain-what-is-a-system-wide-credential\n",
     "dependencies": null,
     "neededBy": null,
@@ -993,7 +993,7 @@
   },
   {
     "packageId": "com.android.localtransport",
-    "oem": null,
+    "oem": false,
     "description": "Backup transport for stashing stuff into a known location on disk, and later restoring from there.\nSeems needed for storeing backup data locally on the device. \nThis package also provides the backup confirmation UI.\nhttps://developer.android.com/guide/topics/data/testingbackup\n",
     "dependencies": null,
     "neededBy": null,
@@ -1001,7 +1001,7 @@
   },
   {
     "packageId": "com.android.location.fused",
-    "oem": null,
+    "oem": false,
     "description": "Manages the underlying location technologies, such as GPS and Wi-Fi.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1009,7 +1009,7 @@
   },
   {
     "packageId": "com.android.mms.service",
-    "oem": null,
+    "oem": false,
     "description": "Provides support for sending MMS.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1017,7 +1017,7 @@
   },
   {
     "packageId": "com.android.mtp",
-    "oem": null,
+    "oem": false,
     "description": "MTP Host\nHandles MTP (protocol allowing files to be transferred to and from your PC)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1025,7 +1025,7 @@
   },
   {
     "packageId": "com.android.packageinstaller",
-    "oem": null,
+    "oem": false,
     "description": "Handles installation, upgrade, and removal of applications.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1033,7 +1033,7 @@
   },
   {
     "packageId": "com.android.provision",
-    "oem": null,
+    "oem": false,
     "description": "Provisioning is the process of setting up a network connection that will allow new users. \nThis service is for exemple needed when the user's phone moves from one cell-tower to another.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1041,7 +1041,7 @@
   },
   {
     "packageId": "com.android.phone.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "AOSP code for dialer app features\nSIM card will also not be detected if deleted.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1049,7 +1049,7 @@
   },
   {
     "packageId": "com.android.phone.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "AOSP code for dialer app features\nSIM card will also not be detected if deleted.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1057,7 +1057,7 @@
   },
   {
     "packageId": "com.android.providers.applications",
-    "oem": null,
+    "oem": false,
     "description": "Fetches the list of applications installed on the phone to provide search suggestions.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1065,7 +1065,7 @@
   },
   {
     "packageId": "com.android.providers.contacts",
-    "oem": null,
+    "oem": false,
     "description": "Handle interaction with contacts data\n",
     "dependencies": null,
     "neededBy": null,
@@ -1073,7 +1073,7 @@
   },
   {
     "packageId": "com.android.providers.downloads",
-    "oem": null,
+    "oem": false,
     "description": "Provider for downloads manager.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1081,7 +1081,7 @@
   },
   {
     "packageId": "com.android.providers.downloads.ui",
-    "oem": null,
+    "oem": false,
     "description": "User interface for listing downloads.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1089,7 +1089,7 @@
   },
   {
     "packageId": "com.android.providers.media",
-    "oem": null,
+    "oem": false,
     "description": "Handle access to media files.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1097,7 +1097,7 @@
   },
   {
     "packageId": "com.android.providers.settings",
-    "oem": null,
+    "oem": false,
     "description": "Handles settings app datas (contentProvider)\nhttps://android.stackexchange.com/questions/37195/why-are-there-two-settings-apps-settings-and-settings-storage\n",
     "dependencies": null,
     "neededBy": null,
@@ -1105,7 +1105,7 @@
   },
   {
     "packageId": "com.android.providers.telephony",
-    "oem": null,
+    "oem": false,
     "description": "Telephony provider. Controls and stores phone-related data such as text messages, APN list, operation, etc.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1113,7 +1113,7 @@
   },
   {
     "packageId": "com.android.server.telecom.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "Management your calls via your network provider or SIM and controls the phone modem.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1121,7 +1121,7 @@
   },
   {
     "packageId": "com.android.server.telecom.a_overlay",
-    "oem": null,
+    "oem": false,
     "description": "Management your calls via your network provider or SIM and controls the phone modem.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1129,7 +1129,7 @@
   },
   {
     "packageId": "com.android.settings",
-    "oem": null,
+    "oem": false,
     "description": "AOSP Settings app features\n",
     "dependencies": null,
     "neededBy": null,
@@ -1137,7 +1137,7 @@
   },
   {
     "packageId": "com.android.shell",
-    "oem": null,
+    "oem": false,
     "description": "Unix shell to communicate via ADB commands through PC.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1145,7 +1145,7 @@
   },
   {
     "packageId": "com.android.statementservice",
-    "oem": null,
+    "oem": false,
     "description": "Intent Filter Verification Service\nIntent : https://developer.android.com/reference/android/content/Intent\nIntent Filters : https://developer.android.com/guide/components/intents-filters\nhttps://android.stackexchange.com/questions/191163/what-does-the-intent-filter-verification-service-app-from-google-do\n",
     "dependencies": null,
     "neededBy": null,
@@ -1153,7 +1153,7 @@
   },
   {
     "packageId": "com.android.storagemanager",
-    "oem": null,
+    "oem": false,
     "description": "Storage manager (Maintenance/Storage panel in the settings)\nClean up unused files, show size of files regrouped by categories...\n",
     "dependencies": null,
     "neededBy": null,
@@ -1161,7 +1161,7 @@
   },
   {
     "packageId": "com.android.systemui",
-    "oem": null,
+    "oem": false,
     "description": "Everything you see in Android that's not an app. User interface of Android\n",
     "dependencies": null,
     "neededBy": null,
@@ -1169,7 +1169,7 @@
   },
   {
     "packageId": "com.android.vpndialogs",
-    "oem": null,
+    "oem": false,
     "description": "Provide VPN support to Android\nhttps://en.wikipedia.org/wiki/Dialog_(software)\nSafe to remove if you don't plan to use a VPN.\n",
     "dependencies": null,
     "neededBy": null,

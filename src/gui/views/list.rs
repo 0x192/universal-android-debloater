@@ -1,5 +1,6 @@
 use crate::gui::style;
-use crate::core::uad_lists::{ UadLists, PackageState };
+use crate::core::uad_lists::{ UadLists, PackageState, Package };
+use std::{collections::HashMap};
 
 use iced::{
     scrollable, Align, Column, Command, Container, Element, Space,
@@ -32,7 +33,7 @@ pub struct List {
 #[derive(Debug, Clone)]
 pub enum Message {
     ListInputChanged(String),
-    LoadPackages,
+    LoadPackages(&'static HashMap<String, Package>),
     ListSelected(UadLists),
     PackageStateSelected(PackageState),
     List(usize, RowMessage),
@@ -45,16 +46,25 @@ impl List {
        match message {
             Message::ListInputChanged(_letter) => {
                 Command::none()
-            }
+            },
 
-            Message::LoadPackages => {
+            Message::LoadPackages(uad_lists) => {
                 self.packages = list_phone_packages();
                 self.p_row = Vec::new();
+                let mut description = "";
+
                 for p_name in self.packages.lines() {
+
+                    if uad_lists.contains_key(p_name) {
+                        description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
+                    } else {
+                        description = "No description";
+                    }
+
                     let package_row = PackageRow::new(
                         &p_name,
                         "Installed",
-                        "REMOVE",
+                        &description,
                     );
                     self.p_row.push(package_row)
                 }
@@ -128,6 +138,11 @@ impl List {
                     
                 // let mut packages_v: Vec<&str> = self.packages.lines().collect();
 
+/*                let description_panel = Row::new()
+                    .width(Length::Fill)
+                    .align_items(Align::Center)
+                    .push(package_name)*/
+
                 let test = self.p_row
                     .iter_mut()
                     .enumerate()
@@ -161,7 +176,7 @@ impl List {
 pub struct PackageRow {
     pub name: String,
     pub state: String,
-    pub advice: String,
+    pub description: String,
 
     remove_restore_btn_state: button::State,
 }
@@ -178,13 +193,13 @@ impl PackageRow {
     pub fn new(
         name: &str,
         state: &str,
-        advice: &str,
+        description: &str,
 
     ) -> Self {
         Self {
             name: name.to_string(),
             state: "Installed".to_string(),
-            advice: advice.to_string(),
+            description: description.to_string(),
             remove_restore_btn_state: button::State::default(),
         }
     }
@@ -209,7 +224,7 @@ impl PackageRow {
             .align_items(Align::Center)
             .push(Text::new(&self.name).width(Length::FillPortion(6)))
             .push(Text::new(&self.state).width(Length::FillPortion(3)))
-            .push(Text::new(&self.advice).width(Length::FillPortion(3)))
+            .push(Text::new(&self.description).width(Length::FillPortion(3)))
             .push(if self.state == "Installed" {
                                         Button::new(
                                             &mut self.remove_restore_btn_state,

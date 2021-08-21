@@ -1,7 +1,7 @@
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize};
 use serde_json;
 use std::fs;
-
+use std::{collections::HashMap};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum UadLists {
@@ -13,24 +13,35 @@ pub enum UadLists {
     Oem
 }
 
+/*pub enum Oem {
+    Asus,
+    Huawei,
+    Lg,
+    Motorola,
+    Nokia,
+    OnePlus,
+    Oppo,
+    Samsung,
+    Sony,
+    Tcl,
+    Xiaomi,
+    Zte,
+}*/
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum PackageState {
     Installed,
     Uninstalled
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 pub struct Package {
-    packageId: String,
-    oem: Option<String>,
-    description: String,
+    id: String,
+    list: String,
+    pub description: Option<String>,
     dependencies: Option<String>,
     neededBy: Option<String>,
     labels: Option<Vec<String>>,
-
-    #[serde(skip)]
-    list: UadLists,
-
 }
 
 
@@ -98,11 +109,20 @@ impl std::fmt::Display for PackageState {
 }
 
 
-// TODO oem value can change
-pub fn load_debloat_lists(uad_list: UadLists) -> Vec<Package> {
-    let path = "debloat_lists/".to_string() + &uad_list.to_string() + ".json";
-    let data = fs::read_to_string(path).expect("Unable to read file");
+pub fn load_debloat_lists() -> HashMap<String, Package> {
+    let mut package_lists = HashMap::new();
+    let data = fs::read_to_string("debloat_lists/all.json").expect("Unable to read file");
+
+    // TODO: Do it without intermediary Vec 
     let list: Vec<Package> = serde_json::from_str(&data).expect("Unable to parse");
-    println!("LIST: {:?}", list[0].packageId);
-    return list;
+
+    for p in list {
+        let name = p.id.clone();
+        package_lists.insert(name, p);
+    }
+
+    return package_lists;
 }
+
+
+

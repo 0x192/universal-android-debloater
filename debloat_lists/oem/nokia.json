@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.android.partnerbrowsercustomizations.btl.s600ww.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Add Nokia pinned bookmarks in your chromium based browser\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.android.providers.calendar.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "\"com.android.providers.calendar\" is necessary to sync stock Calendar app and lets it work correctly.\nI don't know what does this overlay add.\n#\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.android.providers.settings.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Still otther overlays for android settings provider.\n\"com.android.providers.settings\" handles settings app datas (contentProvider)\n#\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "com.android.providers.settings.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Still otther overlays for android settings provider.\n\"com.android.providers.settings\" handles settings app datas (contentProvider)\n#\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "com.android.retaildemo.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for Retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "com.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for ???\nNokia users don't see any differences when removed.\n",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.evenwell.apnwidget.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Another overlay for APN widget this time. Seems useless to me\nREMINDER : APN means Access Point Name and must be configured with carrier values in order your device could acess carrier network. \n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "oem": null,
+    "oem": true,
     "description": "Apr Upload Service ????\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "oem": null,
+    "oem": true,
     "description": "Apr Upload Service ????\n",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "oem": null,
+    "oem": true,
     "description": "Apr Upload Service ????\n",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "oem": null,
+    "oem": true,
     "description": "Apr Upload Service ????\n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.evenwell.bboxsbox.app",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.evenwell.bboxsbox.app",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.evenwell.bokeheditor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Related to photos editing I think \n",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.evenwell.bokeheditor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Related to photos editing I think \n",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.evenwell.CPClient.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.evenwell.CPClient.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "com.evenwell.CPClient.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "com.evenwell.CPClient.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.evenwell.dataagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Data agent\nUsed for backup/restore ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.evenwell.dataagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Data agent\nUsed for backup/restore ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.evenwell.dataagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Data agent\nUsed for backup/restore ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.evenwell.dataagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Data agent\nUsed for backup/restore ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Debug config tool ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -329,7 +329,7 @@
   },
   {
     "packageId": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Debug config tool ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -337,7 +337,7 @@
   },
   {
     "packageId": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Debug config tool ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -345,7 +345,7 @@
   },
   {
     "packageId": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Debug config tool ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -353,7 +353,7 @@
   },
   {
     "packageId": "com.evenwell.defaultappconfigure.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -361,7 +361,7 @@
   },
   {
     "packageId": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Monitor stuff obviously...\n",
     "dependencies": null,
     "neededBy": null,
@@ -369,7 +369,7 @@
   },
   {
     "packageId": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Monitor stuff obviously...\n",
     "dependencies": null,
     "neededBy": null,
@@ -377,7 +377,7 @@
   },
   {
     "packageId": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Monitor stuff obviously...\n",
     "dependencies": null,
     "neededBy": null,
@@ -385,7 +385,7 @@
   },
   {
     "packageId": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Monitor stuff obviously...\n",
     "dependencies": null,
     "neededBy": null,
@@ -393,7 +393,7 @@
   },
   {
     "packageId": "com.evenwell.email.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for email app\n",
     "dependencies": null,
     "neededBy": null,
@@ -401,7 +401,7 @@
   },
   {
     "packageId": "com.evenwell.factorywizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -409,7 +409,7 @@
   },
   {
     "packageId": "com.evenwell.factorywizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -417,7 +417,7 @@
   },
   {
     "packageId": "com.evenwell.factorywizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -425,7 +425,7 @@
   },
   {
     "packageId": "com.evenwell.foxlauncher.partner",
-    "oem": null,
+    "oem": true,
     "description": "Partner Launcher Customization\nRelated to the Nokia launcher\n",
     "dependencies": null,
     "neededBy": null,
@@ -433,7 +433,7 @@
   },
   {
     "packageId": "com.evenwell.fqc",
-    "oem": null,
+    "oem": true,
     "description": "FQC is a secret test menu. It lets you test the hardware (touch screen, speakers, SD card, SIM card, camera...)\nYou need to type *#*#372733#*#* in the Nokia dialer\n",
     "dependencies": null,
     "neededBy": null,
@@ -441,7 +441,7 @@
   },
   {
     "packageId": "com.evenwell.legalterm.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Provides terms and condition (legal notice)\n",
     "dependencies": null,
     "neededBy": null,
@@ -449,7 +449,7 @@
   },
   {
     "packageId": "com.evenwell.legalterm.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Provides terms and condition (legal notice)\n",
     "dependencies": null,
     "neededBy": null,
@@ -457,7 +457,7 @@
   },
   {
     "packageId": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
     "dependencies": null,
     "neededBy": null,
@@ -465,7 +465,7 @@
   },
   {
     "packageId": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
     "dependencies": null,
     "neededBy": null,
@@ -473,7 +473,7 @@
   },
   {
     "packageId": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
     "dependencies": null,
     "neededBy": null,
@@ -481,7 +481,7 @@
   },
   {
     "packageId": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
     "dependencies": null,
     "neededBy": null,
@@ -489,7 +489,7 @@
   },
   {
     "packageId": "com.evenwell.mappartner",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -497,7 +497,7 @@
   },
   {
     "packageId": "com.evenwell.nps.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Net Promoter Score\nPreinstalled survey.\n",
     "dependencies": null,
     "neededBy": null,
@@ -505,7 +505,7 @@
   },
   {
     "packageId": "com.evenwell.nps.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Net Promoter Score\nPreinstalled survey.\n",
     "dependencies": null,
     "neededBy": null,
@@ -513,7 +513,7 @@
   },
   {
     "packageId": "com.evenwell.nps.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Net Promoter Score\nPreinstalled survey.\n",
     "dependencies": null,
     "neededBy": null,
@@ -521,7 +521,7 @@
   },
   {
     "packageId": "com.evenwell.nps.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Net Promoter Score\nPreinstalled survey.\n",
     "dependencies": null,
     "neededBy": null,
@@ -529,7 +529,7 @@
   },
   {
     "packageId": "com.evenwell.pandorasbox.app",
-    "oem": null,
+    "oem": true,
     "description": "WTF is this ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -537,7 +537,7 @@
   },
   {
     "packageId": "com.evenwell.pandorasbox.app",
-    "oem": null,
+    "oem": true,
     "description": "WTF is this ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -545,7 +545,7 @@
   },
   {
     "packageId": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customize your browser with stuff you don't want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -553,7 +553,7 @@
   },
   {
     "packageId": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customize your browser with stuff you don't want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -561,7 +561,7 @@
   },
   {
     "packageId": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customize your browser with stuff you don't want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -569,7 +569,7 @@
   },
   {
     "packageId": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Customize your browser with stuff you don't want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -577,7 +577,7 @@
   },
   {
     "packageId": "com.evenwell.permissiondetection.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -585,7 +585,7 @@
   },
   {
     "packageId": "com.evenwell.permissiondetection.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "????\n",
     "dependencies": null,
     "neededBy": null,
@@ -593,7 +593,7 @@
   },
   {
     "packageId": "com.evenwell.phone.overlay.base",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the dialer app\n",
     "dependencies": null,
     "neededBy": null,
@@ -601,7 +601,7 @@
   },
   {
     "packageId": "com.evenwell.phone.overlay.base",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the dialer app\n",
     "dependencies": null,
     "neededBy": null,
@@ -609,7 +609,7 @@
   },
   {
     "packageId": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Drains more battery than it saves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -617,7 +617,7 @@
   },
   {
     "packageId": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Drains more battery than it saves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -625,7 +625,7 @@
   },
   {
     "packageId": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Drains more battery than it saves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -633,7 +633,7 @@
   },
   {
     "packageId": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Drains more battery than it saves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -641,7 +641,7 @@
   },
   {
     "packageId": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Is nokia powersaving really effective? \n",
     "dependencies": null,
     "neededBy": null,
@@ -649,7 +649,7 @@
   },
   {
     "packageId": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Is nokia powersaving really effective? \n",
     "dependencies": null,
     "neededBy": null,
@@ -657,7 +657,7 @@
   },
   {
     "packageId": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Is nokia powersaving really effective? \n",
     "dependencies": null,
     "neededBy": null,
@@ -665,7 +665,7 @@
   },
   {
     "packageId": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "oem": null,
+    "oem": true,
     "description": "Is nokia powersaving really effective? \n",
     "dependencies": null,
     "neededBy": null,
@@ -673,7 +673,7 @@
   },
   {
     "packageId": "com.evenwell.providers.downloads.ui.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Add most likey a useless overlay on the download app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -681,7 +681,7 @@
   },
   {
     "packageId": "com.evenwell.providers.downloads.ui.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Add most likey a useless overlay on the download app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -689,7 +689,7 @@
   },
   {
     "packageId": "com.evenwell.providers.partnerbookmarks.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Provides Nokia bookmarks in Chrome/Nokia browser ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -697,7 +697,7 @@
   },
   {
     "packageId": "com.evenwell.providers.weather.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Provider for the Nokia weather app.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -705,7 +705,7 @@
   },
   {
     "packageId": "com.evenwell.providers.weather.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Provider for the Nokia weather app.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -713,7 +713,7 @@
   },
   {
     "packageId": "com.evenwell.pushagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
     "dependencies": null,
     "neededBy": null,
@@ -721,7 +721,7 @@
   },
   {
     "packageId": "com.evenwell.pushagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
     "dependencies": null,
     "neededBy": null,
@@ -729,7 +729,7 @@
   },
   {
     "packageId": "com.evenwell.pushagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
     "dependencies": null,
     "neededBy": null,
@@ -737,7 +737,7 @@
   },
   {
     "packageId": "com.evenwell.pushagent.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
     "dependencies": null,
     "neededBy": null,
@@ -745,7 +745,7 @@
   },
   {
     "packageId": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -753,7 +753,7 @@
   },
   {
     "packageId": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -761,7 +761,7 @@
   },
   {
     "packageId": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -769,7 +769,7 @@
   },
   {
     "packageId": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
@@ -777,7 +777,7 @@
   },
   {
     "packageId": "com.evenwell.screenlock.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the screenlock\n",
     "dependencies": null,
     "neededBy": null,
@@ -785,7 +785,7 @@
   },
   {
     "packageId": "com.evenwell.settings.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay related to settings\n",
     "dependencies": null,
     "neededBy": null,
@@ -793,7 +793,7 @@
   },
   {
     "packageId": "com.evenwell.settings.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay related to settings\n",
     "dependencies": null,
     "neededBy": null,
@@ -801,7 +801,7 @@
   },
   {
     "packageId": "com.evenwell.SettingsUtils.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
     "dependencies": null,
     "neededBy": null,
@@ -809,7 +809,7 @@
   },
   {
     "packageId": "com.evenwell.SettingsUtils.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
     "dependencies": null,
     "neededBy": null,
@@ -817,7 +817,7 @@
   },
   {
     "packageId": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -825,7 +825,7 @@
   },
   {
     "packageId": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -833,7 +833,7 @@
   },
   {
     "packageId": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -841,7 +841,7 @@
   },
   {
     "packageId": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -849,7 +849,7 @@
   },
   {
     "packageId": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
@@ -857,7 +857,7 @@
   },
   {
     "packageId": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
     "dependencies": null,
     "neededBy": null,
@@ -865,7 +865,7 @@
   },
   {
     "packageId": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
     "dependencies": null,
     "neededBy": null,
@@ -873,7 +873,7 @@
   },
   {
     "packageId": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
     "dependencies": null,
     "neededBy": null,
@@ -881,7 +881,7 @@
   },
   {
     "packageId": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
     "dependencies": null,
     "neededBy": null,
@@ -889,7 +889,7 @@
   },
   {
     "packageId": "com.evenwell.telecom.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Telecom telemetry ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -897,7 +897,7 @@
   },
   {
     "packageId": "com.evenwell.telecom.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Telecom telemetry ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -905,7 +905,7 @@
   },
   {
     "packageId": "com.evenwell.telecom.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Telecom telemetry ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -913,7 +913,7 @@
   },
   {
     "packageId": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Logging stuff\n",
     "dependencies": null,
     "neededBy": null,
@@ -921,7 +921,7 @@
   },
   {
     "packageId": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Logging stuff\n",
     "dependencies": null,
     "neededBy": null,
@@ -929,7 +929,7 @@
   },
   {
     "packageId": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Logging stuff\n",
     "dependencies": null,
     "neededBy": null,
@@ -937,7 +937,7 @@
   },
   {
     "packageId": "com.evenwell.weatherservice.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the weather app\n",
     "dependencies": null,
     "neededBy": null,
@@ -945,7 +945,7 @@
   },
   {
     "packageId": "com.evenwell.weatherservice.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the weather app\n",
     "dependencies": null,
     "neededBy": null,
@@ -953,7 +953,7 @@
   },
   {
     "packageId": "com.evenwell.weatherservice.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Overlay for the weather app\n",
     "dependencies": null,
     "neededBy": null,
@@ -961,7 +961,7 @@
   },
   {
     "packageId": "com.fih.infodisplay",
-    "oem": null,
+    "oem": true,
     "description": "Foxconn info display\n????\n",
     "dependencies": null,
     "neededBy": null,
@@ -969,7 +969,7 @@
   },
   {
     "packageId": "com.fih.StatsdLogger",
-    "oem": null,
+    "oem": true,
     "description": "Foxconn stats logger\n",
     "dependencies": null,
     "neededBy": null,
@@ -977,7 +977,7 @@
   },
   {
     "packageId": "com.foxconn.ifaa",
-    "oem": null,
+    "oem": true,
     "description": "IFAA = China\u2019s Internet Finance Authentication Alliance\nChinese organisation that aim to achieve a more simple way to verify the identity of human (like passwordless authentication)\n",
     "dependencies": null,
     "neededBy": null,
@@ -985,7 +985,7 @@
   },
   {
     "packageId": "com.hmdglobal.datago.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Sends diagnostic data to HMD (Company behin Nokia) ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -993,7 +993,7 @@
   },
   {
     "packageId": "com.hmdglobal.datago.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Sends diagnostic data to HMD (Company behin Nokia) ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1001,7 +1001,7 @@
   },
   {
     "packageId": "com.hmdglobal.datago.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Sends diagnostic data to HMD (Company behin Nokia) ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1009,7 +1009,7 @@
   },
   {
     "packageId": "com.hmdglobal.support",
-    "oem": null,
+    "oem": true,
     "description": "My Phone (https://play.google.com/store/apps/details?id=com.hmdglobal.support)\nLets you join the Nokia phones community, get app recommendations, explore your phone\u2019s user guide and more.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1017,7 +1017,7 @@
   },
   {
     "packageId": "com.android.cellbroadcastreceiver.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Cell broadcast is a method of sending messages to multiple mobile telephone users in a defined area at the same time.\nIt is often used for regional emergency alerts. \nI think this package only handles notifications overlay for broadcast cell, not the implementation.\nIt seems to me that broadcast SMS use normal notifications so there is chances that this package provide special overlay for Nokia SMS app ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1025,7 +1025,7 @@
   },
   {
     "packageId": "com.hmdglobal.camera2",
-    "oem": null,
+    "oem": true,
     "description": "Nokia camera (https://play.google.com/store/apps/details?id=com.hmdglobal.camera2)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1033,7 +1033,7 @@
   },
   {
     "packageId": "com.evenwell.camera2",
-    "oem": null,
+    "oem": true,
     "description": "Nokia camera by evenwell (https://play.google.com/store/apps/details?id=com.evenwell.camera2)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1041,7 +1041,7 @@
   },
   {
     "packageId": "com.evenwell.fmradio.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia radio app \n",
     "dependencies": null,
     "neededBy": null,
@@ -1049,7 +1049,7 @@
   },
   {
     "packageId": "com.evenwell.fmradio.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Nokia radio app \n",
     "dependencies": null,
     "neededBy": null,
@@ -1057,7 +1057,7 @@
   },
   {
     "packageId": "com.evenwell.hdrservice",
-    "oem": null,
+    "oem": true,
     "description": "HDR Service (https://play.google.com/store/apps/details?id=com.evenwell.hdrservice)\nEnhances contrast and sharpness for normal photos, games and videos dynamically.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1065,7 +1065,7 @@
   },
   {
     "packageId": "com.evenwell.OTAUpdate.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Related to OTA Update (Over-The-Air updates, updates from Nokia)\nMay not be safe if you still receive updates.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1073,7 +1073,7 @@
   },
   {
     "packageId": "com.evenwell.OTAUpdate.overlay.base.s600ww",
-    "oem": null,
+    "oem": true,
     "description": "Related to OTA Update (Over-The-Air updates, updates from Nokia)\nMay not be safe if you still receive updates.\n",
     "dependencies": null,
     "neededBy": null,

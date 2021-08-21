@@ -1,7 +1,7 @@
 [
   {
     "packageId": "android.autoinstalls.config.Xiaomi.cactus",
-    "oem": null,
+    "oem": true,
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "android.autoinstalls.config.Xiaomi.cactus",
-    "oem": null,
+    "oem": true,
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "android.autoinstalls.config.Xiaomi.cactus",
-    "oem": null,
+    "oem": true,
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "android.autoinstalls.config.Xiaomi.cactus",
-    "oem": null,
+    "oem": true,
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "android.romstats",
-    "oem": null,
+    "oem": true,
     "description": "Misleading package name. This is a Xiaomi-only package.\nCan someone provide the .apk?\nTelemetry stuff\n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "cn.wps.xiaomi.abroad.lite",
-    "oem": null,
+    "oem": true,
     "description": "Mi Doc viewer\nDocuments (*.doc/docx, *.ppt/pptx, *.xls/xlsx, *.pdf, *.wps, and *.txt) viewer powered by WPS Office\nFYI: WPS is a chinese closed-source software. It's as bad as Microsoft office (privacy-wise)\nhttps://www.wps.com/privacy-policy\n",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.android.backup",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Backup and Restore feature (mislead package name).\nThis package was replaced by 'com.miui.backup' on newer models.\n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.android.midrive",
-    "oem": null,
+    "oem": true,
     "description": "Mi Drive \nMisleading package name. It is indeed a closed-source Xiaomi application.\nAllow for cloud storage (on Mi Cloud) and syncing across multiple Android devices.\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.autonavi.minimap",
-    "oem": null,
+    "oem": true,
     "description": "\u9ad8\u5fb7\u5730\u56fe (Yeah no english translation) (https://play.google.com/store/apps/details?id=com.autonavi.minimap)\nXiaomi GPS\n",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.baidu.duersdk.opensdk",
-    "oem": null,
+    "oem": true,
     "description": "Duer stuff from Baidu \nDuer is a virtual AI assistant.\n",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.baidu.input_mi",
-    "oem": null,
+    "oem": true,
     "description": "Baidu IME (Baidu keyboard)\nYOU SHOULD NEVER USE A CLOSED-SOURCE KEYBOARD ! \nhttps://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\nArchive : https://web.archive.org/save/https://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.baidu.searchbox",
-    "oem": null,
+    "oem": true,
     "description": "\u767e\u5ea6 (https://play.google.com/store/apps/details?id=com.baidu.searchbox)\nBaidu App search engine.\n",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.bsp.catchlog",
-    "oem": null,
+    "oem": true,
     "description": "bsp = Board support package\nUsed to catch log files obviously.\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.duokan.phone.remotecontroller",
-    "oem": null,
+    "oem": true,
     "description": "Mi Remote Controller (https://play.google.com/store/apps/details?id=com.duokan.phone.remotecontroller)\nControl your electric appliances with your phone using Mi Remote.\n",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.duokan.phone.remotecontroller.peel.plugin",
-    "oem": null,
+    "oem": true,
     "description": "Peel Mi Remote (https://play.google.com/store/apps/details?id=com.duokan.phone.remotecontroller.peel.plugin)\nPeel Mi Remote is a TV guide extension for Xiaomi Mi Remote by \"Peel Smart Remote\".\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.facemoji.lite.xiaomi.gp",
-    "oem": null,
+    "oem": true,
     "description": "Facemoji Keyboard Lite for Xiaomi - Emoji & Theme  (https://play.google.com/store/apps/details?id=com.facemoji.lite.xiaomi.gp)\nEmoji keyboard\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.factory.mmigroup",
-    "oem": null,
+    "oem": true,
     "description": "Hidden super-menu accessible by dialing *#*#64633#*#*\nThis menu lists all the others hidden test/debug apps.\n",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.fingerprints.sensortesttool",
-    "oem": null,
+    "oem": true,
     "description": "Sensor Test Tool\nHidden test app used to test working of the fingerprint sensors.\n",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.huaqin.diaglogger",
-    "oem": null,
+    "oem": true,
     "description": "Secret logging menu only accessible by dialing using a \"secret code\" (*#*#CODE#*#*)\nYou can use any of these code : \"995995\", \"996996\", \"9434\", \"334334\", \"5959\", \"477477\"\nUsed to log Bluetooth traffic and send them to com.miui.bugreport\nWrite logs to \"/sdcard/diag_logs/\" | \"/sdcard/wlan_logs/\" | \"/sdcard/MIUI/debug_log/common/\"\n#\nFYI Huaqin is a Chinese mobile phone research and development company.\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.huaqin.factory",
-    "oem": null,
+    "oem": true,
     "description": "Hidden test app (dial *#*#64663#*#*)\nUsed by technician in factory to test the hardware. Not intented to be run by end-users. \nHas a huge amount of permission.\nA vulnerability was found in 2019 (CVE-2019-15340) allowing any app co-located on the device to \nprogrammatically disable and enable Wi-Fi, Bluetooth, and GPS silently (and without the corresponding access permission)\nhttps://nvd.nist.gov/vuln/detail/CVE-2019-15340\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.huaqin.sar",
-    "oem": null,
+    "oem": true,
     "description": "SetTransmitPower\nI can't access the apk but I'm pretty sure it is another hidden test app not meant to be used by end-user\nGiven its name it could be used to adjust the transmit power of the cell phone antennas\nSAR = Specific Absorption Rate (https://en.wikipedia.org/wiki/Specific_absorption_rate)\nXDA users removed this without any issues. To be 100% sure it would be good to test the SAR without this package (just in case)\n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.milink.service",
-    "oem": null,
+    "oem": true,
     "description": "UniPlay Service\nMIUI screen casting service. \nIf removed, you'll have to use Android's native casting services which can be accessed through a 3rd party app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.mipay.wallet.in",
-    "oem": null,
+    "oem": true,
     "description": "Mi Pay (https://play.google.com/store/apps/details?id=com.mipay.in.wallet)\nContactless NFC-based mobile payment system that supports credit, debit and public transportation cards in China.\nhttps://www.mi-pay.com/\n#\n.in = Mi Pay for India\n.id = My Pay for Indonesia\n",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.mipay.wallet.in",
-    "oem": null,
+    "oem": true,
     "description": "Mi Pay (https://play.google.com/store/apps/details?id=com.mipay.in.wallet)\nContactless NFC-based mobile payment system that supports credit, debit and public transportation cards in China.\nhttps://www.mi-pay.com/\n#\n.in = Mi Pay for India\n.id = My Pay for Indonesia\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.mipay.wallet.in",
-    "oem": null,
+    "oem": true,
     "description": "Mi Pay (https://play.google.com/store/apps/details?id=com.mipay.in.wallet)\nContactless NFC-based mobile payment system that supports credit, debit and public transportation cards in China.\nhttps://www.mi-pay.com/\n#\n.in = Mi Pay for India\n.id = My Pay for Indonesia\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.miui.accessibility",
-    "oem": null,
+    "oem": true,
     "description": "Mi Ditto\nAccesibility feature. Dictation (TTS) and speech output, \nmaking mobile devices more convenient for people who have difficulties using conventionally designed smartphones. \n",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.miui.audioeffect",
-    "oem": null,
+    "oem": true,
     "description": "AudioEffect from Xiaomi (https://developer.android.com/reference/android/media/audiofx/AudioEffect)\nUsed by the equalizer (to be confirmed)\n",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.miui.cit",
-    "oem": null,
+    "oem": true,
     "description": "Hardware tests\nSecret codes (https://nitter.net/fs0c131y/status/933353182956326913#m) let you run hardware tests.\nhttps://c.mi.com/thread-1744085-1-0.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.miui.cloudservice",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cloud Services needed for Mi Cloud\n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "com.miui.huanji",
-    "oem": null,
+    "oem": true,
     "description": "Mi Mover (https://play.google.com/store/apps/details?id=com.miui.huanji)\nLets you transfer your contacts, messages, personal files, all the installed apps (but not their data) \nand all the settings (app + system) from an android phone to a Xiaomi phone.\nThe 2 phones will establish a direct wifi connection.\n",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "com.miui.enbbs",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Forums old package.\nNow com.mi.global.bbs.\n",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.miui.greenguard",
-    "oem": null,
+    "oem": true,
     "description": "Security Guard Service\nThe app includes three different antivirus brands built in that the user can choose from to keep their phone protected: Avast, AVL and Tencent. \nUpon selecting the app, the user selects one of these providers as the default Anti-Virus engine to scan the device.\nIt the app that scan an app before installing it\nNOTE : A vulnerability was found in 2019 : https://research.checkpoint.com/2019/vulnerability-in-xiaomi-pre-installed-security-app/\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.miui.hybrid",
-    "oem": null,
+    "oem": true,
     "description": "Quick Apps\nIt's basically an app which shows you ads and tracks you...\nFunny thing, Xiaomi's Quick Apps was reportedly being blocked by Google Play Protect.\nhttps://www.androidpolice.com/2019/11/19/xiaomi-quick-apps-flagged-blocked-google-play-protect/\n#\nReverse engineering of the app : \nhttps://medium.com/@gags.gk/reverse-engineering-quick-apps-from-xiaomi-a1c9131ae0b7\nSpoiler : you really should delete this package.\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.miui.hybrid.accessory",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Hybrid Accessory\nSmartphone accessories support for Quick Apps (com.miui.hybrid)\n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.miui.micloudsync",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cloud Sync\nNeeded for Cloud syncronisation\n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.miui.miwallpaper",
-    "oem": null,
+    "oem": true,
     "description": "Mi Wallpaper \n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.miui.nextpay",
-    "oem": null,
+    "oem": true,
     "description": "Next Pay \n???\n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.miui.qr",
-    "oem": null,
+    "oem": true,
     "description": "MUI Qr code scanner\n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.miui.smsextra",
-    "oem": null,
+    "oem": true,
     "description": "Dependency for MIUI Messaging (MIUI SMS app misleadingly called com.android.mms)\nYou can remove it if you don't use the default SMS app (and you should)\nRun in background once the phone is booted, has access to internet and interact with Cloud Manager\n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.miui.touchassistant",
-    "oem": null,
+    "oem": true,
     "description": "Quick Ball/Touch Assistant\nTouch assistant with a combination of five unique shortcuts which aimed to give easy and quick access to functions and apps you use frequently.\n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.miui.translation.xmcloud",
-    "oem": null,
+    "oem": true,
     "description": "Translation stuff. Does not impact global translation for non-chinesse users.\n",
     "dependencies": null,
     "neededBy": null,
@@ -329,7 +329,7 @@
   },
   {
     "packageId": "com.miui.translationservice",
-    "oem": null,
+    "oem": true,
     "description": "Translation stuff. Does not impact global translation for non-chinesse users.\n",
     "dependencies": null,
     "neededBy": null,
@@ -337,7 +337,7 @@
   },
   {
     "packageId": "com.miui.userguide",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi User guide\n",
     "dependencies": null,
     "neededBy": null,
@@ -345,7 +345,7 @@
   },
   {
     "packageId": "com.miui.analytics",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Analytics\nThis app is shady. According to a guy who try to reverse engineered the app, Xiaomi Analytics can replace any (signed?) package \nthey want silently on your device within 24 hours. Maybe that no longer the case now but... you don't want analytics anyway.\nSource : http://blog.thijsbroenink.com/2016/09/xiaomis-analytics-app-reverse-engineered/\n",
     "dependencies": null,
     "neededBy": null,
@@ -353,7 +353,7 @@
   },
   {
     "packageId": "com.miui.android.fashiongallery",
-    "oem": null,
+    "oem": true,
     "description": "Mi Wallpaper Carousel (https://play.google.com/store/apps/details?id=com.miui.android.fashiongallery)\nDisplay new photos on your lock screen every time you turn ON your screen.\n",
     "dependencies": null,
     "neededBy": null,
@@ -361,7 +361,7 @@
   },
   {
     "packageId": "com.miui.antispam",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Antispam \nspam phone numbers filter (blacklist).\nSuspicious analytics inside and has access to internet. Cloud backup possible.\nAt quick glance it is not a private antispam app.\nCan someone check what data are collected/transfered?\n",
     "dependencies": null,
     "neededBy": null,
@@ -369,7 +369,7 @@
   },
   {
     "packageId": "com.miui.backup",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Backup\nLocal Backup/Restore feature (Settings > Additional Settings > Local backups)\nIt seems this app can communicate with Mi Drop\nThis app has 73 permissions and can obviously do everything it want.\n",
     "dependencies": null,
     "neededBy": null,
@@ -377,7 +377,7 @@
   },
   {
     "packageId": "com.miui.bugreport",
-    "oem": null,
+    "oem": true,
     "description": "Mi Feedback\nUsed to seend bug report to devs\n",
     "dependencies": null,
     "neededBy": null,
@@ -385,7 +385,7 @@
   },
   {
     "packageId": "com.miui.cleanmaster",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cleaner\nClean useless files\n",
     "dependencies": null,
     "neededBy": null,
@@ -393,7 +393,7 @@
   },
   {
     "packageId": "com.miui.cloudbackup",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cloud backup\nNeeded for Xiaomi cloud backup.\n",
     "dependencies": null,
     "neededBy": null,
@@ -401,7 +401,7 @@
   },
   {
     "packageId": "com.miui.cloudservice",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cloud Services needed for Mi Cloud\n",
     "dependencies": null,
     "neededBy": null,
@@ -409,7 +409,7 @@
   },
   {
     "packageId": "com.miui.cloudservice.sysbase",
-    "oem": null,
+    "oem": true,
     "description": "Another Mi Cloud dependency \n",
     "dependencies": null,
     "neededBy": null,
@@ -417,7 +417,7 @@
   },
   {
     "packageId": "com.miui.compass",
-    "oem": null,
+    "oem": true,
     "description": "Mi Compass\nI think you understand its purpose...\n",
     "dependencies": null,
     "neededBy": null,
@@ -425,7 +425,7 @@
   },
   {
     "packageId": "com.miui.contentcatcher",
-    "oem": null,
+    "oem": true,
     "description": "Application Extension Service\nI don't have a Xiaomi device so I can't test. A lot of people delete this package but I'd like to know its purpose.\nIMO it's related to web browsing from a xiaomi app\n",
     "dependencies": null,
     "neededBy": null,
@@ -433,7 +433,7 @@
   },
   {
     "packageId": "com.miui.daemon",
-    "oem": null,
+    "oem": true,
     "description": "MIUI daemon\nCollect a lot of data and send them to China.\nSee : https://nitter.net/fs0c131y/status/938872347087564800?lang=en\n",
     "dependencies": null,
     "neededBy": null,
@@ -441,7 +441,7 @@
   },
   {
     "packageId": "com.miui.fm",
-    "oem": null,
+    "oem": true,
     "description": "MIUI FM Radio app\n",
     "dependencies": null,
     "neededBy": null,
@@ -449,7 +449,7 @@
   },
   {
     "packageId": "com.miui.fmservice",
-    "oem": null,
+    "oem": true,
     "description": "FM Radio Service\nNeeded by com.miui.fm to work correctly\n",
     "dependencies": null,
     "neededBy": null,
@@ -457,7 +457,7 @@
   },
   {
     "packageId": "com.miui.gallery",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Gallery app.\nSimple Gallery is way better, ligther and open-source (https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)\n",
     "dependencies": null,
     "neededBy": null,
@@ -465,7 +465,7 @@
   },
   {
     "packageId": "com.miui.klo.bugreport",
-    "oem": null,
+    "oem": true,
     "description": "KLO Bugreport\nThis app registers system failures and Android applications errors and sends bugs to Xiaomi servers.\n",
     "dependencies": null,
     "neededBy": null,
@@ -473,7 +473,7 @@
   },
   {
     "packageId": "com.miui.miservice",
-    "oem": null,
+    "oem": true,
     "description": "Services & feedback\nUsed to send feedbacks (and data) to Xiaomi. Integration in Wechat\nSeems to be able to launch 'Baidu location service'\nHas too much permisions, run in background all the time and can be removed without issue\n",
     "dependencies": null,
     "neededBy": null,
@@ -481,7 +481,7 @@
   },
   {
     "packageId": "com.miui.msa.global",
-    "oem": null,
+    "oem": true,
     "description": "Main System Ads\nAnalyzation of user behaviors to show you ads. Yeah Xiaomi phones has ads...\nhttps://www.theverge.com/2018/9/19/17877970/xiaomi-ads-settings-menu-android-phones\n",
     "dependencies": null,
     "neededBy": null,
@@ -489,7 +489,7 @@
   },
   {
     "packageId": "com.miui.notes",
-    "oem": null,
+    "oem": true,
     "description": "Mi Notes\n",
     "dependencies": null,
     "neededBy": null,
@@ -497,7 +497,7 @@
   },
   {
     "packageId": "com.miui.personalassistant",
-    "oem": null,
+    "oem": true,
     "description": "Seems to be App Vault on some phones (https://play.google.com/store/apps/details?id=com.mi.android.globalpersonalassistant)\nhttps://c.mi.com/thread-1017547-1-0.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -505,7 +505,7 @@
   },
   {
     "packageId": "com.miui.phrase",
-    "oem": null,
+    "oem": true,
     "description": "Frequent Phrases\nNot sure to understand how exactly it can be used but it is supposed to predict phrases you'll want to write.\nI don't know why it isn't handled in the keyboard app. This seems to be something else.\nIn any case it has access to internet, is linked to MiCloud and contains a weird CloudTelephonyManager java class in his code.\n",
     "dependencies": null,
     "neededBy": null,
@@ -513,7 +513,7 @@
   },
   {
     "packageId": "com.miui.player",
-    "oem": null,
+    "oem": true,
     "description": "Mi Music (https://play.google.com/store/apps/details?id=com.miui.player)\n",
     "dependencies": null,
     "neededBy": null,
@@ -521,7 +521,7 @@
   },
   {
     "packageId": "com.miui.providers.weather",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi provider for MI Weather app (com.miui.weather)\nREMINDER : Content providers helps an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource: https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -529,7 +529,7 @@
   },
   {
     "packageId": "com.miui.screenrecorder",
-    "oem": null,
+    "oem": true,
     "description": "Mi Screen Recorder\n",
     "dependencies": null,
     "neededBy": null,
@@ -537,7 +537,7 @@
   },
   {
     "packageId": "com.miui.spock",
-    "oem": null,
+    "oem": true,
     "description": "Analytics app who constantly run in background.\nSends indentifiable data to Xiaomi servers\nSee https://www.virustotal.com/gui/file/70400d0055e1924966fb8367cafddc175dee914bbdc227342c9dd86fb3aa829f/details\nIt leaks system version, device model, exact firmware build + some few mysterious IDs\n",
     "dependencies": null,
     "neededBy": null,
@@ -545,7 +545,7 @@
   },
   {
     "packageId": "com.miui.systemAdSolution",
-    "oem": null,
+    "oem": true,
     "description": "Spyware who analyse user behavior for targeted ads. Yeah Xiaomi phones has ads...\nhttps://www.theverge.com/2018/9/19/17877970/xiaomi-ads-settings-menu-android-phones\n",
     "dependencies": null,
     "neededBy": null,
@@ -553,7 +553,7 @@
   },
   {
     "packageId": "com.miui.sysopt",
-    "oem": null,
+    "oem": true,
     "description": "SysoptApplication\nStrange app with no permission. By looking at the code it seems to be a kind of debug app.\nThe app doesn't seem to do intersting stuff.\n",
     "dependencies": null,
     "neededBy": null,
@@ -561,7 +561,7 @@
   },
   {
     "packageId": "com.miui.translation.kingsoft",
-    "oem": null,
+    "oem": true,
     "description": "Translation stuff by Kingsoft (https://en.wikipedia.org/wiki/Kingsoft)\n",
     "dependencies": null,
     "neededBy": null,
@@ -569,7 +569,7 @@
   },
   {
     "packageId": "com.miui.translation.youdao",
-    "oem": null,
+    "oem": true,
     "description": "Translation stufff by Youdao (https://en.wikipedia.org/wiki/Youdao)\n",
     "dependencies": null,
     "neededBy": null,
@@ -577,7 +577,7 @@
   },
   {
     "packageId": "com.miui.video",
-    "oem": null,
+    "oem": true,
     "description": "IMO it's needed by com.miui.videoplayer (confirmation needed)\n",
     "dependencies": null,
     "neededBy": null,
@@ -585,7 +585,7 @@
   },
   {
     "packageId": "com.miui.videoplayer",
-    "oem": null,
+    "oem": true,
     "description": "Mi Video (https://play.google.com/store/apps/details?id=com.miui.videoplayer)\n",
     "dependencies": null,
     "neededBy": null,
@@ -593,7 +593,7 @@
   },
   {
     "packageId": "com.miui.videoplayer.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Mi Video overlay\nREMINDER : A screen overlay in Android, also referred to as \u201cDraw On Top\u201d, allows an app to display content over another app\n",
     "dependencies": null,
     "neededBy": null,
@@ -601,7 +601,7 @@
   },
   {
     "packageId": "com.miui.virtualsim",
-    "oem": null,
+    "oem": true,
     "description": "Mi Roaming\nIt enables users to connect to roaming data on-demand via virtual SIM technology.\nhttps://alertify.eu/xiaomi-mi-roaming/\n",
     "dependencies": null,
     "neededBy": null,
@@ -609,7 +609,7 @@
   },
   {
     "packageId": "com.miui.vsimcore",
-    "oem": null,
+    "oem": true,
     "description": "Virtual Sim core service\n",
     "dependencies": null,
     "neededBy": null,
@@ -617,7 +617,7 @@
   },
   {
     "packageId": "com.miui.miwallpaper.mars",
-    "oem": null,
+    "oem": true,
     "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper\n",
     "dependencies": null,
     "neededBy": null,
@@ -625,7 +625,7 @@
   },
   {
     "packageId": "com.miui.miwallpaper.mars",
-    "oem": null,
+    "oem": true,
     "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper\n",
     "dependencies": null,
     "neededBy": null,
@@ -633,7 +633,7 @@
   },
   {
     "packageId": "com.miui.newmidrive",
-    "oem": null,
+    "oem": true,
     "description": "Mi Drive (Chinese version)\nLets you upload and sync your files on the (Mi) Cloud.\nAlways run in background\n",
     "dependencies": null,
     "neededBy": null,
@@ -641,7 +641,7 @@
   },
   {
     "packageId": "com.wapi.wapicertmanager",
-    "oem": null,
+    "oem": true,
     "description": "WAPI Certificates Manager\nWAPI = WLAN Authentication Privacy Infrastructure (https://en.wikipedia.org/wiki/WLAN_Authentication_and_Privacy_Infrastructure\nIt was designed to replace WEP and become the new Standard but it was't rejected by the ISO (International Organization for Standardization)\nIt is currently only used in China\nThis app most likely manage certificates (they are used to make sure you're not connecting to a rogue Access Point)\nNote: If you live in China, you most likely want to keep it.\n",
     "dependencies": null,
     "neededBy": null,
@@ -649,7 +649,7 @@
   },
   {
     "packageId": "com.miui.weather2",
-    "oem": null,
+    "oem": true,
     "description": "Mi Weather app\n",
     "dependencies": null,
     "neededBy": null,
@@ -657,7 +657,7 @@
   },
   {
     "packageId": "com.miui.yellowpage",
-    "oem": null,
+    "oem": true,
     "description": "Yellow Page from MIUI.\nREMINDER : Yellow pages contain phone numbers of companies and services. They are provided by Xiaomi partners or businesses themselves.\n",
     "dependencies": null,
     "neededBy": null,
@@ -665,7 +665,7 @@
   },
   {
     "packageId": "com.mfashiongallery.emag",
-    "oem": null,
+    "oem": true,
     "description": "Wallpapers by Xiaomi\n",
     "dependencies": null,
     "neededBy": null,
@@ -673,7 +673,7 @@
   },
   {
     "packageId": "com.mi.android.globalpersonalassistant",
-    "oem": null,
+    "oem": true,
     "description": "MI Vault aka the \"assistant\" you open swiping left from MI Home\n",
     "dependencies": null,
     "neededBy": null,
@@ -681,7 +681,7 @@
   },
   {
     "packageId": "com.mi.android.globalminusscreen",
-    "oem": null,
+    "oem": true,
     "description": "App Vault (https://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen)\nGoogle Feed replica from Xiaomi\nCompletely useless app which displays all the trending stories from the web + a bunch of other stupid things.\n",
     "dependencies": null,
     "neededBy": null,
@@ -689,7 +689,7 @@
   },
   {
     "packageId": "com.mi.AutoTest",
-    "oem": null,
+    "oem": true,
     "description": "Assemble test\nHidden app used by the manufacturer to test various hardware components\n",
     "dependencies": null,
     "neededBy": null,
@@ -697,7 +697,7 @@
   },
   {
     "packageId": "com.xiaomi.mi_connect_service",
-    "oem": null,
+    "oem": true,
     "description": "MiConnectService\nHandles connection to IoT stuff\nSeems to be linked to Mi Home (com.xiaomi.smarthome)\n",
     "dependencies": null,
     "neededBy": null,
@@ -705,7 +705,7 @@
   },
   {
     "packageId": "com.mi.global.bbs",
-    "oem": null,
+    "oem": true,
     "description": "Mi Community (https://play.google.com/store/apps/details?id=com.mi.global.bbs)\nXiaomi Forum app\n",
     "dependencies": null,
     "neededBy": null,
@@ -713,7 +713,7 @@
   },
   {
     "packageId": "com.mi.global.shop",
-    "oem": null,
+    "oem": true,
     "description": "Mi Store (https://play.google.com/store/apps/details?id=com.mi.global.shop)\nXiaomi app store\n",
     "dependencies": null,
     "neededBy": null,
@@ -721,7 +721,7 @@
   },
   {
     "packageId": "com.mi.globalTrendNews",
-    "oem": null,
+    "oem": true,
     "description": "Can't find info about this package\nProbably used for displaying (useless) news\n",
     "dependencies": null,
     "neededBy": null,
@@ -729,7 +729,7 @@
   },
   {
     "packageId": "com.mi.health",
-    "oem": null,
+    "oem": true,
     "description": "Mi Health\nPedometer, menstrual and sleep tracker\nYour data are synchronized in the cloud. \nDo you really want Xiaomi to know you didn't slept much yesterday (your ovulation day btw...)\n",
     "dependencies": null,
     "neededBy": null,
@@ -737,7 +737,7 @@
   },
   {
     "packageId": "com.mi.liveassistant",
-    "oem": null,
+    "oem": true,
     "description": "Mi Live Assistant\nI don't really know what it is. Maybe an old name for \"com.mi.android.globalpersonalassistant\"\n",
     "dependencies": null,
     "neededBy": null,
@@ -745,7 +745,7 @@
   },
   {
     "packageId": "com.mi.setupwizardoverlay",
-    "oem": null,
+    "oem": true,
     "description": "Weird package related to the SetupWizard (the menu which assists you to setup your phone for the first time)\nA user said he needed to remove this package to be able to properly apply a dark theme to the Settings app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -753,7 +753,7 @@
   },
   {
     "packageId": "com.mi.webkit.core",
-    "oem": null,
+    "oem": true,
     "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
@@ -761,7 +761,7 @@
   },
   {
     "packageId": "com.qiyi.video",
-    "oem": null,
+    "oem": true,
     "description": "IQIYI (https://play.google.com/store/apps/details?id=com.qiyi.video_US)\nOnline video platform from Baidu (https://en.wikipedia.org/wiki/IQiyi).\nI didn't know this is currently one of the largest online video sites in the world, \nwith nearly 6 billion hours spent on its service each month, and over 500 million monthly active users.\n",
     "dependencies": null,
     "neededBy": null,
@@ -769,7 +769,7 @@
   },
   {
     "packageId": "com.sohu.inputmethod.sogou.xiaomi",
-    "oem": null,
+    "oem": true,
     "description": "Sogou keyboard for chinese only.\n",
     "dependencies": null,
     "neededBy": null,
@@ -777,7 +777,7 @@
   },
   {
     "packageId": "com.wt.secret_code_manager",
-    "oem": null,
+    "oem": true,
     "description": "Hidden app which associates an action (display logging info) to a secret code.\nThis secret codes have to be dialed from the Xiaomi dialer.\n",
     "dependencies": null,
     "neededBy": null,
@@ -785,7 +785,7 @@
   },
   {
     "packageId": "com.xiaomi.ab",
-    "oem": null,
+    "oem": true,
     "description": "MAB \nHas a LOT of permissions. If you try to desinstall it, Xiaomi will reinstall after reboot.\nhttps://thoughtarama.wordpress.com/2017/05/09/mab-fucker-or-why-im-giving-up-my-xiaomi-redmi-note-3-phone/\nMab is a part of MIUI Analytics.\n",
     "dependencies": null,
     "neededBy": null,
@@ -793,7 +793,7 @@
   },
   {
     "packageId": "com.xiaomi.account",
-    "oem": null,
+    "oem": true,
     "description": "Mi Account\n",
     "dependencies": null,
     "neededBy": null,
@@ -801,7 +801,7 @@
   },
   {
     "packageId": "com.xiaomi.channel",
-    "oem": null,
+    "oem": true,
     "description": "Mi Talk \nMi instant messaging app that lets you do practically the same thing as Whatsapp. \nNOTE: You should use Signal or Wire instead Whatsapp/Mi Talk for more privacy.\n",
     "dependencies": null,
     "neededBy": null,
@@ -809,7 +809,7 @@
   },
   {
     "packageId": "com.xiaomi.gamecenter.sdk.service",
-    "oem": null,
+    "oem": true,
     "description": "Game Service\nSurely used to \"improve\" game performance\n",
     "dependencies": null,
     "neededBy": null,
@@ -817,7 +817,7 @@
   },
   {
     "packageId": "com.xiaomi.joyose",
-    "oem": null,
+    "oem": true,
     "description": "Joyse Analytics and advertising\nRun in background and can't be stopped. \n",
     "dependencies": null,
     "neededBy": null,
@@ -825,7 +825,7 @@
   },
   {
     "packageId": "com.xiaomi.jr",
-    "oem": null,
+    "oem": true,
     "description": "Help you getting loans when shopping.\n",
     "dependencies": null,
     "neededBy": null,
@@ -833,7 +833,7 @@
   },
   {
     "packageId": "com.xiaomi.lens",
-    "oem": null,
+    "oem": true,
     "description": "Related to camera app ?\nSafe to remove (according to a lot of users)\nI'd like to have more info about it. Can a Xiaomi user help ? \n",
     "dependencies": null,
     "neededBy": null,
@@ -841,7 +841,7 @@
   },
   {
     "packageId": "com.xiaomi.midrop",
-    "oem": null,
+    "oem": true,
     "description": "Share Me (Mi Drop) (https://play.google.com/store/apps/details?id=com.xiaomi.midrop)\nP2P file transfer tool.\n",
     "dependencies": null,
     "neededBy": null,
@@ -849,7 +849,7 @@
   },
   {
     "packageId": "com.xiaomi.midrop.overlay",
-    "oem": null,
+    "oem": true,
     "description": "Mi Drop overlay\nREMINDER : A screen overlay in Android, also referred to as \u201cDraw On Top\u201d, allows an app to display content over another app\n",
     "dependencies": null,
     "neededBy": null,
@@ -857,7 +857,7 @@
   },
   {
     "packageId": "com.xiaomi.mipicks",
-    "oem": null,
+    "oem": true,
     "description": "Mi Picks (becomed Mi Apps Store and now Get Apps -- Xiaomi app store)\nI believe this package is discontinued.\nhttps://play.google.com/store/apps/details?id=com.mi.global.shop\n",
     "dependencies": null,
     "neededBy": null,
@@ -865,7 +865,7 @@
   },
   {
     "packageId": "com.xiaomi.o2o",
-    "oem": null,
+    "oem": true,
     "description": "o2o = online-to-offline\n==> Describe systems enticing consumers within a digital environment to make purchases of goods or services from physical businesses.\nhttps://en.wikipedia.org/wiki/Online_to_offline\nNOTE : This package can make phone calls without user intervention.\n",
     "dependencies": null,
     "neededBy": null,
@@ -873,7 +873,7 @@
   },
   {
     "packageId": "com.xiaomi.pass",
-    "oem": null,
+    "oem": true,
     "description": "Mi Pass is an App allows Xiaomi NFC phones to replace cards and keys in real life usage. \nSupport NFC payment, bus card, key card, door and car lock features all together.\n",
     "dependencies": null,
     "neededBy": null,
@@ -881,7 +881,7 @@
   },
   {
     "packageId": "com.xiaomi.payment",
-    "oem": null,
+    "oem": true,
     "description": "Old package name for Mi Credit (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\nMi Credit is a personal loan platform from Xiaomi.\n",
     "dependencies": null,
     "neededBy": null,
@@ -889,7 +889,7 @@
   },
   {
     "packageId": "com.xiaomi.scanner",
-    "oem": null,
+    "oem": true,
     "description": "Mi Scanner\nLets you scan documents, crop, adjust grayscale and OCR.\n",
     "dependencies": null,
     "neededBy": null,
@@ -897,7 +897,7 @@
   },
   {
     "packageId": "com.xiaomi.shop",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi app store (I thinks it's discontinued)\nNow com.mi.global.shop (https://play.google.com/store/apps/details?id=com.mi.global.shop)\n",
     "dependencies": null,
     "neededBy": null,
@@ -905,7 +905,7 @@
   },
   {
     "packageId": "com.xiaomi.vipaccount",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi VIP account\nhttps://www.mi.com/in/service/privilegefaq/\n",
     "dependencies": null,
     "neededBy": null,
@@ -913,7 +913,7 @@
   },
   {
     "packageId": "com.xiaomi.glgm",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Games\nNot sure if this app still exists.\n",
     "dependencies": null,
     "neededBy": null,
@@ -921,7 +921,7 @@
   },
   {
     "packageId": "com.xiaomi.micloud.sdk",
-    "oem": null,
+    "oem": true,
     "description": "Mi Cloud sdk \nsdk = Software development kit\nSeems to be a dependency for \"com.miui.gallery\" (the MIUI may not work if you remove this package)\n",
     "dependencies": null,
     "neededBy": null,
@@ -929,7 +929,7 @@
   },
   {
     "packageId": "com.xiaomi.mirecycle",
-    "oem": null,
+    "oem": true,
     "description": "Mi Recycle \nXiaomi has extended its partnership with Cashify to launch the 'Mi Recycle' feature through its MIUI Security app. \nIt will let Xiaomi phone users check the health of their smartphone and get their resale value directly from Cashify, \nthe online re-commerce company based out of New Delhi.\nSource : https://gadgets.ndtv.com/mobiles/news/xiaomi-mi-recycle-cashify-miui-security-app-2018024\n",
     "dependencies": null,
     "neededBy": null,
@@ -937,7 +937,7 @@
   },
   {
     "packageId": "com.xiaomi.oversea.ecom",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi ShopPlus.\nGiven its name I think this package is useless.\n",
     "dependencies": null,
     "neededBy": null,
@@ -945,7 +945,7 @@
   },
   {
     "packageId": "com.xiaomi.providers.appindex",
-    "oem": null,
+    "oem": true,
     "description": "Provider for indexing app ? \nI believe it is a provider for the settings but I can't confirm (I don't have a Xiaomi device)\nA lot of people debloat this but I'd like to know more about this one.\n",
     "dependencies": null,
     "neededBy": null,
@@ -953,7 +953,7 @@
   },
   {
     "packageId": "com.xiaomi.upnp",
-    "oem": null,
+    "oem": true,
     "description": "UpnpService\nUPnP = Universal Plug and Play\nIt\u2019s a protocol that lets UPnP-enabled devices on your network automatically discover and communicate with each other\nFor exemple it works with the Xiaomi Network Speaker (and probably a lot more Xiaomi IoT stuff)\nUPnP have a lot of security issue and you proably should disable it on your router.\nhttps://nakedsecurity.sophos.com/2020/06/10/billions-of-devices-affected-by-upnp-vulnerability/\nThis package is the Xiaomi implementation on Android (no AOSP support)\n",
     "dependencies": null,
     "neededBy": null,
@@ -961,7 +961,7 @@
   },
   {
     "packageId": "com.xiaomi.simactivate.service",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi SIM Activation Service\nOnly used to activate the Find My Device feature\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\n",
     "dependencies": null,
     "neededBy": null,
@@ -969,7 +969,7 @@
   },
   {
     "packageId": "com.xiaomi.smarthome",
-    "oem": null,
+    "oem": true,
     "description": "Mi Home (https://play.google.com/store/apps/details?id=com.xiaomi.smarthome)\nIoT. Lets you control with Xiaomi Smart Home Suite devices.\n",
     "dependencies": null,
     "neededBy": null,
@@ -977,7 +977,7 @@
   },
   {
     "packageId": "com.xiaomi.xmsfkeeper",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Service Framework Keeper\nLogger service for 'com.xiaomi.xmsf'\n",
     "dependencies": null,
     "neededBy": null,
@@ -985,7 +985,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -993,7 +993,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1001,7 +1001,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1009,7 +1009,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1017,7 +1017,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1025,7 +1025,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1033,7 +1033,7 @@
   },
   {
     "packageId": "com.android.systemui.overlay.ct",
-    "oem": null,
+    "oem": true,
     "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1041,7 +1041,7 @@
   },
   {
     "packageId": "com.miui.wmsvc",
-    "oem": null,
+    "oem": true,
     "description": "WMService\nRun at boot, has access to internet + GPS\nI quickly looked at the decompiled code and I saw some unsanitized SQL inputs which is BAD! (vulnerable to SQL injection)\nTry to get your android unique Google advertising ID from Google Play Services.\nFeed and launch the spying/analytics app \"com.miui.hybrid\"\nThis app doesn't seems to do essential things except for tracking.\nWARNING: Some people said removing this app causes bootloop, others said it's not. \nI'd like someone to check this. I think it should be okay if you remove all other linked Xiaomi crapwares (like the script does)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1049,7 +1049,7 @@
   },
   {
     "packageId": "com.xiaomi.xmsf",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Service Framework\nSet of API's that Xiaomi apps can used (to put it simply a lot of Xiaomi apps used the same functions which are centralized here)\nI first thought removing this will absolutely break everything but it seems not.\nI don't know the situation now but in 2016 this app constantly tried to do tcp connections in background\nRemoving this big boy will definitively break Mi Cloud and Mi account (and all features needing these 2 things) but you should\nbe okay if you don't use most of Xiaomi apps (what's probably the case if you use this script)\n\nCan someone try to remove this and give feedback? \nCheck if alarms (from Xiaomi Clock & 3-party apps) still work if the phone is in sleep-mode.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1057,7 +1057,7 @@
   },
   {
     "packageId": "com.wingtech.standard",
-    "oem": null,
+    "oem": true,
     "description": "WTStandardTest\nWingtech is a chinese Original Design Manufacturer (ODM) involved in the manufacturing of Xiaomi devices.\nThere is very high chances this app is only a hardware conformance test app used during production process\nyou don't need as an end-user.\nCan someone share the apk just to be 100% sure?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1065,7 +1065,7 @@
   },
   {
     "packageId": "com.xiaomi.location.fused",
-    "oem": null,
+    "oem": true,
     "description": "FusedLocationProvider\nIt uses a combination of a device\u2019s GPS, Wi-Fi and internal sensors to improve geolocation performance.\nThe thing is there is also a Fused Location Provider embeded in 'com.google.android.gms'\nThis Xiaomi location provider obviously has as much tracking as the Google one but if you can remove one tracking source\nit's still better than nothing.\nCan someone try to remove this package and give feedback please?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1073,7 +1073,7 @@
   },
   {
     "packageId": "com.android.browser",
-    "oem": null,
+    "oem": true,
     "description": "Mi Browser\nYou really should use something else.\nFYI https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/\n",
     "dependencies": null,
     "neededBy": null,
@@ -1081,7 +1081,7 @@
   },
   {
     "packageId": "com.android.camera2",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Camera (I don't know why they kept this package name. It's really confusing.)\nIt's a proprietary app based on the AOSP sources:\nhttps://android.googlesource.com/platform/packages/apps/Camera2/+/master/src/com/android/camera\n",
     "dependencies": null,
     "neededBy": null,
@@ -1089,7 +1089,7 @@
   },
   {
     "packageId": "com.android.camera2",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Camera (I don't know why they kept this package name. It's really confusing.)\nIt's a proprietary app based on the AOSP sources:\nhttps://android.googlesource.com/platform/packages/apps/Camera2/+/master/src/com/android/camera\n",
     "dependencies": null,
     "neededBy": null,
@@ -1097,7 +1097,7 @@
   },
   {
     "packageId": "com.android.contacts",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Contacts and dialer\nIt's the contacts app but you can access the dialer from this app.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1105,7 +1105,7 @@
   },
   {
     "packageId": "com.android.email",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi closed-source email app based on the AOSP version. Really confusing package name.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1113,7 +1113,7 @@
   },
   {
     "packageId": "com.android.fileexplorer",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi/Mi File Explorer (Again it's a really poor choice for a package name considering it is not the AOSP File explorer)\nIt's a Closed-source app based on the AOSP version.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1121,7 +1121,7 @@
   },
   {
     "packageId": "com.android.gallery3d",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Gallery app (I'll stop repeating this is a really poor choice for the package name...)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1129,7 +1129,7 @@
   },
   {
     "packageId": "com.android.globalFileexplorer",
-    "oem": null,
+    "oem": true,
     "description": "Misleading package name. It's the Xiaomi Files Manager on older phones\n",
     "dependencies": null,
     "neededBy": null,
@@ -1137,7 +1137,7 @@
   },
   {
     "packageId": "com.android.incallui",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Phone (Here we go again! Another confusing package name)\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1145,7 +1145,7 @@
   },
   {
     "packageId": "com.android.thememanager",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package name\nThis package lets you select and apply themes provided by Xiaomi. \nThere is a strong likelihood that removing this package will disable the ability to change wallpapers. \nCan someone test?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1153,7 +1153,7 @@
   },
   {
     "packageId": "com.android.thememanager.module",
-    "oem": null,
+    "oem": true,
     "description": "I don't have the .apk but it is obviously related to \"com.android.thememanager\"\nCan someone test with this package too?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1161,7 +1161,7 @@
   },
   {
     "packageId": "com.fido.xiaomi.uafclient",
-    "oem": null,
+    "oem": true,
     "description": "FIDO UAF Autenthicator-Specific Module.\nSee 'com.huawei.fido.uafclient' for FIDO explaination.\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients \nto detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nSource: https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html\n\nUAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\n#\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device \nto the online service and using a local authentication mechanism such as iris or fingerprint recognition. .\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online servics.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1169,7 +1169,7 @@
   },
   {
     "packageId": "com.fido.xiaomi.uafclient",
-    "oem": null,
+    "oem": true,
     "description": "FIDO UAF Autenthicator-Specific Module.\nSee 'com.huawei.fido.uafclient' for FIDO explaination.\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients \nto detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nSource: https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html\n\nUAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\n#\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device \nto the online service and using a local authentication mechanism such as iris or fingerprint recognition. .\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online servics.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1177,7 +1177,7 @@
   },
   {
     "packageId": "com.miui.audiomonitor",
-    "oem": null,
+    "oem": true,
     "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this? \n",
     "dependencies": null,
     "neededBy": null,
@@ -1185,7 +1185,7 @@
   },
   {
     "packageId": "com.miui.calculator",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Calculator (https://play.google.com/store/apps/details?id=com.miui.calculator)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1193,7 +1193,7 @@
   },
   {
     "packageId": "com.miui.face",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Biometric\nFace Unlock feature\n",
     "dependencies": null,
     "neededBy": null,
@@ -1201,7 +1201,7 @@
   },
   {
     "packageId": "com.miui.freeform",
-    "oem": null,
+    "oem": true,
     "description": "Floating window\nI think the name app is pretty straightforward\nYou can make apps appear above other applications\nhttps://forum.xda-developers.com/android/miui/floating-windows-miui-12-t4125661\n",
     "dependencies": null,
     "neededBy": null,
@@ -1209,7 +1209,7 @@
   },
   {
     "packageId": "com.miui.home",
-    "oem": null,
+    "oem": true,
     "description": "MIUI System Launcher\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER !\n",
     "dependencies": null,
     "neededBy": null,
@@ -1217,7 +1217,7 @@
   },
   {
     "packageId": "com.mi.globallayout",
-    "oem": null,
+    "oem": true,
     "description": "Home Layout\nIt most likely handles the main screen layout (grid size, apps placement...)\n#\nSome people removed this without issue. Can someone try and give feedback?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1225,7 +1225,7 @@
   },
   {
     "packageId": "com.miui.mishare.connectivity",
-    "oem": null,
+    "oem": true,
     "description": "Mi Share\nUnified file sharing service between Xiaomi, Oppo, Realme and Vivo devices using Wifi-direct\nSettings -> Connection & sharing -> Mi Share\nFYI : Wifi direct allows 2 devices to establish a direct Wi-Fi connection without requiring a wireless router.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1233,7 +1233,7 @@
   },
   {
     "packageId": "com.miui.misound",
-    "oem": null,
+    "oem": true,
     "description": "Earphones (it's the name of the app)\nProvides the sound's section in Settings and is needed for the equalizing\nSome people removed this package but I personaly don't think it's worth it. This package isn't really an issue\n(no dangerous permissions and does not run in background all the time)\nYou can still remove it. You'll be just fine if you really don't need it.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1241,7 +1241,7 @@
   },
   {
     "packageId": "com.miui.notification",
-    "oem": null,
+    "oem": true,
     "description": "Handles notifications in MIUI (badly according to reviews). Does it only handles notifications for Xiaomi apps?\nEmbeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)\nCan someone remove this package just to see if it breaks all notifications for all apps? It doesn't seem so.\nIf you try don't forget to check if the settings app still works fine.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1249,7 +1249,7 @@
   },
   {
     "packageId": "com.miui.powerkeeper",
-    "oem": null,
+    "oem": true,
     "description": "Battery and Performance\n(aggressive) MIUI power management (https://dontkillmyapp.com/xiaomi)\nThat's a weird app that also contains a DRM Manager and a service related to Cloud Backup\nHas obviously a lot of dangerous permissions.\nI guess removing this package will decrease the battery performance. Is it that noticeable? Can someone try?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1257,7 +1257,7 @@
   },
   {
     "packageId": "com.miui.zman",
-    "oem": null,
+    "oem": true,
     "description": "Mi Secure sharing\nProvides an option in the settings of the Xiaomi Gallery to automatically remove location and metadata from images \nyou want to share. This do not remove metadata of the picture in the gallery but only the shared copy.\nThere's also a \"Secure sharing\" watermark that shows up when you share photos on WeChat without metadata.\nThe question is does this really remove all EXIF tags? Can someone test?\nThis is a useful app anyway but do not forget that all your photos/vidoes taken with the Xiaomi camera are still geo-tagged \n(+ all others exif tags) by default. \nWhat you can do is at least revoke the GPS permission to the camera.\nFOSS alternative to this app : \nhttps://f-droid.org/fr/packages/com.jarsilio.android.scrambledeggsif/\nhttps://f-droid.org/fr/packages/de.kaffeemitkoffein.imagepipe/\n",
     "dependencies": null,
     "neededBy": null,
@@ -1265,7 +1265,7 @@
   },
   {
     "packageId": "com.mi.android.globalFileexplorer",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Files Manager (https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1273,7 +1273,7 @@
   },
   {
     "packageId": "com.xiaomi.bluetooth.overlay",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Bluetooth Bluetooth Control. \nYou need to keep this if you want the bluetooth to work \n",
     "dependencies": null,
     "neededBy": null,
@@ -1281,7 +1281,7 @@
   },
   {
     "packageId": "com.xiaomi.bluetooth.overlay",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Bluetooth Bluetooth Control. \nYou need to keep this if you want the bluetooth to work \n",
     "dependencies": null,
     "neededBy": null,
@@ -1289,7 +1289,7 @@
   },
   {
     "packageId": "com.xiaomi.bsp.gps.nps",
-    "oem": null,
+    "oem": true,
     "description": "GPS location\nI think bsp = board system package (https://en.wikipedia.org/wiki/Board_support_package)\nNot sure about nps (It might be Non-Permanent GPS station)\nIt's a small package which seems to display a notification when an app is using GPS.\nMore precisely, there is a receiver (GnssEventReceiver) which listen to com.xiaomi.bsp.gps.nps.GetEvent \nThis event most likely happen when an app use the GPS and refers to the state of the communication with the GNSS:\nFIX, LOSE, RECOVER, START, STOP\nIt's safe to remove if you really want to.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1297,7 +1297,7 @@
   },
   {
     "packageId": "com.miui.core",
-    "oem": null,
+    "oem": true,
     "description": "MIUI SDK\nIt is obiously needed for MIUI to work correctly. FYI, it manages the MIUI Analytics service.\nWill cause bootloop if removed.\nI read you can freeze it without issue. I'm... a bit dubious about this.\nIf someone want to try et report the result:\nadb shell am force-stop com.miui.core && adb shell pm disable-user com.miui.core && adb shell pm clear com.miui.core\n",
     "dependencies": null,
     "neededBy": null,
@@ -1305,7 +1305,7 @@
   },
   {
     "packageId": "com.miui.global.packageinstaller",
-    "oem": null,
+    "oem": true,
     "description": "The security check / virus scan which runs after a package installation\nUninstalling it does not cause a bootloop\nPackage installation still works fine\n",
     "dependencies": null,
     "neededBy": null,
@@ -1313,7 +1313,7 @@
   },
   {
     "packageId": "com.miui.guardprovider",
-    "oem": null,
+    "oem": true,
     "description": "Guard Provider security app\nThe app includes 3 different antivirus brands built in that the user can choose (Avast, AVL and Tencent). \nThis app notably perform a virus scan of any apps you want to install. \nA serious vulnerability was found in 2019\nWorth reading : https://research.checkpoint.com/2019/vulnerability-in-xiaomi-pre-installed-security-app/\nYou may want to remove this app from a privacy stance.\nhttps://beta.pithus.org/report/797a7e405bc8e767deebbbcab3e06a19b05156de44292c918b582dff3078d7b8\nNOTE: It's seems removing this package break app installation.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1321,7 +1321,7 @@
   },
   {
     "packageId": "com.miui.systemui.carriers.overlay",
-    "oem": null,
+    "oem": true,
     "description": "MIUI User interface for MCC/MNC configuration\n",
     "dependencies": null,
     "neededBy": null,
@@ -1329,7 +1329,7 @@
   },
   {
     "packageId": "com.miui.systemui.overlay.devices.android",
-    "oem": null,
+    "oem": true,
     "description": "MIUI User interface for 'device' settings?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1337,7 +1337,7 @@
   },
   {
     "packageId": "com.miui.systemui.overlay.devices.android",
-    "oem": null,
+    "oem": true,
     "description": "MIUI User interface for 'device' settings?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1345,7 +1345,7 @@
   },
   {
     "packageId": "com.xiaomi.discover",
-    "oem": null,
+    "oem": true,
     "description": "System Apps Updater\nWARNING : Disable System app updates (but not firmware updates)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1353,7 +1353,7 @@
   },
   {
     "packageId": "com.xiaomi.powerchecker",
-    "oem": null,
+    "oem": true,
     "description": "Power Detector \nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1361,7 +1361,7 @@
   },
   {
     "packageId": "com.xiaomi.miplay_client",
-    "oem": null,
+    "oem": true,
     "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1369,7 +1369,7 @@
   },
   {
     "packageId": "com.android.updater",
-    "oem": null,
+    "oem": true,
     "description": "Mi Updater\nProvide system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n",
     "dependencies": null,
     "neededBy": null,
@@ -1377,7 +1377,7 @@
   },
   {
     "packageId": "com.lbe.security.miui",
-    "oem": null,
+    "oem": true,
     "description": "Permission manager\nLets you monitor apps permission requests.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1385,7 +1385,7 @@
   },
   {
     "packageId": "com.xiaomi.finddevice",
-    "oem": null,
+    "oem": true,
     "description": "Find My Device feature (in the Settings)\nEnables you to locate your lost phone and erase your data remotely. \nYour phone needs to be connected to internet (Wifi/mobile data) for this feature to work. \nREMOVING THIS PACKAGE WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : You cannot disable it via adb\nAccording some sources, disabling MIUI optimizations in the Developer\nsettings and removing the apk file in a custom recovery does not cause a\nbootloop, but I didn't test this.\n",
     "dependencies": null,
     "neededBy": null,
@@ -1393,7 +1393,7 @@
   },
   {
     "packageId": "com.miui.securitycenter",
-    "oem": null,
+    "oem": true,
     "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : I don't have a Xiaomi phone on hand anymore but maybe only disabling it will work : adb shell 'pm disable-user com.miui.securitycenter'\nCan someone try?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1401,7 +1401,7 @@
   },
   {
     "packageId": "com.miui.securitycore",
-    "oem": null,
+    "oem": true,
     "description": "Core features of the \"com.miui.securitycenter\"\nRemoving com.miui.securitycenter will cause your device to bootlop so I guess you should not remove this package neither.\n(Can someone try just in case?)\n",
     "dependencies": null,
     "neededBy": null,
@@ -1409,7 +1409,7 @@
   },
   {
     "packageId": "com.miui.system",
-    "oem": null,
+    "oem": true,
     "description": "Called 'MIUI System Launcher' but it's not the launcher itself (com.miui.home is)\nThis package is another core MIUI app you can't remove. It centralize a lot of default configuration values\n",
     "dependencies": null,
     "neededBy": null,
@@ -1417,7 +1417,7 @@
   },
   {
     "packageId": "com.miui.rom",
-    "oem": null,
+    "oem": true,
     "description": "Core package of MIUI\nDO NOT REMOVE THIS\n",
     "dependencies": null,
     "neededBy": null,
@@ -1425,7 +1425,7 @@
   },
   {
     "packageId": "com.miui.securityadd",
-    "oem": null,
+    "oem": true,
     "description": "Related to the MIUI Security app\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : I don't have a Xiaomi phone on hand anymore but maybe only disabling it will work : adb shell 'pm disable-user com.miui.securityadd'\nCan someone try ?\n",
     "dependencies": null,
     "neededBy": null,
@@ -1433,7 +1433,7 @@
   },
   {
     "packageId": "com.xiaomi.misettings",
-    "oem": null,
+    "oem": true,
     "description": "Xiaomi Settings app\n",
     "dependencies": null,
     "neededBy": null,

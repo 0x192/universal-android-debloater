@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.zte.assistant",
-    "oem": null,
+    "oem": true,
     "description": "ZTE Voice Assistant\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.zte.weather",
-    "oem": null,
+    "oem": true,
     "description": "ZTE Weather app\n)\n",
     "dependencies": null,
     "neededBy": null,

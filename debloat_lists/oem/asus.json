@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.asus.calculator",
-    "oem": null,
+    "oem": true,
     "description": "Asus calculator app\nNOTE : Simple calculator is a good alternative : https://f-droid.org/en/packages/com.simplemobiletools.calculator/\n",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.asus.ia.asusapp",
-    "oem": null,
+    "oem": true,
     "description": "My Asus (https://play.google.com/store/apps/details?id=com.asus.ia.asusapp)\nAsus service center (support + store)              \n",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.asus.soundrecorder",
-    "oem": null,
+    "oem": true,
     "description": "Asus Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder) \n",
     "dependencies": null,
     "neededBy": null,

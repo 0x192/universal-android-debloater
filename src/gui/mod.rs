@@ -4,13 +4,17 @@ pub mod views;
 pub use views::about::About as AboutView;
 pub use views::list::{List as ListView, Message as ListMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
-
-// use crate::core::sync::list_phone_packages;
+pub use crate::core::uad_lists::{ load_debloat_lists, Package };
+use std::{collections::HashMap};
+use static_init::{dynamic};
 
 use iced::{
     button, Align, Application, Button, Clipboard, Column, Command, Space,
     Container, Element, Length, Row, Settings, Text, HorizontalAlignment, VerticalAlignment
 };
+
+#[dynamic]
+static UAD_LISTS: HashMap<String, Package> = load_debloat_lists();
 
 #[derive(Debug, Clone)]
 pub enum View {
@@ -79,7 +83,7 @@ impl Application for UadGui {
     fn new(_flags: ()) -> (Self, Command<Message>) {
         (
             Self::Loading,
-            Command::perform(Self::load_packages(), Message::Loaded),
+            Command::perform(Self::init_application(), Message::Loaded),
         )
     }
 
@@ -93,15 +97,16 @@ impl Application for UadGui {
                 if let Message::Loaded(_state) = message {
                     *self = UadGui::Loaded(State { ..State::default() });
                 }
-                Command::none()
+                Command::perform(Self::load_phone_packages(), Message::ListAction)
+                //Command::perform(Self::load_uad_list(), Message::ListAction)
             }
 
             UadGui::Loaded(state) => match message {
                 Message::PackagesPressed => {
                     state.view = View::List;
-                    state.list_view.update(ListMessage::LoadPackages);
+                    state.list_view.update(ListMessage::LoadPackages(&UAD_LISTS));
                     Command::none()
-                }
+                },
                 Message::AboutPressed => {
                     state.view = View::About;
                     Command::none()
@@ -133,7 +138,7 @@ impl Application for UadGui {
                 input_value:_,
                 about_btn,
                 packages_btn,
-                settings_btn, 
+                settings_btn,
 
             }) => {
                 let packages_btn = Button::new(packages_btn, Text::new("List"))
@@ -204,8 +209,11 @@ impl UadGui {
         UadGui::run(Settings::default()).unwrap_err();
     }
 
-    pub async fn load_packages() -> State {
+    pub async fn init_application() -> State {
         State::default()
+    }
+    pub async fn load_phone_packages() -> ListMessage {
+        ListMessage::LoadPackages(&UAD_LISTS)
     }
 }
 

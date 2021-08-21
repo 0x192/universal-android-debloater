@@ -1,7 +1,7 @@
 [
   {
     "packageId": "com.coloros.appmanager",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -9,7 +9,7 @@
   },
   {
     "packageId": "com.coloros.assistantscreen",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -17,7 +17,7 @@
   },
   {
     "packageId": "com.coloros.backuprestore",
-    "oem": null,
+    "oem": true,
     "description": "Most likely Oppo backup/restore feature \n",
     "dependencies": null,
     "neededBy": null,
@@ -25,7 +25,7 @@
   },
   {
     "packageId": "com.coloros.childrenspace",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -33,7 +33,7 @@
   },
   {
     "packageId": "com.coloros.cloud",
-    "oem": null,
+    "oem": true,
     "description": "Oppo Cloud\n",
     "dependencies": null,
     "neededBy": null,
@@ -41,7 +41,7 @@
   },
   {
     "packageId": "com.coloros.directui",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -49,7 +49,7 @@
   },
   {
     "packageId": "com.coloros.findmyphone",
-    "oem": null,
+    "oem": true,
     "description": "Find my phone service\n",
     "dependencies": null,
     "neededBy": null,
@@ -57,7 +57,7 @@
   },
   {
     "packageId": "com.coloros.gamespace",
-    "oem": null,
+    "oem": true,
     "description": "Game Space\nHub for your Games + some performance optimizations\nhttps://community.coloros.com/thread-9962-1-1.html\n",
     "dependencies": null,
     "neededBy": null,
@@ -65,7 +65,7 @@
   },
   {
     "packageId": "com.coloros.healthcheck",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -73,7 +73,7 @@
   },
   {
     "packageId": "com.coloros.mcs",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -81,7 +81,7 @@
   },
   {
     "packageId": "com.coloros.ocrscanner",
-    "oem": null,
+    "oem": true,
     "description": "ColorOS Optical character recognition scanner\n",
     "dependencies": null,
     "neededBy": null,
@@ -89,7 +89,7 @@
   },
   {
     "packageId": "com.coloros.oppomultiapp",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -97,7 +97,7 @@
   },
   {
     "packageId": "com.coloros.phonenoareainquire",
-    "oem": null,
+    "oem": true,
     "description": "Number Origin\n",
     "dependencies": null,
     "neededBy": null,
@@ -105,7 +105,7 @@
   },
   {
     "packageId": "com.coloros.smartdrive",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -113,7 +113,7 @@
   },
   {
     "packageId": "com.coloros.soundrecorder",
-    "oem": null,
+    "oem": true,
     "description": "ColorOS Sound Recorder\n",
     "dependencies": null,
     "neededBy": null,
@@ -121,7 +121,7 @@
   },
   {
     "packageId": "com.coloros.speechassist",
-    "oem": null,
+    "oem": true,
     "description": "ColorOS Speech Assistant\n",
     "dependencies": null,
     "neededBy": null,
@@ -129,7 +129,7 @@
   },
   {
     "packageId": "com.coloros.widget.smallweather",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -137,7 +137,7 @@
   },
   {
     "packageId": "com.coloros.widget.smallweather",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -145,7 +145,7 @@
   },
   {
     "packageId": "com.heytap.cloud",
-    "oem": null,
+    "oem": true,
     "description": "HeyTap Cloud\n",
     "dependencies": null,
     "neededBy": null,
@@ -153,7 +153,7 @@
   },
   {
     "packageId": "com.mobiletools.systemhelper",
-    "oem": null,
+    "oem": true,
     "description": "System Helper\n",
     "dependencies": null,
     "neededBy": null,
@@ -161,7 +161,7 @@
   },
   {
     "packageId": "com.nearme.atlas",
-    "oem": null,
+    "oem": true,
     "description": "Secure payment\n",
     "dependencies": null,
     "neededBy": null,
@@ -169,7 +169,7 @@
   },
   {
     "packageId": "com.nearme.browser",
-    "oem": null,
+    "oem": true,
     "description": "Default web browser\n",
     "dependencies": null,
     "neededBy": null,
@@ -177,7 +177,7 @@
   },
   {
     "packageId": "com.nearme.instant.platform",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -185,7 +185,7 @@
   },
   {
     "packageId": "com.nearme.themestore",
-    "oem": null,
+    "oem": true,
     "description": "Themes store\n",
     "dependencies": null,
     "neededBy": null,
@@ -193,7 +193,7 @@
   },
   {
     "packageId": "com.oppo.fingerprints.fingerprintsensortest",
-    "oem": null,
+    "oem": true,
     "description": "Fingerprint sensort test\n",
     "dependencies": null,
     "neededBy": null,
@@ -201,7 +201,7 @@
   },
   {
     "packageId": "com.oppo.logkitservice",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -209,7 +209,7 @@
   },
   {
     "packageId": "com.oppo.logkit",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -217,7 +217,7 @@
   },
   {
     "packageId": "com.oppo.market",
-    "oem": null,
+    "oem": true,
     "description": "Oppo App Market\n",
     "dependencies": null,
     "neededBy": null,
@@ -225,7 +225,7 @@
   },
   {
     "packageId": "com.oppo.music",
-    "oem": null,
+    "oem": true,
     "description": "Oppo Music app\n",
     "dependencies": null,
     "neededBy": null,
@@ -233,7 +233,7 @@
   },
   {
     "packageId": "com.oppo.ovoicemanager",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -241,7 +241,7 @@
   },
   {
     "packageId": "com.oppo.oppopowermonitor",
-    "oem": null,
+    "oem": true,
     "description": "",
     "dependencies": null,
     "neededBy": null,
@@ -249,7 +249,7 @@
   },
   {
     "packageId": "com.oppo.quicksearchbox",
-    "oem": null,
+    "oem": true,
     "description": "Single swip from top to bottom search that has lots of Chinese in it\n",
     "dependencies": null,
     "neededBy": null,
@@ -257,7 +257,7 @@
   },
   {
     "packageId": "com.oppo.securepay",
-    "oem": null,
+    "oem": true,
     "description": "Payment Protection\n",
     "dependencies": null,
     "neededBy": null,
@@ -265,7 +265,7 @@
   },
   {
     "packageId": "com.coloros.wallet",
-    "oem": null,
+    "oem": true,
     "description": "Oppo Wallet\n",
     "dependencies": null,
     "neededBy": null,
@@ -273,7 +273,7 @@
   },
   {
     "packageId": "com.realme.findphone.client2",
-    "oem": null,
+    "oem": true,
     "description": "Find my phone client app\n",
     "dependencies": null,
     "neededBy": null,
@@ -281,7 +281,7 @@
   },
   {
     "packageId": "com.coloros.filemanager",
-    "oem": null,
+    "oem": true,
     "description": "ColorOS File Manager\n",
     "dependencies": null,
     "neededBy": null,
@@ -289,7 +289,7 @@
   },
   {
     "packageId": "com.coloros.pictorial(LockscreenMagazine)",
-    "oem": null,
+    "oem": true,
     "description": "Removal will result in no longer being able to access Lockscreen settings.\n",
     "dependencies": null,
     "neededBy": null,
@@ -297,7 +297,7 @@
   },
   {
     "packageId": "com.coloros.securitypermission",
-    "oem": null,
+    "oem": true,
     "description": "Handles app permission management. DO NOT REMOVE THIS\n",
     "dependencies": null,
     "neededBy": null,
@@ -305,7 +305,7 @@
   },
   {
     "packageId": "com.oppo.freefallingmonitor",
-    "oem": null,
+    "oem": true,
     "description": "Provides protection for camera slider in the event of a fall. \nBest described here: https://www.gizchina.com/2018/06/20/oppo-find-x-slide-up-camera-has-anti-fall-feature-guarantees-5-years-usage/\n",
     "dependencies": null,
     "neededBy": null,
@@ -313,7 +313,7 @@
   },
   {
     "packageId": "com.oppo.webview",
-    "oem": null,
+    "oem": true,
     "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
@@ -321,7 +321,7 @@
   },
   {
     "packageId": "com.sohu.inputmethod.sogouoem",
-    "oem": null,
+    "oem": true,
     "description": "Default keyboard\n",
     "dependencies": null,
     "neededBy": null,
