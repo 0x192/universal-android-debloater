@@ -9,8 +9,9 @@ use std::{collections::HashMap};
 use static_init::{dynamic};
 
 use iced::{
-    button, Align, Application, Button, Clipboard, Column, Command, Space,
-    Container, Element, Length, Row, Settings, Text, HorizontalAlignment, VerticalAlignment
+    button, Align, Application, Button, Clipboard, Column, Command, Space, settings,
+    Container, Element, Length, Row, Settings, Text, HorizontalAlignment, VerticalAlignment,
+    window::Settings as Window,
 };
 
 #[dynamic]
@@ -206,7 +207,17 @@ impl Application for UadGui {
 
 impl UadGui {
     pub fn start() {
-        UadGui::run(Settings::default()).unwrap_err();
+        let settings: Settings<()> = Settings {
+            window: Window {
+                size: (1050, 800),
+                resizable: true,
+                decorations: true,
+                ..iced::window::Settings::default()
+            },
+            default_text_size: 17,
+            ..iced::Settings::default()
+        };
+        UadGui::run(settings).unwrap_err();
     }
 
     pub async fn init_application() -> State {

@@ -104,13 +104,29 @@ impl container::StyleSheet for NavigationContainer {
     }
 }
 
-pub struct PackageRow;
-impl container::StyleSheet for PackageRow {
-    fn style(&self) -> container::Style {
-        container::Style {
-            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-            text_color: Some(Color::WHITE),
-            ..container::Style::default()
+
+pub enum PackageRow {
+    Enabled,
+    Disabled,
+}
+impl button::StyleSheet for PackageRow {
+    fn active(&self) -> button::Style {
+        match self {
+            Self::Enabled | Self::Disabled => button::Style {
+                background: Some(Background::Color(ROW_COLOR_PRIMARY)),
+                text_color: Color::WHITE,
+                ..button::Style::default()
+            },
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        match self {
+            Self::Enabled | Self::Disabled => button::Style {
+                background: Some(Background::Color(ROW_COLOR_PRIMARY)),
+                text_color: Color::WHITE,
+                ..self.active()
+            },
         }
     }
 }

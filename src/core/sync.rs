@@ -5,19 +5,21 @@ use std::process::Command;
 
 
 pub fn list_phone_packages() -> String {
-    let output = Command::new("adb")
+/*    let output = Command::new("adb")
                 .arg("shell")
                 .arg("pm")
                 .arg("list")
                 .arg("packages")
                 .output()
-                .expect("adb command failed to start");
+                .expect("adb command failed to start");*/
 
 /*    let output = Command::new("ls")
                 .output()
                 .expect("ls command failed to start");
 */
-    String::from_utf8(output.stdout).unwrap().replace("package:", "")
+/*    String::from_utf8(output.stdout).unwrap().replace("package:", "")*/
+    let temp = "com.samsung.android.MtpApplication\ncom.samsung.android.provider.filterprovider\ncom.samsung.android.provider.shootingmodeprovider\ncom.samsung.android.provider.stickerprovider\ncom.samsung.android.SettingsReceiver\ncom.samsung.android.sm.policy\ncom.samsung.android.timezone.autoupdate_O\ncom.samsung.app.slowmotion\ncom.samsung.cmh\ncom.samsung.dcmservice\ncom.samsung.networkui\ncom.samsung.sec.android.application.csc\ncom.samsung.upsmtheme\ncom.sec.android.app.camera\ncom.sec.android.app.clockpackage\ncom.sec.android.app.launcher\ncom.sec.android.app.myfiles\ncom.sec.android.app.personalization\ncom.sec.android.app.popupcalculator\ncom.sec.android.app.simsettingmgr\ncom.sec.android.app.soundalive\ncom.sec.android.emergencylauncher\ncom.sec.android.emergencymode.service\ncom.sec.android.gallery3d\ncom.sec.android.gallery3d.panorama360view\ncom.sec.android.ofviewer\ncom.sec.android.provider.badge\ncom.sec.android.provider.emergencymode\ncom.sec.android.wallpapercropper2\ncom.sec.automation\ncom.sec.epdg\ncom.sec.ims\ncom.sec.imsservice";
+    return temp.to_string();
 }
 
 

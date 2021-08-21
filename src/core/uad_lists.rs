@@ -37,7 +37,7 @@ pub enum PackageState {
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 pub struct Package {
     id: String,
-    list: String,
+    pub list: String,
     pub description: Option<String>,
     dependencies: Option<String>,
     neededBy: Option<String>,

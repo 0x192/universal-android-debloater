@@ -13,8 +13,10 @@ use crate::core::sync::{ list_phone_packages, uninstall_package };
 #[derive(Default, Debug, Clone)]
 pub struct List {
     p_row: Vec<PackageRow>,
+    phone_packages_row: Vec<PackageRow>,
     packages: String,
     input: text_input::State,
+    description: String,
     package_scrollable_state: scrollable::State,
     package_state_picklist: pick_list::State<PackageState>,
     list_picklist: pick_list::State<UadLists>,
@@ -23,16 +25,9 @@ pub struct List {
     pub input_value: String,
 }
 
-/*impl Default for List {
-    fn default() -> Self {
-        List { ..List::default() }
-    }
-}*/
-
-
 #[derive(Debug, Clone)]
 pub enum Message {
-    ListInputChanged(String),
+    SearchInputChanged(String),
     LoadPackages(&'static HashMap<String, Package>),
     ListSelected(UadLists),
     PackageStateSelected(PackageState),
@@ -44,47 +39,94 @@ pub enum Message {
 impl List {
     pub fn update(&mut self, message: Message) -> Command<Message> {
        match message {
-            Message::ListInputChanged(_letter) => {
-                Command::none()
-            },
+            Message::SearchInputChanged(letter) => {
+                    let mut filtered_packages = Vec::new();
+                    self.input_value = letter;
+
+                    for element in &self.p_row {
+                        if element
+                            .name
+                            .to_lowercase()
+                            .contains(&self.input_value.to_lowercase())
+                        {
+                            filtered_packages.push(element.clone());
+                        }
+                    }
+                    filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+                    self.p_row = filtered_packages;
+                    Command::none()
+                }
 
             Message::LoadPackages(uad_lists) => {
                 self.packages = list_phone_packages();
                 self.p_row = Vec::new();
                 let mut description = "";
-
+                let mut uad_list = "";
                 for p_name in self.packages.lines() {
 
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
+                        uad_list = &uad_lists.get(p_name).unwrap().list;
                     } else {
                         description = "No description";
                     }
 
                     let package_row = PackageRow::new(
                         &p_name,
-                        "Installed",
+                        "installed",
                         &description,
+                        &uad_list,
                     );
                     self.p_row.push(package_row)
                 }
                 self.p_row.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-
+                self.phone_packages_row = self.p_row.clone();
                 Command::none()
             }
 
             Message::ListSelected(list) => {
                 self.selected_list = Some(list);
+                let mut filtered_packages = Vec::new();
+                if list != UadLists::All {
+                    for element in &self.phone_packages_row {
+                        if element
+                            .uad_list
+                            .to_lowercase()
+                            .contains(&list.to_string().to_lowercase())
+                        {
+                            filtered_packages.push(element.clone());
+                        }
+                    }
+                    filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+                    self.p_row = filtered_packages;
+                } else {
+                    self.p_row = self.phone_packages_row.clone();
+                }
                 Command::none()
             }
 
             Message::PackageStateSelected(package_state) => {
                 self.selected_package_state = Some(package_state);
+                let mut filtered_packages = Vec::new();
+
+                for element in &self.phone_packages_row {
+                    if element
+                        .state
+                        .to_lowercase()
+                        .contains(&package_state.to_string().to_lowercase())
+                    {
+                        filtered_packages.push(element.clone());
+                    }
+                }
+                filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+                self.p_row = filtered_packages;
                 Command::none()
             },
-            Message::List(i, row_message) => self.p_row[i]
-                .update(row_message)
-                .map(move |row_message| Message::List(i, row_message)),
+            Message::List(i, row_message) => {
+                let package = self.p_row[i].clone();
+                self.description = package.description;
+                self.p_row[i].update(row_message).map(move |row_message| Message::List(i, row_message))
+            }
             Message::NoEvent => Command::none(),
         }
     }
@@ -94,7 +136,7 @@ impl List {
                     &mut self.input,
                     "Search packages...",
                     &mut self.input_value,
-                    Message::ListInputChanged,
+                    Message::SearchInputChanged,
                 )
                 .padding(5);
 
@@ -132,21 +174,22 @@ impl List {
                 let package_panel = Row::new()
                     .width(Length::Fill)
                     .align_items(Align::Center)
+                    .padding(5)
                     .push(package_name)
                     .push(package_state)
                     .push(advice);
                     
                 // let mut packages_v: Vec<&str> = self.packages.lines().collect();
-
-/*                let description_panel = Row::new()
+                let description_panel = Row::new()
                     .width(Length::Fill)
                     .align_items(Align::Center)
-                    .push(package_name)*/
+                    .height(Length::FillPortion(2))
+                    .push(Text::new(&self.description));
 
                 let test = self.p_row
                     .iter_mut()
                     .enumerate()
-                    .fold(Column::new().spacing(5), |col, (i, p)| {
+                    .fold(Column::new().spacing(6), |col, (i, p)| {
                         col.push(p.view().map(move |msg| Message::List(i, msg)))
                     });
 
@@ -154,6 +197,7 @@ impl List {
                     .push(test)
                     .spacing(5)
                     .align_items(Align::Center)
+                    .height(Length::FillPortion(6))
                     .style(style::Scrollable);
 
                 let content = Column::new()
@@ -162,7 +206,8 @@ impl List {
                     .align_items(Align::Center)
                     .push(control_panel)
                     .push(package_panel)
-                    .push(packages_scrollable);
+                    .push(packages_scrollable)
+                    .push(description_panel);
 
                 Container::new(content)
                     .height(Length::Fill)
@@ -177,7 +222,8 @@ pub struct PackageRow {
     pub name: String,
     pub state: String,
     pub description: String,
-
+    pub uad_list: String,
+    package_btn_state: button::State,
     remove_restore_btn_state: button::State,
 }
 
@@ -194,13 +240,16 @@ impl PackageRow {
         name: &str,
         state: &str,
         description: &str,
+        uad_list: &str,
 
     ) -> Self {
         Self {
             name: name.to_string(),
             state: "Installed".to_string(),
             description: description.to_string(),
+            uad_list: uad_list.to_string(),
             remove_restore_btn_state: button::State::default(),
+            package_btn_state: button::State::default(),
         }
     }
 
@@ -220,36 +269,36 @@ impl PackageRow {
         let package = self.clone();
         let add_svg_path = format!("{}/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
 
-        let content = Row::new()
-            .align_items(Align::Center)
-            .push(Text::new(&self.name).width(Length::FillPortion(6)))
-            .push(Text::new(&self.state).width(Length::FillPortion(3)))
-            .push(Text::new(&self.description).width(Length::FillPortion(3)))
-            .push(if self.state == "Installed" {
-                                        Button::new(
-                                            &mut self.remove_restore_btn_state,
-                                            Svg::from_path(add_svg_path)
-                                                .width(Length::Fill)
-                                                .height(Length::Fill),
-                                        )
-                                        .on_press(RowMessage::RemovePressed(package))
-                                        .style(style::PrimaryButton::Enabled)
-                                    } else {
-                                        Button::new(
-                                            &mut self.remove_restore_btn_state,
-                                            Text::new("Restore")
-                                                .width(Length::Fill)
-                                                .horizontal_alignment(HorizontalAlignment::Center),
-                                        )
-                                        .on_press(RowMessage::RestorePressed(package))
-                                        .style(style::PrimaryButton::Enabled)
-                                    });
+        let content = Button::new(
+            &mut self.package_btn_state,
+            Row::new()
+                .align_items(Align::Center)
+                .push(Text::new(&self.name).width(Length::FillPortion(6)))
+                .push(Text::new(&self.state).width(Length::FillPortion(3)))
+                .push(if self.state == "Installed" {
+                                            Button::new(
+                                                &mut self.remove_restore_btn_state,
+                                                Svg::from_path(add_svg_path)
+                                                    .width(Length::Fill)
+                                                    .height(Length::Fill),
+                                            )
+                                            .on_press(RowMessage::RemovePressed(package))
+                                            .style(style::PrimaryButton::Enabled)
+                                        } else {
+                                            Button::new(
+                                                &mut self.remove_restore_btn_state,
+                                                Text::new("Restore")
+                                                    .width(Length::Fill)
+                                                    .horizontal_alignment(HorizontalAlignment::Center),
+                                            )
+                                            .on_press(RowMessage::RestorePressed(package))
+                                            .style(style::PrimaryButton::Enabled)
+                                        })
+            )
+            .style(style::PackageRow::Enabled)
+            .on_press(RowMessage::NoEvent);
 
-        let p_row = Container::new(content)
-            .padding(10)
-            .style(style::PackageRow);
-
-        Column::new().push(p_row).into()
+        Column::new().push(content).into()
 
 
     }
