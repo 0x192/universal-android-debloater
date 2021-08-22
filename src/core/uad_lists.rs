@@ -3,37 +3,6 @@ use serde_json;
 use std::fs;
 use std::{collections::HashMap};
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum UadLists {
-    All,
-    Aosp,
-    Carrier,
-    Google,
-    Misc,
-    Oem
-}
-
-/*pub enum Oem {
-    Asus,
-    Huawei,
-    Lg,
-    Motorola,
-    Nokia,
-    OnePlus,
-    Oppo,
-    Samsung,
-    Sony,
-    Tcl,
-    Xiaomi,
-    Zte,
-}*/
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum PackageState {
-    Installed,
-    Uninstalled
-}
-
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 pub struct Package {
     id: String,
@@ -45,29 +14,33 @@ pub struct Package {
 }
 
 
-impl UadLists {
-    pub const ALL: [UadLists; 6] = [
-        UadLists::All,
-        UadLists::Aosp,
-        UadLists::Carrier,
-        UadLists::Google,
-        UadLists::Misc,
-        UadLists::Oem,
-    ];
-
-/*    fn matches(&self, list: &UadLists) -> bool {
-        match self {
-            UadLists::All => true,
-            UadLists::Active => !task.completed,
-            UadLists::Completed => task.completed,
-        }
-    }*/
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum UadLists {
+    All,
+    Aosp,
+    Carrier,
+    Google,
+    Misc,
+    Oem,
+    Unlisted,
 }
 
 impl Default for UadLists {
     fn default() -> UadLists {
         UadLists::All
     }
+}
+
+impl UadLists {
+    pub const ALL: [UadLists; 7] = [
+        UadLists::All,
+        UadLists::Aosp,
+        UadLists::Carrier,
+        UadLists::Google,
+        UadLists::Misc,
+        UadLists::Oem,
+        UadLists::Unlisted,
+    ];
 }
 
 impl std::fmt::Display for UadLists {
@@ -82,18 +55,33 @@ impl std::fmt::Display for UadLists {
                 UadLists::Google => "google",
                 UadLists::Misc => "misc",
                 UadLists::Oem => "oem",
+                UadLists::Unlisted => "unlisted",
             }
         )
     }
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum PackageState {
+    All,
+    Installed,
+    Uninstalled
+}
+
+impl Default for PackageState {
+    fn default() -> PackageState {
+        PackageState::All
+    }
+}
 
 impl PackageState {
-    pub const ALL: [PackageState; 2] = [
+    pub const ALL: [PackageState; 3] = [
+        PackageState::All,
         PackageState::Installed,
         PackageState::Uninstalled,
     ];
 }
+
 
 impl std::fmt::Display for PackageState {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -101,6 +89,7 @@ impl std::fmt::Display for PackageState {
             f,
             "{}",
             match self {
+                PackageState::All => "all",
                 PackageState::Installed => "installed",
                 PackageState::Uninstalled => "uninstalled",
             }

@@ -42,36 +42,22 @@ pub enum Message {
 impl List {
     pub fn update(&mut self, message: Message) -> Command<Message> {
        match message {
-            Message::SearchInputChanged(letter) => {
-                    let mut filtered_packages = Vec::new();
-                    self.input_value = letter;
-
-                    for element in &self.phone_packages_row {
-                        if element
-                            .name
-                            .to_lowercase()
-                            .contains(&self.input_value.to_lowercase())
-                        {
-                            filtered_packages.push(element.clone());
-                        }
-                    }
-                    filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-                    self.p_row = filtered_packages;
-                    Command::none()
-                }
-
             Message::LoadPackages(uad_lists) => {
                 self.packages = list_all_system_packages();
                 self.p_row = Vec::new();
+                self.selected_package_state = Some(PackageState::Installed);
+                self.selected_list = Some(UadLists::All);
 
                 let installed_system_packages = hashset_installed_system_packages();
-                let mut description = "No description";
-                let mut uad_list = "";
+                let mut description;
+                let mut uad_list;
                 let mut state;
 
                 for p_name in self.packages.lines() {
                     state = "installed";
-
+                    description = "[No description]";
+                    uad_list = "unlisted";
+                    
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
                         uad_list = &uad_lists.get(p_name).unwrap().list;
@@ -91,37 +77,23 @@ impl List {
                 }
                 self.p_row.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
                 self.phone_packages_row = self.p_row.clone();
+                Self::filter_package_lists(self);
                 Command::none()
             }
-
+            Message::SearchInputChanged(letter) => {
+                self.input_value = letter;
+                Self::filter_package_lists(self);
+                Command::none()
+            }
             Message::ListSelected(list) => {
                 self.selected_list = Some(list);
-                let mut filtered_packages = Vec::new();
-                if list != UadLists::All {
-                    for element in &self.phone_packages_row {
-                        if element.uad_list.to_string() == list.to_string() {
-                            filtered_packages.push(element.clone());
-                        }
-                    }
-                    filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-                    self.p_row = filtered_packages;
-                } else {
-                    self.p_row = self.phone_packages_row.clone();
-                }
+                Self::filter_package_lists(self);
                 Command::none()
             }
 
             Message::PackageStateSelected(package_state) => {
                 self.selected_package_state = Some(package_state);
-                let mut filtered_packages = Vec::new();
-
-                for element in &self.phone_packages_row {
-                    if element.state.to_string() == package_state.to_string() {
-                        filtered_packages.push(element.clone());
-                    }
-                }
-                filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-                self.p_row = filtered_packages;
+                Self::filter_package_lists(self);
                 Command::none()
             },
             Message::List(i, row_message) => {
@@ -215,6 +187,26 @@ impl List {
                     .style(style::Content)
                     .into()
     }
+
+    fn filter_package_lists(&mut self) {
+
+        let list_filter: UadLists = self.selected_list.unwrap();
+        let package_filter: PackageState = self.selected_package_state.unwrap();
+
+        let mut filtered_packages: Vec<PackageRow> = self.phone_packages_row
+            .iter()
+            .filter(
+                |p|
+                (p.name.contains(&self.input_value) || self.input_value.is_empty()) && 
+                (p.state == package_filter.to_string() || package_filter == PackageState::All) &&
+                (p.uad_list.to_string() == list_filter.to_string() || list_filter == UadLists::All)
+            )
+            .cloned()
+            .collect();
+            
+        filtered_packages.sort_by(|a, b| a.name.cmp(&b.name));
+        self.p_row = filtered_packages;
+    }
 }
 
 #[derive(Clone, Debug)]
@@ -232,7 +224,6 @@ pub enum RowMessage {
     NoEvent,
     RemovePressed(PackageRow),
     RestorePressed(PackageRow),
-    Uninstall(String)
 }
 
 impl PackageRow {
@@ -266,7 +257,6 @@ impl PackageRow {
                 Command::none()
             }
             RowMessage::NoEvent => Command::none(),
-            RowMessage::Uninstall(_) => Command::none(),
         }
     }
 
