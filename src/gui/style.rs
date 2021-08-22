@@ -72,7 +72,6 @@ impl container::StyleSheet for NavigationContainer {
     }
 }
 
-
 pub enum PackageRow {
     Enabled,
     Disabled,

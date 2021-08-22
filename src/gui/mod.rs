@@ -5,6 +5,7 @@ pub use views::about::About as AboutView;
 pub use views::list::{List as ListView, Message as ListMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
 pub use crate::core::uad_lists::{ load_debloat_lists, Package };
+pub use crate::core::sync::get_phone_brand;
 use std::{collections::HashMap};
 use static_init::{dynamic};
 
@@ -46,6 +47,7 @@ pub struct State {
     about_btn: button::State,
     settings_btn: button::State,
     packages_btn: button::State,
+    device_name: String,
 }
 
 #[derive(Debug, Clone)]
@@ -69,6 +71,7 @@ impl Default for State {
             about_view: AboutView::default(),
             settings_view: SettingsView::default(),
             input_value: "".to_string(),
+            device_name: "No phone connected".to_string(),
             about_btn: button::State::default(),
             settings_btn: button::State::default(),
             packages_btn: button::State::default(),
@@ -99,7 +102,6 @@ impl Application for UadGui {
                     *self = UadGui::Loaded(State { ..State::default() });
                 }
                 Command::perform(Self::load_phone_packages(), Message::ListAction)
-                //Command::perform(Self::load_uad_list(), Message::ListAction)
             }
 
             UadGui::Loaded(state) => match message {
@@ -117,6 +119,7 @@ impl Application for UadGui {
                     Command::none()
                 }
                 Message::ListAction(msg) => {
+                    state.device_name = get_phone_brand();
                     state.list_view.update(msg).map(Message::ListAction)
                 }
                 Message::SettingsAction(msg) => {
@@ -140,6 +143,7 @@ impl Application for UadGui {
                 about_btn,
                 packages_btn,
                 settings_btn,
+                device_name,
 
             }) => {
                 let packages_btn = Button::new(packages_btn, Text::new("List"))
@@ -147,10 +151,12 @@ impl Application for UadGui {
                     .padding(5)
                     .style(style::PrimaryButton::Enabled);
                 let divider = Space::new(Length::Fill, Length::Shrink);
+
                 let about_btn = Button::new(about_btn, Text::new("About"))
                     .on_press(Message::AboutPressed)
                     .padding(5)
                     .style(style::PrimaryButton::Enabled);
+
                 let settings_btn = Button::new(settings_btn, Text::new("Settings"))
                     .on_press(Message::SettingsPressed)
                     .padding(5)
@@ -158,10 +164,11 @@ impl Application for UadGui {
 
                 let row = Row::new()
                     .width(Length::Fill)
-                    .align_items(Align::End)
+                    .align_items(Align::Center)
                     .spacing(10)
-                    .push(packages_btn)
+                    .push(Text::new("Device: ".to_string() + &device_name))
                     .push(divider)
+                    .push(packages_btn)
                     .push(about_btn)
                     .push(settings_btn);
 
@@ -203,7 +210,6 @@ impl Application for UadGui {
 
 }
 
-    
 
 impl UadGui {
     pub fn start() {
@@ -230,7 +236,7 @@ impl UadGui {
 
 fn loading_data<'a>() -> Element<'a, Message> {
     Container::new(
-        Text::new("Packages loading...")
+        Text::new("Please wait...")
             .horizontal_alignment(HorizontalAlignment::Center)
             .vertical_alignment(VerticalAlignment::Center)
             .size(20),

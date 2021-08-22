@@ -5,7 +5,7 @@ use std::{collections::HashMap};
 use iced::{
     scrollable, Align, Column, Command, Container, Element, Space,
     Length, Row, Scrollable, Text, text_input, TextInput, Svg,
-    PickList, pick_list, Button, button, HorizontalAlignment,
+    PickList, pick_list, Button, button, HorizontalAlignment, VerticalAlignment
 };
 
 use crate::core::sync::{ 
@@ -15,6 +15,7 @@ use crate::core::sync::{
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
+    ready: bool,
     p_row: Vec<PackageRow>,
     phone_packages_row: Vec<PackageRow>,
     packages: String,
@@ -41,7 +42,7 @@ pub enum Message {
 
 impl List {
     pub fn update(&mut self, message: Message) -> Command<Message> {
-       match message {
+        match message {
             Message::LoadPackages(uad_lists) => {
                 self.packages = list_all_system_packages();
                 self.p_row = Vec::new();
@@ -78,6 +79,7 @@ impl List {
                 self.p_row.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
                 self.phone_packages_row = self.p_row.clone();
                 Self::filter_package_lists(self);
+                self.ready = true;
                 Command::none()
             }
             Message::SearchInputChanged(letter) => {
@@ -103,89 +105,94 @@ impl List {
             }
             Message::NoEvent => Command::none(),
         }
+
+
     }
     pub fn view(&mut self) -> Element<Message> {
+        if self.ready {
+            let search_packages = TextInput::new(
+                &mut self.input,
+                "Search packages...",
+                &mut self.input_value,
+                Message::SearchInputChanged,
+            )
+            .padding(5);
 
-                let search_packages = TextInput::new(
-                    &mut self.input,
-                    "Search packages...",
-                    &mut self.input_value,
-                    Message::SearchInputChanged,
-                )
-                .padding(5);
+            // let package_amount = Text::new(format!("{} packages found", packages.len()));
 
-                // let package_amount = Text::new(format!("{} packages found", packages.len()));
+            let divider = Space::new(Length::Fill, Length::Shrink);
 
-                let divider = Space::new(Length::Fill, Length::Shrink);
+            let list_picklist = PickList::new(
+                        &mut self.list_picklist,
+                        &UadLists::ALL[..],
+                        self.selected_list,
+                        Message::ListSelected,
+                    );
 
-                let list_picklist = PickList::new(
-                            &mut self.list_picklist,
-                            &UadLists::ALL[..],
-                            self.selected_list,
-                            Message::ListSelected,
-                        );
+            let package_state_picklist = PickList::new(
+                        &mut self.package_state_picklist,
+                        &PackageState::ALL[..],
+                        self.selected_package_state,
+                        Message::PackageStateSelected,
+                    );
 
-                let package_state_picklist = PickList::new(
-                            &mut self.package_state_picklist,
-                            &PackageState::ALL[..],
-                            self.selected_package_state,
-                            Message::PackageStateSelected,
-                        );
+            let control_panel = Row::new()
+                .width(Length::Fill)
+                .align_items(Align::Center)
+                .spacing(10)
+                .push(search_packages)
+                .push(divider)
+                .push(package_state_picklist)
+                .push(list_picklist);
 
-                let control_panel = Row::new()
-                    .width(Length::Fill)
-                    .align_items(Align::Center)
-                    .spacing(10)
-                    .push(search_packages)
-                    .push(divider)
-                    .push(package_state_picklist)
-                    .push(list_picklist);
+            let package_name = Text::new("Package").width(Length::FillPortion(6));
+            let package_state = Text::new("State").width(Length::FillPortion(3));
 
-                let package_name = Text::new("Package").width(Length::FillPortion(6));
-                let package_state = Text::new("State").width(Length::FillPortion(3));
+            let package_panel = Row::new()
+                .width(Length::Fill)
+                .align_items(Align::Center)
+                .padding(5)
+                .push(package_name)
+                .push(package_state);
+                
+            // let mut packages_v: Vec<&str> = self.packages.lines().collect();
+            let description_panel = Row::new()
+                .width(Length::Fill)
+                .align_items(Align::Center)
+                .height(Length::FillPortion(2))
+                .push(Text::new(&self.description));
 
-                let package_panel = Row::new()
-                    .width(Length::Fill)
-                    .align_items(Align::Center)
-                    .padding(5)
-                    .push(package_name)
-                    .push(package_state);
-                    
-                // let mut packages_v: Vec<&str> = self.packages.lines().collect();
-                let description_panel = Row::new()
-                    .width(Length::Fill)
-                    .align_items(Align::Center)
-                    .height(Length::FillPortion(2))
-                    .push(Text::new(&self.description));
+            let test = self.p_row
+                .iter_mut()
+                .enumerate()
+                .fold(Column::new().spacing(6), |col, (i, p)| {
+                    col.push(p.view().map(move |msg| Message::List(i, msg)))
+                });
 
-                let test = self.p_row
-                    .iter_mut()
-                    .enumerate()
-                    .fold(Column::new().spacing(6), |col, (i, p)| {
-                        col.push(p.view().map(move |msg| Message::List(i, msg)))
-                    });
+            let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
+                .push(test)
+                .spacing(5)
+                .align_items(Align::Center)
+                .height(Length::FillPortion(6))
+                .style(style::Scrollable);
 
-                let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
-                    .push(test)
-                    .spacing(5)
-                    .align_items(Align::Center)
-                    .height(Length::FillPortion(6))
-                    .style(style::Scrollable);
+            let content = Column::new()
+                .width(Length::Fill)
+                .spacing(10)
+                .align_items(Align::Center)
+                .push(control_panel)
+                .push(package_panel)
+                .push(packages_scrollable)
+                .push(description_panel);
 
-                let content = Column::new()
-                    .width(Length::Fill)
-                    .spacing(10)
-                    .align_items(Align::Center)
-                    .push(control_panel)
-                    .push(package_panel)
-                    .push(packages_scrollable)
-                    .push(description_panel);
-
-                Container::new(content)
-                    .height(Length::Fill)
-                    .padding(10)
-                    .style(style::Content)
-                    .into()
+            Container::new(content)
+                .height(Length::Fill)
+                .padding(10)
+                .style(style::Content)
+                .into()
+        } else {
+            loading_data()
+        }
     }
 
     fn filter_package_lists(&mut self) {
@@ -297,4 +304,19 @@ impl PackageRow {
 
 
     }
+}
+
+fn loading_data<'a>() -> Element<'a, Message> {
+    Container::new(
+        Text::new("Pulling packages from the phone. Please wait...")
+            .horizontal_alignment(HorizontalAlignment::Center)
+            .vertical_alignment(VerticalAlignment::Center)
+            .size(20),
+    )
+    .width(Length::Fill)
+    .height(Length::Fill)
+    .center_y()
+    .center_x()
+    .style(style::Content)
+    .into()
 }
