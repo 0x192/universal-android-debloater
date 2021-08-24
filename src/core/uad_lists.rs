@@ -1,7 +1,8 @@
 use serde::{Deserialize};
 use serde_json;
-use std::fs;
+//use std::fs;
 use std::{collections::HashMap};
+
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 pub struct Package {
@@ -99,11 +100,12 @@ impl std::fmt::Display for PackageState {
 
 
 pub fn load_debloat_lists() -> HashMap<String, Package> {
+    const DATA: &str = include_str!("../../ressources/assets/uad_lists.json");
     let mut package_lists = HashMap::new();
-    let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
+    //let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
 
     // TODO: Do it without intermediary Vec 
-    let list: Vec<Package> = serde_json::from_str(&data).expect("Unable to parse");
+    let list: Vec<Package> = serde_json::from_str(&DATA).expect("Unable to parse");
 
     for p in list {
         let name = p.id.clone();

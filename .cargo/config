@@ -1,0 +1,9 @@
+[target.x86_64-pc-windows-gnu]
+linker = "/usr/bin/x86_64-w64-mingw32-gcc"
+ar = "/usr/bin/x86_64-w64-mingw32-ar"
+
+[target.i686-pc-windows-gnu]
+linker = "/usr/bin/i686-w64-mingw32-gcc"
+
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
