@@ -100,7 +100,7 @@ impl std::fmt::Display for PackageState {
 
 pub fn load_debloat_lists() -> HashMap<String, Package> {
     let mut package_lists = HashMap::new();
-    let data = fs::read_to_string("debloat_lists/all.json").expect("Unable to read file");
+    let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
 
     // TODO: Do it without intermediary Vec 
     let list: Vec<Package> = serde_json::from_str(&data).expect("Unable to parse");

@@ -269,7 +269,7 @@ impl PackageRow {
 
     pub fn view(&mut self) -> Element<RowMessage> {
         let package = self.clone();
-        let add_svg_path = format!("{}/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
+        let add_svg_path = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
 
         let content = Button::new(
             &mut self.package_btn_state,

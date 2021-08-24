@@ -107,6 +107,7 @@ impl Application for UadGui {
             UadGui::Loaded(state) => match message {
                 Message::PackagesPressed => {
                     state.view = View::List;
+                    state.device_name = get_phone_brand();
                     state.list_view.update(ListMessage::LoadPackages(&UAD_LISTS));
                     Command::none()
                 },
