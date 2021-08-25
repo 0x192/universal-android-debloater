@@ -12,7 +12,7 @@ use static_init::{dynamic};
 use iced::{
     button, Align, Application, Button, Clipboard, Column, Command, Space,
     Container, Element, Length, Row, Settings, Text, HorizontalAlignment, 
-    VerticalAlignment, window::Settings as Window,
+    VerticalAlignment, window::Settings as Window, Svg,
 };
 
 #[dynamic]
@@ -147,10 +147,20 @@ impl Application for UadGui {
                 device_name,
 
             }) => {
-                let packages_btn = Button::new(packages_btn, Text::new("List"))
+                let add_svg_path = format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"));
+                let refresh_list_icon = Svg::from_path(add_svg_path);
+
+                let refresh_list_text = Text::new("Catalog ");
+
+                let packages_btn = Button::new(packages_btn, 
+                        Row::new()
+                        .push(refresh_list_text)
+                        .push(refresh_list_icon)
+                    )
                     .on_press(Message::PackagesPressed)
                     .padding(5)
                     .style(style::PrimaryButton::Enabled);
+
                 let divider = Space::new(Length::Fill, Length::Shrink);
 
                 let about_btn = Button::new(about_btn, Text::new("About"))

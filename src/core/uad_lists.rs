@@ -5,12 +5,13 @@ use std::{collections::HashMap};
 
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
+#[serde(rename_all = "camelCase")]
 pub struct Package {
     id: String,
     pub list: String,
     pub description: Option<String>,
     dependencies: Option<String>,
-    neededBy: Option<String>,
+    needed_by: Option<String>,
     labels: Option<Vec<String>>,
 }
 

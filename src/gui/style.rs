@@ -9,7 +9,7 @@ pub const ROW_COLOR_PRIMARY: Color = Color::from_rgb(0.55, 0.44, 0.27);
 
 pub enum PrimaryButton {
     Enabled,
-    Disabled,
+    //Disabled,
 }
 
 impl button::StyleSheet for PrimaryButton {
@@ -23,14 +23,14 @@ impl button::StyleSheet for PrimaryButton {
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..button::Style::default()
             },
-            Self::Disabled => button::Style {
+/*            Self::Disabled => button::Style {
                 background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
                 border_color: Color::from_rgb(0.29, 0.19, 0.03),
                 border_width: 2.0,
                 shadow_offset: Vector::new(1.0, 1.0),
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..button::Style::default()
-            },
+            },*/
         }
     }
 
@@ -41,11 +41,11 @@ impl button::StyleSheet for PrimaryButton {
                 text_color: Color::WHITE,
                 ..self.active()
             },
-            Self::Disabled => button::Style {
+            /*Self::Disabled => button::Style {
                 background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..self.active()
-            },
+            },*/
         }
     }
 }
@@ -72,28 +72,21 @@ impl container::StyleSheet for NavigationContainer {
     }
 }
 
-pub enum PackageRow {
-    Enabled,
-    Disabled,
-}
+pub struct PackageRow;
 impl button::StyleSheet for PackageRow {
     fn active(&self) -> button::Style {
-        match self {
-            Self::Enabled | Self::Disabled => button::Style {
-                background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-                text_color: Color::WHITE,
-                ..button::Style::default()
-            },
+        button::Style {
+            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
+            text_color: Color::WHITE,
+            ..button::Style::default()
         }
     }
 
     fn hovered(&self) -> button::Style {
-        match self {
-            Self::Enabled | Self::Disabled => button::Style {
-                background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-                text_color: Color::WHITE,
-                ..self.active()
-            },
+        button::Style {
+            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
+            text_color: Color::WHITE,
+            ..self.active()
         }
     }
 }

@@ -1,11 +1,16 @@
 use std::process::Command;
 use std::collections::HashSet;
 
+#[cfg(target_os = "windows")]
+use std::os::windows::process::CommandExt;
+
+
 pub fn adb_shell_command(args: &str) -> Result<String,String> {
 
     #[cfg(target_os = "windows")]
         let output = Command::new("./ressources/windows/adb/adb")
             .args(&["shell", args])
+            .creation_flags(0x08000000)
             .output()
             .expect("adb command failed to start. Do you have ADB installed?");
 

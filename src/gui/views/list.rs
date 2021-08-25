@@ -4,7 +4,7 @@ use std::{collections::HashMap};
 
 use iced::{
     scrollable, Align, Column, Command, Container, Element, Space,
-    Length, Row, Scrollable, Text, text_input, TextInput, Svg,
+    Length, Row, Scrollable, Text, text_input, TextInput, //Svg,
     PickList, pick_list, Button, button, HorizontalAlignment, VerticalAlignment
 };
 
@@ -36,7 +36,6 @@ pub enum Message {
     ListSelected(UadLists),
     PackageStateSelected(PackageState),
     List(usize, RowMessage),
-    NoEvent,
 }
 
 
@@ -88,6 +87,7 @@ impl List {
                 Command::none()
             }
             Message::ListSelected(list) => {
+
                 self.selected_list = Some(list);
                 Self::filter_package_lists(self);
                 Command::none()
@@ -103,7 +103,6 @@ impl List {
                 self.description = package.description;
                 self.p_row[i].update(row_message).map(move |row_message| Message::List(i, row_message))
             }
-            Message::NoEvent => Command::none(),
         }
 
 
@@ -147,13 +146,15 @@ impl List {
 
             let package_name = Text::new("Package").width(Length::FillPortion(6));
             let package_state = Text::new("State").width(Length::FillPortion(3));
+            let package_action = Text::new("").width(Length::FillPortion(1));
 
             let package_panel = Row::new()
                 .width(Length::Fill)
-                .align_items(Align::Center)
-                .padding(5)
                 .push(package_name)
-                .push(package_state);
+                .push(package_state)
+                .push(package_action)
+                .push(Space::with_width(Length::Units(15)));
+
                 
             // let mut packages_v: Vec<&str> = self.packages.lines().collect();
             let description_panel = Row::new()
@@ -162,7 +163,7 @@ impl List {
                 .height(Length::FillPortion(2))
                 .push(Text::new(&self.description));
 
-            let test = self.p_row
+            let packages = self.p_row
                 .iter_mut()
                 .enumerate()
                 .fold(Column::new().spacing(6), |col, (i, p)| {
@@ -170,9 +171,9 @@ impl List {
                 });
 
             let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
-                .push(test)
-                .spacing(5)
-                .align_items(Align::Center)
+                .push(packages)
+                .spacing(2)
+                .align_items(Align::Start)
                 .height(Length::FillPortion(6))
                 .style(style::Scrollable);
 
@@ -269,40 +270,42 @@ impl PackageRow {
 
     pub fn view(&mut self) -> Element<RowMessage> {
         let package = self.clone();
-        let add_svg_path = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
+        //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
+        //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
 
-        let content = Button::new(
-            &mut self.package_btn_state,
-            Row::new()
-                .align_items(Align::Center)
-                .push(Text::new(&self.name).width(Length::FillPortion(6)))
-                .push(Text::new(&self.state).width(Length::FillPortion(3)))
-                .push(if self.state == "installed" {
-                                            Button::new(
-                                                &mut self.remove_restore_btn_state,
-                                                Svg::from_path(add_svg_path)
-                                                    .width(Length::Fill)
-                                                    .height(Length::Fill),
-                                            )
-                                            .on_press(RowMessage::RemovePressed(package))
-                                            .style(style::PrimaryButton::Enabled)
-                                        } else {
-                                            Button::new(
-                                                &mut self.remove_restore_btn_state,
-                                                Text::new("Restore")
-                                                    .width(Length::Fill)
-                                                    .horizontal_alignment(HorizontalAlignment::Center),
-                                            )
-                                            .on_press(RowMessage::RestorePressed(package))
-                                            .style(style::PrimaryButton::Enabled)
-                                        })
+        Row::new() 
+            .push(Button::new(
+                &mut self.package_btn_state,
+                Row::new()
+                    .align_items(Align::Center)
+                    .push(Text::new(&self.name).width(Length::FillPortion(6)))
+                    .push(Text::new(&self.state).width(Length::FillPortion(3)))
+                    .push(if self.state == "installed" {
+                                                Button::new(
+                                                    &mut self.remove_restore_btn_state,
+                                                    Text::new("Uninstall")
+                                                        .horizontal_alignment(HorizontalAlignment::Center),
+                                                )
+                                                .on_press(RowMessage::RemovePressed(package))
+                                                .style(style::PrimaryButton::Enabled)
+                                                .width(Length::FillPortion(1))
+                                            } else {
+                                                Button::new(
+                                                    &mut self.remove_restore_btn_state,
+                                                    Text::new("Restore")
+                                                        .horizontal_alignment(HorizontalAlignment::Center),
+                                                )
+                                                .on_press(RowMessage::RestorePressed(package))
+                                                .style(style::PrimaryButton::Enabled)
+                                                .width(Length::FillPortion(1))
+                                            })
+                )
+                .style(style::PackageRow)
+                .width(Length::Fill)
+                .on_press(RowMessage::NoEvent)
             )
-            .style(style::PackageRow::Enabled)
-            .on_press(RowMessage::NoEvent);
-
-        Column::new().push(content).into()
-
-
+            .push(Space::with_width(Length::Units(15)))
+            .into()
     }
 }
 
