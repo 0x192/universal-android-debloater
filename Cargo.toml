@@ -5,9 +5,11 @@ name = "UadGui"
 version = "0.1.0"
 authors = ["w1nst0n"]
 edition = "2018"
+resolver = "2"
 
 [dependencies]
-iced = { version = "^0.3", features = ["svg"] }
+iced = { git = "https://github.com/hecrj/iced.git", features = ["svg"] }
+web-sys = { version = "0.3.51" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"
