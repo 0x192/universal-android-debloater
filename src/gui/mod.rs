@@ -46,7 +46,7 @@ pub struct State {
     input_value: String,
     about_btn: button::State,
     settings_btn: button::State,
-    packages_btn: button::State,
+    catalog_btn: button::State,
     device_name: String,
 }
 
@@ -57,9 +57,9 @@ pub enum Message {
     // Navigation Panel
     AboutPressed,
     SettingsPressed,
-    PackagesPressed,
+    CatalogRefreshPress,
 
-    ListAction(ListMessage),
+    CatalogAction(ListMessage),
     SettingsAction(SettingsMessage),
 }
 
@@ -74,7 +74,7 @@ impl Default for State {
             device_name: "No phone connected".to_string(),
             about_btn: button::State::default(),
             settings_btn: button::State::default(),
-            packages_btn: button::State::default(),
+            catalog_btn: button::State::default(),
         }
     }
 }
@@ -101,15 +101,15 @@ impl Application for UadGui {
                 if let Message::Loaded(_state) = message {
                     *self = UadGui::Loaded(State { ..State::default() });
                 }
-                Command::perform(Self::load_phone_packages(), Message::ListAction)
+                Command::perform(Self::load_phone_packages(), Message::CatalogAction)
             }
 
             UadGui::Loaded(state) => match message {
-                Message::PackagesPressed => {
+                Message::CatalogRefreshPress => {
+                    state.list_view = ListView::default();
                     state.view = View::List;
-                    state.device_name = get_phone_brand();
-                    state.list_view.update(ListMessage::LoadPackages(&UAD_LISTS));
-                    Command::none()
+                    Command::perform(Self::load_phone_packages(), Message::CatalogAction)
+
                 },
                 Message::AboutPressed => {
                     state.view = View::About;
@@ -119,9 +119,9 @@ impl Application for UadGui {
                     state.view = View::Settings;
                     Command::none()
                 }
-                Message::ListAction(msg) => {
+                Message::CatalogAction(msg) => {
                     state.device_name = get_phone_brand();
-                    state.list_view.update(msg).map(Message::ListAction)
+                    state.list_view.update(msg).map(Message::CatalogAction)
                 }
                 Message::SettingsAction(msg) => {
                     state.settings_view.update(msg);
@@ -142,7 +142,7 @@ impl Application for UadGui {
                 settings_view,
                 input_value:_,
                 about_btn,
-                packages_btn,
+                catalog_btn,
                 settings_btn,
                 device_name,
 
@@ -152,12 +152,12 @@ impl Application for UadGui {
 
                 let refresh_list_text = Text::new("Catalog ");
 
-                let packages_btn = Button::new(packages_btn, 
+                let catalog_btn = Button::new(catalog_btn, 
                         Row::new()
                         .push(refresh_list_text)
                         .push(refresh_list_icon)
                     )
-                    .on_press(Message::PackagesPressed)
+                    .on_press(Message::CatalogRefreshPress)
                     .padding(5)
                     .style(style::PrimaryButton::Enabled);
 
@@ -179,7 +179,7 @@ impl Application for UadGui {
                     .spacing(10)
                     .push(Text::new("Device: ".to_string() + &device_name))
                     .push(divider)
-                    .push(packages_btn)
+                    .push(catalog_btn)
                     .push(about_btn)
                     .push(settings_btn);
 
@@ -190,7 +190,7 @@ impl Application for UadGui {
 
                 match view {
                     View::List => {
-                        let main_container = list_view.view().map(Message::ListAction);
+                        let main_container = list_view.view().map(Message::CatalogAction);
                         Column::new()
                             .width(Length::Fill)
                             .push(navigation_container)
