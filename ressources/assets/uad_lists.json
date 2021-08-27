@@ -32,14 +32,6 @@
     "labels": null
   },
   {
-    "id": "com.sonyericsson.conversations.res.overlay",
-    "list": "oem",
-    "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.sonyericsson.idd.agent",
     "list": "oem",
     "description": "Anonymous Usage Stats\nUsed to send \"anonymous\" information about how you use your Sony Smartphone to Sony servers.\nNobody knows how these info are anonymized...\n",
@@ -112,7 +104,7 @@
     "labels": null
   },
   {
-    "id": "com.sonyericsson.trackid.res.overlay_305",
+    "id": "com.sonyericsson.trackid.res.overlay",
     "list": "oem",
     "description": "Overlay for Sony trackid\nTrackid was a mobile music and audio search engine (like Shazam). It has been discontinued by Sony.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
     "dependencies": null,
@@ -131,14 +123,6 @@
     "id": "com.sonyericsson.wappush",
     "list": "oem",
     "description": "WAP Push\nUsed to display annoying WAP push.\nWAP push is a type of text message that contains a direct link to a particular Web page. \nWhen a user is sent a WAP-push message, he receives an alert, once clicked, directs him to the Web page via his browser.\nPersonally, I don't like this. URLs are now recognized by the SMS instant messaging apps and you just have to click on it.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonyericsson.xhs",
-    "list": "oem",
-    "description": "Sony Xperia Lounge (discontinued by Sony on August 2019)\nThe Xperia Lounge app was meant to provide loyal fans with various rewards for their Xperia smartphones, \nsuch as exclusive Xperia Themes and wallpapers, as well as competitions.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -544,49 +528,9 @@
     "labels": null
   },
   {
-    "id": "com.sonymobile.themes.xperialoops2",
-    "list": "oem",
-    "description": "Sony themes\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonymobile.themes.xperialoops2",
-    "list": "oem",
-    "description": "Sony themes\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonymobile.themes.xperialoops2",
-    "list": "oem",
-    "description": "Sony themes\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonymobile.themes.xperialoops2",
-    "list": "oem",
-    "description": "Sony themes\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.sonymobile.xperialounge.services",
     "list": "oem",
     "description": "Xperia\u2122 Lounge Pass service (discontinued)\nThe Xperia Lounge app was meant to provide loyal fans with various rewards for their Xperia smartphones, \nsuch as exclusive Xperia Themes and wallpapers, as well as competitions.\nhttps://www.phonearena.com/news/Sony-Xperia-Lounge-shutting-down_id118252\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonymobile.xperiaxlivewallpaper.product.res.overlay",
-    "list": "oem",
-    "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -627,14 +571,6 @@
     "id": "com.sonyericsson.album",
     "list": "oem",
     "description": "Sony gallery app (https://play.google.com/store/apps/details?id=com.sonyericsson.album)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sonymobile.camera",
-    "list": "oem",
-    "description": "Sony camera app\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -816,22 +752,6 @@
     "labels": null
   },
   {
-    "id": "com.verizon.obdm_permissions",
-    "list": "carriers",
-    "description": "D-MAT.\nHas a LOT of permissions ! (https://knowledge.protektoid.com/apps/com.verizon.obdm/d48680955d8d58bade2e6620ccb1e30b9bf23cb8e50055e10de3466da558c0ee)\nDMAT Account ? It is used to hold shares and securities in dematerialised/electronic format.\nSeems weird that Verizon provide this so it's likely not this.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.verizon.permissions.vzwappapn",
-    "list": "carriers",
-    "description": "Custom permissions for some verizon stuff ?  \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.verizon.permissions.vzwappapn",
     "list": "carriers",
     "description": "Custom permissions for some verizon stuff ?  \n",
@@ -888,14 +808,6 @@
     "labels": null
   },
   {
-    "id": "com.vzw.hss.myverizon",
-    "list": "carriers",
-    "description": "Verizon Call Filter (https://play.google.com/store/apps/details?id=com.vzw.ecid)\nNOTE : Never trust a company which promotes call ID/spam blocking features.\n \nMy Verizon (https://play.google.com/store/apps/details?id=com.vzw.hss.myverizon)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.vzw.hss.widgets.infozone.large",
     "list": "carriers",
     "description": "My InfoZone Widget\nGives weekly tips, access to device info and account information.\nhttps://www.droid-life.com/2013/02/12/verizon-introduces-my-infozone-widget-allows-easy-access-to-tips-device-info-and-account-information/\n",
@@ -915,22 +827,6 @@
     "id": "com.motorola.vzw.mot5gmod",
     "list": "carriers",
     "description": "5G Moto Mod (https://play.google.com/store/apps/details?id=com.motorola.mot5gmod)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.vzw.mot5gmod",
-    "list": "carriers",
-    "description": "5G Moto Mod (https://play.google.com/store/apps/details?id=com.motorola.mot5gmod)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.vzw.phone.extensions",
-    "list": "carriers",
-    "description": "Protocol Configuration Options.\nRelated to APN configuration. \nhttps://www.freshpatents.com/-dt20180607ptan20180159824.php\n\nFree HD wallpaper from verizon\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -1024,22 +920,6 @@
     "labels": null
   },
   {
-    "id": "com.asurion.home.sprint",
-    "list": "carriers",
-    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)\n\nSprint Complete (https://play.google.com/store/apps/details?id=com.asurion.home.sprint)\nLets you call or chat with live tech experts ! Maybe you will find the love of your life ! \nNote : See note above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.asurion.home.sprint",
-    "list": "carriers",
-    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)\n\nSprint Complete (https://play.google.com/store/apps/details?id=com.asurion.home.sprint)\nLets you call or chat with live tech experts ! Maybe you will find the love of your life ! \nNote : See note above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.hyperlync.Sprint.Backup",
     "list": "carriers",
     "description": "Sprint Backup\" (https://play.google.com/store/apps/details?id=com.hyperlync.Sprint.Backup)\nLets you backup your phone\u2019s content to your Sprint Backup account.\nFYI : This app is developped by Hyperlync Technologies an Israel-based company which provide cyber-security solutions. \nIt is now owned by Edition Ltd a big Singapour based company (https://www.reuters.com/companies/EDITol.SI)\n",
@@ -1051,14 +931,6 @@
     "id": "com.hyperlync.Sprint.CloudBinder",
     "list": "carriers",
     "description": "Sprint Cloud Binder (https://play.google.com/store/apps/details?id=com.hyperlync.Sprint.CloudBinder)\nHub for all you cloud accounts.\nSee package above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.locationlabs.finder.sprint",
-    "list": "carriers",
-    "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\n    https://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\n    https://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -1088,14 +960,6 @@
     "labels": null
   },
   {
-    "id": "com.motorola.omadm.sprint",
-    "list": "carriers",
-    "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it. \nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN : \nhttps://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n\nOMA Device Management for Sprint \nHandles configuration of the device (including first time use), enabling and disabling features provided by carriers.\nI believe it's only useful if you want to use a Sprint service with a non branded phone (not sure at all)\nhttps://www.androidpolice.com/2015/03/10/android-5-1-includes-new-carrier-provisioning-api-allows-carriers-easier-methods-of-setting-up-services-on-devices-they-dont-control/\nDisplays annoying notifications if you unlocked your bootloader\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.motorola.sprintwfc",
     "list": "carriers",
     "description": "Sprint Wifi Calling\nProvides wifi calling to Sprint customers.\n",
@@ -1107,14 +971,6 @@
     "id": "com.sec.sprint.wfcstub",
     "list": "carriers",
     "description": "Seems to be related to Wifi-Calling on Samsung phone.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sprint.android.musicplus2033.vpl",
-    "list": "carriers",
-    "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint\u2019s official Music Store and player\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -1195,14 +1051,6 @@
     "id": "com.sprint.ms.smf.services",
     "list": "carriers",
     "description": "Sprint Hub (https://play.google.com/store/apps/details?id=com.sprint.ms.smf.services)\nEnables Sprint features (including Wifi calling) and products for devices operating on the Sprint network.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sprint.safefound.vpl",
-    "list": "carriers",
-    "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -1403,14 +1251,6 @@
     "id": "com.locationlabs.cni.att",
     "list": "carriers",
     "description": "AT&T Smart Limits\nParental Control tool.\nhttps://m.att.com/shopmobile/wireless/features/smart-limits.html\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.matchboxmobile.wisp",
-    "list": "carriers",
-    "description": "AT&T Hot Spots\nRun in background. Automatically connects you to a free AT&T wifi hotspot at one of their participating partner locations \nsuch as Starbucks.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -1776,30 +1616,6 @@
     "labels": null
   },
   {
-    "id": "com.huawei.android.totemweatherwidget",
-    "list": "oem",
-    "description": "Huawei Weather app (and its widget)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.android.totemweatherwidget",
-    "list": "oem",
-    "description": "Huawei Weather app (and its widget)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.android.wfdirect",
-    "list": "oem",
-    "description": "Wi-Fi Direct feature.\nNote: Wifi direct enables devices to establish a direct Wi-Fi connection (without a router) over which the two can send and receive files. \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.huawei.android.wfdirect",
     "list": "oem",
     "description": "Wi-Fi Direct feature.\nNote: Wifi direct enables devices to establish a direct Wi-Fi connection (without a router) over which the two can send and receive files. \n",
@@ -2000,14 +1816,6 @@
     "labels": null
   },
   {
-    "id": "com.huawei.hiviewtunnel",
-    "list": "oem",
-    "description": "This displays details/attributes of pictures in the gallery (ISO, exposure time, etc.).\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.huawei.himovie.overseas",
     "list": "oem",
     "description": "Huawei stock video application (https://play.google.com/store/apps/details?id=com.huawei.himovie.overseas). Replace with VLC, which integrates well with the stock gallery.\n",
@@ -2064,14 +1872,6 @@
     "labels": null
   },
   {
-    "id": "com.huawei.hwvoipservice",
-    "list": "oem",
-    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.huawei.iaware",
     "list": "oem",
     "description": "App Prioritizer. Prioritizes apps to avoid slowdown\nUp to you but there is apparently no noticeable difference when deleted.\n",
@@ -2107,62 +1907,6 @@
     "id": "com.huawei.magazine",
     "list": "oem",
     "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.magazine",
-    "list": "oem",
-    "description": "Magazine unlock. Downloads wallpapers for your lock screen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.mirrorlink",
-    "list": "oem",
-    "description": "Huawei Mirror app. \nMirror like \"Glass\"\n\nHuawei mirrorlink implementation\nUsed to connect your phone to a car (with https://mirrorlink.com/ support) in order to provide audio streaming, GPS navigation...\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -2216,14 +1960,6 @@
     "labels": null
   },
   {
-    "id": "com.huawei.stylus.floatmenu",
-    "list": "oem",
-    "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.\n \nFloating menu with M-Pen feature.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.huawei.synergy",
     "list": "oem",
     "description": "Huawei Cloud & Network Synergy.\nSeems to be related to B2B (Business To Business) cloud stuff.\nhttps://www.huawei.com/en/press-events/news/2016/10/Cloud-Network-Synergy-Whitepaper\n",
@@ -2259,14 +1995,6 @@
     "id": "com.huawei.videoeditor",
     "list": "oem",
     "description": "Huawei Video editor.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.vassistant",
-    "list": "oem",
-    "description": "HiVoice app\nHuawei voice assistant (like Siri or Google assistant)\nHuge privacy risk. Keep in mind that the app keeps the microphone *on* non-stop.\nIs now Celia (https://consumer.huawei.com/en/emui/celia/)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -2395,14 +2123,6 @@
     "id": "com.android.mediacenter",
     "list": "oem",
     "description": "Huawei music app. (Yeah they messed up with the package name)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.huawei.hidisk",
-    "list": "oem",
-    "description": "Huawei File Manager app.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -2600,14 +2320,6 @@
     "labels": null
   },
   {
-    "id": "com.motorola.email",
-    "list": "oem",
-    "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)\n\nMoto Email (https://play.google.com/store/apps/details?id=com.motorola.email)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.motorola.fmplayer",
     "list": "oem",
     "description": "FM Radio (https://play.google.com/store/apps/details?id=com.motorola.fmplayer)\nRadio app\n",
@@ -2675,14 +2387,6 @@
     "id": "com.motorola.motocare",
     "list": "oem",
     "description": "Moto Care was renamed in \"Moto Help\" and then in \"Device Help\"\nProvide support features.\nhttps://mobile.softpedia.com/blog/Moto-Care-App-Gets-Updated-Now-Called-Motorola-Help-432827.shtml\nHowever you can both have com.motorola.genie (Device Help) and this package so it's strange.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.motocit",
-    "list": "oem",
-    "description": "CQATest\nCQA = Custom Quality Assurance\nHidden menu (accessible by typing *#*#2486#*#* in the Moto Dialer) which lets you run hardware tests.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -2800,22 +2504,6 @@
     "labels": null
   },
   {
-    "id": "com.motorola.visualvoicemail",
-    "list": "oem",
-    "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".\nSafe to remove (tested only on non-Comcast phone).\n\nADB: Marked as non-disable\nVerizon Visual Voicemail (https://play.google.com/store/apps/details?id=com.motorola.visualvoicemail)\nOn non-Verizon phones it has a generic \"Voicemail\" name and icon, and doesn't seem to active.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.visualvoicemail",
-    "list": "oem",
-    "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".\nSafe to remove (tested only on non-Comcast phone).\n\nADB: Marked as non-disable\nVerizon Visual Voicemail (https://play.google.com/store/apps/details?id=com.motorola.visualvoicemail)\nOn non-Verizon phones it has a generic \"Voicemail\" name and icon, and doesn't seem to active.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.motorola.entitlement",
     "list": "oem",
     "description": "Enable WiFi tethering/hotspot functionality. \nWhat you can do is preventing the phone from notifying the carrier about when you use hotspot. It will bypass mobile carriers tethering restrictions.\nFrom an ADB shell : settings put global tether_dun_required 0\n",
@@ -2835,22 +2523,6 @@
     "id": "com.motorola.faceunlocktrustagent",
     "list": "oem",
     "description": "Motorola Face Unlock Agent\nTrust agent is a service that notifies the system about whether it believes the environment of the device to be trusted.\nThe exact meaning of 'trusted' is up to the trust agent to define. \nThe system lockscreen listens for trust events, it can change its behaviour based on the trust state of the current user\n(e.g detection of a trusted face)\nhttps://nelenkov.blogspot.com/2014/12/dissecting-lollipops-smart-lock.html\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.imagertuning_lake",
-    "list": "oem",
-    "description": "Imager Tuning (https://play.google.com/store/apps/details?id=com.motorola.imagertuning_athene)\nNaming convention: imagertuning_[PHONE CODENAME]\nIt's supposed to improve color, sharpness, noise when taking photo with the stock camera. \nThe results are not that good (see reviews). I let you see the difference with/without the camera tuning.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.motorola.imagertuning_lake",
-    "list": "oem",
-    "description": "Imager Tuning (https://play.google.com/store/apps/details?id=com.motorola.imagertuning_athene)\nNaming convention: imagertuning_[PHONE CODENAME]\nIt's supposed to improve color, sharpness, noise when taking photo with the stock camera. \nThe results are not that good (see reviews). I let you see the difference with/without the camera tuning.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -3032,14 +2704,6 @@
     "labels": null
   },
   {
-    "id": "com.knox.vpn.proxyhandler",
-    "list": "oem",
-    "description": "Third-party that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/ \nNOTE : Never trust a company which promotes spam blocking features \nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n#\nHave a look at their privacy policy. That's... pretty scary : https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)\n\nSamsung Knox allows business and personal content to \"securely\" coexist on the same handset. \nThis package handle proxy along side KNOX\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.mygalaxy",
     "list": "oem",
     "description": "My Galaxy (https://play.google.com/store/apps/details?id=com.mygalaxy)\nEntertainment hub and life-services application\nLets your access videos, music and gaming and gives quick access to services such as cabs, movies, recharge and bill payment, \nfood ordering, travel, hyper local deals and Samsung Care, among others.\n",
@@ -3112,14 +2776,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.allshare.service.mediashare",
-    "list": "oem",
-    "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub. \nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app\n\nSamsung Allshare service (now called SmartView).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.app.accesscontrol",
     "list": "oem",
     "description": "Samsung Interaction control\nSettings > Accessibility > Dexterity and interaction (or vol. down + home key)\nAllows you to restrict some functions of your phone (stop the phone from interacting with touch commands for instance)\n",
@@ -3160,33 +2816,9 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.app.camera.sticker.stamp.preload",
-    "list": "oem",
-    "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers\nSafe to remove\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.app.camera.sticker.stamp.preload",
-    "list": "oem",
-    "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers\nSafe to remove\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.app.camera.sticker.facearframe.preload",
     "list": "oem",
     "description": "Frames sticker ? \nI don't know what this sticker is and I don't have this package.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.app.clipboardedge",
-    "list": "oem",
-    "description": "Clipboard edge panel\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -3251,14 +2883,6 @@
     "id": "com.samsung.android.app.interactivepanoramaviewer",
     "list": "oem",
     "description": "Visual. photo virt.\nSamsung Virtual Shot Viewer enable sharing virtual shot\nSafe to remove if you don't want virtual photos.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.app.ledcoverdream",
-    "list": "oem",
-    "description": "I think it enable doing things with LEDs on the cover\nhttps://www.samsung.com/hk_en/mobile-accessories/led-cover-for-galaxy-s10/EF-KG973CBEGWW/\nHOW IT WORKS : https://forum.xda-developers.com/galaxy-note-8/accessories/how-led-cover-t3686694\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -3432,14 +3056,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.app.vrsetupwizardstub",
-    "list": "oem",
-    "description": "Samsung Gear VR (Virtual Reality) setup wizard (https://en.wikipedia.org/wiki/Samsung_Gear_VR)\nhttps://360samsungvr.com/portal/content/about_samsung_vr\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java\nSetup wizard : The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung VR services.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.app.watchmanager",
     "list": "oem",
     "description": "Samsung Galaxy Wearable (Samsung Gear) (https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager)\n",
@@ -3554,55 +3170,7 @@
   {
     "id": "com.samsung.android.bixbyvision.framework",
     "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.bixbyvision.framework",
-    "list": "oem",
-    "description": "",
+    "description": "BixbyVision Framework",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -3824,14 +3392,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.knox.containercore",
-    "list": "oem",
-    "description": "KNOX Work profile/space\nProvidess an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.knox.containerdesktop",
     "list": "oem",
     "description": "Knox Container Desktop\nProvides UI for the work(space) container? \nSee \"com.samsung.android.knox.containeragent\"\n",
@@ -3938,15 +3498,7 @@
   {
     "id": "com.samsung.android.provider.shootingmodeprovider",
     "list": "oem",
-    "description": "Private mode (was replaced by Secure Folder)\nhttps://www.samsung.com/uk/support/mobile-devices/what-is-private-mode-and-how-do-i-use-it/\nProvide camera modes (when you swipe left fromt the camera app)\nSafe to remove (but it is quite useful)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.provider.shootingmodeprovider",
-    "list": "oem",
-    "description": "Private mode (was replaced by Secure Folder)\nhttps://www.samsung.com/uk/support/mobile-devices/what-is-private-mode-and-how-do-i-use-it/\nProvide camera modes (when you swipe left fromt the camera app)\nSafe to remove (but it is quite useful)\n",
+    "description": "Provide camera modes (when you swipe left fromt the camera app)\nSafe to remove (but it is quite useful)",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -4074,23 +3626,23 @@
   {
     "id": "com.samsung.android.scloud.sync",
     "list": "oem",
-    "description": "Samsung Cloud (https://www.samsung.com/us/support/owners/app/samsung-cloud)\n",
+    "description": "Samsung cloud synchronisation service",
     "dependencies": null,
     "neededBy": null,
     "labels": null
   },
   {
-    "id": "com.samsung.android.scloud.sync",
+    "id": "com.samsung.android.scloud",
     "list": "oem",
-    "description": "Samsung Cloud (https://www.samsung.com/us/support/owners/app/samsung-cloud)\n",
+    "description": "Samsung Cloud (https://www.samsung.com/us/support/owners/app/samsung-cloud)",
     "dependencies": null,
     "neededBy": null,
     "labels": null
   },
   {
-    "id": "com.samsung.android.scloud.sync",
+    "id": "com.samsung.android.scloud.auth",
     "list": "oem",
-    "description": "Samsung Cloud (https://www.samsung.com/us/support/owners/app/samsung-cloud)\n",
+    "description": "Handle authentifcation for Samsung cloud",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -4322,15 +3874,15 @@
   {
     "id": "com.samsung.android.forest",
     "list": "oem",
-    "description": "",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nis a feature which shows apps dashboard through which one can see how much time any application opened and\nalso swiping to different screens allows you to see breakdowns by day, by hour and by app.",
     "dependencies": null,
     "neededBy": null,
     "labels": null
   },
   {
-    "id": "com.samsung.android.forest",
+    "id": "com.samsung.android.wellbeing",
     "list": "oem",
-    "description": "",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nis a feature which shows apps dashboard through which one can see how much time any application opened and\nalso swiping to different screens allows you to see breakdowns by day, by hour and by app.",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -4419,14 +3971,6 @@
     "id": "com.samsung.helphub",
     "list": "oem",
     "description": "Not sure if this package still exist.\nProvide help \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.ipservice",
-    "list": "oem",
-    "description": "Set of hidden network settings (inlcuding frequency bands choice)\nHow to see these settings : https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4\n\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\nUsed by Galaxy Finder & Galaxy Vision to access web data\nDo removing this package break face/content recognition?  \n#\nName and permissions of this package suggest that it is used by Galaxy Finder to seek stuff on the web.\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -4592,14 +4136,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.systemui.bixby2",
-    "list": "oem",
-    "description": "System UI for Bixby/Bixby2\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.tmovvm",
     "list": "oem",
     "description": "Samsung Visual Voicemail (for T-mobile only)\nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail\n",
@@ -4635,14 +4171,6 @@
     "id": "com.samsung.voiceserviceplatform",
     "list": "oem",
     "description": "Samsung Voice (for Galaxy S7)\nVirtual mobile personal assistant capable of running basic tasks through voice\nhttps://www.samsung.com/global/galaxy/what-is/s-voice/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.vvm.se",
-    "list": "oem",
-    "description": "Samsung Verizon Voicemail \nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -4992,7 +4520,7 @@
     "labels": null
   },
   {
-    "id": "com.sec.android.desktopmode.uiservice",
+    "id": "com.sec.android.app.dexonpc",
     "list": "oem",
     "description": "Samsung DeX\nExtends your smartphone into a \"desktop computing experience\".\nConcretely this lets you access all your mobile apps and content from a computer.\nOnly works on Windows/MacOS. You will need to install the Samsung DeX app on your computer.\nhttps://en.wikipedia.org/wiki/Samsung_DeX\nhttps://www.samsung.com/global/galaxy/apps/samsung-dex/\n",
     "dependencies": null,
@@ -5360,7 +4888,7 @@
     "labels": null
   },
   {
-    "id": "com.sec.knox.switchknoxII",
+    "id": "com.sec.knox.switchknoxI",
     "list": "oem",
     "description": "Handles switches between KNOW/Work container and personnal profile. \nIt also manage data sharing between them.\nhttps://docs.samsungknox.com/dev/knox-sdk/container-data-sharing-policies.htm\n",
     "dependencies": null,
@@ -5368,7 +4896,7 @@
     "labels": null
   },
   {
-    "id": "com.sec.knox.switchknoxII",
+    "id": "com.sec.knox.switchknox",
     "list": "oem",
     "description": "Handles switches between KNOW/Work container and personnal profile. \nIt also manage data sharing between them.\nhttps://docs.samsungknox.com/dev/knox-sdk/container-data-sharing-policies.htm\n",
     "dependencies": null,
@@ -5672,14 +5200,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.app.contacts",
-    "list": "oem",
-    "description": "Samsung contacts app\nSafe to debloat if you use another contacts app\nNOTE : If you do, you will no longer be able to access Contacts from the Samsung dialer app.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.fingerprint.service",
     "list": "oem",
     "description": "Fingerprint service\n",
@@ -5776,14 +5296,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.app.slowmotion",
-    "list": "oem",
-    "description": "Slowmotion mode in camera app\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.sec.android.application.csc",
     "list": "oem",
     "description": "Do something related to Country Specific Code (CSC). Maybe it only let you change your CSC\nEvery Android device from Samsung has a folder called CSC.\nThis folder contains some XML files that keep the configuration codes for the country and carrier-based customization options.\nMaybe it's safe to remove if you'll never change your CSC but it needs testing and I lack time for this.\n(I already have plenty of other packages uninstallation to test)\n",
@@ -5835,22 +5347,6 @@
     "id": "com.samsung.sdm.sdmviewer",
     "list": "oem",
     "description": "Lets you view installed updates?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.SMT",
-    "list": "oem",
-    "description": "Samsung TTS (Text-to-speech)\nWorks with applications such as S Voice; translation apps, GPS that require Text-To-Speech (TTS) functionality and reads back text\nhttps://galaxystore.samsung.com/detail/com.samsung.SMT\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.tmowfc.wfcpref",
-    "list": "oem",
-    "description": "Wifi Calling for T-mobile clients only! (tmowfc = t-mobile only wifi calling)\nLets you call or text on Wi-Fi networks with your T-Mobile phone number\nhttps://www.t-mobile.com/support/coverage/wi-fi-calling-from-t-mobile\nVoLTE/IMS is needed for this to work (see com.sec.imsservice)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -5936,22 +5432,6 @@
     "labels": null
   },
   {
-    "id": "com.sec.android.app.vepreload",
-    "list": "oem",
-    "description": "Samsung video editor\nLets you add add transitions, music, stickers and text to your videos. You can also change the speed of the action, \nor even add filters to switch up the mood of your videos.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.android.inputmethod.beta",
-    "list": "oem",
-    "description": "Samsung Keyboard Neural Beta\nSmarter Samsung Keyboard with better predictition/suggestion (using deep learning)\nhttps://galaxystore.samsung.com/prepost/000004170688?appId=com.sec.android.inputmethod.beta\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.sec.android.inputmethod.beta",
     "list": "oem",
     "description": "Samsung Keyboard Neural Beta\nSmarter Samsung Keyboard with better predictition/suggestion (using deep learning)\nhttps://galaxystore.samsung.com/prepost/000004170688?appId=com.sec.android.inputmethod.beta\n",
@@ -5979,14 +5459,6 @@
     "id": "com.sec.android.gallery3d.panorama360view",
     "list": "oem",
     "description": "Let you see panoramic photos in the samsung Gallery.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.honeyboard",
-    "list": "oem",
-    "description": "Samsung keyboard\nWARNING: do NOT remove the samsung keyboard if you don't have another keyboard with direct boot mode support or \nyou'll be stuck at boot (no keyboard to unlock the phone) \nhttps://developer.android.com/training/articles/direct-boot\nFYI: Simple Keyboard and OpenBoard are 2 FOSS keyboard with direct boot support\nhttps://f-droid.org/packages/org.dslul.openboard.inputmethod.latin/\nhttps://f-droid.org/packages/rkr.simplekeyboard.inputmethod/\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6035,14 +5507,6 @@
     "id": "com.sec.android.sdhms",
     "list": "oem",
     "description": "Samsung Device Health Manager Service\nBattery estimation service for Samsung Care/Device maintenance (com.samsung.android.lool)\nThere is some weird stuff in the java code. I don't understand why there is a need to parse torrent files for instance\nor why there is a string \"googleapis.com/drive\"\nhttps://developers.google.com/drive/api/v3/reference\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.android.wallpapercropper2",
-    "list": "oem",
-    "description": "SOAgent\nResponsible for checking software/security OTA updates, readying, alerting the user and downloading such updates \nSoftware update, works along \"com.wssyncmldm\"\n\nSamsung Wallpaper. Needed to set a wallpaper on the launcher.\nNote : it is technically possible to change the wallpaper and then delete this package. \nUsed wallpaper are stored in /data/data/com.sec.android.wallpapercropper2/\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6120,54 +5584,6 @@
     "labels": null
   },
   {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.sec.svoice.lang.it_GB",
-    "list": "oem",
-    "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.wssyncmldm",
     "list": "oem",
     "description": "Software update\nFetch System OTA updates\nWorks along with com.sec.android.soagent\n",
@@ -6195,22 +5611,6 @@
     "id": "com.samsung.android.timezone.data_Q",
     "list": "oem",
     "description": "Stores timezone data?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.timezone.data_Q",
-    "list": "oem",
-    "description": "Stores timezone data?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.timezone.autoupdate_O",
-    "list": "oem",
-    "description": "Samsung Time Zone Updater\nUsed to automatically detect appropriate timezone\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6272,14 +5672,6 @@
     "labels": null
   },
   {
-    "id": "com.samsung.knox.keychain",
-    "list": "oem",
-    "description": "Knox Key Chain\nAllows apps to sign data using system-wide private key/certificate pairs. \nSo, even though the Android Keystore provides per-app access to credentials, the Android KeyChain runs as a system user, \nand hence, credentials stored through the Android KeyChain are associated with the system ID instead of a user ID.\nhttps://docs.samsungknox.com/dev/knox-sdk/about-keystores.htm\nThis is only useful for apps using the TIMA Keystore. The big question I'm trying to anwser is:\nWhich are using this except Samsung apps? Can an android dev help on this?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.networkui",
     "list": "oem",
     "description": "User interface of the Mobile Network settings\n",
@@ -6299,14 +5691,6 @@
     "id": "com.sec.android.app.simsettingmgr",
     "list": "oem",
     "description": "SIM card manager.\nContains configuration and settings for handling dual SIM (give a SIM an icon, a name, and so on)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.bluetoothmidiservice",
-    "list": "aosp",
-    "description": "Default print Service.\nSafe to remove if you don't plan to print from your phone.\n\nProvides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6432,14 +5816,6 @@
     "labels": null
   },
   {
-    "id": "com.android.email.partnerprovider.overlay",
-    "list": "aosp",
-    "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.providers.partnerbookmarks",
     "list": "aosp",
     "description": "Provides bookmarks about partners of Google in Chrome.\n",
@@ -6474,13 +5850,13 @@
   {
     "id": "com.android.stk2",
     "list": "aosp",
-    "description": "SIM toolkit \nSIM toolkit app. Enable carriers to make SIM cards initiate \"value-added services\" (== some crappy stuff)\nBasically, Some operators give SIMs which has applications installed in it. \nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas already be abused : \n- SimJacker : https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack : https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\n",
+    "description": "(special package for dual-sim devices?)\nSIM toolkit \nSIM toolkit app. Enable carriers to make SIM cards initiate \"value-added services\" (== some crappy stuff)\nBasically, Some operators give SIMs which has applications installed in it. \nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas already be abused : \n- SimJacker : https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack : https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
   },
   {
-    "id": "com.android.stk2",
+    "id": "com.android.stk",
     "list": "aosp",
     "description": "SIM toolkit \nSIM toolkit app. Enable carriers to make SIM cards initiate \"value-added services\" (== some crappy stuff)\nBasically, Some operators give SIMs which has applications installed in it. \nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas already be abused : \n- SimJacker : https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack : https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\n",
     "dependencies": null,
@@ -6499,14 +5875,6 @@
     "id": "com.android.wallpaper.holospiral",
     "list": "aosp",
     "description": "\"Holo spiral\" Live wallpaper.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.wallpaper.livepicker.overlay",
-    "list": "aosp",
-    "description": "Enables you to pick a live wallpaper.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6555,14 +5923,6 @@
     "id": "com.android.apps.tag",
     "list": "aosp",
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.backupconfirm",
-    "list": "aosp",
-    "description": "Restore google settings with Google Backup restore function.\nAlso display confirmation popup when doing ADB backup. If you remove this package you couldn't do ADB Backup.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -6672,14 +6032,6 @@
     "labels": null
   },
   {
-    "id": "com.android.cts.priv.ctsshim",
-    "list": "aosp",
-    "description": "Compatibility Test Service. The CTS shim that verify certain upgrade scenarios. Could mess up witch OTA updates.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.deskclock",
     "list": "aosp",
     "description": "AOSP Clock app\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own clock app.\n",
@@ -6760,30 +6112,6 @@
     "labels": null
   },
   {
-    "id": "com.android.internal.display.cutout.emulation.tall",
-    "list": "aosp",
-    "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.internal.display.cutout.emulation.tall",
-    "list": "aosp",
-    "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.internal.display.cutout.emulation.tall",
-    "list": "aosp",
-    "description": "Support for display cutouts\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.internal.systemui.navbar.gestural",
     "list": "aosp",
     "description": "Gesture navigation\nLets you use swipes and other actions to control your phone, rather than tapping on buttons.\nOption -> System -> Gestures -> System Navigation\nhttps://android-developers.googleblog.com/2019/08/gesture-navigation-backstory.html\n",
@@ -6795,30 +6123,6 @@
     "id": "com.android.internal.systemui.navbar.gestural_wide_back",
     "list": "aosp",
     "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.internal.systemui.navbar.gestural_wide_back",
-    "list": "aosp",
-    "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.internal.systemui.navbar.gestural_wide_back",
-    "list": "aosp",
-    "description": "Enables you to turn down the sensitivity to make it easier to perform gestures in apps (i.e. making back harder to trigger)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.internal.systemui.navbar.twobutton",
-    "list": "aosp",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -7008,198 +6312,6 @@
     "labels": null
   },
   {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.theme.icon_pack.rounded.systemui",
-    "list": "aosp",
-    "description": "Android themes / icons pack / fonts\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.timezone.updater",
     "list": "aosp",
     "description": "Time Zone Updater\nAutomatically updates the clock to correspond to your current time zone\nThis *may* causes a bootloop if removed. Timezone packages often causes that. \n",
@@ -7352,14 +6464,6 @@
     "labels": null
   },
   {
-    "id": "com.android.phone.a_overlay",
-    "list": "aosp",
-    "description": "AOSP code for dialer app features\nSIM card will also not be detected if deleted.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.providers.applications",
     "list": "aosp",
     "description": "Fetches the list of applications installed on the phone to provide search suggestions.\n",
@@ -7411,14 +6515,6 @@
     "id": "com.android.providers.telephony",
     "list": "aosp",
     "description": "Telephony provider. Controls and stores phone-related data such as text messages, APN list, operation, etc.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.server.telecom.a_overlay",
-    "list": "aosp",
-    "description": "Management your calls via your network provider or SIM and controls the phone modem.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -7664,7 +6760,7 @@
     "labels": null
   },
   {
-    "id": "net.oneplus.odm.provider",
+    "id": "net.oneplus.odm",
     "list": "oem",
     "description": "Shady analytic app... again.\nSends A LOT of data to OnePlus' servers including the phone's IMEI number, the phone number, MAC addresses, \nmobile network names and IMSI prefixes, Wi-Fi connection info, the phone's serial number and every time an app was opened.\nPress : https://www.androidpolice.com/2017/10/10/never-settle-oneplus-found-collecting-personally-identifiable-analytics-data-phone-owners/\nSource : https://www.chrisdcmoore.co.uk/post/oneplus-analytics/\n",
     "dependencies": null,
@@ -9440,33 +8536,9 @@
     "labels": null
   },
   {
-    "id": "com.samsung.android.coldwalletservice",
-    "list": "pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.samsung.android.digitalkey",
     "list": "pending",
     "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.forest",
-    "list": "pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.samsung.android.providers.carrier",
-    "list": "pending",
-    "description": "\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -10680,14 +9752,6 @@
     "labels": null
   },
   {
-    "id": "com.lge.drmservice",
-    "list": "oem",
-    "description": "LG Cloud\nBackup tool, which gives you the option to backup LG phone settings, apps, contacts and Home screen \nto your phone internal storage, SD card, computer or cloud.\nSource : https://www.apeaksoft.com/backup/lg-cloud-backup.html\n\nDRM Service\nNeeded to read DRM content playback. It manages the DRM Client, which holds a particular type of information required to get a license key. \nREMINDER : DRM = all the things that restrict the use of proprietary hardware and copyrighted works.\n==> https://en.wikipedia.org/wiki/Digital_rights_management\n==> https://creativecommons.org/2017/07/09/terrible-horrible-no-good-bad-drm/\n==> https://fckdrm.com/\n==> http://www.info-mech.com/drm_flaws.html\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.lge.easyhome",
     "list": "oem",
     "description": "LG EasyHome\nEasyHome is a more simplified version of the Home screen that you can choose to use on your phone.\nIt displays the Home screen like a remote control device. T\nSource : https://www.lg.com/us/mobile-phones/VS985/Userguide/048.html\n",
@@ -10936,14 +10000,6 @@
     "labels": null
   },
   {
-    "id": "com.lge.LGSetupView",
-    "list": "oem",
-    "description": "Setup View\nLG first setup (related to com.android.LGSetupWizard). \nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.lge.lgworld",
     "list": "oem",
     "description": "LG SmartWorld\nLG Store. Enables you to nstall LG apps, theme, keyboard layout, fonts...\n",
@@ -11051,22 +10107,6 @@
     "id": "com.lge.remote.setting",
     "list": "oem",
     "description": "LG AirDrive\nLets you to control files in your device via a wireless connection. \nTo use, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.remote.setting",
-    "list": "oem",
-    "description": "LG AirDrive\nLets you to control files in your device via a wireless connection. \nTo use, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.sizechangable.weather",
-    "list": "oem",
-    "description": "Music widget\nNot sure if it only manages Music widget for the launcher or also for the lockscreen.\n\nWeather widget for the home screen.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -11240,70 +10280,6 @@
     "labels": null
   },
   {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.lgfmservice",
-    "list": "oem",
-    "description": "Wifi Hotspot widget\nREMINDER : Hotspot enable you to share the phone\u2019s 4G data connection with any Wi-Fi capable devices.\nIt is not the Hotspot feature. Only the widget ! \n\nDual SIM status widget\nProbably only present in dual sim LG phone variants. Does not remove the persistent notification or dual SIM functionality.\n\nService menus. I believe if you remove the last one the secret code you can dial doesn't work anymore (who needs it anyway..?)\n\nLG support App remote access\nYou probably don't want that to happen\n\nLAOP test [MORE INFO NEEDED]\nI don't know what LAOP is. I could not find information about it. It's a test so it's probably fine. I have removed it.\n\nRadio\n\n######################UP TO YOU #######################\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.lge.bnr.launcher",
     "list": "oem",
     "description": "LG Mobile Switch Launcher\nThis doesn't remove the default launchers.\nIt is most likely to backup/restore the user's launcher configuration.\n",
@@ -11376,30 +10352,6 @@
     "labels": null
   },
   {
-    "id": "com.lge.theme.titan",
-    "list": "oem",
-    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.theme.titan",
-    "list": "oem",
-    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.lge.theme.titan",
-    "list": "oem",
-    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.partnerbrowsercustomizations.btl.s600ww.overlay",
     "list": "oem",
     "description": "Add Nokia pinned bookmarks in your chromium based browser\n",
@@ -11424,7 +10376,7 @@
     "labels": null
   },
   {
-    "id": "com.android.providers.settings.overlay.base.s600ww",
+    "id": "com.android.providers.settings.btl.s600ww.overlay",
     "list": "oem",
     "description": "Still otther overlays for android settings provider.\n\"com.android.providers.settings\" handles settings app datas (contentProvider)\n#\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
     "dependencies": null,
@@ -11464,113 +10416,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "list": "oem",
-    "description": "Apr Upload Service ????\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "list": "oem",
-    "description": "Apr Upload Service ????\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.AprUploadService.data.overlay.base.s600id",
-    "list": "oem",
-    "description": "Apr Upload Service ????\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
     "list": "oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.autoregistration.overlay.d.base.s600ww",
-    "list": "oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -11592,22 +10440,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.bboxsbox.app",
-    "list": "oem",
-    "description": "????\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.bokeheditor.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Related to photos editing I think \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.bokeheditor.overlay.base.s600ww",
     "list": "oem",
     "description": "Related to photos editing I think \n",
@@ -11624,62 +10456,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.CPClient.overlay.base.s600ww",
-    "list": "oem",
-    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.CPClient.overlay.base.s600ww",
-    "list": "oem",
-    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.CPClient.overlay.base.s600ww",
-    "list": "oem",
-    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.customerfeedback.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.customerfeedback.overlay.base.s600ww",
     "list": "oem",
     "description": "Customer manager\nGiven its name it is useless but I don't have more info.\n",
@@ -11691,54 +10467,6 @@
     "id": "com.evenwell.dataagent.overlay.base.s600ww",
     "list": "oem",
     "description": "Data agent\nUsed for backup/restore ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.dataagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Data agent\nUsed for backup/restore ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.dataagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Data agent\nUsed for backup/restore ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.dataagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Data agent\nUsed for backup/restore ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Debug config tool ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Debug config tool ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.DbgCfgTool.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Debug config tool ? \n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -11768,49 +10496,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Monitor stuff obviously...\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Monitor stuff obviously...\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Monitor stuff obviously...\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.email.data.overlay.base.s600ww",
     "list": "oem",
     "description": "Overlay for email app\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.factorywizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.factorywizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -11848,38 +10536,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.legalterm.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Provides terms and condition (legal notice)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
     "list": "oem",
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)\n",
@@ -11904,65 +10560,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.nps.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Net Promoter Score\nPreinstalled survey.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.nps.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Net Promoter Score\nPreinstalled survey.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.nps.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Net Promoter Score\nPreinstalled survey.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.pandorasbox.app",
     "list": "oem",
     "description": "WTF is this ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.pandorasbox.app",
-    "list": "oem",
-    "description": "WTF is this ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customize your browser with stuff you don't want.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customize your browser with stuff you don't want.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Customize your browser with stuff you don't want.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -11984,22 +10584,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.permissiondetection.overlay.base.s600ww",
-    "list": "oem",
-    "description": "????\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.phone.overlay.base",
-    "list": "oem",
-    "description": "Overlay for the dialer app\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.phone.overlay.base",
     "list": "oem",
     "description": "Overlay for the dialer app\n",
@@ -12016,65 +10600,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Drains more battery than it saves.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Drains more battery than it saves.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.PowerMonitor.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Drains more battery than it saves.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
     "list": "oem",
     "description": "Is nokia powersaving really effective? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Is nokia powersaving really effective? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Is nokia powersaving really effective? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
-    "list": "oem",
-    "description": "Is nokia powersaving really effective? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.providers.downloads.ui.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Add most likey a useless overlay on the download app.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12104,65 +10632,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.providers.weather.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Provider for the Nokia weather app.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.pushagent.overlay.base.s600ww",
     "list": "oem",
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.pushagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.pushagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.pushagent.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.retaildemoapp.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Nokia retail demonstration mode \nhttps://en.wikipedia.org/wiki/Demo_mode\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12192,22 +10664,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.settings.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Overlay related to settings\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.SettingsUtils.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.SettingsUtils.overlay.base.s600ww",
     "list": "oem",
     "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
@@ -12224,62 +10680,6 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.SetupWizard.overlay.base.s600ww",
-    "list": "oem",
-    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
     "list": "oem",
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
@@ -12296,57 +10696,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.telecom.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Telecom telemetry ?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.telecom.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Telecom telemetry ?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
     "list": "oem",
     "description": "Logging stuff\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Logging stuff\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.UsageStatsLogReceiver.data.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Logging stuff\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.weatherservice.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Overlay for the weather app\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.weatherservice.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Overlay for the weather app\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12379,22 +10731,6 @@
     "id": "com.foxconn.ifaa",
     "list": "oem",
     "description": "IFAA = China\u2019s Internet Finance Authentication Alliance\nChinese organisation that aim to achieve a more simple way to verify the identity of human (like passwordless authentication)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.hmdglobal.datago.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Sends diagnostic data to HMD (Company behin Nokia) ?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.hmdglobal.datago.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Sends diagnostic data to HMD (Company behin Nokia) ?\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12448,25 +10784,9 @@
     "labels": null
   },
   {
-    "id": "com.evenwell.fmradio.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Nokia radio app \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.evenwell.hdrservice",
     "list": "oem",
     "description": "HDR Service (https://play.google.com/store/apps/details?id=com.evenwell.hdrservice)\nEnhances contrast and sharpness for normal photos, games and videos dynamically.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.evenwell.OTAUpdate.overlay.base.s600ww",
-    "list": "oem",
-    "description": "Related to OTA Update (Over-The-Air updates, updates from Nokia)\nMay not be safe if you still receive updates.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12603,14 +10923,6 @@
     "id": "com.coloros.speechassist",
     "list": "oem",
     "description": "ColorOS Speech Assistant\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.coloros.widget.smallweather",
-    "list": "oem",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -12888,7 +11200,7 @@
     "labels": null
   },
   {
-    "id": "com.amazon.mShop.android.shopping.vpl",
+    "id": "com.amazon.mShop.android.shopping",
     "list": "miscellaneous",
     "description": "Amazon Shopping (https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping)\nSame package as com.amazon.mShop.android.\n",
     "dependencies": null,
@@ -12979,30 +11291,6 @@
     "id": "com.skype.raider",
     "list": "miscellaneous",
     "description": "Skype (https://play.google.com/store/apps/details?id=com.skype.raider)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.microsoft.office.powerpoint",
-    "list": "miscellaneous",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.microsoft.office.powerpoint",
-    "list": "miscellaneous",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.microsoft.office.powerpoint",
-    "list": "miscellaneous",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -13328,22 +11616,6 @@
     "labels": null
   },
   {
-    "id": "com.qualcomm.qti.rcsimsbootstraputil",
-    "list": "miscellaneous",
-    "description": "RCS Service \nRCS = Rich Communication Services. \nRCS is a communication protocol between mobile telephone carriers and between phone and carrier, aiming at replacing SMS.\nhttps://en.wikipedia.org/wiki/Rich_Communication_Services\nNote that it uses IP protocol so you need to connect to Wifi/3G/4G...  to take advantage of it.\n#\nIt's a hot mess right now. It aims at being universal but you still need to have a Samsung Messages \nor Google Message. 3-party apps can't support it because google hasn't released a public API yet.\n\nIn a lot of country messages go through Google's Jibe servers.\nhttps://jibe.google.com/policies/terms/\n#\nhttps://pocketnow.com/why-you-should-probably-avoid-googles-rcs-text-messaging-chat-feature\n#\nDoes this packages is really needed for VolTE/VoWifi?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.qualcomm.qti.services.secureui",
-    "list": "miscellaneous",
-    "description": "Qualcomm Secure UI Service.\nUncertain role...\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.qualcomm.qti.uceshimservice",
     "list": "miscellaneous",
     "description": "UCE shim service \nUCE = User Capability Echange\nUsed for RCS. It provide a service  discovery  with  which  users  can  know  the capabilities of other users.\nUser capability exchange is based on SIP PUBLISH and then SIP SUBSCRIBE/NOTIFY. \nDevices would PUBLISH their capabilities to a presence server and then when another device wants to find out what \nthe other party is able to support, the device would send a SUBSCRIBE to the presence server and the presence server  \nwould then send a NOTIFY to the device of what the other party is able to support.\nSee https://fr.wikipedia.org/wiki/Session_Initiation_Protocol\nSee \"com.samsung.rcs\" in Samsung list for more information on RCS\n",
@@ -13371,14 +11643,6 @@
     "id": "com.quicinc.cne.CNEService",
     "list": "miscellaneous",
     "description": "Qualcomm Connectivity Engine\nAllow seamless calls between VoLTE and VoWiFi\nhttps://www.qualcomm.com/news/onq/2013/07/02/qualcomms-cne-bringing-smarts-3g4g-wi-fi-seamless-interworking\nhttps://programmersought.com/article/35091829299/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.qti.qualcomm.datastatusnotification",
-    "list": "miscellaneous",
-    "description": "Can read/send SMS\nAllows to cap data when you've reached the limit of your plan (not 100% sure)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -13456,30 +11720,6 @@
     "labels": null
   },
   {
-    "id": "com.qualcomm.svi",
-    "list": "miscellaneous",
-    "description": "Sunlight Visibility Improvement\nI've heard vaguely that some phones use it for the above purpose? On a LG Q6 there was no effect on functionality after removing.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.qti.confuridialer",
-    "list": "miscellaneous",
-    "description": "Conference URI dialer. Also a conference call service, for digital signal only, as SIP / VoIP\nhttps://devcondition.com/article/removing-unneeded-miui-applications/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "vendor.qti.iwlan",
-    "list": "miscellaneous",
-    "description": "Used for VoLTE/VoWifi (Wifi-calling)\nIwLAN = Interworking wLAN. \nSupport for mobile data offloading (use of complementary network technologies for delivering data originally targeted \nfor cellular networks)\nConcretly, it most of the time it means your phone will switch to use the Wi-Fi connection instead of the cellular data connection. \nhttps://en.wikipedia.org/wiki/Mobile_data_offloading\n)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "cci.usage",
     "list": "miscellaneous",
     "description": "My Consumer Cellular (https://play.google.com/store/apps/details?id=cci.usage)\nLets you manage your Consumer Cellular account, track your usage, pay your bill.\nConsumer Cellular is an American postpaid mobile virtual network operator\nhttps://en.wikipedia.org/wiki/Consumer_Cellular\n",
@@ -13491,30 +11731,6 @@
     "id": "com.android.ld.appstore",
     "list": "miscellaneous",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.ld.appstore",
-    "list": "miscellaneous",
-    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.ld.appstore",
-    "list": "miscellaneous",
-    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association\n\nLD Gaming Appstore\nLDPlayer is an Android Gaming emulator pour PC (https://ldplayer.net/)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.aspiro.tidal",
-    "list": "miscellaneous",
-    "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -13592,7 +11808,7 @@
     "labels": null
   },
   {
-    "id": "com.cootek.smartinputv5.language.spanishus",
+    "id": "com.cootek.smartinputv5.language.englishgb",
     "list": "miscellaneous",
     "description": "TouchPal Keyboard by Cootek a chinese company.\nAdware (lots lots of ads)\nWorth reading : https://www.buzzfeednews.com/article/craigsilverman/google-banned-cootek-adware\n",
     "dependencies": null,
@@ -13643,14 +11859,6 @@
     "id": "com.dna.solitaireapp",
     "list": "miscellaneous",
     "description": "Solitaire Game app from DNA company ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.drivemode",
-    "list": "miscellaneous",
-    "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings\n\nDrivemode (https://play.google.com/store/apps/details?id=com.drivemode.android)\nSimplifies how you manage calls and messages while driving.\nhttps://drivemode.com/privacy-2/\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -13747,14 +11955,6 @@
     "id": "com.hancom.office.editor.hidden",
     "list": "miscellaneous",
     "description": "Legacy Hancom Office Editor (Korean alternative to Microsoft Office). Featured in Samsung and LG phones\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.handmark.expressweather.vpl",
-    "list": "miscellaneous",
-    "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -13936,14 +12136,6 @@
     "labels": null
   },
   {
-    "id": "com.opera.max.preinstall",
-    "list": "miscellaneous",
-    "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera\u2019s servers to compress images and videos \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.particlenews.newsbreak",
     "list": "miscellaneous",
     "description": "News Break: Local & Breaking (https://play.google.com/store/apps/details?id=com.particlenews.newsbreak)\nNews provided by NewsBreak (https://www.newsbreak.com/)\n#\nFYI : https://reports.exodus-privacy.eu.org/en/reports/com.particlenews.newsbreak/latest/\n",
@@ -14048,17 +12240,9 @@
     "labels": null
   },
   {
-    "id": "com.rhapsody.vpl",
+    "id": "com.rhapsody",
     "list": "miscellaneous",
     "description": "Napster Music (https://play.google.com/store/apps/details?id=com.rhapsody)\nNapster streaming app\nhttps://en.wikipedia.org/wiki/Napster\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.roaming.android.gsimcontentprovider",
-    "list": "miscellaneous",
-    "description": "GSIM = Generic Statistical Information Model ? I don't think so but I can't find anything.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14144,14 +12328,6 @@
     "labels": null
   },
   {
-    "id": "com.synchronoss.dcs.att.r2g",
-    "list": "miscellaneous",
-    "description": "AT&T Ready2Go (discontinued)\nIts purpose was to help you migrating your data to your new Android device.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.s.antivirus",
     "list": "miscellaneous",
     "description": "AVG Antivirus (https://play.google.com/store/apps/details?id=com.s.antivirus) for Sony Xperia.\n",
@@ -14171,22 +12347,6 @@
     "id": "com.telenav.app.android.scout_us",
     "list": "miscellaneous",
     "description": "Scout GPS Navigation & Meet Up (https://play.google.com/store/apps/details?id=com.telenav.app.android.scout_us)\nBad GPS with bad chat features on top of that. \nhttps://www.scoutgps.com/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.touchtype.swiftkey.res.overlay",
-    "list": "miscellaneous",
-    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.touchtype.swiftkey.res.overlay",
-    "list": "miscellaneous",
-    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14232,7 +12392,7 @@
     "labels": null
   },
   {
-    "id": "com.ubercab.eats",
+    "id": "com.ubercab.driver",
     "list": "miscellaneous",
     "description": "Uber (https://play.google.com/store/apps/details?id=com.ubercab)\nUber Driver (https://play.google.com/store/apps/details?id=com.ubercab.driver)\nUber Eats (https://play.google.com/store/apps/details?id=com.ubercab.eats)\nUber does not protect personal user data and has a questionable ethic.\nWorth reading : https://en.wikipedia.org/wiki/Uber#Criticism\n",
     "dependencies": null,
@@ -14240,7 +12400,7 @@
     "labels": null
   },
   {
-    "id": "com.ubercab.eats",
+    "id": "com.ubercab",
     "list": "miscellaneous",
     "description": "Uber (https://play.google.com/store/apps/details?id=com.ubercab)\nUber Driver (https://play.google.com/store/apps/details?id=com.ubercab.driver)\nUber Eats (https://play.google.com/store/apps/details?id=com.ubercab.eats)\nUber does not protect personal user data and has a questionable ethic.\nWorth reading : https://en.wikipedia.org/wiki/Uber#Criticism\n",
     "dependencies": null,
@@ -14259,14 +12419,6 @@
     "id": "com.ume.browser.northamerica",
     "list": "miscellaneous",
     "description": "UME Web Browser (https://play.google.com/store/apps/details?id=com.ume.browser.northamerica)\nTrackers and a LOT of permissions (https://reports.exodus-privacy.eu.org/en/reports/com.ume.browser.cust/latest/)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.vlingo.midas",
-    "list": "miscellaneous",
-    "description": "Speech recognition app forthe personal assistant by Vlingo \nVlingo : https://en.wikipedia.org/wiki/Vlingo\nFYI : In January 2012 AndroidPit discovered that Vlingo sended packets of information containing the users GPS co-ordinates,\nIMEI (unique device identifier), contact list and the title of every song stored on the device back to Nuance without.\nSource : https://www.androidpit.com/Vlingo-Privacy-Breach\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14291,14 +12443,6 @@
     "id": "com.yellowpages.android.ypmobile",
     "list": "miscellaneous",
     "description": "Yellow Pages (https://play.google.com/store/apps/details?id=com.yellowpages.android.ypmobile)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.zhiliaoapp.musically",
-    "list": "miscellaneous",
-    "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses. \nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation\n\nTikTok App \nWorth reading : https://en.wikipedia.org/wiki/TikTok#Privacy,_cyberbullying_and_addiction_concerns\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14440,38 +12584,6 @@
     "labels": null
   },
   {
-    "id": "com.monotype.android.font.rosemary",
-    "list": "miscellaneous",
-    "description": "###FONTS ####\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.monotype.android.font.rosemary",
-    "list": "miscellaneous",
-    "description": "###FONTS ####\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.monotype.android.font.rosemary",
-    "list": "miscellaneous",
-    "description": "###FONTS ####\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.dsi.ant.sample.acquirechannels",
-    "list": "miscellaneous",
-    "description": "I don't know why there is \"sample\" in the name. Is this package really useful to find ANT channels ? \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.dsi.ant.sample.acquirechannels",
     "list": "miscellaneous",
     "description": "I don't know why there is \"sample\" in the name. Is this package really useful to find ANT channels ? \n",
@@ -14523,14 +12635,6 @@
     "id": "com.trustonic.tuiservice",
     "list": "miscellaneous",
     "description": "The tuiService (Trusted User Interface) is a new security layer implemented by Trustonic.\nAllows a Trusted Application to interact directly with the user via a common display and touch screen, completely isolated from the main device OS.\nSeems like a good idea but it's closed source and \"normal\" devs can't use it for their apps. \nhttps://stackoverflow.com/questions/16909576/how-to-make-use-of-arm-trust-zone-in-android-application\nIt is basically only used by manufacturer apps like Samsung Pay and for DRM stuff.\nGoogle implemented their own TUI in Android Pie : https://android-developers.googleblog.com/search/label/Trusted%20User%20Interface\n\nhttps://www.trustonic.com/news/blog/benefits-trusted-user-interface/\nhttps://en.wikipedia.org/wiki/Trusted_execution_environment\n#\nIf you're wondering, deleting theses packages will not cause security issues. It will break Trustonic TEE for sure\nbut if you don't use Trusted Apps. You won't need this ! \nDeleting this **may** reduce attack surface if your phone still has Trusted apps... because yeah, Trustonic TEE isn't foolproof (as it was claimed)\nhttps://en.wikipedia.org/wiki/ARM_architecture#Security_extensions\nhttps://googleprojectzero.blogspot.com/2017/07/trust-issues-exploiting-trustzone-tees.html\nhttps://www.synacktiv.com/posts/exploit/kinibi-tee-trusted-application-exploitation.html\nhttps://blog.quarkslab.com/introduction-to-trusted-execution-environment-arms-trustzone.html\n#\nGood ressources : \nhttps://medium.com/@nimronagy/arm-trustzone-on-android-975bfe7497d2\nhttps://www.gsd.inesc-id.pt/~nsantos/papers/pinto_acsur19.pdf\nhttps://blog.quarkslab.com/introduction-to-trusted-execution-environment-arms-trustzone.html\nhttps://medium.com/taszksec/unbox-your-phone-part-i-331bbf44c30c\n#\nNOTE : Trustonic TEE (called Kinibi) is used in Samsung, Vivo, Oppo, Xiaomi, Meizu and LG devices.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "org.simalliance.openmobileapi.uicc2terminal",
-    "list": "miscellaneous",
-    "description": "Open Mobile API (\"interface\") to access UICC secure elements \nUICC stands for Universal Integrated Circuit Card. \nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14651,30 +12755,6 @@
     "id": "com.mediatek.wfo.impl",
     "list": "miscellaneous",
     "description": "According to olorin (https://www.olorin.me/2019/09/08/debloating-the-umidigi-f1-play/)\nit's the MediaTek\u2019s default fingerprint app (and he removed it)\nCan someone confirm what does this package exactly do? \nRemember that any preinstalled apps you don't actually need just increase the surface attack.\nVulnerability found in 2019: https://nvd.nist.gov/vuln/detail/CVE-2019-15368\nAny app co-located on the device could modify a system property through an exported interface without proper authorization.\n)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "android.autoinstalls.config.Xiaomi.cactus",
-    "list": "oem",
-    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "android.autoinstalls.config.Xiaomi.cactus",
-    "list": "oem",
-    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "android.autoinstalls.config.Xiaomi.cactus",
-    "list": "oem",
-    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -14840,7 +12920,7 @@
     "labels": null
   },
   {
-    "id": "com.mipay.wallet.in",
+    "id": "com.mipay.wallet.id",
     "list": "oem",
     "description": "Mi Pay (https://play.google.com/store/apps/details?id=com.mipay.in.wallet)\nContactless NFC-based mobile payment system that supports credit, debit and public transportation cards in China.\nhttps://www.mi-pay.com/\n#\n.in = Mi Pay for India\n.id = My Pay for Indonesia\n",
     "dependencies": null,
@@ -14848,7 +12928,7 @@
     "labels": null
   },
   {
-    "id": "com.mipay.wallet.in",
+    "id": "com.mipay.wallet",
     "list": "oem",
     "description": "Mi Pay (https://play.google.com/store/apps/details?id=com.mipay.in.wallet)\nContactless NFC-based mobile payment system that supports credit, debit and public transportation cards in China.\nhttps://www.mi-pay.com/\n#\n.in = Mi Pay for India\n.id = My Pay for Indonesia\n",
     "dependencies": null,
@@ -15051,14 +13131,6 @@
     "id": "com.miui.cloudbackup",
     "list": "oem",
     "description": "Mi Cloud backup\nNeeded for Xiaomi cloud backup.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.miui.cloudservice",
-    "list": "oem",
-    "description": "Mi Cloud Services needed for Mi Cloud\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -15267,14 +13339,6 @@
     "id": "com.miui.vsimcore",
     "list": "oem",
     "description": "Virtual Sim core service\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.miui.miwallpaper.mars",
-    "list": "oem",
-    "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -15648,54 +13712,6 @@
     "labels": null
   },
   {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.systemui.overlay.ct",
-    "list": "oem",
-    "description": "Very likely to be a bunch of overlay theme from the China Mobile Communications Corporation (CMCC) / China Telecom (CT)\nCan someone remove them and see what exactly happens?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.miui.wmsvc",
     "list": "oem",
     "description": "WMService\nRun at boot, has access to internet + GPS\nI quickly looked at the decompiled code and I saw some unsanitized SQL inputs which is BAD! (vulnerable to SQL injection)\nTry to get your android unique Google advertising ID from Google Play Services.\nFeed and launch the spying/analytics app \"com.miui.hybrid\"\nThis app doesn't seems to do essential things except for tracking.\nWARNING: Some people said removing this app causes bootloop, others said it's not. \nI'd like someone to check this. I think it should be okay if you remove all other linked Xiaomi crapwares (like the script does)\n",
@@ -15728,41 +13744,9 @@
     "labels": null
   },
   {
-    "id": "com.android.browser",
-    "list": "oem",
-    "description": "Mi Browser\nYou really should use something else.\nFYI https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.android.camera2",
     "list": "oem",
     "description": "Xiaomi Camera (I don't know why they kept this package name. It's really confusing.)\nIt's a proprietary app based on the AOSP sources:\nhttps://android.googlesource.com/platform/packages/apps/Camera2/+/master/src/com/android/camera\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.camera2",
-    "list": "oem",
-    "description": "Xiaomi Camera (I don't know why they kept this package name. It's really confusing.)\nIt's a proprietary app based on the AOSP sources:\nhttps://android.googlesource.com/platform/packages/apps/Camera2/+/master/src/com/android/camera\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.contacts",
-    "list": "oem",
-    "description": "MIUI Contacts and dialer\nIt's the contacts app but you can access the dialer from this app.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.email",
-    "list": "oem",
-    "description": "Xiaomi closed-source email app based on the AOSP version. Really confusing package name.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -15771,14 +13755,6 @@
     "id": "com.android.fileexplorer",
     "list": "oem",
     "description": "Xiaomi/Mi File Explorer (Again it's a really poor choice for a package name considering it is not the AOSP File explorer)\nIt's a Closed-source app based on the AOSP version.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.gallery3d",
-    "list": "oem",
-    "description": "Xiaomi Gallery app (I'll stop repeating this is a really poor choice for the package name...)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -15811,14 +13787,6 @@
     "id": "com.android.thememanager.module",
     "list": "oem",
     "description": "I don't have the .apk but it is obviously related to \"com.android.thememanager\"\nCan someone test with this package too?\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.fido.xiaomi.uafclient",
-    "list": "oem",
-    "description": "FIDO UAF Autenthicator-Specific Module.\nSee 'com.huawei.fido.uafclient' for FIDO explaination.\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients \nto detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nSource: https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html\n\nUAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\n#\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device \nto the online service and using a local authentication mechanism such as iris or fingerprint recognition. .\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online servics.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -15936,14 +13904,6 @@
     "labels": null
   },
   {
-    "id": "com.xiaomi.bluetooth.overlay",
-    "list": "oem",
-    "description": "MIUI Bluetooth Bluetooth Control. \nYou need to keep this if you want the bluetooth to work \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.xiaomi.bsp.gps.nps",
     "list": "oem",
     "description": "GPS location\nI think bsp = board system package (https://en.wikipedia.org/wiki/Board_support_package)\nNot sure about nps (It might be Non-Permanent GPS station)\nIt's a small package which seems to display a notification when an app is using GPS.\nMore precisely, there is a receiver (GnssEventReceiver) which listen to com.xiaomi.bsp.gps.nps.GetEvent \nThis event most likely happen when an app use the GPS and refers to the state of the communication with the GNSS:\nFIX, LOSE, RECOVER, START, STOP\nIt's safe to remove if you really want to.\n",
@@ -15979,14 +13939,6 @@
     "id": "com.miui.systemui.carriers.overlay",
     "list": "oem",
     "description": "MIUI User interface for MCC/MNC configuration\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.miui.systemui.overlay.devices.android",
-    "list": "oem",
-    "description": "MIUI User interface for 'device' settings?\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -16115,14 +14067,6 @@
     "id": "com.asus.soundrecorder",
     "list": "oem",
     "description": "Asus Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder) \n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.android.hotwordenrollment.xgoogle",
-    "list": "google",
-    "description": "\"OK Google\" detection service.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -16384,14 +14328,6 @@
     "labels": null
   },
   {
-    "id": "com.google.android.apps.kids.familylink",
-    "list": "google",
-    "description": "Inbox by Gmail (Discontinued)\nGoogle Family Link (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylink)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.android.apps.kids.familylinkhelper",
     "list": "google",
     "description": "Google Family Link for children & teens (https://play.google.com/store/apps/details?id=com.google.android.apps.kids.familylinkhelper)\n",
@@ -16435,14 +14371,6 @@
     "id": "com.google.android.apps.messaging",
     "list": "google",
     "description": "Google Messaging (SMS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.apps.nbu.files",
-    "list": "google",
-    "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)\nFile Management (https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -16664,14 +14592,6 @@
     "labels": null
   },
   {
-    "id": "com.google.android.backuptransport",
-    "list": "google",
-    "description": "Allows Android apps to back up their data on Google servers.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.android.calculator",
     "list": "google",
     "description": "Google Calculator (https://play.google.com/store/apps/details?id=com.google.android.calculator)\n",
@@ -16787,22 +14707,6 @@
     "id": "com.google.android.projection.gearhead",
     "list": "google",
     "description": "Android auto (https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.pixel.setupwizard",
-    "list": "google",
-    "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.pixel.setupwizard",
-    "list": "google",
-    "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -16936,14 +14840,6 @@
     "labels": null
   },
   {
-    "id": "com.google.ar.core",
-    "list": "google",
-    "description": "YouTube app (https://play.google.com/store/apps/details?id=com.google.android.youtube)\nGoogle Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.ar.lens",
     "list": "google",
     "description": "Google Lens (for AR too) (https://play.google.com/store/apps/details?id=com.google.ar.lens)\n",
@@ -17040,14 +14936,6 @@
     "labels": null
   },
   {
-    "id": "com.google.android.apps.photos",
-    "list": "google",
-    "description": "Google photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.android.apps.turbo",
     "list": "google",
     "description": "Device Health Services (discontinued ?)\nCalculates your remaining battery percentage based on your usage\nReviews for this app were... funny (https://www.reddit.com/r/google/comments/ajnbmh/the_reviews_for_device_health_services_are_quite/)\nNote: this app needs com.google.android.gms\n",
@@ -17098,15 +14986,7 @@
   {
     "id": "com.google.android.ext.shared",
     "list": "google",
-    "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm\n\nGoogle shared library (used to share common code between apps)\nFor now the library (android.ext.shared is empty). So this apk is useless. \nThis apk has the same role than the one above.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.ext.shared",
-    "list": "google",
-    "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm\n\nGoogle shared library (used to share common code between apps)\nFor now the library (android.ext.shared is empty). So this apk is useless. \nThis apk has the same role than the one above.\n",
+    "description": "Google shared library (used to share common code between apps)\nFor now the library (android.ext.shared is empty). So this apk is useless.",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -17114,15 +14994,7 @@
   {
     "id": "com.google.android.GoogleCamera",
     "list": "google",
-    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\nGoogle Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.GoogleCamera",
-    "list": "google",
-    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone \nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\nGoogle Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)\n",
+    "description": "Google Camera (https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera)",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -17131,14 +15003,6 @@
     "id": "com.google.android.gms",
     "list": "google",
     "description": "Google Play Services\ngms = Google Mobile Services\nIt is a layer that sits on top of the OS and provide a bunch of Google APIs, giving developers access to various Google Services.\nIf you remove it all the apps relying on Google Play Services whill either : \n- detect the lack of play services and refuse to run\n- detect the lack of play services but allow you to run (not properly) by dismissing a annoying popup\nWith some phones, removing Google Play Services bootloop the device so be careful.\nNOTE : Deleting this package will improve a LOT your battery life !\n#\nIMPORTANT : You need to uncheck Find My Device from the \"Device admin apps\" settings panel to be able to uninstall this package\nSearch \"admin\" in the settings search bar.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.overlay.gmsgsaconfig",
-    "list": "google",
-    "description": "Probably RROs (https://source.android.com/devices/architecture/rros?hl=en) tied to \"com.google.android.gms\" (Google Play Services)\nIf you remove com.google.android.gms you can remove those 2 packages as well.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
@@ -17312,14 +15176,6 @@
     "labels": null
   },
   {
-    "id": "com.google.android.overlay.modules.ext.services",
-    "list": "google",
-    "description": "Android Services Library that contains an \"Android Notification Ranking Service.\" \nIt sorts notifications by \"importance\" based on things like freshness, app type (IM apps come first), and by contact. \nThe library android.ext.services is open-source. Google probably uses it to update its API without having to rely to the OEM\nIt is a mainline module and is needed to boot since Android 11! NO NOT REMOVE IT!\nhttps://source.android.com/devices/architecture/modular-system/extservices\nhttps://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.android.networkstack",
     "list": "google",
     "description": "Network Stack Components\nhttps://source.android.com/devices/architecture/modular-system/networking\nProvides common IP services, network connectivity monitoring, and captive login portal detection.\n",
@@ -17344,14 +15200,6 @@
     "labels": null
   },
   {
-    "id": "com.google.android.packageinstaller.a_overlay",
-    "list": "google",
-    "description": "Gives ability to install, update or remove applications on the device.\nIf you delete this package, your phone will probably bootloop.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
     "id": "com.google.android.overlay.modules.permissioncontroller.forframework",
     "list": "google",
     "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
@@ -17360,27 +15208,1282 @@
     "labels": null
   },
   {
-    "id": "com.google.android.overlay.modules.permissioncontroller.forframework",
-    "list": "google",
-    "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.android.overlay.modules.permissioncontroller.forframework",
-    "list": "google",
-    "description": "The PermissionController module enables updatable privacy policies and UI elements.\nFor example, the policies and UI around granting and managing permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null
-  },
-  {
-    "id": "com.google.mainline.telemetry",
-    "list": "google",
+    "id": "com.verizon.obdm",
+    "list": "carriers",
     "description": "It's a set of metrics-related modules. Google Play uses the version of the Telemetry module to determine\nif updates are available for metrics-related modules and which security patch version to display to the end user. \nThis module doesn\u2019t contain active code and has no functionality on its own. \nRemoving modules-related packages may not be safe since Android 11\nhttps://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null
+  },
+  {
+    "id": "com.verizon.permissions.appdirectedsms",
+    "list": "carriers",
+    "description": "Custom permissions for some verizon stuff?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "id": "com.vzw.ecid",
+    "list": "carriers",
+    "description": "Verizon Call Filter (https://play.google.com/store/apps/details?id=com.vzw.ecid)\nNOTE : Never trust a company which promotes call ID/spam blocking features.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "id": "com.motorola.mot5gmod",
+    "list": "carriers",
+    "description": "5G Moto Mod (https://play.google.com/store/apps/details?id=com.motorola.mot5gmod)",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "id": "com.motorola.vzw.pco.extensions.pcoreceiver",
+    "list": "carriers",
+    "description": "Protocol Configuration Options.\nRelated to APN configuration.\nhttps://www.freshpatents.com/-dt20180607ptan20180159824.php",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null
+  },
+  {
+    "id": "com.asurion.android.mobilerecovery.sprint.vpl",
+    "list": "carriers",
+    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.asurion.android.mobilerecovery.sprint",
+    "list": "carriers",
+    "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.locationlabs.finder.sprint.vpl",
+    "list": "carriers",
+    "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\nhttps://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\nhttps://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.mobolize.sprint.securewifi",
+    "list": "carriers",
+    "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it.\nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN:\nhttps://www.privacytools.io/providers/vpn/",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sprint.android.musicplus2033",
+    "list": "carriers",
+    "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint\u2019s official Music Store and player.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sprint.safefound",
+    "list": "carriers",
+    "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.AprUploadService",
+    "list": "nokia",
+    "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.AprUploadService.data.overlay.base",
+    "list": "nokia",
+    "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.AprUploadService.data.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.autoregistration",
+    "list": "nokia",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.autoregistration.overlay.base",
+    "list": "nokia",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.autoregistration.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.autoregistration.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.autoregistration.overlay.d.base.s600id",
+    "list": "nokia",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.batteryprotect",
+    "list": "nokia",
+    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.batteryprotect.overlay.base",
+    "list": "nokia",
+    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.batteryprotect.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.batteryprotect.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.bboxsbox",
+    "list": "nokia",
+    "description": "??? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.bokeheditor",
+    "list": "nokia",
+    "description": "Related to photos editing I think [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.CPClient",
+    "list": "nokia",
+    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.CPClient.overlay.base",
+    "list": "nokia",
+    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.CPClient.overlay.base.s600id",
+    "list": "nokia",
+    "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.custmanager",
+    "list": "nokia",
+    "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.custmanager.data.overlay.base",
+    "list": "nokia",
+    "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.custmanager.data.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.custmanager.data.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.dataagent",
+    "list": "nokia",
+    "description": "",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.dataagent.overlay.base",
+    "list": "nokia",
+    "description": "Data agent\nUsed for backup/restore ? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.dataagent.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Data agent\nUsed for backup/restore ? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DbgCfgTool",
+    "list": "nokia",
+    "description": "",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DbgCfgTool.overlay.base",
+    "list": "nokia",
+    "description": "Debug config tool ? # [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DbgCfgTool.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Debug config tool ? # [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DeviceMonitorControl",
+    "list": "nokia",
+    "description": "Monitor stuff obviously...",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DeviceMonitorControl.data.overlay.base",
+    "list": "nokia",
+    "description": "Monitor stuff obviously...",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Monitor stuff obviously...",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.factorywizard",
+    "list": "nokia",
+    "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.factorywizard.overlay.base",
+    "list": "nokia",
+    "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.legalterm",
+    "list": "nokia",
+    "description": "Provides terms and condition (legal notice)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.managedprovisioning",
+    "list": "nokia",
+    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.managedprovisioning.overlay.base",
+    "list": "nokia",
+    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.managedprovisioning.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.nps",
+    "list": "nokia",
+    "description": "Net Promoter Score\nPreinstalled survey.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.nps.overlay.base",
+    "list": "nokia",
+    "description": "Net Promoter Score\nPreinstalled survey.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.nps.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Net Promoter Score\nPreinstalled survey.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.pandorasbox",
+    "list": "nokia",
+    "description": "WTF is this? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.partnerbrowsercustomizations",
+    "list": "nokia",
+    "description": "",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.partnerbrowsercustomizations.overlay.base",
+    "list": "nokia",
+    "description": "Customize your browser with stuff you don't want.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Customize your browser with stuff you don't want.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.permissiondetection",
+    "list": "nokia",
+    "description": "???? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.phone.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Overlay for the dialer app",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.PowerMonitor",
+    "list": "nokia",
+    "description": "Drains more battery than it saves.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.PowerMonitor.overlay.base",
+    "list": "nokia",
+    "description": "Drains more battery than it saves.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.PowerMonitor.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Drains more battery than it saves.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.providers.downloads.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Add most likey a useless overlay on the download app.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.providers.weather",
+    "list": "nokia",
+    "description": "Provider for the Nokia weather app.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.pushagent",
+    "list": "nokia",
+    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.pushagent.overlay.base",
+    "list": "nokia",
+    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.pushagent.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Surely related to push notifications for Nokia apps (only ?)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.retaildemoapp",
+    "list": "nokia",
+    "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.retaildemoapp.overlay.base",
+    "list": "nokia",
+    "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.retaildemoapp.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.settings.data.overlay.base",
+    "list": "nokia",
+    "description": "Overlay related to settings [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.SettingsUtils",
+    "list": "nokia",
+    "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.SetupWizard",
+    "list": "nokia",
+    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.SetupWizard.overlay.base",
+    "list": "nokia",
+    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.setupwizard.btl.s600ww.overlay",
+    "list": "nokia",
+    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.SetupWizard.overlay.d.base.s600ww",
+    "list": "nokia",
+    "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.stbmonitor",
+    "list": "nokia",
+    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.stbmonitor.data.overlay.base",
+    "list": "nokia",
+    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.stbmonitor.data.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.telecom.data.overlay.base",
+    "list": "nokia",
+    "description": "Telecom telemetry ? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.telecom.data.overlay.base.s600id",
+    "list": "nokia",
+    "description": "Telecom telemetry ? [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.UsageStatsLogReceiver",
+    "list": "nokia",
+    "description": "Logging stuff",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.UsageStatsLogReceiver.data.overlay.back.s600id",
+    "list": "nokia",
+    "description": "Logging stuff",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.weather.overlay.base.s600ww",
+    "list": "nokia",
+    "description": "Overlay for the weather app [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.evenwell.weatherservice",
+    "list": "nokia",
+    "description": "Service for the weather app",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.hmdglobal.datago",
+    "list": "nokia",
+    "description": "Sends diagnostic data to HMD (Company behind Nokia) ?",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.hmdglobal.datago.overlay.base",
+    "list": "nokia",
+    "description": "Sends diagnostic data to HMD (Company behind Nokia) ?",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.hiya.star",
+    "list": "oem",
+    "description": "also called android-ss-service-lib (Samsung-exclusive)\nThird-party that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE : Never trust a company which promotes spam blocking features\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n\nHave a look at their privacy policy. That's... pretty scary : https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)",
+    "dependencies": "",
+    "neededBy": "com.samsung.android.smartcallprovider",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.airtel.stubapp",
+    "list": "oem",
+    "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub\nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.app.camera.sticker.facear.preload",
+    "list": "oem",
+    "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.app.camera.sticker.facear3d.preload",
+    "list": "oem",
+    "description": "Default 3D live stickers\nAnnoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.app.camera.sticker.facearavatar.preload",
+    "list": "oem",
+    "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.app.ledbackcover",
+    "list": "oem",
+    "description": "I think it enable doing things with LEDs on the cover\n\nhttps://www.samsung.com/hk_en/mobile-accessories/led-cover-for-galaxy-s10/EF-KG973CBEGWW/\nHOW IT WORKS : https://forum.xda-developers.com/galaxy-note-8/accessories/how-led-cover-t3686694",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.app.vrsetupwizards",
+    "list": "oem",
+    "description": "Samsung Gear VR (Virtual Reality) setup wizard (https://en.wikipedia.org/wiki/Samsung_Gear_VR)\nhttps://360samsungvr.com/portal/content/about_samsung_vr\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java\nSetup wizard : The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung VR services.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.agent.dummy",
+    "list": "oem",
+    "description": "Bixby Voice Stub",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.es.globalaction",
+    "list": "oem",
+    "description": "Bixby stuff [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.plmsync",
+    "list": "oem",
+    "description": "Bixby stuff [MORE INFO NEEDED]",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.service",
+    "list": "oem",
+    "description": "Bixby Service",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.voiceinput",
+    "list": "oem",
+    "description": "Bixby service needed for voice control",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.bixby.wakeup",
+    "list": "oem",
+    "description": "Bixby voice wake-up",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.knox.containeragent",
+    "list": "oem",
+    "description": "KNOX Work profile/space\nProvidess an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.personalpage.service",
+    "list": "oem",
+    "description": "Private mode (was replaced by Secure Folder)\nhttps://www.samsung.com/uk/support/mobile-devices/what-is-private-mode-and-how-do-i-use-it/\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.hiddennetworksetting",
+    "list": "oem",
+    "description": "Set of hidden network settings (inlcuding frequency bands choice)\nHow to see these settings : https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.systemui.bixby",
+    "list": "oem",
+    "description": "System UI for Bixby/Bixby2",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.vvm",
+    "list": "oem",
+    "description": "Samsung Verizon Voicemail\nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.asus.easylauncher",
+    "list": "oem",
+    "description": "Asus Easy Mode (https://play.google.com/store/apps/details?id=com.asus.easylauncher)\nAlternative launcher with bigger icons and simpler interface",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.asus.userfeedback",
+    "list": "oem",
+    "description": "ZenUI Help (https://play.google.com/store/apps/details?id=com.asus.userfeedback)\nCustomer service app that provides FAQs, Mobile care service, user feedback, and public forums.\nLots of telemetry (insecure on top of that):\nhttps://beta.pithus.org/report/e80a1fa70adc097fc9817720b5c8c81cfd156a76e6d062759b2bc3d6937a97e7",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.android.totemweather",
+    "list": "oem",
+    "description": "Huawei Weather app (and its widget)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.android.totemweatherapp",
+    "list": "oem",
+    "description": "Huawei Weather app (and its widget)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.android.wfdft",
+    "list": "oem",
+    "description": "Wi-Fi Direct feature.\nNote: Wifi direct enables devices to establish a direct Wi-Fi connection (without a router) over which the two can send and receive files.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.hwstartupguide",
+    "list": "oem",
+    "description": "A one-time setup app that is no longer needed",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.paradise",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.artflower",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.flowersbloom",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.mountaincloud",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.naturalgarden",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.livewallpaper.ripplestone",
+    "list": "oem",
+    "description": "Live wallpapers",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.mirror",
+    "list": "oem",
+    "description": "Huawei Mirror app.\nMirror like \"Glass\"",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.huawei.scanner",
+    "list": "oem",
+    "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.motorola.easyprefix",
+    "list": "oem",
+    "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.motorola.motocare.internal",
+    "list": "oem",
+    "description": "Core stuff for the package above I guess.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.motorola.comcastext",
+    "list": "oem",
+    "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".Safe to remove (tested only on non-Comcast phone).\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonyericsson.conversations.res.overlay_305",
+    "list": "oem",
+    "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ?",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonyericsson.warrantytime",
+    "list": "oem",
+    "description": "Lets you see some info about your warranty and how long it will last.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonymobile.themes.sou.cid18.black",
+    "list": "oem",
+    "description": "Sony themes",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonymobile.themes.sou.cid19.silver",
+    "list": "nokia",
+    "description": "Sony themes",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonymobile.themes.sou.cid20.blue",
+    "list": "nokia",
+    "description": "Sony themes",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonymobile.themes.sou.cid21.pink",
+    "list": "nokia",
+    "description": "Sony themes",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.sonymobile.xperiaxlivewallpaper",
+    "list": "nokia",
+    "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "android.autoinstalls.config.Xiaomi.cepheus",
+    "list": "nokia",
+    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "android.autoinstalls.config.Xiaomi.dipper",
+    "list": "nokia",
+    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "android.autoinstalls.config.Xiaomi.daisy",
+    "list": "nokia",
+    "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.miui.miwallpaper.earth",
+    "list": "nokia",
+    "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.android.hotwordenrollment.okgoogle",
+    "list": "google",
+    "description": "\"OK Google\" detection service.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.apps.inbox",
+    "list": "google",
+    "description": "Inbox by Gmail (Discontinued)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.apps.navlite",
+    "list": "google",
+    "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.backup",
+    "list": "google",
+    "description": "Allows Android apps to back up their data on Google servers. (On Android 4.2)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.setupwizard",
+    "list": "google",
+    "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.setupwizard.a_overlay",
+    "list": "google",
+    "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.youtube",
+    "list": "google",
+    "description": "YouTube app (https://play.google.com/store/apps/details?id=com.google.android.youtube)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.email",
+    "list": "google",
+    "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.google.android.tag",
+    "list": "google",
+    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone\nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.microsoft.office.excel",
+    "list": "misc",
+    "description": "Excel",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.microsoft.office.word",
+    "list": "misc",
+    "description": "Word",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.microsoft.office.outlook",
+    "list": "misc",
+    "description": "",
+    "dependencies": "Outlook",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.aaa.android.discounts",
+    "list": "misc",
+    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.aaa.android.discounts.vpl",
+    "list": "misc",
+    "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You\u2019ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.aspiro.tidal.vpl",
+    "list": "misc",
+    "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.draftkings.dknativermgGP.vpl",
+    "list": "misc",
+    "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.handmark.expressweather",
+    "list": "misc",
+    "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.opera.max.oem",
+    "list": "misc",
+    "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera\u2019s servers to compress images and videos",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.roaming.android.gsimbase",
+    "list": "misc",
+    "description": "GSIM = Generic Statistical Information Model ? I don't think so but I can't find anything.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.til.timesnews",
+    "list": "misc",
+    "description": "India News (https://play.google.com/store/apps/details?id=com.til.timesnews)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.yelp.android",
+    "list": "misc",
+    "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses.\nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.monotype.android.font.chococooky",
+    "list": "misc",
+    "description": "Font",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.monotype.android.font.cooljazz",
+    "list": "misc",
+    "description": "Font",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.monotype.android.font.foundation",
+    "list": "misc",
+    "description": "Font",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.dsi.ant.plugins.antplus",
+    "list": "misc",
+    "description": " ANT+ plugin service (https://play.google.com/store/apps/details?id=com.dsi.ant.plugins.antplus)",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.android.bips",
+    "list": "aosp",
+    "description": "Default print Service.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.android.email.partnerprovider",
+    "list": "aosp",
+    "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.android.wallpaper.livepicker",
+    "list": "aosp",
+    "description": "Enables you to pick a live wallpaper.",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.cameraxservice",
+    "list": "pending",
+    "description": "CBattery drain related on S10",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
+  },
+  {
+    "id": "com.samsung.android.kgclient",
+    "list": "pending",
+    "description": "Samsung Pay One Ui 3.0 ?",
+    "dependencies": "",
+    "neededBy": "",
+    "labels": ""
   }
 ]
