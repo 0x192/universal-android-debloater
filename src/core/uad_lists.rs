@@ -13,6 +13,7 @@ pub struct Package {
     dependencies: Option<String>,
     needed_by: Option<String>,
     labels: Option<Vec<String>>,
+    pub confidence: String,
 }
 
 
@@ -94,6 +95,49 @@ impl std::fmt::Display for PackageState {
                 PackageState::All => "all",
                 PackageState::Installed => "installed",
                 PackageState::Uninstalled => "uninstalled",
+            }
+        )
+    }
+}
+
+
+// Bad names. To be changed!
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Preselection {
+    All,
+    Safe,
+    Advanced,
+    Expert,
+    Unsafe,
+}
+
+impl Default for Preselection {
+    fn default() -> Preselection {
+        Preselection::Safe
+    }
+}
+
+impl Preselection {
+    pub const ALL: [Preselection; 4] = [
+        Preselection::Safe,
+        Preselection::Advanced,
+        Preselection::Expert,
+        Preselection::Unsafe,
+    ];
+}
+
+
+impl std::fmt::Display for Preselection {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            match self {
+                Preselection::All => "All",
+                Preselection::Safe => "Safe",
+                Preselection::Advanced => "Advanced",
+                Preselection::Expert => "Expert",
+                Preselection::Unsafe => "Unsafe",
             }
         )
     }

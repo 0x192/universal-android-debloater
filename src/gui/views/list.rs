@@ -1,5 +1,5 @@
 use crate::gui::style;
-use crate::core::uad_lists::{ UadLists, PackageState, Package };
+use crate::core::uad_lists::{ UadLists, PackageState, Package, Preselection };
 use std::{collections::HashMap};
 
 use iced::{
@@ -24,7 +24,9 @@ pub struct List {
     package_scrollable_state: scrollable::State,
     package_state_picklist: pick_list::State<PackageState>,
     list_picklist: pick_list::State<UadLists>,
+    preselection_picklist: pick_list::State<Preselection>,
     selected_package_state: Option<PackageState>,
+    selected_preselection: Option<Preselection>,
     selected_list: Option<UadLists>,
     pub input_value: String,
 }
@@ -35,6 +37,7 @@ pub enum Message {
     LoadPackages(&'static HashMap<String, Package>),
     ListSelected(UadLists),
     PackageStateSelected(PackageState),
+    PreselectionSelected(Preselection),
     List(usize, RowMessage),
 }
 
@@ -47,20 +50,24 @@ impl List {
                 self.p_row = Vec::new();
                 self.selected_package_state = Some(PackageState::Installed);
                 self.selected_list = Some(UadLists::All);
+                self.selected_preselection = Some(Preselection::Safe);
 
                 let installed_system_packages = hashset_installed_system_packages();
                 let mut description;
                 let mut uad_list;
                 let mut state;
+                let mut confidence;
 
                 for p_name in self.packages.lines() {
                     state = "installed";
                     description = "[No description]";
                     uad_list = "unlisted";
+                    confidence = "";
                     
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
                         uad_list = &uad_lists.get(p_name).unwrap().list;
+                        confidence = &uad_lists.get(p_name).unwrap().confidence;
                     }
 
                     if !installed_system_packages.contains(p_name) {
@@ -72,6 +79,7 @@ impl List {
                         &state,
                         &description,
                         &uad_list,
+                        &confidence
                     );
                     self.p_row.push(package_row)
                 }
@@ -98,6 +106,11 @@ impl List {
                 Self::filter_package_lists(self);
                 Command::none()
             },
+            Message::PreselectionSelected(preselection) => {
+                self.selected_preselection = Some(preselection);
+                Self::filter_package_lists(self);
+                Command::none()
+            }
             Message::List(i, row_message) => {
                 let package = self.p_row[i].clone();
                 self.description = package.description;
@@ -135,12 +148,20 @@ impl List {
                         Message::PackageStateSelected,
                     );
 
+            let preselection_picklist = PickList::new(
+                        &mut self.preselection_picklist,
+                        &Preselection::ALL[..],
+                        self.selected_preselection,
+                        Message::PreselectionSelected,
+                    );
+
             let control_panel = Row::new()
                 .width(Length::Fill)
                 .align_items(Align::Center)
                 .spacing(10)
                 .push(search_packages)
                 .push(divider)
+                .push(preselection_picklist)
                 .push(package_state_picklist)
                 .push(list_picklist);
 
@@ -200,6 +221,7 @@ impl List {
 
         let list_filter: UadLists = self.selected_list.unwrap();
         let package_filter: PackageState = self.selected_package_state.unwrap();
+        let preselection_filter: Preselection = self.selected_preselection.unwrap();
 
         let mut filtered_packages: Vec<PackageRow> = self.phone_packages_row
             .iter()
@@ -207,7 +229,8 @@ impl List {
                 |p|
                 (p.name.contains(&self.input_value) || self.input_value.is_empty()) && 
                 (p.state == package_filter.to_string() || package_filter == PackageState::All) &&
-                (p.uad_list.to_string() == list_filter.to_string() || list_filter == UadLists::All)
+                (p.uad_list.to_string() == list_filter.to_string() || list_filter == UadLists::All) &&
+                (p.confidence.to_string() == preselection_filter.to_string() || preselection_filter == Preselection::All)
             )
             .cloned()
             .collect();
@@ -223,6 +246,7 @@ pub struct PackageRow {
     pub state: String,
     pub description: String,
     pub uad_list: String,
+    pub confidence: String,
     package_btn_state: button::State,
     remove_restore_btn_state: button::State,
 }
@@ -240,6 +264,7 @@ impl PackageRow {
         state: &str,
         description: &str,
         uad_list: &str,
+        confidence: &str,
 
     ) -> Self {
         Self {
@@ -247,6 +272,7 @@ impl PackageRow {
             state: state.to_string(),
             description: description.to_string(),
             uad_list: uad_list.to_string(),
+            confidence: confidence.to_string(),
             remove_restore_btn_state: button::State::default(),
             package_btn_state: button::State::default(),
         }
@@ -273,6 +299,14 @@ impl PackageRow {
         //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
         //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
 
+        let button_style;
+
+        if self.confidence != Preselection::Unsafe.to_string() {
+            button_style = style::PrimaryButton::Enabled;
+        } else {
+            button_style = style::PrimaryButton::Disabled;
+        }
+
         Row::new() 
             .push(Button::new(
                 &mut self.package_btn_state,
@@ -286,8 +320,11 @@ impl PackageRow {
                                                     Text::new("Uninstall")
                                                         .horizontal_alignment(HorizontalAlignment::Center),
                                                 )
-                                                .on_press(RowMessage::RemovePressed(package))
-                                                .style(style::PrimaryButton::Enabled)
+                                                .on_press(
+                                                    if self.confidence != Preselection::Unsafe.to_string() { RowMessage::RemovePressed(package) }
+                                                    else { RowMessage::NoEvent }
+                                                )
+                                                .style(button_style)
                                                 .width(Length::FillPortion(1))
                                             } else {
                                                 Button::new(
