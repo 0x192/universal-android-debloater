@@ -10,7 +10,7 @@ pub fn adb_shell_command(args: &str) -> Result<String,String> {
     #[cfg(target_os = "windows")]
         let output = Command::new("./ressources/windows/adb/adb")
             .args(&["shell", args])
-            .creation_flags(0x08000000)
+            .creation_flags(0x08000000) // do not open a cmd window
             .output()
             .expect("adb command failed to start. Do you have ADB installed?");
 
