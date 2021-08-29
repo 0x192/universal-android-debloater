@@ -98,6 +98,17 @@ impl button::StyleSheet for PackageRow {
         }
 }
 
+pub struct Description;
+impl container::StyleSheet for Description {
+    fn style(&self) -> container::Style {
+        container::Style {
+            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
+            text_color: Some(Color::WHITE),
+            ..container::Style::default()
+        }
+    }
+}
+
 pub struct Scrollable;
 impl scrollable::StyleSheet for Scrollable {
     fn active(&self) -> scrollable::Scrollbar {

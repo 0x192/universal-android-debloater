@@ -101,6 +101,18 @@ impl std::fmt::Display for PackageState {
 }
 
 
+impl std::str::FromStr for PackageState {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "installed" => Ok(PackageState::Installed),
+            "uninstalled" => Ok(PackageState::Uninstalled),
+            _ => Err(format!("'{}' is not a valid value for WSType", s)),
+        }
+    }
+}
+
 // Bad names. To be changed!
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Preselection {
