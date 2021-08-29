@@ -6,6 +6,9 @@ pub const BUTTON_COLOR_HOVER: Color = Color::from_rgb(0.47, 0.58, 0.15);
 pub const BACKGROUND_COLOR: Color = Color::from_rgb(0.27, 0.16, 0.11);
 pub const NAVIGATION_COLOR: Color = Color::from_rgb(0.2, 0.11, 0.07);
 pub const ROW_COLOR_PRIMARY: Color = Color::from_rgb(0.55, 0.44, 0.27);
+pub const UNINSTALL_BUTTON_COLOR: Color = Color::from_rgb(0.6, 0.1, 0.0);
+pub const UNINSTALL_BORDER_COLOR: Color = Color::from_rgb(0.48, 0.01, 0.0);
+
 
 pub enum PrimaryButton {
     Enabled,
@@ -37,6 +40,64 @@ impl button::StyleSheet for PrimaryButton {
     fn hovered(&self) -> button::Style {
         match self {
             Self::Enabled => button::Style {
+                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
+                text_color: Color::WHITE,
+                ..self.active()
+            },
+            Self::Disabled => button::Style {
+                background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
+                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                ..self.active()
+            },
+        }
+    }
+}
+
+
+pub enum PackageButton {
+    Uninstall,
+    Restore,
+    Disabled,
+}
+
+impl button::StyleSheet for PackageButton {
+    fn active(&self) -> button::Style {
+        match self {
+            Self::Uninstall => button::Style {
+                background: Some(Background::Color(UNINSTALL_BUTTON_COLOR)),
+                border_color: UNINSTALL_BORDER_COLOR,
+                border_width: 2.0,
+                shadow_offset: Vector::new(1.0, 1.0),
+                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                ..button::Style::default()
+            },
+            Self::Restore => button::Style {
+                background: Some(Background::Color(BUTTON_COLOR_DEFAULT)),
+                border_color: BORDER_COLOR,
+                border_width: 2.0,
+                shadow_offset: Vector::new(1.0, 1.0),
+                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                ..button::Style::default()
+            },
+            Self::Disabled => button::Style {
+                background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
+                border_color: Color::from_rgb(0.29, 0.19, 0.03),
+                border_width: 2.0,
+                shadow_offset: Vector::new(1.0, 1.0),
+                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                ..button::Style::default()
+            },
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        match self {
+            Self::Restore => button::Style {
+                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
+                text_color: Color::WHITE,
+                ..self.active()
+            },
+            Self::Uninstall => button::Style {
                 background: Some(Background::Color(BUTTON_COLOR_HOVER)),
                 text_color: Color::WHITE,
                 ..self.active()

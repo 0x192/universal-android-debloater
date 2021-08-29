@@ -388,9 +388,9 @@ impl PackageRow {
         let button_style;
 
         if self.confidence != Preselection::Unsafe.to_string() {
-            button_style = style::PrimaryButton::Enabled;
+            button_style = style::PackageButton::Uninstall;
         } else {
-            button_style = style::PrimaryButton::Disabled;
+            button_style = style::PackageButton::Disabled;
         }
 
         Row::new()
