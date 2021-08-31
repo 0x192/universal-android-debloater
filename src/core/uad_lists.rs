@@ -52,7 +52,7 @@ impl std::fmt::Display for UadLists {
             f,
             "{}",
             match self {
-                UadLists::All => "all",
+                UadLists::All => "All lists",
                 UadLists::Aosp => "aosp",
                 UadLists::Carrier => "carrier",
                 UadLists::Google => "google",
@@ -92,7 +92,7 @@ impl std::fmt::Display for PackageState {
             f,
             "{}",
             match self {
-                PackageState::All => "all",
+                PackageState::All => "All packages",
                 PackageState::Installed => "installed",
                 PackageState::Uninstalled => "uninstalled",
             }
@@ -121,6 +121,7 @@ pub enum Preselection {
     Advanced,
     Expert,
     Unsafe,
+    Unlisted,
 }
 
 impl Default for Preselection {
@@ -130,11 +131,13 @@ impl Default for Preselection {
 }
 
 impl Preselection {
-    pub const ALL: [Preselection; 4] = [
+    pub const ALL: [Preselection; 6] = [
+        Preselection::All,
         Preselection::Safe,
         Preselection::Advanced,
         Preselection::Expert,
         Preselection::Unsafe,
+        Preselection::Unlisted,
     ];
 }
 
@@ -150,6 +153,7 @@ impl std::fmt::Display for Preselection {
                 Preselection::Advanced => "Advanced",
                 Preselection::Expert => "Expert",
                 Preselection::Unsafe => "Unsafe",
+                Preselection::Unlisted => "Unlisted",
             }
         )
     }

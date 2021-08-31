@@ -3,6 +3,8 @@ use crate::core::uad_lists::{ UadLists, PackageState, Package, Preselection };
 use std::{collections::HashMap};
 use std::str::FromStr;
 
+use crate::gui::views::settings::Settings;
+
 use iced::{
     scrollable, Align, Column, Command, Container, Element, Space,
     Length, Row, Scrollable, Text, text_input, TextInput, Checkbox, //Svg,
@@ -15,14 +17,15 @@ use crate::core::sync::{
 };
 
 #[derive(Clone, Debug, PartialEq)]
-struct SelectionPackage {
-    name: String,
-    state: String,
+pub struct SelectionPackage {
+    pub name: String,
+    pub state: String,
 }
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
     ready: bool,
+    pub settings: Settings,
     filtered_packages: Vec<PackageRow>,
     phone_packages: Vec<PackageRow>,
     selected_packages: Vec<SelectionPackage>,
@@ -50,6 +53,7 @@ pub enum Message {
     ApplyActionOnSelection,
     SelectAllPressed,
     List(usize, RowMessage),
+    LoadSettings(Settings),
 }
 
 
@@ -74,7 +78,7 @@ impl List {
                     state = "installed";
                     description = "[No description]";
                     uad_list = "unlisted";
-                    confidence = "";
+                    confidence = "Unlisted";
 
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
@@ -92,12 +96,14 @@ impl List {
                         &description,
                         &uad_list,
                         &confidence,
-                        selected
+                        selected,
+                        self.settings.expert_mode,
                     );
                     self.filtered_packages.push(package_row)
                 }
                 self.filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
                 self.phone_packages = self.filtered_packages.clone();
+
                 Self::filter_package_lists(self);
                 self.ready = true;
                 Command::none()
@@ -187,8 +193,12 @@ impl List {
                         self.selected_packages.push(package);
                     }
                 }
-            Command::none()
-            }
+                Command::none()
+            },
+            Message::LoadSettings(settings) => {
+                self.settings = settings;
+                Command::none()
+            },
         }
 
 
@@ -336,10 +346,10 @@ impl List {
             .iter()
             .filter(
                 |p|
-                (p.name.contains(&self.input_value) || self.input_value.is_empty()) && 
-                (p.state == package_filter.to_string() || package_filter == PackageState::All) &&
-                (p.uad_list.to_string() == list_filter.to_string() || list_filter == UadLists::All) &&
-                (p.confidence.to_string() == preselection_filter.to_string() || preselection_filter == Preselection::All)
+                (list_filter == UadLists::All || p.uad_list.to_string() == list_filter.to_string()) &&
+                (package_filter == PackageState::All || p.state == package_filter.to_string()) &&
+                (preselection_filter == Preselection::All || p.confidence.to_string() == preselection_filter.to_string()) &&
+                (self.input_value.is_empty() || p.name.contains(&self.input_value))
             )
             .cloned()
             .collect();
@@ -347,7 +357,7 @@ impl List {
         filtered_packages.sort_by(|a, b| a.name.cmp(&b.name));
 
         for p in &mut filtered_packages {
-            if self.selected_packages.contains(&SelectionPackage { name: p.name.clone(), state: p.state.clone() }) {
+            if self.selected_packages.iter().any(|s_p| s_p.name == p.name) {
                 p.selected = true;
             }
         }
@@ -363,8 +373,9 @@ pub struct PackageRow {
     pub uad_list: String,
     pub confidence: String,
     package_btn_state: button::State,
-    remove_restore_btn_state: button::State,
+    action_btn_state: button::State,
     selected: bool,
+    expert_mode: bool,
 }
 
 #[derive(Clone, Debug)]
@@ -373,7 +384,7 @@ pub enum RowMessage {
     RemovePressed(PackageRow),
     RestorePressed(PackageRow),
     UpdateSelection(bool),
-    NoEvent,
+    NoEvent(bool),
 }
 
 impl PackageRow {
@@ -384,6 +395,7 @@ impl PackageRow {
         uad_list: &str,
         confidence: &str,
         selected: bool,
+        expert_mode: bool,
 
     ) -> Self {
         Self {
@@ -392,9 +404,10 @@ impl PackageRow {
             description: description.to_string(),
             uad_list: uad_list.to_string(),
             confidence: confidence.to_string(),
-            remove_restore_btn_state: button::State::default(),
             package_btn_state: button::State::default(),
+            action_btn_state: button::State::default(),
             selected: selected,
+            expert_mode: expert_mode,
         }
     }
 
@@ -417,7 +430,7 @@ impl PackageRow {
                 Command::none()
             },
             RowMessage::PackagePressed => Command::none(),
-            RowMessage::NoEvent => Command::none(),
+            RowMessage::NoEvent(_) => Command::none(),
         }
     }
 
@@ -425,13 +438,40 @@ impl PackageRow {
         let package = self.clone();
         //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
         //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
-
         let button_style;
+        let action_text;
+        let action_message;
+        let action_btn;
+        let selection_checkbox;
 
-        if self.confidence != Preselection::Unsafe.to_string() {
+        if self.state == PackageState::Installed.to_string() {
+            action_text = "Uninstall";
+            action_message = RowMessage::RemovePressed(package);
             button_style = style::PackageButton::Uninstall;
         } else {
-            button_style = style::PackageButton::Disabled;
+            action_text = "Restore";
+            action_message = RowMessage::RestorePressed(package);
+            button_style = style::PackageButton::Restore;
+        }
+
+        if self.expert_mode || self.confidence != Preselection::Unsafe.to_string() {
+            selection_checkbox = Checkbox::new(self.selected, "", RowMessage::UpdateSelection)
+                .style(style::SelectionCheckBox::Enabled);
+
+            action_btn = Button::new(
+                &mut self.action_btn_state,
+                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
+            )
+            .on_press(action_message);
+
+        } else {
+            selection_checkbox = Checkbox::new(self.selected, "", RowMessage::NoEvent)
+                .style(style::SelectionCheckBox::Disabled);
+
+            action_btn = Button::new(
+                &mut self.action_btn_state,
+                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
+            );
         }
 
         Row::new()
@@ -439,31 +479,12 @@ impl PackageRow {
                 &mut self.package_btn_state,
                 Row::new()
                     .align_items(Align::Center)
-                    .push(Checkbox::new(self.selected, "", RowMessage::UpdateSelection))
+                    .push(selection_checkbox)
                     .push(Text::new(&self.name).width(Length::FillPortion(6)))
                     .push(Text::new(&self.state).width(Length::FillPortion(3)))
-                    .push(if self.state == "installed" {
-                                                Button::new(
-                                                    &mut self.remove_restore_btn_state,
-                                                    Text::new("Uninstall")
-                                                        .horizontal_alignment(HorizontalAlignment::Center),
-                                                )
-                                                .on_press(
-                                                    if self.confidence != Preselection::Unsafe.to_string() { RowMessage::RemovePressed(package) }
-                                                    else { RowMessage::NoEvent }
-                                                )
-                                                .style(button_style)
-                                                .width(Length::FillPortion(1))
-                                            } else {
-                                                Button::new(
-                                                    &mut self.remove_restore_btn_state,
-                                                    Text::new("Restore")
-                                                        .horizontal_alignment(HorizontalAlignment::Center),
-                                                )
-                                                .on_press(RowMessage::RestorePressed(package))
-                                                .style(style::PrimaryButton::Enabled)
-                                                .width(Length::FillPortion(1))
-                                            })
+                    .push(action_btn.width(Length::FillPortion(1))
+                                    .style(button_style)
+                    )
                 )
                 .style(style::PackageRow)
                 .width(Length::Fill)

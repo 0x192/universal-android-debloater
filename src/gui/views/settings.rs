@@ -4,29 +4,27 @@ use iced::{Checkbox, Column, Container, Element, Length, Text};
 
 #[derive(Debug, Clone)]
 pub struct Settings {
-    description: String,
-    backup: bool,
+    pub expert_mode: bool,
 }
 
 impl Default for Settings {
     fn default() -> Self {
         Self {
-            description: "Enable Backup".to_string(),
-            backup: true,
+            expert_mode: false,
         }
     }
 }
 
 #[derive(Debug, Clone)]
 pub enum Message {
-    BackupTriggered(bool),
+    ExpertModeToogle(bool),
 }
 
 impl Settings {
     pub fn update(&mut self, msg: Message) {
         match msg {
-            Message::BackupTriggered(toggled) => {
-                self.backup = toggled;
+            Message::ExpertModeToogle(toggled) => {
+                self.expert_mode = toggled;
             }
         }
     }
@@ -34,7 +32,11 @@ impl Settings {
     pub fn view(&self) -> Element<Message> {
         let about_text = Text::new("General");
 
-        let checkbox = Checkbox::new(self.backup, &self.description, Message::BackupTriggered);
+        let checkbox = Checkbox::new(
+            self.expert_mode, 
+            "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)", 
+            Message::ExpertModeToogle
+        );
 
         let content = Column::new()
             .width(Length::Fill)

@@ -1,4 +1,4 @@
-use iced::{button, container, scrollable, Background, Color, Vector};
+use iced::{button, container, scrollable, Background, Color, Vector, checkbox};
 // 331C12
 pub const BORDER_COLOR: Color = Color::from_rgb(0.32, 0.41, 0.05);
 pub const BUTTON_COLOR_DEFAULT: Color = Color::from_rgb(0.39, 0.48, 0.1);
@@ -8,11 +8,19 @@ pub const NAVIGATION_COLOR: Color = Color::from_rgb(0.2, 0.11, 0.07);
 pub const ROW_COLOR_PRIMARY: Color = Color::from_rgb(0.55, 0.44, 0.27);
 pub const UNINSTALL_BUTTON_COLOR: Color = Color::from_rgb(0.6, 0.1, 0.0);
 pub const UNINSTALL_BORDER_COLOR: Color = Color::from_rgb(0.48, 0.01, 0.0);
+pub const UNINSTALL_COLOR_HOVER: Color = Color::from_rgb(0.60, 0.05, 0.0);
 
+
+/// Color for disabled elements
+pub const DISABLED_COLOR: Color = Color::from_rgb(
+    195 as f32 / 255.0,
+    195 as f32 / 255.0,
+    195 as f32 / 255.0,
+);
 
 pub enum PrimaryButton {
     Enabled,
-    Disabled,
+    //Disabled,
 }
 
 impl button::StyleSheet for PrimaryButton {
@@ -26,14 +34,14 @@ impl button::StyleSheet for PrimaryButton {
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..button::Style::default()
             },
-            Self::Disabled => button::Style {
+            /*Self::Disabled => button::Style {
                 background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
                 border_color: Color::from_rgb(0.29, 0.19, 0.03),
                 border_width: 2.0,
                 shadow_offset: Vector::new(1.0, 1.0),
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..button::Style::default()
-            },
+            },*/
         }
     }
 
@@ -44,11 +52,11 @@ impl button::StyleSheet for PrimaryButton {
                 text_color: Color::WHITE,
                 ..self.active()
             },
-            Self::Disabled => button::Style {
+            /*Self::Disabled => button::Style {
                 background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..self.active()
-            },
+            },*/
         }
     }
 }
@@ -80,11 +88,11 @@ impl button::StyleSheet for PackageButton {
                 ..button::Style::default()
             },
             Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
-                border_color: Color::from_rgb(0.29, 0.19, 0.03),
+                background: Some(Background::Color(DISABLED_COLOR)),
+                border_color: Color::TRANSPARENT,
                 border_width: 2.0,
-                shadow_offset: Vector::new(1.0, 1.0),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                shadow_offset: Vector::new(0.0, 0.0),
+                text_color: Color::BLACK,
                 ..button::Style::default()
             },
         }
@@ -98,13 +106,13 @@ impl button::StyleSheet for PackageButton {
                 ..self.active()
             },
             Self::Uninstall => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
+                background: Some(Background::Color(UNINSTALL_COLOR_HOVER)),
                 text_color: Color::WHITE,
                 ..self.active()
             },
             Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
+                background: Some(Background::Color(DISABLED_COLOR)),
+                text_color: Color::BLACK,
                 ..self.active()
             },
         }
@@ -201,6 +209,50 @@ impl scrollable::StyleSheet for Scrollable {
         scrollable::Scrollbar {
             scroller: scrollable::Scroller { ..hovered.scroller },
             ..hovered
+        }
+    }
+}
+
+
+pub enum SelectionCheckBox {
+    Enabled,
+    Disabled
+}
+
+impl checkbox::StyleSheet for SelectionCheckBox {
+    fn active(&self, _is_checked: bool) -> checkbox::Style {
+        match self {
+            Self::Enabled => checkbox::Style {
+                background: Background::Color(Color::from_rgb(0.95, 0.95, 0.95)),
+                checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
+                border_radius: 5.0,
+                border_width: 1.0,
+                border_color: Color::from_rgb(0.6, 0.6, 0.6),
+            },
+            Self::Disabled => checkbox::Style {
+                    background: Background::Color(DISABLED_COLOR),
+                    border_color: Color::TRANSPARENT,
+                    checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
+                    border_radius: 5.0,
+                    border_width: 1.0,
+            },
+        }
+    }
+
+    fn hovered(&self, is_checked: bool) -> checkbox::Style {
+        match self {
+            Self::Enabled => checkbox::Style {
+                background: Background::Color(Color::from_rgb(0.90, 0.90, 0.90)),
+                ..self.active(is_checked)
+            },
+
+            Self::Disabled => checkbox::Style {
+                    background: Background::Color(DISABLED_COLOR),
+                    border_color: Color::TRANSPARENT,
+                    checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
+                    border_radius: 5.0,
+                    border_width: 1.0,
+            },
         }
     }
 }

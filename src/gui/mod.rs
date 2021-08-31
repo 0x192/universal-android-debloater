@@ -107,6 +107,7 @@ impl Application for UadGui {
             UadGui::Loaded(state) => match message {
                 Message::CatalogRefreshPress => {
                     state.list_view = ListView::default();
+                    state.list_view.update(ListMessage::LoadSettings(state.settings_view.clone()));
                     state.view = View::List;
                     Command::perform(Self::load_phone_packages(), Message::CatalogAction)
 
