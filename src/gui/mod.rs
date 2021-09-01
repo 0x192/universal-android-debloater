@@ -153,8 +153,8 @@ impl Application for UadGui {
 
                 let catalog_btn = Button::new(catalog_btn, 
                         Row::new()
-                        .push(refresh_list_text)
                         .push(Text::new("Catalog "))
+                        .push(refresh_list_icon)
                     )
                     .on_press(Message::CatalogRefreshPress)
                     .padding(5)

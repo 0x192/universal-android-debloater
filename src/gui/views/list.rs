@@ -172,7 +172,7 @@ impl List {
                     match p.state {
                         PackageState::Installed => uninstall_package(p.name.clone()),
                         PackageState::Uninstalled => restore_package(p.name.clone()),
-                        _ => "[DEBUG] ApplySelectionAction: Unknown package state".to_string(), // TODO: this is an error
+                        PackageState::All => "[DEBUG] ApplySelectionAction: Unknown package state".to_string(), // This can't happen
                     };
 
                     for phone_p in &mut self.phone_packages {
@@ -180,7 +180,7 @@ impl List {
                             phone_p.state = match phone_p.state {
                                 PackageState::Installed => PackageState::Uninstalled,
                                 PackageState::Uninstalled => PackageState::Installed, 
-                                _ => PackageState::Installed, // TODO: this is an error
+                                PackageState::All => PackageState::All, // This can't happen (Like... never)
                             };
                             break
                         }
@@ -253,17 +253,6 @@ impl List {
                 .push(package_state_picklist)
                 .push(list_picklist);
 
-            let package_name = Text::new("Package").width(Length::FillPortion(6));
-            let package_state = Text::new("State").width(Length::FillPortion(3));
-            let package_action = Text::new("").width(Length::FillPortion(1));
-
-            let package_panel = Row::new()
-                .width(Length::Fill)
-                .push(package_name)
-                .push(package_state)
-                .push(package_action)
-                .push(Space::with_width(Length::Units(15)));
-
             let packages = self.filtered_packages
                 .iter_mut()
                 .enumerate()
@@ -326,7 +315,7 @@ impl List {
                 .spacing(10)
                 .align_items(Align::Center)
                 .push(control_panel)
-                .push(package_panel)
+                .push(Space::new(Length::Fill, Length::Units(2)))
                 .push(packages_scrollable)
                 .push(description_panel)
                 .push(action_row);
@@ -485,8 +474,8 @@ impl PackageRow {
                 Row::new()
                     .align_items(Align::Center)
                     .push(selection_checkbox)
-                    .push(Text::new(&self.name).width(Length::FillPortion(6)))
-                    .push(Text::new(&self.state.to_string()).width(Length::FillPortion(3)))
+                    .push(Text::new(&self.name).width(Length::FillPortion(8)))
+                    //.push(Text::new(&self.state.to_string()).width(Length::FillPortion(3)))
                     .push(action_btn.width(Length::FillPortion(1))
                                     .style(button_style)
                     )
