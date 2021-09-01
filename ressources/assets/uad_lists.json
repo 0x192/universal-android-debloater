@@ -7737,7 +7737,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.gba",
@@ -7746,7 +7746,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.adups.fota.sysoper",
@@ -7755,7 +7755,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.camera",
@@ -7764,7 +7764,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.protips",
@@ -7773,7 +7773,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.ygps",
@@ -7782,7 +7782,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.simprocessor",
@@ -7800,7 +7800,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.adups.fota",
@@ -7809,7 +7809,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.st.nfc.dta.mobile",
@@ -7818,7 +7818,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.launcher3",
@@ -7827,7 +7827,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.mdmlsample",
@@ -7836,7 +7836,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.wtk.factory",
@@ -7845,7 +7845,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.batterywarning",
@@ -7854,7 +7854,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "ma.android.com.mafactory",
@@ -7863,7 +7863,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.wtk.stresstest",
@@ -7872,7 +7872,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.dialer",
@@ -7881,7 +7881,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.calendarimporter",
@@ -7890,7 +7890,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.thermalmanager",
@@ -7899,7 +7899,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.gnssdebugreport",
@@ -7908,7 +7908,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.elephanttek.faceunlock",
@@ -7917,7 +7917,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.lbs.em2.ui",
@@ -7926,7 +7926,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.location.mtknlp",
@@ -7935,7 +7935,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.mediatek.dataprotection",
@@ -7944,7 +7944,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.autoinstalls.config.oneplus",
@@ -7953,7 +7953,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.overlay.common",
@@ -7962,7 +7962,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.overlay.target",
@@ -7971,7 +7971,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.qvaoverlay.common",
@@ -7980,7 +7980,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "cn.oneplus.nvbackup",
@@ -7989,7 +7989,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "cn.oneplus.oemtcma",
@@ -7998,7 +7998,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "cn.oneplus.opmms",
@@ -8007,7 +8007,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.bluetooth.overlay.common",
@@ -8016,7 +8016,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
@@ -8025,7 +8025,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
@@ -8034,7 +8034,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.overlay.common",
@@ -8043,7 +8043,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.dialer.basiccolorblack.overlay",
@@ -8052,7 +8052,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.dialer.basiccolorwhite.overlay",
@@ -8061,7 +8061,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.emergency.basiccolorblack.overlay",
@@ -8070,7 +8070,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.emergency.basiccolorwhite.overlay",
@@ -8079,7 +8079,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.mms.overlay.ct",
@@ -8088,7 +8088,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.networkstack.inprocess",
@@ -8097,7 +8097,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.networkstack.permissionconfig",
@@ -8106,7 +8106,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.phone.basiccolorblack.overlay",
@@ -8115,7 +8115,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.phone.basiccolorwhite.overlay",
@@ -8124,7 +8124,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.phone.overlay.common",
@@ -8133,7 +8133,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.server.telecom.basiccolorblack.overlay",
@@ -8142,7 +8142,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.server.telecom.basiccolorwhite.overlay",
@@ -8151,7 +8151,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.server.telecom.overlay.common",
@@ -8160,7 +8160,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.basiccolorblack.overlay",
@@ -8169,7 +8169,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.basiccolorwhite.overlay",
@@ -8178,7 +8178,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.intelligence.basiccolorblack.overlay",
@@ -8187,7 +8187,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.intelligence.basiccolorwhite.overlay",
@@ -8196,7 +8196,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.overlay.ct",
@@ -8205,7 +8205,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.overlay.common",
@@ -8214,7 +8214,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon.circle",
@@ -8223,7 +8223,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon.square",
@@ -8232,7 +8232,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.example.rftuner",
@@ -8241,7 +8241,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.gsma.rcs",
@@ -8250,7 +8250,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oem.rftoolkit",
@@ -8259,7 +8259,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus",
@@ -8268,7 +8268,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.account",
@@ -8277,7 +8277,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.account.basiccolorblack.overlay",
@@ -8286,7 +8286,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.account.basiccolorwhite.overlay",
@@ -8295,7 +8295,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aod",
@@ -8304,7 +8304,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aod.basiccolorblack.overlay",
@@ -8313,7 +8313,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aod.basiccolorwhite.overlay",
@@ -8322,7 +8322,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aodnotification.overlay.gold",
@@ -8331,7 +8331,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aodnotification.overlay.purple",
@@ -8340,7 +8340,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.aodnotification.overlay.red",
@@ -8349,7 +8349,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.applocker",
@@ -8358,7 +8358,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.appupgrader",
@@ -8367,7 +8367,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.asti",
@@ -8376,7 +8376,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.backuprestore.remoteservice",
@@ -8385,7 +8385,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calculator",
@@ -8394,7 +8394,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calculator.basiccolorblack.overlay",
@@ -8403,7 +8403,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calendar.black.overlay",
@@ -8412,7 +8412,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calendar.white.overlay",
@@ -8421,7 +8421,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.camera",
@@ -8430,7 +8430,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.camera.service",
@@ -8439,7 +8439,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.card.black.overlay",
@@ -8448,7 +8448,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.card.white.overlay",
@@ -8457,7 +8457,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.cloud.basiccolorblack.overlay",
@@ -8466,7 +8466,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.cloud.basiccolorwhite.overlay",
@@ -8475,7 +8475,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.config",
@@ -8484,7 +8484,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.contacts",
@@ -8493,7 +8493,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.contacts.basiccolorblack.overlay",
@@ -8502,7 +8502,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.contacts.basiccolorwhite.overlay",
@@ -8511,7 +8511,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.coreservice",
@@ -8520,7 +8520,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.deskclock",
@@ -8529,7 +8529,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.deskclock.black.overlay",
@@ -8538,7 +8538,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.deskclock.white.overlay",
@@ -8547,7 +8547,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.diagnosemanager",
@@ -8556,7 +8556,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.dirac.simplemanager",
@@ -8565,7 +8565,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.dirac.simplemanager.basiccolorblack.overlay",
@@ -8574,7 +8574,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.dirac.simplemanager.basiccolorwhite.overlay",
@@ -8583,7 +8583,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.faceunlock",
@@ -8592,7 +8592,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.filemanager.black.overlay",
@@ -8601,7 +8601,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.filemanager.white.overlay",
@@ -8610,7 +8610,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.gallery",
@@ -8619,7 +8619,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.gamespace.black.overlay",
@@ -8628,7 +8628,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.gamespace.white.overlay",
@@ -8637,7 +8637,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.ifaaservice",
@@ -8646,7 +8646,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.mms",
@@ -8655,7 +8655,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.mms.basiccolorblack.overlay",
@@ -8664,7 +8664,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.mms.basiccolorwhite.overlay",
@@ -8673,7 +8673,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.note.black.overlay",
@@ -8682,7 +8682,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.note.white.overlay",
@@ -8691,7 +8691,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.opbackup",
@@ -8700,7 +8700,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.opbackup.black.overlay",
@@ -8709,7 +8709,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.opbackup.white.overlay",
@@ -8718,7 +8718,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.opwlb.black.overlay",
@@ -8727,7 +8727,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.opwlb.white.overlay",
@@ -8736,7 +8736,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.overlay",
@@ -8745,7 +8745,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.screenrecord",
@@ -8754,7 +8754,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.screenrecord.black.overlay",
@@ -8763,7 +8763,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.screenrecord.white.overlay",
@@ -8772,7 +8772,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.screenshot",
@@ -8781,7 +8781,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.sdcardservice",
@@ -8790,7 +8790,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.security",
@@ -8799,7 +8799,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.security.black.overlay",
@@ -8808,7 +8808,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.security.white.overlay",
@@ -8817,7 +8817,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.ses",
@@ -8826,7 +8826,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.setupwizard",
@@ -8835,7 +8835,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.simcontacts",
@@ -8844,7 +8844,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.simcontacts.basiccolorblack.overlay",
@@ -8853,7 +8853,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.simcontacts.basiccolorwhite.overlay",
@@ -8862,7 +8862,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.sms.smscplugger",
@@ -8871,7 +8871,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.soundrecorder.black.overlay",
@@ -8880,7 +8880,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.soundrecorder.white.overlay",
@@ -8889,7 +8889,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.twspods",
@@ -8898,7 +8898,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.wallpaper",
@@ -8907,7 +8907,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.wifiapsettings",
@@ -8916,7 +8916,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.wifiapsettings.basiccolorblack.overlay",
@@ -8925,7 +8925,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.wifiapsettings.basiccolorwhite.overlay",
@@ -8934,7 +8934,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qti.diagservices",
@@ -8943,7 +8943,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.biometrics.fingerprint.service",
@@ -8952,7 +8952,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.improvetouch.service",
@@ -8961,7 +8961,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.qtisettings",
@@ -8970,7 +8970,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.recognize.number",
@@ -8979,7 +8979,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.launcher",
@@ -8988,7 +8988,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.launcher.black.overlay",
@@ -8997,7 +8997,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.launcher.white.overlay",
@@ -9006,7 +9006,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.weather.basiccolorblack.overlay",
@@ -9015,7 +9015,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.weather.basiccolorwhite.overlay",
@@ -9024,7 +9024,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.gesture.line.overlay",
@@ -9033,7 +9033,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.navigation.bar.overlay",
@@ -9042,7 +9042,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.wifi.resources",
@@ -9051,7 +9051,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.auto_generated_rro_product__",
@@ -9060,7 +9060,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.auto_generated_rro_vendor__",
@@ -9069,7 +9069,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.hotspot2.osulogin",
@@ -9078,7 +9078,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.internal.display.cutout.emulation.hole",
@@ -9087,7 +9087,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.internal.display.cutout.emulation.waterfall",
@@ -9096,7 +9096,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon.pebble",
@@ -9105,7 +9105,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon.taperedrect",
@@ -9114,7 +9114,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon.vessel",
@@ -9123,7 +9123,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon_pack.rounded.themepicker",
@@ -9132,7 +9132,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.apps.carrier.carrierwifi",
@@ -9141,7 +9141,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.as",
@@ -9150,7 +9150,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.cellbroadcastreceiver",
@@ -9159,7 +9159,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.cellbroadcastservice",
@@ -9168,7 +9168,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.networkstack.tethering",
@@ -9177,7 +9177,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.networkstack.tethering.overlay",
@@ -9186,7 +9186,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.gmsconfig.common",
@@ -9195,7 +9195,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.gmsconfig.gsa",
@@ -9204,7 +9204,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.gmsconfig.photos",
@@ -9213,7 +9213,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
@@ -9222,7 +9222,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.modules.cellbroadcastservice",
@@ -9231,7 +9231,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.modules.documentsui",
@@ -9240,7 +9240,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.modules.modulemetadata.forframework",
@@ -9249,7 +9249,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.providers.media.module",
@@ -9258,7 +9258,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.google.mainline.telemetry",
@@ -9276,7 +9276,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.cne",
@@ -9285,7 +9285,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.ims",
@@ -9294,7 +9294,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.performancemode",
@@ -9303,7 +9303,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.poweroffalarm",
@@ -9312,7 +9312,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.qdma",
@@ -9321,7 +9321,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.gpudrivers.kona.api30",
@@ -9330,7 +9330,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.seccamservice",
@@ -9339,7 +9339,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.services.secureui",
@@ -9348,7 +9348,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.services.systemhelper",
@@ -9357,7 +9357,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.simcontacts",
@@ -9366,7 +9366,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.uceShimService",
@@ -9375,7 +9375,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.uimGbaApp",
@@ -9384,7 +9384,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.workloadclassifier",
@@ -9393,7 +9393,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.uimremoteclient",
@@ -9402,7 +9402,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "vendor.qti.hardware.cacert.server",
@@ -9411,7 +9411,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "vendor.qti.iwlan",
@@ -9420,7 +9420,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.verizon.cloudsetupwizard",
@@ -9438,7 +9438,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.vzwintents",
@@ -9447,7 +9447,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.vzwwifioffload",
@@ -9456,7 +9456,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.vzw.easvalidation",
@@ -9465,7 +9465,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.ts.setupwizard.overlay.overlay",
@@ -9474,7 +9474,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.jrdcom.Elabel.overlay",
@@ -9483,7 +9483,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.hawk.android.browser",
@@ -9492,7 +9492,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.hiya.axolotl.tcl",
@@ -9501,7 +9501,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.jrdcom.Elabel",
@@ -9510,7 +9510,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.jrdcom.Elabel.a_overlay",
@@ -9519,7 +9519,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.jrdcom.filemanager",
@@ -9528,7 +9528,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.jrdcom.filemanager.a_overlay",
@@ -9537,7 +9537,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.vendor.frameworkresoverlay",
@@ -9546,7 +9546,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.srin.indramayu",
@@ -9555,7 +9555,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.cmfa.framework",
@@ -9564,7 +9564,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.incall.contentprovider",
@@ -9573,7 +9573,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.service.tagservice",
@@ -9582,7 +9582,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.camerasdkservice",
@@ -9591,7 +9591,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.coldwalletservice",
@@ -9600,7 +9600,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.digitalkey",
@@ -9609,7 +9609,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.providers.carrier",
@@ -9618,7 +9618,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.wifi.resources",
@@ -9627,7 +9627,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.wifi.softap.resources",
@@ -9645,7 +9645,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.smartfpsadjuster",
@@ -9654,7 +9654,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.location.nfwlocationprivacy",
@@ -9663,7 +9663,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.gamedriver.sm8250",
@@ -9672,7 +9672,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.gpuwatchapp",
@@ -9681,7 +9681,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.huxplatform",
@@ -9690,7 +9690,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.qosindicator",
@@ -9699,7 +9699,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.sait.sohservice",
@@ -9708,7 +9708,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.vklayer.sm8250",
@@ -9717,7 +9717,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.accessibility.talkback",
@@ -9726,7 +9726,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.app.earphonetypec",
@@ -9735,7 +9735,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.app.sharelive",
@@ -9744,7 +9744,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.app.telephonyui",
@@ -9753,7 +9753,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.appseparation",
@@ -9762,7 +9762,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.brightnessbackupservice",
@@ -9771,7 +9771,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.callbgprovider",
@@ -9780,7 +9780,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.cidmanager",
@@ -9789,7 +9789,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.container",
@@ -9798,7 +9798,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.dialer",
@@ -9807,7 +9807,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.dsms",
@@ -9816,7 +9816,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.hdmapp",
@@ -9825,7 +9825,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.localeoverlaymanager",
@@ -9834,7 +9834,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.mapsagent",
@@ -9843,7 +9843,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.mcfds",
@@ -9852,7 +9852,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.motionphoto.viewer",
@@ -9861,7 +9861,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.networkstack",
@@ -9870,7 +9870,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.networkstack.tethering.overlay",
@@ -9879,7 +9879,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.privateshare",
@@ -9888,7 +9888,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.providers.contacts",
@@ -9897,7 +9897,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.providers.media",
@@ -9906,7 +9906,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.rajaampat",
@@ -9915,7 +9915,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.scs",
@@ -9924,7 +9924,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.secsoundpicker",
@@ -9933,7 +9933,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.server.wifi.mobilewips",
@@ -9942,7 +9942,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.service.stplatform",
@@ -9951,7 +9951,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.setting.multisound",
@@ -9960,7 +9960,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.singletake.service",
@@ -9969,7 +9969,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.smartsuggestions",
@@ -9978,7 +9978,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.sume.nn.service",
@@ -9987,7 +9987,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.uwb",
@@ -9996,7 +9996,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.vtcamerasettings",
@@ -10005,7 +10005,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.wifi.softapwpathree.resources",
@@ -10014,7 +10014,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.euicc",
@@ -10023,7 +10023,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.gamedriver.ex2100",
@@ -10032,7 +10032,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.ims.smk",
@@ -10041,7 +10041,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.gestural_no_hint",
@@ -10050,7 +10050,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.gestural_no_hint_extra_wide_back",
@@ -10059,7 +10059,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.gestural_no_hint_narrow_back",
@@ -10068,7 +10068,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.gestural_no_hint_wide_back",
@@ -10077,7 +10077,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.sec_gestural",
@@ -10086,7 +10086,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.internal.systemui.navbar.sec_gestural_no_hint",
@@ -10095,7 +10095,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.pregpudriver.ex2100",
@@ -10104,7 +10104,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.sec.android.teegris.tui_service",
@@ -10113,7 +10113,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.slsi.audiologging",
@@ -10122,7 +10122,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.app.uwbtest",
@@ -10131,7 +10131,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.app.volumemonitorprovider",
@@ -10140,7 +10140,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.autodoodle.service",
@@ -10149,7 +10149,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.systemupdate",
@@ -10158,7 +10158,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.factory.cameralyzer",
@@ -10167,7 +10167,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.mhs.smarttethering",
@@ -10176,7 +10176,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.unifiedwfc",
@@ -10185,7 +10185,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.devicesecurity.service",
@@ -10194,7 +10194,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.home.product.res.overlay",
@@ -10203,7 +10203,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.swiqisystemservice",
@@ -10212,7 +10212,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.whitebalance",
@@ -10221,7 +10221,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.whitebalance.overlay.base",
@@ -10230,7 +10230,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.hmdglobal.enterprise.api",
@@ -10239,7 +10239,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.gallery3d.refocus",
@@ -10248,7 +10248,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "android.autoinstalls.config.TCL.PAI",
@@ -10257,7 +10257,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.tctdatahubprovider",
@@ -10266,7 +10266,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.android.launcher",
@@ -10275,7 +10275,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.android.launcher.a_overlay",
@@ -10284,7 +10284,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.android.launchertheme.res",
@@ -10293,7 +10293,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.android.launchertheme.res.overlay",
@@ -10302,7 +10302,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.android.wallpaper.livepicker",
@@ -10311,7 +10311,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.aota.a_overlay",
@@ -10320,7 +10320,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.camera",
@@ -10329,7 +10329,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.camera.a_overlay",
@@ -10338,7 +10338,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.compass",
@@ -10347,7 +10347,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.compass.a_overlay",
@@ -10356,7 +10356,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.demopage",
@@ -10365,7 +10365,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.entitlement",
@@ -10374,7 +10374,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.faceunlock",
@@ -10383,7 +10383,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.fmradio",
@@ -10392,7 +10392,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.fmradio.a_overlay",
@@ -10401,7 +10401,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.fota.system",
@@ -10410,7 +10410,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.fota.system.a_overlay",
@@ -10419,7 +10419,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.healthy",
@@ -10428,7 +10428,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.logger.a_overlay",
@@ -10437,7 +10437,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.mibc.tclplus",
@@ -10446,7 +10446,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.mibc.tclplus.a_overlay",
@@ -10455,7 +10455,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.nfc.gsma.usermenu",
@@ -10464,7 +10464,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.screenrecorder",
@@ -10473,7 +10473,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.screenrecorder.a_overlay",
@@ -10482,7 +10482,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.screenshotex",
@@ -10491,7 +10491,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.sos",
@@ -10500,7 +10500,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.tclswitch.a_overlay",
@@ -10509,7 +10509,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.token",
@@ -10518,7 +10518,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.usercare",
@@ -10527,7 +10527,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tcl.usercare.a_overlay",
@@ -10536,7 +10536,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tclhz.gallery",
@@ -10545,7 +10545,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tclhz.gallery.a_overlay",
@@ -10554,7 +10554,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct",
@@ -10563,7 +10563,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.aio",
@@ -10572,7 +10572,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.android.secureinput",
@@ -10581,7 +10581,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.applock",
@@ -10590,7 +10590,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.batterywarning",
@@ -10599,7 +10599,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.calculator",
@@ -10608,7 +10608,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.calculator.a_overlay",
@@ -10617,7 +10617,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.cellular.arda",
@@ -10626,7 +10626,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.contacts.transfer",
@@ -10635,7 +10635,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.contacts.transfer.a_overlay",
@@ -10644,7 +10644,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.diagprotector",
@@ -10653,7 +10653,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.dialer",
@@ -10662,7 +10662,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.dialer.a_overlay",
@@ -10671,7 +10671,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.faceunlock",
@@ -10680,7 +10680,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.gamemode",
@@ -10689,7 +10689,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.gdpr",
@@ -10698,7 +10698,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.iris",
@@ -10707,7 +10707,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.music",
@@ -10716,7 +10716,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.onetouchbooster",
@@ -10725,7 +10725,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.onetouchbooster.a_overlay",
@@ -10734,7 +10734,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.privacymode",
@@ -10743,7 +10743,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.privatespace",
@@ -10752,7 +10752,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.retaildemo",
@@ -10761,7 +10761,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.retaildemo.a_overlay",
@@ -10770,7 +10770,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.setupwizard",
@@ -10779,7 +10779,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.simplelauncher",
@@ -10788,7 +10788,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.simplelauncher.a_overlay",
@@ -10797,7 +10797,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.simsettings",
@@ -10806,7 +10806,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.account",
@@ -10815,7 +10815,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.aikey",
@@ -10824,7 +10824,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.cloud",
@@ -10833,7 +10833,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.drivemode",
@@ -10842,7 +10842,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.notes",
@@ -10851,7 +10851,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.switchphone",
@@ -10860,7 +10860,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.smart.switchphone.service",
@@ -10869,7 +10869,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.soundrecorder",
@@ -10878,7 +10878,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.systemservice",
@@ -10887,7 +10887,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.video",
@@ -10896,7 +10896,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.weather",
@@ -10905,7 +10905,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.weather.a_overlay",
@@ -10914,7 +10914,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.tct.wfcwebiew",
@@ -10923,7 +10923,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.android.LGSetupWizard",
@@ -18537,7 +18537,7 @@
     "dependencies": "",
     "neededBy": "",
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.kgclient",
@@ -18546,7 +18546,7 @@
     "dependencies": "",
     "neededBy": "",
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Expert"
   },
   {
     "id": "com.lge.updatecenter",
