@@ -8,14 +8,14 @@ use std::os::windows::process::CommandExt;
 pub fn adb_shell_command(args: &str) -> Result<String,String> {
 
     #[cfg(target_os = "windows")]
-        let output = Command::new("./ressources/windows/adb/adb")
+        let output = Command::new("adb")
             .args(&["shell", args])
             .creation_flags(0x08000000) // do not open a cmd window
             .output()
             .expect("adb command failed to start. Do you have ADB installed?");
 
     #[cfg(target_os = "macos")]
-        let output = Command::new("./ressources/macos/adb/adb")
+        let output = Command::new("adb")
             .args(&["shell", args])
             .output()
             .expect("adb command failed to start. Do you have ADB installed?");
