@@ -839,11 +839,11 @@
   {
     "id": "com.verizon.mips.services",
     "list": "Carrier",
-    "description": "My Verizon Services \nRelated to My Verizon app.\n",
+    "description": "My Verizon Services \nRelated to My Verizon app.\nRequired for hotspot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommanded"
+    "removal": "Advanced"
   },
   {
     "id": "com.verizon.obdm_permissions",
@@ -6617,7 +6617,7 @@
   {
     "id": "com.android.wallpaper.livepicker.overlay",
     "list": "Aosp",
-    "description": "Enables you to pick a live wallpaper.\n",
+    "description": "Enables you to pick a live wallpaper.\n Removing it will break some weather applications (especially ones with widgets) and wallpaper applications like Muzei.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9262,7 +9262,7 @@
   },
   {
     "id": "com.google.mainline.telemetry",
-    "list": "Pending",
+    "list": "Google",
     "description": "It's a set of metrics-related modules. Google Play uses the version of the Telemetry module to determine\nif updates are available for metrics-related modules and which security patch version to display to the end user. \nThis module doesn’t contain active code and has no functionality on its own. \nRemoving modules-related packages may not be safe since Android 11\nhttps://gitlab.com/W1nst0n/universal-android-debloater/-/issues/27#note_410012436\n",
     "dependencies": null,
     "neededBy": null,
@@ -18524,7 +18524,7 @@
   {
     "id": "com.android.wallpaper.livepicker",
     "list": "Aosp",
-    "description": "Enables you to pick a live wallpaper.",
+    "description": "Enables you to pick a live wallpaper. Removing it will break some weather applications (especially ones with widgets) and wallpaper applications like Muzei.",
     "dependencies": "",
     "neededBy": "",
     "labels": null,
