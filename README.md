@@ -1,6 +1,7 @@
 # Universal Android Debloater GUI
-
 **DISCLAIMER**: Use it at your own risk. I am not responsible for anything that could happen to your phone. 
+
+![uad-rust-gui-screenshot](ressources/screenshots/v0.1.png)
 
 **This software is still in a very early stage of developpement. Check out the issues, and feel free to contribute!**
 
@@ -109,7 +110,7 @@ $ brew install android-platform-tools
 </p>
 
 
-- Download [the lastest release of Android Universal Debloater](https://gitlab.com/W1nst0n/universal-android-debloater/-/releases).
+- Download [the lastest release of Android Universal Debloater](https://gitlab.com/W1nst0n/uad-rust-gui/-/releases).
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 
