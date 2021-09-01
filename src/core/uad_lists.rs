@@ -8,57 +8,60 @@ use std::{collections::HashMap};
 #[serde(rename_all = "camelCase")]
 pub struct Package {
     id: String,
-    pub list: String,
+    pub list: UadList,
     pub description: Option<String>,
     dependencies: Option<String>,
     needed_by: Option<String>,
     labels: Option<Vec<String>>,
-    pub confidence: String,
+    pub removal: Removal,
 }
 
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum UadLists {
+#[derive(Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum UadList {
     All,
     Aosp,
     Carrier,
     Google,
     Misc,
     Oem,
+    Pending,
     Unlisted,
 }
 
-impl Default for UadLists {
-    fn default() -> UadLists {
-        UadLists::All
+impl Default for UadList {
+    fn default() -> UadList {
+        UadList::All
     }
 }
 
-impl UadLists {
-    pub const ALL: [UadLists; 7] = [
-        UadLists::All,
-        UadLists::Aosp,
-        UadLists::Carrier,
-        UadLists::Google,
-        UadLists::Misc,
-        UadLists::Oem,
-        UadLists::Unlisted,
+impl UadList {
+    pub const ALL: [UadList; 8] = [
+        UadList::All,
+        UadList::Aosp,
+        UadList::Carrier,
+        UadList::Google,
+        UadList::Misc,
+        UadList::Oem,
+        UadList::Pending,
+        UadList::Unlisted,
     ];
 }
 
-impl std::fmt::Display for UadLists {
+impl std::fmt::Display for UadList {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,
             "{}",
             match self {
-                UadLists::All => "All lists",
-                UadLists::Aosp => "aosp",
-                UadLists::Carrier => "carrier",
-                UadLists::Google => "google",
-                UadLists::Misc => "misc",
-                UadLists::Oem => "oem",
-                UadLists::Unlisted => "unlisted",
+                UadList::All => "All lists",
+                UadList::Aosp => "aosp",
+                UadList::Carrier => "carrier",
+                UadList::Google => "google",
+                UadList::Misc => "misc",
+                UadList::Oem => "oem",
+                UadList::Pending => "pending",
+                UadList::Unlisted => "unlisted",
             }
         )
     }
@@ -73,7 +76,7 @@ pub enum PackageState {
 
 impl Default for PackageState {
     fn default() -> PackageState {
-        PackageState::All
+        PackageState::Installed
     }
 }
 
@@ -114,46 +117,46 @@ impl std::str::FromStr for PackageState {
 }
 
 // Bad names. To be changed!
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Preselection {
+#[derive(Debug, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum Removal {
     All,
-    Safe,
+    Recommanded,
     Advanced,
     Expert,
     Unsafe,
     Unlisted,
 }
 
-impl Default for Preselection {
-    fn default() -> Preselection {
-        Preselection::Safe
+impl Default for Removal {
+    fn default() -> Removal {
+        Removal::Recommanded
     }
 }
 
-impl Preselection {
-    pub const ALL: [Preselection; 6] = [
-        Preselection::All,
-        Preselection::Safe,
-        Preselection::Advanced,
-        Preselection::Expert,
-        Preselection::Unsafe,
-        Preselection::Unlisted,
+impl Removal {
+    pub const ALL: [Removal; 6] = [
+        Removal::All,
+        Removal::Recommanded,
+        Removal::Advanced,
+        Removal::Expert,
+        Removal::Unsafe,
+        Removal::Unlisted,
     ];
 }
 
 
-impl std::fmt::Display for Preselection {
+impl std::fmt::Display for Removal {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,
             "{}",
             match self {
-                Preselection::All => "All",
-                Preselection::Safe => "Safe",
-                Preselection::Advanced => "Advanced",
-                Preselection::Expert => "Expert",
-                Preselection::Unsafe => "Unsafe",
-                Preselection::Unlisted => "Unlisted",
+                Removal::All => "All",
+                Removal::Recommanded => "Recommanded",
+                Removal::Advanced => "Advanced",
+                Removal::Expert => "Expert",
+                Removal::Unsafe => "Unsafe",
+                Removal::Unlisted => "Unlisted",
             }
         )
     }
@@ -165,7 +168,7 @@ pub fn load_debloat_lists() -> HashMap<String, Package> {
     let mut package_lists = HashMap::new();
     //let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
 
-    // TODO: Do it without intermediary Vec 
+    // TODO: Do it without intermediary Vec?
     let list: Vec<Package> = serde_json::from_str(&DATA).expect("Unable to parse");
 
     for p in list {

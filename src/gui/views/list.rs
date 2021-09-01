@@ -1,7 +1,6 @@
 use crate::gui::style;
-use crate::core::uad_lists::{ UadLists, PackageState, Package, Preselection };
+use crate::core::uad_lists::{ UadList, PackageState, Package, Removal };
 use std::{collections::HashMap};
-use std::str::FromStr;
 
 use crate::gui::views::settings::Settings;
 
@@ -19,7 +18,7 @@ use crate::core::sync::{
 #[derive(Clone, Debug, PartialEq)]
 pub struct SelectionPackage {
     pub name: String,
-    pub state: String,
+    pub state: PackageState,
 }
 
 #[derive(Default, Debug, Clone)]
@@ -34,11 +33,11 @@ pub struct List {
     apply_selection_btn_state: button::State,
     package_scrollable_state: scrollable::State,
     package_state_picklist: pick_list::State<PackageState>,
-    list_picklist: pick_list::State<UadLists>,
-    preselection_picklist: pick_list::State<Preselection>,
+    list_picklist: pick_list::State<UadList>,
+    removal_picklist: pick_list::State<Removal>,
     selected_package_state: Option<PackageState>,
-    selected_preselection: Option<Preselection>,
-    selected_list: Option<UadLists>,
+    selected_removal: Option<Removal>,
+    selected_list: Option<UadList>,
     pub input_value: String,
     description: String,
 }
@@ -47,9 +46,9 @@ pub struct List {
 pub enum Message {
     SearchInputChanged(String),
     LoadPackages(&'static HashMap<String, Package>),
-    ListSelected(UadLists),
+    ListSelected(UadList),
     PackageStateSelected(PackageState),
-    PreselectionSelected(Preselection),
+    RemovalSelected(Removal),
     ApplyActionOnSelection,
     SelectAllPressed,
     List(usize, RowMessage),
@@ -63,39 +62,39 @@ impl List {
             Message::LoadPackages(uad_lists) => {
                 self.filtered_packages = Vec::new();
                 self.selected_package_state = Some(PackageState::Installed);
-                self.selected_list = Some(UadLists::All);
-                self.selected_preselection = Some(Preselection::Safe);
+                self.selected_list = Some(UadList::All);
+                self.selected_removal = Some(Removal::Recommanded);
 
                 let all_system_packages = list_all_system_packages(); // installed and uninstalled packages
                 let installed_system_packages = hashset_installed_system_packages();
                 let mut description;
                 let mut uad_list;
                 let mut state;
-                let mut confidence;
+                let mut removal;
                 let selected = false;
 
                 for p_name in all_system_packages.lines() {
-                    state = "installed";
+                    state = PackageState::Installed;
                     description = "[No description]";
-                    uad_list = "unlisted";
-                    confidence = "Unlisted";
+                    uad_list = UadList::Unlisted;
+                    removal = Removal::Unlisted;
 
                     if uad_lists.contains_key(p_name) {
                         description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
-                        uad_list = &uad_lists.get(p_name).unwrap().list;
-                        confidence = &uad_lists.get(p_name).unwrap().confidence;
+                        uad_list = uad_lists.get(p_name).unwrap().list;
+                        removal = uad_lists.get(p_name).unwrap().removal;
                     }
 
                     if !installed_system_packages.contains(p_name) {
-                        state = "uninstalled";
+                        state = PackageState::Uninstalled;
                     }
 
                     let package_row = PackageRow::new(
                         &p_name,
-                        &state,
+                        state,
                         &description,
-                        &uad_list,
-                        &confidence,
+                        uad_list,
+                        removal,
                         selected,
                         self.settings.expert_mode,
                     );
@@ -125,8 +124,8 @@ impl List {
                 Self::filter_package_lists(self);
                 Command::none()
             },
-            Message::PreselectionSelected(preselection) => {
-                self.selected_preselection = Some(preselection);
+            Message::RemovalSelected(removal) => {
+                self.selected_removal = Some(removal);
                 Self::filter_package_lists(self);
                 Command::none()
             }
@@ -139,7 +138,7 @@ impl List {
                             self.selected_packages.push(
                                 SelectionPackage {
                                     name: self.filtered_packages[i].name.clone(),
-                                    state: self.filtered_packages[i].state.clone()
+                                    state: self.filtered_packages[i].state
                                 }
                             );
                         } else {
@@ -151,7 +150,11 @@ impl List {
                     RowMessage::RestorePressed(package) => {
                         for p in &mut self.phone_packages {
                             if package.name == p.name {
-                                p.state = if p.state == "installed" { "uninstalled".to_string() } else { "installed".to_string() };
+                                if p.state == PackageState::Installed { 
+                                    p.state = PackageState::Uninstalled;
+                                 } else { 
+                                    p.state = PackageState::Installed;
+                                }
                                 break
                             }
                         }
@@ -165,30 +168,32 @@ impl List {
                 Command::none()
             },
             Message::ApplyActionOnSelection => {
-                for p in self.selected_packages.clone() {
-                    match PackageState::from_str(&p.state).unwrap() {
-                        PackageState::Installed => { uninstall_package(p.name.clone()); },
-                        PackageState::Uninstalled => { restore_package(p.name.clone()); },
-                        _ => { println!("[DEBUG] ApplySelectionAction: Unknown package state"); },
-                    }
-                    for phone_p in &mut self.phone_packages {
-                            if p.name == phone_p.name {
-                                phone_p.state = 
-                                    if phone_p.state == "installed" { "uninstalled".to_string() } else { "installed".to_string() };
-                                break
-                            }
-                        }
-                    self.selected_packages.drain_filter(|p| p.name == p.name.as_str());
-                    Self::filter_package_lists(self);
+                for p in &self.selected_packages {
+                    match p.state {
+                        PackageState::Installed => uninstall_package(p.name.clone()),
+                        PackageState::Uninstalled => restore_package(p.name.clone()),
+                        _ => "[DEBUG] ApplySelectionAction: Unknown package state".to_string(), // TODO: this is an error
+                    };
 
+                    for phone_p in &mut self.phone_packages {
+                        if p.name == phone_p.name {
+                            phone_p.state = match phone_p.state {
+                                PackageState::Installed => PackageState::Uninstalled,
+                                PackageState::Uninstalled => PackageState::Installed, 
+                                _ => PackageState::Installed, // TODO: this is an error
+                            };
+                            break
+                        }
+                    }
                 }
+                Self::filter_package_lists(self);
                 Command::none()
             },
             Message::SelectAllPressed => {
                 let mut package;
                 for p in &mut self.filtered_packages {
                     p.selected = true;
-                    package = SelectionPackage { name: p.name.clone(), state: p.state.clone() };
+                    package = SelectionPackage { name: p.name.clone(), state: p.state };
                     if !self.selected_packages.contains(&package) {
                         self.selected_packages.push(package);
                     }
@@ -219,7 +224,7 @@ impl List {
 
             let list_picklist = PickList::new(
                         &mut self.list_picklist,
-                        &UadLists::ALL[..],
+                        &UadList::ALL[..],
                         self.selected_list,
                         Message::ListSelected,
                     );
@@ -231,11 +236,11 @@ impl List {
                         Message::PackageStateSelected,
                     );
 
-            let preselection_picklist = PickList::new(
-                        &mut self.preselection_picklist,
-                        &Preselection::ALL[..],
-                        self.selected_preselection,
-                        Message::PreselectionSelected,
+            let removal_picklist = PickList::new(
+                        &mut self.removal_picklist,
+                        &Removal::ALL[..],
+                        self.selected_removal,
+                        Message::RemovalSelected,
                     );
 
             let control_panel = Row::new()
@@ -244,7 +249,7 @@ impl List {
                 .spacing(10)
                 .push(search_packages)
                 .push(divider)
-                .push(preselection_picklist)
+                .push(removal_picklist)
                 .push(package_state_picklist)
                 .push(list_picklist);
 
@@ -338,17 +343,17 @@ impl List {
 
     fn filter_package_lists(&mut self) {
 
-        let list_filter: UadLists = self.selected_list.unwrap();
+        let list_filter: UadList = self.selected_list.unwrap();
         let package_filter: PackageState = self.selected_package_state.unwrap();
-        let preselection_filter: Preselection = self.selected_preselection.unwrap();
+        let removal_filter: Removal = self.selected_removal.unwrap();
 
         let mut filtered_packages: Vec<PackageRow> = self.phone_packages
             .iter()
             .filter(
                 |p|
-                (list_filter == UadLists::All || p.uad_list.to_string() == list_filter.to_string()) &&
-                (package_filter == PackageState::All || p.state == package_filter.to_string()) &&
-                (preselection_filter == Preselection::All || p.confidence.to_string() == preselection_filter.to_string()) &&
+                (list_filter == UadList::All || p.uad_list == list_filter) &&
+                (package_filter == PackageState::All || p.state == package_filter) &&
+                (removal_filter == Removal::All || p.removal == removal_filter) &&
                 (self.input_value.is_empty() || p.name.contains(&self.input_value))
             )
             .cloned()
@@ -368,10 +373,10 @@ impl List {
 #[derive(Clone, Debug)]
 pub struct PackageRow {
     pub name: String,
-    pub state: String,
+    pub state: PackageState,
     pub description: String,
-    pub uad_list: String,
-    pub confidence: String,
+    pub uad_list: UadList,
+    pub removal: Removal,
     package_btn_state: button::State,
     action_btn_state: button::State,
     selected: bool,
@@ -390,20 +395,20 @@ pub enum RowMessage {
 impl PackageRow {
     pub fn new(
         name: &str,
-        state: &str,
+        state: PackageState,
         description: &str,
-        uad_list: &str,
-        confidence: &str,
+        uad_list: UadList,
+        removal: Removal,
         selected: bool,
         expert_mode: bool,
 
     ) -> Self {
         Self {
             name: name.to_string(),
-            state: state.to_string(),
+            state: state,
             description: description.to_string(),
-            uad_list: uad_list.to_string(),
-            confidence: confidence.to_string(),
+            uad_list: uad_list,
+            removal: removal,
             package_btn_state: button::State::default(),
             action_btn_state: button::State::default(),
             selected: selected,
@@ -415,13 +420,13 @@ impl PackageRow {
         match message {
             RowMessage::RemovePressed(package) => {
                 uninstall_package(package.name);
-                self.state = "uninstalled".to_string();
+                self.state = PackageState::Uninstalled;
                 self.selected = false;
                 Command::none()
             }
             RowMessage::RestorePressed(package) => {
                 restore_package(package.name);
-                self.state = "installed".to_string();
+                self.state = PackageState::Installed;
                 self.selected = false;
                 Command::none()
             },
@@ -444,7 +449,7 @@ impl PackageRow {
         let action_btn;
         let selection_checkbox;
 
-        if self.state == PackageState::Installed.to_string() {
+        if self.state == PackageState::Installed {
             action_text = "Uninstall";
             action_message = RowMessage::RemovePressed(package);
             button_style = style::PackageButton::Uninstall;
@@ -454,7 +459,7 @@ impl PackageRow {
             button_style = style::PackageButton::Restore;
         }
 
-        if self.expert_mode || self.confidence != Preselection::Unsafe.to_string() {
+        if self.expert_mode || self.removal != Removal::Unsafe {
             selection_checkbox = Checkbox::new(self.selected, "", RowMessage::UpdateSelection)
                 .style(style::SelectionCheckBox::Enabled);
 
@@ -481,7 +486,7 @@ impl PackageRow {
                     .align_items(Align::Center)
                     .push(selection_checkbox)
                     .push(Text::new(&self.name).width(Length::FillPortion(6)))
-                    .push(Text::new(&self.state).width(Length::FillPortion(3)))
+                    .push(Text::new(&self.state.to_string()).width(Length::FillPortion(3)))
                     .push(action_btn.width(Length::FillPortion(1))
                                     .style(button_style)
                     )

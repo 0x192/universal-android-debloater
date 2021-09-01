@@ -151,18 +151,14 @@ impl Application for UadGui {
                 let add_svg_path = format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"));
                 let refresh_list_icon = Svg::from_path(add_svg_path);
 
-                let refresh_list_text = Text::new("Catalog ");
-
                 let catalog_btn = Button::new(catalog_btn, 
                         Row::new()
                         .push(refresh_list_text)
-                        .push(refresh_list_icon)
+                        .push(Text::new("Catalog "))
                     )
                     .on_press(Message::CatalogRefreshPress)
                     .padding(5)
                     .style(style::PrimaryButton::Enabled);
-
-                let divider = Space::new(Length::Fill, Length::Shrink);
 
                 let about_btn = Button::new(about_btn, Text::new("About"))
                     .on_press(Message::AboutPressed)
@@ -179,7 +175,7 @@ impl Application for UadGui {
                     .align_items(Align::Center)
                     .spacing(10)
                     .push(Text::new("Device: ".to_string() + &device_name))
-                    .push(divider)
+                    .push(Space::new(Length::Fill, Length::Shrink))
                     .push(catalog_btn)
                     .push(about_btn)
                     .push(settings_btn);
