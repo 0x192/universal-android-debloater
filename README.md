@@ -55,7 +55,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 
 
 ## How to use it 
-- **Read the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater/-/wikis/FAQ)!**
+- **Read the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/FAQ)!**
 - **Do a proper backup of your data! You can never be too careful!**
 - Enable *Developer Options* on your smartphone.
 - Turn on *USB Debugging* from the developper panel.
@@ -120,4 +120,4 @@ $ brew install android-platform-tools
 
 Hey-hey-hey! Don't go away so fast! This is a community project. That means I need you! I'm sure you want to make this project better anyway.
 
-==> [How to contribute](https://gitlab.com/W1nst0n/universal-android-debloater/-/wikis/home#how-to-contribute)
+==> [How to contribute](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/home#how-to-contribute)
