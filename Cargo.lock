@@ -10,7 +10,6 @@ dependencies = [
  "serde",
  "serde_json",
  "static_init",
- "web-sys",
 ]
 
 [[package]]
