@@ -110,7 +110,7 @@ $ brew install android-platform-tools
 </p>
 
 
-- Download [the lastest release of Android Universal Debloater](https://gitlab.com/W1nst0n/uad-rust-gui/-/releases).
+- Download [the lastest release of Universal Android Debloater GUI](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/releases).
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 
