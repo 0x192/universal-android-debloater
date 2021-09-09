@@ -65,7 +65,6 @@ impl button::StyleSheet for PrimaryButton {
 pub enum PackageButton {
     Uninstall,
     Restore,
-    Disabled,
 }
 
 impl button::StyleSheet for PackageButton {
@@ -87,14 +86,6 @@ impl button::StyleSheet for PackageButton {
                 text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
                 ..button::Style::default()
             },
-            Self::Disabled => button::Style {
-                background: Some(Background::Color(DISABLED_COLOR)),
-                border_color: Color::TRANSPARENT,
-                border_width: 2.0,
-                shadow_offset: Vector::new(0.0, 0.0),
-                text_color: Color::BLACK,
-                ..button::Style::default()
-            },
         }
     }
 
@@ -108,11 +99,6 @@ impl button::StyleSheet for PackageButton {
             Self::Uninstall => button::Style {
                 background: Some(Background::Color(UNINSTALL_COLOR_HOVER)),
                 text_color: Color::WHITE,
-                ..self.active()
-            },
-            Self::Disabled => button::Style {
-                background: Some(Background::Color(DISABLED_COLOR)),
-                text_color: Color::BLACK,
                 ..self.active()
             },
         }

@@ -3,16 +3,6 @@
 version = 3
 
 [[package]]
-name = "UadGui"
-version = "0.1.0"
-dependencies = [
- "iced",
- "serde",
- "serde_json",
- "static_init",
-]
-
-[[package]]
 name = "ab_glyph"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2375,6 +2365,16 @@ dependencies = [
  "cfg-if 1.0.0",
  "rand",
  "static_assertions",
+]
+
+[[package]]
+name = "uad_gui"
+version = "0.1.0"
+dependencies = [
+ "iced",
+ "serde",
+ "serde_json",
+ "static_init",
 ]
 
 [[package]]
