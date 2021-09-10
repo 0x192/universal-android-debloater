@@ -120,7 +120,7 @@ impl std::str::FromStr for PackageState {
 #[derive(Debug, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Removal {
     All,
-    Recommanded,
+    Recommended,
     Advanced,
     Expert,
     Unsafe,
@@ -129,14 +129,14 @@ pub enum Removal {
 
 impl Default for Removal {
     fn default() -> Removal {
-        Removal::Recommanded
+        Removal::Recommended
     }
 }
 
 impl Removal {
     pub const ALL: [Removal; 6] = [
         Removal::All,
-        Removal::Recommanded,
+        Removal::Recommended,
         Removal::Advanced,
         Removal::Expert,
         Removal::Unsafe,
@@ -152,7 +152,7 @@ impl std::fmt::Display for Removal {
             "{}",
             match self {
                 Removal::All => "All",
-                Removal::Recommanded => "Recommanded",
+                Removal::Recommended => "Recommended",
                 Removal::Advanced => "Advanced",
                 Removal::Expert => "Expert",
                 Removal::Unsafe => "Unsafe",

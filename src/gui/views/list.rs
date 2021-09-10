@@ -63,7 +63,7 @@ impl List {
                 self.filtered_packages = Vec::new();
                 self.selected_package_state = Some(PackageState::Installed);
                 self.selected_list = Some(UadList::All);
-                self.selected_removal = Some(Removal::Recommanded);
+                self.selected_removal = Some(Removal::Recommended);
 
                 let all_system_packages = list_all_system_packages(); // installed and uninstalled packages
                 let installed_system_packages = hashset_installed_system_packages();
