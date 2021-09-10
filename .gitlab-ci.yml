@@ -1,4 +1,4 @@
-image: rustlang/rust:nightly
+image: rustlang/rust:nightly-bullseye
 
 default:
   before_script:
@@ -8,23 +8,43 @@ default:
 stages:
   - build
 
-x86_64-unknown-linux-gnu:
+i686-pc-windows-gnu:
   stage: build
+
+  before_script:
+    - apt update -yqq && apt install -yqq mingw-w64
+    - rustup target add i686-pc-windows-gnu
+
+  script:
+    - cargo build --release --target i686-pc-windows-gnu
 
   artifacts:
     paths:
-      - target/x86_64-unknown-linux-gnu/release/uad
-
-  script:
-    - cargo build --release --target x86_64-unknown-linux-gnu
+      - target/i686-pc-windows-gnu/release/uad_gui.exe
 
 x86_64-pc-windows-gnu:
   stage: build
 
-  artifacts:
-    paths:
-      - target/x86_64-pc-windows-gnu/release/uad.exe
+  before_script:
+    - apt update -yqq && apt install -yqq mingw-w64
+    - rustup target add x86_64-pc-windows-gnu
 
   script:
     - cargo build --release --target x86_64-pc-windows-gnu
 
+  artifacts:
+    paths:
+      - target/x86_64-pc-windows-gnu/release/uad_gui.exe
+
+x86_64-unknown-linux-gnu:
+  stage: build
+
+  before_script:
+    - apt update -yqq && apt install -yqq libxkbcommon-dev
+
+  script:
+    - cargo build --release --target x86_64-unknown-linux-gnu
+
+  artifacts:
+    paths:
+      - target/x86_64-unknown-linux-gnu/release/uad_gui

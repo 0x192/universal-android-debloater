@@ -1,7 +1,17 @@
-//#![feature(static_nobundle)]
+use std::env::var;
 
 fn main() {
-/*    println!("cargo:rustc-link-lib=static-nobundle=stdc++");
-    println!("cargo:rustc-link-lib=static-nobundle=gcc");
-    println!("cargo:rustc-link-lib=static-nobundle=winpthread");*/
+    let target = var("TARGET").unwrap();
+
+    println!("cargo:rerun-if-changed=build.rs");
+
+    if target.contains("windows") {
+        println!("cargo:rerun-if-env-changed=WINAPI_NO_BUNDLED_LIBRARIES");
+        println!("cargo:rerun-if-env-changed=WINAPI_STATIC_NOBUNDLE");
+
+        println!("cargo:rustc-link-lib=static=gcc");
+        println!("cargo:rustc-link-lib=static=stdc++");
+        println!("cargo:rustc-link-lib=static=winpthread");
+    }
 }
+
