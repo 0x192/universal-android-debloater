@@ -10,7 +10,7 @@ use std::{collections::HashMap};
 use static_init::{dynamic};
 
 use iced::{
-    button, Align, Application, Button, Clipboard, Column, Command, Space,
+    button, Align, Application, Button, Column, Command, Space,
     Container, Element, Length, Row, Settings, Text, HorizontalAlignment, 
     VerticalAlignment, window::Settings as Window, Svg,
 };
@@ -95,7 +95,7 @@ impl Application for UadGui {
         String::from("UadGui")
     }
 
-    fn update(&mut self, message: Message, _clipboard: &mut Clipboard) -> Command<Message> {
+    fn update(&mut self, message: Message) -> Command<Message> {
         match self {
             UadGui::Loading => {
                 if let Message::Loaded(_state) = message {
