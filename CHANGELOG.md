@@ -10,3 +10,13 @@ and `Removed`.
 
 ## [Unreleased]
 
+### Added
+- UAD now comes with a logger. Debug information will be written to a `uad.log` file (Warning level log in *stdout*) (#2)
+
+### Changed
+- UAD will no longer crash at start if it doesn't find ADB but display a useful message (#25)
+- Better handling of ADB errors (#3) 
+
+### Fixed
+- Spelling mistake
+- 

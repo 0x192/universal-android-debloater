@@ -1,5 +1,6 @@
 use std::process::Command;
 use std::collections::HashSet;
+use crate::core::uad_lists::Removal;
 
 #[cfg(target_os = "windows")]
 use std::os::windows::process::CommandExt;
@@ -11,26 +12,34 @@ pub fn adb_shell_command(args: &str) -> Result<String,String> {
         let output = Command::new("adb")
             .args(&["shell", args])
             .creation_flags(0x08000000) // do not open a cmd window
-            .output()
-            .expect("adb command failed to start. Do you have ADB installed?");
+            .output();
 
     #[cfg(target_os = "macos")]
         let output = Command::new("adb")
             .args(&["shell", args])
-            .output()
-            .expect("adb command failed to start. Do you have ADB installed?");
+            .output();
 
     #[cfg(not(any(target_os = "macos", target_os = "windows")))]
         let output = Command::new("adb")
             .args(&["shell", args])
-            .output()
-            .expect("adb command failed to start. Do you have ADB installed?");
+            .output();
 
-    if !output.status.success() {
-        Err(String::from_utf8(output.stderr).unwrap())
-    } else {
-        Ok(String::from_utf8(output.stdout).unwrap())
-    }
+    match output {
+        Err(e) => {
+            error!("ADB: {}", e);
+            Err("ADB was not found".to_string())
+        },
+        Ok(o) => {
+            if !o.status.success() {
+                let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
+                error!("ADB: {}", stderr);
+                Err(stderr)
+            } else {
+                Ok(String::from_utf8(o.stdout).unwrap().trim_end().to_string())
+            }
+        }
+    } 
+    
 }
 
 
@@ -42,33 +51,46 @@ pub fn list_all_system_packages() -> String {
 }
 
 pub fn hashset_installed_system_packages() -> HashSet<String> {
-    let hashet: HashSet<String> = adb_shell_command("pm list packages -s")
+    adb_shell_command("pm list packages -s")
         .unwrap_or("".to_string())
         .replace("package:", "")
         .lines()
         .map(String::from)
-        .collect();
-
-    hashet
+        .collect()
 }
 
 
-pub fn uninstall_package(package: String) -> String {
+pub fn uninstall_package(package: String, removal: Removal) {
     let arg = "pm uninstall --user 0 ".to_string() + &package;
+    let output = adb_shell_command(&arg).unwrap();
+    if output.contains("Success") {
+        info!("REMOVE  [{}]: {}", removal, package);
 
-    adb_shell_command(&arg).unwrap()
+    } else {
+        error!("REMOVE [{}]: {}", removal, output);
+    }
+
 }
 
 
-pub fn restore_package(package: String) -> String {
+pub fn restore_package(package: String, removal: Removal) {
     let arg = "cmd package install-existing --user 0 ".to_string() + &package;
+    let output = adb_shell_command(&arg).unwrap();
 
-    adb_shell_command(&arg).unwrap()
+    if output.contains("installed for user") {
+        info!("RESTORE [{}]: {}", removal, package);
+    } else {
+        error!("RESTORE: {} -- ", output);
+    }
+
 }
 
 pub fn get_phone_model() -> String {
     match adb_shell_command("getprop ro.product.model") {
-        Ok(model) => model,
+        Ok(model) => {
+            model
+        },
+
         Err(err) => {
             if err.contains("adb: no devices/emulators found") {
                 "adb: no devices/emulators found".to_string()

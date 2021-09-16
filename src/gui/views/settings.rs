@@ -24,6 +24,7 @@ impl Settings {
     pub fn update(&mut self, msg: Message) {
         match msg {
             Message::ExpertModeToogle(toggled) => {
+                info!("Expert mode {}", if toggled {"enabled"} else {"disabled"});
                 self.expert_mode = toggled;
             }
         }

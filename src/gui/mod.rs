@@ -107,6 +107,8 @@ impl Application for UadGui {
             UadGui::Loaded(state) => match message {
                 Message::CatalogRefreshPress => {
                     state.list_view = ListView::default();
+                    state.device_name = get_phone_brand();
+                    info!("PHONE_MODEL: {}", state.device_name);   
                     state.list_view.update(ListMessage::LoadSettings(state.settings_view.clone()));
                     state.view = View::List;
                     Command::perform(Self::load_phone_packages(), Message::CatalogAction)
@@ -121,7 +123,6 @@ impl Application for UadGui {
                     Command::none()
                 }
                 Message::CatalogAction(msg) => {
-                    state.device_name = get_phone_brand();
                     state.list_view.update(msg).map(Message::CatalogAction)
                 }
                 Message::SettingsAction(msg) => {
@@ -238,6 +239,7 @@ impl UadGui {
         State::default()
     }
     pub async fn load_phone_packages() -> ListMessage {
+        info!("PHONE_MODEL: {}", get_phone_brand());   
         ListMessage::LoadPackages(&UAD_LISTS)
     }
 }

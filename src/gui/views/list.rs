@@ -19,6 +19,7 @@ use crate::core::sync::{
 pub struct SelectionPackage {
     pub name: String,
     pub state: PackageState,
+    pub removal: Removal,
 }
 
 #[derive(Default, Debug, Clone)]
@@ -138,7 +139,8 @@ impl List {
                             self.selected_packages.push(
                                 SelectionPackage {
                                     name: self.filtered_packages[i].name.clone(),
-                                    state: self.filtered_packages[i].state
+                                    state: self.filtered_packages[i].state,
+                                    removal: self.filtered_packages[i].removal,
                                 }
                             );
                         } else {
@@ -170,17 +172,20 @@ impl List {
             Message::ApplyActionOnSelection => {
                 for p in &self.selected_packages {
                     match p.state {
-                        PackageState::Installed => uninstall_package(p.name.clone()),
-                        PackageState::Uninstalled => restore_package(p.name.clone()),
-                        PackageState::All => "[DEBUG] ApplySelectionAction: Unknown package state".to_string(), // This can't happen
+                        PackageState::Installed => uninstall_package(p.name.clone(), p.removal),
+                        PackageState::Uninstalled => restore_package(p.name.clone(), p.removal),
+                        PackageState::All => error!("ApplySelectionAction: Unknown package state"), // This can't happen
                     };
 
                     for phone_p in &mut self.phone_packages {
                         if p.name == phone_p.name {
                             phone_p.state = match phone_p.state {
                                 PackageState::Installed => PackageState::Uninstalled,
-                                PackageState::Uninstalled => PackageState::Installed, 
-                                PackageState::All => PackageState::All, // This can't happen (Like... never)
+                                PackageState::Uninstalled => PackageState::Installed,
+                                PackageState::All => {
+                                    error!("ApplyActionOnSelection: Unknown package state");
+                                    PackageState::All // This can't happen (like... never)
+                                }
                             };
                             break
                         }
@@ -193,7 +198,7 @@ impl List {
                 let mut package;
                 for p in &mut self.filtered_packages {
                     p.selected = true;
-                    package = SelectionPackage { name: p.name.clone(), state: p.state };
+                    package = SelectionPackage { name: p.name.clone(), state: p.state, removal: p.removal };
                     if !self.selected_packages.contains(&package) {
                         self.selected_packages.push(package);
                     }
@@ -408,13 +413,13 @@ impl PackageRow {
     pub fn update(&mut self, message: RowMessage) -> Command<RowMessage> {
         match message {
             RowMessage::RemovePressed(package) => {
-                uninstall_package(package.name);
+                uninstall_package(package.name, self.removal);
                 self.state = PackageState::Uninstalled;
                 self.selected = false;
                 Command::none()
             }
             RowMessage::RestorePressed(package) => {
-                restore_package(package.name);
+                restore_package(package.name, self.removal);
                 self.state = PackageState::Installed;
                 self.selected = false;
                 Command::none()
