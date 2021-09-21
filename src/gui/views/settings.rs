@@ -2,7 +2,7 @@ use crate::gui::style;
 
 use iced::{Checkbox, Column, Container, Element, Length, Text};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Copy)]
 pub struct Settings {
     pub expert_mode: bool,
 }
@@ -33,7 +33,7 @@ impl Settings {
     pub fn view(&self) -> Element<Message> {
         let about_text = Text::new("General");
 
-        let checkbox = Checkbox::new(
+        let expert_mode_checkbox = Checkbox::new(
             self.expert_mode, 
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)", 
             Message::ExpertModeToogle
@@ -43,7 +43,7 @@ impl Settings {
             .width(Length::Fill)
             .spacing(10)
             .push(about_text)
-            .push(checkbox);
+            .push(expert_mode_checkbox);
 
         Container::new(content)
             .padding(10)

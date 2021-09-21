@@ -60,27 +60,30 @@ pub fn hashset_installed_system_packages() -> HashSet<String> {
 }
 
 
-pub fn uninstall_package(package: String, removal: Removal) {
+pub fn uninstall_package(package: String, removal: Removal) -> Result<bool, bool> {
     let arg = "pm uninstall --user 0 ".to_string() + &package;
-    let output = adb_shell_command(&arg).unwrap();
+    let output = adb_shell_command(&arg).unwrap_or_else(|_| "Error".to_string());
     if output.contains("Success") {
         info!("REMOVE  [{}]: {}", removal, package);
-
+        Ok(true)
     } else {
         error!("REMOVE [{}]: {}", removal, output);
+        Err(false)
     }
 
 }
 
 
-pub fn restore_package(package: String, removal: Removal) {
+pub fn restore_package(package: String, removal: Removal) -> Result<bool, bool> {
     let arg = "cmd package install-existing --user 0 ".to_string() + &package;
-    let output = adb_shell_command(&arg).unwrap();
+    let output = adb_shell_command(&arg).unwrap_or_else(|_| "Error".to_string());
 
     if output.contains("installed for user") {
         info!("RESTORE [{}]: {}", removal, package);
+        Ok(true)
     } else {
-        error!("RESTORE: {} -- ", output);
+        error!("RESTORE: [{}]: {}", removal, output);
+        Err(false)
     }
 
 }
@@ -101,7 +104,6 @@ pub fn get_phone_model() -> String {
             
     }
 }
-
 
 pub fn get_phone_brand() -> String {
     format!("{} {}", adb_shell_command("getprop ro.product.brand").unwrap_or("".to_string()).trim(), get_phone_model())

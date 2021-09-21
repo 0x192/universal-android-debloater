@@ -3,10 +3,11 @@ use crate::core::uad_lists::{ UadList, PackageState, Package, Removal };
 use std::{collections::HashMap};
 
 use crate::gui::views::settings::Settings;
+use crate::gui::widgets::package_row::{ PackageRow, Message as RowMessage };
 
 use iced::{
-    scrollable, Align, Column, Command, Container, Element, Space,
-    Length, Row, Scrollable, Text, text_input, TextInput, Checkbox, //Svg,
+    scrollable, Align, Column, Container, Element, Space,
+    Length, Row, Scrollable, Text, text_input, TextInput, Command,//Svg,
     PickList, pick_list, Button, button, HorizontalAlignment, VerticalAlignment
 };
 
@@ -15,20 +16,14 @@ use crate::core::sync::{
     uninstall_package, restore_package,
 };
 
-#[derive(Clone, Debug, PartialEq)]
-pub struct SelectionPackage {
-    pub name: String,
-    pub state: PackageState,
-    pub removal: Removal,
-}
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
     ready: bool,
     pub settings: Settings,
-    filtered_packages: Vec<PackageRow>,
-    phone_packages: Vec<PackageRow>,
-    selected_packages: Vec<SelectionPackage>,
+    phone_packages: Vec<PackageRow>, // packages of the phone
+    filtered_packages: Vec<usize>, // phone_packages indexes (= what you see on screen)
+    selected_packages: Vec<usize>, // phone_packages indexes (= what you've selected)
     search_input: text_input::State,
     select_all_btn_state: button::State,
     apply_selection_btn_state: button::State,
@@ -42,6 +37,7 @@ pub struct List {
     pub input_value: String,
     description: String,
 }
+
 
 #[derive(Debug, Clone)]
 pub enum Message {
@@ -61,7 +57,6 @@ impl List {
     pub fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::LoadPackages(uad_lists) => {
-                self.filtered_packages = Vec::new();
                 self.selected_package_state = Some(PackageState::Installed);
                 self.selected_list = Some(UadList::All);
                 self.selected_removal = Some(Removal::Recommended);
@@ -72,7 +67,6 @@ impl List {
                 let mut uad_list;
                 let mut state;
                 let mut removal;
-                let selected = false;
 
                 for p_name in all_system_packages.lines() {
                     state = PackageState::Installed;
@@ -96,14 +90,13 @@ impl List {
                         &description,
                         uad_list,
                         removal,
-                        selected,
+                        false,
                         self.settings.expert_mode,
                     );
-                    self.filtered_packages.push(package_row)
+                    self.phone_packages.push(package_row)
                 }
-                self.filtered_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-                self.phone_packages = self.filtered_packages.clone();
-
+                self.phone_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+                self.filtered_packages = (0..self.phone_packages.len()).collect();
                 Self::filter_package_lists(self);
                 self.ready = true;
                 Command::none()
@@ -119,67 +112,48 @@ impl List {
                 Self::filter_package_lists(self);
                 Command::none()
             }
-
             Message::PackageStateSelected(package_state) => {
                 self.selected_package_state = Some(package_state);
                 Self::filter_package_lists(self);
                 Command::none()
-            },
+            }
             Message::RemovalSelected(removal) => {
                 self.selected_removal = Some(removal);
                 Self::filter_package_lists(self);
                 Command::none()
             }
             Message::List(i, row_message) => {
-                self.filtered_packages[i].update(row_message.clone()).map(move |row_message| Message::List(i, row_message));
+                self.phone_packages[i].update(row_message.clone()).map(move |row_message| Message::List(i, row_message));
                 
                 match row_message {
-                    RowMessage::UpdateSelection(_) => {
-                        if self.filtered_packages[i].selected {
-                            self.selected_packages.push(
-                                SelectionPackage {
-                                    name: self.filtered_packages[i].name.clone(),
-                                    state: self.filtered_packages[i].state,
-                                    removal: self.filtered_packages[i].removal,
-                                }
-                            );
+                    RowMessage::ToggleSelection(toggle) => {
+                        self.phone_packages[i].selected = toggle;
+                        if self.phone_packages[i].selected {
+                            self.selected_packages.push(i);
                         } else {
-                            let p_name = self.filtered_packages[i].name.clone();
-                            self.selected_packages.drain_filter(|p| p.name == p_name.as_str());
+                            self.selected_packages.drain_filter(|s_i| *s_i == i);
                         }
                     },
-                    RowMessage::RemovePressed(package)|
-                    RowMessage::RestorePressed(package) => {
-                        for p in &mut self.phone_packages {
-                            if package.name == p.name {
-                                if p.state == PackageState::Installed { 
-                                    p.state = PackageState::Uninstalled;
-                                 } else { 
-                                    p.state = PackageState::Installed;
-                                }
-                                break
-                            }
-                        }
-                        let p_name = self.filtered_packages[i].name.clone();
-                        self.selected_packages.drain_filter(|p| p.name == p_name.as_str());
-                        Self::filter_package_lists(self);
-                    }
-                    RowMessage::PackagePressed => self.description = self.filtered_packages[i].clone().description,
-                    _ => {}
-                }
-                Command::none()
-            },
-            Message::ApplyActionOnSelection => {
-                for p in &self.selected_packages {
-                    match p.state {
-                        PackageState::Installed => uninstall_package(p.name.clone(), p.removal),
-                        PackageState::Uninstalled => restore_package(p.name.clone(), p.removal),
-                        PackageState::All => error!("ApplySelectionAction: Unknown package state"), // This can't happen
-                    };
+                    RowMessage::ActionPressed => {
+                        let success = match self.phone_packages[i].state {
+                            PackageState::Installed => uninstall_package(
+                                    self.phone_packages[i].name.clone(),
+                                    self.phone_packages[i].removal
+                                ).unwrap_or_else(|err| err),
+                            PackageState::Uninstalled => restore_package(
+                                    self.phone_packages[i].name.clone(),
+                                    self.phone_packages[i].removal
+                                ).unwrap_or_else(|err| err),
+                            PackageState::All => false // This can't happen
+                        };
+                            
+                        if success {
+                            let i = self.phone_packages
+                                .iter()
+                                .position(|p| p.name == self.phone_packages[i].name)
+                                .unwrap();
 
-                    for phone_p in &mut self.phone_packages {
-                        if p.name == phone_p.name {
-                            phone_p.state = match phone_p.state {
+                            self.phone_packages[i].state = match self.phone_packages[i].state {
                                 PackageState::Installed => PackageState::Uninstalled,
                                 PackageState::Uninstalled => PackageState::Installed,
                                 PackageState::All => {
@@ -187,20 +161,51 @@ impl List {
                                     PackageState::All // This can't happen (like... never)
                                 }
                             };
-                            break
+                            self.selected_packages.drain_filter(|s_i| *s_i == i);
+                            Self::filter_package_lists(self);
                         }
+                    },
+                    RowMessage::PackagePressed => {
+                        self.description = self.phone_packages[i].clone().description;
+                    },
+                }
+                Command::none()
+            },
+            Message::ApplyActionOnSelection => {
+                for i in self.selected_packages.clone() {
+                    let success = match self.phone_packages[i].state {
+                        PackageState::Installed => uninstall_package(
+                                self.phone_packages[i].name.clone(),
+                                self.phone_packages[i].removal
+                            ).unwrap_or_else(|err| err),
+                        PackageState::Uninstalled => restore_package(
+                                self.phone_packages[i].name.clone(),
+                                self.phone_packages[i].removal
+                            ).unwrap_or_else(|err| err),
+                        PackageState::All => false // This can't happen
+                    };
+
+                    if success {
+                        self.phone_packages[i].state = match self.phone_packages[i].state {
+                            PackageState::Installed => PackageState::Uninstalled,
+                            PackageState::Uninstalled => PackageState::Installed,
+                            PackageState::All => {
+                                error!("ApplyActionOnSelection: Unknown package state");
+                                PackageState::All // This can't happen (like... never)
+                            }
+                        };
+                        self.phone_packages[i].selected = false;
+                        self.selected_packages.drain_filter(|s_i| *s_i == i);
                     }
                 }
                 Self::filter_package_lists(self);
                 Command::none()
             },
             Message::SelectAllPressed => {
-                let mut package;
-                for p in &mut self.filtered_packages {
-                    p.selected = true;
-                    package = SelectionPackage { name: p.name.clone(), state: p.state, removal: p.removal };
-                    if !self.selected_packages.contains(&package) {
-                        self.selected_packages.push(package);
+                for i in self.filtered_packages.clone() {
+                    self.phone_packages[i].selected = true;
+                    if !self.selected_packages.contains(&i) {
+                        self.selected_packages.push(i);
                     }
                 }
                 Command::none()
@@ -258,12 +263,21 @@ impl List {
                 .push(package_state_picklist)
                 .push(list_picklist);
 
-            let packages = self.filtered_packages
+            let packages = self.phone_packages
                 .iter_mut()
                 .enumerate()
-                .fold(Column::new().spacing(6), |col, (i, p)| {
+                .filter(|(i,_)| self.filtered_packages.contains(i))
+                .fold(Column::new().spacing(6), |col, (i,p)| {
                     col.push(p.view().map(move |msg| Message::List(i, msg)))
                 });
+
+            /*
+            let packages = self.filtered_packages
+                .into_iter()
+                .fold(Column::new().spacing(6), |col, i| {
+                    col.push(self.phone_packages[i].view().map(move |msg| Message::List(i, msg)))
+                });
+            */
 
             let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
                 .push(packages)
@@ -314,7 +328,6 @@ impl List {
                 .push(Space::new(Length::Fill, Length::Shrink))
                 .push(apply_selection_btn);
 
-
             let content = Column::new()
                 .width(Length::Fill)
                 .spacing(10)
@@ -341,160 +354,21 @@ impl List {
         let package_filter: PackageState = self.selected_package_state.unwrap();
         let removal_filter: Removal = self.selected_removal.unwrap();
 
-        let mut filtered_packages: Vec<PackageRow> = self.phone_packages
+        self.filtered_packages = self.phone_packages
             .iter()
+            .enumerate()
             .filter(
-                |p|
+                |(_,p)|
                 (list_filter == UadList::All || p.uad_list == list_filter) &&
                 (package_filter == PackageState::All || p.state == package_filter) &&
                 (removal_filter == Removal::All || p.removal == removal_filter) &&
                 (self.input_value.is_empty() || p.name.contains(&self.input_value))
             )
-            .cloned()
+            .map(|(i,_)| i)
             .collect();
-            
-        filtered_packages.sort_by(|a, b| a.name.cmp(&b.name));
-
-        for p in &mut filtered_packages {
-            if self.selected_packages.iter().any(|s_p| s_p.name == p.name) {
-                p.selected = true;
-            }
-        }
-        self.filtered_packages = filtered_packages;
     }
 }
 
-#[derive(Clone, Debug)]
-pub struct PackageRow {
-    pub name: String,
-    pub state: PackageState,
-    pub description: String,
-    pub uad_list: UadList,
-    pub removal: Removal,
-    package_btn_state: button::State,
-    action_btn_state: button::State,
-    selected: bool,
-    expert_mode: bool,
-}
-
-#[derive(Clone, Debug)]
-pub enum RowMessage {
-    PackagePressed,
-    RemovePressed(PackageRow),
-    RestorePressed(PackageRow),
-    UpdateSelection(bool),
-    NoEvent(bool),
-}
-
-impl PackageRow {
-    pub fn new(
-        name: &str,
-        state: PackageState,
-        description: &str,
-        uad_list: UadList,
-        removal: Removal,
-        selected: bool,
-        expert_mode: bool,
-
-    ) -> Self {
-        Self {
-            name: name.to_string(),
-            state: state,
-            description: description.to_string(),
-            uad_list: uad_list,
-            removal: removal,
-            package_btn_state: button::State::default(),
-            action_btn_state: button::State::default(),
-            selected: selected,
-            expert_mode: expert_mode,
-        }
-    }
-
-    pub fn update(&mut self, message: RowMessage) -> Command<RowMessage> {
-        match message {
-            RowMessage::RemovePressed(package) => {
-                uninstall_package(package.name, self.removal);
-                self.state = PackageState::Uninstalled;
-                self.selected = false;
-                Command::none()
-            }
-            RowMessage::RestorePressed(package) => {
-                restore_package(package.name, self.removal);
-                self.state = PackageState::Installed;
-                self.selected = false;
-                Command::none()
-            },
-            RowMessage::UpdateSelection(toogled) => {
-                self.selected = toogled;
-                Command::none()
-            },
-            RowMessage::PackagePressed => Command::none(),
-            RowMessage::NoEvent(_) => Command::none(),
-        }
-    }
-
-    pub fn view(&mut self) -> Element<RowMessage> {
-        let package = self.clone();
-        //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
-        //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
-        let button_style;
-        let action_text;
-        let action_message;
-        let action_btn;
-        let selection_checkbox;
-
-        if self.state == PackageState::Installed {
-            action_text = "Uninstall";
-            action_message = RowMessage::RemovePressed(package);
-            button_style = style::PackageButton::Uninstall;
-        } else {
-            action_text = "Restore";
-            action_message = RowMessage::RestorePressed(package);
-            button_style = style::PackageButton::Restore;
-        }
-
-        if self.expert_mode || self.removal != Removal::Unsafe {
-            selection_checkbox = Checkbox::new(self.selected, "", RowMessage::UpdateSelection)
-                .style(style::SelectionCheckBox::Enabled);
-
-            action_btn = Button::new(
-                &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
-            )
-            .on_press(action_message);
-
-        } else {
-            selection_checkbox = Checkbox::new(self.selected, "", RowMessage::NoEvent)
-                .style(style::SelectionCheckBox::Disabled);
-
-            action_btn = Button::new(
-                &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
-            );
-        }
-
-        Row::new()
-            .push(Button::new(
-                &mut self.package_btn_state,
-                Row::new()
-                    .align_items(Align::Center)
-                    .push(selection_checkbox)
-                    .push(Text::new(&self.name).width(Length::FillPortion(8)))
-                    //.push(Text::new(&self.state.to_string()).width(Length::FillPortion(3)))
-                    .push(action_btn.width(Length::FillPortion(1))
-                                    .style(button_style)
-                    )
-                )
-                .style(style::PackageRow)
-                .width(Length::Fill)
-                .on_press(RowMessage::PackagePressed)
-
-            )
-            .push(Space::with_width(Length::Units(15)))
-            .align_items(Align::Center)
-            .into()
-    }
-}
 
 fn loading_data<'a>() -> Element<'a, Message> {
     Container::new(
