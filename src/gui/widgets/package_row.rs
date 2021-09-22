@@ -2,8 +2,8 @@ use crate::core::uad_lists::{ UadList, PackageState, Removal };
 use crate::gui::style;
 
 use iced::{
-    Align, Command, Element, Space, Length, Row, Text, Button, 
-    button, HorizontalAlignment, Checkbox,
+    Alignment, alignment, Command, Element, Space, Length, Row, Text, Button, 
+    button, Checkbox,
 };
 
 #[derive(Clone, Debug)]
@@ -76,7 +76,7 @@ impl PackageRow {
 
             action_btn = Button::new(
                 &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
+                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center),
             )
             .on_press(Message::ActionPressed);
 
@@ -86,7 +86,7 @@ impl PackageRow {
 
             action_btn = Button::new(
                 &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(HorizontalAlignment::Center),
+                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center),
             );
         }
 
@@ -94,7 +94,7 @@ impl PackageRow {
             .push(Button::new(
                 &mut self.package_btn_state,
                 Row::new()
-                    .align_items(Align::Center)
+                    .align_items(Alignment::Center)
                     .push(selection_checkbox)
                     .push(Text::new(&self.name).width(Length::FillPortion(8)))
                     .push(action_btn.width(Length::FillPortion(1))
@@ -107,7 +107,7 @@ impl PackageRow {
 
             )
             .push(Space::with_width(Length::Units(15)))
-            .align_items(Align::Center)
+            .align_items(Alignment::Center)
             .into()
     }
 }

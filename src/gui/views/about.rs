@@ -1,6 +1,6 @@
 use crate::gui::style;
 use crate::gui::Message;
-use iced::{Align, Column, Container, Element, Length, Text};
+use iced::{Alignment, Column, Container, Element, Length, Text};
 
 #[derive(Default, Debug, Clone)]
 pub struct About {}
@@ -14,7 +14,7 @@ impl About {
         let content = Column::new()
             .width(Length::Fill)
             .spacing(10)
-            .align_items(Align::Center)
+            .align_items(Alignment::Center)
             .push(about_text);
 
         Container::new(content)

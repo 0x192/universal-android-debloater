@@ -6,12 +6,12 @@ pub use views::about::About as AboutView;
 pub use views::list::{List as AppsView, Message as AppsMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
 pub use crate::core::uad_lists::{ load_debloat_lists, Package };
-pub use crate::core::sync::{ get_phone_brand };
+pub use crate::core::sync::{ get_phone_brand};
 use std::{collections::HashMap};
 use static_init::{dynamic};
 
 use iced::{
-    button, Align, Application, Button, Column, Command, Space,
+    button, Alignment, Application, Button, Column, Command, Space,
     Container, Element, Length, Row, Settings, Text, window::Settings as Window, Svg,
 };
 
@@ -153,7 +153,7 @@ impl Application for UadGui {
 
         let row = Row::new()
             .width(Length::Fill)
-            .align_items(Align::Center)
+            .align_items(Alignment::Center)
             .spacing(10)
             .push(Text::new("Device: ".to_string() + &self.device_name))
             .push(Space::new(Length::Fill, Length::Shrink))

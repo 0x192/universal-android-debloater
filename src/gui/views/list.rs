@@ -6,9 +6,9 @@ use crate::gui::views::settings::Settings;
 use crate::gui::widgets::package_row::{ PackageRow, Message as RowMessage };
 
 use iced::{
-    scrollable, Align, Column, Container, Element, Space,
+    scrollable, Alignment, alignment, Column, Container, Element, Space,
     Length, Row, Scrollable, Text, text_input, TextInput, Command,//Svg,
-    PickList, pick_list, Button, button, HorizontalAlignment, VerticalAlignment
+    PickList, pick_list, Button, button, 
 };
 
 use crate::core::sync::{ 
@@ -215,9 +215,8 @@ impl List {
                 Command::none()
             },
         }
-
-
     }
+
     pub fn view(&mut self) -> Element<Message> {
         if self.ready {
             let search_packages = TextInput::new(
@@ -255,7 +254,7 @@ impl List {
 
             let control_panel = Row::new()
                 .width(Length::Fill)
-                .align_items(Align::Center)
+                .align_items(Alignment::Center)
                 .spacing(10)
                 .push(search_packages)
                 .push(divider)
@@ -282,14 +281,14 @@ impl List {
             let packages_scrollable = Scrollable::new(&mut self.package_scrollable_state)
                 .push(packages)
                 .spacing(2)
-                .align_items(Align::Start)
+                .align_items(Alignment::Start)
                 .height(Length::FillPortion(6))
                 .style(style::Scrollable);
 
             // let mut packages_v: Vec<&str> = self.packages.lines().collect();
             let description_panel = Container::new(
                 Row::new()
-                .align_items(Align::Center)
+                .align_items(Alignment::Center)
                 .push(Text::new(&self.description))
             )
             .style(style::Description)
@@ -301,7 +300,7 @@ impl List {
             let apply_selection_btn = Button::new(
                 &mut self.apply_selection_btn_state, 
                 Row::new()
-                    .align_items(Align::Center)
+                    .align_items(Alignment::Center)
                     .push(Text::new(format!("{}{}{}", "Debloat/Restore selection (", self.selected_packages.len(), ")")))
                 )
                 .on_press(Message::ApplyActionOnSelection)
@@ -312,7 +311,7 @@ impl List {
             let select_all_btn = Button::new(
                 &mut self.select_all_btn_state, 
                 Row::new()
-                    .align_items(Align::Center)
+                    .align_items(Alignment::Center)
                     .push(Text::new("Select all"))
                 )
                 .on_press(Message::SelectAllPressed)
@@ -322,7 +321,7 @@ impl List {
 
             let action_row = Row::new()
                 .width(Length::Fill)
-                .align_items(Align::Center)
+                .align_items(Alignment::Center)
                 .height(Length::FillPortion(1))
                 .push(select_all_btn)
                 .push(Space::new(Length::Fill, Length::Shrink))
@@ -331,7 +330,7 @@ impl List {
             let content = Column::new()
                 .width(Length::Fill)
                 .spacing(10)
-                .align_items(Align::Center)
+                .align_items(Alignment::Center)
                 .push(control_panel)
                 .push(Space::new(Length::Fill, Length::Units(2)))
                 .push(packages_scrollable)
@@ -373,8 +372,8 @@ impl List {
 fn loading_data<'a>() -> Element<'a, Message> {
     Container::new(
         Text::new("Pulling packages from the phone. Please wait...")
-            .horizontal_alignment(HorizontalAlignment::Center)
-            .vertical_alignment(VerticalAlignment::Center)
+            .horizontal_alignment(alignment::Horizontal::Center)
+            .vertical_alignment(alignment::Vertical::Center)
             .size(20),
     )
     .width(Length::Fill)
