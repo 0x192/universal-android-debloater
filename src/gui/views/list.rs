@@ -1,5 +1,5 @@
 use crate::gui::style;
-use crate::core::uad_lists::{ UadList, PackageState, Package, Removal };
+use crate::core::uad_lists::{ UadList, PackageState, Package, Removal, Opposite};
 use std::{collections::HashMap};
 
 use crate::gui::views::settings::Settings;
@@ -12,15 +12,14 @@ use iced::{
 };
 
 use crate::core::sync::{ 
-    list_all_system_packages, hashset_installed_system_packages, 
-    uninstall_package, restore_package,
+    list_all_system_packages, hashset_system_packages, 
+    Phone, action_handler,
 };
 
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
     ready: bool,
-    pub settings: Settings,
     phone_packages: Vec<PackageRow>, // packages of the phone
     filtered_packages: Vec<usize>, // phone_packages indexes (= what you see on screen)
     selected_packages: Vec<usize>, // phone_packages indexes (= what you've selected)
@@ -49,27 +48,27 @@ pub enum Message {
     ApplyActionOnSelection,
     SelectAllPressed,
     List(usize, RowMessage),
-    LoadSettings(Settings),
 }
 
 
 impl List {
-    pub fn update(&mut self, message: Message) -> Command<Message> {
+    pub fn update(&mut self, settings: &Settings, phone: &Phone, message: Message) -> Command<Message> {
         match message {
             Message::LoadPackages(uad_lists) => {
-                self.selected_package_state = Some(PackageState::Installed);
+                self.selected_package_state = Some(PackageState::Enabled);
                 self.selected_list = Some(UadList::All);
                 self.selected_removal = Some(Removal::Recommended);
 
                 let all_system_packages = list_all_system_packages(); // installed and uninstalled packages
-                let installed_system_packages = hashset_installed_system_packages();
+                let enabled_system_packages = hashset_system_packages(PackageState::Enabled);
+                let disabled_system_packages = hashset_system_packages(PackageState::Disabled);
                 let mut description;
                 let mut uad_list;
                 let mut state;
                 let mut removal;
 
                 for p_name in all_system_packages.lines() {
-                    state = PackageState::Installed;
+                    state = PackageState::Uninstalled;
                     description = "[No description]";
                     uad_list = UadList::Unlisted;
                     removal = Removal::Unlisted;
@@ -80,8 +79,10 @@ impl List {
                         removal = uad_lists.get(p_name).unwrap().removal;
                     }
 
-                    if !installed_system_packages.contains(p_name) {
-                        state = PackageState::Uninstalled;
+                    if enabled_system_packages.contains(p_name) {
+                       state = PackageState::Enabled;
+                    } else if disabled_system_packages.contains(p_name) {
+                        state = PackageState::Disabled;
                     }
 
                     let package_row = PackageRow::new(
@@ -91,7 +92,6 @@ impl List {
                         uad_list,
                         removal,
                         false,
-                        self.settings.expert_mode,
                     );
                     self.phone_packages.push(package_row)
                 }
@@ -135,17 +135,11 @@ impl List {
                         }
                     },
                     RowMessage::ActionPressed => {
-                        let success = match self.phone_packages[i].state {
-                            PackageState::Installed => uninstall_package(
-                                    self.phone_packages[i].name.clone(),
-                                    self.phone_packages[i].removal
-                                ).unwrap_or_else(|err| err),
-                            PackageState::Uninstalled => restore_package(
-                                    self.phone_packages[i].name.clone(),
-                                    self.phone_packages[i].removal
-                                ).unwrap_or_else(|err| err),
-                            PackageState::All => false // This can't happen
-                        };
+                        let success = action_handler(
+                                &self.phone_packages[i],
+                                phone,
+                                settings.disable_mode,
+                            ).unwrap_or_else(|err| err);
                             
                         if success {
                             let i = self.phone_packages
@@ -153,15 +147,9 @@ impl List {
                                 .position(|p| p.name == self.phone_packages[i].name)
                                 .unwrap();
 
-                            self.phone_packages[i].state = match self.phone_packages[i].state {
-                                PackageState::Installed => PackageState::Uninstalled,
-                                PackageState::Uninstalled => PackageState::Installed,
-                                PackageState::All => {
-                                    error!("ApplyActionOnSelection: Unknown package state");
-                                    PackageState::All // This can't happen (like... never)
-                                }
-                            };
+                            self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
                             self.selected_packages.drain_filter(|s_i| *s_i == i);
+                            self.phone_packages[i].selected = false;
                             Self::filter_package_lists(self);
                         }
                     },
@@ -173,27 +161,14 @@ impl List {
             },
             Message::ApplyActionOnSelection => {
                 for i in self.selected_packages.clone() {
-                    let success = match self.phone_packages[i].state {
-                        PackageState::Installed => uninstall_package(
-                                self.phone_packages[i].name.clone(),
-                                self.phone_packages[i].removal
-                            ).unwrap_or_else(|err| err),
-                        PackageState::Uninstalled => restore_package(
-                                self.phone_packages[i].name.clone(),
-                                self.phone_packages[i].removal
-                            ).unwrap_or_else(|err| err),
-                        PackageState::All => false // This can't happen
-                    };
-
+                    let success = action_handler(
+                        &self.phone_packages[i],
+                        phone,
+                        settings.disable_mode
+                    ).unwrap_or_else(|err| err);
+                    
                     if success {
-                        self.phone_packages[i].state = match self.phone_packages[i].state {
-                            PackageState::Installed => PackageState::Uninstalled,
-                            PackageState::Uninstalled => PackageState::Installed,
-                            PackageState::All => {
-                                error!("ApplyActionOnSelection: Unknown package state");
-                                PackageState::All // This can't happen (like... never)
-                            }
-                        };
+                        self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
                         self.phone_packages[i].selected = false;
                         self.selected_packages.drain_filter(|s_i| *s_i == i);
                     }
@@ -210,14 +185,10 @@ impl List {
                 }
                 Command::none()
             },
-            Message::LoadSettings(settings) => {
-                self.settings = settings;
-                Command::none()
-            },
         }
     }
 
-    pub fn view(&mut self) -> Element<Message> {
+    pub fn view(&mut self, settings: &Settings, phone: &Phone) -> Element<Message> {
         if self.ready {
             let search_packages = TextInput::new(
                 &mut self.search_input,
@@ -267,10 +238,11 @@ impl List {
                 .enumerate()
                 .filter(|(i,_)| self.filtered_packages.contains(i))
                 .fold(Column::new().spacing(6), |col, (i,p)| {
-                    col.push(p.view().map(move |msg| Message::List(i, msg)))
+                    col.push(p.view(settings, phone).map(move |msg| Message::List(i, msg)))
                 });
 
             /*
+            // Seems better to me but I can't fix the lifetime issues
             let packages = self.filtered_packages
                 .into_iter()
                 .fold(Column::new().spacing(6), |col, i| {
@@ -297,11 +269,12 @@ impl List {
             .width(Length::Fill);
 
 
+            let action = if settings.disable_mode {"Enable/Disable"} else {"Uninstall/Restore"};
             let apply_selection_btn = Button::new(
                 &mut self.apply_selection_btn_state, 
                 Row::new()
                     .align_items(Alignment::Center)
-                    .push(Text::new(format!("{}{}{}", "Debloat/Restore selection (", self.selected_packages.len(), ")")))
+                    .push(Text::new(format!("{} selection ({})", action, self.selected_packages.len())))
                 )
                 .on_press(Message::ApplyActionOnSelection)
                 .padding(5)

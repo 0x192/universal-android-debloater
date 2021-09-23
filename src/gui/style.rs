@@ -18,6 +18,13 @@ pub const DISABLED_COLOR: Color = Color::from_rgb(
     195 as f32 / 255.0,
 );
 
+
+pub const GREY_SMALL_SETTINGS_COLOR: Color = Color::from_rgb (
+    211 as f32 / 255.0,
+    211 as f32 / 255.0,
+    211 as f32 / 255.0,
+);
+
 pub enum PrimaryButton {
     Enabled,
     //Disabled,

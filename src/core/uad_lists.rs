@@ -70,21 +70,23 @@ impl std::fmt::Display for UadList {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum PackageState {
     All,
-    Installed,
-    Uninstalled
+    Enabled,
+    Uninstalled,
+    Disabled,
 }
 
 impl Default for PackageState {
     fn default() -> PackageState {
-        PackageState::Installed
+        PackageState::Enabled
     }
 }
 
 impl PackageState {
-    pub const ALL: [PackageState; 3] = [
+    pub const ALL: [PackageState; 4] = [
         PackageState::All,
-        PackageState::Installed,
+        PackageState::Enabled,
         PackageState::Uninstalled,
+        PackageState::Disabled,
     ];
 }
 
@@ -96,22 +98,27 @@ impl std::fmt::Display for PackageState {
             "{}",
             match self {
                 PackageState::All => "All packages",
-                PackageState::Installed => "installed",
-                PackageState::Uninstalled => "uninstalled",
+                PackageState::Enabled => "Enabled",
+                PackageState::Uninstalled => "Uninstalled",
+                PackageState::Disabled => "Disabled",
             }
         )
     }
 }
 
+pub trait Opposite {
+    fn opposite(&self, disable: bool) -> PackageState;
+}
 
-impl std::str::FromStr for PackageState {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "installed" => Ok(PackageState::Installed),
-            "uninstalled" => Ok(PackageState::Uninstalled),
-            _ => Err(format!("'{}' is not a valid value for WSType", s)),
+impl Opposite for PackageState {
+    fn opposite(&self, disable: bool) -> PackageState {
+        match self {
+            PackageState::Enabled => {
+                if disable {PackageState::Disabled} else {PackageState::Uninstalled}
+            },
+            PackageState::Uninstalled => PackageState::Enabled,
+            PackageState::Disabled => PackageState::Enabled,
+            PackageState::All => PackageState::All,
         }
     }
 }

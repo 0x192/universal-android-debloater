@@ -1,5 +1,8 @@
-use crate::core::uad_lists::{ UadList, PackageState, Removal };
+use crate::core::uad_lists::{UadList, PackageState, Removal};
+use crate::core::sync::Phone;
+
 use crate::gui::style;
+use crate::gui::views::settings::Settings;
 
 use iced::{
     Alignment, alignment, Command, Element, Space, Length, Row, Text, Button, 
@@ -16,7 +19,6 @@ pub struct PackageRow {
     package_btn_state: button::State,
     action_btn_state: button::State,
     pub selected: bool,
-    expert_mode: bool,
 }
 
 #[derive(Clone, Debug)]
@@ -34,7 +36,6 @@ impl PackageRow {
         uad_list: UadList,
         removal: Removal,
         selected: bool,
-        expert_mode: bool,
 
     ) -> Self {
         Self {
@@ -46,7 +47,6 @@ impl PackageRow {
             package_btn_state: button::State::default(),
             action_btn_state: button::State::default(),
             selected: selected,
-            expert_mode: expert_mode,
         }
     }
 
@@ -54,7 +54,7 @@ impl PackageRow {
         Command::none()
     }
 
-    pub fn view(&mut self) -> Element<Message> {
+    pub fn view(&mut self, settings: &Settings, phone: &Phone) -> Element<Message> {
         //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
         //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
         let button_style;
@@ -62,15 +62,33 @@ impl PackageRow {
         let action_btn;
         let selection_checkbox;
 
-        if self.state == PackageState::Installed {
-            action_text = "Uninstall";
-            button_style = style::PackageButton::Uninstall;
-        } else {
-            action_text = "Restore";
-            button_style = style::PackageButton::Restore;
+
+        match self.state {
+            PackageState::Enabled => {
+                action_text = if settings.disable_mode { "Disable" } else { "Uninstall" };
+                button_style = style::PackageButton::Uninstall;
+            }
+            PackageState::Disabled => {
+                action_text = "Enable";
+                button_style = style::PackageButton::Restore;
+            }
+            PackageState::Uninstalled => {
+                action_text = "Restore";
+                button_style = style::PackageButton::Restore;
+            }
+            PackageState::All => {
+                action_text = "Error";
+                button_style = style::PackageButton::Restore;
+                warn!("Incredible! Something impossible happenned!");
+            }
+            
         }
 
-        if self.expert_mode || self.removal != Removal::Unsafe {
+        if settings.expert_mode || self.removal != Removal::Unsafe 
+                                && self.state != PackageState::Uninstalled 
+                                || phone.android_sdk > 26
+        {
+
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
                 .style(style::SelectionCheckBox::Enabled);
 

@@ -6,7 +6,7 @@ pub use views::about::About as AboutView;
 pub use views::list::{List as AppsView, Message as AppsMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
 pub use crate::core::uad_lists::{ load_debloat_lists, Package };
-pub use crate::core::sync::{ get_phone_brand};
+pub use crate::core::sync::Phone;
 use std::{collections::HashMap};
 use static_init::{dynamic};
 
@@ -16,7 +16,7 @@ use iced::{
 };
 
 #[dynamic]
-static UAD_LISTS: HashMap<String, Package> = load_debloat_lists();
+static UAD_LISTS: HashMap<String, Package> = load_debloat_lists(); 
 
 #[derive(Debug, Clone)]
 pub enum View {
@@ -31,8 +31,9 @@ impl Default for View {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug)]
 pub struct UadGui {
+    phone: Phone,
     view: View,
     apps_view: AppsView,
     about_view: AboutView,
@@ -42,7 +43,6 @@ pub struct UadGui {
     settings_btn: button::State,
     apps_btn: button::State,
     apps_refresh_btn: button::State,
-    device_name: String,
 }
 
 #[derive(Debug, Clone)]
@@ -61,12 +61,12 @@ pub enum Message {
 impl Default for UadGui {
     fn default() -> Self {
         Self {
+            phone: Phone::default(),
             view: View::default(),
             apps_view: AppsView::default(),
             about_view: AboutView::default(),
             settings_view: SettingsView::default(),
             input_value: "".to_string(),
-            device_name: "No phone connected".to_string(),
             about_btn: button::State::default(),
             settings_btn: button::State::default(),
             apps_btn: button::State::default(),
@@ -94,20 +94,24 @@ impl Application for UadGui {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::Init(_) => {
-                self.device_name = get_phone_brand();
-                info!("PHONE_MODEL: {}", self.device_name);
+
+                if self.phone.android_sdk < 26 {
+                    self.settings_view.update(SettingsMessage::DisableModeToogle(true));
+                }
+                info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)
             }
             Message::AppsRefreshPress => {
-                self.device_name = get_phone_brand();
-                info!("PHONE_MODEL: {}", self.device_name);
+                self.phone = Phone::default();
+                info!("{:-^65}", "-");
+                info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
                 self.apps_view = AppsView::default();
                 self.view = View::List;
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)
             }
             Message::AppsPress => {
                 self.view = View::List;
-                self.apps_view.update(AppsMessage::LoadSettings(self.settings_view)).map(Message::AppsAction)
+                Command::none()
             }
             Message::AboutPressed => {
                 self.view = View::About;
@@ -118,7 +122,7 @@ impl Application for UadGui {
                 Command::none()
             }
             Message::AppsAction(msg) => {
-                self.apps_view.update(msg).map(Message::AppsAction)
+                self.apps_view.update(&self.settings_view, &self.phone, msg).map(Message::AppsAction)
             }
             Message::SettingsAction(msg) => {
                 self.settings_view.update(msg);
@@ -155,7 +159,7 @@ impl Application for UadGui {
             .width(Length::Fill)
             .align_items(Alignment::Center)
             .spacing(10)
-            .push(Text::new("Device: ".to_string() + &self.device_name))
+            .push(Text::new("Device: ".to_string() + &self.phone.model))
             .push(Space::new(Length::Fill, Length::Shrink))
             .push(apps_refresh_btn)
             .push(apps_btn)
@@ -168,7 +172,7 @@ impl Application for UadGui {
             .style(style::NavigationContainer);
 
         let main_container = match self.view {
-            View::List => self.apps_view.view().map(Message::AppsAction),
+            View::List => self.apps_view.view(&self.settings_view, &self.phone).map(Message::AppsAction),
             View::About => self.about_view.view(),
             View::Settings => self.settings_view.view().map(Message::SettingsAction),
         };

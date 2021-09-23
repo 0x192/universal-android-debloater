@@ -1,11 +1,26 @@
 use std::process::Command;
 use std::collections::HashSet;
-use crate::core::uad_lists::Removal;
+use crate::core::uad_lists::{PackageState, Opposite};
+use crate::gui::widgets::package_row::PackageRow;
 
 #[cfg(target_os = "windows")]
 use std::os::windows::process::CommandExt;
 
 
+#[derive(Debug)]
+pub struct Phone {
+    pub model: String,
+    pub android_sdk: u8,
+}
+
+impl Default for Phone {
+    fn default() -> Self {
+        Self {
+            model: get_phone_brand(),
+            android_sdk: get_android_sdk(),
+        }
+    }
+}
 pub fn adb_shell_command(args: &str) -> Result<String,String> {
 
     #[cfg(target_os = "windows")]
@@ -50,50 +65,58 @@ pub fn list_all_system_packages() -> String {
         
 }
 
-pub fn hashset_installed_system_packages() -> HashSet<String> {
-    adb_shell_command("pm list packages -s")
-        .unwrap_or("".to_string())
+pub fn hashset_system_packages(state: PackageState) -> HashSet<String> {
+    let action = match state {
+        PackageState::Enabled => "pm list packages -s -e",
+        PackageState::Disabled => "pm list package -s -d",
+        _ => "", // You probably don't need to use this function for anything else
+    };
+
+    adb_shell_command(action)
+        .unwrap_or(String::new())
         .replace("package:", "")
         .lines()
         .map(String::from)
         .collect()
 }
 
+pub fn action_handler(package: &PackageRow, phone: &Phone, disable_mode: bool) -> Result<bool, bool> {
+    let user = if phone.android_sdk < 21 { "" } else { " --user 0"};
 
-pub fn uninstall_package(package: String, removal: Removal) -> Result<bool, bool> {
-    let arg = "pm uninstall --user 0 ".to_string() + &package;
-    let output = adb_shell_command(&arg).unwrap_or_else(|_| "Error".to_string());
-    if output.contains("Success") {
-        info!("REMOVE  [{}]: {}", removal, package);
-        Ok(true)
-    } else {
-        error!("REMOVE [{}]: {}", removal, output);
-        Err(false)
+    let actions: Vec<String> = match package.state {
+        PackageState::Enabled => {
+            match disable_mode {
+                true => {
+                    vec![
+                        format!("am force-stop {}", package.name),
+                        format!("pm disable-user {}", package.name),
+                        format!("pm clear {}", package.name)
+                    ]
+                }
+                false => vec![format!("pm uninstall{} {}", user, package.name)]
+            }
+        }
+        PackageState::Disabled => vec![format!("pm enable {}", package.name)],
+        PackageState::Uninstalled => vec![format!("cmd package install-existing {} {}", user, package.name)],
+        PackageState::All => vec![], // This can't happen (like... never)
+    };
+
+    for action in actions {
+        match adb_shell_command(&action) {
+            Ok(_) => {}
+            Err(_) => {
+                error!("{} [{}]: {}", package.state.opposite(disable_mode), package.removal, package.name);
+                return Err(false);
+            }
+        }
     }
-
-}
-
-
-pub fn restore_package(package: String, removal: Removal) -> Result<bool, bool> {
-    let arg = "cmd package install-existing --user 0 ".to_string() + &package;
-    let output = adb_shell_command(&arg).unwrap_or_else(|_| "Error".to_string());
-
-    if output.contains("installed for user") {
-        info!("RESTORE [{}]: {}", removal, package);
-        Ok(true)
-    } else {
-        error!("RESTORE: [{}]: {}", removal, output);
-        Err(false)
-    }
-
+    info!("{} [{}]: {}", package.state.opposite(disable_mode), package.removal, package.name);
+    Ok(true)
 }
 
 pub fn get_phone_model() -> String {
     match adb_shell_command("getprop ro.product.model") {
-        Ok(model) => {
-            model
-        },
-
+        Ok(model) => model,
         Err(err) => {
             if err.contains("adb: no devices/emulators found") {
                 "adb: no devices/emulators found".to_string()
@@ -104,6 +127,14 @@ pub fn get_phone_model() -> String {
             
     }
 }
+
+pub fn get_android_sdk() -> u8 {
+    match adb_shell_command("getprop ro.build.version.sdk") {
+        Ok(sdk) => sdk.parse().unwrap(),
+        Err(_) => 0, 
+    }
+}
+
 
 pub fn get_phone_brand() -> String {
     format!("{} {}", adb_shell_command("getprop ro.product.brand").unwrap_or("".to_string()).trim(), get_phone_model())
