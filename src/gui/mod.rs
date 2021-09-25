@@ -133,7 +133,9 @@ impl Application for UadGui {
 
     fn view(&mut self) -> Element<Message> {
         let add_svg_path = format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"));
-        let refresh_list_icon = Svg::from_path(add_svg_path);
+        let refresh_list_icon = Svg::from_path(add_svg_path)
+            .width(Length::Units(17))
+            .height(Length::Units(17));
 
         let apps_btn = Button::new(&mut self.apps_btn, Text::new("Apps"))
             .on_press(Message::AppsPress)

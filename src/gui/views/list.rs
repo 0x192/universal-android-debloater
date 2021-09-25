@@ -1,10 +1,10 @@
 use crate::gui::style;
 use crate::core::uad_lists::{ UadList, PackageState, Package, Removal, Opposite};
+use crate::core::utils::{import_selection, export_selection, update_selection_count};
 use std::{collections::HashMap};
 
 use crate::gui::views::settings::Settings;
 use crate::gui::widgets::package_row::{ PackageRow, Message as RowMessage };
-
 use iced::{
     scrollable, Alignment, alignment, Column, Container, Element, Space,
     Length, Row, Scrollable, Text, text_input, TextInput, Command,//Svg,
@@ -16,16 +16,42 @@ use crate::core::sync::{
     Phone, action_handler,
 };
 
+#[derive(Debug, Clone)]
+pub struct Selection {
+    pub uninstalled: u16,
+    pub enabled: u16,
+    pub disabled: u16,
+    pub selected_packages: Vec<usize>, // phone_packages indexes (= what you've selected)
+}
+
+#[derive(Debug, Clone)]
+pub enum Action {
+    Remove,
+    Restore,
+}
+
+impl Default for Selection {
+    fn default() -> Self {
+        Self {
+            uninstalled: 0,
+            enabled: 0,
+            disabled: 0,
+            selected_packages: Vec::new(),
+        }
+    }
+}
 
 #[derive(Default, Debug, Clone)]
 pub struct List {
     ready: bool,
     phone_packages: Vec<PackageRow>, // packages of the phone
     filtered_packages: Vec<usize>, // phone_packages indexes (= what you see on screen)
-    selected_packages: Vec<usize>, // phone_packages indexes (= what you've selected)
+    pub selection: Selection,
     search_input: text_input::State,
     select_all_btn_state: button::State,
-    apply_selection_btn_state: button::State,
+    export_selection_btn_state: button::State,
+    apply_remove_selection: button::State,
+    apply_restore_selection: button::State,
     package_scrollable_state: scrollable::State,
     package_state_picklist: pick_list::State<PackageState>,
     list_picklist: pick_list::State<UadList>,
@@ -45,9 +71,11 @@ pub enum Message {
     ListSelected(UadList),
     PackageStateSelected(PackageState),
     RemovalSelected(Removal),
-    ApplyActionOnSelection,
+    ApplyActionOnSelection(Action),
     SelectAllPressed,
+    ExportSelectionPressed,
     List(usize, RowMessage),
+    ExportedSelection(Result<bool, String>),
 }
 
 
@@ -98,6 +126,11 @@ impl List {
                 self.phone_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
                 self.filtered_packages = (0..self.phone_packages.len()).collect();
                 Self::filter_package_lists(self);
+
+                match import_selection(&mut self.phone_packages, &mut self.selection) {
+                    Ok(_) => info!("Custom selection has been successfully imported"),
+                    Err(err) => warn!("No custom selection imported: {}", err),
+                };
                 self.ready = true;
                 Command::none()
             }
@@ -129,9 +162,11 @@ impl List {
                     RowMessage::ToggleSelection(toggle) => {
                         self.phone_packages[i].selected = toggle;
                         if self.phone_packages[i].selected {
-                            self.selected_packages.push(i);
+                            self.selection.selected_packages.push(i);
+                            update_selection_count(&mut self.selection, self.phone_packages[i].state, true);
                         } else {
-                            self.selected_packages.drain_filter(|s_i| *s_i == i);
+                            self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
+                            update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
                         }
                     },
                     RowMessage::ActionPressed => {
@@ -146,9 +181,11 @@ impl List {
                                 .iter()
                                 .position(|p| p.name == self.phone_packages[i].name)
                                 .unwrap();
-
+                            if self.phone_packages[i].selected {
+                                update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
+                            }
                             self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
-                            self.selected_packages.drain_filter(|s_i| *s_i == i);
+                            self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
                             self.phone_packages[i].selected = false;
                             Self::filter_package_lists(self);
                         }
@@ -159,8 +196,19 @@ impl List {
                 }
                 Command::none()
             },
-            Message::ApplyActionOnSelection => {
-                for i in self.selected_packages.clone() {
+            Message::ApplyActionOnSelection(action) => {
+                let mut selected_packages = self.selection.selected_packages.clone();
+                
+                match action {
+                    Action::Remove => {
+                        selected_packages.drain_filter(|i| self.phone_packages[*i].state != PackageState::Enabled);
+                    }
+                    Action::Restore => {
+                        selected_packages.drain_filter(|i| self.phone_packages[*i].state == PackageState::Enabled);
+                    }
+                }
+
+                for i in selected_packages {
                     let success = action_handler(
                         &self.phone_packages[i],
                         phone,
@@ -168,9 +216,10 @@ impl List {
                     ).unwrap_or_else(|err| err);
                     
                     if success {
+                        update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
                         self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
                         self.phone_packages[i].selected = false;
-                        self.selected_packages.drain_filter(|s_i| *s_i == i);
+                        self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
                     }
                 }
                 Self::filter_package_lists(self);
@@ -179,12 +228,23 @@ impl List {
             Message::SelectAllPressed => {
                 for i in self.filtered_packages.clone() {
                     self.phone_packages[i].selected = true;
-                    if !self.selected_packages.contains(&i) {
-                        self.selected_packages.push(i);
+                    if !self.selection.selected_packages.contains(&i) {
+                        self.selection.selected_packages.push(i);
+                        update_selection_count(&mut self.selection, self.phone_packages[i].state, true);
                     }
                 }
                 Command::none()
             },
+            Message::ExportSelectionPressed => {
+                Command::perform(export_selection(self.phone_packages.clone()), Message::ExportedSelection)
+            }
+            Message::ExportedSelection(export) => {
+                match export {
+                    Ok(_) => info!("Selection exported"),
+                    Err(err) => error!("Selection export: {}", err),
+                };
+               Command::none() 
+            }
         }
     }
 
@@ -269,43 +329,55 @@ impl List {
             .width(Length::Fill);
 
 
-            let action = if settings.disable_mode {"Enable/Disable"} else {"Uninstall/Restore"};
-            let apply_selection_btn = Button::new(
-                &mut self.apply_selection_btn_state, 
-                Row::new()
-                    .align_items(Alignment::Center)
-                    .push(Text::new(format!("{} selection ({})", action, self.selected_packages.len())))
+            let restore_action = if settings.disable_mode {"Enable/Restore"} else {"Restore"};
+            let remove_action = if settings.disable_mode {"Disable"} else {"Uninstall"};
+
+            let apply_restore_selection = Button::new(
+                &mut self.apply_restore_selection, 
+                Text::new(format!("{} selection ({})", 
+                        restore_action, 
+                        self.selection.uninstalled + self.selection.disabled)
+                    )
                 )
-                .on_press(Message::ApplyActionOnSelection)
+                .on_press(Message::ApplyActionOnSelection(Action::Restore))
                 .padding(5)
-                .height(Length::Units(40))
                 .style(style::PrimaryButton::Enabled);
 
-            let select_all_btn = Button::new(
-                &mut self.select_all_btn_state, 
-                Row::new()
-                    .align_items(Alignment::Center)
-                    .push(Text::new("Select all"))
-                )
-                .on_press(Message::SelectAllPressed)
+            let apply_remove_selection = Button::new(
+                &mut self.apply_remove_selection, 
+                Text::new(format!("{} selection ({})", remove_action, self.selection.enabled)))
+                .on_press(Message::ApplyActionOnSelection(Action::Remove))
                 .padding(5)
-                .height(Length::Units(40))
+                .style(style::PrimaryButton::Enabled);
+
+            let select_all_btn = Button::new(&mut self.select_all_btn_state, Text::new("Select all"))
+                .padding(5)
+                .on_press(Message::SelectAllPressed)
+                .style(style::PrimaryButton::Enabled);
+
+            let export_selection_btn = Button::new(
+                &mut self.export_selection_btn_state, 
+                Text::new(format!("Export current selection ({})", self.selection.selected_packages.len())))
+                .padding(5)
+                .on_press(Message::ExportSelectionPressed)
                 .style(style::PrimaryButton::Enabled);
 
             let action_row = Row::new()
                 .width(Length::Fill)
+                .spacing(10)
                 .align_items(Alignment::Center)
-                .height(Length::FillPortion(1))
                 .push(select_all_btn)
                 .push(Space::new(Length::Fill, Length::Shrink))
-                .push(apply_selection_btn);
+                .push(export_selection_btn)
+                .push(apply_restore_selection)
+                .push(apply_remove_selection);
 
             let content = Column::new()
                 .width(Length::Fill)
                 .spacing(10)
                 .align_items(Alignment::Center)
                 .push(control_panel)
-                .push(Space::new(Length::Fill, Length::Units(2)))
+                .push(Space::new(Length::Fill, Length::Shrink))
                 .push(packages_scrollable)
                 .push(description_panel)
                 .push(action_row);
