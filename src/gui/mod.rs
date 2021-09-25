@@ -12,8 +12,12 @@ use static_init::{dynamic};
 
 use iced::{
     button, Alignment, Application, Button, Column, Command, Space,
-    Container, Element, Length, Row, Settings, Text, window::Settings as Window, Svg,
+    Container, Element, Length, Row, Settings, Text, window::Settings as Window,
 };
+
+#[cfg(feature = "wgpu")]
+use iced::Svg;
+
 
 #[dynamic]
 static UAD_LISTS: HashMap<String, Package> = load_debloat_lists(); 
@@ -132,17 +136,23 @@ impl Application for UadGui {
     }
 
     fn view(&mut self) -> Element<Message> {
-        let add_svg_path = format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"));
-        let refresh_list_icon = Svg::from_path(add_svg_path)
-            .width(Length::Units(17))
-            .height(Length::Units(17));
-
         let apps_btn = Button::new(&mut self.apps_btn, Text::new("Apps"))
             .on_press(Message::AppsPress)
             .padding(5)
             .style(style::PrimaryButton::Enabled);
 
-        let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_list_icon)
+        #[cfg(feature = "glow")] // No svg support
+        let refresh_btn_display = Text::new("Refresh");
+
+        #[cfg(feature = "wgpu")]
+        let refresh_btn_display = Svg::from_path(
+            format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"))
+        )
+            .width(Length::Units(17))
+            .height(Length::Units(17));
+        
+
+        let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_btn_display)
             .on_press(Message::AppsRefreshPress)
             .padding(5)
             .style(style::PrimaryButton::Enabled);
@@ -161,9 +171,9 @@ impl Application for UadGui {
             .width(Length::Fill)
             .align_items(Alignment::Center)
             .spacing(10)
+            .push(apps_refresh_btn)
             .push(Text::new("Device: ".to_string() + &self.phone.model))
             .push(Space::new(Length::Fill, Length::Shrink))
-            .push(apps_refresh_btn)
             .push(apps_btn)
             .push(about_btn)
             .push(settings_btn);

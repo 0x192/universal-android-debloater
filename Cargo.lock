@@ -50,6 +50,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "android_glue"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "000444226fcff248f2bc4c7625be32c63caccfecc2723a2b9f78a7487a49c407"
+
+[[package]]
 name = "approx"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -206,6 +212,15 @@ name = "cfg_aliases"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd16c4719339c4530435d38e511904438d07cce7950afa3718a84ac36c10e89e"
+
+[[package]]
+name = "cgl"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0ced0551234e87afee12411d535648dd89d2e7f34c78b753395567aff3d447ff"
+dependencies = [
+ "libc",
+]
 
 [[package]]
 name = "chrono"
@@ -944,6 +959,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "gl_generator"
+version = "0.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1a95dfc23a2b4a9a2f5ab41d194f8bfda3cabec42af4e39f08c339eb2a0c124d"
+dependencies = [
+ "khronos_api",
+ "log",
+ "xml-rs",
+]
+
+[[package]]
 name = "glam"
 version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -954,14 +980,104 @@ dependencies = [
 
 [[package]]
 name = "glow"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1625b792e2f9267116dd41eb7d325e0ea2572ceba5069451906745e04f852f33"
+dependencies = [
+ "js-sys",
+ "slotmap 0.4.3",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
+name = "glow"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4f04649123493bc2483cbef4daddb45d40bbdae5adb221a63a23efdb0cc99520"
 dependencies = [
  "js-sys",
- "slotmap",
+ "slotmap 1.0.6",
  "wasm-bindgen",
  "web-sys",
+]
+
+[[package]]
+name = "glow_glyph"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f0510450eb46dd2b8e3284b50b08bfd870f1ef93a55045f54d7376fbcb63b1cb"
+dependencies = [
+ "bytemuck",
+ "glow 0.6.1",
+ "glyph_brush",
+ "log",
+]
+
+[[package]]
+name = "glutin"
+version = "0.27.0"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+dependencies = [
+ "android_glue",
+ "cgl",
+ "cocoa",
+ "core-foundation 0.9.1",
+ "glutin_egl_sys",
+ "glutin_emscripten_sys",
+ "glutin_gles2_sys",
+ "glutin_glx_sys",
+ "glutin_wgl_sys",
+ "lazy_static",
+ "libloading 0.7.0",
+ "log",
+ "objc",
+ "osmesa-sys",
+ "parking_lot",
+ "wayland-client",
+ "wayland-egl",
+ "winapi",
+ "winit",
+]
+
+[[package]]
+name = "glutin_egl_sys"
+version = "0.1.5"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+dependencies = [
+ "gl_generator",
+ "winapi",
+]
+
+[[package]]
+name = "glutin_emscripten_sys"
+version = "0.1.1"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+
+[[package]]
+name = "glutin_gles2_sys"
+version = "0.1.5"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+dependencies = [
+ "gl_generator",
+ "objc",
+]
+
+[[package]]
+name = "glutin_glx_sys"
+version = "0.1.7"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+dependencies = [
+ "gl_generator",
+ "x11-dl",
+]
+
+[[package]]
+name = "glutin_wgl_sys"
+version = "0.1.5"
+source = "git+https://github.com/iced-rs/glutin?rev=2564d0ab87cf2ad824a2a58733aebe40dd2f29bb#2564d0ab87cf2ad824a2a58733aebe40dd2f29bb"
+dependencies = [
+ "gl_generator",
 ]
 
 [[package]]
@@ -1005,9 +1121,9 @@ dependencies = [
 
 [[package]]
 name = "gpu-alloc"
-version = "0.5.1"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab8524eac5fc9d05625c891adf78fcf64dc0ee9f8d0882874b9f220f42b442bf"
+checksum = "0e64cbb8d36508d3e19da95e56e196a84f674fc190881f2cc010000798838aa6"
 dependencies = [
  "bitflags",
  "gpu-alloc-types",
@@ -1083,6 +1199,8 @@ source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb48
 dependencies = [
  "iced_core",
  "iced_futures",
+ "iced_glow",
+ "iced_glutin",
  "iced_web",
  "iced_wgpu",
  "iced_winit",
@@ -1105,6 +1223,32 @@ dependencies = [
  "futures",
  "log",
  "wasm-bindgen-futures",
+]
+
+[[package]]
+name = "iced_glow"
+version = "0.2.0"
+source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+dependencies = [
+ "bytemuck",
+ "euclid",
+ "glow 0.6.1",
+ "glow_glyph",
+ "glyph_brush",
+ "iced_graphics",
+ "iced_native",
+ "log",
+]
+
+[[package]]
+name = "iced_glutin"
+version = "0.2.0"
+source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+dependencies = [
+ "glutin",
+ "iced_graphics",
+ "iced_native",
+ "iced_winit",
 ]
 
 [[package]]
@@ -1227,9 +1371,9 @@ checksum = "90953f308a79fe6d62a4643e51f848fbfddcd05975a38e69fdf4ab86a7baf7ca"
 
 [[package]]
 name = "instant"
-version = "0.1.10"
+version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bee0328b1209d157ef001c94dd85b4f8f64139adb0eac2659f4b08382b2f474d"
+checksum = "716d3d89f35ac6a34fd0eed635395f4c3b76fa889338a4632e5231a8684216bd"
 dependencies = [
  "cfg-if 1.0.0",
  "js-sys",
@@ -1273,6 +1417,12 @@ dependencies = [
  "libc",
  "libloading 0.7.0",
 ]
+
+[[package]]
+name = "khronos_api"
+version = "3.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
 name = "kurbo"
@@ -1682,6 +1832,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97c9d06878b3a851e8026ef94bf7fef9ba93062cd412601da4d9cf369b1cc62d"
 dependencies = [
  "num-traits",
+]
+
+[[package]]
+name = "osmesa-sys"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "88cfece6e95d2e717e0872a7f53a8684712ad13822a7979bc760b9c77ec0013b"
+dependencies = [
+ "shared_library",
 ]
 
 [[package]]
@@ -2161,6 +2320,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "shared_library"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5a9e7e0f2bfae24d8a5b5a66c5b257a83c7412304311512a0c054cd5e619da11"
+dependencies = [
+ "lazy_static",
+ "libc",
+]
+
+[[package]]
 name = "simplecss"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2180,6 +2349,12 @@ name = "slab"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c307a32c1c5c437f38c7fd45d753050587732ba8628319fbdf12a7e289ccc590"
+
+[[package]]
+name = "slotmap"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6bf34684c5767b87de9119790e92e9a1d60056be2ceeaf16a8e6ef13082aeab1"
 
 [[package]]
 name = "slotmap"
@@ -2326,9 +2501,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.76"
+version = "1.0.77"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c6f107db402c2c2055242dbf4d2af0e69197202e9faacbef9571bbe47f5a1b84"
+checksum = "5239bc68e0fef57495900cfea4e8dc75596d9a319d7e16b1e0a440d24e6fe0a0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2389,9 +2564,9 @@ dependencies = [
 
 [[package]]
 name = "tinyvec"
-version = "1.4.0"
+version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5241dd6f21443a3606b432718b166d3cedc962fd4b8bea54a8bc7f514ebda986"
+checksum = "f83b2a3d4d9091d0abd7eba4dc2710b1718583bd4d8992e2190720ea38f391f7"
 dependencies = [
  "tinyvec_macros",
 ]
@@ -2699,6 +2874,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "wayland-egl"
+version = "0.28.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "99ba1ab1e18756b23982d36f08856d521d7df45015f404a2d7c4f0b2d2f66956"
+dependencies = [
+ "wayland-client",
+ "wayland-sys",
+]
+
+[[package]]
 name = "wayland-protocols"
 version = "0.28.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2744,9 +2929,9 @@ dependencies = [
 
 [[package]]
 name = "wgpu"
-version = "0.10.1"
+version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d92a4fe73b1e7d7ef99938dacd49258cbf1ad87cdb5bf6efa20c27447442b45"
+checksum = "cb12c02c9b6fb0db46fcc14b0c16bd2d9351331c98c04bd19f32df281c504047"
 dependencies = [
  "arrayvec 0.7.1",
  "js-sys",
@@ -2764,9 +2949,9 @@ dependencies = [
 
 [[package]]
 name = "wgpu-core"
-version = "0.10.3"
+version = "0.10.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f1b4d918c970526cbc83b72ccb72dbefd38aec45f07b2310de4ffcd7f4bd8c5"
+checksum = "f963c62473a36e3cef6c58181f2ed6d0d38d2043d970dbed46cb197190090c99"
 dependencies = [
  "arrayvec 0.7.1",
  "bitflags",
@@ -2799,7 +2984,7 @@ dependencies = [
  "d3d12",
  "foreign-types",
  "fxhash",
- "glow",
+ "glow 0.11.0",
  "gpu-alloc",
  "gpu-descriptor",
  "inplace_it",

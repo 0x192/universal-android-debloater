@@ -6,8 +6,13 @@ version = "0.1.0"
 authors = ["w1nst0n"]
 edition = "2021"
 
+[features]
+default = []
+wgpu = ["iced/svg"] # iced/wgpu is default
+glow = ["iced/glow"] # OpenGL support
+
 [dependencies]
-iced = { git = "https://github.com/hecrj/iced.git", features = ["svg"] }
+iced = { git = "https://github.com/hecrj/iced.git" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"

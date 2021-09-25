@@ -25,5 +25,8 @@ and `Removed`.
 - Various UI/UX improvement
 - The `Debloat/Restore selection` button has been split in 2 buttons: `removing` and `restoring`
 
+## Packaging
+- Added an alternative build that uses [OpenGL](https://fr.wikipedia.org/wiki/OpenGL) (instead of [Vulkan](https://fr.wikipedia.org/wiki/Vulkan_(API))) for compatibility with older computers. If you encouter some visual glitches with the default Vulkan build you should try the OpenGL build.
+
 ### Fixed
 - Spelling mistake
