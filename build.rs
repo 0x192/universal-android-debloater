@@ -1,11 +1,7 @@
-use std::env::var;
-
 fn main() {
-    let target = var("TARGET").unwrap();
-
     println!("cargo:rerun-if-changed=build.rs");
 
-    if target.contains("windows") {
+    if cfg!(all(windows, not(target_env = "msvc"))) {
         println!("cargo:rerun-if-env-changed=WINAPI_NO_BUNDLED_LIBRARIES");
         println!("cargo:rerun-if-env-changed=WINAPI_STATIC_NOBUNDLE");
 
