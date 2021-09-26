@@ -42,7 +42,6 @@ pub struct UadGui {
     apps_view: AppsView,
     about_view: AboutView,
     settings_view: SettingsView,
-    input_value: String,
     about_btn: button::State,
     settings_btn: button::State,
     apps_btn: button::State,
@@ -70,7 +69,6 @@ impl Default for UadGui {
             apps_view: AppsView::default(),
             about_view: AboutView::default(),
             settings_view: SettingsView::default(),
-            input_value: "".to_string(),
             about_btn: button::State::default(),
             settings_btn: button::State::default(),
             apps_btn: button::State::default(),
@@ -150,7 +148,6 @@ impl Application for UadGui {
         )
             .width(Length::Units(17))
             .height(Length::Units(17));
-        
 
         let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_btn_display)
             .on_press(Message::AppsRefreshPress)
