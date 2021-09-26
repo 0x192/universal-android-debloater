@@ -13,11 +13,11 @@ Packages are as well documented as possible in order to provide a better underst
 In any case, you can NOT brick your device with this software! That's the main thing, right?
 
 ## Features 
-* [X] Quick search among all the packages of an android device
-* [X] Uninstallation/Reinstallation of system packages of system packages
-* [X] Device brand detection and auto-selection of the appropriate manufacturer debloat list
+* [X] Uninstall/Disable and Restore/Enable system packages
+* [X] Export/Import your selection in `uad_exported_selection.txt`
+* [X] Logging of all your action in the `uad.log` file
 
-NB : System apps cannot really be uninstalled without root (see the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater/-/wikis/FAQ))
+NB : System apps cannot really be uninstalled without root (see the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/FAQ))
 
 ## Universal debloat lists 
 * [X] GFAM (Google/Facebook/Amazon/Microsoft)
@@ -79,6 +79,10 @@ Red Hat Base:
 ```bash
 $ sudo yum install android-tools
 ```
+OpenSUSE Base:
+```bash
+$ sudo zypper install android-tools
+```
 </details>
 </p>
 
@@ -110,7 +114,7 @@ $ brew install android-platform-tools
 </p>
 
 
-- Download [the lastest release of Universal Android Debloater GUI](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/releases).
+- Download the latest stable release of UAD GUI [here](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/releases).
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 

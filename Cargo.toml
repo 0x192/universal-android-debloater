@@ -2,8 +2,15 @@ cargo-features = ["strip"] # nightly
 
 [package]
 name = "uad_gui"
-version = "0.1.0"
+description = "A cross-platform GUI debloater for android devices"
+version = "0.2.0"
 authors = ["w1nst0n"]
+license = "GPL-3.0"
+homepage = "https://gitlab.com/W1nst0n/universal-android-debloater-rs"
+repository = "https://gitlab.com/W1nst0n/universal-android-debloater-rs"
+readme = "README.md"
+keywords = ["debloater", "android", "adb", "privacy", "bloatware"]
+categories = ["gui"]
 edition = "2021"
 
 [features]

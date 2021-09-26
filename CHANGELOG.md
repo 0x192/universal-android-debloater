@@ -10,6 +10,8 @@ and `Removed`.
 
 ## [Unreleased]
 
+## [0.2] - 2021-09-26
+
 ### Added
 - UAD now comes with a logger. Debug information will be written to a `uad.log` file (Warning level log in *stdout*) (#2)
 - Support for older phone (< Android 8.0) (#15):
@@ -30,3 +32,4 @@ and `Removed`.
 
 ### Fixed
 - Spelling mistake
+- Failed build with MSVC toolchain
