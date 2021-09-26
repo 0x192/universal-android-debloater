@@ -139,15 +139,16 @@ impl Application for UadGui {
             .padding(5)
             .style(style::PrimaryButton::Enabled);
 
-        #[cfg(feature = "glow")] // No svg support
-        let refresh_btn_display = Text::new("Refresh");
-
         #[cfg(feature = "wgpu")]
+        #[allow(unused_variables)]
         let refresh_btn_display = Svg::from_path(
             format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"))
         )
             .width(Length::Units(17))
             .height(Length::Units(17));
+
+        #[cfg(feature = "glow")] // No svg support
+        let refresh_btn_display = Text::new("Refresh");
 
         let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_btn_display)
             .on_press(Message::AppsRefreshPress)

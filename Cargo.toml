@@ -14,7 +14,7 @@ categories = ["gui"]
 edition = "2021"
 
 [features]
-default = []
+default = ["wgpu"]
 wgpu = ["iced/svg"] # iced/wgpu is default
 glow = ["iced/glow"] # OpenGL support
 
