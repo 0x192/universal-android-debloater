@@ -571,12 +571,11 @@ dependencies = [
 
 [[package]]
 name = "deflate"
-version = "0.8.6"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73770f8e1fe7d64df17ca66ad28994a0a623ea497fa69486e14984e715c5d174"
+checksum = "5f95bf05dffba6e6cce8dfbb30def788154949ccd9aed761b472119c21e01c70"
 dependencies = [
  "adler32",
- "byteorder",
 ]
 
 [[package]]
@@ -729,14 +728,14 @@ dependencies = [
  "cfg-if 1.0.0",
  "crc32fast",
  "libc",
- "miniz_oxide 0.4.4",
+ "miniz_oxide",
 ]
 
 [[package]]
 name = "float-cmp"
-version = "0.5.3"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "75224bec9bfe1a65e2d34132933f2de7fe79900c96a0174307554244ece8150e"
+checksum = "98de4bbd547a563b716d8dfa9aad1cb19bfab00f4fa09a6a4ed21dbcf44ce9c4"
 
 [[package]]
 name = "float-ord"
@@ -777,14 +776,13 @@ dependencies = [
 
 [[package]]
 name = "fontdb"
-version = "0.3.0"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccfec742e7db963305c1d8fde9edef949b47b01e1664dae127489928633fbea8"
+checksum = "1d66551cc28351f0bc6a73da86459ee7765caaad03ce284f2dc36472dbf539cd"
 dependencies = [
  "log",
- "memmap2 0.1.0",
- "ttf-parser 0.9.0",
- "uuid",
+ "memmap2 0.3.1",
+ "ttf-parser 0.12.3",
 ]
 
 [[package]]
@@ -1195,7 +1193,7 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.3.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "iced_core",
  "iced_futures",
@@ -1210,7 +1208,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.4.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "bitflags",
 ]
@@ -1218,7 +1216,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.3.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "futures",
  "log",
@@ -1228,7 +1226,7 @@ dependencies = [
 [[package]]
 name = "iced_glow"
 version = "0.2.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "bytemuck",
  "euclid",
@@ -1243,7 +1241,7 @@ dependencies = [
 [[package]]
 name = "iced_glutin"
 version = "0.2.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "glutin",
  "iced_graphics",
@@ -1254,7 +1252,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.2.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "bytemuck",
  "font-kit",
@@ -1268,7 +1266,7 @@ dependencies = [
 [[package]]
 name = "iced_native"
 version = "0.4.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "iced_core",
  "iced_futures",
@@ -1280,7 +1278,7 @@ dependencies = [
 [[package]]
 name = "iced_style"
 version = "0.3.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "iced_core",
 ]
@@ -1288,7 +1286,7 @@ dependencies = [
 [[package]]
 name = "iced_web"
 version = "0.4.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "base64",
  "dodrio",
@@ -1305,7 +1303,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.4.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "bytemuck",
  "futures",
@@ -1316,6 +1314,7 @@ dependencies = [
  "log",
  "raw-window-handle",
  "resvg",
+ "tiny-skia",
  "usvg",
  "wgpu",
  "wgpu_glyph",
@@ -1324,7 +1323,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.3.0"
-source = "git+https://github.com/hecrj/iced.git#35c4ad6dd950fa91d181f4d3253fcb486bcf1b11"
+source = "git+https://github.com/hecrj/iced.git#4d4c61b887e5721d9eff4085052b24722d1aa082"
 dependencies = [
  "iced_futures",
  "iced_graphics",
@@ -1426,9 +1425,9 @@ checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
 name = "kurbo"
-version = "0.7.1"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16cb54cd28cb3d2e964d9444ca185676a94fd9b7cce5f02b22c717947ed8e9a2"
+checksum = "eb348d766edbac91ba1eb83020d96f4f8867924d194393083c15a51f185e6a82"
 dependencies = [
  "arrayvec 0.5.2",
 ]
@@ -1441,9 +1440,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.102"
+version = "0.2.103"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2a5ac8f984bfcf3a823267e5fde638acc3325f6496633a5da6bb6eb2171e103"
+checksum = "dd8f7255a17a627354f321ef0055d63b898c6fb27eff628af4d1b66b7331edf6"
 
 [[package]]
 name = "libloading"
@@ -1535,6 +1534,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "memmap2"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "00b6c2ebff6180198788f5db08d7ce3bc1d0b617176678831a7510825973e357"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "memoffset"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1562,15 +1570,6 @@ name = "minimal-lexical"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c835948974f68e0bd58636fc6c5b1fbff7b297e3046f11b3b3c18bbac012c6d"
-
-[[package]]
-name = "miniz_oxide"
-version = "0.3.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "791daaae1ed6889560f8c4359194f56648355540573244a5448a83ba1ecc7435"
-dependencies = [
- "adler32",
-]
 
 [[package]]
 name = "miniz_oxide"
@@ -1926,9 +1925,9 @@ dependencies = [
 
 [[package]]
 name = "pico-args"
-version = "0.3.4"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "28b9b4df73455c861d7cbf8be42f01d3b373ed7f02e378d55fa84eafc6f638b1"
+checksum = "db8bcd96cb740d03149cbad5518db9fd87126a10ab519c011893b1754134c468"
 
 [[package]]
 name = "pin-project-lite"
@@ -1950,14 +1949,14 @@ checksum = "7c9b1041b4387893b91ee6746cddfc28516aff326a3519fb2adf820932c5e6cb"
 
 [[package]]
 name = "png"
-version = "0.16.8"
+version = "0.17.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c3287920cb847dee3de33d301c463fba14dda99db24214ddf93f83d3021f4c6"
+checksum = "641fb192b191c2cb8f35985f47eb1e78cf1d464542f9fe5d1dbc5ee8f989288d"
 dependencies = [
  "bitflags",
  "crc32fast",
  "deflate",
- "miniz_oxide 0.3.7",
+ "miniz_oxide",
 ]
 
 [[package]]
@@ -2103,9 +2102,9 @@ dependencies = [
 
 [[package]]
 name = "rctree"
-version = "0.3.3"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be9e29cb19c8fe84169fcb07f8f11e66bc9e6e0280efd4715c54818296f8a4a8"
+checksum = "9ae028b272a6e99d9f8260ceefa3caa09300a8d6c8d2b2001316474bc52122e9"
 
 [[package]]
 name = "redox_syscall"
@@ -2134,9 +2133,9 @@ checksum = "f1382d1f0a252c4bf97dc20d979a2fdd05b024acd7c2ed0f7595d7817666a157"
 
 [[package]]
 name = "resvg"
-version = "0.12.0"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6989baba2fe2d85b0daaea5e897ba842c42bd7bff59cb0c5fb099bdcead70421"
+checksum = "608c6e8aa6fb2c13bc06e4184d7c7b2cc1b7c138f88a539da8be55c3c033d7f4"
 dependencies = [
  "jpeg-decoder",
  "log",
@@ -2159,9 +2158,9 @@ dependencies = [
 
 [[package]]
 name = "roxmltree"
-version = "0.13.1"
+version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dbf7d7b1ea646d380d0e8153158063a6da7efe30ddbf3184042848e3f8a6f671"
+checksum = "921904a62e410e37e215c40381b7117f830d9d89ba60ab5236170541dd25646b"
 dependencies = [
  "xmlparser",
 ]
@@ -2193,14 +2192,14 @@ dependencies = [
 
 [[package]]
 name = "rustybuzz"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ab463a295d00f3692e0974a0bfd83c7a9bcd119e27e07c2beecdb1b44a09d10"
+checksum = "44561062e583c4873162861261f16fd1d85fe927c4904d71329a4fe43dc355ef"
 dependencies = [
  "bitflags",
  "bytemuck",
  "smallvec",
- "ttf-parser 0.9.0",
+ "ttf-parser 0.12.3",
  "unicode-bidi-mirroring",
  "unicode-ccc",
  "unicode-general-category",
@@ -2334,9 +2333,9 @@ dependencies = [
 
 [[package]]
 name = "siphasher"
-version = "0.2.3"
+version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b8de496cf83d4ed58b6be86c3a275b8602f6ffe98d3024a869e124147a9a3ac"
+checksum = "533494a8f9b724d33625ab53c6c4800f7cc445895924a8ef649222dcb76e938b"
 
 [[package]]
 name = "slab"
@@ -2475,9 +2474,9 @@ checksum = "8fb1df15f412ee2e9dfc1c504260fa695c1c3f10fe9f4a6ee2d2184d7d6450e2"
 
 [[package]]
 name = "svgfilters"
-version = "0.2.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3016b3217b82ea3bb7cd3b773030222c6acca46c52ef4e64b4e716bd4b25090e"
+checksum = "639abcebc15fdc2df179f37d6f5463d660c1c79cd552c12343a4600827a04bce"
 dependencies = [
  "float-cmp",
  "rgb",
@@ -2485,11 +2484,10 @@ dependencies = [
 
 [[package]]
 name = "svgtypes"
-version = "0.5.0"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c536faaff1a10837cfe373142583f6e27d81e96beba339147e77b67c9f260ff"
+checksum = "dabb3eb59a457c56d5282ab4545609e2cc382b41f6af239bb8d59a7267ef94b3"
 dependencies = [
- "float-cmp",
  "siphasher",
 ]
 
@@ -2545,15 +2543,16 @@ dependencies = [
 
 [[package]]
 name = "tiny-skia"
-version = "0.2.0"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a428f0f1f63fa531b4a820f68b97270a4e90469c97162f0b01e3d6872c68e5ba"
+checksum = "1657db71220a7b20cc51aa6a8a0e14961cff9decb3d99b5415fbd34ca0a21cdc"
 dependencies = [
  "arrayref",
  "arrayvec 0.5.2",
  "bytemuck",
+ "cfg-if 1.0.0",
  "png",
- "wide",
+ "safe_arch",
 ]
 
 [[package]]
@@ -2588,12 +2587,6 @@ checksum = "3e5d7cd7ab3e47dda6e56542f4bbf3824c15234958c6e1bd6aaa347e93499fdc"
 
 [[package]]
 name = "ttf-parser"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "62ddb402ac6c2af6f7a2844243887631c4e94b51585b229fcfddb43958cd55ca"
-
-[[package]]
-name = "ttf-parser"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ae2f58a822f08abdaf668897e96a5656fe72f5a9ce66422423e8849384872e6"
@@ -2611,7 +2604,7 @@ dependencies = [
 
 [[package]]
 name = "uad_gui"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "chrono",
  "fern",
@@ -2648,9 +2641,9 @@ checksum = "cc2520efa644f8268dce4dcd3050eaa7fc044fca03961e9998ac7e2e92b77cf1"
 
 [[package]]
 name = "unicode-general-category"
-version = "0.2.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f9af028e052a610d99e066b33304625dea9613170a2563314490a4e6ec5cf7f"
+checksum = "07547e3ee45e28326cc23faac56d44f58f16ab23e413db526debce3b0bfd2742"
 
 [[package]]
 name = "unicode-normalization"
@@ -2705,17 +2698,17 @@ dependencies = [
 
 [[package]]
 name = "usvg"
-version = "0.12.0"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "05a7ff57fca79848360bd2c00072a8029543cf554fe49c4d0af247271434702e"
+checksum = "4058e0bd091a56f905e6963e40776ce6880b271275f0b493bff951433e303071"
 dependencies = [
  "base64",
  "data-url",
  "flate2",
+ "float-cmp",
  "fontdb",
  "kurbo",
  "log",
- "memmap2 0.1.0",
  "pico-args",
  "rctree",
  "roxmltree",
@@ -2723,20 +2716,11 @@ dependencies = [
  "simplecss",
  "siphasher",
  "svgtypes",
- "ttf-parser 0.9.0",
+ "ttf-parser 0.12.3",
  "unicode-bidi",
  "unicode-script",
  "unicode-vo",
  "xmlwriter",
-]
-
-[[package]]
-name = "uuid"
-version = "0.8.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc5cf98d8186244414c848017f0e2676b3fcb46807f6668a97dfe67359a3c4b7"
-dependencies = [
- "getrandom",
 ]
 
 [[package]]
@@ -3016,16 +3000,6 @@ dependencies = [
  "glyph_brush",
  "log",
  "wgpu",
-]
-
-[[package]]
-name = "wide"
-version = "0.6.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46bbe7c604a27ca0b05c5503221e76da628225b568e6f1280b42dbad3b72d89b"
-dependencies = [
- "bytemuck",
- "safe_arch",
 ]
 
 [[package]]
