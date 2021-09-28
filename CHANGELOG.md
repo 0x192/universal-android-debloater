@@ -12,6 +12,9 @@ and `Removed`.
 
 ## [0.2.1] - 2021-09-28
 
+## Added
+- Software version in the navigation panel
+
 ## Packaging
 - `wgpu` renderer is not the default renderer (you don't need to add `--features wgpu` if you want to build UAD with `wgpu`)
 

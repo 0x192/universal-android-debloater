@@ -155,6 +155,8 @@ impl Application for UadGui {
             .padding(5)
             .style(style::PrimaryButton::Enabled);
 
+        let uad_version = Text::new("v0.2".to_string());
+
         let about_btn = Button::new(&mut self.about_btn, Text::new("About"))
             .on_press(Message::AboutPressed)
             .padding(5)
@@ -172,6 +174,7 @@ impl Application for UadGui {
             .push(apps_refresh_btn)
             .push(Text::new("Device: ".to_string() + &self.phone.model))
             .push(Space::new(Length::Fill, Length::Shrink))
+            .push(uad_version)
             .push(apps_btn)
             .push(about_btn)
             .push(settings_btn);
