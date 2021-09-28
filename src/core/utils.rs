@@ -28,7 +28,7 @@ pub async fn export_selection(packages: Vec<PackageRow>) -> Result<bool, String>
         .collect::<Vec<String>>()
         .join("\n");
 
-    match fs::write("uad_selection.txt", selected) {
+    match fs::write("uad_exported_selection.txt", selected) {
         Ok(_) => Ok(true),
         Err(err) => Err(err.to_string())
     }

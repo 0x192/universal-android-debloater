@@ -10,6 +10,14 @@ and `Removed`.
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-09-28
+
+## Packaging
+- `wgpu` renderer is not the default renderer (you don't need to add `--features wgpu` if you want to build UAD with `wgpu`)
+
+### Fixed
+- Exported selection not found (#35)
+
 ## [0.2] - 2021-09-26
 
 ### Added
