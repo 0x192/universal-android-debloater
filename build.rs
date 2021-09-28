@@ -1,7 +1,11 @@
+use std::env::var;
+
 fn main() {
+    let target = var("TARGET").unwrap();
+
     println!("cargo:rerun-if-changed=build.rs");
 
-    if cfg!(all(windows, not(target_env = "msvc"))) {
+    if target.contains("windows") && !target.contains("msvc") {
         println!("cargo:rerun-if-env-changed=WINAPI_NO_BUNDLED_LIBRARIES");
         println!("cargo:rerun-if-env-changed=WINAPI_STATIC_NOBUNDLE");
 
@@ -10,4 +14,3 @@ fn main() {
         println!("cargo:rustc-link-lib=static=winpthread");
     }
 }
-
