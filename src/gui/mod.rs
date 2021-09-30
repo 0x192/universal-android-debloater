@@ -155,7 +155,7 @@ impl Application for UadGui {
             .padding(5)
             .style(style::PrimaryButton::Enabled);
 
-        let uad_version = Text::new("v0.2".to_string());
+        let uad_version = Text::new(env!("CARGO_PKG_VERSION"));
 
         let about_btn = Button::new(&mut self.about_btn, Text::new("About"))
             .on_press(Message::AboutPressed)
