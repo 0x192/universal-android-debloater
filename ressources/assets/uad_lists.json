@@ -17157,7 +17157,7 @@
     "id": "com.asurion.android.mobilerecovery.sprint.vpl",
     "list": "Carrier",
     "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17166,7 +17166,7 @@
     "id": "com.asurion.android.mobilerecovery.sprint",
     "list": "Carrier",
     "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17175,7 +17175,7 @@
     "id": "com.locationlabs.finder.sprint.vpl",
     "list": "Carrier",
     "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\nhttps://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\nhttps://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17184,7 +17184,7 @@
     "id": "com.mobolize.sprint.securewifi",
     "list": "Carrier",
     "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it.\nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN:\nhttps://www.privacytools.io/providers/vpn/",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17193,7 +17193,7 @@
     "id": "com.sprint.android.musicplus2033",
     "list": "Carrier",
     "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint’s official Music Store and player.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17202,7 +17202,7 @@
     "id": "com.sprint.safefound",
     "list": "Carrier",
     "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17211,7 +17211,7 @@
     "id": "com.evenwell.AprUploadService",
     "list": "Oem",
     "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17220,7 +17220,7 @@
     "id": "com.evenwell.AprUploadService.data.overlay.base",
     "list": "Oem",
     "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17229,7 +17229,7 @@
     "id": "com.evenwell.AprUploadService.data.overlay.base.s600ww",
     "list": "Oem",
     "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17238,7 +17238,7 @@
     "id": "com.evenwell.autoregistration",
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17247,7 +17247,7 @@
     "id": "com.evenwell.autoregistration.overlay.base",
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17256,7 +17256,7 @@
     "id": "com.evenwell.autoregistration.overlay.base.s600id",
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17265,7 +17265,7 @@
     "id": "com.evenwell.autoregistration.overlay.base.s600ww",
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17274,7 +17274,7 @@
     "id": "com.evenwell.autoregistration.overlay.d.base.s600id",
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17283,7 +17283,7 @@
     "id": "com.evenwell.batteryprotect",
     "list": "Oem",
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17292,7 +17292,7 @@
     "id": "com.evenwell.batteryprotect.overlay.base",
     "list": "Oem",
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17301,7 +17301,7 @@
     "id": "com.evenwell.batteryprotect.overlay.base.s600id",
     "list": "Oem",
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17310,7 +17310,7 @@
     "id": "com.evenwell.batteryprotect.overlay.base.s600ww",
     "list": "Oem",
     "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17319,7 +17319,7 @@
     "id": "com.evenwell.bboxsbox",
     "list": "Oem",
     "description": "??? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17328,7 +17328,7 @@
     "id": "com.evenwell.bokeheditor",
     "list": "Oem",
     "description": "Related to photos editing I think [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17346,7 +17346,7 @@
     "id": "com.evenwell.CPClient.overlay.base",
     "list": "Oem",
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17355,7 +17355,7 @@
     "id": "com.evenwell.CPClient.overlay.base.s600id",
     "list": "Oem",
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17364,7 +17364,7 @@
     "id": "com.evenwell.custmanager",
     "list": "Oem",
     "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17373,7 +17373,7 @@
     "id": "com.evenwell.custmanager.data.overlay.base",
     "list": "Oem",
     "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17382,7 +17382,7 @@
     "id": "com.evenwell.custmanager.data.overlay.base.s600id",
     "list": "Oem",
     "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17391,7 +17391,7 @@
     "id": "com.evenwell.custmanager.data.overlay.base.s600ww",
     "list": "Oem",
     "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17400,7 +17400,7 @@
     "id": "com.evenwell.dataagent",
     "list": "Oem",
     "description": "",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17409,7 +17409,7 @@
     "id": "com.evenwell.dataagent.overlay.base",
     "list": "Oem",
     "description": "Data agent\nUsed for backup/restore ? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17418,7 +17418,7 @@
     "id": "com.evenwell.dataagent.overlay.base.s600id",
     "list": "Oem",
     "description": "Data agent\nUsed for backup/restore ? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17427,7 +17427,7 @@
     "id": "com.evenwell.DbgCfgTool",
     "list": "Oem",
     "description": "",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17436,7 +17436,7 @@
     "id": "com.evenwell.DbgCfgTool.overlay.base",
     "list": "Oem",
     "description": "Debug config tool ? # [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17445,7 +17445,7 @@
     "id": "com.evenwell.DbgCfgTool.overlay.base.s600id",
     "list": "Oem",
     "description": "Debug config tool ? # [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17454,7 +17454,7 @@
     "id": "com.evenwell.DeviceMonitorControl",
     "list": "Oem",
     "description": "Monitor stuff obviously...",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17463,7 +17463,7 @@
     "id": "com.evenwell.DeviceMonitorControl.data.overlay.base",
     "list": "Oem",
     "description": "Monitor stuff obviously...",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17472,7 +17472,7 @@
     "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600id",
     "list": "Oem",
     "description": "Monitor stuff obviously...",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17481,7 +17481,7 @@
     "id": "com.evenwell.factorywizard",
     "list": "Oem",
     "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17490,7 +17490,7 @@
     "id": "com.evenwell.factorywizard.overlay.base",
     "list": "Oem",
     "description": "Most likely a configuration setup after a factory reset (and/or after first boot)\nGuides you through the basics of setting up your device.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17499,7 +17499,7 @@
     "id": "com.evenwell.legalterm",
     "list": "Oem",
     "description": "Provides terms and condition (legal notice)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17508,7 +17508,7 @@
     "id": "com.evenwell.managedprovisioning",
     "list": "Oem",
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17517,7 +17517,7 @@
     "id": "com.evenwell.managedprovisioning.overlay.base",
     "list": "Oem",
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17526,7 +17526,7 @@
     "id": "com.evenwell.managedprovisioning.overlay.base.s600id",
     "list": "Oem",
     "description": "Seems to be a user interface related to settings description and wizard setup.\nhttps://en.wikipedia.org/wiki/Wizard_(software)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17535,7 +17535,7 @@
     "id": "com.evenwell.nps",
     "list": "Oem",
     "description": "Net Promoter Score\nPreinstalled survey.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17544,7 +17544,7 @@
     "id": "com.evenwell.nps.overlay.base",
     "list": "Oem",
     "description": "Net Promoter Score\nPreinstalled survey.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17553,7 +17553,7 @@
     "id": "com.evenwell.nps.overlay.base.s600id",
     "list": "Oem",
     "description": "Net Promoter Score\nPreinstalled survey.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17562,7 +17562,7 @@
     "id": "com.evenwell.pandorasbox",
     "list": "Oem",
     "description": "WTF is this? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17571,7 +17571,7 @@
     "id": "com.evenwell.partnerbrowsercustomizations",
     "list": "Oem",
     "description": "",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17580,7 +17580,7 @@
     "id": "com.evenwell.partnerbrowsercustomizations.overlay.base",
     "list": "Oem",
     "description": "Customize your browser with stuff you don't want.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17589,7 +17589,7 @@
     "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600id",
     "list": "Oem",
     "description": "Customize your browser with stuff you don't want.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17598,7 +17598,7 @@
     "id": "com.evenwell.permissiondetection",
     "list": "Oem",
     "description": "???? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17607,7 +17607,7 @@
     "id": "com.evenwell.phone.overlay.base.s600ww",
     "list": "Oem",
     "description": "Overlay for the dialer app",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17616,7 +17616,7 @@
     "id": "com.evenwell.PowerMonitor",
     "list": "Oem",
     "description": "Drains more battery than it saves.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17625,7 +17625,7 @@
     "id": "com.evenwell.PowerMonitor.overlay.base",
     "list": "Oem",
     "description": "Drains more battery than it saves.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17634,7 +17634,7 @@
     "id": "com.evenwell.PowerMonitor.overlay.base.s600id",
     "list": "Oem",
     "description": "Drains more battery than it saves.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17643,7 +17643,7 @@
     "id": "com.evenwell.providers.downloads.overlay.base.s600ww",
     "list": "Oem",
     "description": "Add most likey a useless overlay on the download app.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17652,7 +17652,7 @@
     "id": "com.evenwell.providers.weather",
     "list": "Oem",
     "description": "Provider for the Nokia weather app.\nREMINDER : Content providers help an application manage access to data stored by itself, stored by other apps, \nand provide a way to share data with other apps. They encapsulate the data, and provide mechanisms for defining data security\nSource : https://developer.android.com/guide/topics/providers/content-providers.html\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17661,7 +17661,7 @@
     "id": "com.evenwell.pushagent",
     "list": "Oem",
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17670,7 +17670,7 @@
     "id": "com.evenwell.pushagent.overlay.base",
     "list": "Oem",
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17679,7 +17679,7 @@
     "id": "com.evenwell.pushagent.overlay.base.s600id",
     "list": "Oem",
     "description": "Surely related to push notifications for Nokia apps (only ?)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17688,7 +17688,7 @@
     "id": "com.evenwell.retaildemoapp",
     "list": "Oem",
     "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17697,7 +17697,7 @@
     "id": "com.evenwell.retaildemoapp.overlay.base",
     "list": "Oem",
     "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17706,7 +17706,7 @@
     "id": "com.evenwell.retaildemoapp.overlay.base.s600id",
     "list": "Oem",
     "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17715,7 +17715,7 @@
     "id": "com.evenwell.settings.data.overlay.base",
     "list": "Oem",
     "description": "Overlay related to settings [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17724,7 +17724,7 @@
     "id": "com.evenwell.SettingsUtils",
     "list": "Oem",
     "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17733,7 +17733,7 @@
     "id": "com.evenwell.SetupWizard",
     "list": "Oem",
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17742,7 +17742,7 @@
     "id": "com.evenwell.SetupWizard.overlay.base",
     "list": "Oem",
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17751,7 +17751,7 @@
     "id": "com.evenwell.setupwizard.btl.s600ww.overlay",
     "list": "Oem",
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17760,7 +17760,7 @@
     "id": "com.evenwell.SetupWizard.overlay.d.base.s600ww",
     "list": "Oem",
     "description": "It's the basic configuration wizard that drives you through first boot and guides you through the basics of setting up your device.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17769,7 +17769,7 @@
     "id": "com.evenwell.stbmonitor",
     "list": "Oem",
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17778,7 +17778,7 @@
     "id": "com.evenwell.stbmonitor.data.overlay.base",
     "list": "Oem",
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17787,7 +17787,7 @@
     "id": "com.evenwell.stbmonitor.data.overlay.base.s600id",
     "list": "Oem",
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery \n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17796,7 +17796,7 @@
     "id": "com.evenwell.telecom.data.overlay.base",
     "list": "Oem",
     "description": "Telecom telemetry ? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17805,7 +17805,7 @@
     "id": "com.evenwell.telecom.data.overlay.base.s600id",
     "list": "Oem",
     "description": "Telecom telemetry ? [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17814,7 +17814,7 @@
     "id": "com.evenwell.UsageStatsLogReceiver",
     "list": "Oem",
     "description": "Logging stuff",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17823,7 +17823,7 @@
     "id": "com.evenwell.UsageStatsLogReceiver.data.overlay.back.s600id",
     "list": "Oem",
     "description": "Logging stuff",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17832,7 +17832,7 @@
     "id": "com.evenwell.weather.overlay.base.s600ww",
     "list": "Oem",
     "description": "Overlay for the weather app [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17841,7 +17841,7 @@
     "id": "com.evenwell.weatherservice",
     "list": "Oem",
     "description": "Service for the weather app",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17850,7 +17850,7 @@
     "id": "com.hmdglobal.datago",
     "list": "Oem",
     "description": "Sends diagnostic data to HMD (Company behind Nokia) ?",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17859,7 +17859,7 @@
     "id": "com.hmdglobal.datago.overlay.base",
     "list": "Oem",
     "description": "Sends diagnostic data to HMD (Company behind Nokia) ?",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17868,7 +17868,7 @@
     "id": "com.hiya.star",
     "list": "Oem",
     "description": "also called android-ss-service-lib (Samsung-exclusive)\nThird-party that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE : Never trust a company which promotes spam blocking features\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n\nHave a look at their privacy policy. That's... pretty scary : https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "com.samsung.android.smartcallprovider",
     "labels": null,
     "removal": "Recommended"
@@ -17877,7 +17877,7 @@
     "id": "com.samsung.android.airtel.stubapp",
     "list": "Oem",
     "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub\nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17886,7 +17886,7 @@
     "id": "com.samsung.android.app.camera.sticker.facear.preload",
     "list": "Oem",
     "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17895,7 +17895,7 @@
     "id": "com.samsung.android.app.camera.sticker.facear3d.preload",
     "list": "Oem",
     "description": "Default 3D live stickers\nAnnoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17904,7 +17904,7 @@
     "id": "com.samsung.android.app.camera.sticker.facearavatar.preload",
     "list": "Oem",
     "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17913,7 +17913,7 @@
     "id": "com.samsung.android.app.ledbackcover",
     "list": "Oem",
     "description": "I think it enable doing things with LEDs on the cover\n\nhttps://www.samsung.com/hk_en/mobile-accessories/led-cover-for-galaxy-s10/EF-KG973CBEGWW/\nHOW IT WORKS : https://forum.xda-developers.com/galaxy-note-8/accessories/how-led-cover-t3686694",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17922,7 +17922,7 @@
     "id": "com.samsung.android.app.vrsetupwizards",
     "list": "Oem",
     "description": "Samsung Gear VR (Virtual Reality) setup wizard (https://en.wikipedia.org/wiki/Samsung_Gear_VR)\nhttps://360samsungvr.com/portal/content/about_samsung_vr\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java\nSetup wizard : The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung VR services.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17931,7 +17931,7 @@
     "id": "com.samsung.android.bixby.agent.dummy",
     "list": "Oem",
     "description": "Bixby Voice Stub",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17940,7 +17940,7 @@
     "id": "com.samsung.android.bixby.es.globalaction",
     "list": "Oem",
     "description": "Bixby stuff [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17949,7 +17949,7 @@
     "id": "com.samsung.android.bixby.plmsync",
     "list": "Oem",
     "description": "Bixby stuff [MORE INFO NEEDED]",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17958,7 +17958,7 @@
     "id": "com.samsung.android.bixby.service",
     "list": "Oem",
     "description": "Bixby Service",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17967,7 +17967,7 @@
     "id": "com.samsung.android.bixby.voiceinput",
     "list": "Oem",
     "description": "Bixby service needed for voice control",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17976,7 +17976,7 @@
     "id": "com.samsung.android.bixby.wakeup",
     "list": "Oem",
     "description": "Bixby voice wake-up",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17985,7 +17985,7 @@
     "id": "com.samsung.android.knox.containeragent",
     "list": "Oem",
     "description": "KNOX Work profile/space\nProvidess an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -17994,7 +17994,7 @@
     "id": "com.samsung.android.personalpage.service",
     "list": "Oem",
     "description": "Private mode (was replaced by Secure Folder)\nhttps://www.samsung.com/uk/support/mobile-devices/what-is-private-mode-and-how-do-i-use-it/\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18003,7 +18003,7 @@
     "id": "com.samsung.hiddennetworksetting",
     "list": "Oem",
     "description": "Set of hidden network settings (inlcuding frequency bands choice)\nHow to see these settings : https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18012,7 +18012,7 @@
     "id": "com.samsung.systemui.bixby",
     "list": "Oem",
     "description": "System UI for Bixby/Bixby2",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18021,7 +18021,7 @@
     "id": "com.samsung.vvm",
     "list": "Oem",
     "description": "Samsung Verizon Voicemail\nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18030,7 +18030,7 @@
     "id": "com.asus.easylauncher",
     "list": "Oem",
     "description": "Asus Easy Mode (https://play.google.com/store/apps/details?id=com.asus.easylauncher)\nAlternative launcher with bigger icons and simpler interface",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18039,7 +18039,7 @@
     "id": "com.asus.userfeedback",
     "list": "Oem",
     "description": "ZenUI Help (https://play.google.com/store/apps/details?id=com.asus.userfeedback)\nCustomer service app that provides FAQs, Mobile care service, user feedback, and public forums.\nLots of telemetry (insecure on top of that):\nhttps://beta.pithus.org/report/e80a1fa70adc097fc9817720b5c8c81cfd156a76e6d062759b2bc3d6937a97e7",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18048,7 +18048,7 @@
     "id": "com.huawei.android.totemweather",
     "list": "Oem",
     "description": "Huawei Weather app (and its widget)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18057,7 +18057,7 @@
     "id": "com.huawei.android.totemweatherapp",
     "list": "Oem",
     "description": "Huawei Weather app (and its widget)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18066,7 +18066,7 @@
     "id": "com.huawei.android.wfdft",
     "list": "Oem",
     "description": "Wi-Fi Direct feature.\nNote: Wifi direct enables devices to establish a direct Wi-Fi connection (without a router) over which the two can send and receive files.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18075,7 +18075,7 @@
     "id": "com.huawei.hwstartupguide",
     "list": "Oem",
     "description": "A one-time setup app that is no longer needed",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18084,7 +18084,7 @@
     "id": "com.huawei.livewallpaper.paradise",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18093,7 +18093,7 @@
     "id": "com.huawei.livewallpaper.artflower",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18102,7 +18102,7 @@
     "id": "com.huawei.livewallpaper.flowersbloom",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18111,7 +18111,7 @@
     "id": "com.huawei.livewallpaper.mountaincloud",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18120,7 +18120,7 @@
     "id": "com.huawei.livewallpaper.naturalgarden",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18129,7 +18129,7 @@
     "id": "com.huawei.livewallpaper.ripplestone",
     "list": "Oem",
     "description": "Live wallpapers",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18138,7 +18138,7 @@
     "id": "com.huawei.mirror",
     "list": "Oem",
     "description": "Huawei Mirror app.\nMirror like \"Glass\"",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18147,7 +18147,7 @@
     "id": "com.huawei.scanner",
     "list": "Oem",
     "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18156,7 +18156,7 @@
     "id": "com.motorola.easyprefix",
     "list": "Oem",
     "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18165,7 +18165,7 @@
     "id": "com.motorola.motocare.internal",
     "list": "Oem",
     "description": "Core stuff for the package above I guess.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18174,7 +18174,7 @@
     "id": "com.motorola.comcastext",
     "list": "Oem",
     "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".Safe to remove (tested only on non-Comcast phone).\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18183,7 +18183,7 @@
     "id": "com.sonyericsson.conversations.res.overlay_305",
     "list": "Oem",
     "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ?",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18192,7 +18192,7 @@
     "id": "com.sonyericsson.warrantytime",
     "list": "Oem",
     "description": "Lets you see some info about your warranty and how long it will last.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18201,7 +18201,7 @@
     "id": "com.sonymobile.themes.sou.cid18.black",
     "list": "Oem",
     "description": "Sony themes",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18210,7 +18210,7 @@
     "id": "com.sonymobile.themes.sou.cid19.silver",
     "list": "Oem",
     "description": "Sony themes",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18219,7 +18219,7 @@
     "id": "com.sonymobile.themes.sou.cid20.blue",
     "list": "Oem",
     "description": "Sony themes",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18228,7 +18228,7 @@
     "id": "com.sonymobile.themes.sou.cid21.pink",
     "list": "Oem",
     "description": "Sony themes",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18237,7 +18237,7 @@
     "id": "com.sonymobile.xperiaxlivewallpaper",
     "list": "Oem",
     "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18246,7 +18246,7 @@
     "id": "android.autoinstalls.config.Xiaomi.cepheus",
     "list": "Oem",
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18255,7 +18255,7 @@
     "id": "android.autoinstalls.config.Xiaomi.dipper",
     "list": "Oem",
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18264,7 +18264,7 @@
     "id": "android.autoinstalls.config.Xiaomi.daisy",
     "list": "Oem",
     "description": "android.autoinstalls.config.Xiaomi.X where X is the phone's codename\nUsed to **auto** install stuff\nIMO it's a similar feature than Play Auto Install (https://forum.xda-developers.com/xperia-z/help/how-stop-google-play-auto-install-t2590253)\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18273,7 +18273,7 @@
     "id": "com.miui.miwallpaper.earth",
     "list": "Oem",
     "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18282,7 +18282,7 @@
     "id": "com.android.hotwordenrollment.okgoogle",
     "list": "Google",
     "description": "\"OK Google\" detection service.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18291,7 +18291,7 @@
     "id": "com.google.android.apps.inbox",
     "list": "Google",
     "description": "Inbox by Gmail (Discontinued)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18300,7 +18300,7 @@
     "id": "com.google.android.apps.navlite",
     "list": "Google",
     "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18309,7 +18309,7 @@
     "id": "com.google.android.backup",
     "list": "Google",
     "description": "Allows Android apps to back up their data on Google servers. (On Android 4.2)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18318,7 +18318,7 @@
     "id": "com.google.android.setupwizard",
     "list": "Google",
     "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18327,7 +18327,7 @@
     "id": "com.google.android.setupwizard.a_overlay",
     "list": "Google",
     "description": "It's the basic configuration setup guides you through the basics of setting up Google features on your device.\nThe second package is only present on Pixel phones.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18336,7 +18336,7 @@
     "id": "com.google.android.youtube",
     "list": "Google",
     "description": "YouTube app (https://play.google.com/store/apps/details?id=com.google.android.youtube)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18345,7 +18345,7 @@
     "id": "com.google.android.email",
     "list": "Google",
     "description": "AOSP Mail client\nDoes no longer exist. AOSP Mail is now com.android.email and Gmail is com.google.android.gm",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18354,7 +18354,7 @@
     "id": "com.google.android.tag",
     "list": "Google",
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone\nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18363,7 +18363,7 @@
     "id": "com.microsoft.office.excel",
     "list": "Misc",
     "description": "Excel",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18372,7 +18372,7 @@
     "id": "com.microsoft.office.word",
     "list": "Misc",
     "description": "Word",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18390,7 +18390,7 @@
     "id": "com.aaa.android.discounts",
     "list": "Misc",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You’ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18399,7 +18399,7 @@
     "id": "com.aaa.android.discounts.vpl",
     "list": "Misc",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You’ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18408,7 +18408,7 @@
     "id": "com.aspiro.tidal.vpl",
     "list": "Misc",
     "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18417,7 +18417,7 @@
     "id": "com.draftkings.dknativermgGP.vpl",
     "list": "Misc",
     "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18426,7 +18426,7 @@
     "id": "com.handmark.expressweather",
     "list": "Misc",
     "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18435,7 +18435,7 @@
     "id": "com.opera.max.oem",
     "list": "Misc",
     "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera’s servers to compress images and videos",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18444,7 +18444,7 @@
     "id": "com.roaming.android.gsimbase",
     "list": "Misc",
     "description": "GSIM = Generic Statistical Information Model ? I don't think so but I can't find anything.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18453,7 +18453,7 @@
     "id": "com.til.timesnews",
     "list": "Misc",
     "description": "India News (https://play.google.com/store/apps/details?id=com.til.timesnews)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18462,7 +18462,7 @@
     "id": "com.yelp.android",
     "list": "Misc",
     "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses.\nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18471,7 +18471,7 @@
     "id": "com.monotype.android.font.chococooky",
     "list": "Misc",
     "description": "Font",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18480,7 +18480,7 @@
     "id": "com.monotype.android.font.cooljazz",
     "list": "Misc",
     "description": "Font",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18489,7 +18489,7 @@
     "id": "com.monotype.android.font.foundation",
     "list": "Misc",
     "description": "Font",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18498,7 +18498,7 @@
     "id": "com.dsi.ant.plugins.antplus",
     "list": "Misc",
     "description": " ANT+ plugin service (https://play.google.com/store/apps/details?id=com.dsi.ant.plugins.antplus)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18507,7 +18507,7 @@
     "id": "com.android.bips",
     "list": "Aosp",
     "description": "Default print Service.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18516,7 +18516,7 @@
     "id": "com.android.email.partnerprovider",
     "list": "Aosp",
     "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18525,7 +18525,7 @@
     "id": "com.android.wallpaper.livepicker",
     "list": "Aosp",
     "description": "Enables you to pick a live wallpaper. Removing it will break some weather applications (especially ones with widgets) and wallpaper applications like Muzei.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
@@ -18534,7 +18534,7 @@
     "id": "com.samsung.android.cameraxservice",
     "list": "Pending",
     "description": "CBattery drain related on S10",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Expert"
@@ -18543,7 +18543,7 @@
     "id": "com.samsung.android.kgclient",
     "list": "Pending",
     "description": "Samsung Pay One Ui 3.0 ?",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Expert"
@@ -18552,7 +18552,7 @@
     "id": "com.lge.updatecenter",
     "list": "Oem",
     "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18560,8 +18560,8 @@
   {
     "id": "com.lge.theme.black",
     "list": "Oem",
-    "description": null,
-    "dependencies": "",
+    "description": "LG Android theme",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18569,8 +18569,8 @@
   {
     "id": "com.lge.theme.white",
     "list": "Oem",
-    "description": null,
-    "dependencies": "",
+    "description": "LG Android theme",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18578,8 +18578,8 @@
   {
     "id": "com.lge.theme.highcontrast",
     "list": "Oem",
-    "description": null,
-    "dependencies": "",
+    "description": "LG Android theme",
+    "dependencies": "LG theme",
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18588,7 +18588,7 @@
     "id": "com.lge.signboard",
     "list": "Oem",
     "description": "Always on display. Probably a battery killer if used without OLED screen.\nYou will lose the menu in the settings app that allows you to set the always on display. From the top of my head I remember the default ones as clock, kitkat easter egg.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18597,7 +18597,7 @@
     "id": "com.lge.equalizer",
     "list": "Oem",
     "description": "Equalizer settings.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18606,7 +18606,7 @@
     "id": "com.lge.exchange",
     "list": "Oem",
     "description": "It looks like the Microsoft outlook/email in the logo. Believe this is some sort of microsoft integration.\nI don't 100% remember if I was able to add accounts to the phone still (eg. Nextcloud), I need to test that soon.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18615,7 +18615,7 @@
     "id": "com.lge.task",
     "list": "Oem",
     "description": "Task storage\nProbably related to the task app (another bloatware). I say its safe to remove if you don't use it.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18624,7 +18624,7 @@
     "id": "com.lge.gametuner",
     "list": "Oem",
     "description": "Settings/features for games, such as resolution and frame rate limiting.\nA little side note, any games installed in the work profile can't use gametuner (maybe if you install this package into the work profile it'll work)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18633,7 +18633,7 @@
     "id": "com.lge.touchcontrol",
     "list": "Oem",
     "description": "I have never seen this menu in the settings app. I say its safe to remove. I can't think of any use case for this setting, it just allows you to change where you're allowed to touch the screen",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18642,7 +18642,7 @@
     "id": "com.lge.wapservice",
     "list": "Oem",
     "description": "Icon looks like email configuration. I'd say it's safe to remove. Probably related to the stock email app.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18651,7 +18651,7 @@
     "id": "com.lge.rcs.sharedsketch",
     "list": "Oem",
     "description": "I have no idea what it is, maybe some drawing program related to rcs. I removed it.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18660,7 +18660,7 @@
     "id": "com.lge.faceglance.trustagent",
     "list": "Oem",
     "description": "Face Recognition\nRemove if you don't need it. If you want security I don't think this is a good idea to use it.",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
@@ -18669,7 +18669,7 @@
     "id": "com.lge.app.floating.res",
     "list": "Oem",
     "description": "Multitasking framework\nAllows you to use multitasking features like multiple apps in one screen.\nDoes not remove screen pinning feature.\nI don't know if this removes the floating windows feature that you have to enable with ADB (to make it look more like a desktop)",
-    "dependencies": "",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"

@@ -102,7 +102,10 @@ impl List {
                     removal = Removal::Unlisted;
 
                     if uad_lists.contains_key(p_name) {
-                        description = uad_lists.get(p_name).unwrap().description.as_ref().unwrap();
+                        description = match &uad_lists.get(p_name).unwrap().description {
+                            Some(descr) => &descr,
+                            None => "[No description]",
+                        };
                         uad_list = uad_lists.get(p_name).unwrap().list;
                         removal = uad_lists.get(p_name).unwrap().removal;
                     }

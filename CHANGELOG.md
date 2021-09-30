@@ -10,6 +10,11 @@ and `Removed`.
 
 ## [Unreleased]
 
+## [0.2.2] - 2021-09-30
+
+## Fixed
+- Crash when conecting a LG device (#33)
+
 ## [0.2.1] - 2021-09-28
 
 ## Added
