@@ -12,7 +12,7 @@ i686-pc-windows-gnu:
   stage: build
 
   before_script:
-    - apt update -yqq && apt install -yqq mingw-w64 lld
+    - apt update -yqq && apt install -yqq mingw-w64
     - rustup target add i686-pc-windows-gnu
 
   script:
@@ -27,7 +27,7 @@ x86_64-pc-windows-gnu:
   stage: build
 
   before_script:
-    - apt update -yqq && apt install -yqq mingw-w64 lld
+    - apt update -yqq && apt install -yqq mingw-w64
     - rustup target add x86_64-pc-windows-gnu
 
   script:
