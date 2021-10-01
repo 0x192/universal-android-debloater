@@ -1,7 +1,13 @@
 use crate::gui::style;
-use crate::core::uad_lists::{ UadList, PackageState, Package, Removal, Opposite};
-use crate::core::utils::{import_selection, export_selection, update_selection_count};
+use crate::core::sync::{Phone, action_handler, User};
+use crate::core::uad_lists::{
+    UadList, PackageState, Package, Removal, Opposite, load_debloat_lists
+};
+use crate::core::utils::{
+    import_selection, export_selection, update_selection_count, fetch_packages,
+};
 use std::{collections::HashMap};
+use static_init::{dynamic};
 
 use crate::gui::views::settings::Settings;
 use crate::gui::widgets::package_row::{ PackageRow, Message as RowMessage };
@@ -11,10 +17,9 @@ use iced::{
     PickList, pick_list, Button, button, 
 };
 
-use crate::core::sync::{ 
-    list_all_system_packages, hashset_system_packages, 
-    Phone, action_handler,
-};
+
+#[dynamic]
+static UAD_LISTS: HashMap<String, Package> = load_debloat_lists(); 
 
 #[derive(Debug, Clone)]
 pub struct Selection {
@@ -44,10 +49,11 @@ impl Default for Selection {
 #[derive(Default, Debug, Clone)]
 pub struct List {
     ready: bool,
-    phone_packages: Vec<PackageRow>, // packages of the phone
-    filtered_packages: Vec<usize>, // phone_packages indexes (= what you see on screen)
+    phone_packages: Vec<Vec<PackageRow>>, // packages of all users of the phone
+    filtered_packages: Vec<usize>, // phone_packages indexes of the selected user (= what you see on screen)
     pub selection: Selection,
     search_input: text_input::State,
+    user_picklist: pick_list::State<User>,
     select_all_btn_state: button::State,
     export_selection_btn_state: button::State,
     apply_remove_selection: button::State,
@@ -59,6 +65,7 @@ pub struct List {
     selected_package_state: Option<PackageState>,
     selected_removal: Option<Removal>,
     selected_list: Option<UadList>,
+    selected_user: Option<User>,
     pub input_value: String,
     description: String,
 }
@@ -67,8 +74,9 @@ pub struct List {
 #[derive(Debug, Clone)]
 pub enum Message {
     SearchInputChanged(String),
-    LoadPackages(&'static HashMap<String, Package>),
+    LoadPackages,
     ListSelected(UadList),
+    UserSelected(User),
     PackageStateSelected(PackageState),
     RemovalSelected(Removal),
     ApplyActionOnSelection(Action),
@@ -80,57 +88,25 @@ pub enum Message {
 
 
 impl List {
-    pub fn update(&mut self, settings: &Settings, phone: &Phone, message: Message) -> Command<Message> {
+    pub fn update(&mut self, settings: &Settings, phone: &mut Phone, message: Message) -> Command<Message> {
+        let i_user = &self.selected_user.unwrap_or_else(|| User {id: 0, index: 0}).index; // for readability
         match message {
-            Message::LoadPackages(uad_lists) => {
+            Message::LoadPackages => {
                 self.selected_package_state = Some(PackageState::Enabled);
                 self.selected_list = Some(UadList::All);
                 self.selected_removal = Some(Removal::Recommended);
+                self.selected_user = Some(User {id: 0, index: 0});
 
-                let all_system_packages = list_all_system_packages(); // installed and uninstalled packages
-                let enabled_system_packages = hashset_system_packages(PackageState::Enabled);
-                let disabled_system_packages = hashset_system_packages(PackageState::Disabled);
-                let mut description;
-                let mut uad_list;
-                let mut state;
-                let mut removal;
-
-                for p_name in all_system_packages.lines() {
-                    state = PackageState::Uninstalled;
-                    description = "[No description]";
-                    uad_list = UadList::Unlisted;
-                    removal = Removal::Unlisted;
-
-                    if uad_lists.contains_key(p_name) {
-                        description = match &uad_lists.get(p_name).unwrap().description {
-                            Some(descr) => &descr,
-                            None => "[No description]",
-                        };
-                        uad_list = uad_lists.get(p_name).unwrap().list;
-                        removal = uad_lists.get(p_name).unwrap().removal;
+                for user in &phone.user_list {
+                    if phone.user_list.len() == 1 {
+                        self.phone_packages.push(fetch_packages(&UAD_LISTS, &None));
+                    } else {
+                        self.phone_packages.push(fetch_packages(&UAD_LISTS, &Some(&user)));
                     }
-
-                    if enabled_system_packages.contains(p_name) {
-                       state = PackageState::Enabled;
-                    } else if disabled_system_packages.contains(p_name) {
-                        state = PackageState::Disabled;
-                    }
-
-                    let package_row = PackageRow::new(
-                        &p_name,
-                        state,
-                        &description,
-                        uad_list,
-                        removal,
-                        false,
-                    );
-                    self.phone_packages.push(package_row)
                 }
-                self.phone_packages.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
-                self.filtered_packages = (0..self.phone_packages.len()).collect();
+                self.filtered_packages = (0..self.phone_packages[*i_user].len()).collect();
                 Self::filter_package_lists(self);
-
-                match import_selection(&mut self.phone_packages, &mut self.selection) {
+                match import_selection(&mut self.phone_packages[*i_user], &mut self.selection) {
                     Ok(_) => info!("Custom selection has been successfully imported"),
                     Err(err) => warn!("No custom selection imported: {}", err),
                 };
@@ -159,42 +135,52 @@ impl List {
                 Command::none()
             }
             Message::List(i, row_message) => {
-                self.phone_packages[i].update(row_message.clone()).map(move |row_message| Message::List(i, row_message));
+                self.phone_packages[*i_user][i].update(row_message.clone()).map(move |row_message| Message::List(i, row_message));
                 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
-                        self.phone_packages[i].selected = toggle;
-                        if self.phone_packages[i].selected {
+                        self.phone_packages[*i_user][i].selected = toggle;
+                        if self.phone_packages[*i_user][i].selected {
                             self.selection.selected_packages.push(i);
-                            update_selection_count(&mut self.selection, self.phone_packages[i].state, true);
+                            update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, true);
                         } else {
                             self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
-                            update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
+                            update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, false);
                         }
                     },
                     RowMessage::ActionPressed => {
                         let success = action_handler(
-                                &self.phone_packages[i],
+                                &self.selected_user.unwrap(),
+                                &self.phone_packages[*i_user][i],
                                 phone,
-                                settings.disable_mode,
+                                settings,
                             ).unwrap_or_else(|err| err);
                             
                         if success {
-                            let i = self.phone_packages
+                            let i = self.phone_packages[*i_user]
                                 .iter()
-                                .position(|p| p.name == self.phone_packages[i].name)
+                                .position(|p| p.name == self.phone_packages[*i_user][i].name)
                                 .unwrap();
-                            if self.phone_packages[i].selected {
-                                update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
+                            if self.phone_packages[*i_user][i].selected {
+                                update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, false);
                             }
-                            self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
+    
+                            self.phone_packages[*i_user][i].state = self.phone_packages[*i_user][i].state
+                                .opposite(settings.disable_mode);
+
+                            if settings.multi_user_mode {
+                                for u in &phone.user_list {
+                                    self.phone_packages[u.index][i].state = self.phone_packages[*i_user][i].state;
+                                    self.phone_packages[u.index][i].selected = false;
+                                }
+                            }
                             self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
-                            self.phone_packages[i].selected = false;
+                            self.phone_packages[*i_user][i].selected = false;
                             Self::filter_package_lists(self);
                         }
                     },
                     RowMessage::PackagePressed => {
-                        self.description = self.phone_packages[i].clone().description;
+                        self.description = self.phone_packages[*i_user][i].clone().description;
                     },
                 }
                 Command::none()
@@ -204,25 +190,45 @@ impl List {
                 
                 match action {
                     Action::Remove => {
-                        selected_packages.drain_filter(|i| self.phone_packages[*i].state != PackageState::Enabled);
+                        selected_packages.drain_filter(
+                            |i| 
+                            self.phone_packages[*i_user][*i].state != PackageState::Enabled
+                        );
                     }
                     Action::Restore => {
-                        selected_packages.drain_filter(|i| self.phone_packages[*i].state == PackageState::Enabled);
+                        selected_packages.drain_filter(
+                            |i| 
+                            self.phone_packages[*i_user][*i].state == PackageState::Enabled
+                        );
                     }
                 }
 
                 for i in selected_packages {
                     let success = action_handler(
-                        &self.phone_packages[i],
+                        &self.selected_user.unwrap(),
+                        &self.phone_packages[*i_user][i],
                         phone,
-                        settings.disable_mode
+                        settings
                     ).unwrap_or_else(|err| err);
                     
                     if success {
-                        update_selection_count(&mut self.selection, self.phone_packages[i].state, false);
-                        self.phone_packages[i].state = self.phone_packages[i].state.opposite(settings.disable_mode);
-                        self.phone_packages[i].selected = false;
-                        self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
+                        update_selection_count(
+                            &mut self.selection, 
+                            self.phone_packages[*i_user][i].state, 
+                            false
+                        );
+                        if !settings.multi_user_mode {
+                            self.phone_packages[*i_user][i].state = self.phone_packages[*i_user][i].state
+                                .opposite(settings.disable_mode);
+                            self.phone_packages[*i_user][i].selected = false;
+                        }
+
+                        for u in &phone.user_list {
+                            self.phone_packages[u.index][i].state = self.phone_packages[u.index][i].state
+                                .opposite(settings.disable_mode);
+                            self.phone_packages[u.index][i].selected = false;
+                        }
+                        self.selection.selected_packages.drain_filter(|s_i| *s_i == i);                        
                     }
                 }
                 Self::filter_package_lists(self);
@@ -230,23 +236,35 @@ impl List {
             },
             Message::SelectAllPressed => {
                 for i in self.filtered_packages.clone() {
-                    self.phone_packages[i].selected = true;
+                    self.phone_packages[*i_user][i].selected = true;
                     if !self.selection.selected_packages.contains(&i) {
                         self.selection.selected_packages.push(i);
-                        update_selection_count(&mut self.selection, self.phone_packages[i].state, true);
+                        update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, true);
                     }
                 }
                 Command::none()
             },
             Message::ExportSelectionPressed => {
-                Command::perform(export_selection(self.phone_packages.clone()), Message::ExportedSelection)
-            }
+                Command::perform(export_selection(self.phone_packages[*i_user].clone()), Message::ExportedSelection)
+            },
             Message::ExportedSelection(export) => {
                 match export {
                     Ok(_) => info!("Selection exported"),
                     Err(err) => error!("Selection export: {}", err),
                 };
                Command::none() 
+            },
+            Message::UserSelected(user) => {
+                for p in &mut self.phone_packages[*i_user] {
+                    p.selected = false;
+                }
+                self.selected_user = Some(user);
+                for i_package in &self.selection.selected_packages {
+                    self.phone_packages[user.index][*i_package].selected = true;
+                }
+                self.filtered_packages = (0..self.phone_packages[user.index].len()).collect();
+                Self::filter_package_lists(self);
+                Command::none() 
             }
         }
     }
@@ -262,6 +280,13 @@ impl List {
             .padding(5);
 
             // let package_amount = Text::new(format!("{} packages found", packages.len()));
+            
+            let user_picklist = PickList::new(
+                    &mut self.user_picklist,
+                    phone.user_list.clone(),
+                    self.selected_user.clone(),
+                    Message::UserSelected,
+                ).width(Length::Units(85));
 
             let divider = Space::new(Length::Fill, Length::Shrink);
 
@@ -291,12 +316,13 @@ impl List {
                 .align_items(Alignment::Center)
                 .spacing(10)
                 .push(search_packages)
+                .push(user_picklist)
                 .push(divider)
                 .push(removal_picklist)
                 .push(package_state_picklist)
                 .push(list_picklist);
 
-            let packages = self.phone_packages
+            let packages = self.phone_packages[self.selected_user.unwrap().index]
                 .iter_mut()
                 .enumerate()
                 .filter(|(i,_)| self.filtered_packages.contains(i))
@@ -309,7 +335,7 @@ impl List {
             let packages = self.filtered_packages
                 .into_iter()
                 .fold(Column::new().spacing(6), |col, i| {
-                    col.push(self.phone_packages[i].view().map(move |msg| Message::List(i, msg)))
+                    col.push(self.phone_packages[self.selected_user.unwrap().index][i].view().map(move |msg| Message::List(i, msg)))
                 });
             */
 
@@ -401,7 +427,7 @@ impl List {
         let package_filter: PackageState = self.selected_package_state.unwrap();
         let removal_filter: Removal = self.selected_removal.unwrap();
 
-        self.filtered_packages = self.phone_packages
+        self.filtered_packages = self.phone_packages[self.selected_user.unwrap().index]
             .iter()
             .enumerate()
             .filter(

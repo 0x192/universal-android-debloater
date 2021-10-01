@@ -5,10 +5,8 @@ pub mod widgets;
 pub use views::about::About as AboutView;
 pub use views::list::{List as AppsView, Message as AppsMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
-pub use crate::core::uad_lists::{ load_debloat_lists, Package };
-pub use crate::core::sync::Phone;
-use std::{collections::HashMap};
-use static_init::{dynamic};
+pub use crate::core::uad_lists::Package;
+pub use crate::core::sync::{Phone};
 
 use iced::{
     button, Alignment, Application, Button, Column, Command, Space,
@@ -17,10 +15,6 @@ use iced::{
 
 #[cfg(feature = "wgpu")]
 use iced::Svg;
-
-
-#[dynamic]
-static UAD_LISTS: HashMap<String, Package> = load_debloat_lists(); 
 
 #[derive(Debug, Clone)]
 pub enum View {
@@ -124,7 +118,7 @@ impl Application for UadGui {
                 Command::none()
             }
             Message::AppsAction(msg) => {
-                self.apps_view.update(&self.settings_view, &self.phone, msg).map(Message::AppsAction)
+                self.apps_view.update(&self.settings_view, &mut self.phone, msg).map(Message::AppsAction)
             }
             Message::SettingsAction(msg) => {
                 self.settings_view.update(msg);
@@ -215,6 +209,6 @@ impl UadGui {
     }
 
     pub async fn load_phone_packages() -> AppsMessage {
-        AppsMessage::LoadPackages(&UAD_LISTS)
+        AppsMessage::LoadPackages
     }
 }

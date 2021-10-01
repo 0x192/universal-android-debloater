@@ -1,9 +1,58 @@
-use crate::core::uad_lists::PackageState;
+use crate::core::uad_lists::{UadList, PackageState, Package, Removal};
 use crate::gui::widgets::package_row::PackageRow;
 use crate::gui::views::list::Selection;
+use crate::core::sync::{list_all_system_packages, hashset_system_packages, User};
+use std::collections::HashMap;
 
 use std::fs; 
 use std::io::{self, prelude::*, BufReader};
+
+pub fn fetch_packages(uad_lists: &'static HashMap<String, Package>, user_id: &Option<&User>) -> Vec<PackageRow> {
+    let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
+    let enabled_system_packages = hashset_system_packages(PackageState::Enabled, user_id);
+    let disabled_system_packages = hashset_system_packages(PackageState::Disabled, user_id);
+    let mut description;
+    let mut uad_list;
+    let mut state;
+    let mut removal;
+    let mut user_package: Vec<PackageRow> = Vec::new();
+
+    for p_name in all_system_packages.lines() {
+        state = PackageState::Uninstalled;
+        description = "[No description]";
+        uad_list = UadList::Unlisted;
+        removal = Removal::Unlisted;
+
+        if uad_lists.contains_key(p_name) {
+            description = match &uad_lists.get(p_name).unwrap().description {
+                            Some(descr) => &descr,
+                            None => "[No description]",
+                        };
+            uad_list = uad_lists.get(p_name).unwrap().list;
+            removal = uad_lists.get(p_name).unwrap().removal;
+        }
+
+        if enabled_system_packages.contains(p_name) {
+           state = PackageState::Enabled;
+        } else if disabled_system_packages.contains(p_name) {
+            state = PackageState::Disabled;
+        }
+
+        let package_row = PackageRow::new(
+            &p_name,
+            state,
+            &description,
+            uad_list,
+            removal,
+            false,
+        );
+        user_package.push(package_row);
+    }
+    user_package.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
+    user_package
+}
+
+
 
 pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
     match p_state {

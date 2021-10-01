@@ -26,6 +26,7 @@ static_init = "^1.0"
 fern = { version = "^0.6", features = ["colored"] }
 log = "^0.4"
 chrono = "^0.4"
+regex = "^1.5"
 
 [profile.release]
 opt-level = "s"

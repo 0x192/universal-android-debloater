@@ -6,6 +6,7 @@ use iced::{Checkbox, Column, Container, Element, Length, Text, Space};
 pub struct Settings {
     pub expert_mode: bool,
     pub disable_mode: bool,
+    pub multi_user_mode: bool,
 }
 
 impl Default for Settings {
@@ -13,6 +14,7 @@ impl Default for Settings {
         Self {
             expert_mode: false,
             disable_mode: false,
+            multi_user_mode: true,
         }
     }
 }
@@ -21,6 +23,7 @@ impl Default for Settings {
 pub enum Message {
     ExpertModeToogle(bool),
     DisableModeToogle(bool),
+    MultiUserModeToogle(bool),
 }
 
 impl Settings {
@@ -33,6 +36,10 @@ impl Settings {
             Message::DisableModeToogle(toggled) => {
                 info!("Disable mode {}", if toggled {"enabled"} else {"disabled"});
                 self.disable_mode = toggled;
+            },
+            Message::MultiUserModeToogle(toggled) => {
+                info!("Multi-user mode {}", if toggled {"enabled"} else {"disabled"});
+                self.multi_user_mode = toggled;
             }
         }
     }
@@ -60,6 +67,16 @@ impl Settings {
             Message::DisableModeToogle
         );
 
+        let multi_user_mode_descr = Text::new("Disabling this setting will typically prevent affecting your work profile")
+            .size(15)
+            .color(style::GREY_SMALL_SETTINGS_COLOR);
+
+        let multi_user_mode_checkbox = Checkbox::new(
+            self.multi_user_mode, 
+            "Affect all the users of the phone (not only the selected user)",
+            Message::MultiUserModeToogle
+        );
+
         let content = Column::new()
             .width(Length::Fill)
             .spacing(10)
@@ -68,7 +85,10 @@ impl Settings {
             .push(expert_mode_descr)
             .push(Space::new(Length::Fill, Length::Shrink))
             .push(disable_mode_checkbox)
-            .push(disable_mode_descr);
+            .push(disable_mode_descr)
+            .push(Space::new(Length::Fill, Length::Shrink))
+            .push(multi_user_mode_checkbox)
+            .push(multi_user_mode_descr);
 
         Container::new(content)
             .padding(10)

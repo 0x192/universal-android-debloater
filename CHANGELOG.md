@@ -10,10 +10,15 @@ and `Removed`.
 
 ## [Unreleased]
 
+### Added
+- Multi-user support (#16): You can now debloat/restore for any user of the phone (not only the primary user 0). 
+   - `Multi user mode` setting (default to on for Android 5+) allowing to remove packages for all users ([a work profile is another user](https://developer.android.com/work/managed-profiles)) instead of only the selected user.
+   - User switcher (picklist).  
+
 ## [0.2.2] - 2021-09-30
 
 ## Fixed
-- Crash when conecting a LG device (#33)
+- Crash when connecting a LG device (#33)
 
 ## [0.2.1] - 2021-09-28
 
