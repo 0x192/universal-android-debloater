@@ -12,7 +12,7 @@ i686-pc-windows-gnu:
   stage: build
 
   before_script:
-    - apt update -yqq && apt install -yqq mingw-w64
+    - apt update -yqq && apt install -yqq mingw-w64 lld
     - rustup target add i686-pc-windows-gnu
 
   script:
@@ -27,7 +27,7 @@ x86_64-pc-windows-gnu:
   stage: build
 
   before_script:
-    - apt update -yqq && apt install -yqq mingw-w64
+    - apt update -yqq && apt install -yqq mingw-w64 lld
     - rustup target add x86_64-pc-windows-gnu
 
   script:
@@ -44,7 +44,7 @@ x86_64-unknown-linux-gnu:
   stage: build
 
   before_script:
-    - apt update -yqq && apt install -yqq libxkbcommon-dev
+    - apt update -yqq && apt install -yqq libxkbcommon-dev lld
 
   script:
     - cargo build --features glow --release --target x86_64-unknown-linux-gnu
