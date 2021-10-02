@@ -67,8 +67,8 @@ pub fn adb_shell_command(args: &str) -> Result<String,String> {
         },
         Ok(o) => {
             if !o.status.success() {
-                let stdout = String::from_utf8(o.stdout).unwrap().trim_end().to_string();
-                Err(stdout)
+                let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
+                Err(stderr)
             } else {
                 Ok(String::from_utf8(o.stdout).unwrap().trim_end().to_string())
             }
@@ -81,11 +81,11 @@ pub fn adb_shell_command(args: &str) -> Result<String,String> {
 pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
     let action = match user_id {
         Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
-        None => format!("pm list packages -s -u"),
+        None => "pm list packages -s -u".to_string(),
     };
 
     adb_shell_command(&action)
-        .unwrap_or("".to_string())
+        .unwrap_or_else(|_| "".to_string())
         .replace("package:", "")
 }
 
@@ -102,7 +102,7 @@ pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> 
     };
 
     adb_shell_command(&action)
-        .unwrap_or(String::new())
+        .unwrap_or_default()
         .replace("package:", "")
         .lines()
         .map(String::from)
@@ -200,8 +200,9 @@ pub fn get_phone_model() -> String {
     match adb_shell_command("getprop ro.product.model") {
         Ok(model) => model,
         Err(err) => {
+            println!("ERROR: {}", err);
             if err.contains("adb: no devices/emulators found") {
-                "adb: no devices/emulators found".to_string()
+                "no devices/emulators found".to_string()
             } else {
                 err
             }
@@ -219,7 +220,10 @@ pub fn get_android_sdk() -> u8 {
 
 
 pub fn get_phone_brand() -> String {
-    format!("{} {}", adb_shell_command("getprop ro.product.brand").unwrap_or("".to_string()).trim(), get_phone_model())
+    format!("{} {}", 
+        adb_shell_command("getprop ro.product.brand").unwrap_or_else(|_| "".to_string()).trim(), 
+        get_phone_model()
+    )
 }
 
 pub fn get_user_list() -> Vec<User> {

@@ -25,7 +25,7 @@ pub fn fetch_packages(uad_lists: &'static HashMap<String, Package>, user_id: &Op
 
         if uad_lists.contains_key(p_name) {
             description = match &uad_lists.get(p_name).unwrap().description {
-                            Some(descr) => &descr,
+                            Some(descr) => descr,
                             None => "[No description]",
                         };
             uad_list = uad_lists.get(p_name).unwrap().list;
@@ -39,9 +39,9 @@ pub fn fetch_packages(uad_lists: &'static HashMap<String, Package>, user_id: &Op
         }
 
         let package_row = PackageRow::new(
-            &p_name,
+            p_name,
             state,
-            &description,
+            description,
             uad_list,
             removal,
             false,
@@ -83,6 +83,7 @@ pub async fn export_selection(packages: Vec<PackageRow>) -> Result<bool, String>
     }
 }
 
+#[allow(clippy::needless_collect)] // false positive: https://github.com/rust-lang/rust-clippy/issues/6164
 pub fn import_selection(packages: &mut Vec<PackageRow>, selection: &mut Selection) -> io::Result<()> {
     let file = fs::File::open("uad_exported_selection.txt")?;
     let reader = BufReader::new(file);

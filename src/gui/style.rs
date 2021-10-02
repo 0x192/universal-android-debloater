@@ -13,16 +13,16 @@ pub const UNINSTALL_COLOR_HOVER: Color = Color::from_rgb(0.60, 0.05, 0.0);
 
 /// Color for disabled elements
 pub const DISABLED_COLOR: Color = Color::from_rgb(
-    195 as f32 / 255.0,
-    195 as f32 / 255.0,
-    195 as f32 / 255.0,
+    195_f32 / 255.0,
+    195_f32 / 255.0,
+    195_f32 / 255.0,
 );
 
 
 pub const GREY_SMALL_SETTINGS_COLOR: Color = Color::from_rgb (
-    211 as f32 / 255.0,
-    211 as f32 / 255.0,
-    211 as f32 / 255.0,
+    211_f32 / 255.0,
+    211_f32 / 255.0,
+    211_f32 / 255.0,
 );
 
 pub enum PrimaryButton {

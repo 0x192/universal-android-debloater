@@ -176,14 +176,14 @@ pub fn load_debloat_lists() -> HashMap<String, Package> {
     //let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
 
     // TODO: Do it without intermediary Vec?
-    let list: Vec<Package> = serde_json::from_str(&DATA).expect("Unable to parse");
+    let list: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
 
     for p in list {
         let name = p.id.clone();
         package_lists.insert(name, p);
     }
 
-    return package_lists;
+    package_lists
 }
 
 

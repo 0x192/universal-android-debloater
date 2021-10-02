@@ -21,7 +21,7 @@ use iced::{
 #[dynamic]
 static UAD_LISTS: HashMap<String, Package> = load_debloat_lists(); 
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Default, Clone)]
 pub struct Selection {
     pub uninstalled: u16,
     pub enabled: u16,
@@ -33,17 +33,6 @@ pub struct Selection {
 pub enum Action {
     Remove,
     Restore,
-}
-
-impl Default for Selection {
-    fn default() -> Self {
-        Self {
-            uninstalled: 0,
-            enabled: 0,
-            disabled: 0,
-            selected_packages: Vec::new(),
-        }
-    }
 }
 
 #[derive(Default, Debug, Clone)]
@@ -89,7 +78,7 @@ pub enum Message {
 
 impl List {
     pub fn update(&mut self, settings: &Settings, phone: &mut Phone, message: Message) -> Command<Message> {
-        let i_user = &self.selected_user.unwrap_or_else(|| User {id: 0, index: 0}).index; // for readability
+        let i_user = &self.selected_user.unwrap_or(User {id: 0, index: 0}).index; // for readability
         match message {
             Message::LoadPackages => {
                 self.selected_package_state = Some(PackageState::Enabled);
@@ -97,15 +86,17 @@ impl List {
                 self.selected_removal = Some(Removal::Recommended);
                 self.selected_user = Some(User {id: 0, index: 0});
 
-                for user in &phone.user_list {
-                    if phone.user_list.len() == 1 {
-                        self.phone_packages.push(fetch_packages(&UAD_LISTS, &None));
-                    } else {
-                        self.phone_packages.push(fetch_packages(&UAD_LISTS, &Some(&user)));
+                match phone.user_list.len() {
+                    0|1 => self.phone_packages.push(fetch_packages(&UAD_LISTS, &None)),
+                    _ => {
+                        for user in &phone.user_list {
+                            self.phone_packages.push(fetch_packages(&UAD_LISTS, &Some(user)));
+                        }
                     }
                 }
                 self.filtered_packages = (0..self.phone_packages[*i_user].len()).collect();
                 Self::filter_package_lists(self);
+
                 match import_selection(&mut self.phone_packages[*i_user], &mut self.selection) {
                     Ok(_) => info!("Custom selection has been successfully imported"),
                     Err(err) => warn!("No custom selection imported: {}", err),
@@ -274,7 +265,7 @@ impl List {
             let search_packages = TextInput::new(
                 &mut self.search_input,
                 "Search packages...",
-                &mut self.input_value,
+                &self.input_value,
                 Message::SearchInputChanged,
             )
             .padding(5);
@@ -284,7 +275,7 @@ impl List {
             let user_picklist = PickList::new(
                     &mut self.user_picklist,
                     phone.user_list.clone(),
-                    self.selected_user.clone(),
+                    self.selected_user,
                     Message::UserSelected,
                 ).width(Length::Units(85));
 
@@ -425,7 +416,7 @@ impl List {
 
         let list_filter: UadList = self.selected_list.unwrap();
         let package_filter: PackageState = self.selected_package_state.unwrap();
-        let removal_filter: Removal = self.selected_removal.unwrap();
+        let removal_filter: Removal = self.selected_removal.unwrap(); 
 
         self.filtered_packages = self.phone_packages[self.selected_user.unwrap().index]
             .iter()

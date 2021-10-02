@@ -2,7 +2,6 @@
 #![feature(drain_filter)]
 #[macro_use] extern crate log;
 
-use chrono;
 use std::{fs::OpenOptions, fmt::Arguments};
 use fern::{FormatCallback, colors::{Color, ColoredLevelConfig}};
 use log::Record;
@@ -29,11 +28,11 @@ pub fn setup_logger() -> Result<(), fern::InitError> {
                 } else {
                     format!("{:5}", record.level().to_string())
                 },
-                record.file().unwrap_or("?".into()),
+                record.file().unwrap_or("?"),
                 record
                     .line()
                     .map(|l| l.to_string())
-                    .unwrap_or(String::new()),
+                    .unwrap_or_default(),
                 message
             ))
         }

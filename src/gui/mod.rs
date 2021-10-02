@@ -29,7 +29,7 @@ impl Default for View {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct UadGui {
     phone: Phone,
     view: View,
@@ -55,22 +55,6 @@ pub enum Message {
     Init(AppsMessage),
 }
 
-impl Default for UadGui {
-    fn default() -> Self {
-        Self {
-            phone: Phone::default(),
-            view: View::default(),
-            apps_view: AppsView::default(),
-            about_view: AboutView::default(),
-            settings_view: SettingsView::default(),
-            about_btn: button::State::default(),
-            settings_btn: button::State::default(),
-            apps_btn: button::State::default(),
-            apps_refresh_btn: button::State::default(),
-        }
-    }
-}
-
 impl Application for UadGui {
     type Executor = iced::executor::Default;
     type Message = Message;
@@ -92,7 +76,7 @@ impl Application for UadGui {
             Message::Init(_) => {
 
                 if self.phone.android_sdk < 26 {
-                    self.settings_view.update(SettingsMessage::DisableModeToogle(true));
+                    self.settings_view.update(SettingsMessage::DisableMode(true));
                 }
                 info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)

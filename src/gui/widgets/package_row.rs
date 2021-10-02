@@ -40,13 +40,13 @@ impl PackageRow {
     ) -> Self {
         Self {
             name: name.to_string(),
-            state: state,
+            state,
             description: description.to_string(),
-            uad_list: uad_list,
-            removal: removal,
+            uad_list,
+            removal,
             package_btn_state: button::State::default(),
             action_btn_state: button::State::default(),
-            selected: selected,
+            selected,
         }
     }
 
