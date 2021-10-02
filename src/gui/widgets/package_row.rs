@@ -84,9 +84,8 @@ impl PackageRow {
             
         }
 
-        if settings.expert_mode || self.removal != Removal::Unsafe 
-                                && self.state != PackageState::Uninstalled 
-                                || phone.android_sdk > 26
+        if  (self.state != PackageState::Uninstalled && settings.expert_mode) ||
+            (self.removal != Removal::Unsafe && (self.state != PackageState::Uninstalled || phone.android_sdk > 26)) 
         {
 
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)

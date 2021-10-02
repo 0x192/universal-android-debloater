@@ -130,14 +130,20 @@ impl List {
                 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
-                        self.phone_packages[*i_user][i].selected = toggle;
-                        if self.phone_packages[*i_user][i].selected {
-                            self.selection.selected_packages.push(i);
-                            update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, true);
+                        if self.phone_packages[*i_user][i].removal == Removal::Unsafe && !settings.expert_mode {
+                            self.phone_packages[*i_user][i].selected = false;
                         } else {
-                            self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
-                            update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, false);
+                            self.phone_packages[*i_user][i].selected = toggle;
+
+                            if self.phone_packages[*i_user][i].selected {
+                                self.selection.selected_packages.push(i);
+                                update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, true);
+                            } else {
+                                self.selection.selected_packages.drain_filter(|s_i| *s_i == i);
+                                update_selection_count(&mut self.selection, self.phone_packages[*i_user][i].state, false);
+                            }
                         }
+                        
                     },
                     RowMessage::ActionPressed => {
                         let success = action_handler(

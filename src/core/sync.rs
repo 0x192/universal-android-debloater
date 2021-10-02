@@ -174,7 +174,7 @@ pub fn action_handler(selected_user: &User, package: &PackageRow, phone: &Phone,
             } else if settings.multi_user_mode {
                 phone.user_list
                     .iter()
-                    .map(|u| format!("pn enable --user {} {}", u.id, package.name))
+                    .map(|u| format!("pm enable --user {} {}", u.id, package.name))
                     .collect()
             } else {
                 vec![format!("pm enable --user {} {}", selected_user.id, package.name)]
