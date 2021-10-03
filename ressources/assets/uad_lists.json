@@ -16881,7 +16881,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.gmsgsaconfig",
@@ -16962,12 +16962,12 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.gm",
     "list": "Google",
-    "description": "",
+    "description": "Gmail (https://play.google.com/store/apps/details?id=com.google.android.gm)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
