@@ -74,15 +74,12 @@ impl Application for UadGui {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::Init(_) => {
-
-                if self.phone.android_sdk < 26 {
-                    self.settings_view.update(SettingsMessage::DisableMode(true));
-                }
                 info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)
             }
             Message::AppsRefreshPress => {
                 self.phone = Phone::default();
+                self.settings_view = SettingsView::default();
                 info!("{:-^65}", "-");
                 info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
                 self.apps_view = AppsView::default();

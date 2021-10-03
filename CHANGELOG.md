@@ -16,7 +16,8 @@ and `Removed`.
    - User switcher (picklist).
 
 ## Fixed
-- [Regression] Unsafe packages can be deleted without enabling `expert mode`
+- [Regression] Unsafe packages can be deleted without enabling `expert mode`.
+- Refresh button doesn't update settings when a (new) phone is connected.
 
 ## [0.2.2] - 2021-09-30
 
