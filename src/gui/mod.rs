@@ -112,7 +112,7 @@ impl Application for UadGui {
         let apps_btn = Button::new(&mut self.apps_btn, Text::new("Apps"))
             .on_press(Message::AppsPress)
             .padding(5)
-            .style(style::PrimaryButton::Enabled);
+            .style(style::PrimaryButton(self.settings_view.theme.palette));
 
         #[cfg(feature = "wgpu")]
         #[allow(unused_variables)]
@@ -128,19 +128,19 @@ impl Application for UadGui {
         let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_btn_display)
             .on_press(Message::AppsRefreshPress)
             .padding(5)
-            .style(style::PrimaryButton::Enabled);
+            .style(style::RefreshButton(self.settings_view.theme.palette));
 
         let uad_version = Text::new(env!("CARGO_PKG_VERSION"));
 
         let about_btn = Button::new(&mut self.about_btn, Text::new("About"))
             .on_press(Message::AboutPressed)
             .padding(5)
-            .style(style::PrimaryButton::Enabled);
+            .style(style::PrimaryButton(self.settings_view.theme.palette));
 
         let settings_btn = Button::new(&mut self.settings_btn, Text::new("Settings"))
             .on_press(Message::SettingsPressed)
             .padding(5)
-            .style(style::PrimaryButton::Enabled);
+            .style(style::PrimaryButton(self.settings_view.theme.palette));
 
         let row = Row::new()
             .width(Length::Fill)
@@ -157,11 +157,11 @@ impl Application for UadGui {
         let navigation_container = Container::new(row)
             .width(Length::Fill)
             .padding(10)
-            .style(style::NavigationContainer);
+            .style(style::NavigationContainer(self.settings_view.theme.palette));
 
         let main_container = match self.view {
             View::List => self.apps_view.view(&self.settings_view, &self.phone).map(Message::AppsAction),
-            View::About => self.about_view.view(),
+            View::About => self.about_view.view(&self.settings_view),
             View::Settings => self.settings_view.view().map(Message::SettingsAction),
         };
 

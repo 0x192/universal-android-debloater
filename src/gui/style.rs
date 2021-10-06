@@ -1,186 +1,215 @@
-use iced::{button, container, scrollable, Background, Color, Vector, checkbox};
-// 331C12
-pub const BORDER_COLOR: Color = Color::from_rgb(0.32, 0.41, 0.05);
-pub const BUTTON_COLOR_DEFAULT: Color = Color::from_rgb(0.39, 0.48, 0.1);
-pub const BUTTON_COLOR_HOVER: Color = Color::from_rgb(0.47, 0.58, 0.15);
-pub const BACKGROUND_COLOR: Color = Color::from_rgb(0.27, 0.16, 0.11);
-pub const NAVIGATION_COLOR: Color = Color::from_rgb(0.2, 0.11, 0.07);
-pub const ROW_COLOR_PRIMARY: Color = Color::from_rgb(0.55, 0.44, 0.27);
-pub const UNINSTALL_BUTTON_COLOR: Color = Color::from_rgb(0.6, 0.1, 0.0);
-pub const UNINSTALL_BORDER_COLOR: Color = Color::from_rgb(0.48, 0.01, 0.0);
-pub const UNINSTALL_COLOR_HOVER: Color = Color::from_rgb(0.60, 0.05, 0.0);
+use iced::{
+    button, container, scrollable, Background, Color, checkbox, 
+    text_input, pick_list,
+};
+use crate::core::theme::ColorPalette;
 
-
-/// Color for disabled elements
-pub const DISABLED_COLOR: Color = Color::from_rgb(
-    195_f32 / 255.0,
-    195_f32 / 255.0,
-    195_f32 / 255.0,
-);
-
-
-pub const GREY_SMALL_SETTINGS_COLOR: Color = Color::from_rgb (
-    211_f32 / 255.0,
-    211_f32 / 255.0,
-    211_f32 / 255.0,
-);
-
-pub enum PrimaryButton {
-    Enabled,
-    //Disabled,
-}
-
-impl button::StyleSheet for PrimaryButton {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Enabled => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_DEFAULT)),
-                border_color: BORDER_COLOR,
-                border_width: 2.0,
-                shadow_offset: Vector::new(1.0, 1.0),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..button::Style::default()
-            },
-            /*Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
-                border_color: Color::from_rgb(0.29, 0.19, 0.03),
-                border_width: 2.0,
-                shadow_offset: Vector::new(1.0, 1.0),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..button::Style::default()
-            },*/
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Enabled => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
-                text_color: Color::WHITE,
-                ..self.active()
-            },
-            /*Self::Disabled => button::Style {
-                background: Some(Background::Color(Color::from_rgb8(91, 110, 117))),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..self.active()
-            },*/
-        }
-    }
-}
-
-
-pub enum PackageButton {
-    Uninstall,
-    Restore,
-}
-
-impl button::StyleSheet for PackageButton {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Uninstall => button::Style {
-                background: Some(Background::Color(UNINSTALL_BUTTON_COLOR)),
-                border_color: UNINSTALL_BORDER_COLOR,
-                border_width: 2.0,
-                shadow_offset: Vector::new(1.0, 1.0),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..button::Style::default()
-            },
-            Self::Restore => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_DEFAULT)),
-                border_color: BORDER_COLOR,
-                border_width: 2.0,
-                shadow_offset: Vector::new(1.0, 1.0),
-                text_color: Color::from_rgb8(0xEE, 0xEE, 0xEE),
-                ..button::Style::default()
-            },
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Restore => button::Style {
-                background: Some(Background::Color(BUTTON_COLOR_HOVER)),
-                text_color: Color::WHITE,
-                ..self.active()
-            },
-            Self::Uninstall => button::Style {
-                background: Some(Background::Color(UNINSTALL_COLOR_HOVER)),
-                text_color: Color::WHITE,
-                ..self.active()
-            },
-        }
-    }
-}
-
-pub struct Content;
+pub struct Content(pub ColorPalette);
 impl container::StyleSheet for Content {
     fn style(&self) -> container::Style {
         container::Style {
-            background: Some(Background::Color(BACKGROUND_COLOR)),
-            text_color: Some(Color::WHITE),
+            background: Some(Background::Color(self.0.base.background)),
+            text_color: Some(self.0.bright.surface),
             ..container::Style::default()
         }
     }
 }
 
-pub struct NavigationContainer;
+pub struct NavigationContainer(pub ColorPalette);
 impl container::StyleSheet for NavigationContainer {
     fn style(&self) -> container::Style {
         container::Style {
-            background: Some(Background::Color(NAVIGATION_COLOR)),
-            text_color: Some(Color::WHITE),
+            background: Some(Background::Color(self.0.base.foreground)),
+            text_color: Some(self.0.bright.surface),
             ..container::Style::default()
         }
     }
 }
 
-pub struct PackageRow;
-impl button::StyleSheet for PackageRow {
+pub struct PrimaryButton(pub ColorPalette);
+impl button::StyleSheet for PrimaryButton {
     fn active(&self) -> button::Style {
         button::Style {
-            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-            text_color: Color::WHITE,
+            border_color: Color {
+                a: 0.5,
+                ..self.0.bright.primary
+            },
+            border_width: 1.0,
+            border_radius: 2.0,
+            text_color: self.0.bright.primary,
             ..button::Style::default()
         }
     }
 
     fn hovered(&self) -> button::Style {
         button::Style {
-            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-            text_color: Color::WHITE,
+            background: Some(Background::Color(Color {
+                a: 0.25,
+                ..self.0.normal.surface
+            })),
+            text_color: self.0.bright.primary,
+            ..self.active()
+        }
+    }
+}
+
+pub struct RefreshButton(pub ColorPalette);
+impl button::StyleSheet for RefreshButton {
+    fn active(&self) -> button::Style {
+        button::Style {
+            border_color: Color {
+                a: 0.5,
+                ..self.0.bright.primary
+            },
+            border_width: 1.0,
+            border_radius: 2.0,
+            text_color: self.0.bright.primary,
+            ..button::Style::default()
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        button::Style {
+            background: Some(Background::Color(Color {
+                a: 0.25,
+                ..self.0.normal.surface
+            })),
+            text_color: self.0.bright.primary,
+            ..self.active()
+        }
+    }
+}
+
+
+pub enum PackageButton {
+    Uninstall(ColorPalette),
+    Restore(ColorPalette),
+}
+
+impl button::StyleSheet for PackageButton {
+    fn active(&self) -> button::Style {
+        match self {
+            Self::Uninstall(palette) => button::Style {
+                border_color: Color {
+                    a: 0.5,
+                    ..palette.bright.error
+                },
+                border_width: 1.0,
+                border_radius: 2.0,
+                text_color: palette.bright.error,
+                ..button::Style::default()
+            },
+            Self::Restore(palette) => button::Style {
+                border_color: Color {
+                    a: 0.5,
+                    ..palette.bright.secondary
+                },
+                border_width: 1.0,
+                border_radius: 2.0,
+                text_color: palette.bright.secondary,
+                ..button::Style::default()
+            },
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        match self {
+            Self::Restore(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                    a: 0.25,
+                    ..palette.normal.primary
+                })),
+                text_color: palette.bright.primary,
+                ..self.active()
+            },
+            Self::Uninstall(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                    a: 0.25,
+                    ..palette.normal.primary
+                })),
+                text_color: palette.bright.primary,
+                ..self.active()
+            },
+        }
+    }
+
+    fn disabled(&self) -> button::Style {
+        match self {
+            Self::Restore(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                a: 0.05,
+                ..palette.normal.primary
+                })),
+                text_color: Color {
+                    a: 0.50,
+                    ..palette.bright.primary
+                },
+                ..self.active()
+            },
+            Self::Uninstall(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                a: 0.05,
+                ..palette.normal.error
+                })),
+                text_color: Color {
+                    a: 0.50,
+                    ..palette.normal.error
+                },
+                ..self.active()
+            },
+        }
+    }
+}
+
+pub struct PackageRow(pub ColorPalette);
+impl button::StyleSheet for PackageRow {
+    fn active(&self) -> button::Style {
+        button::Style {
+            background: Some(Background::Color(self.0.base.foreground)),
+            text_color: self.0.bright.surface,
+            ..button::Style::default()
+        }
+    }
+    fn hovered(&self) -> button::Style {
+        button::Style {
+            background: Some(Background::Color(Color {
+                a: 0.25,
+                ..self.0.normal.primary
+            })),
+            text_color: self.0.bright.primary,
             ..self.active()
         }
     }
     fn pressed(&self) -> button::Style {
             button::Style {
                 background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
-                text_color: Color::WHITE,
+                text_color: self.0.bright.primary,
                 ..self.active()
             }
         }
 }
 
-pub struct Description;
+pub struct Description(pub ColorPalette);
 impl container::StyleSheet for Description {
     fn style(&self) -> container::Style {
         container::Style {
-            background: Some(Background::Color(ROW_COLOR_PRIMARY)),
-            text_color: Some(Color::WHITE),
+            background: Some(Background::Color(self.0.base.foreground)),
+            text_color: Some(self.0.bright.surface),
             ..container::Style::default()
         }
     }
 }
 
-pub struct Scrollable;
+pub struct Scrollable(pub ColorPalette);
 impl scrollable::StyleSheet for Scrollable {
     fn active(&self) -> scrollable::Scrollbar {
         scrollable::Scrollbar {
-            background: Some(Background::Color(Color::TRANSPARENT)),
+            background: Some(Background::Color(self.0.base.background)),
             border_radius: 0.0,
             border_width: 0.0,
             border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: BUTTON_COLOR_DEFAULT,
+                color: self.0.base.foreground,
                 border_radius: 2.0,
                 border_width: 0.0,
                 border_color: Color::TRANSPARENT,
@@ -208,44 +237,124 @@ impl scrollable::StyleSheet for Scrollable {
 
 
 pub enum SelectionCheckBox {
-    Enabled,
-    Disabled
+    Enabled(ColorPalette),
+    Disabled(ColorPalette)
 }
 
 impl checkbox::StyleSheet for SelectionCheckBox {
     fn active(&self, _is_checked: bool) -> checkbox::Style {
         match self {
-            Self::Enabled => checkbox::Style {
-                background: Background::Color(Color::from_rgb(0.95, 0.95, 0.95)),
-                checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
-                border_radius: 5.0,
+            Self::Enabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.background),
+                checkmark_color: palette.bright.primary,
+                border_radius: 2.0,
                 border_width: 1.0,
-                border_color: Color::from_rgb(0.6, 0.6, 0.6),
+                border_color: palette.normal.primary,
             },
-            Self::Disabled => checkbox::Style {
-                    background: Background::Color(DISABLED_COLOR),
-                    border_color: Color::TRANSPARENT,
-                    checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
-                    border_radius: 5.0,
-                    border_width: 1.0,
+            Self::Disabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.foreground),
+                checkmark_color: palette.bright.primary,
+                border_radius: 2.0,
+                border_width: 1.0,
+                border_color: palette.normal.primary,
             },
         }
     }
 
     fn hovered(&self, is_checked: bool) -> checkbox::Style {
         match self {
-            Self::Enabled => checkbox::Style {
-                background: Background::Color(Color::from_rgb(0.90, 0.90, 0.90)),
-                ..self.active(is_checked)
+            Self::Enabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.foreground),
+                checkmark_color: palette.bright.primary,
+                border_radius: 2.0,
+                border_width: 2.0,
+                border_color: palette.bright.primary,
             },
 
-            Self::Disabled => checkbox::Style {
-                    background: Background::Color(DISABLED_COLOR),
-                    border_color: Color::TRANSPARENT,
-                    checkmark_color: Color::from_rgb(0.3, 0.3, 0.3),
-                    border_radius: 5.0,
-                    border_width: 1.0,
+            Self::Disabled(_) => checkbox::Style {
+                ..self.active(is_checked)
             },
+        }
+    }
+}
+
+pub struct SearchInput(pub ColorPalette);
+impl text_input::StyleSheet for SearchInput {
+    fn active(&self) -> text_input::Style {
+        text_input::Style {
+            background: Background::Color(self.0.base.foreground),
+            border_radius: 0.0,
+            border_width: 0.0,
+            border_color: self.0.base.foreground,
+        }
+    }
+
+    fn focused(&self) -> text_input::Style {
+        text_input::Style {
+            background: Background::Color(self.0.base.foreground),
+            border_radius: 2.0,
+            border_width: 1.0,
+            border_color: Color {
+                a: 0.5,
+                ..self.0.normal.primary
+            },
+        }
+    }
+
+    fn placeholder_color(&self) -> Color {
+        self.0.normal.surface
+    }
+
+    fn value_color(&self) -> Color {
+        self.0.bright.primary
+    }
+
+    fn selection_color(&self) -> Color {
+        self.0.bright.secondary
+    }
+
+    /// Produces the style of an hovered text input.
+    fn hovered(&self) -> text_input::Style {
+        self.focused()
+    }
+}
+
+pub struct PickList(pub ColorPalette);
+impl pick_list::StyleSheet for PickList {
+    fn menu(&self) -> pick_list::Menu {
+        pick_list::Menu {
+            text_color: self.0.bright.surface,
+            background: Background::Color(self.0.base.foreground),
+            border_width: 1.0,
+            border_color: self.0.base.background,
+            selected_background: Background::Color(Color {
+                a: 0.15,
+                ..self.0.normal.primary
+            }),
+            selected_text_color: self.0.bright.primary,
+        }
+    }
+
+    fn active(&self) -> pick_list::Style {
+        pick_list::Style {
+            text_color: self.0.bright.surface,
+            background: self.0.base.background.into(),
+            border_width: 1.0,
+            border_color: Color {
+                a: 0.5,
+                ..self.0.normal.primary
+            },
+            border_radius: 2.0,
+            icon_size: 0.5,
+            placeholder_color: self.0.bright.surface,
+        }
+    }
+
+    fn hovered(&self) -> pick_list::Style {
+        let active = self.active();
+        pick_list::Style {
+            text_color: self.0.bright.primary,
+            ..active
         }
     }
 }
