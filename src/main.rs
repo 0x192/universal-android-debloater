@@ -1,6 +1,5 @@
 #![windows_subsystem = "windows"]
 #![feature(drain_filter)]
-#![feature(const_option)]
 #[macro_use] extern crate log;
 
 use std::{fs::OpenOptions, fmt::Arguments};
