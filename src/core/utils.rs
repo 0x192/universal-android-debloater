@@ -2,8 +2,10 @@ use crate::core::uad_lists::{UadList, PackageState, Package, Removal};
 use crate::gui::widgets::package_row::PackageRow;
 use crate::gui::views::list::Selection;
 use crate::core::sync::{list_all_system_packages, hashset_system_packages, User};
-use std::collections::HashMap;
+use crate::gui::ICONS;
 
+use iced::{Text, alignment, Length};
+use std::collections::HashMap;
 use std::fs; 
 use std::io::{self, prelude::*, BufReader};
 
@@ -105,4 +107,12 @@ pub fn import_selection(packages: &mut Vec<PackageRow>, selection: &mut Selectio
     }
 
     Ok(())
+}
+
+pub fn icon(unicode: char) -> Text {
+    Text::new(&unicode.to_string())
+        .font(ICONS)
+        .width(Length::Units(20))
+        .horizontal_alignment(alignment::Horizontal::Center)
+        .size(20)
 }

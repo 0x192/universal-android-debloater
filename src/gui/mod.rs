@@ -7,14 +7,18 @@ pub use views::list::{List as AppsView, Message as AppsMessage};
 pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
 pub use crate::core::uad_lists::Package;
 pub use crate::core::sync::{Phone};
+use crate::core::utils::icon;
 
 use iced::{
-    button, Alignment, Application, Button, Column, Command, Space,
+    button, Alignment, Application, Button, Column, Command, Space, Font,
     Container, Element, Length, Row, Settings, Text, window::Settings as Window,
 };
 
-#[cfg(feature = "wgpu")]
-use iced::Svg;
+pub const ICONS: Font = Font::External {
+    name: "Icons",
+    bytes: include_bytes!("../../ressources/assets/icons.ttf"),
+};
+
 
 #[derive(Debug, Clone)]
 pub enum View {
@@ -114,18 +118,7 @@ impl Application for UadGui {
             .padding(5)
             .style(style::PrimaryButton(self.settings_view.theme.palette));
 
-        #[cfg(feature = "wgpu")]
-        #[allow(unused_variables)]
-        let refresh_btn_display = Svg::from_path(
-            format!("{}/ressources/assets/refresh.svg", env!("CARGO_MANIFEST_DIR"))
-        )
-            .width(Length::Units(17))
-            .height(Length::Units(17));
-
-        #[cfg(feature = "glow")] // No svg support
-        let refresh_btn_display = Text::new("Refresh");
-
-        let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_btn_display)
+        let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_icon())
             .on_press(Message::AppsRefreshPress)
             .padding(5)
             .style(style::RefreshButton(self.settings_view.theme.palette));
@@ -192,4 +185,9 @@ impl UadGui {
     pub async fn load_phone_packages() -> AppsMessage {
         AppsMessage::LoadPackages
     }
+}
+
+
+fn refresh_icon() -> Text {
+    icon('\u{E900}')
 }

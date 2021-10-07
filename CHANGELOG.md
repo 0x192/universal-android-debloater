@@ -21,6 +21,7 @@ and `Removed`.
 - [Regression] Unsafe packages can be deleted without enabling `expert mode`.
 - The refresh button doesn't update settings when a (new) phone is connected.
 - [Regression] Restore buttons are disabled when connecting an Android 8.0 phone.
+- Refresh icon does not appear (#17)
 
 ## [0.2.2] - 2021-09-30
 
