@@ -148,12 +148,12 @@ impl button::StyleSheet for PackageButton {
             },
             Self::Uninstall(palette) => button::Style {
                 background: Some(Background::Color(Color {
-                a: 0.05,
-                ..palette.normal.error
+                a: 0.01,
+                ..palette.bright.error
                 })),
                 text_color: Color {
                     a: 0.50,
-                    ..palette.normal.error
+                    ..palette.bright.error
                 },
                 ..self.active()
             },
@@ -167,6 +167,9 @@ impl button::StyleSheet for PackageRow {
         button::Style {
             background: Some(Background::Color(self.0.base.foreground)),
             text_color: self.0.bright.surface,
+            border_radius: 5.0,
+            border_width: 0.0,
+            border_color: self.0.base.background,
             ..button::Style::default()
         }
     }
@@ -195,7 +198,7 @@ impl container::StyleSheet for Description {
         container::Style {
             background: Some(Background::Color(self.0.base.foreground)),
             text_color: Some(self.0.bright.surface),
-            border_radius: 0.0,
+            border_radius: 5.0,
             border_width: 0.0,
             border_color: self.0.base.background,
             ..container::Style::default()
@@ -285,9 +288,9 @@ impl checkbox::StyleSheet for SelectionCheckBox {
             Self::Enabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.background),
                 checkmark_color: palette.bright.primary,
-                border_radius: 2.0,
-                border_width: 0.0,
-                border_color: palette.normal.primary,
+                border_radius: 5.0,
+                border_width: 1.0,
+                border_color: palette.base.background,
             },
             Self::Disabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
@@ -304,9 +307,9 @@ impl checkbox::StyleSheet for SelectionCheckBox {
             Self::Enabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
                 checkmark_color: palette.bright.primary,
-                border_radius: 2.0,
+                border_radius: 5.0,
                 border_width: 2.0,
-                border_color: palette.bright.primary,
+                border_color: palette.normal.primary,
             },
 
             Self::Disabled(_) => checkbox::Style {

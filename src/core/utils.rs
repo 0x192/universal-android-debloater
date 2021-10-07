@@ -112,7 +112,7 @@ pub fn import_selection(packages: &mut Vec<PackageRow>, selection: &mut Selectio
 pub fn icon(unicode: char) -> Text {
     Text::new(&unicode.to_string())
         .font(ICONS)
-        .width(Length::Units(20))
+        .width(Length::Units(17))
         .horizontal_alignment(alignment::Horizontal::Center)
-        .size(20)
+        .size(17)
 }

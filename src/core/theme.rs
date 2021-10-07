@@ -111,7 +111,7 @@ impl Theme {
                     primary: hex_to_color("#bd94f9").unwrap(),
                     secondary: hex_to_color("#49eb7a").unwrap(),
                     surface: hex_to_color("#f4f8f3").unwrap(),
-                    error: hex_to_color("#cc0000").unwrap(),
+                    error: hex_to_color("#E63E6D").unwrap(),
                 },
             },
         }
