@@ -15,7 +15,7 @@ edition = "2021"
 
 [features]
 default = ["wgpu"]
-wgpu = ["iced/svg"] # iced/wgpu is default
+wgpu = [] # iced/wgpu is default
 glow = ["iced/glow"] # OpenGL support
 
 [dependencies]
