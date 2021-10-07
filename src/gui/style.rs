@@ -195,7 +195,45 @@ impl container::StyleSheet for Description {
         container::Style {
             background: Some(Background::Color(self.0.base.foreground)),
             text_color: Some(self.0.bright.surface),
+            border_radius: 0.0,
+            border_width: 0.0,
+            border_color: self.0.base.background,
             ..container::Style::default()
+        }
+    }
+}
+
+pub struct DescriptionScrollable(pub ColorPalette);
+impl scrollable::StyleSheet for DescriptionScrollable {
+    fn active(&self) -> scrollable::Scrollbar {
+        scrollable::Scrollbar {
+            background: Some(Background::Color(self.0.base.foreground)),
+            border_radius: 5.0,
+            border_width: 0.0,
+            border_color: Color::TRANSPARENT,
+            scroller: scrollable::Scroller {
+                color: self.0.base.foreground,
+                border_radius: 0.0,
+                border_width: 0.0,
+                border_color: Color::TRANSPARENT,
+            },
+        }
+    }
+
+    fn hovered(&self) -> scrollable::Scrollbar {
+        let active = self.active();
+
+        scrollable::Scrollbar {
+            scroller: scrollable::Scroller { ..active.scroller },
+            ..active
+        }
+    }
+
+    fn dragging(&self) -> scrollable::Scrollbar {
+        let hovered = self.hovered();
+        scrollable::Scrollbar {
+            scroller: scrollable::Scroller { ..hovered.scroller },
+            ..hovered
         }
     }
 }
@@ -248,13 +286,13 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 background: Background::Color(palette.base.background),
                 checkmark_color: palette.bright.primary,
                 border_radius: 2.0,
-                border_width: 1.0,
+                border_width: 0.0,
                 border_color: palette.normal.primary,
             },
             Self::Disabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
                 checkmark_color: palette.bright.primary,
-                border_radius: 2.0,
+                border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.normal.primary,
             },
@@ -283,7 +321,7 @@ impl text_input::StyleSheet for SearchInput {
     fn active(&self) -> text_input::Style {
         text_input::Style {
             background: Background::Color(self.0.base.foreground),
-            border_radius: 0.0,
+            border_radius: 5.0,
             border_width: 0.0,
             border_color: self.0.base.foreground,
         }

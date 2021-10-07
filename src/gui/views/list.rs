@@ -48,6 +48,7 @@ pub struct List {
     apply_remove_selection: button::State,
     apply_restore_selection: button::State,
     package_scrollable_state: scrollable::State,
+    description_scrollable_state: scrollable::State,
     package_state_picklist: pick_list::State<PackageState>,
     list_picklist: pick_list::State<UadList>,
     removal_picklist: pick_list::State<Removal>,
@@ -351,16 +352,16 @@ impl List {
                 .style(style::Scrollable(settings.theme.palette));
 
             // let mut packages_v: Vec<&str> = self.packages.lines().collect();
-            let description_panel = Container::new(
-                Row::new()
-                .align_items(Alignment::Center)
-                .push(Text::new(&self.description))
-            )
-            .style(style::Description(settings.theme.palette))
-            .padding(10)
-            .height(Length::FillPortion(2))
-            .width(Length::Fill);
 
+            let description_scroll = Scrollable::new(&mut self.description_scrollable_state)
+                .push(Text::new(&self.description))
+                .padding(7)
+                .style(style::DescriptionScrollable(settings.theme.palette));
+
+            let description_panel = Container::new(description_scroll)
+                .height(Length::FillPortion(2))
+                .width(Length::Fill)
+                .style(style::Description(settings.theme.palette));
 
             let restore_action = if settings.disable_mode {"Enable/Restore"} else {"Restore"};
             let remove_action = if settings.disable_mode {"Disable"} else {"Uninstall"};

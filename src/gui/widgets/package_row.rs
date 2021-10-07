@@ -118,6 +118,7 @@ impl PackageRow {
                                     .style(button_style)
                     )
                 )
+                .padding(8)
                 .style(style::PackageRow(settings.theme.palette))
                 .width(Length::Fill)
                 .on_press(Message::PackagePressed)
