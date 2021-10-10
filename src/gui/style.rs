@@ -197,7 +197,6 @@ impl container::StyleSheet for Description {
             border_radius: 5.0,
             border_width: 0.0,
             border_color: self.0.base.background,
-            ..container::Style::default()
         }
     }
 }
