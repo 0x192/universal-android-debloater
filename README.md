@@ -1,7 +1,7 @@
 # Universal Android Debloater GUI
 **DISCLAIMER**: Use it at your own risk. I am not responsible for anything that could happen to your phone. 
 
-![uad-rust-gui-screenshot](ressources/screenshots/v0.3.png)
+<img src="/ressources/screenshots/v0.3.png" width="850" alt="uad_screenshot">
 
 **This software is still in a early stage of developpement. Check out the issues, and feel free to contribute!**
 
