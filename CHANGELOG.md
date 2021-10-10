@@ -10,12 +10,14 @@ and `Removed`.
 
 ## [Unreleased]
 
+## [0.3] - 2021-10-10
+
 ### Added
-- Multi-user support (#16): You can now debloat/restore for any user of the phone (not only the primary user 0). 
-   - `Multi user mode` setting (default to on for Android 5+) allowing to remove packages for all users ([a work profile is another user](https://developer.android.com/work/managed-profiles)) instead of only the selected user.
+- Multi-user support (#16): You can now debloat/restore apps for any user of the phone (not only the primary user 0). 
+   - `Multi user mode` setting (default to `on` for Android 5+) allowing to remove packages for all users ([a work profile is another user](https://developer.android.com/work/managed-profiles)) instead of only the selected user.
    - User switcher (picklist).
 - New themes! (#11) : light, dark and lupin. Lupin theme is now the new default theme. Themes can be changed from the settings.
-- Description field scrollbar: you can now scroll long description (#40).
+- Description field scrollbar: you can now scroll long descriptions (#40).
 
 ## Fixed
 - [Regression] Unsafe packages can be deleted without enabling `expert mode`.

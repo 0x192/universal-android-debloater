@@ -1,9 +1,9 @@
 # Universal Android Debloater GUI
 **DISCLAIMER**: Use it at your own risk. I am not responsible for anything that could happen to your phone. 
 
-![uad-rust-gui-screenshot](ressources/screenshots/v0.2.png)
+![uad-rust-gui-screenshot](ressources/screenshots/v0.3.png)
 
-**This software is still in a very early stage of developpement. Check out the issues, and feel free to contribute!**
+**This software is still in a early stage of developpement. Check out the issues, and feel free to contribute!**
 
 ## Summary
 This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater) which aims at improving privacy and battery performance by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface). 
@@ -14,6 +14,7 @@ In any case, you can NOT brick your device with this software! That's the main t
 
 ## Features 
 * [X] Uninstall/Disable and Restore/Enable system packages
+* [X] Multi-user support (e.g apps in work profiles)
 * [X] Export/Import your selection in `uad_exported_selection.txt`
 * [X] Logging of all your action in the `uad.log` file
 
@@ -55,7 +56,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 
 
 ## How to use it 
-- **Read the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/FAQ)!**
+- **Read the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ)!**
 - **Do a proper backup of your data! You can never be too careful!**
 - Enable *Developer Options* on your smartphone.
 - Turn on *USB Debugging* from the developper panel.
@@ -114,7 +115,7 @@ $ brew install android-platform-tools
 </p>
 
 
-- Download the latest stable release of UAD GUI [here](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/releases).
+- Download the latest stable release of UAD GUI [here](https://github.com/0x192/universal-android-debloater/releases).
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 
@@ -124,8 +125,9 @@ $ brew install android-platform-tools
 
 Hey-hey-hey! Don't go away so fast! This is a community project. That means I need you! I'm sure you want to make this project better anyway.
 
-==> [How to contribute](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/home#how-to-contribute)
+==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki)
 
 ## Special thanks
 
-[@mawilms](https://github.com/mawilms) for his LotRO plugin manager ([Lembas](https://github.com/mawilms/lembas)) which helped me a lot to understand how to use the [Iced](https://github.com/hecrj/iced) GUI library.
+- [@mawilms](https://github.com/mawilms) for his LotRO plugin manager ([Lembas](https://github.com/mawilms/lembas)) which helped me a lot to understand how to use the [Iced](https://github.com/hecrj/iced) GUI library.
+- [@casperstorm](https://github.com/casperstorm) for the UI/UX inspiration.

@@ -3,7 +3,7 @@ cargo-features = ["strip"] # nightly
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.2.2"
+version = "0.3.0"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
 homepage = "https://gitlab.com/W1nst0n/universal-android-debloater-rs"
