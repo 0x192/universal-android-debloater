@@ -1,15 +1,18 @@
-use crate::core::uad_lists::{UadList, PackageState, Package, Removal};
-use crate::gui::widgets::package_row::PackageRow;
+use crate::core::sync::{hashset_system_packages, list_all_system_packages, User};
+use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
-use crate::core::sync::{list_all_system_packages, hashset_system_packages, User};
+use crate::gui::widgets::package_row::PackageRow;
 use crate::gui::ICONS;
 
-use iced::{Text, alignment, Length};
+use iced::{alignment, Length, Text};
 use std::collections::HashMap;
-use std::fs; 
+use std::fs;
 use std::io::{self, prelude::*, BufReader};
 
-pub fn fetch_packages(uad_lists: &'static HashMap<String, Package>, user_id: &Option<&User>) -> Vec<PackageRow> {
+pub fn fetch_packages(
+    uad_lists: &'static HashMap<String, Package>,
+    user_id: &Option<&User>,
+) -> Vec<PackageRow> {
     let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
     let enabled_system_packages = hashset_system_packages(PackageState::Enabled, user_id);
     let disabled_system_packages = hashset_system_packages(PackageState::Disabled, user_id);
@@ -27,46 +30,49 @@ pub fn fetch_packages(uad_lists: &'static HashMap<String, Package>, user_id: &Op
 
         if uad_lists.contains_key(p_name) {
             description = match &uad_lists.get(p_name).unwrap().description {
-                            Some(descr) => descr,
-                            None => "[No description]",
-                        };
+                Some(descr) => descr,
+                None => "[No description]",
+            };
             uad_list = uad_lists.get(p_name).unwrap().list;
             removal = uad_lists.get(p_name).unwrap().removal;
         }
 
         if enabled_system_packages.contains(p_name) {
-           state = PackageState::Enabled;
+            state = PackageState::Enabled;
         } else if disabled_system_packages.contains(p_name) {
             state = PackageState::Disabled;
         }
 
-        let package_row = PackageRow::new(
-            p_name,
-            state,
-            description,
-            uad_list,
-            removal,
-            false,
-        );
+        let package_row = PackageRow::new(p_name, state, description, uad_list, removal, false);
         user_package.push(package_row);
     }
     user_package.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
     user_package
 }
 
-
-
 pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
     match p_state {
         PackageState::Enabled => {
-            if add { selection.enabled += 1 } else { selection.enabled -= 1 };
-        },
+            if add {
+                selection.enabled += 1
+            } else {
+                selection.enabled -= 1
+            };
+        }
         PackageState::Disabled => {
-            if add { selection.disabled += 1 } else { selection.disabled -= 1 };
-        },
+            if add {
+                selection.disabled += 1
+            } else {
+                selection.disabled -= 1
+            };
+        }
         PackageState::Uninstalled => {
-            if add { selection.uninstalled += 1 } else { selection.uninstalled -= 1 };
-        },
+            if add {
+                selection.uninstalled += 1
+            } else {
+                selection.uninstalled -= 1
+            };
+        }
         PackageState::All => {}
     };
 }
@@ -81,12 +87,15 @@ pub async fn export_selection(packages: Vec<PackageRow>) -> Result<bool, String>
 
     match fs::write("uad_exported_selection.txt", selected) {
         Ok(_) => Ok(true),
-        Err(err) => Err(err.to_string())
+        Err(err) => Err(err.to_string()),
     }
 }
 
 #[allow(clippy::needless_collect)] // false positive: https://github.com/rust-lang/rust-clippy/issues/6164
-pub fn import_selection(packages: &mut Vec<PackageRow>, selection: &mut Selection) -> io::Result<()> {
+pub fn import_selection(
+    packages: &mut Vec<PackageRow>,
+    selection: &mut Selection,
+) -> io::Result<()> {
     let file = fs::File::open("uad_exported_selection.txt")?;
     let reader = BufReader::new(file);
     let imported_selection: Vec<String> = reader
@@ -96,7 +105,7 @@ pub fn import_selection(packages: &mut Vec<PackageRow>, selection: &mut Selectio
 
     *selection = Selection::default(); // should already be empty normally
 
-    for (i,p) in packages.iter_mut().enumerate() {
+    for (i, p) in packages.iter_mut().enumerate() {
         if imported_selection.contains(&p.name) {
             p.selected = true;
             selection.selected_packages.push(i);

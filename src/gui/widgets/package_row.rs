@@ -1,12 +1,11 @@
-use crate::core::uad_lists::{UadList, PackageState, Removal};
 use crate::core::sync::Phone;
+use crate::core::uad_lists::{PackageState, Removal, UadList};
 
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
 
 use iced::{
-    Alignment, alignment, Command, Element, Space, Length, Row, Text, Button, 
-    button, Checkbox,
+    alignment, button, Alignment, Button, Checkbox, Command, Element, Length, Row, Space, Text,
 };
 
 #[derive(Clone, Debug)]
@@ -36,7 +35,6 @@ impl PackageRow {
         uad_list: UadList,
         removal: Removal,
         selected: bool,
-
     ) -> Self {
         Self {
             name: name.to_string(),
@@ -62,10 +60,13 @@ impl PackageRow {
         let action_btn;
         let selection_checkbox;
 
-
         match self.state {
             PackageState::Enabled => {
-                action_text = if settings.disable_mode { "Disable" } else { "Uninstall" };
+                action_text = if settings.disable_mode {
+                    "Disable"
+                } else {
+                    "Uninstall"
+                };
                 button_style = style::PackageButton::Uninstall(settings.theme.palette);
             }
             PackageState::Disabled => {
@@ -81,13 +82,11 @@ impl PackageRow {
                 button_style = style::PackageButton::Restore(settings.theme.palette);
                 warn!("Incredible! Something impossible happenned!");
             }
-            
         }
 
-        if  (self.state != PackageState::Uninstalled && settings.expert_mode) ||
-            (self.removal != Removal::Unsafe && phone.android_sdk >= 26)
+        if (self.state != PackageState::Uninstalled && settings.expert_mode)
+            || (self.removal != Removal::Unsafe && phone.android_sdk >= 26)
         {
-
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
                 .style(style::SelectionCheckBox::Enabled(settings.theme.palette));
 
@@ -96,7 +95,6 @@ impl PackageRow {
                 Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center),
             )
             .on_press(Message::ActionPressed);
-
         } else {
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
                 .style(style::SelectionCheckBox::Disabled(settings.theme.palette));
@@ -108,21 +106,19 @@ impl PackageRow {
         }
 
         Row::new()
-            .push(Button::new(
-                &mut self.package_btn_state,
-                Row::new()
-                    .align_items(Alignment::Center)
-                    .push(selection_checkbox)
-                    .push(Text::new(&self.name).width(Length::FillPortion(8)))
-                    .push(action_btn.width(Length::FillPortion(1))
-                                    .style(button_style)
-                    )
+            .push(
+                Button::new(
+                    &mut self.package_btn_state,
+                    Row::new()
+                        .align_items(Alignment::Center)
+                        .push(selection_checkbox)
+                        .push(Text::new(&self.name).width(Length::FillPortion(8)))
+                        .push(action_btn.width(Length::FillPortion(1)).style(button_style)),
                 )
                 .padding(8)
                 .style(style::PackageRow(settings.theme.palette))
                 .width(Length::Fill)
-                .on_press(Message::PackagePressed)
-
+                .on_press(Message::PackagePressed),
             )
             .push(Space::with_width(Length::Units(15)))
             .align_items(Alignment::Center)

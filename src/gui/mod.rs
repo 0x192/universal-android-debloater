@@ -2,16 +2,16 @@ pub mod style;
 pub mod views;
 pub mod widgets;
 
+pub use crate::core::sync::Phone;
+pub use crate::core::uad_lists::Package;
+use crate::core::utils::icon;
 pub use views::about::About as AboutView;
 pub use views::list::{List as AppsView, Message as AppsMessage};
-pub use views::settings::{Settings as SettingsView, Message as SettingsMessage};
-pub use crate::core::uad_lists::Package;
-pub use crate::core::sync::{Phone};
-use crate::core::utils::icon;
+pub use views::settings::{Message as SettingsMessage, Settings as SettingsView};
 
 use iced::{
-    button, Alignment, Application, Button, Column, Command, Space, Font,
-    Container, Element, Length, Row, Settings, Text, window::Settings as Window,
+    button, window::Settings as Window, Alignment, Application, Button, Column, Command, Container,
+    Element, Font, Length, Row, Settings, Space, Text,
 };
 
 pub const ICONS: Font = Font::External {
@@ -19,12 +19,11 @@ pub const ICONS: Font = Font::External {
     bytes: include_bytes!("../../ressources/assets/icons.ttf"),
 };
 
-
 #[derive(Debug, Clone)]
 pub enum View {
     List,
     About,
-    Settings,   
+    Settings,
 }
 
 impl Default for View {
@@ -78,14 +77,20 @@ impl Application for UadGui {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::Init(_) => {
-                info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
+                info!(
+                    "ANDROID_SDK: {} | PHONE: {}",
+                    self.phone.android_sdk, self.phone.model
+                );
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)
             }
             Message::AppsRefreshPress => {
                 self.phone = Phone::default();
                 self.settings_view = SettingsView::default();
                 info!("{:-^65}", "-");
-                info!("ANDROID_SDK: {} | PHONE: {}", self.phone.android_sdk, self.phone.model);
+                info!(
+                    "ANDROID_SDK: {} | PHONE: {}",
+                    self.phone.android_sdk, self.phone.model
+                );
                 self.apps_view = AppsView::default();
                 self.view = View::List;
                 Command::perform(Self::load_phone_packages(), Message::AppsAction)
@@ -102,9 +107,10 @@ impl Application for UadGui {
                 self.view = View::Settings;
                 Command::none()
             }
-            Message::AppsAction(msg) => {
-                self.apps_view.update(&self.settings_view, &mut self.phone, msg).map(Message::AppsAction)
-            }
+            Message::AppsAction(msg) => self
+                .apps_view
+                .update(&self.settings_view, &mut self.phone, msg)
+                .map(Message::AppsAction),
             Message::SettingsAction(msg) => {
                 self.settings_view.update(msg);
                 Command::none()
@@ -153,7 +159,10 @@ impl Application for UadGui {
             .style(style::NavigationContainer(self.settings_view.theme.palette));
 
         let main_container = match self.view {
-            View::List => self.apps_view.view(&self.settings_view, &self.phone).map(Message::AppsAction),
+            View::List => self
+                .apps_view
+                .view(&self.settings_view, &self.phone)
+                .map(Message::AppsAction),
             View::About => self.about_view.view(&self.settings_view),
             View::Settings => self.settings_view.view().map(Message::SettingsAction),
         };
@@ -165,7 +174,6 @@ impl Application for UadGui {
             .into()
     }
 }
-
 
 impl UadGui {
     pub fn start() {
@@ -186,7 +194,6 @@ impl UadGui {
         AppsMessage::LoadPackages
     }
 }
-
 
 fn refresh_icon() -> Text {
     icon('\u{E900}')

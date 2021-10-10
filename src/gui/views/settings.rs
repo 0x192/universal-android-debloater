@@ -1,9 +1,7 @@
-use crate::gui::style;
-use crate::core::theme::{Theme};
 use crate::core::sync::get_android_sdk;
-use iced::{Checkbox, Column, Container, Element, Length, Text, Space, 
-    pick_list, PickList,
-    };
+use crate::core::theme::Theme;
+use crate::gui::style;
+use iced::{pick_list, Checkbox, Column, Container, Element, Length, PickList, Space, Text};
 
 #[derive(Debug, Clone)]
 pub struct Settings {
@@ -21,7 +19,7 @@ impl Default for Settings {
             disable_mode: get_android_sdk() < 26,
             multi_user_mode: get_android_sdk() > 21,
             theme: Theme::lupin(),
-            theme_picklist: pick_list::State::default()
+            theme_picklist: pick_list::State::default(),
         }
     }
 }
@@ -38,17 +36,26 @@ impl Settings {
     pub fn update(&mut self, msg: Message) {
         match msg {
             Message::ExpertMode(toggled) => {
-                info!("Expert mode {}", if toggled {"enabled"} else {"disabled"});
+                info!(
+                    "Expert mode {}",
+                    if toggled { "enabled" } else { "disabled" }
+                );
                 self.expert_mode = toggled;
-            },
+            }
             Message::DisableMode(toggled) => {
-                info!("Disable mode {}", if toggled {"enabled"} else {"disabled"});
+                info!(
+                    "Disable mode {}",
+                    if toggled { "enabled" } else { "disabled" }
+                );
                 self.disable_mode = toggled;
-            },
+            }
             Message::MultiUserMode(toggled) => {
-                info!("Multi-user mode {}", if toggled {"enabled"} else {"disabled"});
+                info!(
+                    "Multi-user mode {}",
+                    if toggled { "enabled" } else { "disabled" }
+                );
                 self.multi_user_mode = toggled;
-            },
+            }
             Message::ApplyTheme(theme) => {
                 self.theme = theme;
             }
@@ -63,19 +70,20 @@ impl Settings {
             Theme::all(),
             Some(self.theme.clone()),
             Message::ApplyTheme,
-            )
-            .style(style::PickList(self.theme.palette));
+        )
+        .style(style::PickList(self.theme.palette));
 
         let uad_category_text = Text::new("UAD").size(25);
 
-        let expert_mode_descr = Text::new("Most of unsafe packages are known to bootloop the device if removed.")
-            .size(15)
-            .color(self.theme.palette.normal.surface);
+        let expert_mode_descr =
+            Text::new("Most of unsafe packages are known to bootloop the device if removed.")
+                .size(15)
+                .color(self.theme.palette.normal.surface);
 
         let expert_mode_checkbox = Checkbox::new(
-            self.expert_mode, 
-            "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)", 
-            Message::ExpertMode
+            self.expert_mode,
+            "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
+            Message::ExpertMode,
         );
 
         let disable_mode_descr = Text::new("Default mode on older phone (< Android 8.0) where uninstalled packages can't be restored.")
@@ -83,19 +91,20 @@ impl Settings {
             .color(self.theme.palette.normal.surface);
 
         let disable_mode_checkbox = Checkbox::new(
-            self.disable_mode, 
+            self.disable_mode,
             "Clear and disable packages instead of uninstalling them",
-            Message::DisableMode
+            Message::DisableMode,
         );
 
-        let multi_user_mode_descr = Text::new("Disabling this setting will typically prevent affecting your work profile")
-            .size(15)
-            .color(self.theme.palette.normal.surface);
+        let multi_user_mode_descr =
+            Text::new("Disabling this setting will typically prevent affecting your work profile")
+                .size(15)
+                .color(self.theme.palette.normal.surface);
 
         let multi_user_mode_checkbox = Checkbox::new(
-            self.multi_user_mode, 
+            self.multi_user_mode,
             "Affect all the users of the phone (not only the selected user)",
-            Message::MultiUserMode
+            Message::MultiUserMode,
         );
 
         let content = Column::new()

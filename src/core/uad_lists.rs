@@ -1,8 +1,7 @@
-use serde::{Deserialize};
+use serde::Deserialize;
 use serde_json;
 //use std::fs;
-use std::{collections::HashMap};
-
+use std::collections::HashMap;
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
@@ -15,7 +14,6 @@ pub struct Package {
     labels: Option<Vec<String>>,
     pub removal: Removal,
 }
-
 
 #[derive(Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum UadList {
@@ -90,7 +88,6 @@ impl PackageState {
     ];
 }
 
-
 impl std::fmt::Display for PackageState {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
@@ -114,8 +111,12 @@ impl Opposite for PackageState {
     fn opposite(&self, disable: bool) -> PackageState {
         match self {
             PackageState::Enabled => {
-                if disable {PackageState::Disabled} else {PackageState::Uninstalled}
-            },
+                if disable {
+                    PackageState::Disabled
+                } else {
+                    PackageState::Uninstalled
+                }
+            }
             PackageState::Uninstalled => PackageState::Enabled,
             PackageState::Disabled => PackageState::Enabled,
             PackageState::All => PackageState::All,
@@ -151,7 +152,6 @@ impl Removal {
     ];
 }
 
-
 impl std::fmt::Display for Removal {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
@@ -169,7 +169,6 @@ impl std::fmt::Display for Removal {
     }
 }
 
-
 pub fn load_debloat_lists() -> HashMap<String, Package> {
     const DATA: &str = include_str!("../../ressources/assets/uad_lists.json");
     let mut package_lists = HashMap::new();
@@ -185,6 +184,3 @@ pub fn load_debloat_lists() -> HashMap<String, Package> {
 
     package_lists
 }
-
-
-

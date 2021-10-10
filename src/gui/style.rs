@@ -1,8 +1,5 @@
-use iced::{
-    button, container, scrollable, Background, Color, checkbox, 
-    text_input, pick_list,
-};
 use crate::core::theme::ColorPalette;
+use iced::{button, checkbox, container, pick_list, scrollable, text_input, Background, Color};
 
 pub struct Content(pub ColorPalette);
 impl container::StyleSheet for Content {
@@ -80,7 +77,6 @@ impl button::StyleSheet for RefreshButton {
     }
 }
 
-
 pub enum PackageButton {
     Uninstall(ColorPalette),
     Restore(ColorPalette),
@@ -137,8 +133,8 @@ impl button::StyleSheet for PackageButton {
         match self {
             Self::Restore(palette) => button::Style {
                 background: Some(Background::Color(Color {
-                a: 0.05,
-                ..palette.normal.primary
+                    a: 0.05,
+                    ..palette.normal.primary
                 })),
                 text_color: Color {
                     a: 0.50,
@@ -148,8 +144,8 @@ impl button::StyleSheet for PackageButton {
             },
             Self::Uninstall(palette) => button::Style {
                 background: Some(Background::Color(Color {
-                a: 0.01,
-                ..palette.bright.error
+                    a: 0.01,
+                    ..palette.bright.error
                 })),
                 text_color: Color {
                     a: 0.50,
@@ -184,12 +180,12 @@ impl button::StyleSheet for PackageRow {
         }
     }
     fn pressed(&self) -> button::Style {
-            button::Style {
-                background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
-                text_color: self.0.bright.primary,
-                ..self.active()
-            }
+        button::Style {
+            background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
+            text_color: self.0.bright.primary,
+            ..self.active()
         }
+    }
 }
 
 pub struct Description(pub ColorPalette);
@@ -276,10 +272,9 @@ impl scrollable::StyleSheet for Scrollable {
     }
 }
 
-
 pub enum SelectionCheckBox {
     Enabled(ColorPalette),
-    Disabled(ColorPalette)
+    Disabled(ColorPalette),
 }
 
 impl checkbox::StyleSheet for SelectionCheckBox {

@@ -1,10 +1,14 @@
 #![windows_subsystem = "windows"]
 #![feature(drain_filter)]
-#[macro_use] extern crate log;
+#[macro_use]
+extern crate log;
 
-use std::{fs::OpenOptions, fmt::Arguments};
-use fern::{FormatCallback, colors::{Color, ColoredLevelConfig}};
+use fern::{
+    colors::{Color, ColoredLevelConfig},
+    FormatCallback,
+};
 use log::Record;
+use std::{fmt::Arguments, fs::OpenOptions};
 
 mod core;
 mod gui;
@@ -15,7 +19,6 @@ fn main() {
 }
 
 pub fn setup_logger() -> Result<(), fern::InitError> {
-    
     let colors = ColoredLevelConfig::new().info(Color::Green);
 
     let make_formatter = |use_colors: bool| {
@@ -29,10 +32,7 @@ pub fn setup_logger() -> Result<(), fern::InitError> {
                     format!("{:5}", record.level().to_string())
                 },
                 record.file().unwrap_or("?"),
-                record
-                    .line()
-                    .map(|l| l.to_string())
-                    .unwrap_or_default(),
+                record.line().map(|l| l.to_string()).unwrap_or_default(),
                 message
             ))
         }

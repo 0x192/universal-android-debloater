@@ -1,5 +1,5 @@
-use std::cmp::Ordering;
 use iced::Color;
+use std::cmp::Ordering;
 
 #[derive(Debug, Clone)]
 pub struct Theme {
@@ -38,11 +38,7 @@ pub struct ColorPalette {
 
 impl Theme {
     pub fn all() -> Vec<Theme> {
-        vec![
-            Theme::dark(),
-            Theme::light(),
-            Theme::lupin(),
-        ]
+        vec![Theme::dark(), Theme::light(), Theme::lupin()]
     }
 
     pub fn dark() -> Theme {
@@ -116,7 +112,6 @@ impl Theme {
             },
         }
     }
-
 }
 
 impl PartialEq for Theme {
