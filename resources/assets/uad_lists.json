@@ -6410,7 +6410,7 @@
   {
     "id": "com.android.bluetoothmidiservice",
     "list": "Aosp",
-    "description": "Default print Service.\nSafe to remove if you don't plan to print from your phone.\n\nProvides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
+    "description": "Provides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,

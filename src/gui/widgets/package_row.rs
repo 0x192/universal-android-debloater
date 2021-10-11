@@ -53,8 +53,8 @@ impl PackageRow {
     }
 
     pub fn view(&mut self, settings: &Settings, phone: &Phone) -> Element<Message> {
-        //let trash_svg = format!("{}/ressources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
-        //let restore_svg = format!("{}/ressources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
+        //let trash_svg = format!("{}/resources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
+        //let restore_svg = format!("{}/resources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
         let button_style;
         let action_text;
         let action_btn;

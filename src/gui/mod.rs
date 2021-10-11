@@ -16,7 +16,7 @@ use iced::{
 
 pub const ICONS: Font = Font::External {
     name: "Icons",
-    bytes: include_bytes!("../../ressources/assets/icons.ttf"),
+    bytes: include_bytes!("../../resources/assets/icons.ttf"),
 };
 
 #[derive(Debug, Clone)]

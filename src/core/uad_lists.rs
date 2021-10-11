@@ -170,9 +170,9 @@ impl std::fmt::Display for Removal {
 }
 
 pub fn load_debloat_lists() -> HashMap<String, Package> {
-    const DATA: &str = include_str!("../../ressources/assets/uad_lists.json");
+    const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
     let mut package_lists = HashMap::new();
-    //let data = fs::read_to_string("ressources/assets/uad_lists.json").expect("Unable to read file");
+    //let data = fs::read_to_string("resources/assets/uad_lists.json").expect("Unable to read file");
 
     // TODO: Do it without intermediary Vec?
     let list: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
