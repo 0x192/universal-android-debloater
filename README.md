@@ -3,7 +3,7 @@
 
 <img src="/ressources/screenshots/v0.3.png" width="850" alt="uad_screenshot">
 
-**This software is still in a early stage of developpement. Check out the issues, and feel free to contribute!**
+**This software is still in a early stage of development. Check out the issues, and feel free to contribute!**
 
 ## Summary
 This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater) which aims at improving privacy and battery performance by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface). 
