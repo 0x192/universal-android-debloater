@@ -10,61 +10,65 @@ and `Removed`.
 
 ## [Unreleased]
 
+
+### Added
+- [[#52](https://github.com/0x192/universal-android-debloater/issues/52)] Added `uk.co.ee.myee` to the debloat lists  (thanks [@lawson58](https://github.com/lawson85))
+
 ### Changed
 - Review of the package lists recommendations. The `Recommended` debloat list is now safer (less likely to remove something you'd want to keep)
 
-## Fixed
+### Fixed
 - Miscellaneous minor issues in some package descriptions
 
 ## [0.3] - 2021-10-10
 
 ### Added
-- Multi-user support (#16): You can now debloat/restore apps for any user of the phone (not only the primary user 0). 
+- [[#16](https://github.com/0x192/universal-android-debloater/issues/16)] Multi-user support: You can now debloat/restore apps for any user of the phone (not only the primary user 0). 
    - `Multi user mode` setting (default to `on` for Android 5+) allowing to remove packages for all users ([a work profile is another user](https://developer.android.com/work/managed-profiles)) instead of only the selected user.
    - User switcher (picklist).
-- New themes! (#11) : light, dark and lupin. Lupin theme is now the new default theme. Themes can be changed from the settings.
-- Description field scrollbar: you can now scroll long descriptions (#40).
+- [[#11](https://github.com/0x192/universal-android-debloater/issues/11)] New themes: light, dark and lupin. Lupin theme is now the new default theme. Themes can be changed from the settings.
+- [[#40](https://github.com/0x192/universal-android-debloater/issues/40)] Description field scrollbar: you can now scroll long descriptions.
 
-## Fixed
+### Fixed
 - [Regression] Unsafe packages can be deleted without enabling `expert mode`.
 - The refresh button doesn't update settings when a (new) phone is connected.
 - [Regression] Restore buttons are disabled when connecting an Android 8.0 phone.
-- Refresh icon does not appear (#17)
+- [[#17](https://github.com/0x192/universal-android-debloater/issues/17)] Refresh icon does not appear
 
 ## [0.2.2] - 2021-09-30
 
-## Fixed
+### Fixed
 - Crash when connecting a LG device (#33)
 
 ## [0.2.1] - 2021-09-28
 
-## Added
+### Added
 - Software version in the navigation panel
 
-## Packaging
+### Packaging
 - `wgpu` renderer is not the default renderer (you don't need to add `--features wgpu` if you want to build UAD with `wgpu`)
 
 ### Fixed
-- Exported selection not found (#35)
+- [[#35](https://github.com/0x192/universal-android-debloater/issues/35)] Exported selection not found
 
 ## [0.2] - 2021-09-26
 
 ### Added
-- UAD now comes with a logger. Debug information will be written to a `uad.log` file (Warning level log in *stdout*) (#2)
-- Support for older phone (< Android 8.0) (#15):
+- [[#2](https://github.com/0x192/universal-android-debloater/issues/2)] UAD now comes with a logger. Debug information will be written to a `uad.log` file (Warning level log in *stdout*)
+- [[#15](https://github.com/0x192/universal-android-debloater/issues/15)] Support for older phone (< Android 8.0):
 - Disable mode in settings: clear and disable packages instead of uninstalling them (default for old phones because you can't restore uninstalled packages)
-- Export your selection in the `uad_exported_selection.txt` file. Packages from this file (if found in the current directory) will be automatically selected upon the start of UAD (or after a refresh) (#8)
+- [[#8](https://github.com/0x192/universal-android-debloater/issues/8)] Export your selection in the `uad_exported_selection.txt` file. Packages from this file (if found in the current directory) will be automatically selected upon the start of UAD (or after a refresh).
 
 ### Changed
-- UAD will no longer crash at start if it doesn't find ADB but will display a useful error message (#25)
-- Better handling of ADB errors (#3)
+- [[#25](https://github.com/0x192/universal-android-debloater/issues/25)] UAD will no longer crash at start if it doesn't find ADB but will display a useful error message
+- [[#3](https://github.com/0x192/universal-android-debloater/issues/3)] Better handling of ADB errors
 - Updated dependencies (compatibility with [Iced](https://github.com/iced-rs/iced) main branch latest commit)
 - Cleanup and refactoring of the code
 - Performance improvement
 - Various UI/UX improvement
 - The `Debloat/Restore selection` button has been split in 2 buttons: `removing` and `restoring`
 
-## Packaging
+### Packaging
 - Added an alternative build that uses [OpenGL](https://fr.wikipedia.org/wiki/OpenGL) (instead of [Vulkan](https://fr.wikipedia.org/wiki/Vulkan_(API))) for compatibility with older computers. If you encouter some visual glitches with the default Vulkan build you should try the OpenGL build.
 
 ### Fixed

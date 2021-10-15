@@ -18745,6 +18745,15 @@
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "uk.co.ee.myee",
+    "list": "Carrier",
+    "description": "Myee app (https://play.google.com/store/apps/details?id=uk.co.ee.myee)\nLets you control your EE pay monthly, pay as you go and WiFi devices. Check your data, bills, packs and more, and keep an eye on your spending.\nContains unwanted analytics and most of the things the app does can be done by texting 150 from your mobile.\nSee https://ee.co.uk/help/help-new/billing-usage-and-top-up/call-text-and-data-charges/how-can-i-get-help-by-texting-150-on-pay-as-you-go-or-flex\nExodus & Pithus reports:\nhttps://reports.exodus-privacy.eu.org/fr/reports/uk.co.ee.myee/latest/\nhttps://beta.pithus.org/report/6e8de7e02aba34c4f02dc966b39002f60b0852f55da923cdccc4ba4c09ed4a4a\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
 
