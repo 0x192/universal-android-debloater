@@ -10,6 +10,12 @@ and `Removed`.
 
 ## [Unreleased]
 
+### Changed
+- Review of the package lists recommendations. The `Recommended` debloat list is now safer (less likely to remove something you'd want to keep)
+
+## Fixed
+- Miscellaneous minor issues in some package descriptions
+
 ## [0.3] - 2021-10-10
 
 ### Added
