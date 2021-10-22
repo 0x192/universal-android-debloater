@@ -1,0 +1,59 @@
+name: Build artifacts
+on: workflow_dispatch
+
+jobs:
+  build:
+    name: Building ${{ matrix.build_target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build_target: [linux, macos, windows]
+        include:
+          - build_target: linux
+            os: ubuntu-latest
+          - build_target: macos
+            os: macos-latest
+          - build_target: windows
+            os: windows-latest
+
+    steps:
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          target: ${{ matrix.target }}
+          profile: minimal
+      - name: Install Linux dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y libxkbcommon-dev lld
+      - uses: actions/checkout@v2
+      - name: Cargo build (WGPU feature)
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      - name: Renaming
+        if: matrix.os == 'windows-latest'
+        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}.exe
+      - name: Renaming
+        if: matrix.os != 'windows-latest'
+        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}
+      - name: Cargo build (Glow feature)
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --features glow
+      - name: Renaming
+        if: matrix.os == 'windows-latest'
+        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}-opengl.exe
+      - name: Renaming
+        if: matrix.os != 'windows-latest'
+        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-opengl
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: uad_gui-${{ matrix.build_target }}
+          path: target/release/uad_gui-${{ matrix.build_target }}*
