@@ -44,3 +44,8 @@ jobs:
       - name: Renaming
         if: matrix.os != 'windows-latest'
         run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: uad_gui-${{ matrix.build_target }}-legacy
+          path: target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy*
