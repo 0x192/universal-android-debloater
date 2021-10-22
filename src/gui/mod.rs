@@ -12,7 +12,7 @@ pub use views::settings::{Message as SettingsMessage, Settings as SettingsView};
 
 use iced::{
     button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
-    Container, Element, Font, Length, PickList, Row, Settings, Space, Text
+    Container, Element, Font, Length, PickList, Row, Settings, Space, Text,
 };
 
 pub const ICONS: Font = Font::External {
@@ -71,7 +71,7 @@ impl Application for UadGui {
     fn new(_flags: ()) -> (Self, Command<Message>) {
         (
             Self::default(),
-            Command::perform(Self::init(), |_| { Message::Init }),
+            Command::perform(Self::init(), |_| Message::Init),
         )
     }
 
@@ -81,12 +81,14 @@ impl Application for UadGui {
 
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
-            Message::Init => {
-                Command::perform(Self::refresh(10), Message::LoadDevices)
-            }
+            Message::Init => Command::perform(Self::refresh(10), Message::LoadDevices),
             Message::RefreshButtonPressed => {
                 // Save the current selected device
-                let i = self.device_list.iter().position(|phone| *phone == self.selected_device).unwrap();
+                let i = self
+                    .device_list
+                    .iter()
+                    .position(|phone| *phone == self.selected_device)
+                    .unwrap();
                 self.device_list = vec![Phone::default()];
                 self.selected_device = self.device_list[0].clone();
                 Command::perform(Self::refresh(i), Message::LoadDevices)
