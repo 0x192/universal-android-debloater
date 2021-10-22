@@ -4,25 +4,34 @@ use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use static_init::dynamic;
 use std::collections::HashSet;
+use std::env;
 use std::process::Command;
 
 #[cfg(target_os = "windows")]
 use std::os::windows::process::CommandExt;
 
-#[derive(Debug)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Phone {
     pub model: String,
     pub android_sdk: u8,
     pub user_list: Vec<User>,
+    pub adb_id: String,
 }
 
 impl Default for Phone {
     fn default() -> Self {
         Self {
-            model: get_phone_brand(),
-            android_sdk: get_android_sdk(),
-            user_list: get_user_list(),
+            model: "fetching devices...".to_string(),
+            android_sdk: 0,
+            user_list: vec![],
+            adb_id: "".to_string(),
         }
+    }
+}
+
+impl std::fmt::Display for Phone {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", self.model.to_string(),)
     }
 }
 
@@ -37,18 +46,24 @@ impl std::fmt::Display for User {
         write!(f, "{}", format!("user {}", self.id),)
     }
 }
-pub fn adb_shell_command(args: &str) -> Result<String, String> {
+
+pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
+    let adb_command = match shell {
+        true => vec!["shell", args],
+        false => vec![args],
+    };
+
     #[cfg(target_os = "windows")]
     let output = Command::new("adb")
-        .args(&["shell", args])
+        .args(adb_command)
         .creation_flags(0x08000000) // do not open a cmd window
         .output();
 
     #[cfg(target_os = "macos")]
-    let output = Command::new("adb").args(&["shell", args]).output();
+    let output = Command::new("adb").args(adb_command).output();
 
     #[cfg(not(any(target_os = "macos", target_os = "windows")))]
-    let output = Command::new("adb").args(&["shell", args]).output();
+    let output = Command::new("adb").args(adb_command).output();
 
     match output {
         Err(e) => {
@@ -76,7 +91,7 @@ pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
         None => "pm list packages -s -u".to_string(),
     };
 
-    adb_shell_command(&action)
+    adb_shell_command(true, &action)
         .unwrap_or_else(|_| "".to_string())
         .replace("package:", "")
 }
@@ -93,7 +108,7 @@ pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> 
         _ => "".to_string(), // You probably don't need to use this function for anything else
     };
 
-    adb_shell_command(&action)
+    adb_shell_command(true, &action)
         .unwrap_or_default()
         .replace("package:", "")
         .lines()
@@ -197,7 +212,7 @@ pub fn action_handler(
     };
 
     for action in actions {
-        match adb_shell_command(&action) {
+        match adb_shell_command(true, &action) {
             Ok(_) => {
                 info!("[{}] {}", package.removal, action);
             }
@@ -214,7 +229,7 @@ pub fn action_handler(
 }
 
 pub fn get_phone_model() -> String {
-    match adb_shell_command("getprop ro.product.model") {
+    match adb_shell_command(true, "getprop ro.product.model") {
         Ok(model) => model,
         Err(err) => {
             println!("ERROR: {}", err);
@@ -228,7 +243,7 @@ pub fn get_phone_model() -> String {
 }
 
 pub fn get_android_sdk() -> u8 {
-    match adb_shell_command("getprop ro.build.version.sdk") {
+    match adb_shell_command(true, "getprop ro.build.version.sdk") {
         Ok(sdk) => sdk.parse().unwrap(),
         Err(_) => 0,
     }
@@ -237,7 +252,7 @@ pub fn get_android_sdk() -> u8 {
 pub fn get_phone_brand() -> String {
     format!(
         "{} {}",
-        adb_shell_command("getprop ro.product.brand")
+        adb_shell_command(true, "getprop ro.product.brand")
             .unwrap_or_else(|_| "".to_string())
             .trim(),
         get_phone_model()
@@ -247,8 +262,7 @@ pub fn get_phone_brand() -> String {
 pub fn get_user_list() -> Vec<User> {
     #[dynamic]
     static RE: Regex = Regex::new(r"\{([0-9]+)").unwrap();
-
-    match adb_shell_command("pm list users") {
+    match adb_shell_command(true, "pm list users") {
         Ok(users) => RE
             .find_iter(&users)
             .enumerate()
@@ -258,5 +272,32 @@ pub fn get_user_list() -> Vec<User> {
             })
             .collect(),
         Err(_) => vec![],
+    }
+}
+
+pub fn get_device_list() -> Vec<Phone> {
+    #[dynamic]
+    static RE: Regex = Regex::new(r"\n([[:alnum:]]+)\s+device").unwrap();
+
+    match adb_shell_command(false, "devices") {
+        Ok(devices) => {
+            let mut device_list: Vec<Phone> = vec![];
+            for device in RE.captures_iter(&devices) {
+                env::set_var("ANDROID_SERIAL", device[1].to_string());
+
+                device_list.push(Phone {
+                    model: get_phone_brand(),
+                    android_sdk: get_android_sdk(),
+                    user_list: get_user_list(),
+                    adb_id: device[1].to_string(),
+                });
+            }
+            device_list
+        }
+
+        Err(err) => {
+            warn!("get_device_list() -> {}", err);
+            vec![]
+        }
     }
 }
