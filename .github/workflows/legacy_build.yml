@@ -1,0 +1,46 @@
+name: Legacy Build
+on:
+  push:
+    branch:
+      - 'legacy'
+
+jobs:
+  publish:
+    name: Building ${{ matrix.build_target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build_target: [linux, macos, windows]
+        include:
+          - build_target: linux
+            os: ubuntu-18.04
+          - build_target: macos
+            os: macos-latest
+          - build_target: windows
+            os: windows-latest
+
+    steps:
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          target: ${{ matrix.target }}
+          profile: minimal
+      - name: Install Linux dependencies
+        if: matrix.os == 'ubuntu-18.04'
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y libxkbcommon-dev lld
+      - uses: actions/checkout@v2
+      - name: Build legacy OpenGL version of UAD 
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --features glow
+      - name: Renaming
+        if: matrix.os == 'windows-latest'
+        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}-legacy.exe
+      - name: Renaming
+        if: matrix.os != 'windows-latest'
+        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy
