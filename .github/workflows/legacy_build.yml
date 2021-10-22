@@ -48,4 +48,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: uad_gui-${{ matrix.build_target }}-legacy
-          path: target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy*
+          path: |
+            target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy
+            target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-legacy.exe
