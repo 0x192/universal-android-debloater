@@ -31,7 +31,7 @@ impl Default for Phone {
 
 impl std::fmt::Display for Phone {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.model.to_string(),)
+        write!(f, "{}", self.model,)
     }
 }
 
@@ -43,7 +43,7 @@ pub struct User {
 
 impl std::fmt::Display for User {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", format!("user {}", self.id),)
+        write!(f, "user {}", self.id)
     }
 }
 
