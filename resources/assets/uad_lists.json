@@ -18754,6 +18754,15 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "android",
+    "list": "Aosp",
+    "description": "Android UI ressource library. Provide all the elements of the User Interface. DO NOT REMOVE THIS!",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
   }
 ]
 
