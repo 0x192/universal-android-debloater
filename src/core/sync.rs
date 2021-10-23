@@ -277,7 +277,7 @@ pub fn get_user_list() -> Vec<User> {
 
 pub fn get_device_list() -> Vec<Phone> {
     #[dynamic]
-    static RE: Regex = Regex::new(r"\n([[:alnum:]]+)\s+device").unwrap();
+    static RE: Regex = Regex::new(r"\n([[:ascii:]]+)\s+device").unwrap();
 
     match adb_shell_command(false, "devices") {
         Ok(devices) => {
