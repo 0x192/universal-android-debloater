@@ -3,15 +3,20 @@
 #[macro_use]
 extern crate log;
 
+use crate::core::config::Config;
 use fern::{
     colors::{Color, ColoredLevelConfig},
     FormatCallback,
 };
 use log::Record;
+use static_init::dynamic;
 use std::{fmt::Arguments, fs::OpenOptions};
 
 mod core;
 mod gui;
+
+#[dynamic]
+static IN_FILE_CONFIGURATION: Config = Config::load_configuration_file();
 
 fn main() {
     setup_logger().expect("setup logging");

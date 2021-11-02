@@ -29,6 +29,8 @@ fern = { version = "^0.6", features = ["colored"] }
 log = "^0.4"
 chrono = "^0.4"
 regex = "^1.5"
+toml = "^0.5"
+dirs = "^4.0"
 
 [profile.release]
 opt-level = "s"

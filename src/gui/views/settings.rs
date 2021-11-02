@@ -1,24 +1,40 @@
+use crate::core::config::Config;
 use crate::core::sync::get_android_sdk;
 use crate::core::theme::Theme;
+use crate::core::utils::string_to_theme;
 use crate::gui::style;
+use crate::IN_FILE_CONFIGURATION;
 use iced::{pick_list, Checkbox, Column, Container, Element, Length, PickList, Space, Text};
 
 #[derive(Debug, Clone)]
 pub struct Settings {
-    pub expert_mode: bool,
-    pub disable_mode: bool,
-    pub multi_user_mode: bool,
+    pub phone: Phone,
     pub theme: Theme,
     theme_picklist: pick_list::State<Theme>,
 }
 
-impl Default for Settings {
+#[derive(Debug, Clone)]
+pub struct Phone {
+    pub expert_mode: bool,
+    pub disable_mode: bool,
+    pub multi_user_mode: bool,
+}
+
+impl Default for Phone {
     fn default() -> Self {
         Self {
             expert_mode: false,
             disable_mode: get_android_sdk() < 26,
             multi_user_mode: get_android_sdk() > 21,
-            theme: Theme::lupin(),
+        }
+    }
+}
+
+impl Default for Settings {
+    fn default() -> Self {
+        Self {
+            phone: Phone::default(),
+            theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
             theme_picklist: pick_list::State::default(),
         }
     }
@@ -40,24 +56,25 @@ impl Settings {
                     "Expert mode {}",
                     if toggled { "enabled" } else { "disabled" }
                 );
-                self.expert_mode = toggled;
+                self.phone.expert_mode = toggled;
             }
             Message::DisableMode(toggled) => {
                 info!(
                     "Disable mode {}",
                     if toggled { "enabled" } else { "disabled" }
                 );
-                self.disable_mode = toggled;
+                self.phone.disable_mode = toggled;
             }
             Message::MultiUserMode(toggled) => {
                 info!(
                     "Multi-user mode {}",
                     if toggled { "enabled" } else { "disabled" }
                 );
-                self.multi_user_mode = toggled;
+                self.phone.multi_user_mode = toggled;
             }
             Message::ApplyTheme(theme) => {
                 self.theme = theme;
+                Config::save_changes(self);
             }
         }
     }
@@ -73,7 +90,7 @@ impl Settings {
         )
         .style(style::PickList(self.theme.palette));
 
-        let uad_category_text = Text::new("UAD").size(25);
+        let uad_category_text = Text::new("Non-persistent settings").size(25);
 
         let expert_mode_descr =
             Text::new("Most of unsafe packages are known to bootloop the device if removed.")
@@ -81,7 +98,7 @@ impl Settings {
                 .color(self.theme.palette.normal.surface);
 
         let expert_mode_checkbox = Checkbox::new(
-            self.expert_mode,
+            self.phone.expert_mode,
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
             Message::ExpertMode,
         );
@@ -91,7 +108,7 @@ impl Settings {
             .color(self.theme.palette.normal.surface);
 
         let disable_mode_checkbox = Checkbox::new(
-            self.disable_mode,
+            self.phone.disable_mode,
             "Clear and disable packages instead of uninstalling them",
             Message::DisableMode,
         );
@@ -102,7 +119,7 @@ impl Settings {
                 .color(self.theme.palette.normal.surface);
 
         let multi_user_mode_checkbox = Checkbox::new(
-            self.multi_user_mode,
+            self.phone.multi_user_mode,
             "Affect all the users of the phone (not only the selected user)",
             Message::MultiUserMode,
         );

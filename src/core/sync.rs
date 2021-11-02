@@ -1,5 +1,5 @@
 use crate::core::uad_lists::PackageState;
-use crate::gui::views::settings::Settings;
+use crate::gui::views::settings::Phone as SettingsPhone;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use static_init::dynamic;
@@ -120,7 +120,7 @@ pub fn action_handler(
     selected_user: &User,
     package: &PackageRow,
     phone: &Phone,
-    settings: &Settings,
+    settings: &SettingsPhone,
 ) -> Result<bool, bool> {
     let actions: Vec<String> = match package.state {
         PackageState::Enabled => match settings.disable_mode {
@@ -275,6 +275,7 @@ pub fn get_user_list() -> Vec<User> {
     }
 }
 
+// getprop ro.serialno
 pub fn get_device_list() -> Vec<Phone> {
     #[dynamic]
     static RE: Regex = Regex::new(r"\n([[:ascii:]]+)\s+device").unwrap();

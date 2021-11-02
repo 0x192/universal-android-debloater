@@ -18763,6 +18763,15 @@
     "neededBy": null,
     "labels": null,
     "removal": "Unsafe"
+  },
+  {
+    "id": "com.android.phone",
+    "list": "Aosp",
+    "description": "AOSP Dialer",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
   }
 ]
 

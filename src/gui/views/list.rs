@@ -9,7 +9,7 @@ use crate::gui::style;
 use static_init::dynamic;
 use std::collections::HashMap;
 
-use crate::gui::views::settings::Settings;
+use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::{
     alignment,
@@ -92,7 +92,7 @@ pub enum Message {
 impl List {
     pub fn update(
         &mut self,
-        settings: &Settings,
+        settings: &SettingsPhone,
         phone: &mut Phone,
         message: Message,
     ) -> Command<Message> {
@@ -412,12 +412,12 @@ impl List {
                 .width(Length::Fill)
                 .style(style::Description(settings.theme.palette));
 
-            let restore_action = if settings.disable_mode {
+            let restore_action = if settings.phone.disable_mode {
                 "Enable/Restore"
             } else {
                 "Restore"
             };
-            let remove_action = if settings.disable_mode {
+            let remove_action = if settings.phone.disable_mode {
                 "Disable"
             } else {
                 "Uninstall"

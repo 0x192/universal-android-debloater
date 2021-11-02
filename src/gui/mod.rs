@@ -8,7 +8,9 @@ use crate::core::utils::icon;
 use std::env;
 pub use views::about::About as AboutView;
 pub use views::list::{List as AppsView, Message as AppsMessage};
-pub use views::settings::{Message as SettingsMessage, Settings as SettingsView};
+pub use views::settings::{
+    Message as SettingsMessage, Phone as SettingsPhone, Settings as SettingsView,
+};
 
 use iced::{
     button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
@@ -96,7 +98,7 @@ impl Application for UadGui {
                 Command::perform(Self::refresh(i), Message::LoadDevices)
             }
             Message::LoadDevices(last_selected_device) => {
-                self.settings_view = SettingsView::default();
+                self.settings_view.phone = SettingsPhone::default();
                 self.device_list = get_device_list();
 
                 // Try to reload last selected phone
@@ -141,7 +143,7 @@ impl Application for UadGui {
             Message::AppsAction(msg) => self
                 .apps_view
                 .update(
-                    &self.settings_view,
+                    &self.settings_view.phone,
                     &mut self.selected_device.clone().unwrap_or_default(),
                     msg,
                 )

@@ -1,4 +1,5 @@
 use crate::core::sync::{hashset_system_packages, list_all_system_packages, User};
+use crate::core::theme::Theme;
 use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
@@ -124,4 +125,13 @@ pub fn icon(unicode: char) -> Text {
         .width(Length::Units(17))
         .horizontal_alignment(alignment::Horizontal::Center)
         .size(17)
+}
+
+pub fn string_to_theme(theme: String) -> Theme {
+    match theme.as_str() {
+        "Dark" => Theme::dark(),
+        "Light" => Theme::light(),
+        "Lupin" => Theme::lupin(),
+        _ => Theme::lupin(),
+    }
 }

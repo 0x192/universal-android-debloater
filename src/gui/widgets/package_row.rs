@@ -62,7 +62,7 @@ impl PackageRow {
 
         match self.state {
             PackageState::Enabled => {
-                action_text = if settings.disable_mode {
+                action_text = if settings.phone.disable_mode {
                     "Disable"
                 } else {
                     "Uninstall"
@@ -84,7 +84,7 @@ impl PackageRow {
             }
         }
 
-        if (self.state != PackageState::Uninstalled && settings.expert_mode)
+        if (self.state != PackageState::Uninstalled && settings.phone.expert_mode)
             || (self.removal != Removal::Unsafe && phone.android_sdk >= 26)
         {
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
