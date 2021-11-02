@@ -2180,7 +2180,7 @@
   {
     "id": "com.huawei.parentcontrol",
     "list": "Oem",
-    "description": "Parental controls functions.\n",
+    "description": "Parental controls functions.\nIt seems Huawei can prevent to remove packages. Uninstalling (or even disabling) this package returns an error: Failure [DELETE_FAILED_INTERNAL_ERROR] (not allowed to disable this package).\n See https://github.com/0x192/universal-android-debloater/issues/51",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
