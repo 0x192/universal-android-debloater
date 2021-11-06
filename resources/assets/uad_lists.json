@@ -2315,7 +2315,7 @@
   {
     "id": "com.huawei.android.thememanager",
     "list": "Oem",
-    "description": "Huawei Themes (https://play.google.com/store/apps/details?id=com.huawei.android.thememanager)\nLets you use Huawei themes\nYou should still be able to set wallapers without it. Can someone check?\n",
+    "description": "Huawei Themes (https://play.google.com/store/apps/details?id=com.huawei.android.thememanager)\nLets you use Huawei themes\nSetting Wallpapers directly will no longer work, but the Wallpaper entry in the Settings app will still let you choose wallpapers.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
