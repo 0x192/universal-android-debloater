@@ -1694,7 +1694,7 @@
   {
     "id": "com.baidu.input_huawei",
     "list": "Oem",
-    "description": "Woh! 51 permissions! \nHuawei chinese stock input keyboard.\n",
+    "description": "Woh! 51 permissions! \nHuawei chinese stock input keyboard. You probably shouldn't trust this closed-source keyboard with this much permissions...NOTE: Make sure to have another keyboard installed before removing this package!\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -6153,7 +6153,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.mimage.photoretouching",
@@ -6864,7 +6864,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.internal.display.cutout.emulation.tall",
@@ -11166,7 +11166,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.lge.ime.solution.handwriting",
@@ -13898,11 +13898,11 @@
   {
     "id": "com.touchtype.swiftkey.res.overlay",
     "list": "Misc",
-    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones\n",
+    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones. Make sure to have another keyboard before removing this package.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.tracker.t",
@@ -14420,11 +14420,11 @@
   {
     "id": "com.baidu.input_mi",
     "list": "Oem",
-    "description": "Baidu IME (Baidu keyboard)\nYOU SHOULD NEVER USE A CLOSED-SOURCE KEYBOARD ! \nhttps://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\nArchive : https://web.archive.org/save/https://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\n",
+    "description": "Baidu IME (Baidu keyboard)\nYOU SHOULD NEVER USE A CLOSED-SOURCE KEYBOARD ! \nhttps://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\nArchive : https://web.archive.org/save/https://www.techrepublic.com/blog/asian-technology/japanese-government-warns-baidu-ime-is-spying-on-users/\nNOTE: Make sure you have installed another keyboard before removing this package.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.baidu.searchbox",
@@ -15779,7 +15779,7 @@
   {
     "id": "com.xiaomi.miplay_client",
     "list": "Oem",
-    "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n)\n",
+    "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
