@@ -6149,7 +6149,7 @@
   {
     "id": "com.samsung.android.honeyboard",
     "list": "Oem",
-    "description": "Samsung keyboard\nWARNING: do NOT remove the samsung keyboard if you don't have another keyboard with direct boot mode support or \nyou'll be stuck at boot (no keyboard to unlock the phone) \nhttps://developer.android.com/training/articles/direct-boot\nFYI: Simple Keyboard and OpenBoard are 2 FOSS keyboard with direct boot support\nhttps://f-droid.org/packages/org.dslul.openboard.inputmethod.latin/\nhttps://f-droid.org/packages/rkr.simplekeyboard.inputmethod/\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\n",
+    "description": "Samsung keyboard\nWARNING: do NOT remove the samsung keyboard if you don't have another keyboard with direct boot mode support or \nyou'll be stuck at boot (no keyboard to unlock the phone) \nhttps://developer.android.com/training/articles/direct-boot\nFYI: Simple Keyboard and OpenBoard are 2 FOSS keyboard with direct boot support\nhttps://f-droid.org/packages/org.dslul.openboard.inputmethod.latin/\nhttps://f-droid.org/packages/rkr.simplekeyboard.inputmethod/\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\nWARNING: Removing this packages breaks the Accessibility settings on Android 11",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
