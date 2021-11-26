@@ -15563,7 +15563,7 @@
   {
     "id": "com.android.thememanager",
     "list": "Oem",
-    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package name\nThis package lets you select and apply themes provided by Xiaomi. \nThere is a strong likelihood that removing this package will disable the ability to change wallpapers. \nCan someone test?\n",
+    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package name\nThis package lets you select and apply themes provided by Xiaomi.\nRemoving this package will disable the ability to change wallpapers on the lock screen.\nFor changing wallpapers on the home screen you will need to use another app.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15572,11 +15572,11 @@
   {
     "id": "com.android.thememanager.module",
     "list": "Oem",
-    "description": "I don't have the .apk but it is obviously related to \"com.android.thememanager\"\nCan someone test with this package too?\n",
+    "description": "It is obviously related to \"com.android.thememanager\" but not needed for changing wallpapers.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.fido.xiaomi.uafclient",
