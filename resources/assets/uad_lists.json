@@ -7094,7 +7094,7 @@
   {
     "id": "com.android.theme.icon_pack.rounded.systemui",
     "list": "Aosp",
-    "description": "Android themes / icons pack / fonts\n",
+    "description": "Android icons pack [Rounded].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8218,21 +8218,21 @@
   },
   {
     "id": "com.android.theme.icon.circle",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Android icons pack [Circle].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.theme.icon.square",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Android icons pack [Square].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.example.rftuner",
@@ -9100,39 +9100,39 @@
   },
   {
     "id": "com.android.theme.icon.pebble",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Android icons pack [Pebble].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.theme.icon.taperedrect",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Android icons pack [Taperedrect].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.theme.icon.vessel",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Android icons pack [Vessel].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.theme.icon_pack.rounded.themepicker",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "Obviously related to the \"rounded\" icon pack but the full package is strange. A themepicker class only for a specific icon package?\n\nYou can safely remove them if you don't use any icon packs. But there is no real point in doing so.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.apps.carrier.carrierwifi",
@@ -11639,7 +11639,7 @@
   {
     "id": "com.lge.theme.titan",
     "list": "Oem",
-    "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.\n\n    #\"com.lge.theme.highcontrast\"\nVarious themes. Safe to remove any you don't want/use. I could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "description": "LG Titan theme (labelled 'Platinum' in the theming app).\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18623,7 +18623,7 @@
   {
     "id": "com.lge.theme.black",
     "list": "Oem",
-    "description": "LG Android theme",
+    "description": "LG Black theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -18632,7 +18632,7 @@
   {
     "id": "com.lge.theme.white",
     "list": "Oem",
-    "description": "LG Android theme",
+    "description": "LG White theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -18641,8 +18641,8 @@
   {
     "id": "com.lge.theme.highcontrast",
     "list": "Oem",
-    "description": "LG Android theme",
-    "dependencies": "LG theme",
+    "description": "LG High Contrast theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "dependencies": null,
     "neededBy": "",
     "labels": null,
     "removal": "Advanced"
