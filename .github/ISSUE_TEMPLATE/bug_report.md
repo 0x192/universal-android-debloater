@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Follow this template if you have an issue (do not make request)
+about: You have an issue
 title: ''
 labels: ''
 assignees: ''
