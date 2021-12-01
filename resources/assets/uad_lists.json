@@ -17057,11 +17057,11 @@
   {
     "id": "com.android.vending",
     "list": "Google",
-    "description": "I'm not sure if you can delete Google keyboard on Google phone without having issue to unlock your phone on boot.\nIf someone can test it, that will be great ! :D\n",
+    "description": "Google Play Store app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.inputmethod.latin",
