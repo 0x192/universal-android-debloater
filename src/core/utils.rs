@@ -52,6 +52,11 @@ pub fn fetch_packages(
 }
 
 pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
+    // Selection can't be negative
+    if !add && selection.selected_packages.is_empty() {
+        return;
+    }
+
     match p_state {
         PackageState::Enabled => {
             if add {
