@@ -285,7 +285,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.base.background,
-                text_color: Color::BLACK,
+                text_color: palette.bright.surface,
             },
             Self::Disabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
@@ -293,7 +293,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.normal.primary,
-                text_color: Color::BLACK,
+                text_color: palette.bright.surface,
             },
         }
     }
@@ -306,12 +306,37 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 2.0,
                 border_color: palette.normal.primary,
-                text_color: Color::BLACK,
+                text_color: palette.bright.surface,
             },
 
             Self::Disabled(_) => checkbox::Style {
                 ..self.active(is_checked)
             },
+        }
+    }
+}
+
+pub struct SettingsCheckbox(pub ColorPalette);
+impl checkbox::StyleSheet for SettingsCheckbox {
+    fn active(&self, _is_checked: bool) -> checkbox::Style {
+        checkbox::Style {
+            background: Background::Color(self.0.base.background),
+            checkmark_color: self.0.bright.primary,
+            border_radius: 5.0,
+            border_width: 1.0,
+            border_color: self.0.bright.primary,
+            text_color: self.0.bright.surface,
+        }
+    }
+
+    fn hovered(&self, _is_checked: bool) -> checkbox::Style {
+        checkbox::Style {
+            background: Background::Color(self.0.base.foreground),
+            checkmark_color: self.0.bright.primary,
+            border_radius: 5.0,
+            border_width: 2.0,
+            border_color: self.0.bright.primary,
+            text_color: self.0.bright.surface,
         }
     }
 }

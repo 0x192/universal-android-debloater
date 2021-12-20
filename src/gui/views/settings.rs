@@ -101,7 +101,8 @@ impl Settings {
             self.phone.expert_mode,
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
             Message::ExpertMode,
-        );
+        )
+        .style(style::SettingsCheckbox(self.theme.palette));
 
         let disable_mode_descr = Text::new("Default mode on older phone (< Android 8.0) where uninstalled packages can't be restored.")
             .size(15)
@@ -111,7 +112,8 @@ impl Settings {
             self.phone.disable_mode,
             "Clear and disable packages instead of uninstalling them",
             Message::DisableMode,
-        );
+        )
+        .style(style::SettingsCheckbox(self.theme.palette));
 
         let multi_user_mode_descr =
             Text::new("Disabling this setting will typically prevent affecting your work profile")
@@ -122,7 +124,8 @@ impl Settings {
             self.phone.multi_user_mode,
             "Affect all the users of the phone (not only the selected user)",
             Message::MultiUserMode,
-        );
+        )
+        .style(style::SettingsCheckbox(self.theme.palette));
 
         let content = Column::new()
             .width(Length::Fill)
