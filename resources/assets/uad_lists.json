@@ -6408,6 +6408,24 @@
     "removal": "Unsafe"
   },
   {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game (From Unihertz Jelly2)\n Removes distractions when selected apps are in use",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+},
+{
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile/nphone reasonably. Under this mode, user is not allowed to install applications and/nrestore to factory settings. Applications not in white list are disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+},
+  {
     "id": "com.android.bluetoothmidiservice",
     "list": "Aosp",
     "description": "Provides classes for using the MIDI protocol over Bluetooth. Safe to remove if you don't plan to connect MIDI devices. \n(Seriously, use a PC if you want to do this !)\n",
@@ -15894,24 +15912,6 @@
     "removal": "Recommended"
   },
   {
-    "id": "com.agui.game",
-    "list": "Oem",
-    "description": "Game (From Unihertz Jelly2)\n Removes distractions when selected apps are in use",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
-},
-{
-    "id": "com.agui.studentmodel",
-    "list": "Oem",
-    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile/nphone reasonably. Under this mode, user is not allowed to install applications and/nrestore to factory settings. Applications not in white list are disabled.",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
-},
-  {
     "id": "com.android.hotwordenrollment.xgoogle",
     "list": "Google",
     "description": "\"OK Google\" detection service.\n",
@@ -17052,7 +17052,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.ims",
@@ -18792,5 +18792,3 @@
     "removal": "Unsafe"
   }
 ]
-
-
