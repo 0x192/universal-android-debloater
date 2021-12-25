@@ -34,6 +34,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [ ] Gionee
 * [X] LG
 * [X] Google
+* [X] Fairphone
 * [ ] HTC
 * [X] Huawei
 * [X] Motorola
