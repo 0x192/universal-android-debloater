@@ -1505,7 +1505,7 @@
   {
     "id": "com.orange.aura.oobe",
     "list": "Carrier",
-    "description": "oobe = out-of-box-experience\nhttps://en.wikipedia.org/wiki/Out-of-box_experience\n???\n",
+    "description": "Orange Manual Selector\nMakes unnecessary notifications\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8937,7 +8937,34 @@
     "removal": "Expert"
   },
   {
+    "id": "com.qualcomm.qti.devicestatisticsservice",
+    "list": "Pending",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
     "id": "com.qti.diagservices",
+    "list": "Pending",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.qti.ltebc",
+    "list": "Pending",
+    "description": "LTE Broadcast Manager",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.qti.pasrservice",
     "list": "Pending",
     "description": "",
     "dependencies": null,
@@ -9272,7 +9299,7 @@
   {
     "id": "com.qti.qualcomm.deviceinfo",
     "list": "Pending",
-    "description": "",
+    "description": "Device Info\nDisplays phone information\n(Settings -> About phone -> General information)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9281,7 +9308,7 @@
   {
     "id": "com.qualcomm.qti.cne",
     "list": "Pending",
-    "description": "",
+    "description": "Related to Qualcomm connectivity engine (CnE)\nhttps://www.qualcomm.com/news/onq/2013/07/02/qualcomms-cne-bringing-smarts-3g4g-wi-fi-seamless-interworking",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9290,7 +9317,7 @@
   {
     "id": "com.qualcomm.qti.ims",
     "list": "Pending",
-    "description": "",
+    "description": "Related to IP Multimedia Services (IMS)\nhttps://www.qualcomm.com/news/releases/2015/03/02/qualcomm-powers-mobile-and-home-connectivity-innovations-mobile-world",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9317,7 +9344,7 @@
   {
     "id": "com.qualcomm.qti.qdma",
     "list": "Pending",
-    "description": "",
+    "description": "QDMA is Quadrature-division multiple access, a variant of communication from the same row with WiMax and CDMA.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9333,9 +9360,18 @@
     "removal": "Expert"
   },
   {
+    "id": "com.qualcomm.qti.qccauthmgr",
+    "list": "Pending",
+    "description": "QCC-AUTHMGR",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
     "id": "com.qualcomm.qti.seccamservice",
     "list": "Pending",
-    "description": "",
+    "description": "SecCamService, responsible for operation of the camera",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9353,11 +9389,20 @@
   {
     "id": "com.qualcomm.qti.services.systemhelper",
     "list": "Pending",
-    "description": "",
+    "description": "Qualcomm System Helper Service.\nUncertain role...\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
+  },
+  {
+    "id": "com.qualcomm.qti.server.wigig.tethering.rro",
+    "list": "Pending",
+    "description": "Service for tethering?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
   },
   {
     "id": "com.qualcomm.qti.simcontacts",
@@ -9371,7 +9416,7 @@
   {
     "id": "com.qualcomm.qti.uceShimService",
     "list": "Pending",
-    "description": "",
+    "description": "User Capability Echange service.\nUncertain role...\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9395,8 +9440,26 @@
     "labels": null,
     "removal": "Expert"
   },
+    {
+    "id": "com.qualcomm.qti.xrvd.service",
+    "list": "Pending",
+    "description": "Possibly related to Qualcomm Extended Reality (XR)\nhttps://www.qualcomm.com/products/xr-vr-ar",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
   {
     "id": "com.qualcomm.uimremoteclient",
+    "list": "Pending",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.qualcomm.uimremoteserver",
     "list": "Pending",
     "description": "",
     "dependencies": null,
@@ -10674,6 +10737,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.tct.endusertest",
+    "list": "Pending",
+    "description": "Unused device issue feedback app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.tct.faceunlock",
     "list": "Pending",
     "description": "",
@@ -10703,11 +10775,11 @@
   {
     "id": "com.tct.iris",
     "list": "Pending",
-    "description": "",
+    "description": "TCL NXTVISION (Settings -> Display -> Visual Enhancement)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.tct.music",
@@ -13034,7 +13106,7 @@
   {
     "id": "com.qualcomm.qti.qms.service.telemetry",
     "list": "Misc",
-    "description": "Telemetry service.\nYeah obviously it phones to Qualcomm.\n",
+    "description": "Qualcomm Mobile Security, telemetry service.\nYeah obviously it phones to Qualcomm.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -13111,6 +13183,15 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.qualcomm.qti.gpudrivers.lito.api30",
+    "list": "Misc",
+    "description": "Adreno Graphics Drivers",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
   },
   {
     "id": "com.qualcomm.qti.lpa",
@@ -18781,8 +18862,8 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-},
-{
+  },
+  {
     "id": "com.agui.studentmodel",
     "list": "Oem",
     "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile/nphone reasonably. Under this mode, user is not allowed to install applications and/nrestore to factory settings. Applications not in white list are disabled.",
@@ -18790,5 +18871,41 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-}
+  },
+  {
+    "id": "com.t2m.euiccoverlay",
+    "list": "Pending",
+    "description": "Possibly needed for eSIM (eUICC)",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.fairphone.activator",
+    "list": "Oem",
+    "description": "Fairphone activation service\nhttps://forum.fairphone.com/t/telemetry-spyware-list-of-privacy-threats-on-fp3-android-9/55179/74",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.fairphone.myfairphone",
+    "list": "Oem",
+    "description": "My Fairphone app\nhttps://www.fairphone.com/en/2021/12/20/my-fairphone-app/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.fp.camera",
+    "list": "Oem",
+    "description": "Fairphone Camera app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  }
 ]
