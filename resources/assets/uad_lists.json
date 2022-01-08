@@ -18855,6 +18855,24 @@
     "removal": "Unsafe"
   },
   {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game (From Unihertz Jelly2)\n Removes distractions when selected apps are in use",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile/nphone reasonably. Under this mode, user is not allowed to install applications and/nrestore to factory settings. Applications not in white list are disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.t2m.euiccoverlay",
     "list": "Pending",
     "description": "Possibly needed for eSIM (eUICC)",
@@ -18879,7 +18897,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Advanced"
   },
   {
     "id": "com.fp.camera",
@@ -18891,5 +18909,3 @@
     "removal": "Advanced"
   }
 ]
-
-
