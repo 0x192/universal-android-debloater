@@ -6,11 +6,12 @@ on:
 
 jobs:
   publish:
-    name: Building ${{ matrix.build_target }}
+    name: Building ${{ matrix.build_target }} [${{ matrix.graphics }}]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         build_target: [linux, macos, windows]
+        graphics: [glow, wgpu]
         include:
           - build_target: linux
             os: ubuntu-latest
@@ -18,7 +19,10 @@ jobs:
             os: macos-latest
           - build_target: windows
             os: windows-latest
-
+          - graphics: glow
+            renderer: "-opengl"
+          - graphics: wgpu
+            renderer: '' # Vulkan but we don't want this in the binary filename
     steps:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -33,28 +37,20 @@ jobs:
           sudo apt-get -qq update
           sudo apt-get install -y libxkbcommon-dev lld
       - uses: actions/checkout@v2
-      - name: Cargo build (WGPU feature)
+      - name: Cargo build
         uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --release
-      - name: Renaming
+          args: --release --features ${{ matrix.graphics }}
+      - name: Renaming binaries [Windows]
         if: matrix.os == 'windows-latest'
-        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}.exe
-      - name: Renaming
+        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}${{ matrix.renderer }}.exe
+      - name: Renaming binaries [Others]
         if: matrix.os != 'windows-latest'
-        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}
-      - name: Cargo build (Glow feature)
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release --features glow
-      - name: Renaming
-        if: matrix.os == 'windows-latest'
-        run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}-opengl.exe
-      - name: Renaming
-        if: matrix.os != 'windows-latest'
-        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}-opengl
+        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}${{ matrix.renderer }}
+      - name: Tarball Linux binaries
+        if: matrix.os == 'ubuntu-latest'
+        run: tar --remove-files -czf target/release/uad_gui-linux${{ matrix.renderer }}{.tar.gz,}
       - name: Create pre-release
         uses: softprops/action-gh-release@v1
         with:
