@@ -4,11 +4,11 @@ use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
 use crate::gui::ICONS;
-
 use iced::{alignment, Length, Text};
 use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
+use std::path::PathBuf;
 
 pub fn fetch_packages(
     uad_lists: &'static HashMap<String, Package>,
@@ -139,4 +139,10 @@ pub fn string_to_theme(theme: String) -> Theme {
         "Lupin" => Theme::lupin(),
         _ => Theme::lupin(),
     }
+}
+
+pub fn setup_uad_dir(dir: Option<PathBuf>) -> PathBuf {
+    let dir = dir.unwrap().join("uad");
+    fs::create_dir_all(&dir).expect("Can't create cache directory");
+    dir
 }

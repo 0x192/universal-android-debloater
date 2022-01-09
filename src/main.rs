@@ -4,16 +4,24 @@
 extern crate log;
 
 use crate::core::config::Config;
+use crate::core::utils::setup_uad_dir;
 use fern::{
     colors::{Color, ColoredLevelConfig},
     FormatCallback,
 };
 use log::Record;
 use static_init::dynamic;
+use std::path::PathBuf;
 use std::{fmt::Arguments, fs::OpenOptions};
 
 mod core;
 mod gui;
+
+#[dynamic]
+static CONFIG_DIR: PathBuf = setup_uad_dir(dirs::config_dir());
+
+#[dynamic]
+static CACHE_DIR: PathBuf = setup_uad_dir(dirs::cache_dir());
 
 #[dynamic]
 static IN_FILE_CONFIGURATION: Config = Config::load_configuration_file();
@@ -47,9 +55,9 @@ pub fn setup_logger() -> Result<(), fern::InitError> {
     let log_file = OpenOptions::new()
         .write(true)
         .create(true)
-        .append(false)
-        .truncate(true)
-        .open("uad.log")?;
+        .append(true)
+        .truncate(false)
+        .open(CACHE_DIR.join(format!("UAD_{}.log", chrono::Local::now().format("%Y%m%d"))))?;
 
     let file_dispatcher = fern::Dispatch::new()
         .format(make_formatter(false))
