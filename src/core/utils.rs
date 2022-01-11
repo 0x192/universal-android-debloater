@@ -9,6 +9,7 @@ use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
 use std::path::PathBuf;
+use std::process::Command;
 
 pub fn fetch_packages(
     uad_lists: &'static HashMap<String, Package>,
@@ -145,4 +146,28 @@ pub fn setup_uad_dir(dir: Option<PathBuf>) -> PathBuf {
     let dir = dir.unwrap().join("uad");
     fs::create_dir_all(&dir).expect("Can't create cache directory");
     dir
+}
+
+pub fn open_url(dir: PathBuf) {
+    #[cfg(target_os = "windows")]
+    Command::new("explorer")
+        .args([dir])
+        .creation_flags(0x08000000)
+        .output();
+
+    #[cfg(target_os = "macos")]
+    Command::new("open").args([dir]).output();
+
+    #[cfg(not(any(target_os = "macos", target_os = "windows")))]
+    let output = Command::new("xdg-open").args([dir]).output();
+
+    match output {
+        Ok(o) => {
+            if !o.status.success() {
+                let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
+                error!("Can't open the following URL: {}", stderr)
+            }
+        }
+        Err(e) => error!("Failed to run command to open the file explorer: {}", e),
+    }
 }

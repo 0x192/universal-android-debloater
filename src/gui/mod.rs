@@ -6,7 +6,7 @@ pub use crate::core::sync::{get_device_list, Phone};
 pub use crate::core::uad_lists::Package;
 use crate::core::utils::icon;
 use std::env;
-pub use views::about::About as AboutView;
+pub use views::about::{About as AboutView, Message as AboutMessage};
 pub use views::list::{List as AppsView, Message as AppsMessage};
 pub use views::settings::{
     Message as SettingsMessage, Phone as SettingsPhone, Settings as SettingsView,
@@ -57,8 +57,8 @@ pub enum Message {
     SettingsPressed,
     LoadDevices(usize),
     AppsPress,
-
     DeviceSelected(Phone),
+    AboutAction(AboutMessage),
     AppsAction(AppsMessage),
     SettingsAction(SettingsMessage),
     RefreshButtonPressed,
@@ -155,6 +155,10 @@ impl Application for UadGui {
                 self.settings_view.update(msg);
                 Command::none()
             }
+            Message::AboutAction(msg) => {
+                self.about_view.update(msg);
+                Command::none()
+            }
             Message::DeviceSelected(device) => {
                 self.selected_device = Some(device);
                 self.apps_view = AppsView::default();
@@ -236,7 +240,10 @@ impl Application for UadGui {
                     &self.selected_device.clone().unwrap_or_default(),
                 )
                 .map(Message::AppsAction),
-            View::About => self.about_view.view(&self.settings_view),
+            View::About => self
+                .about_view
+                .view(&self.settings_view)
+                .map(Message::AboutAction),
             View::Settings => self.settings_view.view().map(Message::SettingsAction),
         };
 
