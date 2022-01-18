@@ -515,10 +515,10 @@ impl List {
     ) -> Result<usize, ()> {
         match adb_shell_command(true, &action) {
             Ok(o) => {
-                // On old devices, adb commands can return the '0' exit code even if there 
-                // is an error. On Android 4.4, ADB doesn't check if the package exists. 
+                // On old devices, adb commands can return the '0' exit code even if there
+                // is an error. On Android 4.4, ADB doesn't check if the package exists.
                 // It does not return any error if you try to `pm block` a non-existent package.
-                // Some commands are even killed by ADB before finishing and UAD can't catch 
+                // Some commands are even killed by ADB before finishing and UAD can't catch
                 // the output.
                 if ["Error", "Failure"].iter().any(|&e| o.contains(e)) {
                     error!("[{}] {} -> {}", recommendation, action, o);
