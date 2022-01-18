@@ -286,25 +286,26 @@ impl List {
                 Command::none()
             }
             Message::ChangePackageState(res) => {
-                let package = &mut self.phone_packages[*i_user][i];
-                update_selection_count(&mut self.selection, package.state, false);
+                if let Ok(i) = res {
+                    let package = &mut self.phone_packages[*i_user][i];
+                    update_selection_count(&mut self.selection, package.state, false);
 
-                if !settings.multi_user_mode {
-                    package.state = package.state.opposite(settings.disable_mode);
-                    package.selected = false;
-                } else {
-                    for u in &phone.user_list {
-                        self.phone_packages[u.index][i].state = self.phone_packages[u.index][i]
-                            .state
-                            .opposite(settings.disable_mode);
-                        self.phone_packages[u.index][i].selected = false;
+                    if !settings.multi_user_mode {
+                        package.state = package.state.opposite(settings.disable_mode);
+                        package.selected = false;
+                    } else {
+                        for u in &phone.user_list {
+                            self.phone_packages[u.index][i].state = self.phone_packages[u.index][i]
+                                .state
+                                .opposite(settings.disable_mode);
+                            self.phone_packages[u.index][i].selected = false;
+                        }
                     }
+                    self.selection
+                        .selected_packages
+                        .drain_filter(|s_i| *s_i == i);
+                    Self::filter_package_lists(self);
                 }
-
-                self.selection
-                    .selected_packages
-                    .drain_filter(|s_i| *s_i == i);
-                Self::filter_package_lists(self);
                 Command::none()
             }
         }
@@ -507,16 +508,33 @@ impl List {
             .collect();
     }
 
-    async fn perform_commands(action: String, i: usize, recommendation: Removal) -> usize {
+    async fn perform_commands(
+        action: String,
+        i: usize,
+        recommendation: Removal,
+    ) -> Result<usize, ()> {
         match adb_shell_command(true, &action) {
-            Ok(_) => info!("[{}] {}", recommendation, action),
+            Ok(o) => {
+                // On old devices, adb commands can return the '0' exit code even if there 
+                // is an error. On Android 4.4, ADB doesn't check if the package exists. 
+                // It does not return any error if you try to `pm block` a non-existent package.
+                // Some commands are even killed by ADB before finishing and UAD can't catch 
+                // the output.
+                if ["Error", "Failure"].iter().any(|&e| o.contains(e)) {
+                    error!("[{}] {} -> {}", recommendation, action, o);
+                    Err(())
+                } else {
+                    info!("[{}] {} -> {}", recommendation, action, o);
+                    Ok(i)
+                }
+            }
             Err(err) => {
                 if !err.contains("[not installed for") {
                     error!("[{}] {} -> {}", recommendation, action, err);
                 }
+                Err(())
             }
-        };
-        i
+        }
     }
 
     async fn load_packages(user_list: Vec<User>) -> Vec<Vec<PackageRow>> {
