@@ -74,7 +74,7 @@ impl Theme {
                     foreground: hex_to_color("#E0E0E0").unwrap(),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#673AB7").unwrap(),
+                    primary: hex_to_color("#818181").unwrap(),
                     secondary: hex_to_color("#F9D659").unwrap(),
                     surface: hex_to_color("#818181").unwrap(),
                     error: hex_to_color("#992B2B").unwrap(),
