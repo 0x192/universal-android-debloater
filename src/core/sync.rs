@@ -126,6 +126,7 @@ pub fn action_handler(
     settings: &SettingsPhone,
 ) -> Vec<String> {
     // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
+    // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
     match package.state {
         PackageState::Enabled => match settings.disable_mode {
             true => {

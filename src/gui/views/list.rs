@@ -87,7 +87,7 @@ pub enum Message {
     ExportSelectionPressed,
     List(usize, RowMessage),
     ExportedSelection(Result<bool, String>),
-    ActionIsDone(usize),
+    ChangePackageState(Result<usize, ()>),
     PackagesLoaded(Vec<Vec<PackageRow>>),
     Nothing,
 }
@@ -144,12 +144,12 @@ impl List {
                 Self::filter_package_lists(self);
                 Command::none()
             }
-            Message::List(i, row_message) => {
-                self.phone_packages[*i_user][i]
+            Message::List(i_package, row_message) => {
+                self.phone_packages[*i_user][i_package]
                     .update(row_message.clone())
-                    .map(move |row_message| Message::List(i, row_message));
+                    .map(move |row_message| Message::List(i_package, row_message));
 
-                let package = &mut self.phone_packages[*i_user][i];
+                let package = &mut self.phone_packages[*i_user][i_package];
 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
@@ -159,11 +159,11 @@ impl List {
                             package.selected = toggle;
 
                             if package.selected {
-                                self.selection.selected_packages.push(i);
+                                self.selection.selected_packages.push(i_package);
                             } else {
                                 self.selection
                                     .selected_packages
-                                    .drain_filter(|s_i| *s_i == i);
+                                    .drain_filter(|s_i| *s_i == i_package);
                             }
                             update_selection_count(
                                 &mut self.selection,
@@ -178,11 +178,19 @@ impl List {
                         let actions =
                             action_handler(&self.selected_user.unwrap(), package, phone, settings);
 
-                        for action in actions {
-                            commands.push(Command::perform(
-                                Self::perform_commands(action, i, package.removal),
-                                Message::ActionIsDone,
-                            ));
+                        for (i, action) in actions.into_iter().enumerate() {
+                            // Only the first command can change the package state
+                            if i != 0 {
+                                commands.push(Command::perform(
+                                    Self::perform_commands(action, i_package, package.removal),
+                                    |_| Message::Nothing,
+                                ));
+                            } else {
+                                commands.push(Command::perform(
+                                    Self::perform_commands(action, i_package, package.removal),
+                                    Message::ChangePackageState,
+                                ));
+                            }
                         }
                         Command::batch(commands)
                     }
@@ -215,15 +223,27 @@ impl List {
                         phone,
                         settings,
                     );
-                    for action in actions {
-                        commands.push(Command::perform(
-                            Self::perform_commands(
-                                action,
-                                i,
-                                self.phone_packages[*i_user][i].removal,
-                            ),
-                            Message::ActionIsDone,
-                        ));
+                    for (j, action) in actions.into_iter().enumerate() {
+                        // Only the first command can change the package state
+                        if j != 0 {
+                            commands.push(Command::perform(
+                                Self::perform_commands(
+                                    action,
+                                    i,
+                                    self.phone_packages[*i_user][i].removal,
+                                ),
+                                |_| Message::Nothing,
+                            ));
+                        } else {
+                            commands.push(Command::perform(
+                                Self::perform_commands(
+                                    action,
+                                    i,
+                                    self.phone_packages[*i_user][i].removal,
+                                ),
+                                Message::ChangePackageState,
+                            ));
+                        }
                     }
                 }
                 Command::batch(commands)
@@ -265,7 +285,7 @@ impl List {
                 Self::filter_package_lists(self);
                 Command::none()
             }
-            Message::ActionIsDone(i) => {
+            Message::ChangePackageState(res) => {
                 let package = &mut self.phone_packages[*i_user][i];
                 update_selection_count(&mut self.selection, package.state, false);
 
