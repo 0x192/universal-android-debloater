@@ -52,7 +52,7 @@ impl PackageRow {
         Command::none()
     }
 
-    pub fn view(&mut self, settings: &Settings, phone: &Phone) -> Element<Message> {
+    pub fn view(&mut self, settings: &Settings, _phone: &Phone) -> Element<Message> {
         //let trash_svg = format!("{}/resources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
         //let restore_svg = format!("{}/resources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
         let button_style;
@@ -83,9 +83,10 @@ impl PackageRow {
                 warn!("Incredible! Something impossible happenned!");
             }
         }
-
-        if (self.state != PackageState::Uninstalled && settings.phone.expert_mode)
-            || (self.removal != Removal::Unsafe && phone.android_sdk >= 26)
+        // Disable any removal action for unsafe packages if expert_mode is disabled
+        if self.removal != Removal::Unsafe
+            || self.state != PackageState::Enabled
+            || settings.phone.expert_mode
         {
             selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
                 .style(style::SelectionCheckBox::Enabled(settings.theme.palette));

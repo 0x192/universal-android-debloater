@@ -28,6 +28,7 @@ and `Removed`.
 - Miscellaneous minor issues in some package descriptions.
 - Several bad recommendations.
 - [[#50](https://github.com/0x192/universal-android-debloater/issues/50)] Resync button flipping theme back to `Lupin`.
+- [Regression ([048e7f](https://github.com/0x192/universal-android-debloater/commit/048e7fc8fd6d44b0e8ba933c289249366254a9cc))] Weird disabled/greyed action button with older devices (< Android 8.0). Package could be selected but no action was performed.
 
 ## [0.3] - 2021-10-10
 
