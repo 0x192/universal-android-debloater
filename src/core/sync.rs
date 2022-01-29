@@ -1,4 +1,5 @@
 use crate::core::uad_lists::PackageState;
+use crate::core::utils::request_builder;
 use crate::gui::views::settings::Phone as SettingsPhone;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
@@ -120,108 +121,50 @@ pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> 
 }
 
 pub fn action_handler(
-    selected_user: &User,
+    selected_u: &User,
     package: &PackageRow,
     phone: &Phone,
     settings: &SettingsPhone,
 ) -> Vec<String> {
     // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
     // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
-    match package.state {
-        PackageState::Enabled => match settings.disable_mode {
-            true => {
-                // < Android Ice Cream Sandwich (4.0)
-                if phone.android_sdk < 14 {
-                    vec![
-                        format!("pm disable {}", package.name),
-                        format!("pm clear {}", package.name),
-                    ]
-                }
-                // < Android Lollipop (5.0)
-                else if phone.android_sdk < 17 {
-                    vec![
-                        format!("pm disable-user {}", package.name),
-                        format!("pm clear {}", package.name),
-                        format!("pm hide {}", package.name),
-                    ]
-                } else if settings.multi_user_mode {
-                    phone
-                        .user_list
-                        .iter()
-                        .flat_map(|u| {
-                            [
-                                format!("pm disable-user --user {} {}", u.id, package.name),
-                                format!("am force-stop --user {} {}", u.id, package.name),
-                                format!("pm clear --user {} {}", u.id, package.name),
-                                //format!("pm hide --user {} {}", u.id, package.name),
-                            ]
-                        })
-                        .collect()
-                } else {
-                    vec![
-                        format!(
-                            "pm disable-user --user {} {}",
-                            selected_user.id, package.name
-                        ),
-                        format!("pm clear --user {} {}", selected_user.id, package.name),
-                    ]
-                }
+    let commands = match package.state {
+        PackageState::Enabled => {
+            let commands = match settings.disable_mode {
+                true => vec!["pm disable-user", "am force-stop", "pm clear"],
+                false => vec!["pm uninstall"],
+            };
+
+            match phone.android_sdk {
+                i if i >= 23 => commands,                // > Android Lollipop (6.0)
+                21 | 22 => vec!["pm hide", "pm clear"],  // Android Lollipop (5.x)
+                19 | 20 => vec!["pm block", "pm clear"], // Android KitKat (4.4/4.4W)
+                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the needed ADB commands need root
             }
-            false => {
-                if phone.android_sdk < 21 {
-                    vec![format!("pm uninstall {}", package.name)]
-                } else if settings.multi_user_mode {
-                    phone
-                        .user_list
-                        .iter()
-                        .map(|u| format!("pm uninstall --user {} {}", u.id, package.name))
-                        .collect()
-                } else {
-                    vec![format!(
-                        "pm uninstall --user {} {}",
-                        selected_user.id, package.name
-                    )]
-                }
-            }
-        },
+        }
         PackageState::Uninstalled => {
-            if phone.android_sdk < 21 {
-                Vec::new() // action already prevented by the GUI
-            } else if settings.multi_user_mode {
-                phone
-                    .user_list
-                    .iter()
-                    .map(|u| {
-                        format!(
-                            "cmd package install-existing --user {} {}",
-                            u.id, package.name
-                        )
-                    })
-                    .collect()
-            } else {
-                vec![format!(
-                    "cmd package install-existing --user {} {}",
-                    selected_user.id, package.name
-                )]
+            match phone.android_sdk {
+                i if i >= 23 => vec!["cmd package install-existing"],
+                21 | 22 => vec!["pm unhide"],
+                19 | 20 => vec!["pm unblock", "pm clear"],
+                _ => vec![], // Impossible action already prevented by the GUI
             }
         }
-        PackageState::Disabled => {
-            if phone.android_sdk < 21 {
-                vec![format!("pm enable {}", package.name)]
-            } else if settings.multi_user_mode {
-                phone
-                    .user_list
-                    .iter()
-                    .map(|u| format!("pm enable --user {} {}", u.id, package.name))
-                    .collect()
-            } else {
-                vec![format!(
-                    "pm enable --user {} {}",
-                    selected_user.id, package.name
-                )]
-            }
-        }
+        // `pm enable` doesn't work without root before Android 6.x and this is most likely the same on even older devices too.
+        // Should never happen as disable_mode is unavailable on older devices
+        PackageState::Disabled => match phone.android_sdk {
+            i if i >= 23 => vec!["pm enable"],
+            _ => vec!["pm enable"],
+        },
         PackageState::All => vec![], // This can't happen (like... never)
+    };
+
+    if settings.multi_user_mode {
+        request_builder(commands, &package.name, &phone.user_list)
+    } else if phone.android_sdk < 21 {
+        request_builder(commands, &package.name, &[])
+    } else {
+        request_builder(commands, &package.name, &[*selected_u])
     }
 }
 

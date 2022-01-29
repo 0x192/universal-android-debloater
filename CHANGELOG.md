@@ -15,6 +15,7 @@ and `Removed`.
 - [[#58](https://github.com/0x192/universal-android-debloater/issues/52)] `android` to the debloat lists with the tag `Unsafe`.
 - [[#49](https://github.com/0x192/universal-android-debloater/issues/49)] Multi-device support: You are now able to select a device among the list of all ADB connected devices/emulators.
 - [[#44](https://github.com/0x192/universal-android-debloater/issues/44)] Persistent settings: Settings (only `theme` for now) are saved to a config file. Its location follows [the standards of the different OS](https://github.com/dirs-dev/dirs-rs#example).
+- Links to the Github page, wiki, github issues and logfiles in the `About` page.
 
 ### Changed
 - Review of the package lists recommendations. The `Recommended` debloat list is now safer (less likely to remove something you'd want to keep).
@@ -24,11 +25,14 @@ and `Removed`.
 - Previous logs are no longer overwritten. The logger now only appends to the current logfile of the day (UAD_%Y%m%d.log).
 - Each new day the logger will create a new file on UAD launch.
 
+
 ### Fixed
 - Miscellaneous minor issues in some package descriptions.
 - Several bad recommendations.
 - [[#50](https://github.com/0x192/universal-android-debloater/issues/50)] Resync button flipping theme back to `Lupin`.
 - [Regression ([048e7f](https://github.com/0x192/universal-android-debloater/commit/048e7fc8fd6d44b0e8ba933c289249366254a9cc))] Weird disabled/greyed action button with older devices (< Android 8.0). Package could be selected but no action was performed.
+- [[#78](https://github.com/0x192/universal-android-debloater/issues/78)] Packages not being actually uninstalled on older devices (< Android 6.0). Without root we can only use `pm block`/`pm unblock` for Android KitKit (4.4) and `pm hide`/`pm unhide` on Android Lollipop (5.x).
+
 
 ## [0.3] - 2021-10-10
 

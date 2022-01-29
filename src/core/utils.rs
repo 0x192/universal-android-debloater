@@ -171,3 +171,21 @@ pub fn open_url(dir: PathBuf) {
         Err(e) => error!("Failed to run command to open the file explorer: {}", e),
     }
 }
+
+pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
+    if !users.is_empty() {
+        users
+            .iter()
+            .flat_map(|u| {
+                commands
+                    .iter()
+                    .map(|c| format!("{} --user {} {}", c, u.id, package))
+            })
+            .collect()
+    } else {
+        commands
+            .iter()
+            .map(|c| format!("{} {}", c, package))
+            .collect()
+    }
+}
