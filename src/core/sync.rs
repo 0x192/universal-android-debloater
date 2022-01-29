@@ -12,7 +12,7 @@ use std::process::Command;
 use std::os::windows::process::CommandExt;
 
 #[dynamic]
-static RE: Regex = Regex::new(r"\n([[:ascii:]]+)\s+device").unwrap();
+static RE: Regex = Regex::new(r"\n(\S+)\s+device").unwrap();
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Phone {
