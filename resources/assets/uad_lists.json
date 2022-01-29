@@ -18907,5 +18907,23 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
-  }
+  },
+  {
+    "id": "com.mi.globalbrowser",
+    "list": "Oem",
+    "description": "Mi Browser\nPrivacy nightmare. You really should use something else.\nFYI https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/\n\nNote: Since MIUI 12, you can no longer uninstall this app. Disabling it still works fine.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.xiaomi.calendar",
+    "list": "Oem",
+    "description": "Mi Calendar. Google trackers inside and needs 48 permissions! Obviously talks to Xiaomi servers. The com.mi.health.provider.permission.read_menstruation permissions is really creepy... There are better alternatives.\nPithus analysis: https://beta.pithus.org/report/6c68ddd1f9e2d1f9e1df2eab572c07f1e34c4a6490c0ba98554a7356ca2a351d\n\nNote: Since MIUI 12, you can no longer uninstall this app. Disabling it still works fine.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+   }
 ]
