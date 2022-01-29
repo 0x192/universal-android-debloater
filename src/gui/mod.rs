@@ -152,7 +152,8 @@ impl Application for UadGui {
                 )
                 .map(Message::AppsAction),
             Message::SettingsAction(msg) => {
-                self.settings_view.update(msg);
+                self.settings_view
+                    .update(&self.selected_device.clone().unwrap_or_default(), msg);
                 Command::none()
             }
             Message::AboutAction(msg) => {
@@ -244,7 +245,10 @@ impl Application for UadGui {
                 .about_view
                 .view(&self.settings_view)
                 .map(Message::AboutAction),
-            View::Settings => self.settings_view.view().map(Message::SettingsAction),
+            View::Settings => self
+                .settings_view
+                .view(&self.selected_device.clone().unwrap_or_default())
+                .map(Message::SettingsAction),
         };
 
         Column::new()

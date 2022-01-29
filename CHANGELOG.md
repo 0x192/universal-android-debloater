@@ -24,7 +24,7 @@ and `Removed`.
 - Logfiles are now located in a more conventional place: [cache_dir](https://docs.rs/dirs/latest/dirs/).
 - Previous logs are no longer overwritten. The logger now only appends to the current logfile of the day (UAD_%Y%m%d.log).
 - Each new day the logger will create a new file on UAD launch.
-
+- [[#78](https://github.com/0x192/universal-android-debloater/issues/78)] Disable mode is now only available on Android 6+ because the disable ADB commands do not work without root on older devices. The setting will be greyed-out on older devices.
 
 ### Fixed
 - Miscellaneous minor issues in some package descriptions.

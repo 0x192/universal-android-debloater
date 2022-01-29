@@ -50,6 +50,33 @@ impl button::StyleSheet for PrimaryButton {
     }
 }
 
+pub struct UnavailableButton(pub ColorPalette);
+impl button::StyleSheet for UnavailableButton {
+    fn active(&self) -> button::Style {
+        button::Style {
+            border_color: Color {
+                a: 0.5,
+                ..self.0.bright.error
+            },
+            border_width: 1.0,
+            border_radius: 2.0,
+            text_color: self.0.bright.error,
+            ..button::Style::default()
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        button::Style {
+            background: Some(Background::Color(Color {
+                a: 0.25,
+                ..self.0.normal.primary
+            })),
+            text_color: self.0.normal.error,
+            ..self.active()
+        }
+    }
+}
+
 pub struct RefreshButton(pub ColorPalette);
 impl button::StyleSheet for RefreshButton {
     fn active(&self) -> button::Style {
@@ -293,7 +320,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.normal.primary,
-                text_color: palette.bright.surface,
+                text_color: palette.normal.primary,
             },
         }
     }
@@ -316,27 +343,45 @@ impl checkbox::StyleSheet for SelectionCheckBox {
     }
 }
 
-pub struct SettingsCheckbox(pub ColorPalette);
-impl checkbox::StyleSheet for SettingsCheckbox {
+pub enum SettingsCheckBox {
+    Enabled(ColorPalette),
+    Disabled(ColorPalette),
+}
+
+impl checkbox::StyleSheet for SettingsCheckBox {
     fn active(&self, _is_checked: bool) -> checkbox::Style {
-        checkbox::Style {
-            background: Background::Color(self.0.base.background),
-            checkmark_color: self.0.bright.primary,
-            border_radius: 5.0,
-            border_width: 1.0,
-            border_color: self.0.bright.primary,
-            text_color: self.0.bright.surface,
+        match self {
+            Self::Enabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.background),
+                checkmark_color: palette.bright.primary,
+                border_radius: 5.0,
+                border_width: 1.0,
+                border_color: palette.bright.primary,
+                text_color: palette.bright.surface,
+            },
+            Self::Disabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.foreground),
+                checkmark_color: palette.bright.primary,
+                border_radius: 5.0,
+                border_width: 1.0,
+                border_color: palette.normal.primary,
+                text_color: palette.normal.primary,
+            },
         }
     }
-
-    fn hovered(&self, _is_checked: bool) -> checkbox::Style {
-        checkbox::Style {
-            background: Background::Color(self.0.base.foreground),
-            checkmark_color: self.0.bright.primary,
-            border_radius: 5.0,
-            border_width: 2.0,
-            border_color: self.0.bright.primary,
-            text_color: self.0.bright.surface,
+    fn hovered(&self, is_checked: bool) -> checkbox::Style {
+        match self {
+            Self::Enabled(palette) => checkbox::Style {
+                background: Background::Color(palette.base.foreground),
+                checkmark_color: palette.bright.primary,
+                border_radius: 5.0,
+                border_width: 2.0,
+                border_color: palette.bright.primary,
+                text_color: palette.bright.surface,
+            },
+            Self::Disabled(_) => checkbox::Style {
+                ..self.active(is_checked)
+            },
         }
     }
 }
