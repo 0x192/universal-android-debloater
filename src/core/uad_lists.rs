@@ -117,8 +117,7 @@ impl Opposite for PackageState {
                     PackageState::Uninstalled
                 }
             }
-            PackageState::Uninstalled => PackageState::Enabled,
-            PackageState::Disabled => PackageState::Enabled,
+            PackageState::Uninstalled | PackageState::Disabled => PackageState::Enabled,
             PackageState::All => PackageState::All,
         }
     }

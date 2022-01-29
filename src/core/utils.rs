@@ -99,10 +99,7 @@ pub async fn export_selection(packages: Vec<PackageRow>) -> Result<bool, String>
 }
 
 #[allow(clippy::needless_collect)] // false positive: https://github.com/rust-lang/rust-clippy/issues/6164
-pub fn import_selection(
-    packages: &mut Vec<PackageRow>,
-    selection: &mut Selection,
-) -> io::Result<()> {
+pub fn import_selection(packages: &mut [PackageRow], selection: &mut Selection) -> io::Result<()> {
     let file = fs::File::open("uad_exported_selection.txt")?;
     let reader = BufReader::new(file);
     let imported_selection: Vec<String> = reader
