@@ -312,7 +312,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.base.background,
-                text_color: palette.bright.surface,
+                text_color: Some(palette.bright.surface),
             },
             Self::Disabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
@@ -320,7 +320,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.normal.primary,
-                text_color: palette.normal.primary,
+                text_color: Some(palette.normal.primary),
             },
         }
     }
@@ -333,7 +333,7 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 border_radius: 5.0,
                 border_width: 2.0,
                 border_color: palette.normal.primary,
-                text_color: palette.bright.surface,
+                text_color: Some(palette.bright.surface),
             },
 
             Self::Disabled(_) => checkbox::Style {
@@ -357,7 +357,7 @@ impl checkbox::StyleSheet for SettingsCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.bright.primary,
-                text_color: palette.bright.surface,
+                text_color: Some(palette.bright.surface),
             },
             Self::Disabled(palette) => checkbox::Style {
                 background: Background::Color(palette.base.foreground),
@@ -365,7 +365,7 @@ impl checkbox::StyleSheet for SettingsCheckBox {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: palette.normal.primary,
-                text_color: palette.normal.primary,
+                text_color: Some(palette.normal.primary),
             },
         }
     }
@@ -377,7 +377,7 @@ impl checkbox::StyleSheet for SettingsCheckBox {
                 border_radius: 5.0,
                 border_width: 2.0,
                 border_color: palette.bright.primary,
-                text_color: palette.bright.surface,
+                text_color: Some(palette.bright.surface),
             },
             Self::Disabled(_) => checkbox::Style {
                 ..self.active(is_checked)
