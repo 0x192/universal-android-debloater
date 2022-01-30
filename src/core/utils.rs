@@ -147,13 +147,10 @@ pub fn setup_uad_dir(dir: Option<PathBuf>) -> PathBuf {
 
 pub fn open_url(dir: PathBuf) {
     #[cfg(target_os = "windows")]
-    Command::new("explorer")
-        .args([dir])
-        .creation_flags(0x08000000)
-        .output();
+    let output = Command::new("explorer").args([dir]).output();
 
     #[cfg(target_os = "macos")]
-    Command::new("open").args([dir]).output();
+    let output = Command::new("open").args([dir]).output();
 
     #[cfg(not(any(target_os = "macos", target_os = "windows")))]
     let output = Command::new("xdg-open").args([dir]).output();
