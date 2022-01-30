@@ -5,33 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-The sections should follow the order `Packaging`, `Added`, `Changed`, `Fixed`
+The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
-## [Unreleased]
+## [0.4] - 2022-01-30
+
+### Apps
+- [[#92](https://github.com/0x192/universal-android-debloater/pull/92)] Added 3 Fairphone packages + 7 Qualcomm packages (thanks [@VeH-c](https://github.com/VeH-c))
+- [[#87](https://github.com/0x192/universal-android-debloater/pull/87)] Added 2 Unihertz packages (thanks [@rar0ch](https://github.com/rar0ch))
+- [[#52](https://github.com/0x192/universal-android-debloater/issues/52)] Added `uk.co.ee.myee` to the debloat lists  (thanks [@lawson58](https://github.com/lawson85)).
+- [[#58](https://github.com/0x192/universal-android-debloater/issues/52)] Added `android` to the debloat lists with the tag `Unsafe`.
+- Added 2 new Xiaomi packages to the `Recommended` list.
+- Multiple package description improvement (thanks [@jonas-ott](https://github.com/jonas-ott) and [@felurx](https://github.com/felurx) for the help)
+- Review of the package lists recommendations. The `Recommended` debloat list is now safer (less likely to remove something you'd want to keep).
 
 ### Added
-- [[#52](https://github.com/0x192/universal-android-debloater/issues/52)] `uk.co.ee.myee` to the debloat lists  (thanks [@lawson58](https://github.com/lawson85)).
-- [[#58](https://github.com/0x192/universal-android-debloater/issues/52)] `android` to the debloat lists with the tag `Unsafe`.
 - [[#49](https://github.com/0x192/universal-android-debloater/issues/49)] Multi-device support: You are now able to select a device among the list of all ADB connected devices/emulators.
 - [[#44](https://github.com/0x192/universal-android-debloater/issues/44)] Persistent settings: Settings (only `theme` for now) are saved to a config file. Its location follows [the standards of the different OS](https://github.com/dirs-dev/dirs-rs#example).
 - Links to the Github page, wiki, github issues and logfiles in the `About` page.
 
 ### Changed
-- Review of the package lists recommendations. The `Recommended` debloat list is now safer (less likely to remove something you'd want to keep).
 - [[#65](https://github.com/0x192/universal-android-debloater/issues/65)] ADB commands now run in parallel and asynchronously! This means no more UI freeze when performing long/many actions! :rocket:
 - UI now updates itself in real time when performing ADB actions (thanks to async & multithreading). Before, it waited for the end of all actions.
 - Logfiles are now located in a more conventional place: [cache_dir](https://docs.rs/dirs/latest/dirs/).
 - Previous logs are no longer overwritten. The logger now only appends to the current logfile of the day (UAD_%Y%m%d.log).
 - Each new day the logger will create a new file on UAD launch.
-- [[#78](https://github.com/0x192/universal-android-debloater/issues/78)] Disable mode is now only available on Android 6+ because the disable ADB commands do not work without root on older devices. The setting will be greyed-out on older devices.
+- [[#78](https://github.com/0x192/universal-android-debloater/issues/78)] Disable mode is now only available on Android 6+ because the disable ADB commands do not work without root on older devices. The setting will be greyed-out for those devices.
+- Minor light theme update
+
 
 ### Fixed
-- Miscellaneous minor issues in some package descriptions.
-- Several bad recommendations.
 - [[#50](https://github.com/0x192/universal-android-debloater/issues/50)] Resync button flipping theme back to `Lupin`.
 - [Regression ([048e7f](https://github.com/0x192/universal-android-debloater/commit/048e7fc8fd6d44b0e8ba933c289249366254a9cc))] Weird disabled/greyed action button with older devices (< Android 8.0). Package could be selected but no action was performed.
 - [[#78](https://github.com/0x192/universal-android-debloater/issues/78)] Packages not being actually uninstalled on older devices (< Android 6.0). Without root we can only use `pm block`/`pm unblock` for Android KitKit (4.4) and `pm hide`/`pm unhide` on Android Lollipop (5.x).
+
+### Packaging
+- For Arch-based users, UAD is now available in the AUR: `universal-android-debloater-bin` (binary) and `universal-android-debloater` (from source)
 
 
 ## [0.3] - 2021-10-10
