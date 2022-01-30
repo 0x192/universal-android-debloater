@@ -51,7 +51,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 ## Mobile carriers debloat lists
 |   Country       | Carriers                          |
 |-----------------|-----------------------------------|
-| France          | Orange, SFR, Free, Bouyges/Sosh   |
+| France          | Orange, SFR, Free, Bouygues       |
 | USA             | T-Mobile, Verizon, Sprint, AT&T   |  
 | Germany         | Telekom                           |
 | UK              | EE                                |
