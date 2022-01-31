@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.4.1] - 2022-01-31
+
+### Fixed
+- Selection counter never decreasing.
+
 ## [0.4] - 2022-01-30
 
 ### Apps
@@ -41,7 +46,6 @@ and `Removed`.
 
 ### Packaging
 - For Arch-based users, UAD is now available in the AUR: `universal-android-debloater-bin` (binary) and `universal-android-debloater` (from source)
-
 
 ## [0.3] - 2021-10-10
 
