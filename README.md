@@ -16,7 +16,8 @@ In any case, you can NOT brick your device with this software! That's the main t
 * [X] Uninstall/Disable and Restore/Enable system packages
 * [X] Multi-user support (e.g apps in work profiles)
 * [X] Export/Import your selection in `uad_exported_selection.txt`
-* [X] Logging of all your action in the `uad.log` file
+* [X] Multi-device support: you can connect multiple phones at the same time
+* [X] All your actions are logged so you never forget what you've done 
 
 NB : System apps cannot really be uninstalled without root (see the [FAQ](https://gitlab.com/W1nst0n/universal-android-debloater-rs/-/wikis/FAQ))
 
