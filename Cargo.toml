@@ -27,6 +27,7 @@ chrono = "^0"
 regex = "^1.5"
 toml = "^0"
 dirs = "^4.0"
+ureq = { version = "*", features = ["json"] }
 
 [profile.release]
 opt-level = "s"

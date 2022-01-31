@@ -1,7 +1,11 @@
+use crate::CACHE_DIR;
+/*use chrono::DateTime;
+use chrono::Utc;*/
 use serde::Deserialize;
 use serde_json;
-//use std::fs;
 use std::collections::HashMap;
+use std::fs;
+use std::path::{Path, PathBuf};
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
@@ -168,18 +172,42 @@ impl std::fmt::Display for Removal {
     }
 }
 
-pub fn load_debloat_lists() -> HashMap<String, Package> {
+pub async fn load_debloat_lists() -> HashMap<String, Package> {
+    use std::time::Instant;
+    let now = Instant::now();
     const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
-    let mut package_lists = HashMap::new();
-    //let data = fs::read_to_string("resources/assets/uad_lists.json").expect("Unable to read file");
+    let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
+
+    let req = ureq::get(
+        "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
+        main/resources/assets/uad_lists.json",
+    )
+    .call();
 
     // TODO: Do it without intermediary Vec?
-    let list: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
+    let list: Vec<Package> = match req {
+        Ok(data) => {
+            let text = data.into_string().unwrap();
+            fs::write(cached_uad_lists, &text).expect("Unable to write file");
+            serde_json::from_str(&text).expect("Unable to parse")
+        }
+        Err(e) => {
+            if Path::new(&cached_uad_lists).exists() {
+                let data = fs::read_to_string(cached_uad_lists).unwrap();
+                serde_json::from_str(&data).expect("Unable to parse")
+            } else {
+                warn!("Could not load remote debloat list: {}", e);
+                serde_json::from_str(DATA).expect("Unable to parse")
+            }
+        }
+    };
 
+    let mut package_lists = HashMap::new();
     for p in list {
         let name = p.id.clone();
         package_lists.insert(name, p);
     }
 
+    println!("Elapsed: {:.2?}", now.elapsed());
     package_lists
 }

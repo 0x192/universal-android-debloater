@@ -74,7 +74,10 @@ impl Application for UadGui {
     fn new(_flags: ()) -> (Self, Command<Message>) {
         (
             Self::default(),
-            Command::perform(get_device_list(), Message::Init),
+            Command::batch([
+                Command::perform(Self::send_init_message(), Message::AppsAction),
+                Command::perform(get_device_list(), Message::Init),
+            ]),
         )
     }
 
@@ -122,14 +125,10 @@ impl Application for UadGui {
                     };
                     self.apps_view = AppsView::default();
                     self.view = View::List;
-                    Command::perform(
-                        Self::load_phone_packages(self.selected_device.clone().unwrap()),
-                        Message::AppsAction,
-                    )
                 } else {
                     self.selected_device = None;
-                    Command::none()
                 }
+                Command::none()
             }
             Message::AppsPress => {
                 self.view = View::List;
@@ -281,7 +280,7 @@ impl UadGui {
             "ANDROID_SDK: {} | PHONE: {}",
             phone.android_sdk, phone.model
         );
-        AppsMessage::LoadPackages
+        AppsMessage::LoadPackages(None)
     }
 
     pub async fn refresh(i: usize) -> usize {
@@ -292,6 +291,9 @@ impl UadGui {
     }
     pub async fn please_wait() -> AppsMessage {
         AppsMessage::Nothing
+    }
+    pub async fn send_init_message() -> AppsMessage {
+        AppsMessage::InitUadList
     }
 }
 

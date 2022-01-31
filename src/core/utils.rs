@@ -12,7 +12,7 @@ use std::path::PathBuf;
 use std::process::Command;
 
 pub fn fetch_packages(
-    uad_lists: &'static HashMap<String, Package>,
+    uad_lists: &HashMap<String, Package>,
     user_id: &Option<&User>,
 ) -> Vec<PackageRow> {
     let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
