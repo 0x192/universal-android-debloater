@@ -55,6 +55,9 @@ pub fn fetch_packages(
 pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
     // Selection can't be negative
     if !add && selection.selected_packages.is_empty() {
+        selection.enabled = 0;
+        selection.disabled = 0;
+        selection.uninstalled = 0;
         return;
     }
 
