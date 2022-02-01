@@ -1,7 +1,11 @@
+use crate::CACHE_DIR;
+/*use chrono::DateTime;
+use chrono::Utc;*/
 use serde::Deserialize;
 use serde_json;
-//use std::fs;
 use std::collections::HashMap;
+use std::fs;
+use std::path::{Path, PathBuf};
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
@@ -168,18 +172,49 @@ impl std::fmt::Display for Removal {
     }
 }
 
-pub fn load_debloat_lists() -> HashMap<String, Package> {
-    const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
+pub async fn load_debloat_lists(remote: bool) -> HashMap<String, Package> {
+    let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
+
+    let list: Vec<Package> = if remote {
+        let req = ureq::get(
+            "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
+            main/resources/assets/uad_lists.json",
+        )
+        .call();
+
+        // TODO: Do it without intermediary Vec?
+        match req {
+            Ok(data) => {
+                let text = data.into_string().unwrap();
+                fs::write(cached_uad_lists, &text).expect("Unable to write file");
+                serde_json::from_str(&text).expect("Unable to parse")
+            }
+            Err(e) => {
+                warn!("Could not load remote debloat list: {}", e);
+                get_local_lists()
+            }
+        }
+    } else {
+        warn!("Could not load remote debloat list");
+        get_local_lists()
+    };
+
     let mut package_lists = HashMap::new();
-    //let data = fs::read_to_string("resources/assets/uad_lists.json").expect("Unable to read file");
-
-    // TODO: Do it without intermediary Vec?
-    let list: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
-
     for p in list {
         let name = p.id.clone();
         package_lists.insert(name, p);
     }
-
     package_lists
+}
+
+fn get_local_lists() -> Vec<Package> {
+    const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
+    let cached_uad_lists = CACHE_DIR.join("uad_lists.json");
+
+    if Path::new(&cached_uad_lists).exists() {
+        let data = fs::read_to_string(cached_uad_lists).unwrap();
+        serde_json::from_str(&data).expect("Unable to parse")
+    } else {
+        serde_json::from_str(DATA).expect("Unable to parse")
+    }
 }

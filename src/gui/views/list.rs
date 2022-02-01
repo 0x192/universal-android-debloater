@@ -6,13 +6,11 @@ use crate::core::utils::{
     export_selection, fetch_packages, import_selection, update_selection_count,
 };
 use crate::gui::style;
-use static_init::dynamic;
 use std::collections::HashMap;
 
 use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::{
-    alignment,
     button,
     pick_list,
     scrollable,
@@ -32,9 +30,6 @@ use iced::{
     TextInput,
 };
 
-#[dynamic]
-static UAD_LISTS: HashMap<String, Package> = load_debloat_lists();
-
 #[derive(Debug, Default, Clone)]
 pub struct Selection {
     pub uninstalled: u16,
@@ -52,6 +47,7 @@ pub enum Action {
 #[derive(Default, Debug, Clone)]
 pub struct List {
     pub ready: bool,
+    uad_lists: HashMap<String, Package>,
     phone_packages: Vec<Vec<PackageRow>>, // packages of all users of the phone
     filtered_packages: Vec<usize>, // phone_packages indexes of the selected user (= what you see on screen)
     pub selection: Selection,
@@ -59,6 +55,7 @@ pub struct List {
     user_picklist: pick_list::State<User>,
     select_all_btn_state: button::State,
     export_selection_btn_state: button::State,
+    no_internet_btn: button::State,
     apply_remove_selection: button::State,
     apply_restore_selection: button::State,
     package_scrollable_state: scrollable::State,
@@ -77,7 +74,9 @@ pub struct List {
 #[derive(Debug, Clone)]
 pub enum Message {
     SearchInputChanged(String),
-    LoadPackages,
+    InitUadList(bool),
+    ListsIsInitialized(HashMap<String, Package>),
+    LoadPackages(Option<u8>),
     ListSelected(UadList),
     UserSelected(User),
     PackageStateSelected(PackageState),
@@ -102,13 +101,25 @@ impl List {
         let i_user = &self.selected_user.unwrap_or(User { id: 0, index: 0 }).index; // for readability
         match message {
             Message::Nothing => Command::none(),
-            Message::LoadPackages => {
+            Message::InitUadList(remote) => {
+                self.ready = false;
+                if remote {
+                    Command::perform(load_debloat_lists(true), Message::ListsIsInitialized)
+                } else {
+                    Command::perform(load_debloat_lists(false), Message::ListsIsInitialized)
+                }
+            }
+            Message::ListsIsInitialized(uad_lists) => {
+                self.uad_lists = uad_lists;
+                Command::perform(Self::send_message(), Message::LoadPackages)
+            }
+            Message::LoadPackages(_) => {
                 self.selected_package_state = Some(PackageState::Enabled);
                 self.selected_list = Some(UadList::All);
                 self.selected_removal = Some(Removal::Recommended);
                 self.selected_user = Some(User { id: 0, index: 0 });
                 Command::perform(
-                    Self::load_packages(phone.user_list.clone()),
+                    Self::load_packages(self.uad_lists.clone(), phone.user_list.clone()),
                     Message::PackagesLoaded,
                 )
             }
@@ -485,8 +496,12 @@ impl List {
                 .padding(10)
                 .style(style::Content(settings.theme.palette))
                 .into()
+        } else if self.uad_lists.is_empty() {
+            let text = "Downloading latest UAD lists from Github. Please wait...";
+            waiting_view(settings, text, Some(&mut self.no_internet_btn))
         } else {
-            loading_data(settings)
+            let text = "Pulling packages from the phone. Please wait...";
+            waiting_view(settings, text, None)
         }
     }
 
@@ -537,31 +552,55 @@ impl List {
         }
     }
 
-    async fn load_packages(user_list: Vec<User>) -> Vec<Vec<PackageRow>> {
+    async fn load_packages(
+        uad_lists: HashMap<String, Package>,
+        user_list: Vec<User>,
+    ) -> Vec<Vec<PackageRow>> {
         let mut temp = vec![];
         match user_list.len() {
-            0 | 1 => temp.push(fetch_packages(&UAD_LISTS, &None)),
+            0 | 1 => temp.push(fetch_packages(&uad_lists, &None)),
             _ => {
                 for user in &user_list {
-                    temp.push(fetch_packages(&UAD_LISTS, &Some(user)));
+                    temp.push(fetch_packages(&uad_lists, &Some(user)));
                 }
             }
         }
         temp
     }
+
+    async fn send_message() -> Option<u8> {
+        None
+    }
 }
 
-fn loading_data<'a>(settings: &Settings) -> Element<'a, Message> {
-    Container::new(
-        Text::new("Pulling packages from the phone. Please wait...")
-            .horizontal_alignment(alignment::Horizontal::Center)
-            .vertical_alignment(alignment::Vertical::Center)
-            .size(20),
-    )
-    .width(Length::Fill)
-    .height(Length::Fill)
-    .center_y()
-    .center_x()
-    .style(style::Content(settings.theme.palette))
-    .into()
+fn waiting_view<'a>(
+    settings: &Settings,
+    text: &str,
+    btn: Option<&'a mut button::State>,
+) -> Element<'a, Message> {
+    let col = if let Some(btn) = btn {
+        let no_internet_btn = Button::new(btn, Text::new("No internet?"))
+            .padding(5)
+            .on_press(Message::InitUadList(false))
+            .style(style::PrimaryButton(settings.theme.palette));
+
+        Column::new()
+            .spacing(10)
+            .align_items(Alignment::Center)
+            .push(Text::new(text).size(20))
+            .push(no_internet_btn)
+    } else {
+        Column::new()
+            .spacing(10)
+            .align_items(Alignment::Center)
+            .push(Text::new(text).size(20))
+    };
+
+    Container::new(col)
+        .width(Length::Fill)
+        .height(Length::Fill)
+        .center_y()
+        .center_x()
+        .style(style::Content(settings.theme.palette))
+        .into()
 }
