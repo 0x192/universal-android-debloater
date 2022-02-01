@@ -11,7 +11,6 @@ use std::collections::HashMap;
 use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::{
-    alignment,
     button,
     pick_list,
     scrollable,
@@ -56,6 +55,7 @@ pub struct List {
     user_picklist: pick_list::State<User>,
     select_all_btn_state: button::State,
     export_selection_btn_state: button::State,
+    no_internet_btn: button::State,
     apply_remove_selection: button::State,
     apply_restore_selection: button::State,
     package_scrollable_state: scrollable::State,
@@ -74,7 +74,7 @@ pub struct List {
 #[derive(Debug, Clone)]
 pub enum Message {
     SearchInputChanged(String),
-    InitUadList,
+    InitUadList(bool),
     ListsIsInitialized(HashMap<String, Package>),
     LoadPackages(Option<u8>),
     ListSelected(UadList),
@@ -101,8 +101,13 @@ impl List {
         let i_user = &self.selected_user.unwrap_or(User { id: 0, index: 0 }).index; // for readability
         match message {
             Message::Nothing => Command::none(),
-            Message::InitUadList => {
-                Command::perform(load_debloat_lists(), Message::ListsIsInitialized)
+            Message::InitUadList(remote) => {
+                self.ready = false;
+                if remote {
+                    Command::perform(load_debloat_lists(true), Message::ListsIsInitialized)
+                } else {
+                    Command::perform(load_debloat_lists(false), Message::ListsIsInitialized)
+                }
             }
             Message::ListsIsInitialized(uad_lists) => {
                 self.uad_lists = uad_lists;
@@ -492,12 +497,11 @@ impl List {
                 .style(style::Content(settings.theme.palette))
                 .into()
         } else if self.uad_lists.is_empty() {
-            waiting_view(
-                settings,
-                "Downloading latest UAD lists from Github. Please wait...",
-            )
+            let text = "Downloading latest UAD lists from Github. Please wait...";
+            waiting_view(settings, text, Some(&mut self.no_internet_btn))
         } else {
-            waiting_view(settings, "Pulling packages from the phone. Please wait...")
+            let text = "Pulling packages from the phone. Please wait...";
+            waiting_view(settings, text, None)
         }
     }
 
@@ -569,17 +573,34 @@ impl List {
     }
 }
 
-fn waiting_view<'a>(settings: &Settings, text: &str) -> Element<'a, Message> {
-    Container::new(
-        Text::new(text)
-            .horizontal_alignment(alignment::Horizontal::Center)
-            .vertical_alignment(alignment::Vertical::Center)
-            .size(20),
-    )
-    .width(Length::Fill)
-    .height(Length::Fill)
-    .center_y()
-    .center_x()
-    .style(style::Content(settings.theme.palette))
-    .into()
+fn waiting_view<'a>(
+    settings: &Settings,
+    text: &str,
+    btn: Option<&'a mut button::State>,
+) -> Element<'a, Message> {
+    let col = if let Some(btn) = btn {
+        let no_internet_btn = Button::new(btn, Text::new("No internet?"))
+            .padding(5)
+            .on_press(Message::InitUadList(false))
+            .style(style::PrimaryButton(settings.theme.palette));
+
+        Column::new()
+            .spacing(10)
+            .align_items(Alignment::Center)
+            .push(Text::new(text).size(20))
+            .push(no_internet_btn)
+    } else {
+        Column::new()
+            .spacing(10)
+            .align_items(Alignment::Center)
+            .push(Text::new(text).size(20))
+    };
+
+    Container::new(col)
+        .width(Length::Fill)
+        .height(Length::Fill)
+        .center_y()
+        .center_x()
+        .style(style::Content(settings.theme.palette))
+        .into()
 }

@@ -156,8 +156,14 @@ impl Application for UadGui {
                 Command::none()
             }
             Message::AboutAction(msg) => {
-                self.about_view.update(msg);
-                Command::none()
+                self.about_view.update(msg.clone());
+
+                match msg {
+                    AboutMessage::UpdateUadLists => {
+                        Command::perform(Self::send_init_message(), Message::AppsAction)
+                    }
+                    _ => Command::none(),
+                }
             }
             Message::DeviceSelected(device) => {
                 self.selected_device = Some(device);
@@ -293,7 +299,7 @@ impl UadGui {
         AppsMessage::Nothing
     }
     pub async fn send_init_message() -> AppsMessage {
-        AppsMessage::InitUadList
+        AppsMessage::InitUadList(true)
     }
 }
 

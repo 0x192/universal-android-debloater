@@ -1,4 +1,4 @@
-use crate::core::utils::open_url;
+use crate::core::utils::{format_diff_time_from_now, last_modified_date, open_url};
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
 use crate::CACHE_DIR;
@@ -11,11 +11,13 @@ pub struct About {
     issue_btn: button::State,
     wiki_btn: button::State,
     log_btn: button::State,
+    lists_btn: button::State,
 }
 
 #[derive(Debug, Clone)]
 pub enum Message {
     UrlPressed(PathBuf),
+    UpdateUadLists,
 }
 
 impl About {
@@ -23,6 +25,9 @@ impl About {
         match msg {
             Message::UrlPressed(url) => {
                 open_url(url);
+            }
+            Message::UpdateUadLists => {
+                // Action is taken by UadGui update()
             }
         }
     }
@@ -32,9 +37,31 @@ impl About {
             the removal of pre-installed apps on any Android device.",
         );
 
-        let container = Container::new(about_text)
+        let descr_container = Container::new(about_text)
             .width(Length::Fill)
             .padding(25)
+            .style(style::NavigationContainer(settings.theme.palette));
+
+        let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
+        let uad_list_text = Text::new(format!("Documentation: v{}", date.format("%Y%m%d")));
+        let last_update_text = Text::new(format!("(last was {})", format_diff_time_from_now(date)))
+            .color(settings.theme.palette.normal.surface);
+        let uad_lists_btn = Button::new(&mut self.lists_btn, Text::new("Update"))
+            .on_press(Message::UpdateUadLists)
+            .padding(5)
+            .style(style::PrimaryButton(settings.theme.palette));
+
+        let uad_list_row = Row::new()
+            .align_items(Alignment::Center)
+            .spacing(10)
+            .push(uad_list_text)
+            .push(uad_lists_btn)
+            .push(last_update_text);
+
+        let update_container = Container::new(uad_list_row)
+            .width(Length::Fill)
+            .center_x()
+            .padding(10)
             .style(style::NavigationContainer(settings.theme.palette));
 
         let website_btn = Button::new(&mut self.website_btn, Text::new("Github page"))
@@ -75,7 +102,8 @@ impl About {
             .spacing(20)
             .align_items(Alignment::Center)
             .push(Space::new(Length::Fill, Length::Shrink))
-            .push(container)
+            .push(descr_container)
+            .push(update_container)
             .push(row);
 
         Container::new(content)

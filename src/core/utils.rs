@@ -4,6 +4,8 @@ use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
 use crate::gui::ICONS;
+use chrono::offset::Utc;
+use chrono::DateTime;
 use iced::{alignment, Length, Text};
 use std::collections::HashMap;
 use std::fs;
@@ -184,5 +186,28 @@ pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Ve
             .iter()
             .map(|c| format!("{} {}", c, package))
             .collect()
+    }
+}
+
+pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
+    let metadata = fs::metadata(file).unwrap();
+
+    match metadata.modified() {
+        Ok(time) => time.into(),
+        Err(_) => Utc::now(),
+    }
+}
+
+pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
+    let now: DateTime<Utc> = Utc::now();
+    let last_update = now - date;
+    if last_update.num_days() == 0 {
+        if last_update.num_hours() == 0 {
+            last_update.num_minutes().to_string() + " min(s) ago"
+        } else {
+            last_update.num_hours().to_string() + " hour(s) ago"
+        }
+    } else {
+        last_update.num_days().to_string() + " day(s) ago"
     }
 }
