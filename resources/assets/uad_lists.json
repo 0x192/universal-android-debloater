@@ -9440,7 +9440,7 @@
     "labels": null,
     "removal": "Expert"
   },
-    {
+  {
     "id": "com.qualcomm.qti.xrvd.service",
     "list": "Pending",
     "description": "Possibly related to Qualcomm Extended Reality (XR)\nhttps://www.qualcomm.com/products/xr-vr-ar",
@@ -18925,5 +18925,196 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-   }
+  },
+  {
+    "id": "com.zaz.translate",
+    "list": "Oem",
+    "description": "Hi Translate. Translation app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.tecnospot",
+    "list": "Oem",
+    "description": "TECNO SPOT. Tecno community app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.rlk.weathers",
+    "list": "Oem",
+    "description": "Weathers app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.carlcare",
+    "list": "Oem",
+    "description": "After-sales Service app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.talpa.hibrowser",
+    "list": "Oem",
+    "description": "Awful browser loaded with telemetry and ads.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.hiparty",
+    "list": "Oem",
+    "description": "Allow to play music simultaneously on multiple devices.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.talpa.share",
+    "list": "Oem",
+    "description": "XShare Mini. File Sharing App.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "net.bat.store",
+    "list": "Oem",
+    "description": "AHA Games. Intrusive game ads on HIOS launcher and random popups.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsnet.store",
+    "list": "Oem",
+    "description": "Palm Store. App store with unsecure apps and probably malware. Shows intrusive ads and popups.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.magicshow",
+    "list": "Oem",
+    "description": "(Bad) Video Player with Ads.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.plat.appupdate",
+    "list": "Oem",
+    "description": "Hogs memory in background.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.magazineservice.hios",
+    "list": "Oem",
+    "description": "Shows news stories and wallpapers on the lockscreen.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.idea.questionnare",
+    "list": "Oem",
+    "description": "NEEDS MORE INFO. No effect on uninstall.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.filemanagerx",
+    "list": "Oem",
+    "description": "File Manager App.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.gallery20",
+    "list": "Oem",
+    "description": "AI Gallery. Gallery app.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.videocallenhancer",
+    "list": "Oem",
+    "description": "Applies beauty effect in video calls.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.magicfont",
+    "list": "Oem",
+    "description": "Magic Fonts.Change fonts on Tecno smartphones.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.kolun.assistant",
+    "list": "Oem",
+    "description": "Smart Assistant App.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.health",
+    "list": "Oem",
+    "description": "Tecno health app.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.audioshare",
+    "list": "Oem",
+    "description": "AudioShare. AudioSharing over bluetooth.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.microintelligence",
+    "list": "Oem",
+    "description": "Micro Intelligence. Provides features like tap to awake, awake on device raise, etc",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.phonemanager",
+    "list": "Oem",
+    "description": "Phone Master. Provides features like ram cleaning, storage optimisation, data usage analyser, etc.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.smartpanel",
+    "list": "Oem",
+    "description": "Smart Panel. Provides features like Game Mode, Video assistant, etc.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  }
 ]
