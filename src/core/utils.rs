@@ -54,7 +54,7 @@ pub fn fetch_packages(
     user_package
 }
 
-pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {    
+pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
     match p_state {
         PackageState::Enabled => {
             if add {

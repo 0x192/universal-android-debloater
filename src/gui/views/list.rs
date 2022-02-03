@@ -139,7 +139,6 @@ impl List {
                                 .selected_packages
                                 .drain_filter(|s_i| *s_i == i);
                         }
-                        
                     } else if !self.selection.selected_packages.contains(&i) {
                         self.selection.selected_packages.push(i);
                         update_selection_count(
@@ -381,7 +380,7 @@ impl List {
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
-                .padding([0,16,0,7])
+                .padding([0, 16, 0, 7])
                 .push(select_all_checkbox)
                 .push(search_packages)
                 .push(user_picklist)
