@@ -18925,5 +18925,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-   }
+   },
+   {
+     "id": "com.tblenovo.lenovotips",
+     "list": "Oem",
+     "description": "Useless Lenovo Tips app used by Lenovo to display un-dismissable and un-mutable ads in notifications\nSource: https://news.ycombinator.com/item?id=28382081",
+     "dependencies": null,
+     "neededBy": null,
+     "labels": null,
+     "removal": "Recommended"
+    }
 ]
