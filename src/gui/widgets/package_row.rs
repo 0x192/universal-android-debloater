@@ -93,7 +93,7 @@ impl PackageRow {
 
             action_btn = Button::new(
                 &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center),
+                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center).width(Length::Units(100)),
             )
             .on_press(Message::ActionPressed);
         } else {
@@ -102,7 +102,7 @@ impl PackageRow {
 
             action_btn = Button::new(
                 &mut self.action_btn_state,
-                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center),
+                Text::new(action_text).horizontal_alignment(alignment::Horizontal::Center).width(Length::Units(100)),
             );
         }
 
@@ -114,7 +114,7 @@ impl PackageRow {
                         .align_items(Alignment::Center)
                         .push(selection_checkbox)
                         .push(Text::new(&self.name).width(Length::FillPortion(8)))
-                        .push(action_btn.width(Length::FillPortion(1)).style(button_style)),
+                        .push(action_btn.style(button_style))
                 )
                 .padding(8)
                 .style(style::PackageRow(settings.theme.palette))

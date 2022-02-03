@@ -54,34 +54,26 @@ pub fn fetch_packages(
     user_package
 }
 
-pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
-    // Selection can't be negative
-    if !add && selection.selected_packages.is_empty() {
-        selection.enabled = 0;
-        selection.disabled = 0;
-        selection.uninstalled = 0;
-        return;
-    }
-
+pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {    
     match p_state {
         PackageState::Enabled => {
             if add {
                 selection.enabled += 1
-            } else {
+            } else if selection.enabled > 0 {
                 selection.enabled -= 1
             };
         }
         PackageState::Disabled => {
             if add {
                 selection.disabled += 1
-            } else {
+            } else if selection.disabled > 0 {
                 selection.disabled -= 1
             };
         }
         PackageState::Uninstalled => {
             if add {
                 selection.uninstalled += 1
-            } else {
+            } else if selection.uninstalled > 0 {
                 selection.uninstalled -= 1
             };
         }

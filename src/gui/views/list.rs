@@ -11,23 +11,8 @@ use std::collections::HashMap;
 use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::{
-    button,
-    pick_list,
-    scrollable,
-    text_input,
-    Alignment,
-    Button,
-    Column,
-    Command, //Svg,
-    Container,
-    Element,
-    Length,
-    PickList,
-    Row,
-    Scrollable,
-    Space,
-    Text,
-    TextInput,
+    button, pick_list, scrollable, text_input, Alignment, Button, Checkbox, Column, Command,
+    Container, Element, Length, PickList, Row, Scrollable, Space, Text, TextInput,
 };
 
 #[derive(Debug, Default, Clone)]
@@ -51,9 +36,11 @@ pub struct List {
     phone_packages: Vec<Vec<PackageRow>>, // packages of all users of the phone
     filtered_packages: Vec<usize>, // phone_packages indexes of the selected user (= what you see on screen)
     pub selection: Selection,
+    select_all_checkbox: bool,
+    select_all_btn_state: button::State,
+    unselect_all_btn_state: button::State,
     search_input: text_input::State,
     user_picklist: pick_list::State<User>,
-    select_all_btn_state: button::State,
     export_selection_btn_state: button::State,
     no_internet_btn: button::State,
     apply_remove_selection: button::State,
@@ -74,6 +61,7 @@ pub struct List {
 #[derive(Debug, Clone)]
 pub enum Message {
     SearchInputChanged(String),
+    ToggleAllSelected(bool),
     InitUadList(bool),
     ListsIsInitialized(HashMap<String, Package>),
     LoadPackages(Option<u8>),
@@ -82,7 +70,6 @@ pub enum Message {
     PackageStateSelected(PackageState),
     RemovalSelected(Removal),
     ApplyActionOnSelection(Action),
-    SelectAllPressed,
     ExportSelectionPressed,
     List(usize, RowMessage),
     ExportedSelection(Result<bool, String>),
@@ -133,6 +120,35 @@ impl List {
                     Err(err) => warn!("No custom selection imported: {}", err),
                 };
                 self.ready = true;
+                Command::none()
+            }
+            Message::ToggleAllSelected(selected) => {
+                self.select_all_checkbox = selected;
+
+                for i in self.filtered_packages.clone() {
+                    self.phone_packages[*i_user][i].selected = selected;
+
+                    if !selected {
+                        if self.selection.selected_packages.contains(&i) {
+                            update_selection_count(
+                                &mut self.selection,
+                                self.phone_packages[*i_user][i].state,
+                                false,
+                            );
+                            self.selection
+                                .selected_packages
+                                .drain_filter(|s_i| *s_i == i);
+                        }
+                        
+                    } else if !self.selection.selected_packages.contains(&i) {
+                        self.selection.selected_packages.push(i);
+                        update_selection_count(
+                            &mut self.selection,
+                            self.phone_packages[*i_user][i].state,
+                            true,
+                        );
+                    }
+                }
                 Command::none()
             }
             Message::SearchInputChanged(letter) => {
@@ -259,20 +275,6 @@ impl List {
                 }
                 Command::batch(commands)
             }
-            Message::SelectAllPressed => {
-                for i in self.filtered_packages.clone() {
-                    self.phone_packages[*i_user][i].selected = true;
-                    if !self.selection.selected_packages.contains(&i) {
-                        self.selection.selected_packages.push(i);
-                        update_selection_count(
-                            &mut self.selection,
-                            self.phone_packages[*i_user][i].state,
-                            true,
-                        );
-                    }
-                }
-                Command::none()
-            }
             Message::ExportSelectionPressed => Command::perform(
                 export_selection(self.phone_packages[*i_user].clone()),
                 Message::ExportedSelection,
@@ -335,6 +337,11 @@ impl List {
 
             // let package_amount = Text::new(format!("{} packages found", packages.len()));
 
+            let select_all_checkbox =
+                Checkbox::new(self.select_all_checkbox, "", Message::ToggleAllSelected)
+                    .spacing(0)
+                    .style(style::SettingsCheckBox::Enabled(settings.theme.palette));
+
             let user_picklist = PickList::new(
                 &mut self.user_picklist,
                 phone.user_list.clone(),
@@ -374,6 +381,8 @@ impl List {
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
+                .padding([0,16,0,7])
+                .push(select_all_checkbox)
                 .push(search_packages)
                 .push(user_picklist)
                 .push(divider)
@@ -457,7 +466,13 @@ impl List {
             let select_all_btn =
                 Button::new(&mut self.select_all_btn_state, Text::new("Select all"))
                     .padding(5)
-                    .on_press(Message::SelectAllPressed)
+                    .on_press(Message::ToggleAllSelected(true))
+                    .style(style::PrimaryButton(settings.theme.palette));
+
+            let unselect_all_btn =
+                Button::new(&mut self.unselect_all_btn_state, Text::new("Unselect all"))
+                    .padding(5)
+                    .on_press(Message::ToggleAllSelected(false))
                     .style(style::PrimaryButton(settings.theme.palette));
 
             let export_selection_btn = Button::new(
@@ -476,6 +491,7 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center)
                 .push(select_all_btn)
+                .push(unselect_all_btn)
                 .push(Space::new(Length::Fill, Length::Shrink))
                 .push(export_selection_btn)
                 .push(apply_restore_selection)
@@ -486,7 +502,6 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center)
                 .push(control_panel)
-                .push(Space::new(Length::Fill, Length::Shrink))
                 .push(packages_scrollable)
                 .push(description_panel)
                 .push(action_row);
