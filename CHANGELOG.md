@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [Unreleased]
+
+### Added
+- Unselect all button. Note that the selec/unselect all buttons only affect the filtered packages.
+
+### Changed
+- Minor UI changes
+
 ## [0.4.1] - 2022-01-31
 
 ### Fixed
