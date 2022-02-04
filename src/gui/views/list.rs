@@ -11,8 +11,8 @@ use std::collections::HashMap;
 use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::{
-    button, pick_list, scrollable, text_input, Alignment, Button, Checkbox, Column, Command,
-    Container, Element, Length, PickList, Row, Scrollable, Space, Text, TextInput,
+    button, pick_list, scrollable, text_input, Alignment, Button, Column, Command, Container,
+    Element, Length, PickList, Row, Scrollable, Space, Text, TextInput,
 };
 
 #[derive(Debug, Default, Clone)]
@@ -36,7 +36,6 @@ pub struct List {
     phone_packages: Vec<Vec<PackageRow>>, // packages of all users of the phone
     filtered_packages: Vec<usize>, // phone_packages indexes of the selected user (= what you see on screen)
     pub selection: Selection,
-    select_all_checkbox: bool,
     select_all_btn_state: button::State,
     unselect_all_btn_state: button::State,
     search_input: text_input::State,
@@ -123,8 +122,6 @@ impl List {
                 Command::none()
             }
             Message::ToggleAllSelected(selected) => {
-                self.select_all_checkbox = selected;
-
                 for i in self.filtered_packages.clone() {
                     self.phone_packages[*i_user][i].selected = selected;
 
@@ -336,11 +333,6 @@ impl List {
 
             // let package_amount = Text::new(format!("{} packages found", packages.len()));
 
-            let select_all_checkbox =
-                Checkbox::new(self.select_all_checkbox, "", Message::ToggleAllSelected)
-                    .spacing(0)
-                    .style(style::SettingsCheckBox::Enabled(settings.theme.palette));
-
             let user_picklist = PickList::new(
                 &mut self.user_picklist,
                 phone.user_list.clone(),
@@ -380,8 +372,7 @@ impl List {
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
-                .padding([0, 16, 0, 7])
-                .push(select_all_checkbox)
+                .padding([0, 16, 0, 0])
                 .push(search_packages)
                 .push(user_picklist)
                 .push(divider)
