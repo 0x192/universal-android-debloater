@@ -18928,8 +18928,8 @@
   },
   {
     "id": "com.zaz.translate",
-    "list": "Oem",
-    "description": "Hi Translate. Translation app",
+    "list": "Misc",
+    "description": "Hi Translate. (https://play.google.com/store/apps/details?id=com.zaz.translate)\nTBloated translation app with a lot of trackers and permissions (https://reports.exodus-privacy.eu.org/fr/reports/com.zaz.translate/latest/)\nIt has the Camera and microphone permissions and use the Google Translate API for the translations.\nPithus analysis: https://beta.pithus.org/report/fdd787d96c3e069f983320c84c32fc6b8cdf205df17244d190b181edf0c14f68",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18938,7 +18938,7 @@
   {
     "id": "com.transsion.tecnospot",
     "list": "Oem",
-    "description": "TECNO SPOT. Tecno community app.",
+    "description": "TECNO SPOT (https://play.google.com/store/apps/details?id=com.transsion.tecnospot)\nTecno official app to access the Tecno forum. Useless and full of trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.tecnospot/latest/)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18946,8 +18946,8 @@
   },
   {
     "id": "com.rlk.weathers",
-    "list": "Oem",
-    "description": "Weathers app.",
+    "list": "Misc",
+    "description": "Daily Weather (https://play.google.com/store/apps/details?id=com.rlk.weathers)\nWeather app with ads and trackers. Can access phone calls and SMS.\nPithus analysis: https://beta.pithus.org/report/c3fa30c66192c458f93456401421d3c74f9122191b561781af142c42c24fe603",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18956,7 +18956,7 @@
   {
     "id": "com.transsion.carlcare",
     "list": "Oem",
-    "description": "After-sales Service app.",
+    "description": "Carlcare (https://play.google.com/store/apps/details?id=com.transsion.carlcare)\nAfter-sales Service app. Lets you check spare parts price,warranty,repair status and nearest service center. Full of trackers. Talks with Facebook (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.carlcare/latest/)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18964,8 +18964,8 @@
   },
   {
     "id": "com.talpa.hibrowser",
-    "list": "Oem",
-    "description": "Awful browser loaded with telemetry and ads.",
+    "list": "Misc",
+    "description": "Hi Browser (https://play.google.com/store/apps/details?id=com.talpa.hibrowser)\nAwful browser with embeded trackers and ads (https://reports.exodus-privacy.eu.org/fr/reports/com.talpa.hibrowser/latest/)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18974,7 +18974,7 @@
   {
     "id": "com.transsion.hiparty",
     "list": "Oem",
-    "description": "Allow to play music simultaneously on multiple devices.",
+    "description": "Allows you to play music simultaneously on multiple devices.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18982,7 +18982,7 @@
   },
   {
     "id": "com.talpa.share",
-    "list": "Oem",
+    "list": "Misc",
     "description": "XShare Mini. File Sharing App.",
     "dependencies": null,
     "neededBy": null,
@@ -18991,7 +18991,7 @@
   },
   {
     "id": "net.bat.store",
-    "list": "Oem",
+    "list": "Misc",
     "description": "AHA Games. Intrusive game ads on HIOS launcher and random popups.",
     "neededBy": null,
     "labels": null,
@@ -19024,15 +19024,15 @@
   {
     "id": "com.transsion.magazineservice.hios",
     "list": "Oem",
-    "description": "Shows news stories and wallpapers on the lockscreen.",
+    "description": "Shows trending news, games and wallpapers on the lockscreen.",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
   {
     "id": "com.idea.questionnare",
-    "list": "Oem",
-    "description": "NEEDS MORE INFO. No effect on uninstall.",
+    "list": "Misc",
+    "description": "[NEEDS MORE INFO]\nNo effect on uninstall.",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19040,7 +19040,7 @@
   {
     "id": "com.transsion.filemanagerx",
     "list": "Oem",
-    "description": "File Manager App.",
+    "description": "File Manager App (https://play.google.com/store/apps/details?id=com.transsion.filemanagerx)\nComes with 3 analytics/ads trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.filemanagerx/latest/)\n",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19064,7 +19064,7 @@
   {
     "id": "com.transsion.magicfont",
     "list": "Oem",
-    "description": "Magic Fonts.Change fonts on Tecno smartphones.",
+    "description": "Magic Fonts (https://play.google.com/store/apps/details?id=com.transsion.magicfont)\nFonts installer with a lot of trackers obviously (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.magicfont/latest/).",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19088,7 +19088,7 @@
   {
     "id": "com.transsion.audioshare",
     "list": "Oem",
-    "description": "AudioShare. AudioSharing over bluetooth.",
+    "description": "AudioShare\nAudio sharing over bluetooth.",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19096,7 +19096,7 @@
   {
     "id": "com.transsion.microintelligence",
     "list": "Oem",
-    "description": "Micro Intelligence. Provides features like tap to awake, awake on device raise, etc",
+    "description": "Micro Intelligence\nProvides features like tap to awake, awake on device raise, etc",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19104,7 +19104,7 @@
   {
     "id": "com.transsion.phonemanager",
     "list": "Oem",
-    "description": "Phone Master. Provides features like ram cleaning, storage optimisation, data usage analyser, etc.",
+    "description": "Phone Master.\nProvides features like ram cleaning, storage optimisation, data usage analyser, etc.",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
