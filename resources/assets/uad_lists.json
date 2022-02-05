@@ -6599,7 +6599,7 @@
   {
     "id": "com.android.traceur",
     "list": "Aosp",
-    "description": "System Tracing\nRecording device activity over a short period of time is known as system tracing. System tracing produces a trace file that can be used to generate \na system report.\nNot useful if you're not a developer.\n",
+    "description": "System Tracing\nRecording device activity over a short period of time is known as system tracing. System tracing produces a trace file that can be used to generate a system report.\nNot useful if you're not a developer.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17151,7 +17151,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.apps.inputmethod.hindi",
@@ -17160,7 +17160,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.inputmethod.japanese",
