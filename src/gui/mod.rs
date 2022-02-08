@@ -3,18 +3,21 @@ pub mod views;
 pub mod widgets;
 
 pub use crate::core::sync::{get_device_list, Phone};
+use crate::core::uad_lists::load_debloat_lists;
 pub use crate::core::uad_lists::Package;
 use crate::core::utils::icon;
-use std::env;
-pub use views::about::{About as AboutView, Message as AboutMessage};
-pub use views::list::{List as AppsView, Message as AppsMessage};
-pub use views::settings::{
-    Message as SettingsMessage, Phone as SettingsPhone, Settings as SettingsView,
-};
-
 use iced::{
     button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
     Container, Element, Font, Length, PickList, Row, Settings, Space, Text,
+};
+use std::collections::HashMap;
+use std::env;
+pub use views::about::{About as AboutView, Message as AboutMessage};
+pub use views::list::{
+    List as AppsView, LoadingState as ListLoadingState, Message as AppsMessage, State as ListState,
+};
+pub use views::settings::{
+    Message as SettingsMessage, Phone as SettingsPhone, Settings as SettingsView,
 };
 
 pub const ICONS: Font = Font::External {
@@ -37,6 +40,7 @@ impl Default for View {
 
 #[derive(Debug, Default)]
 pub struct UadGui {
+    ready: bool,
     view: View,
     apps_view: AppsView,
     about_view: AboutView,
@@ -55,15 +59,15 @@ pub enum Message {
     // Navigation Panel
     AboutPressed,
     SettingsPressed,
-    LoadDevices(usize),
     AppsPress,
     DeviceSelected(Phone),
     AboutAction(AboutMessage),
     AppsAction(AppsMessage),
     SettingsAction(SettingsMessage),
     RefreshButtonPressed,
-    LoadDeviceList(Vec<Phone>),
-    Init(Vec<Phone>),
+    UadListsDownloaded(HashMap<String, Package>),
+    InitList,
+    InitDevice(Vec<Phone>),
 }
 
 impl Application for UadGui {
@@ -75,8 +79,8 @@ impl Application for UadGui {
         (
             Self::default(),
             Command::batch([
-                Command::perform(Self::send_init_message(), Message::AppsAction),
-                Command::perform(get_device_list(), Message::Init),
+                Command::perform(Self::download_uad_list(), |_| Message::InitList),
+                Command::perform(get_device_list(), Message::InitDevice),
             ]),
         )
     }
@@ -84,16 +88,29 @@ impl Application for UadGui {
     fn title(&self) -> String {
         String::from("Universal Android Debloater")
     }
-
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
-            Message::Init(device_list) => {
-                self.device_list = device_list;
-                self.selected_device = Some(Phone::default());
-                Command::perform(Self::refresh(10), Message::LoadDevices)
+            Message::InitList => {
+                debug!("Trying to download remote UAD list");
+                self.apps_view.state = ListState::Loading(ListLoadingState::DownloadingList);
+                Command::perform(load_debloat_lists(true), Message::UadListsDownloaded)
             }
-            Message::LoadDeviceList(device_list) => {
+            Message::UadListsDownloaded(uad_lists) => {
+                self.apps_view.uad_lists = uad_lists;
+                if self.ready {
+                    Command::perform(
+                        Self::load_phone_packages(self.selected_device.clone().unwrap()),
+                        Message::AppsAction,
+                    )
+                } else {
+                    self.ready = true;
+                    self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                    Command::none()
+                }
+            }
+            Message::InitDevice(device_list) => {
                 self.device_list = device_list;
+                self.settings_view.phone = SettingsPhone::default();
 
                 // Save the current selected device
                 let i = self
@@ -101,34 +118,34 @@ impl Application for UadGui {
                     .iter()
                     .position(|phone| *phone == self.selected_device.clone().unwrap_or_default())
                     .unwrap_or(0);
-                self.selected_device = Some(Phone::default());
-                Command::perform(Self::refresh(i), Message::LoadDevices)
-            }
-            Message::RefreshButtonPressed => {
-                self.apps_view.ready = false;
-                Command::batch([
-                    Command::perform(Self::please_wait(), Message::AppsAction),
-                    Command::perform(Self::device_lists(), Message::LoadDeviceList),
-                ])
-            }
-            Message::LoadDevices(last_selected_device) => {
-                self.settings_view.phone = SettingsPhone::default();
 
                 // Try to reload last selected phone
                 if !self.device_list.is_empty() {
-                    self.selected_device = match last_selected_device < self.device_list.len() {
-                        true => Some(self.device_list[last_selected_device].clone()),
+                    self.selected_device = match i < self.device_list.len() {
+                        true => Some(self.device_list[i].clone()),
                         false => match self.device_list.last() {
                             Some(last) => Some(last.clone()),
                             None => Some(Phone::default()),
                         },
                     };
-                    self.apps_view = AppsView::default();
                     self.view = View::List;
                 } else {
                     self.selected_device = None;
                 }
-                Command::none()
+                if self.ready {
+                    Command::perform(
+                        Self::load_phone_packages(self.selected_device.clone().unwrap()),
+                        Message::AppsAction,
+                    )
+                } else {
+                    self.ready = true;
+                    Command::none()
+                }
+            }
+            Message::RefreshButtonPressed => {
+                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                self.ready = true;
+                Command::perform(get_device_list(), Message::InitDevice)
             }
             Message::AppsPress => {
                 self.view = View::List;
@@ -160,14 +177,13 @@ impl Application for UadGui {
 
                 match msg {
                     AboutMessage::UpdateUadLists => {
-                        Command::perform(Self::send_init_message(), Message::AppsAction)
+                        Command::perform(Self::download_uad_list(), |_| Message::InitList)
                     }
                     _ => Command::none(),
                 }
             }
             Message::DeviceSelected(device) => {
                 self.selected_device = Some(device);
-                self.apps_view = AppsView::default();
                 self.view = View::List;
                 Command::perform(
                     Self::load_phone_packages(self.selected_device.clone().unwrap()),
@@ -286,20 +302,11 @@ impl UadGui {
             "ANDROID_SDK: {} | PHONE: {}",
             phone.android_sdk, phone.model
         );
-        AppsMessage::LoadPackages(None)
+        AppsMessage::LoadPackages
     }
 
-    pub async fn refresh(i: usize) -> usize {
-        i
-    }
-    pub async fn device_lists() -> Vec<Phone> {
-        get_device_list().await
-    }
-    pub async fn please_wait() -> AppsMessage {
-        AppsMessage::Nothing
-    }
-    pub async fn send_init_message() -> AppsMessage {
-        AppsMessage::InitUadList(true)
+    pub async fn download_uad_list() -> Message {
+        Message::InitList
     }
 }
 
