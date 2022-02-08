@@ -1,3 +1,4 @@
+use crate::core::update::SelfUpdateStatus;
 use crate::core::utils::{format_diff_time_from_now, last_modified_date, open_url};
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
@@ -12,6 +13,7 @@ pub struct About {
     wiki_btn: button::State,
     log_btn: button::State,
     lists_btn: button::State,
+    self_update_btn: button::State,
 }
 
 #[derive(Debug, Clone)]
@@ -43,7 +45,8 @@ impl About {
             .style(style::NavigationContainer(settings.theme.palette));
 
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
-        let uad_list_text = Text::new(format!("Documentation: v{}", date.format("%Y%m%d")));
+        let uad_list_text = Text::new(format!("Documentation: v{}", date.format("%Y%m%d")))
+            .width(Length::Units(250));
         let last_update_text = Text::new(format!("(last was {})", format_diff_time_from_now(date)))
             .color(settings.theme.palette.normal.surface);
         let uad_lists_btn = Button::new(&mut self.lists_btn, Text::new("Update"))
@@ -51,14 +54,53 @@ impl About {
             .padding(5)
             .style(style::PrimaryButton(settings.theme.palette));
 
+        let self_update_btn = Button::new(&mut self.self_update_btn, Text::new("Update"))
+            .on_press(Message::UrlPressed(PathBuf::from(
+                "https://github.com/0x192/universal-android-debloater/releases",
+            )))
+            .padding(5)
+            .style(style::PrimaryButton(settings.theme.palette));
+
+        let uad_version_text = Text::new(format!("UAD version: v{}", env!("CARGO_PKG_VERSION")))
+            .width(Length::Units(250));
+
+        let self_update_text = match &settings.self_update_state.latest_release {
+            Some(r) => format!("(v{} available)", r.tag_name),
+            None => {
+                if settings.self_update_state.status == SelfUpdateStatus::Done {
+                    "(No update available)".to_string()
+                } else {
+                    settings.self_update_state.status.to_string()
+                }
+            }
+        };
+
+        let last_self_update_text =
+            Text::new(self_update_text).color(settings.theme.palette.normal.surface);
+
         let uad_list_row = Row::new()
             .align_items(Alignment::Center)
             .spacing(10)
+            .width(iced::Length::Units(550))
             .push(uad_list_text)
             .push(uad_lists_btn)
             .push(last_update_text);
 
-        let update_container = Container::new(uad_list_row)
+        let self_update_row = Row::new()
+            .align_items(Alignment::Center)
+            .spacing(10)
+            .width(iced::Length::Units(550))
+            .push(uad_version_text)
+            .push(self_update_btn)
+            .push(last_self_update_text);
+
+        let update_column = Column::new()
+            .align_items(Alignment::Center)
+            .spacing(10)
+            .push(uad_list_row)
+            .push(self_update_row);
+
+        let update_container = Container::new(update_column)
             .width(Length::Fill)
             .center_x()
             .padding(10)

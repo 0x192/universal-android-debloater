@@ -7,6 +7,7 @@ use crate::gui::ICONS;
 use chrono::offset::Utc;
 use chrono::DateTime;
 use iced::{alignment, Length, Text};
+use serde::Deserialize;
 use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
@@ -201,5 +202,44 @@ pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
         }
     } else {
         last_update.num_days().to_string() + " day(s) ago"
+    }
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct Release {
+    pub tag_name: String,
+    pub assets: Vec<ReleaseAsset>,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct ReleaseAsset {
+    pub name: String,
+    #[serde(rename = "browser_download_url")]
+    pub download_url: String,
+}
+
+// UAD only has pre-releases so we can't use
+// https://api.github.com/repos/0x192/universal-android-debloater/releases/latest
+// to only get the latest release
+pub fn get_latest_release() -> Result<Option<Release>, ()> {
+    debug!("Checking for UAD update");
+
+    match ureq::get("https://api.github.com/repos/0x192/universal-android-debloater/releases")
+        .call()
+    {
+        Ok(res) => {
+            let release: Release =
+                serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
+                    .unwrap();
+            if release.tag_name.as_str() > env!("CARGO_PKG_VERSION") {
+                Ok(Some(release))
+            } else {
+                Ok(None)
+            }
+        }
+        Err(_) => {
+            debug!("Failed to check UAD update");
+            Err(())
+        }
     }
 }

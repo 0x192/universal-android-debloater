@@ -182,7 +182,6 @@ pub async fn load_debloat_lists(remote: bool) -> HashMap<String, Package> {
         )
         .call();
 
-        // TODO: Do it without intermediary Vec?
         match req {
             Ok(data) => {
                 let text = data.into_string().unwrap();
@@ -199,6 +198,7 @@ pub async fn load_debloat_lists(remote: bool) -> HashMap<String, Package> {
         get_local_lists()
     };
 
+    // TODO: Do it without intermediary Vec?
     let mut package_lists = HashMap::new();
     for p in list {
         let name = p.id.clone();

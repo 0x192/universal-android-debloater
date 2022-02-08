@@ -1,7 +1,8 @@
 use crate::core::config::Config;
 use crate::core::sync::{get_android_sdk, Phone as CorePhone};
 use crate::core::theme::Theme;
-use crate::core::utils::{open_url, string_to_theme};
+use crate::core::update::{SelfUpdateState, SelfUpdateStatus};
+use crate::core::utils::{open_url, string_to_theme, Release};
 use crate::gui::style;
 use crate::IN_FILE_CONFIGURATION;
 use iced::{
@@ -16,6 +17,7 @@ pub struct Settings {
     pub theme: Theme,
     theme_picklist: pick_list::State<Theme>,
     unavailable_btn: button::State,
+    pub self_update_state: SelfUpdateState,
 }
 
 #[derive(Debug, Clone)]
@@ -42,6 +44,7 @@ impl Default for Settings {
             theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
             theme_picklist: pick_list::State::default(),
             unavailable_btn: button::State::default(),
+            self_update_state: SelfUpdateState::default(),
         }
     }
 }
@@ -53,11 +56,21 @@ pub enum Message {
     MultiUserMode(bool),
     ApplyTheme(Theme),
     UrlPressed(PathBuf),
+    GetLatestRelease(Result<Option<Release>, ()>),
 }
 
 impl Settings {
     pub fn update(&mut self, phone: &CorePhone, msg: Message) {
         match msg {
+            Message::GetLatestRelease(release) => {
+                match release {
+                    Ok(r) => {
+                        self.self_update_state.status = SelfUpdateStatus::Done;
+                        self.self_update_state.latest_release = r
+                    }
+                    Err(_) => self.self_update_state.status = SelfUpdateStatus::Failed,
+                };
+            }
             Message::ExpertMode(toggled) => {
                 info!(
                     "Expert mode {}",
@@ -158,6 +171,7 @@ impl Settings {
                 )))
                 .height(Length::Units(22))
                 .style(style::UnavailableButton(self.theme.palette));
+
         // Disabling package without root isn't really possible before Android Oreo (8.0)
         // see https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
         let disable_mode_checkbox = Checkbox::new(
