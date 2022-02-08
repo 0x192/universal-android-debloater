@@ -5681,7 +5681,7 @@
   {
     "id": "com.samsung.advp.imssettings",
     "list": "Oem",
-    "description": "Needed for VoLTE (Voice over LTE) https://en.wikipedia.org/wiki/Voice_over_LTE\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).\nNOTE: this package could be needed for messaging apps that send SMS/RCS code to verify your phone number (see issue #17)",
+    "description": "Needed for VoLTE (Voice over LTE) https://en.wikipedia.org/wiki/Voice_over_LTE\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).\nNOTE: this package could be needed for messaging apps that send SMS/RCS code to verify your phone number",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5690,7 +5690,7 @@
   {
     "id": "com.samsung.accessibility",
     "list": "Oem",
-    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone. (see issue #20)\n",
+    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5699,7 +5699,7 @@
   {
     "id": "com.samsung.android.allshare.service.fileshare",
     "list": "Oem",
-    "description": "Wi-Fi Direct\nAllows two devices to establish a direct Wi-Fi connection without requiring a wireless router.\nhttps://www.samsung.com/au/support/mobile-devices/connecting-devices-via-wifi-direct/\nhttps://en.wikipedia.org/wiki/Wi-Fi_Direct\n",
+    "description": "Wi-Fi Direct\nAllows two devices to establish a direct Wi-Fi connection without requiring a wireless router.\nhttps://www.samsung.com/au/support/mobile-devices/connecting-devices-via-wifi-direct/\nhttps://en.wikipedia.org/wiki/Wi-Fi_Direct",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -6437,7 +6437,7 @@
   {
     "id": "com.android.companiondevicemanager",
     "list": "Aosp",
-    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, e.t.c.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)",
+    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8691,7 +8691,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.calendar.black.overlay",
@@ -8700,7 +8700,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.calendar.white.overlay",
@@ -8709,7 +8709,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.camera",
@@ -8718,7 +8718,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.camera.service",
@@ -8790,7 +8790,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.contacts.basiccolorwhite.overlay",
@@ -8799,7 +8799,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.coreservice",
@@ -8826,7 +8826,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.deskclock.black.overlay",
@@ -8835,7 +8835,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.deskclock.white.overlay",
@@ -8844,7 +8844,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.diagnosemanager",
@@ -8898,7 +8898,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.filemanager.white.overlay",
@@ -8907,7 +8907,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.gallery",
@@ -8916,7 +8916,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.gamespace.black.overlay",
@@ -8925,7 +8925,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.gamespace.white.overlay",
@@ -8934,7 +8934,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.ifaaservice",
@@ -8970,7 +8970,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.mms.basiccolorwhite.overlay",
@@ -8979,7 +8979,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.note.black.overlay",
@@ -8988,7 +8988,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.note.white.overlay",
@@ -8997,7 +8997,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.odmoverlay.android",
@@ -9150,7 +9150,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.security.white.overlay",
@@ -9159,7 +9159,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.ses",
@@ -9195,7 +9195,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.oneplus.simcontacts.basiccolorwhite.overlay",
@@ -9204,7 +9204,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.oneplus.sms.smscplugger",
@@ -9276,7 +9276,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.wifiapsettings.basiccolorwhite.overlay",
@@ -9285,7 +9285,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.qualcomm.qti.devicestatisticsservice",
@@ -9447,7 +9447,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "net.oneplus.weather.basiccolorwhite.overlay",
@@ -9456,7 +9456,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.systemui.gesture.line.overlay",
@@ -9694,7 +9694,7 @@
   },
   {
     "id": "com.google.android.overlay.modules.modulemetadata.forframework",
-    "list": "Pending",
+    "list": "Aosp",
     "description": "Android System Theme pack\nGuessing it's a pack of themes for the Android System framework based on the name.",
     "dependencies": null,
     "neededBy": null,
@@ -12174,7 +12174,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.data.overlay.base.s600ww",
@@ -12210,7 +12210,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
@@ -12219,7 +12219,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.bboxsbox.app",
@@ -12237,7 +12237,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.CPClient.overlay.base.s600ww",
@@ -12255,7 +12255,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.dataagent.overlay.base.s600ww",
@@ -12336,7 +12336,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
@@ -12444,7 +12444,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.pushagent.overlay.base.s600ww",
@@ -12525,7 +12525,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.weatherservice.overlay.base.s600ww",
@@ -12534,7 +12534,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.fih.infodisplay",
@@ -12615,7 +12615,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.hdrservice",
@@ -13713,7 +13713,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.qualcomm.qti.qmmi",
@@ -16427,11 +16427,11 @@
   {
     "id": "com.asus.calculator",
     "list": "Oem",
-    "description": "Asus calculator app",
+    "description": "Asus calculator app\nHas trackers and way to many permissions for a calculator.\nPithus analysis: 817514371bbdb76ec52da4c8456bbc116deec179603099deabbe6fcce6f6ccdb",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.asus.ia.asusapp",
@@ -16445,11 +16445,11 @@
   {
     "id": "com.asus.soundrecorder",
     "list": "Oem",
-    "description": "Asus Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder)",
+    "description": "Asus Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder).\n  A sound recorder app should not even have the Internet permission.\nPithus analysis: https://beta.pithus.org/report/f4cf38e1c35a04c3579fa198d2abd3ef1ff7be79633d6d3f2bc69c8a69164e1d",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.android.hotwordenrollment.xgoogle",
@@ -16895,7 +16895,7 @@
   {
     "id": "com.google.android.apps.subscriptions.red",
     "list": "Google",
-    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)",
+    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\n Lets you automatically back up your phone and manage your Google cloud storage.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17079,7 +17079,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.googlequicksearchbox",
@@ -17313,7 +17313,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.google.ar.lens",
@@ -17529,7 +17529,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.gsf",
@@ -17952,7 +17952,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.base.s600id",
@@ -17961,7 +17961,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.base.s600ww",
@@ -17970,7 +17970,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.bboxsbox",
@@ -18006,7 +18006,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.CPClient.overlay.base.s600id",
@@ -18015,7 +18015,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.custmanager",
@@ -18033,7 +18033,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.custmanager.data.overlay.base.s600id",
@@ -18042,7 +18042,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.custmanager.data.overlay.base.s600ww",
@@ -18051,7 +18051,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.dataagent",
@@ -18069,7 +18069,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.dataagent.overlay.base.s600id",
@@ -18077,7 +18077,7 @@
     "description": "Theme overlay for Data Agent?",
     "dependencies": null,
     "neededBy": "",
-    "labels": null,
+    "labels": nullAdvanced
     "removal": "Expert"
   },
   {
@@ -18087,7 +18087,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.DbgCfgTool.overlay.base",
@@ -18096,7 +18096,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.DbgCfgTool.overlay.base.s600id",
@@ -18330,7 +18330,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.pushagent.overlay.base.s600id",
@@ -18492,7 +18492,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.evenwell.weatherservice",
@@ -18501,7 +18501,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.hmdglobal.datago",
@@ -19383,7 +19383,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.mi.globalbrowser",
