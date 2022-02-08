@@ -310,6 +310,7 @@ impl UadGui {
     pub async fn download_uad_list() -> Message {
         Message::InitList
     }
+
     pub async fn send_self_update_message() -> SettingsMessage {
         SettingsMessage::GetLatestRelease(get_latest_release())
     }
