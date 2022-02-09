@@ -34,6 +34,7 @@ pub enum Action {
 pub enum LoadingState {
     DownloadingList,
     LoadingPackages,
+    _UpdatingUad,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -349,6 +350,10 @@ impl List {
             }
             State::Loading(LoadingState::LoadingPackages) => {
                 let text = "Pulling packages from the phone. Please wait...";
+                waiting_view(settings, text, None)
+            }
+            State::Loading(LoadingState::_UpdatingUad) => {
+                let text = "Updating UAD. Please wait...";
                 waiting_view(settings, text, None)
             }
             State::Ready => {
