@@ -5,7 +5,7 @@ pub mod widgets;
 pub use crate::core::sync::{get_device_list, Phone};
 use crate::core::uad_lists::load_debloat_lists;
 pub use crate::core::uad_lists::Package;
-use crate::core::update::{SelfUpdateState, SelfUpdateStatus, get_latest_release};
+use crate::core::update::{get_latest_release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::icon;
 use iced::{
     button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
@@ -28,7 +28,7 @@ pub const ICONS: Font = Font::External {
 };
 
 #[cfg(feature = "self-update")]
-use crate::core::update::{download_update_to_temp_file, remove_file,bin_name};
+use crate::core::update::{bin_name, download_update_to_temp_file, remove_file};
 
 #[derive(Debug, Clone)]
 pub enum View {
@@ -257,13 +257,13 @@ impl Application for UadGui {
                         {
                             Ok(_) => {
                                 if let Err(e) = remove_file(cleanup_path) {
-                                  error!("Could not remove temp update file: {}", e);
+                                    error!("Could not remove temp update file: {}", e);
                                 }
                                 std::process::exit(0)
                             }
                             Err(error) => {
                                 if let Err(e) = remove_file(cleanup_path) {
-                                  error!("Could not remove temp update file: {}", e);
+                                    error!("Could not remove temp update file: {}", e);
                                 }
                                 error!("Failed to update UAD: {}", error)
                             }

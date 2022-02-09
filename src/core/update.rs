@@ -2,12 +2,12 @@ use serde::Deserialize;
 
 #[cfg(feature = "self-update")]
 use {
-    std::fs,
-    std::io::copy,
-    std::path::PathBuf,
     retry::{delay::Fibonacci, retry, OperationResult},
-    std::path::Path,
+    std::fs,
     std::io,
+    std::io::copy,
+    std::path::Path,
+    std::path::PathBuf,
 };
 
 #[derive(Debug, Deserialize, Clone)]
@@ -54,8 +54,6 @@ impl std::fmt::Display for SelfUpdateStatus {
         write!(f, "{}", s)
     }
 }
-
-
 
 /// Download a file from the internet
 #[cfg(feature = "self-update")]
@@ -166,7 +164,6 @@ pub async fn download_update_to_temp_file(
 
     Ok((current_bin_path, tmp_path))
 }
-
 
 #[cfg(not(feature = "self-update"))]
 pub fn get_latest_release() -> Result<Option<Release>, ()> {

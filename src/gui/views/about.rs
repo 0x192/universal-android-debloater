@@ -72,20 +72,20 @@ impl About {
 
         #[cfg(feature = "self-update")]
         let self_update_text = match &settings.self_update_state.latest_release {
-                Some(r) => {
-                    if settings.self_update_state.status == SelfUpdateStatus::Updating {
-                        settings.self_update_state.status.to_string()
-                    } else {
-                        format!("(v{} available)", r.tag_name)
-                    }
+            Some(r) => {
+                if settings.self_update_state.status == SelfUpdateStatus::Updating {
+                    settings.self_update_state.status.to_string()
+                } else {
+                    format!("(v{} available)", r.tag_name)
                 }
-                None => {
-                    if settings.self_update_state.status == SelfUpdateStatus::Done {
-                        "(No update available)".to_string()
-                    } else {
-                        settings.self_update_state.status.to_string()
-                    }
+            }
+            None => {
+                if settings.self_update_state.status == SelfUpdateStatus::Done {
+                    "(No update available)".to_string()
+                } else {
+                    settings.self_update_state.status.to_string()
                 }
+            }
         };
 
         #[cfg(feature = "self-update")]
@@ -94,12 +94,12 @@ impl About {
 
         #[cfg(feature = "self-update")]
         let self_update_row = Row::new()
-                .align_items(Alignment::Center)
-                .spacing(10)
-                .width(iced::Length::Units(550))
-                .push(uad_version_text)
-                .push(self_update_btn)
-                .push(last_self_update_text);
+            .align_items(Alignment::Center)
+            .spacing(10)
+            .width(iced::Length::Units(550))
+            .push(uad_version_text)
+            .push(self_update_btn)
+            .push(last_self_update_text);
 
         let uad_list_row = Row::new()
             .align_items(Alignment::Center)

@@ -1,7 +1,7 @@
 use crate::core::config::Config;
 use crate::core::sync::{get_android_sdk, Phone as CorePhone};
 use crate::core::theme::Theme;
-use crate::core::update::{SelfUpdateState, SelfUpdateStatus, Release};
+use crate::core::update::{Release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
 use crate::IN_FILE_CONFIGURATION;
