@@ -1,10 +1,12 @@
-use crate::core::update::SelfUpdateStatus;
 use crate::core::utils::{format_diff_time_from_now, last_modified_date, open_url};
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
 use crate::CACHE_DIR;
 use iced::{button, Alignment, Button, Column, Container, Element, Length, Row, Space, Text};
 use std::path::PathBuf;
+
+#[cfg(feature = "self-update")]
+use crate::core::update::SelfUpdateStatus;
 
 #[derive(Default, Debug, Clone)]
 pub struct About {
@@ -13,13 +15,14 @@ pub struct About {
     wiki_btn: button::State,
     log_btn: button::State,
     lists_btn: button::State,
-    self_update_btn: button::State,
+    _self_update_btn: button::State,
 }
 
 #[derive(Debug, Clone)]
 pub enum Message {
     UrlPressed(PathBuf),
     UpdateUadLists,
+    DoSelfUpdate,
 }
 
 impl About {
@@ -29,6 +32,9 @@ impl About {
                 open_url(url);
             }
             Message::UpdateUadLists => {
+                // Action is taken by UadGui update()
+            }
+            Message::DoSelfUpdate => {
                 // Action is taken by UadGui update()
             }
         }
@@ -54,29 +60,46 @@ impl About {
             .padding(5)
             .style(style::PrimaryButton(settings.theme.palette));
 
-        let self_update_btn = Button::new(&mut self.self_update_btn, Text::new("Update"))
-            .on_press(Message::UrlPressed(PathBuf::from(
-                "https://github.com/0x192/universal-android-debloater/releases",
-            )))
+        #[cfg(feature = "self-update")]
+        let self_update_btn = Button::new(&mut self._self_update_btn, Text::new("Update"))
+            .on_press(Message::DoSelfUpdate)
             .padding(5)
             .style(style::PrimaryButton(settings.theme.palette));
 
+        #[cfg(feature = "self-update")]
         let uad_version_text = Text::new(format!("UAD version: v{}", env!("CARGO_PKG_VERSION")))
             .width(Length::Units(250));
 
+        #[cfg(feature = "self-update")]
         let self_update_text = match &settings.self_update_state.latest_release {
-            Some(r) => format!("(v{} available)", r.tag_name),
-            None => {
-                if settings.self_update_state.status == SelfUpdateStatus::Done {
-                    "(No update available)".to_string()
-                } else {
-                    settings.self_update_state.status.to_string()
+                Some(r) => {
+                    if settings.self_update_state.status == SelfUpdateStatus::Updating {
+                        settings.self_update_state.status.to_string()
+                    } else {
+                        format!("(v{} available)", r.tag_name)
+                    }
                 }
-            }
+                None => {
+                    if settings.self_update_state.status == SelfUpdateStatus::Done {
+                        "(No update available)".to_string()
+                    } else {
+                        settings.self_update_state.status.to_string()
+                    }
+                }
         };
 
+        #[cfg(feature = "self-update")]
         let last_self_update_text =
             Text::new(self_update_text).color(settings.theme.palette.normal.surface);
+
+        #[cfg(feature = "self-update")]
+        let self_update_row = Row::new()
+                .align_items(Alignment::Center)
+                .spacing(10)
+                .width(iced::Length::Units(550))
+                .push(uad_version_text)
+                .push(self_update_btn)
+                .push(last_self_update_text);
 
         let uad_list_row = Row::new()
             .align_items(Alignment::Center)
@@ -86,19 +109,18 @@ impl About {
             .push(uad_lists_btn)
             .push(last_update_text);
 
-        let self_update_row = Row::new()
-            .align_items(Alignment::Center)
-            .spacing(10)
-            .width(iced::Length::Units(550))
-            .push(uad_version_text)
-            .push(self_update_btn)
-            .push(last_self_update_text);
-
+        #[cfg(feature = "self-update")]
         let update_column = Column::new()
             .align_items(Alignment::Center)
             .spacing(10)
             .push(uad_list_row)
             .push(self_update_row);
+
+        #[cfg(not(feature = "self-update"))]
+        let update_column = Column::new()
+            .align_items(Alignment::Center)
+            .spacing(10)
+            .push(uad_list_row);
 
         let update_container = Container::new(update_column)
             .width(Length::Fill)

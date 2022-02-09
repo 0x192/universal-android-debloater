@@ -77,6 +77,33 @@ impl button::StyleSheet for UnavailableButton {
     }
 }
 
+pub struct SelfUpdateButton(pub ColorPalette);
+impl button::StyleSheet for SelfUpdateButton {
+    fn active(&self) -> button::Style {
+        button::Style {
+            border_color: Color {
+                a: 0.5,
+                ..self.0.bright.secondary
+            },
+            border_width: 1.0,
+            border_radius: 2.0,
+            text_color: self.0.bright.secondary,
+            ..button::Style::default()
+        }
+    }
+
+    fn hovered(&self) -> button::Style {
+        button::Style {
+            background: Some(Background::Color(Color {
+                a: 0.25,
+                ..self.0.normal.surface
+            })),
+            text_color: self.0.bright.secondary,
+            ..self.active()
+        }
+    }
+}
+
 pub struct RefreshButton(pub ColorPalette);
 impl button::StyleSheet for RefreshButton {
     fn active(&self) -> button::Style {
