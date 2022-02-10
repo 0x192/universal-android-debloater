@@ -106,7 +106,7 @@ impl Application for UadGui {
                 self.apps_view.uad_lists = uad_lists;
                 if self.ready {
                     Command::perform(
-                        Self::load_phone_packages(self.selected_device.clone().unwrap()),
+                        Self::load_phone_packages(self.selected_device.clone().unwrap_or_default()),
                         Message::AppsAction,
                     )
                 } else {
@@ -141,7 +141,7 @@ impl Application for UadGui {
                 }
                 if self.ready {
                     Command::perform(
-                        Self::load_phone_packages(self.selected_device.clone().unwrap()),
+                        Self::load_phone_packages(self.selected_device.clone().unwrap_or_default()),
                         Message::AppsAction,
                     )
                 } else {
@@ -224,7 +224,7 @@ impl Application for UadGui {
                 self.selected_device = Some(device);
                 self.view = View::List;
                 Command::perform(
-                    Self::load_phone_packages(self.selected_device.clone().unwrap()),
+                    Self::load_phone_packages(self.selected_device.clone().unwrap_or_default()),
                     Message::AppsAction,
                 )
             }
