@@ -6414,7 +6414,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.android.bookmarkprovider",
@@ -6535,7 +6535,7 @@
   },
   {
     "id": "com.android.email.partnerprovider.overlay",
-    "list": "Pending",
+    "list": "Oem",
     "description": "Some overlay for partnerprovider?",
     "dependencies": null,
     "neededBy": null,
@@ -17075,7 +17075,7 @@
   {
     "id": "com.google.android.feedback",
     "list": "Google",
-    "description": "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.\nDoesn't seem to run on its own.",
+    "description": "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.\nDoesn't seem to run on its own.\n Has Internet permission and can access to all system logs. All application can use this app to send bug reports.\nPithus analysis: https://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa ",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17309,7 +17309,7 @@
   {
     "id": "com.google.ar.core",
     "list": "Google",
-    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nDisabling breaks some games that depend on it, like Pokemon GO.",
+    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nRuns at boot and sends data to google. Pithus analysis: https://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644\nNote: Disabling it breaks some games that depend on it, like Pokemon GO.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17525,7 +17525,7 @@
   {
     "id": "com.google.android.gms.policy_sidecar_aps",
     "list": "Google",
-    "description": "Talks to Gmail.com and Google.com.\nNeeds a Google Account and Google Play Services to work correctly.\nI don't know much more but it's sufficient to know you can debloat it.\nGiven its name it could be related to Android auto?\nhttps://www.hybrid-analysis.com/sample/c710b66d043026007666966d933e3a1ed29720c5009764c01b5f056232a3518a?environmentId=200",
+    "description": "Talks to Gmail.com and Google.com.\nNeeds a Google Account and Google Play Services to work correctly.\nIt also collects your IMEI. I don't know much more. It is safe to remove.\nGiven its name it could be related to Android auto?\nPithus analysis: https://beta.pithus.org/report/60835b97f38d9e64d4f554a73dab71c892153486a8e0fd81461c3d85359d9fae",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
