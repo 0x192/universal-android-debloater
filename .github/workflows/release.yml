@@ -12,6 +12,10 @@ jobs:
       matrix:
         build_target: [linux, macos, windows]
         graphics: [glow, wgpu]
+        update_feature: [self-update, no-self-update]
+        exclude:
+          - build_target: windows
+            update_feature: no-self-update
         include:
           - build_target: linux
             os: ubuntu-latest
@@ -23,6 +27,10 @@ jobs:
             renderer: "-opengl"
           - graphics: wgpu
             renderer: '' # Vulkan but we don't want this in the binary filename
+          - update_feature: self-update
+            update_name: '' # we don't want this in the binary filename
+          - update_feature: no-self-update
+            update_name: "-noseflupdate"
     steps:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -41,16 +49,24 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --release --features ${{ matrix.graphics }}
+          args: --release --no-default-features --features ${{ matrix.graphics }},${{ matrix.update_feature }}
       - name: Renaming binaries [Windows]
         if: matrix.os == 'windows-latest'
         run: mv target/release/uad_gui.exe target/release/uad_gui-${{ matrix.build_target }}${{ matrix.renderer }}.exe
       - name: Renaming binaries [Others]
         if: matrix.os != 'windows-latest'
-        run: mv target/release/uad_gui target/release/uad_gui-${{ matrix.build_target }}${{ matrix.renderer }}
-      - name: Tarball Linux binaries
+        run: mv target/release/uad_gui target/release/uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}
+      - name: Tarball Linux binary
         if: matrix.os == 'ubuntu-latest'
-        run: tar --remove-files -czf target/release/uad_gui-linux${{ matrix.renderer }}{.tar.gz,}
+        run: |
+          cd target/release/
+          tar --remove-files -czf uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}{.tar.gz,}
+      - name: Tarball MacOS binaries # --remove-files is not available on bsd tar
+        if: matrix.target.os == 'macos-latest'
+        run: |
+          brew install gnu-tar
+          cd target/release/
+          gtar --remove-files -czf uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}{.tar.gz,}
       - name: Create pre-release
         uses: softprops/action-gh-release@v1
         with:
