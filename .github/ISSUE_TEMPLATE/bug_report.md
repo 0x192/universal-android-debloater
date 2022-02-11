@@ -1,8 +1,8 @@
 ---
 name: Bug report
-about: You have an issue
+about: You have an issue with the UAD software itself
 title: ''
-labels: ''
+labels: bug
 assignees: ''
 
 ---
