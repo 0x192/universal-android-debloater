@@ -9694,7 +9694,7 @@
   },
   {
     "id": "com.google.android.overlay.modules.modulemetadata.forframework",
-    "list": "Aosp",
+    "list": "Oem",
     "description": "Android System Theme pack\nGuessing it's a pack of themes for the Android System framework based on the name.",
     "dependencies": null,
     "neededBy": null,
@@ -12237,7 +12237,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.CPClient.overlay.base.s600ww",
@@ -18077,8 +18077,8 @@
     "description": "Theme overlay for Data Agent?",
     "dependencies": null,
     "neededBy": "",
-    "labels": nullAdvanced
-    "removal": "Expert"
+    "labels": null,
+    "removal": "Advanced"
   },
   {
     "id": "com.evenwell.DbgCfgTool",
