@@ -6536,7 +6536,7 @@
   {
     "id": "com.android.email.partnerprovider.overlay",
     "list": "Oem",
-    "description": "Some overlay for partnerprovider?",
+    "description": "Theme overlay for partnerprovider?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17309,7 +17309,7 @@
   {
     "id": "com.google.ar.core",
     "list": "Google",
-    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nRuns at boot and sends data to google. Pithus analysis: https://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644\nNote: Disabling it breaks some games that depend on it, like Pokemon GO.",
+    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nNote: Disabling it breaks some games that depend on it, like Pokemon GO.\nhttps://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
