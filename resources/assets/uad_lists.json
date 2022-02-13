@@ -18686,11 +18686,11 @@
   {
     "id": "com.samsung.android.kgclient",
     "list": "Pending",
-    "description": "Samsung Pay One Ui 3.0 ?",
+    "description": "Samsung Payment Services. Removing this package will LOCK YOU OUT of your device for an unknown period of time. Filesystem can still be accessed if ADB permissions were granted beforehand. Unless you know what you're doing, you shouldn't uninstall this package.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.lge.updatecenter",
