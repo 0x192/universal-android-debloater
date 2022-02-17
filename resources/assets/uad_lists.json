@@ -17115,7 +17115,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.ims",
