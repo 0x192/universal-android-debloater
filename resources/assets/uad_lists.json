@@ -17642,7 +17642,7 @@
   {
     "id": "com.google.android.inputmethod.latin",
     "list": "Google",
-    "description": "Google Keyboard (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)\nSometimes the only keyboard app on a phone; Make sure you have another installed before you disable.\n\"Simple Keyboard\" is a good lightweight replacement based on the AOSP Keyboard.\nhttps://f-droid.org/en/packages/rkr.simplekeyboard.inputmethod/",
+    "description": "Gboard – the Google Keyboard (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)\nSometimes the only keyboard app on a phone; Make sure you have another installed before you disable.\n\"Simple Keyboard\" is a good FOSS, lightweight replacement based on the AOSP Keyboard:\nhttps://f-droid.org/en/packages/rkr.simplekeyboard.inputmethod/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19180,12 +19180,12 @@
   },
   {
     "id": "com.samsung.android.kgclient",
-    "list": "Pending",
-    "description": "Samsung Pay One Ui 3.0?",
+    "list": "Oem",
+    "description": "Samsung Payment Services\nRemoving this package will LOCK YOU OUT of your device with a full-screen overlay message saying that Device Services was uninstalled in an unauthorised manner. This is persistent upon reboots until a factory data reset is initiated. Filesystem can still be accessed if ADB permissions were granted beforehand.\nUnless you know what you're doing, you shouldn't uninstall this package.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.lge.updatecenter",
