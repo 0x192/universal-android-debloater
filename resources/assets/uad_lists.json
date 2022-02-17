@@ -83,11 +83,11 @@
   {
     "id": "com.sonyericsson.settings.res.overlay_305",
     "list": "Oem",
-    "description": "Some people removed this package. I guess it's only a (useless) overlay the the settings ?\n",
+    "description": "Some overlay for settings? Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonyericsson.startupflagservice",
@@ -110,20 +110,20 @@
   {
     "id": "com.sonyericsson.trackid.res.overlay_305",
     "list": "Oem",
-    "description": "Overlay for Sony trackid\nTrackid was a mobile music and audio search engine (like Shazam). It has been discontinued by Sony.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
+    "description": "Overlay for TrackID. Overlays are usually themes.\nTrackID was(now discontinued) a music and audio search engine (like Shazam).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonyericsson.trackid.res.overlay",
     "list": "Oem",
-    "description": "Overlay for Sony trackid\nTrackid was a mobile music and audio search engine (like Shazam). It has been discontinued by Sony.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
+    "description": "Some overlay for TrackID. Overlays are usually themes.\nTrackID was(now discontinued) a music and audio search engine (like Shazam).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonyericsson.unsupportedheadsetnotifier",
@@ -200,11 +200,11 @@
   {
     "id": "com.sonymobile.android.contacts.res.overlay_305",
     "list": "Oem",
-    "description": "Overlay for Sony contacts.\nREMINDER : An overlay allows apps to display content on top of other apps.\n",
+    "description": "Overlay for Sony contacts. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.android.externalkeyboardjp",
@@ -236,11 +236,11 @@
   {
     "id": "com.sonymobile.apnupdater.res.overlay_305",
     "list": "Oem",
-    "description": "Overlay for APN Updater. Useful ?\n",
+    "description": "Overlay for APN Updater. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.aptx.notifier",
@@ -587,11 +587,11 @@
   {
     "id": "com.sonymobile.themes.xperialoops2",
     "list": "Oem",
-    "description": "Sony themes\n",
+    "description": "Sony themes",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.xperialounge.services",
@@ -605,11 +605,11 @@
   {
     "id": "com.sonymobile.xperiaxlivewallpaper.product.res.overlay",
     "list": "Oem",
-    "description": "Some overlay for a live wallaper from Sony?",
+    "description": "Some overlay for a live wallaper from Sony? Overlays are usually themes, but not sure about this one as theming seems weird for live wallpapers. Could be that Sony automatically generates theme packages for all or most system apps, which might generate some unnecessary packages.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.sonymobile.xperiaservices",
@@ -2315,11 +2315,11 @@
   {
     "id": "com.huawei.android.thememanager",
     "list": "Oem",
-    "description": "Huawei Themes (https://play.google.com/store/apps/details?id=com.huawei.android.thememanager)\nLets you use Huawei themes\nSetting Wallpapers directly will no longer work, but the Wallpaper entry in the Settings app will still let you choose wallpapers.\n",
+    "description": "Themes (https://play.google.com/store/apps/details?id=com.huawei.android.thememanager)\nLets you download and use Huawei themes.\nSetting Wallpapers directly will no longer work, but the Wallpaper entry in the Settings app will still let you choose wallpapers.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.aod",
@@ -4259,20 +4259,20 @@
   {
     "id": "com.samsung.android.themecenter",
     "list": "Oem",
-    "description": "Samsung theme center\nRun at startup and enable you to download theme from samsung\nSafe to remove\n",
+    "description": "Samsung theme center\nRuns at startup and enable you to download theme from samsung\nSafe to remove.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.themestore",
     "list": "Oem",
-    "description": "Galaxy Themes\nOfficial Samsung app for modifying your smartphone's theme.\nhttps://www.samsung.com/global/galaxy/apps/galaxy-themes/\nYou'll still be able to change your wallpaper without this app (from the Gallery app)\n",
+    "description": "Galaxy Themes\nOfficial Samsung app for modifying your smartphone's theme.\nhttps://www.samsung.com/global/galaxy/apps/galaxy-themes/\nYou'll still be able to change your wallpaper without this app (from the Gallery app)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.tripwidget",
@@ -5681,7 +5681,7 @@
   {
     "id": "com.samsung.advp.imssettings",
     "list": "Oem",
-    "description": "Needed for VoLTE (Voice over LTE) https://en.wikipedia.org/wiki/Voice_over_LTE\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).\nNOTE: this package could be needed for messaging apps that send SMS/RCS code to verify your phone number",
+    "description": "Needed for VoLTE (Voice over LTE) https://en.wikipedia.org/wiki/Voice_over_LTE\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).\nNOTE: This package could be needed for messaging apps that send SMS/RCS code to verify your phone number.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -6464,11 +6464,11 @@
   {
     "id": "com.android.dreams.phototable.overlay",
     "list": "Aosp",
-    "description": "Overlay for com.android.dreams.phototable\n",
+    "description": "Overlay for the phototable daydream? Overlays are usually themes, but not sure about this one.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.egg",
@@ -6540,7 +6540,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.partnerbookmarks",
@@ -6617,7 +6617,7 @@
   {
     "id": "com.android.wallpaper.livepicker.overlay",
     "list": "Aosp",
-    "description": "Overlay for live wallpaper picker?",
+    "description": "Overlay for live wallpaper picker? Overlays are usually themes, but not sure about this one.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7166,20 +7166,20 @@
   {
     "id": "com.android.systemui.theme.dark",
     "list": "Aosp",
-    "description": "Enables you to use Android dark theme.\n",
+    "description": "Enables you to use Android dark theme.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.theme.icon_pack.rounded.systemui",
     "list": "Aosp",
-    "description": "Android icons pack [Rounded].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Rounded].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.timezone.updater",
@@ -7985,7 +7985,7 @@
   {
     "id": "com.zte.weather",
     "list": "Oem",
-    "description": "ZTE Weather app\n)\n",
+    "description": "ZTE Weather app.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8282,7 +8282,7 @@
   {
     "id": "com.android.bluetooth.overlay.common",
     "list": "Pending",
-    "description": "",
+    "description": "Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8489,7 +8489,7 @@
   {
     "id": "com.android.theme.icon.circle",
     "list": "Aosp",
-    "description": "Android icons pack [Circle].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Circle].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8498,7 +8498,7 @@
   {
     "id": "com.android.theme.icon.square",
     "list": "Aosp",
-    "description": "Android icons pack [Square].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Square].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8669,7 +8669,7 @@
   {
     "id": "com.oneplus.backuprestore.remoteservice",
     "list": "Oem",
-    "description": "Likely a backend service for OnePlus Switch(com.oneplus.backuprestore).\nProbably safe to disable.",
+    "description": "Likely a backend service for OnePlus Switch(com.oneplus.backuprestore).\nI've never seen it run in the background.\nProbably safe to disable.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8691,7 +8691,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calendar.black.overlay",
@@ -8700,7 +8700,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.calendar.white.overlay",
@@ -8709,7 +8709,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.camera",
@@ -8749,8 +8749,8 @@
   },
   {
     "id": "com.oneplus.cloud.basiccolorblack.overlay",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Theme overlay for some Oneplus Cloud thing?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8758,8 +8758,8 @@
   },
   {
     "id": "com.oneplus.cloud.basiccolorwhite.overlay",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Theme overlay for some Oneplus Cloud thing?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8790,7 +8790,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.contacts.basiccolorwhite.overlay",
@@ -8799,7 +8799,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.coreservice",
@@ -8835,7 +8835,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.deskclock.white.overlay",
@@ -8844,7 +8844,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.diagnosemanager",
@@ -8898,7 +8898,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.filemanager.white.overlay",
@@ -8907,7 +8907,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.gallery",
@@ -8925,7 +8925,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.gamespace.white.overlay",
@@ -8934,7 +8934,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.ifaaservice",
@@ -8970,7 +8970,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.mms.basiccolorwhite.overlay",
@@ -8979,7 +8979,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.note.black.overlay",
@@ -8988,7 +8988,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.note.white.overlay",
@@ -8997,7 +8997,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.odmoverlay.android",
@@ -9063,9 +9063,18 @@
     "removal": "Expert"
   },
   {
+    "id": "com.oneplus.opwlb",
+    "list": "Oem",
+    "description": "Work-Life Balance\nNot present in most Oneplus phones? This functionality might have been superseded by other similar apps, like for example Zen Mode.\nHaven't tested, but probably safe to disable.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oneplus.opwlb.black.overlay",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Theme overlay for Oneplus Work-Life Balance?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9073,8 +9082,8 @@
   },
   {
     "id": "com.oneplus.opwlb.white.overlay",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Theme overlay for Oneplus Work-Life Balance?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9092,11 +9101,11 @@
   {
     "id": "com.oneplus.screenrecord",
     "list": "Oem",
-    "description": "Screen Recorder\nThe Android 11 screen recorder with some Oneplus modifications.\nRuns the \"SystemUITileService\" when you have it as one of the quicksettings tiles, but doesn't seem to run in the background outside of that.\nDoesn't have an app icon, but you can create a shortcut to it with the Activity Launcher app.\nhttps://f-droid.org/en/packages/de.szalkowski.activitylauncher/",
+    "description": "Screen Recorder\nThe Android 11 screen recorder with some Oneplus modifications.\nRuns the \"SystemUITileService\" when you have it as one of the quicksettings tiles, but doesn't seem to run in the background outside of that.\nDoesn't have an app icon, but you can create a shortcut to it with the Activity Launcher app (to avoid the background service).\nhttps://f-droid.org/en/packages/de.szalkowski.activitylauncher/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.screenrecord.black.overlay",
@@ -9150,7 +9159,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.security.white.overlay",
@@ -9159,7 +9168,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.ses",
@@ -9195,7 +9204,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.simcontacts.basiccolorwhite.overlay",
@@ -9204,7 +9213,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.sms.smscplugger",
@@ -9218,20 +9227,20 @@
   {
     "id": "com.oneplus.soundrecorder.black.overlay",
     "list": "Oem",
-    "description": "Overlay for Soundrecorder app?",
+    "description": "Theme overlay for Soundrecorder app?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.soundrecorder.white.overlay",
     "list": "Oem",
-    "description": "Overlay for Soundrecorder app?",
+    "description": "Theme overlay for Soundrecorder app?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.telephonyoptimization",
@@ -9276,7 +9285,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.wifiapsettings.basiccolorwhite.overlay",
@@ -9285,7 +9294,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.qualcomm.qti.devicestatisticsservice",
@@ -9447,7 +9456,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "net.oneplus.weather.basiccolorwhite.overlay",
@@ -9456,12 +9465,12 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.gesture.line.overlay",
     "list": "Pending",
-    "description": "\nThese packages seems to be disguished Xiaomi apps and not part of AOSP. Can someone confirm/refute this?\n",
+    "description": "System gesture bar overlay? Probably a bad idea to disable.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9470,7 +9479,7 @@
   {
     "id": "com.android.systemui.navigation.bar.overlay",
     "list": "Pending",
-    "description": "",
+    "description": "System navbar overlay? Probably a bad idea to disable.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9478,8 +9487,8 @@
   },
   {
     "id": "com.android.wifi.resources",
-    "list": "Pending",
-    "description": "",
+    "list": "Aosp",
+    "description": "System Wi-Fi resources",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9487,7 +9496,7 @@
   },
   {
     "id": "com.android.wifi.resources.overlay.common",
-    "list": "Pending",
+    "list": "Oem",
     "description": "System Wi-Fi resources Theme pack\nGuessing it's a pack of themes for some Wi-Fi related system UI, based on the name.",
     "dependencies": null,
     "neededBy": null,
@@ -9496,7 +9505,7 @@
   },
   {
     "id": "com.android.wifi.resources.overlay.target",
-    "list": "Pending",
+    "list": "Oem",
     "description": "System Wi-Fi resources Theme pack\nGuessing it's a pack of themes for some Wi-Fi related system UI, based on the name.",
     "dependencies": null,
     "neededBy": null,
@@ -9533,7 +9542,7 @@
   {
     "id": "com.android.theme.icon.pebble",
     "list": "Aosp",
-    "description": "Android icons pack [Pebble].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Pebble].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9542,7 +9551,7 @@
   {
     "id": "com.android.theme.icon.taperedrect",
     "list": "Aosp",
-    "description": "Android icons pack [Taperedrect].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Taperedrect].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9551,7 +9560,7 @@
   {
     "id": "com.android.theme.icon.vessel",
     "list": "Aosp",
-    "description": "Android icons pack [Vessel].\nYou can safely remove them if you don't use them. But there is no real point in doing so.\n",
+    "description": "Android icons pack [Vessel].\nSafe to remove if you don't use them, but there's no point in doing so as they are simple data containers with no permissions.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9560,7 +9569,7 @@
   {
     "id": "com.android.theme.icon_pack.rounded.themepicker",
     "list": "Aosp",
-    "description": "Obviously related to the \"rounded\" icon pack but the full package is strange. A themepicker class only for a specific icon package?\n\nYou can safely remove them if you don't use any icon packs. But there is no real point in doing so.\n",
+    "description": "Obviously related to the \"rounded\" icon pack but the full package is strange. A themepicker class only for a specific icon package?\nSafe to remove if you don't use them, but there's no point in doing so.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9731,7 +9740,7 @@
   {
     "id": "com.qualcomm.qti.cne",
     "list": "Misc",
-    "description": "CneApp (Connectivity Engine)\nEnables seamless hand-off between mobile data and Wi-Fi networks. Can also dynamically measure network performance to prioritize using the best one (I think that's part of \"Intelligently select the best Wi-Fi\" in settings).\nProbably worth keeping on; I noticed connection reliability getting worse when I disabled it.\nhttps://www.qualcomm.com/news/onq/2013/07/02/qualcomms-cne-bringing-smarts-3g4g-wi-fi-seamless-interworking\nhttps://programmersought.com/article/35091829299/",
+    "description": "CneApp (Connectivity Engine)\nRuns in the background as part of the System.\nEnables seamless hand-off between mobile data and Wi-Fi networks. Can also dynamically measure network performance to prioritize using the best one (I think that's part of \"Intelligently select the best Wi-Fi\" in settings).\nProbably worth keeping on; I noticed connection reliability getting worse when I disabled it.\nhttps://www.qualcomm.com/news/onq/2013/07/02/qualcomms-cne-bringing-smarts-3g4g-wi-fi-seamless-interworking\nhttps://programmersought.com/article/35091829299/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -11679,7 +11688,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.lge.leccp",
@@ -11886,7 +11895,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.lge.smartdoctor.webview",
@@ -12125,25 +12134,25 @@
   {
     "id": "com.lge.theme.titan",
     "list": "Oem",
-    "description": "LG Titan theme (labelled 'Platinum' in the theming app).\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "description": "LG Titan theme (labelled 'Platinum' in the theming app).\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.partnerbrowsercustomizations.btl.s600ww.overlay",
     "list": "Oem",
-    "description": "Add Nokia pinned bookmarks in your chromium based browser\n",
+    "description": "Theme overlay for some browser customization?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.calendar.overlay.base.s600ww",
     "list": "Oem",
-    "description": "Some overlay for a content provider package. Overlays are usually themes.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Some overlay for a content provider package. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12152,7 +12161,7 @@
   {
     "id": "com.android.providers.settings.overlay.base.s600ww",
     "list": "Oem",
-    "description": "Some overlay for a content provider package. Overlays are usually themes.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Some overlay for a content provider package. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12161,7 +12170,7 @@
   {
     "id": "com.android.providers.settings.btl.s600ww.overlay",
     "list": "Oem",
-    "description": "Some overlay for a content provider package. Overlays are usually themes.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Some overlay for a content provider package. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12174,7 +12183,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.data.overlay.base.s600ww",
@@ -12210,7 +12219,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.d.base.s600e0",
@@ -12219,7 +12228,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.bboxsbox.app",
@@ -12237,7 +12246,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.CPClient.overlay.base.s600ww",
@@ -12255,7 +12264,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.dataagent.overlay.base.s600ww",
@@ -12273,7 +12282,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.defaultappconfigure.overlay.base.s600ww",
@@ -12282,7 +12291,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600ww",
@@ -12291,7 +12300,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.email.data.overlay.base.s600ww",
@@ -12300,7 +12309,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.factorywizard.overlay.base.s600ww",
@@ -12309,7 +12318,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.foxlauncher.partner",
@@ -12336,7 +12345,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.managedprovisioning.overlay.base.s600ww",
@@ -12345,7 +12354,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.mappartner",
@@ -12363,7 +12372,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.pandorasbox.app",
@@ -12381,12 +12390,12 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.permissiondetection.overlay.base.s600ww",
     "list": "Oem",
-    "description": "A theme overlay for something?",
+    "description": "A theme overlay for some \"permissiondetection\" package?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12408,7 +12417,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.powersaving.g3.overlay.d.base.s600e0",
@@ -12417,7 +12426,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.providers.downloads.ui.overlay.base.s600ww",
@@ -12426,7 +12435,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.providers.partnerbookmarks.overlay.base.s600ww",
@@ -12435,16 +12444,16 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.providers.weather.overlay.base.s600ww",
     "list": "Oem",
-    "description": "Theme overlay for weather provider? Overlays are usually themes.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Theme overlay for weather provider?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.pushagent.overlay.base.s600ww",
@@ -12462,7 +12471,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.screenlock.overlay.base.s600ww",
@@ -12498,7 +12507,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.stbmonitor.data.overlay.base.s600ww",
@@ -12525,7 +12534,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.weatherservice.overlay.base.s600ww",
@@ -12534,7 +12543,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.fih.infodisplay",
@@ -12566,11 +12575,11 @@
   {
     "id": "com.hmdglobal.datago.overlay.base.s600ww",
     "list": "Oem",
-    "description": "Theme overlay for this telemetry package?",
+    "description": "Theme overlay for a Nokia telemetry package?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.hmdglobal.support",
@@ -12588,7 +12597,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.hmdglobal.camera2",
@@ -12615,7 +12624,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.hdrservice",
@@ -13628,7 +13637,7 @@
   {
     "id": "com.quicinc.voice.activation",
     "list": "Misc",
-    "description": "Qualcomm Voice Assist\nAlways-on voice detection, so obviously always runs in the background.\nProbably worth keeping enabled for battery savings if you use Google Assistant regularly while your screen is off.",
+    "description": "Qualcomm Voice Assist (https://play.google.com/store/apps/details?id=com.quicinc.voice.activation)\nAlways-on voice detection, so obviously always runs in the background.\nProbably worth keeping enabled for battery savings if you use Google Assistant regularly while your screen is off.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -13713,7 +13722,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.qualcomm.qti.qmmi",
@@ -14427,9 +14436,18 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.touchtype.swiftkey",
+    "list": "Misc",
+    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\n4 Trackers + 11 Permissions: https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE: default keyboard on some Nokia and Huawei phones. Make sure you have another keyboard app before disabling this.\nSimple Keyboard is a good FOSS replacement based on the AOSP keyboard: https://f-droid.org/en/packages/rkr.simplekeyboard.inputmethod/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
     "id": "com.touchtype.swiftkey.res.overlay",
     "list": "Misc",
-    "description": "Swiftkey Keyboard (https://play.google.com/store/apps/details?id=com.touchtype.swiftkey)\nKeyboard app developed by TouchType, a Microsoft subsidiary (https://en.wikipedia.org/wiki/SwiftKey)\nSends \"anonymous\" to Microsoft.\n4 Trackers + 11 Permissions : https://reports.exodus-privacy.eu.org/en/reports/com.touchtype.swiftkey/latest/\nNOTE : default keyboard on some Nokia and Huawei phones. Make sure to have another keyboard before removing this package.\n",
+    "description": "Some overlay for Swiftkey? Overlays are usually themes, but not sure about this one.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15545,11 +15563,11 @@
   {
     "id": "com.miui.videoplayer.overlay",
     "list": "Oem",
-    "description": "Mi Video overlay\nREMINDER : A screen overlay in Android, also referred to as “Draw On Top”, allows an app to display content over another app\n",
+    "description": "Mi Video overlay\nOverlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.miui.virtualsim",
@@ -15824,11 +15842,11 @@
   {
     "id": "com.xiaomi.midrop.overlay",
     "list": "Oem",
-    "description": "Mi Drop overlay\nREMINDER : A screen overlay in Android, also referred to as “Draw On Top”, allows an app to display content over another app\n",
+    "description": "Mi Drop overlay\nOverlays are usually themes.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.xiaomi.mipicks",
@@ -15981,7 +15999,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.overlay.ct",
@@ -15990,7 +16008,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "android.telephony.overlay.cmcc",
@@ -15999,7 +16017,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.mms.overlay.cmcc",
@@ -16008,7 +16026,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.settings.overlay.cmcc",
@@ -16017,7 +16035,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.overlay.cmcc",
@@ -16026,7 +16044,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.networksettings.overlay.ct",
@@ -16035,7 +16053,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.systemui.overlay.ct",
@@ -16044,7 +16062,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.wmsvc",
@@ -16121,20 +16139,20 @@
   {
     "id": "com.android.thememanager",
     "list": "Oem",
-    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package name\nThis package lets you select and apply themes provided by Xiaomi.\nRemoving this package will disable the ability to change wallpapers on the lock screen.\nFor changing wallpapers on the home screen you will need to use another app.\n",
+    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package names.\nLets you select and apply themes provided by Xiaomi.\nNOTE: Disabling will break the ability to change lock-screen wallpaper.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.thememanager.module",
     "list": "Oem",
-    "description": "It is obviously related to \"com.android.thememanager\" but not needed for changing wallpapers.\n",
+    "description": "Something related to Xiaomi's theme manager?",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.fido.xiaomi.uafclient",
@@ -16427,7 +16445,7 @@
   {
     "id": "com.asus.calculator",
     "list": "Oem",
-    "description": "Asus calculator app\nHas trackers and way to many permissions for a calculator.\nPithus analysis: 817514371bbdb76ec52da4c8456bbc116deec179603099deabbe6fcce6f6ccdb",
+    "description": "Calculator - unit converter (https://play.google.com/store/apps/details?id=com.asus.calculator)\nHas more permissions than a Calculator app reasonably should have.\nConnects to a few Google and currency exchange-rate servers.\nhttps://beta.pithus.org/report/817514371bbdb76ec52da4c8456bbc116deec179603099deabbe6fcce6f6ccdb",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16436,7 +16454,7 @@
   {
     "id": "com.asus.ia.asusapp",
     "list": "Oem",
-    "description": "My Asus (https://play.google.com/store/apps/details?id=com.asus.ia.asusapp)\nAsus service center (support + store)              \n",
+    "description": "My Asus (https://play.google.com/store/apps/details?id=com.asus.ia.asusapp)\nAsus service center (support + store)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16445,7 +16463,7 @@
   {
     "id": "com.asus.soundrecorder",
     "list": "Oem",
-    "description": "Asus Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder).\n  A sound recorder app should not even have the Internet permission.\nPithus analysis: https://beta.pithus.org/report/f4cf38e1c35a04c3579fa198d2abd3ef1ff7be79633d6d3f2bc69c8a69164e1d",
+    "description": "ASUS Sound recorder (https://play.google.com/store/apps/details?id=com.asus.soundrecorder)\nConnects to Google Analytics and some Asus servers, which is a bit sketchy for a sound recording app..\nhttps://beta.pithus.org/report/f4cf38e1c35a04c3579fa198d2abd3ef1ff7be79633d6d3f2bc69c8a69164e1d",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16895,7 +16913,7 @@
   {
     "id": "com.google.android.apps.subscriptions.red",
     "list": "Google",
-    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\n Lets you automatically back up your phone and manage your Google cloud storage.",
+    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLets you manage your Google cloud storage.\nOccasionally runs in the background.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17075,7 +17093,7 @@
   {
     "id": "com.google.android.feedback",
     "list": "Google",
-    "description": "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.\nDoesn't seem to run on its own.\n Has Internet permission and can access to all system logs. All application can use this app to send bug reports.\nPithus analysis: https://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa ",
+    "description": "This is the package that sends crash-report feedback to the Play Store? The crash pop-up still happens with this disabled.\nDoesn't seem to run on its own.\nHas permission to access system logs and package usage stats. Only connects to 4 Google domains. App developers likely have to go through the Play Store to access any sent data.\nhttps://beta.pithus.org/report/7041823ff880c207ed2ddacdc92e5ed803b1eb105e4483696d2152bea44903aa",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17309,7 +17327,7 @@
   {
     "id": "com.google.ar.core",
     "list": "Google",
-    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nNote: Disabling it breaks some games that depend on it, like Pokemon GO.\nhttps://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644",
+    "description": "Google Play Services for AR (Augmented Reality) (https://play.google.com/store/apps/details?id=com.google.ar.core)\nNote: Disabling it can mess with apps that use it, like Pokemon GO.\nhttps://beta.pithus.org/report/99ea324529f950fe351d22724f8b894cce19c16607fcc9c2855bc906b1f8e644",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17506,7 +17524,7 @@
   },
   {
     "id": "com.google.android.overlay.gmsgsaconfig",
-    "list": "Google",
+    "list": "Oem",
     "description": "Overlay theme for gmsgsaconfig? Probably an RRO? https://source.android.com/devices/architecture/rros",
     "dependencies": null,
     "neededBy": null,
@@ -17525,11 +17543,11 @@
   {
     "id": "com.google.android.gms.policy_sidecar_aps",
     "list": "Google",
-    "description": "Talks to Gmail.com and Google.com.\nNeeds a Google Account and Google Play Services to work correctly.\nIt also collects your IMEI. I don't know much more. It is safe to remove.\nGiven its name it could be related to Android auto?\nPithus analysis: https://beta.pithus.org/report/60835b97f38d9e64d4f554a73dab71c892153486a8e0fd81461c3d85359d9fae",
+    "description": "Not sure what purpose it has, but it gets some network and phone data and connects to some Google domains, but never on its own; it has no permissions and never runs on its own, it likely exists as a helper package for other Google services.\nDoesn't seem to exist in newer versions of Android; it's not in Android 11, but it is in 9.\nNeeds a Google Account and Google Play Services to work.\nGiven its name it could be related to Android auto?\nSeems safe to remove, noticed no breakage (didn't test Android Auto tho).\nhttps://beta.pithus.org/report/60835b97f38d9e64d4f554a73dab71c892153486a8e0fd81461c3d85359d9fae",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.gsf",
@@ -17754,7 +17772,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.overlay.modules.permissioncontroller.forframework",
@@ -17763,7 +17781,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.verizon.obdm",
@@ -17907,7 +17925,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.autoregistration.overlay.base.s600id",
@@ -17916,7 +17934,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.autoregistration.overlay.base.s600ww",
@@ -17925,7 +17943,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.autoregistration.overlay.d.base.s600id",
@@ -17934,12 +17952,12 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.batteryprotect",
     "list": "Oem",
-    "description": "Battery protect is advertised to improve battery performance but in practice it drains your battery and kills apps to aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/\n",
+    "description": "Battery protect is advertised to improve battery performance, but in practice it drains your battery and kills apps aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future:\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -17952,7 +17970,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.base.s600id",
@@ -17961,7 +17979,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.batteryprotect.overlay.base.s600ww",
@@ -17970,7 +17988,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.bboxsbox",
@@ -18006,7 +18024,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.CPClient.overlay.base.s600id",
@@ -18015,7 +18033,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.custmanager",
@@ -18033,7 +18051,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.custmanager.data.overlay.base.s600id",
@@ -18042,7 +18060,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.custmanager.data.overlay.base.s600ww",
@@ -18051,7 +18069,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.dataagent",
@@ -18069,7 +18087,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.dataagent.overlay.base.s600id",
@@ -18078,7 +18096,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.DbgCfgTool",
@@ -18096,7 +18114,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.DbgCfgTool.overlay.base.s600id",
@@ -18105,7 +18123,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.DeviceMonitorControl",
@@ -18123,7 +18141,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.DeviceMonitorControl.data.overlay.base.s600id",
@@ -18132,7 +18150,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.factorywizard",
@@ -18150,7 +18168,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.legalterm",
@@ -18177,7 +18195,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.managedprovisioning.overlay.base.s600id",
@@ -18186,7 +18204,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.nps",
@@ -18204,7 +18222,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.nps.overlay.base.s600id",
@@ -18213,7 +18231,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.pandorasbox",
@@ -18227,7 +18245,7 @@
   {
     "id": "com.evenwell.partnerbrowsercustomizations",
     "list": "Oem",
-    "description": "Adds something partner-related to your browser? Probably adds bookmarks.",
+    "description": "Adds something (Nokia-)partner-related to your browser? Probably adds bookmarks.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -18240,7 +18258,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.partnerbrowsercustomizations.overlay.base.s600id",
@@ -18249,7 +18267,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.permissiondetection",
@@ -18285,7 +18303,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.PowerMonitor.overlay.base.s600id",
@@ -18294,7 +18312,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.providers.downloads.overlay.base.s600ww",
@@ -18330,7 +18348,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.pushagent.overlay.base.s600id",
@@ -18357,7 +18375,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.retaildemoapp.overlay.base.s600id",
@@ -18366,12 +18384,12 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.settings.data.overlay.base",
     "list": "Oem",
-    "description": "Overlay related to settings [MORE INFO NEEDED]",
+    "description": "Overlay related to settings. Overlays are usually themes.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -18402,7 +18420,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.setupwizard.btl.s600ww.overlay",
@@ -18411,7 +18429,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.SetupWizard.overlay.d.base.s600ww",
@@ -18420,7 +18438,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.stbmonitor",
@@ -18438,7 +18456,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.stbmonitor.data.overlay.base.s600id",
@@ -18447,7 +18465,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.telecom.data.overlay.base",
@@ -18456,7 +18474,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.telecom.data.overlay.base.s600id",
@@ -18465,7 +18483,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.UsageStatsLogReceiver",
@@ -18483,7 +18501,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.weather.overlay.base.s600ww",
@@ -18492,7 +18510,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.evenwell.weatherservice",
@@ -18515,11 +18533,11 @@
   {
     "id": "com.hmdglobal.datago.overlay.base",
     "list": "Oem",
-    "description": "Theme overlay for this telemetry package?",
+    "description": "Theme overlay for a Nokia telemetry package?",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.hiya.star",
@@ -18861,7 +18879,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.themes.sou.cid19.silver",
@@ -18870,7 +18888,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.themes.sou.cid20.blue",
@@ -18879,7 +18897,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.themes.sou.cid21.pink",
@@ -18888,7 +18906,7 @@
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.xperiaxlivewallpaper",
@@ -19181,16 +19199,16 @@
   {
     "id": "com.lge.theme.black",
     "list": "Oem",
-    "description": "LG Black theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "description": "LG Black theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.lge.theme.white",
     "list": "Oem",
-    "description": "LG White theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "description": "LG White theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
@@ -19199,7 +19217,7 @@
   {
     "id": "com.lge.theme.highcontrast",
     "list": "Oem",
-    "description": "LG High Contrast theme.\nSafe to remove if you really want to.\nI could not find the package for the default (LG) theme.\nMake sure you don't delete the package for the theme you're currently using. I don't know what will happen then.\n",
+    "description": "LG High Contrast theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
