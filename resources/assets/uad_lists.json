@@ -2333,7 +2333,7 @@
   {
     "id": "com.huawei.android.internal.app",
     "list": "Oem",
-    "description": "Component of Huawei sharing. I read someone saying \"Do not remove or you won't be able to send files to apps\".\nCan someone test it ? \n",
+    "description": "Component of Huawei sharing. Do not remove or you won't be able to send files to apps.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
