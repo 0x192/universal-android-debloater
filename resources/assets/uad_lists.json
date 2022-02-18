@@ -1233,6 +1233,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.sprint.zone",
+    "list": "Carrier",
+    "description": "My Sprint Launcher?\nApparently helps the user find new apps, in addition to some carrier-specific functionality.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.aetherpal.attdh.se",
     "list": "Carrier",
     "description": "Device Help for AT&T Samsung device\nDeveloped by Aetherpal, a company which sells smart remote controls tools (https://en.wikipedia.org/wiki/AetherPal)\nI guess this app is used for tech support.\n",
@@ -1465,6 +1474,24 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.sec.omadm",
+    "list": "Carrier",
+    "description": "OMADM\nOpen Mobile Alliance Device Management. A protocol for management of mobile devices.\nhttps://en.wikipedia.org/wiki/OMA_Device_Management",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.sec.omadmspr.syncmlphoneif",
+    "list": "Carrier",
+    "description": "OMADM Phone Interface?\nOMADM = Open Mobile Alliance Device Management. A protocol for management of mobile devices.\nhttps://en.wikipedia.org/wiki/OMA_Device_Management",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.synchronoss.dcs.att.r2g",
@@ -2199,6 +2226,15 @@
     "id": "com.huawei.phoneservice",
     "list": "Oem",
     "description": "HiCare (https://play.google.com/store/apps/details?id=com.huawei.phoneservice)\nProvides you common online services including customer services, issue feedback, user guides, service centers and self-service. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.powergenie",
+    "list": "Oem",
+    "description": "Task killer app in EMUI 9+ (Android 9+).\nTask killer apps tend to do more harm than help as they clear cached RAM for no good reason, removing the battery and time savings involved in caching. In addition to the obvious issues with background functionality like notifications.\nFrom issue#104.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3143,11 +3179,11 @@
   {
     "id": "com.samsung.android.app.appsedge",
     "list": "Oem",
-    "description": "Samsung apps edge (https://www.samsung.com/global/galaxy/what-is/apps-edge/)\nDisplays your five most frequently used apps for you to access at a moment’s notice.\n",
+    "description": "Samsung apps edge (https://www.samsung.com/global/galaxy/what-is/apps-edge/)\nDisplays your five most frequently used apps for you to access at a moment’s notice.\nBreaks Split-Screen/Multi-Window according to issue#124.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.app.assistantmenu",
@@ -4358,7 +4394,7 @@
   {
     "id": "com.samsung.android.forest",
     "list": "Oem",
-    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nis a feature which shows apps dashboard through which one can see how much time any application opened and\nalso swiping to different screens allows you to see breakdowns by day, by hour and by app.",
+    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4367,7 +4403,7 @@
   {
     "id": "com.samsung.android.wellbeing",
     "list": "Oem",
-    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nis a feature which shows apps dashboard through which one can see how much time any application opened and\nalso swiping to different screens allows you to see breakdowns by day, by hour and by app.",
+    "description": "Same as Google's Digital Wellbeing app? That's an app for device and app usage tracking and limiting.\nhttps://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -6318,9 +6354,27 @@
     "removal": "Unsafe"
   },
   {
+    "id": "com.samsung.android.timezone.data.P",
+    "list": "Oem",
+    "description": "Samsung timezone data?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
     "id": "com.samsung.android.timezone.autoupdate_O",
     "list": "Oem",
     "description": "Samsung Time Zone Updater\nUsed to automatically detect appropriate timezone\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.samsung.android.timezone.data.updater",
+    "list": "Oem",
+    "description": "Samsung Time Zone Updater\nUsed to automatically detect appropriate timezone.\nA similar Samsung package apparently bootloops the device if removed, so be careful.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7409,7 +7463,7 @@
   {
     "id": "com.android.providers.telephony",
     "list": "Aosp",
-    "description": "Provider for telephony data.\nHandles phone-related data such as text messages, APN list, e.t.c.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Provider for telephony data.\nHandles phone-related data such as text messages, APN list, etc.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9574,6 +9628,24 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.apps.assistant",
+    "list": "Google",
+    "description": "Google Assistant Go (https://play.google.com/store/apps/details?id=com.google.android.apps.assistant)\nGo apps are lite-versions of their normal counterparts, made for low-RAM devices.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.apps.searchlite",
+    "list": "Google",
+    "description": "Google Go (https://play.google.com/store/apps/details?id=com.google.android.apps.searchlite)\nGo apps are lite-versions of their normal counterparts, made for low-RAM devices.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.apps.carrier.carrierwifi",
@@ -12796,6 +12868,15 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.coremobility.app.vnotes",
+    "list": "Oem",
+    "description": "Voicemail App?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
   },
   {
     "id": "com.heytap.cloud",
@@ -16076,11 +16157,11 @@
   {
     "id": "com.xiaomi.xmsf",
     "list": "Oem",
-    "description": "Xiaomi Service Framework\nSet of API's that Xiaomi apps can used (to put it simply a lot of Xiaomi apps used the same functions which are centralized here)\nI first thought removing this will absolutely break everything but it seems not.\nI don't know the situation now but in 2016 this app constantly tried to do tcp connections in background\nRemoving this big boy will definitively break Mi Cloud and Mi account (and all features needing these 2 things) but you should\nbe okay if you don't use most of Xiaomi apps (what's probably the case if you use this script)\n\nCan someone try to remove this and give feedback? \nCheck if alarms (from Xiaomi Clock & 3-party apps) still work if the phone is in sleep-mode.\n",
+    "description": "Xiaomi Service Framework\nContains a set of API's for Xiaomi apps. Expect widespread breakage of Xiaomi apps/functionality if disabled.\nDisabling will mess with Alarm clock functionality(according to issue#136) and break Mi Cloud and Mi account (and all features that depend on them).\nI don't know about now, but in 2016 this app constantly tried to establish tcp connections in the background.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.wingtech.standard",
@@ -16994,7 +17075,7 @@
   {
     "id": "com.google.android.apps.wellbeing",
     "list": "Google",
-    "description": "Digital Wellbeing (habits tracking tool) (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\n",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18655,6 +18736,15 @@
     "neededBy": "",
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.contacts",
+    "list": "Oem",
+    "description": "Samsung contacts app?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.knox.containeragent",
