@@ -4394,7 +4394,7 @@
   {
     "id": "com.samsung.android.forest",
     "list": "Oem",
-    "description": "",
+    "description": "Digital Wellbeing (old version of com.samsung.android.wellbeing)\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4403,7 +4403,7 @@
   {
     "id": "com.samsung.android.wellbeing",
     "list": "Oem",
-    "description": "Same as Google's Digital Wellbeing app? That's an app for device and app usage tracking and limiting.\nhttps://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing",
+    "description": "Digital Wellbeing\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
