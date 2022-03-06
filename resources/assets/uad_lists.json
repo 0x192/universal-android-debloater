@@ -2142,6 +2142,51 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.meetime",
+    "list": "Oem",
+    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.ohos.inputmethod",
+    "list": "Oem",
+    "description": "Huawei Keyboard\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.mycenter",
+    "list": "Oem",
+    "description": "Huawei Member Center\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.maps.app",
+    "list": "Oem",
+    "description": "Petal Maps\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.webview",
+    "list": "Oem",
+    "description": "Huawei Webview\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
     "id": "com.huawei.iaware",
     "list": "Oem",
     "description": "App Prioritizer. Prioritizes apps to avoid slowdown\nUp to you but there is apparently no noticeable difference when deleted.\n",
