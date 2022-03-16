@@ -19537,6 +19537,51 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "com.oppo.partnerbrowsercustomizations",
+    "list": "Oem",
+    "description": "Browser plugin that display un-dismissable and un-mutable ads in notifications.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming",
+    "list": "Oem",
+    "description": "The devices embedded with Redtea Roaming service will automatically create a virtual local SIM card based on the location of the user. Safe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming.deamon",
+    "list": "Oem",
+    "description": "Redtea Roaming service deamon. Safe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.deamon",
+    "list": "Oem",
+    "description": "User Experience Program that collect user data running on background, some user report this package as malware https://www.reddit.com/r/Oppo/comments/eoa6ql/comnearmeatlas_oppo_signed_malware/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.statistics.rom",
+    "list": "Oem",
+    "description": "User Experience Program that collect user data installed by default. https://www.apkmirror.com/apk/oppo/user-experience-program/user-experience-program-5-1-18306-release/user-experience-program-5-1-18306-android-apk-download/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
 
