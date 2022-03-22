@@ -6,7 +6,7 @@ pub use crate::core::sync::{get_device_list, Phone};
 use crate::core::uad_lists::load_debloat_lists;
 pub use crate::core::uad_lists::Package;
 use crate::core::update::{get_latest_release, SelfUpdateState, SelfUpdateStatus};
-use crate::core::utils::icon;
+use crate::core::utils::{icon, perform_commands};
 use iced::{
     button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
     Container, Element, Font, Length, PickList, Row, Settings, Space, Text,
@@ -54,6 +54,7 @@ pub struct UadGui {
     settings_btn: button::State,
     apps_btn: button::State,
     apps_refresh_btn: button::State,
+    reboot_btn: button::State,
     device_picklist: pick_list::State<Phone>,
     device_list: Vec<Phone>,
     selected_device: Option<Phone>,
@@ -70,10 +71,12 @@ pub enum Message {
     AppsAction(AppsMessage),
     SettingsAction(SettingsMessage),
     RefreshButtonPressed,
+    RebootButtonPressed,
     UadListsDownloaded(HashMap<String, Package>),
     InitList,
     InitDevice(Vec<Phone>),
     _NewReleaseDownloaded(Result<(PathBuf, PathBuf), ()>),
+    Nothing,
 }
 
 impl Application for UadGui {
@@ -153,6 +156,17 @@ impl Application for UadGui {
                 self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
                 self.ready = true;
                 Command::perform(get_device_list(), Message::InitDevice)
+            }
+            Message::RebootButtonPressed => {
+                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                self.ready = false;
+                Command::batch([
+                    Command::perform(
+                        perform_commands("reboot".to_string(), 0, "ADB".to_string()),
+                        |_| Message::Nothing,
+                    ),
+                    Command::perform(get_device_list(), Message::InitDevice),
+                ])
             }
             Message::AppsPress => {
                 self.view = View::List;
@@ -273,12 +287,18 @@ impl Application for UadGui {
                 }
                 Command::none()
             }
+            Message::Nothing => Command::none(),
         }
     }
 
     fn view(&mut self) -> Element<Message> {
         let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_icon())
             .on_press(Message::RefreshButtonPressed)
+            .padding(5)
+            .style(style::RefreshButton(self.settings_view.theme.palette));
+
+        let reboot_btn = Button::new(&mut self.reboot_btn, Text::new("Reboot"))
+            .on_press(Message::RebootButtonPressed)
             .padding(5)
             .style(style::RefreshButton(self.settings_view.theme.palette));
 
@@ -340,6 +360,7 @@ impl Application for UadGui {
                 .align_items(Alignment::Center)
                 .spacing(10)
                 .push(apps_refresh_btn)
+                .push(reboot_btn)
                 .push(device_picklist)
                 .push(Space::new(Length::Fill, Length::Shrink))
                 .push(uad_version_text)
@@ -350,6 +371,7 @@ impl Application for UadGui {
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
+                .push(reboot_btn)
                 .push(apps_refresh_btn)
                 .push(Text::new("no devices/emulators found"))
                 .push(Space::new(Length::Fill, Length::Shrink))

@@ -1,9 +1,9 @@
-use crate::core::sync::{action_handler, adb_shell_command, Phone, User};
+use crate::core::sync::{action_handler, Phone, User};
 use crate::core::uad_lists::{
     load_debloat_lists, Opposite, Package, PackageState, Removal, UadList,
 };
 use crate::core::utils::{
-    export_selection, fetch_packages, import_selection, update_selection_count,
+    export_selection, fetch_packages, import_selection, perform_commands, update_selection_count,
 };
 use crate::gui::style;
 use std::collections::HashMap;
@@ -227,12 +227,20 @@ impl List {
                             // Only the first command can change the package state
                             if i != 0 {
                                 commands.push(Command::perform(
-                                    Self::perform_commands(action, i_package, package.removal),
+                                    perform_commands(
+                                        action,
+                                        i_package,
+                                        package.removal.to_string(),
+                                    ),
                                     |_| Message::Nothing,
                                 ));
                             } else {
                                 commands.push(Command::perform(
-                                    Self::perform_commands(action, i_package, package.removal),
+                                    perform_commands(
+                                        action,
+                                        i_package,
+                                        package.removal.to_string(),
+                                    ),
                                     Message::ChangePackageState,
                                 ));
                             }
@@ -272,19 +280,19 @@ impl List {
                         // Only the first command can change the package state
                         if j != 0 {
                             commands.push(Command::perform(
-                                Self::perform_commands(
+                                perform_commands(
                                     action,
                                     i,
-                                    self.phone_packages[*i_user][i].removal,
+                                    self.phone_packages[*i_user][i].removal.to_string(),
                                 ),
                                 |_| Message::Nothing,
                             ));
                         } else {
                             commands.push(Command::perform(
-                                Self::perform_commands(
+                                perform_commands(
                                     action,
                                     i,
-                                    self.phone_packages[*i_user][i].removal,
+                                    self.phone_packages[*i_user][i].removal.to_string(),
                                 ),
                                 Message::ChangePackageState,
                             ));
@@ -556,35 +564,6 @@ impl List {
             })
             .map(|(i, _)| i)
             .collect();
-    }
-
-    async fn perform_commands(
-        action: String,
-        i: usize,
-        recommendation: Removal,
-    ) -> Result<usize, ()> {
-        match adb_shell_command(true, &action) {
-            Ok(o) => {
-                // On old devices, adb commands can return the '0' exit code even if there
-                // is an error. On Android 4.4, ADB doesn't check if the package exists.
-                // It does not return any error if you try to `pm block` a non-existent package.
-                // Some commands are even killed by ADB before finishing and UAD can't catch
-                // the output.
-                if ["Error", "Failure"].iter().any(|&e| o.contains(e)) {
-                    error!("[{}] {} -> {}", recommendation, action, o);
-                    Err(())
-                } else {
-                    info!("[{}] {} -> {}", recommendation, action, o);
-                    Ok(i)
-                }
-            }
-            Err(err) => {
-                if !err.contains("[not installed for") {
-                    error!("[{}] {} -> {}", recommendation, action, err);
-                }
-                Err(())
-            }
-        }
     }
 
     async fn do_load_packages() -> Message {
