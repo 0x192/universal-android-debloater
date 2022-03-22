@@ -3,6 +3,7 @@ use crate::core::utils::request_builder;
 use crate::gui::views::settings::Phone as SettingsPhone;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
+use retry::{delay::Fixed, retry, OperationResult};
 use static_init::dynamic;
 use std::collections::HashSet;
 use std::env;
@@ -217,25 +218,33 @@ pub fn get_user_list() -> Vec<User> {
 
 // getprop ro.serialno
 pub async fn get_device_list() -> Vec<Phone> {
-    match adb_shell_command(false, "devices") {
-        Ok(devices) => {
-            let mut device_list: Vec<Phone> = vec![];
-            for device in RE.captures_iter(&devices) {
-                env::set_var("ANDROID_SERIAL", &device[1]);
-
-                device_list.push(Phone {
-                    model: get_phone_brand(),
-                    android_sdk: get_android_sdk(),
-                    user_list: get_user_list(),
-                    adb_id: device[1].to_string(),
-                });
+    match retry(
+        Fixed::from_millis(500).take(120),
+        || match adb_shell_command(false, "devices") {
+            Ok(devices) => {
+                let mut device_list: Vec<Phone> = vec![];
+                if !RE.is_match(&devices) {
+                    return OperationResult::Retry(vec![]);
+                }
+                for device in RE.captures_iter(&devices) {
+                    env::set_var("ANDROID_SERIAL", &device[1]);
+                    device_list.push(Phone {
+                        model: get_phone_brand(),
+                        android_sdk: get_android_sdk(),
+                        user_list: get_user_list(),
+                        adb_id: device[1].to_string(),
+                    });
+                }
+                OperationResult::Ok(device_list)
             }
-            device_list
-        }
-
-        Err(err) => {
-            warn!("get_device_list() -> {}", err);
-            vec![]
-        }
+            Err(err) => {
+                error!("get_device_list() -> {}", err);
+                let test: Vec<Phone> = vec![];
+                OperationResult::Retry(test)
+            }
+        },
+    ) {
+        Ok(devices) => devices,
+        Err(_) => vec![],
     }
 }

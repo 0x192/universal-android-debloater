@@ -32,6 +32,7 @@ pub enum Action {
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum LoadingState {
+    FindingPhones,
     DownloadingList,
     LoadingPackages,
     _UpdatingUad,
@@ -355,6 +356,10 @@ impl List {
             State::Loading(LoadingState::DownloadingList) => {
                 let text = "Downloading latest UAD lists from Github. Please wait...";
                 waiting_view(settings, text, Some(&mut self.no_internet_btn))
+            }
+            State::Loading(LoadingState::FindingPhones) => {
+                let text = "Finding connected devices...";
+                waiting_view(settings, text, None)
             }
             State::Loading(LoadingState::LoadingPackages) => {
                 let text = "Pulling packages from the phone. Please wait...";

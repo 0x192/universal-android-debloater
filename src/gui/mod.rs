@@ -114,11 +114,12 @@ impl Application for UadGui {
                     )
                 } else {
                     self.ready = true;
-                    self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                    self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
                     Command::none()
                 }
             }
             Message::InitDevice(device_list) => {
+                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
                 self.device_list = device_list;
                 self.settings_view.phone = SettingsPhone::default();
 
@@ -153,12 +154,14 @@ impl Application for UadGui {
                 }
             }
             Message::RefreshButtonPressed => {
-                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
+                self.selected_device = None;
                 self.ready = true;
                 Command::perform(get_device_list(), Message::InitDevice)
             }
             Message::RebootButtonPressed => {
-                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
+                self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
+                self.selected_device = None;
                 self.ready = false;
                 Command::batch([
                     Command::perform(
@@ -354,6 +357,13 @@ impl Application for UadGui {
         )
         .style(style::PickList(self.settings_view.theme.palette));
 
+        let device_list_text = match self.apps_view.state {
+            ListState::Loading(ListLoadingState::FindingPhones) => {
+                Text::new("finding connected phone...")
+            }
+            _ => Text::new("no devices/emulators found"),
+        };
+
         let row = match self.selected_device {
             Some(_) => Row::new()
                 .width(Length::Fill)
@@ -373,7 +383,7 @@ impl Application for UadGui {
                 .spacing(10)
                 .push(reboot_btn)
                 .push(apps_refresh_btn)
-                .push(Text::new("no devices/emulators found"))
+                .push(device_list_text)
                 .push(Space::new(Length::Fill, Length::Shrink))
                 .push(uad_version_text)
                 .push(apps_btn)
