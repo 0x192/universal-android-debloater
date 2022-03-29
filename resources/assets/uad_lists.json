@@ -6545,11 +6545,11 @@
   {
     "id": "com.android.htmlviewer",
     "list": "Aosp",
-    "description": "Stock HTML viewer. Lets you open HTML files stored on your device.\nREMINDER: A web-browser can also read HTML files.",
+    "description": "Allows apps to load URLs into the WebView, which allows web content to be displayed directly in the app..\nWARNING: Removing this causes a bootloop on MIUI 12.5.4+.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.magicsmoke",
