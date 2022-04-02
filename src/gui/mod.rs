@@ -7,10 +7,13 @@ use crate::core::uad_lists::load_debloat_lists;
 pub use crate::core::uad_lists::Package;
 use crate::core::update::{get_latest_release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::{icon, perform_commands};
+use iced::pure::widget::Text;
+use iced::pure::{button, column, container, pick_list, row, text, Pure, State};
 use iced::{
-    button, pick_list, window::Settings as Window, Alignment, Application, Button, Column, Command,
-    Container, Element, Font, Length, PickList, Row, Settings, Space, Text,
+    window::Settings as Window, Alignment, Application, Command, Element, Font, Length, Settings,
+    Space,
 };
+
 use std::collections::HashMap;
 use std::env;
 use std::path::PathBuf;
@@ -43,19 +46,14 @@ impl Default for View {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Default)]
 pub struct UadGui {
     ready: bool,
     view: View,
+    state: State,
     apps_view: AppsView,
     about_view: AboutView,
     settings_view: SettingsView,
-    about_btn: button::State,
-    settings_btn: button::State,
-    apps_btn: button::State,
-    apps_refresh_btn: button::State,
-    reboot_btn: button::State,
-    device_picklist: pick_list::State<Phone>,
     device_list: Vec<Phone>,
     selected_device: Option<Phone>,
 }
@@ -294,13 +292,13 @@ impl Application for UadGui {
         }
     }
 
-    fn view(&mut self) -> Element<Message> {
-        let apps_refresh_btn = Button::new(&mut self.apps_refresh_btn, refresh_icon())
+    fn view(&mut self) -> Element<Self::Message> {
+        let apps_refresh_btn = button(refresh_icon())
             .on_press(Message::RefreshButtonPressed)
             .padding(5)
             .style(style::RefreshButton(self.settings_view.theme.palette));
 
-        let reboot_btn = Button::new(&mut self.reboot_btn, Text::new("Reboot"))
+        let reboot_btn = button("Reboot")
             .on_press(Message::RebootButtonPressed)
             .padding(5)
             .style(style::RefreshButton(self.settings_view.theme.palette));
@@ -328,29 +326,28 @@ impl Application for UadGui {
             .latest_release
             .is_some()
         {
-            Button::new(&mut self.apps_btn, Text::new("Update"))
+            button("Update")
                 .on_press(Message::AboutAction(AboutMessage::DoSelfUpdate))
                 .padding(5)
                 .style(style::SelfUpdateButton(self.settings_view.theme.palette))
         } else {
-            Button::new(&mut self.apps_btn, Text::new("Apps"))
+            button("Apps")
                 .on_press(Message::AppsPress)
                 .padding(5)
                 .style(style::PrimaryButton(self.settings_view.theme.palette))
         };
 
-        let about_btn = Button::new(&mut self.about_btn, Text::new("About"))
+        let about_btn = button("About")
             .on_press(Message::AboutPressed)
             .padding(5)
             .style(style::PrimaryButton(self.settings_view.theme.palette));
 
-        let settings_btn = Button::new(&mut self.settings_btn, Text::new("Settings"))
+        let settings_btn = button("Settings")
             .on_press(Message::SettingsPressed)
             .padding(5)
             .style(style::PrimaryButton(self.settings_view.theme.palette));
 
-        let device_picklist = PickList::new(
-            &mut self.device_picklist,
+        let device_picklist = pick_list(
             &self.device_list,
             self.selected_device.clone(),
             Message::DeviceSelected,
@@ -359,13 +356,13 @@ impl Application for UadGui {
 
         let device_list_text = match self.apps_view.state {
             ListState::Loading(ListLoadingState::FindingPhones) => {
-                Text::new("finding connected phone...")
+                text("finding connected phone...")
             }
-            _ => Text::new("no devices/emulators found"),
+            _ => text("no devices/emulators found"),
         };
 
         let row = match self.selected_device {
-            Some(_) => Row::new()
+            Some(_) => row()
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
@@ -377,7 +374,7 @@ impl Application for UadGui {
                 .push(apps_btn)
                 .push(about_btn)
                 .push(settings_btn),
-            None => Row::new()
+            None => row()
                 .width(Length::Fill)
                 .align_items(Alignment::Center)
                 .spacing(10)
@@ -391,7 +388,7 @@ impl Application for UadGui {
                 .push(settings_btn),
         };
 
-        let navigation_container = Container::new(row)
+        let navigation_container = container(row)
             .width(Length::Fill)
             .padding(10)
             .style(style::NavigationContainer(self.settings_view.theme.palette));
@@ -414,11 +411,14 @@ impl Application for UadGui {
                 .map(Message::SettingsAction),
         };
 
-        Column::new()
-            .width(Length::Fill)
-            .push(navigation_container)
-            .push(main_container)
-            .into()
+        Pure::new(
+            &mut self.state,
+            column()
+                .width(Length::Fill)
+                .push(navigation_container)
+                .push(main_container),
+        )
+        .into()
     }
 }
 
