@@ -1,6 +1,7 @@
 use crate::core::config::Config;
 use crate::core::sync::{get_android_sdk, Phone as CorePhone};
 use crate::core::theme::Theme;
+use crate::core::uad_lists::UadListState;
 use crate::core::update::{Release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
@@ -16,6 +17,7 @@ pub struct Settings {
     pub phone: Phone,
     pub theme: Theme,
     pub self_update_state: SelfUpdateState,
+    pub list_update_state: UadListState,
 }
 
 #[derive(Debug, Clone)]
@@ -41,6 +43,7 @@ impl Default for Settings {
             phone: Phone::default(),
             theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
             self_update_state: SelfUpdateState::default(),
+            list_update_state: UadListState::default(),
         }
     }
 }

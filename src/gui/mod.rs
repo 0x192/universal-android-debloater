@@ -3,8 +3,8 @@ pub mod views;
 pub mod widgets;
 
 pub use crate::core::sync::{get_device_list, Phone};
-use crate::core::uad_lists::load_debloat_lists;
 pub use crate::core::uad_lists::Package;
+use crate::core::uad_lists::{load_debloat_lists, UadListState};
 use crate::core::update::{get_latest_release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::{icon, perform_commands};
 use iced::pure::widget::Text;
@@ -70,7 +70,7 @@ pub enum Message {
     SettingsAction(SettingsMessage),
     RefreshButtonPressed,
     RebootButtonPressed,
-    UadListsDownloaded(HashMap<String, Package>),
+    UadListsDownloaded((Result<HashMap<String, Package>, ()>, bool)),
     InitList,
     InitDevice(Vec<Phone>),
     _NewReleaseDownloaded(Result<(PathBuf, PathBuf), ()>),
@@ -99,25 +99,41 @@ impl Application for UadGui {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::InitList => {
-                debug!("Trying to download remote UAD list");
+                warn!("Trying to download remote UAD list");
                 self.apps_view.state = ListState::Loading(ListLoadingState::DownloadingList);
                 Command::perform(load_debloat_lists(true), Message::UadListsDownloaded)
             }
-            Message::UadListsDownloaded(uad_lists) => {
-                self.apps_view.uad_lists = uad_lists;
-                if self.ready {
-                    Command::perform(
-                        Self::load_phone_packages(self.selected_device.clone().unwrap_or_default()),
-                        Message::AppsAction,
-                    )
-                } else {
-                    self.ready = true;
-                    self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
+            Message::UadListsDownloaded((uad_lists, _)) => match uad_lists {
+                Ok(list) => {
+                    if !list.is_empty() {
+                        self.apps_view.uad_lists = list;
+                    }
+                    self.settings_view.list_update_state = UadListState::Done;
+
+                    if self.ready {
+                        Command::perform(
+                            Self::load_phone_packages(
+                                self.selected_device.clone().unwrap_or_default(),
+                            ),
+                            Message::AppsAction,
+                        )
+                    } else {
+                        self.ready = true;
+                        self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
+                        Command::none()
+                    }
+                }
+                Err(_) => {
+                    self.settings_view.list_update_state = UadListState::Failed;
+                    if let ListState::Ready = self.apps_view.state {
+                    } else {
+                        self.apps_view.state =
+                            ListState::Loading(ListLoadingState::DownloadingList);
+                    }
                     Command::none()
                 }
-            }
+            },
             Message::InitDevice(device_list) => {
-                self.apps_view.state = ListState::Loading(ListLoadingState::LoadingPackages);
                 self.device_list = device_list;
                 self.settings_view.phone = SettingsPhone::default();
 
@@ -141,7 +157,7 @@ impl Application for UadGui {
                 } else {
                     self.selected_device = None;
                 }
-                if self.ready {
+                if self.settings_view.list_update_state != UadListState::Downloading || self.ready {
                     Command::perform(
                         Self::load_phone_packages(self.selected_device.clone().unwrap_or_default()),
                         Message::AppsAction,
@@ -160,14 +176,12 @@ impl Application for UadGui {
             Message::RebootButtonPressed => {
                 self.apps_view.state = ListState::Loading(ListLoadingState::FindingPhones);
                 self.selected_device = None;
+                self.device_list = vec![];
                 self.ready = false;
-                Command::batch([
-                    Command::perform(
-                        perform_commands("reboot".to_string(), 0, "ADB".to_string()),
-                        |_| Message::Nothing,
-                    ),
-                    Command::perform(get_device_list(), Message::InitDevice),
-                ])
+                Command::perform(
+                    perform_commands("reboot".to_string(), 0, "ADB".to_string()),
+                    |_| Message::Nothing,
+                )
             }
             Message::AppsPress => {
                 self.view = View::List;
@@ -185,7 +199,7 @@ impl Application for UadGui {
             Message::AppsAction(msg) => self
                 .apps_view
                 .update(
-                    &self.settings_view.phone,
+                    &mut self.settings_view,
                     &mut self.selected_device.clone().unwrap_or_default(),
                     msg,
                 )
@@ -200,6 +214,7 @@ impl Application for UadGui {
 
                 match msg {
                     AboutMessage::UpdateUadLists => {
+                        self.settings_view.list_update_state = UadListState::Downloading;
                         Command::perform(Self::download_uad_list(), |_| Message::InitList)
                     }
                     AboutMessage::DoSelfUpdate => {
@@ -288,7 +303,7 @@ impl Application for UadGui {
                 }
                 Command::none()
             }
-            Message::Nothing => Command::none(),
+            Message::Nothing => Command::perform(get_device_list(), Message::InitDevice),
         }
     }
 

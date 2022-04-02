@@ -1,4 +1,4 @@
-use crate::core::utils::{format_diff_time_from_now, last_modified_date, open_url};
+use crate::core::utils::{last_modified_date, open_url};
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
 use crate::CACHE_DIR;
@@ -47,7 +47,7 @@ impl About {
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
         let uad_list_text =
             text(format!("Documentation: v{}", date.format("%Y%m%d"))).width(Length::Units(250));
-        let last_update_text = text(format!("(last was {})", format_diff_time_from_now(date)))
+        let last_update_text = text(settings.list_update_state.to_string())
             .color(settings.theme.palette.normal.surface);
         let uad_lists_btn = button("Update")
             .on_press(Message::UpdateUadLists)

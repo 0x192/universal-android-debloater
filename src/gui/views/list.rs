@@ -1,6 +1,6 @@
 use crate::core::sync::{action_handler, Phone, User};
 use crate::core::uad_lists::{
-    load_debloat_lists, Opposite, Package, PackageState, Removal, UadList,
+    load_debloat_lists, Opposite, Package, PackageState, Removal, UadList, UadListState,
 };
 use crate::core::utils::{
     export_selection, fetch_packages, import_selection, perform_commands, update_selection_count,
@@ -9,7 +9,7 @@ use crate::gui::style;
 use std::collections::HashMap;
 use std::env;
 
-use crate::gui::views::settings::{Phone as SettingsPhone, Settings};
+use crate::gui::views::settings::Settings;
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::pure::{
     button, column, container, pick_list, row, scrollable, text, text_input, Element,
@@ -70,7 +70,7 @@ pub enum Message {
     SearchInputChanged(String),
     ToggleAllSelected(bool),
     InitUadList(bool),
-    ListsIsInitialized(HashMap<String, Package>),
+    ListsIsInitialized((Result<HashMap<String, Package>, ()>, bool)),
     LoadPackages,
     ListSelected(UadList),
     UserSelected(User),
@@ -88,7 +88,7 @@ pub enum Message {
 impl List {
     pub fn update(
         &mut self,
-        settings: &SettingsPhone,
+        settings: &mut Settings,
         phone: &mut Phone,
         message: Message,
     ) -> Command<Message> {
@@ -96,18 +96,30 @@ impl List {
         match message {
             Message::Nothing => Command::none(),
             Message::InitUadList(remote) => {
-                self.state = State::Loading(LoadingState::LoadingPackages);
+                self.state = State::Loading(LoadingState::FindingPhones);
                 if remote {
                     Command::perform(load_debloat_lists(true), Message::ListsIsInitialized)
                 } else {
                     Command::perform(load_debloat_lists(false), Message::ListsIsInitialized)
                 }
             }
-            Message::ListsIsInitialized(uad_lists) => {
-                self.uad_lists = uad_lists;
-                env::set_var("ANDROID_SERIAL", phone.adb_id.clone());
-                Command::perform(Self::do_load_packages(), |_| Message::LoadPackages)
-            }
+            Message::ListsIsInitialized((uad_lists, remote)) => match uad_lists {
+                Ok(list) => {
+                    if !remote {
+                        settings.list_update_state = UadListState::Failed;
+                    } else {
+                        settings.list_update_state = UadListState::Done;
+                    }
+                    self.uad_lists = list;
+                    if !phone.adb_id.is_empty() {
+                        env::set_var("ANDROID_SERIAL", phone.adb_id.clone());
+                        Command::perform(Self::do_load_packages(), |_| Message::LoadPackages)
+                    } else {
+                        Command::none()
+                    }
+                }
+                Err(_) => Command::none(),
+            },
             Message::LoadPackages => {
                 self.state = State::Loading(LoadingState::LoadingPackages);
                 self.selected_package_state = Some(PackageState::Enabled);
@@ -186,7 +198,7 @@ impl List {
 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
-                        if package.removal == Removal::Unsafe && !settings.expert_mode {
+                        if package.removal == Removal::Unsafe && !settings.phone.expert_mode {
                             package.selected = false;
                         } else {
                             package.selected = toggle;
@@ -208,8 +220,12 @@ impl List {
                     }
                     RowMessage::ActionPressed => {
                         let mut commands = vec![];
-                        let actions =
-                            action_handler(&self.selected_user.unwrap(), package, phone, settings);
+                        let actions = action_handler(
+                            &self.selected_user.unwrap(),
+                            package,
+                            phone,
+                            &settings.phone,
+                        );
 
                         for (i, action) in actions.into_iter().enumerate() {
                             // Only the first command can change the package state
@@ -262,7 +278,7 @@ impl List {
                         &self.selected_user.unwrap(),
                         &self.phone_packages[*i_user][i],
                         phone,
-                        settings,
+                        &settings.phone,
                     );
                     for (j, action) in actions.into_iter().enumerate() {
                         // Only the first command can change the package state
@@ -317,14 +333,14 @@ impl List {
                     let package = &mut self.phone_packages[*i_user][i];
                     update_selection_count(&mut self.selection, package.state, false);
 
-                    if !settings.multi_user_mode {
-                        package.state = package.state.opposite(settings.disable_mode);
+                    if !settings.phone.multi_user_mode {
+                        package.state = package.state.opposite(settings.phone.disable_mode);
                         package.selected = false;
                     } else {
                         for u in &phone.user_list {
                             self.phone_packages[u.index][i].state = self.phone_packages[u.index][i]
                                 .state
-                                .opposite(settings.disable_mode);
+                                .opposite(settings.phone.disable_mode);
                             self.phone_packages[u.index][i].selected = false;
                         }
                     }
