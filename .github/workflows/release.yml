@@ -62,7 +62,7 @@ jobs:
           cd target/release/
           tar --remove-files -czf uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}{.tar.gz,}
       - name: Tarball MacOS binaries # --remove-files is not available on bsd tar
-        if: matrix.target.os == 'macos-latest'
+        if: matrix.os == 'macos-latest'
         run: |
           brew install gnu-tar
           cd target/release/
