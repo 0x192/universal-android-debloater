@@ -5069,7 +5069,7 @@
   {
     "id": "com.sec.android.app.wlantest",
     "list": "Oem",
-    "description": "wlan test\nHidden test app responding to the #232339*and *#232338*secret codes\nFYI : wlan = wireless LAN (https://en.wikipedia.org/wiki/Wireless_LAN)\n",
+    "description": "wlan test\nHidden test app responding to the #232339*and *#232338*secret codes\nFYI : wlan = wireless LAN (https://en.wikipedia.org/wiki/Wireless_LAN)\nNOTE: Disabling this test will rise the exclamation mark on the WI-Fi icon and will show the message \"Unable to connect to the host\" in Settings -> Connections -> More connections settings - Private DNS - provider hostname.\nThe connection seems to work despite those esthetic errors.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
