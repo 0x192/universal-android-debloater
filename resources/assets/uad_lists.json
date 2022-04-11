@@ -4466,7 +4466,7 @@
   {
     "id": "com.samsung.enhanceservice",
     "list": "Oem",
-    "description": "Enhanced service is the process for Samsung cloud messaging (equivalent to iMessage on iOS). \nMessages on Samsung phones can be transmitted through either the network carrier or the non-archived Samsung service \n(which is transmitted over wireless data).\nThis features is available in stock samsung SMS app settings.\n",
+    "description": "Enhanced service is the process for Samsung cloud messaging (equivalent to iMessage on iOS).\nMessages on Samsung phones can be transmitted through either the network carrier or the non-archived Samsung service \n(which is transmitted over wireless data).\nThis features is available in stock samsung SMS app settings.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4475,7 +4475,7 @@
   {
     "id": "com.samsung.faceservice",
     "list": "Oem",
-    "description": "Face service detection \nSame shared user id as com.samsung.ipservice, com.samsung.mlp, com.samsung.cmh\nNeeded for face recognition in the Gallery and maybe\nNOTE : Removing this package *should* not break face unlock (confirmation needed)\n",
+    "description": "Face service detection\nAnalyzes all the photos in the Samsung Gallery to detect human faces using Samsung’s built-in face detection technology. Once FaceService identifies that the photo contains a face, it shows a button that allows users to add name tags to the photo and create a People Album of similar photos by selecting the name tag.\n\nSame shared user id as com.samsung.ipservice, com.samsung.mlp, com.samsung.cmh\nNeeded for face recognition in the Gallery\nNOTE : Removing this package does not break face unlock\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
