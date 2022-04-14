@@ -17786,11 +17786,11 @@
   {
     "id": "com.google.android.ext.services",
     "list": "Google",
-    "description": "Android Services Library\nSome of these services are only present in newer versions of Android.\nContains: CacheQuotaService, LRResolverRankerService, AutofillFieldClassificationService, ExplicitHealthCheckService, DefaultTextClassifierService, ModelDownloaderService, InlineSuggestionRenderService, DisplayHashingService, SystemJobService, SystemForegroundService, MutliInstanceInvalidationService and runs \"Notification Assistant\" service in the background by default, which moves notifications up or down depending on importance. That service can be disabled by selecting \"None\" under \"Adaptive Notifications\", without impacting other potentially important functionality contained in the package. NOTE: This setting is stored in RAM and resets on reboot.\nNoticed no negative effects from disabling the package in Android 9 nor 11 on Oneplus phones, but would still advise caution as some of the service names sound important.\nhttps://source.android.com/devices/architecture/modular-system/extservices\nhttps://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/",
+    "description": "The ExtServices module updates framework components for core OS functionality such as notification ranking, autofill text-matching strategies, storage cache, package watchdog, and other services that run continually. This module is updatable, meaning it can receive updates to functionality outside of the normal Android release cycle.\nCan run before the user unlocks the device (direct-boot aware) and Android 9+ version have internet and location permissions.\n\nWARNING: Causes bootloop on most Android 11+ phones. This module is related to the Android mainline project (which is a useful project).There is no reason to mess with this.\n\nSources:\nhttps://source.android.com/devices/architecture/modular-system/extservices\nhttps://arstechnica.com/gadgets/2016/11/android-extensions-could-be-googles-plan-to-make-android-updates-suck-less/\nPithus analysis (Android 11): https://beta.pithus.org/report/e5e4a181082b88baf55e19aab0f9cb62e131d612eeaa73cddb510a52e0ff5c1a",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.google.android.overlay.modules.ext.services",
