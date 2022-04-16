@@ -19537,6 +19537,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },{
+    "id": "com.google.android.apps.nbu.paisa.user",
+    "list": "Google",
+    "description": "Make UPI transfers or do mobile recharges, bills and payments to businesses with your bank account with Google Pay, a simple and secure payments app by Google.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
 
