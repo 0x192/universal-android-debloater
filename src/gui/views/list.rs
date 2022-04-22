@@ -63,6 +63,7 @@ pub struct List {
     selected_user: Option<User>,
     pub input_value: String,
     description: String,
+    current_package_index: usize,
 }
 
 #[derive(Debug, Clone)]
@@ -253,6 +254,12 @@ impl List {
                     }
                     RowMessage::PackagePressed => {
                         self.description = package.clone().description;
+                        package.current = true;
+                        if self.current_package_index != i_package {
+                            self.phone_packages[*i_user][self.current_package_index].current =
+                                false;
+                        }
+                        self.current_package_index = i_package;
                         Command::none()
                     }
                 }

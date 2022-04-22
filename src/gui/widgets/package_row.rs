@@ -15,6 +15,7 @@ pub struct PackageRow {
     pub uad_list: UadList,
     pub removal: Removal,
     pub selected: bool,
+    pub current: bool,
 }
 
 #[derive(Clone, Debug)]
@@ -32,6 +33,7 @@ impl PackageRow {
         uad_list: UadList,
         removal: Removal,
         selected: bool,
+        current: bool,
     ) -> Self {
         Self {
             name: name.to_string(),
@@ -40,6 +42,7 @@ impl PackageRow {
             uad_list,
             removal,
             selected,
+            current,
         }
     }
 
@@ -75,7 +78,7 @@ impl PackageRow {
             PackageState::All => {
                 action_text = "Error";
                 button_style = style::PackageButton::Restore(settings.theme.palette);
-                warn!("Incredible! Something impossible happenned!");
+                warn!("Incredible! Something impossible happened!");
             }
         }
         // Disable any removal action for unsafe packages if expert_mode is disabled
@@ -113,7 +116,11 @@ impl PackageRow {
                         .push(action_btn.style(button_style)),
                 )
                 .padding(8)
-                .style(style::PackageRow(settings.theme.palette))
+                .style(if self.current {
+                    style::PackageRow::Current(settings.theme.palette)
+                } else {
+                    style::PackageRow::Normal(settings.theme.palette)
+                })
                 .width(Length::Fill)
                 .on_press(Message::PackagePressed),
             )

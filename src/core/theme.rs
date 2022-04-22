@@ -50,7 +50,7 @@ impl Theme {
                     foreground: hex_to_color("#1C1C1C").unwrap(),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#3f2b56").unwrap(),
+                    primary: hex_to_color("#5E4266").unwrap(),
                     secondary: hex_to_color("#386e50").unwrap(),
                     surface: hex_to_color("#828282").unwrap(),
                     error: hex_to_color("#992B2B").unwrap(),
@@ -74,7 +74,7 @@ impl Theme {
                     foreground: hex_to_color("#E0E0E0").unwrap(),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#818181").unwrap(),
+                    primary: hex_to_color("#230F08").unwrap(),
                     secondary: hex_to_color("#F9D659").unwrap(),
                     surface: hex_to_color("#818181").unwrap(),
                     error: hex_to_color("#992B2B").unwrap(),
@@ -98,7 +98,7 @@ impl Theme {
                     foreground: hex_to_color("#353746").unwrap(),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#483e61").unwrap(),
+                    primary: hex_to_color("#58406F").unwrap(),
                     secondary: hex_to_color("#386e50").unwrap(),
                     surface: hex_to_color("#a2a4a3").unwrap(),
                     error: hex_to_color("#A13034").unwrap(),

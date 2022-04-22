@@ -49,7 +49,8 @@ pub fn fetch_packages(
             state = PackageState::Disabled;
         }
 
-        let package_row = PackageRow::new(p_name, state, description, uad_list, removal, false);
+        let package_row =
+            PackageRow::new(p_name, state, description, uad_list, removal, false, false);
         user_package.push(package_row);
     }
     user_package.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));

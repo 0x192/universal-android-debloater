@@ -211,34 +211,49 @@ impl button::StyleSheet for PackageButton {
     }
 }
 
-pub struct PackageRow(pub ColorPalette);
+pub enum PackageRow {
+    Normal(ColorPalette),
+    Current(ColorPalette),
+}
 impl button::StyleSheet for PackageRow {
     fn active(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(self.0.base.foreground)),
-            text_color: self.0.bright.surface,
-            border_radius: 5.0,
-            border_width: 0.0,
-            border_color: self.0.base.background,
-            ..button::Style::default()
+        match self {
+            Self::Normal(palette) => button::Style {
+                background: Some(Background::Color(palette.base.foreground)),
+                text_color: palette.bright.surface,
+                border_radius: 5.0,
+                border_width: 0.0,
+                border_color: palette.base.background,
+                ..button::Style::default()
+            },
+            Self::Current(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                    a: 0.25,
+                    ..palette.normal.primary
+                })),
+                text_color: palette.bright.primary,
+                border_radius: 5.0,
+                border_width: 0.0,
+                border_color: palette.normal.primary,
+                ..button::Style::default()
+            },
         }
     }
     fn hovered(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color {
-                a: 0.25,
-                ..self.0.normal.primary
-            })),
-            text_color: self.0.bright.primary,
-            ..self.active()
+        match self {
+            Self::Normal(palette) => button::Style {
+                background: Some(Background::Color(Color {
+                    a: 0.30,
+                    ..palette.normal.primary
+                })),
+                text_color: palette.bright.primary,
+                ..self.active()
+            },
+            Self::Current(_) => button::Style { ..self.active() },
         }
     }
     fn pressed(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color::from_rgb(0.35, 0.43, 0.46))),
-            text_color: self.0.bright.primary,
-            ..self.active()
-        }
+        button::Style { ..self.active() }
     }
 }
 
@@ -342,10 +357,13 @@ impl checkbox::StyleSheet for SelectionCheckBox {
                 text_color: Some(palette.bright.surface),
             },
             Self::Disabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.foreground),
+                background: Background::Color(Color {
+                    a: 0.55,
+                    ..palette.base.background
+                }),
                 checkmark_color: palette.bright.primary,
                 border_radius: 5.0,
-                border_width: 1.0,
+                border_width: 0.0,
                 border_color: palette.normal.primary,
                 text_color: Some(palette.normal.primary),
             },
@@ -355,11 +373,17 @@ impl checkbox::StyleSheet for SelectionCheckBox {
     fn hovered(&self, is_checked: bool) -> checkbox::Style {
         match self {
             Self::Enabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.foreground),
+                background: Background::Color(Color {
+                    a: 0.5,
+                    ..palette.bright.primary
+                }),
                 checkmark_color: palette.bright.primary,
                 border_radius: 5.0,
                 border_width: 2.0,
-                border_color: palette.normal.primary,
+                border_color: Color {
+                    a: 0.5,
+                    ..palette.bright.primary
+                },
                 text_color: Some(palette.bright.surface),
             },
 
