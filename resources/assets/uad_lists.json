@@ -1667,7 +1667,7 @@
   {
     "id": "de.telekom.tsc",
     "list": "Carrier",
-    "description": "AppEnabler\ntsc = Telecom Service Center\nUsed to display ads in notifications panel.\n)\n",
+    "description": "AppEnabler\nThe pre-installed AppEnabler is used to ensure that Telekom Deutschland GmbH customers can use app benefits, e.g. the Evernote Premium App, which is free in the first year, or free premium functions at Runtastic.\ntsc = Telecom Service Center\nUsed to display ads in notifications panel.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14339,7 +14339,7 @@
   {
     "id": "com.mediatek.callrecorder",
     "list": "Misc",
-    "description": "This is not the kind of feature expected from a Soc company.\nIf you remove this I guess you will not be able to record your calls from the stock dialer\nCan someone share the apk and verify this?\n",
+    "description": "CallRecorderService\nThis is not the kind of feature expected from a Soc company.\nIf you remove this you will NOT be able to record your calls from the stock dialer.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14915,7 +14915,7 @@
   {
     "id": "com.miui.gallery",
     "list": "Oem",
-    "description": "MIUI Gallery app.\nSimple Gallery is way better, ligther and open-source (https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)\n",
+    "description": "MIUI Gallery app.\nSynchronization to Xiaomi Cloud needs MiAccount and MiCloundSDK.\nSimple Gallery is way better, ligther and open-source (https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15284,11 +15284,11 @@
   {
     "id": "com.xiaomi.account",
     "list": "Oem",
-    "description": "Mi Account\n",
+    "description": "Mi Account\nWARNING: Do not disable or uninstall if you've already logged in MI Account, device will be locked!\nRequired for Xiaomi Cloud Services",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.xiaomi.channel",
@@ -15428,11 +15428,11 @@
   {
     "id": "com.xiaomi.micloud.sdk",
     "list": "Oem",
-    "description": "Mi Cloud sdk \nsdk = Software development kit\nSeems to be a dependency for \"com.miui.gallery\" (the MIUI may not work if you remove this package)\n",
+    "description": "Mi Cloud sdk \nsdk = Software development kit\nRequired for \"com.miui.gallery\" syncronization to Xiaomi Cloud\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.xiaomi.mirecycle",
@@ -18907,5 +18907,32 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
-  }
+  },
+  {
+    "id": "org.ifaa.aidl.manager",
+    "list": "Oem",
+    "description": "IFAAService\nUsed for biometric authentication in Alipay payment.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "miui.systemui.plugin",
+    "list": "Oem",
+    "description": "System UI Plug-in\nMIUI SystemUI Plugin for Volume Slider.\nIf disabled or uinstalled AOSP UI will be used instead.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.face.overlay.miui",
+    "list": "Oem",
+    "description": "Overlay for MIUI Biometric Face Unlock feature.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
 ]
