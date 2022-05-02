@@ -19537,7 +19537,43 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
-  }
+  },
+  {
+    "id": "com.oplus.cosa",
+    "list": "Oem",
+    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focussed on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+},
+{
+  "id": "com.oplus.synergy",
+  "list": "Oem",
+  "description": "HeySynergy\nDisabling this removes 'HeySynergy Screencast' from Quick Settings. HeySynergy seems to be used to/ will be used to connect to OPPO's PC Connect (https://connect.oppo.com/) on OPPO and Realme devices (Not yet officially released? Unclear whether the feature will come to OnePlus devices.). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone. HeySynergy can probably safely removed if Screencast functionality isn't wanted.\ncom.oplus.synergy and/ or com.heytap.mcs seem to connect to heytapmobile.com & heytapdl.com frequently. Further investigation needed.",
+  "dependencies": null,
+  "neededBy": null,
+  "labels": null,
+  "removal": "Advanced"
+},
+{
+  "id": "com.heytap.accessory",
+  "list": "Oem",
+  "description": "Quick device connect\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> Quick device connect) if not wanted.\nFrom settings description: '[...] a service that enables your device to quickly discover and connect to other devices.'",
+  "dependencies": null,
+  "neededBy": null,
+  "labels": null,
+  "removal": "Advanced"
+},
+{
+  "id": "com.heytap.mcs",
+  "list": "Oem",
+  "description": "System messages\nUnclear what exactly it does. Further investigation needed. Disabling it doesn't cause any boot loop but might affect other system-relevant functionality (push notifications/ battery?).\ncom.oplus.synergy and/ or com.heytap.mcs seem to connect to heytapmobile.com & heytapdl.com frequently. Further investigation needed.",
+  "dependencies": null,
+  "neededBy": null,
+  "labels": null,
+  "removal": "Expert"
+}
 ]
 
 
