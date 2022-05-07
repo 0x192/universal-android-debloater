@@ -4808,7 +4808,7 @@
   {
     "id": "com.sec.android.app.DataCreate",
     "list": "Oem",
-    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*(Status of data usage) \n- *#273283*255*3282*(Data create menu) \n- 273283*255*663282* (Backup all media files)\n",
+    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*# (Status of data usage) \n- *#273283*255*3282*# (Data create menu) \n- *#*#273283*255*663282*#*#* (Backup all media files)\n", 
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4853,7 +4853,7 @@
   {
     "id": "com.sec.android.app.factorykeystring",
     "list": "Oem",
-    "description": "DeviceKeyString : Dialable hidden diagnostic/debug app\nDial *#0283to open audio LoopbackTest control, dial *#2663for TSP firmware update\n",
+    "description": "DeviceKeyString : Dialable hidden diagnostic/debug app\nDial *#0283# to open audio LoopbackTest control, dial *#2663# for TSP firmware update\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4871,7 +4871,7 @@
   {
     "id": "com.sec.android.app.hwmoduletest",
     "list": "Oem",
-    "description": "HwModuleTest, a hardware hidden test app (dial *#0*to open it). \nFun low-level stuff to see in there\n",
+    "description": "HwModuleTest, a hardware hidden test app (dial *#0*# to open it). \nFun low-level stuff to see in there\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4979,7 +4979,7 @@
   {
     "id": "com.sec.android.app.servicemodeapp",
     "list": "Oem",
-    "description": "SysDump hidden app\nLow-level debugging and diagnostics tools (dial *#9900to open it)\n",
+    "description": "SysDump hidden app\nLow-level debugging and diagnostics tools (dial *#9900# to open it)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5069,7 +5069,7 @@
   {
     "id": "com.sec.android.app.wlantest",
     "list": "Oem",
-    "description": "wlan test\nHidden test app responding to the #232339*and *#232338*secret codes\nFYI : wlan = wireless LAN (https://en.wikipedia.org/wiki/Wireless_LAN)\nNOTE: Disabling this test will rise the exclamation mark on the WI-Fi icon and will show the message \"Unable to connect to the host\" in Settings -> Connections -> More connections settings - Private DNS - provider hostname.\nThe connection seems to work despite those esthetic errors.",
+    "description": "wlan test\nHidden test app responding to the #232339*# and *#232338*# secret codes\nFYI : wlan = wireless LAN (https://en.wikipedia.org/wiki/Wireless_LAN)\nNOTE: Disabling this test will rise the exclamation mark on the WI-Fi icon and will show the message \"Unable to connect to the host\" in Settings -> Connections -> More connections settings - Private DNS - provider hostname.\nThe connection seems to work despite those esthetic errors.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5231,7 +5231,7 @@
   {
     "id": "com.sec.android.RilServiceModeApp",
     "list": "Oem",
-    "description": "Service mode RIL hidden app. Used for debug and diagnostics\ndial *#0011for modem connectivity info, *#9090for diagnostics control\n#\nRIL means Radio Interface Layer. It's the bridge between Android phone framework services and the hardware.\nhttps://wladimir-tm4pda.github.io/porting/telephony.html\nhttps://stackoverflow.com/questions/11111067/how-does-modem-code-talk-to-android-code\nSamsung RIL is a add on from Samsung : Modem <=> Linux kernel <=> libsamsung-ipc <=> Samsung-RIL <=> Android framework <=> Android applications\n",
+    "description": "Service mode RIL hidden app. Used for debug and diagnostics\ndial *#0011# for modem connectivity info, *#9090# for diagnostics control\n#\nRIL means Radio Interface Layer. It's the bridge between Android phone framework services and the hardware.\nhttps://wladimir-tm4pda.github.io/porting/telephony.html\nhttps://stackoverflow.com/questions/11111067/how-does-modem-code-talk-to-android-code\nSamsung RIL is a add on from Samsung : Modem <=> Linux kernel <=> libsamsung-ipc <=> Samsung-RIL <=> Android framework <=> Android applications\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5420,7 +5420,7 @@
   {
     "id": "com.sec.factory.camera",
     "list": "Oem",
-    "description": "Camera Test (dial *#34971539to open CameraFirmware Standard)\n",
+    "description": "Camera Test (dial *#34971539# to open CameraFirmware Standard)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5645,7 +5645,7 @@
   {
     "id": "com.sec.usbsettings",
     "list": "Oem",
-    "description": "USBSettings\nHidden settings. Lets you choose from ADB, MTP, RNDIS, ACM, DM (dial *#0808to open)\nRuns at startup\n",
+    "description": "USBSettings\nHidden settings. Lets you choose from ADB, MTP, RNDIS, ACM, DM (dial *#0808# to open)\nRuns at startup\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7562,7 +7562,7 @@
   {
     "id": "com.fingerprints.fingerprintsensortest",
     "list": "Oem",
-    "description": "Sensor Test Tool\nProvides hidden fingerprint test menu. Type *#806 in OnePlus dialer to open.",
+    "description": "Sensor Test Tool\nProvides hidden fingerprint test menu. Type *#806# in OnePlus dialer to open.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7760,7 +7760,7 @@
   {
     "id": "com.oneplus.factorymode",
     "list": "Oem",
-    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808in the OnePlus dialer to acess the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK preinstalled.\nFor now, this only works in ADB, which requires local access to the device.",
+    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to acess the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK preinstalled.\nFor now, this only works in ADB, which requires local access to the device.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
