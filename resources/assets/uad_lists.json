@@ -2135,7 +2135,7 @@
   {
     "id": "com.huawei.hwvoipservice",
     "list": "Oem",
-    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/)\n",
+    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/). Voice and video calling application by Huawei. This is an alias package name for the app, which can be found on some devices.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2144,7 +2144,7 @@
   {
     "id": "com.huawei.meetime",
     "list": "Oem",
-    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/)\n",
+    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/). Voice and video calling application by Huawei.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2153,7 +2153,7 @@
   {
     "id": "com.huawei.ohos.inputmethod",
     "list": "Oem",
-    "description": "Huawei Keyboard\n",
+    "description": "Huawei Keyboard. Before unistalling, please install a third-party keyboard like Simple Keyboard.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2162,7 +2162,7 @@
   {
     "id": "com.huawei.mycenter",
     "list": "Oem",
-    "description": "Huawei Member Center\n",
+    "description": "Huawei Member Center. This app allows Huawei customers to get offers and news about Huawei products.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2171,7 +2171,7 @@
   {
     "id": "com.huawei.maps.app",
     "list": "Oem",
-    "description": "Petal Maps\n",
+    "description": "Petal Maps. Map and navigation app developed by Huawei.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2180,7 +2180,7 @@
   {
     "id": "com.huawei.webview",
     "list": "Oem",
-    "description": "Huawei Webview\n",
+    "description": "Huawei Webview.\nWARINING: Unistalling this package will break many apps relying on WebView!",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2243,7 +2243,7 @@
   {
     "id": "com.huawei.music",
     "list": "Oem",
-    "description": "Huawei Music app.\n",
+    "description": "Huawei Music app. Music player developed by Huawei, can be replaced by apps like VLC\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
