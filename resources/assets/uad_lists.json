@@ -12798,6 +12798,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.coloros.weather.service",
+    "list": "Oem",
+    "description": "colorOS weather app. Unsafe to remove. Removal can trigger reboot loops. App reinstallation or phone wipe fixes it",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.coloros.weather2",
+    "list": "Oem",
+    "description": "colorOS weather app. Unsafe to remove. Removal can trigger reboot loops. App reinstallation or phone wipe fixes it",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
     "id": "com.coloros.mcs",
     "list": "Oem",
     "description": "",
