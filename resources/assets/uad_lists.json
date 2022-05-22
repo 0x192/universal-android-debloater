@@ -6309,7 +6309,7 @@
     "removal": "Recommended"
   },
   {
-    "id": "com.sec.svoice.lang.it_GB",
+    "id": "com.sec.svoice.lang.en_GB",
     "list": "Oem",
     "description": "Language Pack for S-voice, the Samsung assistant (com.samsung.android.svoice)\n",
     "dependencies": null,
@@ -6545,7 +6545,7 @@
   {
     "id": "com.android.htmlviewer",
     "list": "Aosp",
-    "description": "Allows apps to load URLs into the WebView, which allows web content to be displayed directly in the app..\nWARNING: Removing this causes a bootloop on MIUI 12.5.4+.",
+    "description": "Allows apps to load URLs into the WebView, which allows web content to be displayed directly in the app..\nWARNING: Removing this causes a bootloop on some MIUI 12.5.4+ phones.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
