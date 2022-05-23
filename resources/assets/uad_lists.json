@@ -19099,10 +19099,10 @@
     "description": "Micro Intelligence\nProvides features like tap to awake, awake on device raise, etc",
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
-    "id": "com.transsion.phonemanager",
+    "id": "com.transsion.phonemaster",
     "list": "Oem",
     "description": "Phone Master.\nProvides features like ram cleaning, storage optimisation, data usage analyser, etc.",
     "neededBy": null,
@@ -19113,6 +19113,78 @@
     "id": "com.transsion.smartpanel",
     "list": "Oem",
     "description": "Smart Panel. Provides features like Game Mode, Video assistant, etc.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.agingfunction",
+    "list": "Oem",
+    "description": "Needs more info.\n No impact after months of usage after uninstalling.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.hamal",
+    "list": "Oem",
+    "description": "Needs more info\n. No impact after months of usage after uninstalling.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.dirac",
+    "list": "Oem",
+    "description": "Improves audio quality.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.batterylab",
+    "list": "Oem",
+    "description": "Supposed to imporove battery life. No impact after months of usage after uninstalling.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.dirac",
+    "list": "Oem",
+    "description": "Improves audio quality.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.stasticalsales",
+    "list": "Oem",
+    "description": "Sends after-sales telemetry data.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.dirac",
+    "list": "Oem",
+    "description": "Improves audio quality.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.childmode",
+    "list": "Oem",
+    "description": "Child mode.",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.trancare",
+    "list": "Oem",
+    "description": "Provides after-sales services.",
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
