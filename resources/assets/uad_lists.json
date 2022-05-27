@@ -19555,5 +19555,77 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.tripledot.solitaire",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=com.tripledot.solitaire",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "net.supertreat.solitaire",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=net.supertreat.solitaire",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "air.com.playtika.slotomania",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=air.com.playtika.slotomania",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.staplegames.blocksClassicSGGP",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=com.staplegames.blocksClassicSGGP",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "in.playsimple.tripcross",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=in.playsimple.tripcross",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tripledot.woodoku",
+    "list": "Misc",
+    "description": "Game. More here: https://play.google.com/store/apps/details?id=com.tripledot.woodoku",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.pandora.android",
+    "list": "Misc",
+    "description": "Music and podcasts app. More here: https://play.google.com/store/apps/details?id=com.pandora.android",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.digitalturbine.toolbar",
+    "list": "Misc",
+    "description": "Digital Turbine. Adware and used by carriers to install other apps",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
