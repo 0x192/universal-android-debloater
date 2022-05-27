@@ -19546,5 +19546,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.games",
+    "list": "Misc",
+    "description": "From the Play Store: Store and access all your games from Games with gaming optimization options. Installed games will automatically be launched in gaming mode for immersive gaming. \nhttps://play.google.com/store/apps/details?id=com.oplus.games",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
