@@ -3890,7 +3890,7 @@
   {
     "id": "com.samsung.android.mdecservice",
     "list": "Oem",
-    "description": "Samsung Call & Text\nNot 100% sure but by looking at the recompiled java code it seems the apps provides a way to receive call and SMS on\nSamsung accessories. In any case it is only usful for Samsung IoT stuff.\nEmbeded Google Firebase analytics\n",
+    "description": "Samsung Call & Text\nNot 100% sure but by looking at the recompiled java code it seems the apps provides a way to receive call and SMS on\nSamsung accessories. In any case it is only useful for Samsung IoT stuff.\nEmbeded Google Firebase analytics\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
