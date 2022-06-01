@@ -6639,7 +6639,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.android.stk2",
@@ -7800,7 +7800,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.oneplus.note",
@@ -8930,11 +8930,11 @@
   {
     "id": "com.oneplus.dialer",
     "list": "Oem",
-    "description": "OnePlus Dialer used in OxygenOS 11 and lower.",
+    "description": "OnePlus Dialer used in OxygenOS 11 and lower. Remember that you'll need to download another call application.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.dirac.simplemanager",
