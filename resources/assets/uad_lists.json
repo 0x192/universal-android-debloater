@@ -6633,6 +6633,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.android.soundpicker",
+    "list": "Google",
+    "description": "Google Sounds. Removable if you already have another media select service.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.android.stk2",
     "list": "Aosp",
     "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/",
@@ -7785,6 +7794,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oneplus.geoiptime",
+    "list": "Oem",
+    "description": "Likely an NTP-related service to determine the time",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
     "id": "com.oneplus.note",
     "list": "Oem",
     "description": "OnePlus Notes app\n",
@@ -8902,8 +8920,17 @@
   },
   {
     "id": "com.oneplus.diagnosemanager",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "For feedback/diagnosing/troubleshooting?\nLikely only used on devices running OxygenOS 9 and lower as per\n<https://gist.github.com/bruvv/f2adc0492ddc00348ca961390453f218#older-apps-for-older-oneplus-phones-but-not-found-on-oxygenos-10-and-higher>.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oneplus.dialer",
+    "list": "Oem",
+    "description": "OnePlus Dialer used in OxygenOS 11 and lower.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16211,7 +16238,7 @@
   {
     "id": "com.android.incallui",
     "list": "Oem",
-    "description": "Xiaomi Phone (Here we go again! Another confusing package name)\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.\n",
+    "description": "Xiaomi (and OnePlus) Phone (here we go again! Another confusing package name)\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.\nOnePlus uses the same package name for OnePlus phones on Android 12 and higher, see: https://www.apkmirror.com/apk/oneplus-ltd/oneplus-phone-2/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
