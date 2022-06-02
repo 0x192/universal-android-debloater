@@ -64,7 +64,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 - Enable *Developer Options* on your smartphone.
 - Turn on *USB Debugging* from the developer panel.
 - From the settings, disconnect from any OEM accounts (when you delete an OEM account package it could lock you on the lockscreen because the phone can't associate your identity anymore)
-- Install ADB:
+- Install [ADB](https://developer.android.com/studio/releases/platform-tools):
   <p>
   <details>
   <summary>LINUX</summary>
