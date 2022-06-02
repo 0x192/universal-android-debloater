@@ -16886,7 +16886,7 @@
   {
     "id": "com.google.android.apps.messaging",
     "list": "Google",
-  "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.",
+  "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.\nRemoving this may cause issues with receiving verification text messages and calls.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
