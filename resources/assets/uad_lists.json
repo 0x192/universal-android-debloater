@@ -4959,6 +4959,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.sec.android.app.sbrowser.lite",
+    "list": "Oem",
+    "description": "Samsung web browser lite\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.sec.android.app.scloud",
     "list": "Oem",
     "description": "I guess it's the core of Samsung scloud.\n",
@@ -17694,6 +17703,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.android.gm.lite",
+    "list": "Google",
+    "description": "Gmail Go (https://play.google.com/store/apps/details?id=com.google.android.gm.lite)",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.google.android.ims",
     "list": "Google",
     "description": "Carrier Services (https://play.google.com/store/apps/details?id=com.google.android.ims)\nRuns in the background.\nPlay store description claims power savings in addition to the features, but I don't see how that could be the case.\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling).",
@@ -19074,6 +19092,15 @@
     "id": "com.google.android.youtube",
     "list": "Google",
     "description": "YouTube (https://play.google.com/store/apps/details?id=com.google.android.youtube)",
+    "dependencies": null,
+    "neededBy": "",
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.apps.youtube.mango",
+    "list": "Google",
+    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango)",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
