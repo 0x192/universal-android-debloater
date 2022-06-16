@@ -19546,5 +19546,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.fastapp",
+    "list": "Oem",
+    "description": "Component of AppGallery (Huawei's app store) for installing Quick Apps",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
   }
 ]
