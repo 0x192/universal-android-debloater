@@ -15302,11 +15302,11 @@
   {
     "id": "com.miui.miwallpaper",
     "list": "Oem",
-    "description": "Mi Wallpaper \n",
+    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.miui.nextpay",
