@@ -19555,5 +19555,131 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.bbk.iqoo.logsystem",
+    "list": "Oem",
+    "description": "User experience service\nTelemetry app.\nDisabling this will break trail version system upgrade feature.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mobile.iroaming",
+    "list": "Oem",
+    "description": "Data Store\nOnly useful if you need roaming mobile data when travelling overseas.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.space",
+    "list": "Oem",
+    "description": "Open Vivo official website.\nUseless app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.baidu.input_vivo",
+    "list": "Oem",
+    "description": "Default IME (Baidu IME customized for Vivo devices).\nCan be disabled if you've changed the default IME.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.bbk.calendar",
+    "list": "Oem",
+    "description": "Default calendar app.\nCan be disabled if you've changed the default.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.share",
+    "list": "Oem",
+    "description": "Vivo share\nTransfer data between vivo device & PC.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.yozo.vivo.office",
+    "list": "Oem",
+    "description": "Default Microsoft Office replacement app.\nCan be disabled if you've changed the default.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.browser",
+    "list": "Oem",
+    "description": "Default browser app.\nCan be disabled if you've changed the default.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.dream.weather",
+    "list": "Oem",
+    "description": "Default weather app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.hybrid",
+    "list": "Oem",
+    "description": "Hybrid app prerequisite.\nCan be disabled if you don't use hybrid apps.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.puresearch",
+    "list": "Oem",
+    "description": "Desktop search bar",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.voicewakeup",
+    "list": "Oem",
+    "description": "Voice wake-up.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.bbk.appstore",
+    "list": "Oem",
+    "description": "Vivo app store.\nCannot upgrade system apps via app store if disabled.\nApps can still be upgraded with the built-in check upgrade feature.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.bbk.account",
+    "list": "Oem",
+    "description": "Vivo account\nDisabling this will break LOTS OF fuctions that require Vivo account authentication.\nE.g. Accessibility, data backup etc.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   }
 ]
