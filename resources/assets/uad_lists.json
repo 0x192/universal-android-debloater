@@ -19546,5 +19546,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.bkk.theme",
+    "list": "Oem",
+    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nPersonalize your phone with a fantastic selection of fun and original themes.\nIt has annoying notifications that cannot be disabled by going to the app settings.\nDisabling this you will not be able to change themes.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
