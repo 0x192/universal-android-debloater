@@ -19747,51 +19747,51 @@
     "removal": "Recommended"
   },
   {
-      "id": "com.transsion.agingfunction",
-      "list": "Oem",
-      "description": "Quality Assurance (QA) testing app. The app is used by the manufacturer to to test the correction functionning of the screen, the sensors, the camera, the gps etc...\nHas a lot of permissions.\nPithus analysis: https://beta.pithus.org/report/02b71ec4be036fe87b5504b4f752a7c7cb45848b5d666c4307e59df754e164c9",
-      "neededBy": null,
-      "labels": null,
-      "removal": "Recommended"
+    "id": "com.transsion.agingfunction",
+    "list": "Oem",
+    "description": "Quality Assurance (QA) testing app. The app is used by the manufacturer to to test the correction functionning of the screen, the sensors, the camera, the gps etc...\nHas a lot of permissions.\nPithus analysis: https://beta.pithus.org/report/02b71ec4be036fe87b5504b4f752a7c7cb45848b5d666c4307e59df754e164c9",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   },
-   {
-     "id": "com.transsion.dirac",
-     "list": "Oem",
-     "description": "Improves audio quality depending on your surrounding environment and your headphones.\nHas the GET_TASKS/REAL_GET_TASKS permission which allows it to retrieve information about currently and recently running processes. Not sure why it needs this permission though.\nhttps://www.dirac.com/\nPithus analysis: https://beta.pithus.org/report/b2cf41f579c586468faa0270bf63699cca2b500887dba3a699ddd5e35507a1a9",
-     "neededBy": null,
-     "labels": null,
-     "removal": "Advanced"
-   },
-   {
-     "id": "com.transsion.batterylab",
-     "list": "Oem",
-     "description": "Supposed to improve battery life but logs especially lots of usage info and bind it to your unique android advertiser id...The app try to send data to a server. The POST request URL and content is obfuscated and I don't have the time to dig deeper. According to a user, no battery impact after months of usage after uninstalling it.\n\nPithus analysis: https://beta.pithus.org/report/7ef2b186a74102828346f23b094ab2aaaad2c57806c7c18e7a23a494f3cc982c",
-     "neededBy": null,
-     "labels": null,
-     "removal": "Recommended"
-   },
-   {
-     "id": "com.transsion.stasticalsales",
-     "list": "Oem",
-     "description": "Sends after-sales telemetry data (including at least the phone number and the IMSI). You don't want this.This app can be launched from this secret dialer code: 862016\n\nPithus analysis: https://beta.pithus.org/report/35fa58c779ac80bcf44875e279cc4a6ba08678b0004e9c8f0816426cf0c584ab",
-     "neededBy": null,
-     "labels": null,
-     "removal": "Recommended"
-   },
-   {
-     "id": "com.transsion.childmode",
-     "list": "Oem",
-     "description": "Kids Mode\nPhone monitoring app to control what the user the can do on the phone. Intrusive and use Firebase so its sends data back to Google servers.\n\nPithus analysis: https://beta.pithus.org/report/ca30c6d1d7c7625e0850c4114dfea5aab5118d391191d2c074cde1414bbccd8c",
-     "neededBy": null,
-     "labels": null,
-     "removal": "Recommended"
-   },
-   {
-     "id": "com.transsion.trancare",
-     "list": "Oem",
-     "description": "Telemetry. Make requests (with weak crypto) to the Shalltry CDN (https://mi-test.shalltry.com). Collects IMEI, all the apps installed, localisation...\nPithus analysis: https://beta.pithus.org/report/9be13b57bde5620d2ff1824782a2ccc1d6517d437543549c720bc70b6dd02aee",
-     "neededBy": null,
-     "labels": null,
-     "removal": "Recommended"
-   }
+  {
+    "id": "com.transsion.dirac",
+    "list": "Oem",
+    "description": "Improves audio quality depending on your surrounding environment and your headphones.\nHas the GET_TASKS/REAL_GET_TASKS permission which allows it to retrieve information about currently and recently running processes. Not sure why it needs this permission though.\nhttps://www.dirac.com/\nPithus analysis: https://beta.pithus.org/report/b2cf41f579c586468faa0270bf63699cca2b500887dba3a699ddd5e35507a1a9",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.transsion.batterylab",
+    "list": "Oem",
+    "description": "Supposed to improve battery life but logs especially lots of usage info and bind it to your unique android advertiser id...The app try to send data to a server. The POST request URL and content is obfuscated and I don't have the time to dig deeper. According to a user, no battery impact after months of usage after uninstalling it.\n\nPithus analysis: https://beta.pithus.org/report/7ef2b186a74102828346f23b094ab2aaaad2c57806c7c18e7a23a494f3cc982c",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.stasticalsales",
+    "list": "Oem",
+    "description": "Sends after-sales telemetry data (including at least the phone number and the IMSI). You don't want this.This app can be launched from this secret dialer code: 862016\n\nPithus analysis: https://beta.pithus.org/report/35fa58c779ac80bcf44875e279cc4a6ba08678b0004e9c8f0816426cf0c584ab",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.childmode",
+    "list": "Oem",
+    "description": "Kids Mode\nPhone monitoring app to control what the user the can do on the phone. Intrusive and use Firebase so its sends data back to Google servers.\n\nPithus analysis: https://beta.pithus.org/report/ca30c6d1d7c7625e0850c4114dfea5aab5118d391191d2c074cde1414bbccd8c",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.trancare",
+    "list": "Oem",
+    "description": "Telemetry. Make requests (with weak crypto) to the Shalltry CDN (https://mi-test.shalltry.com). Collects IMEI, all the apps installed, localisation...\nPithus analysis: https://beta.pithus.org/report/9be13b57bde5620d2ff1824782a2ccc1d6517d437543549c720bc70b6dd02aee",
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  }
 ]
