@@ -29,7 +29,7 @@ pub struct SelfUpdateState {
     pub status: SelfUpdateStatus,
 }
 
-#[derive(Debug, PartialEq, Eq, Clone)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum SelfUpdateStatus {
     Updating,
     Checking,

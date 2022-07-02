@@ -30,7 +30,7 @@ pub enum Action {
     Restore,
 }
 
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum LoadingState {
     FindingPhones,
     DownloadingList,
@@ -38,7 +38,7 @@ pub enum LoadingState {
     _UpdatingUad,
 }
 
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum State {
     Ready,
     Loading(LoadingState),
