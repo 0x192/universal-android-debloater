@@ -3890,7 +3890,7 @@
   {
     "id": "com.samsung.android.mdecservice",
     "list": "Oem",
-    "description": "Samsung Call & Text\nNot 100% sure but by looking at the recompiled java code it seems the apps provides a way to receive call and SMS on\nSamsung accessories. In any case it is only usful for Samsung IoT stuff.\nEmbeded Google Firebase analytics\n",
+    "description": "Samsung Call & Text\nNot 100% sure but by looking at the recompiled java code it seems the apps provides a way to receive call and SMS on\nSamsung accessories. In any case it is only useful for Samsung IoT stuff.\nEmbeded Google Firebase analytics\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5924,7 +5924,7 @@
   {
     "id": "com.samsung.android.sm.devicesecurity",
     "list": "Oem",
-    "description": "Samsung Device security for the Smart Manager app using McAfee antivirus engine.\nThis is the antivirus in Settings -> Device care -> Security\nPrivacy nightmare(LOTS of permissions!) for a bit of security.\nhttps://www.hybrid-analysis.com/sample/05dab93ee2102a2fb6edf16e85750eb1f0189d7b82703c6a00c92cd08d62bb28?environmentId=200\nARCHIVE: https://web.archive.org/web/20200607140002/https://www.hybrid-analysis.com/sample/05dab93ee2102a2fb6edf16e85750eb1f0189d7b82703c6a00c92cd08d62bb28?environmentId=200\n\nSome people reported that without this package they weren't able to install apps anymore BUT I personnally removed this and\nI still can install apps.\nI think(not sure) that you can remove this safely if you also remove com.samsung.aasaservice and com.samsung.android.sm",
+    "description": "Samsung Device security for the Smart Manager app using McAfee antivirus engine.\nThis is the antivirus in Settings -> Device care -> Security\nPrivacy nightmare(LOTS of permissions!) for a bit of security.\nhttps://www.hybrid-analysis.com/sample/05dab93ee2102a2fb6edf16e85750eb1f0189d7b82703c6a00c92cd08d62bb28?environmentId=200\nARCHIVE: https://web.archive.org/web/20200607140002/https://www.hybrid-analysis.com/sample/05dab93ee2102a2fb6edf16e85750eb1f0189d7b82703c6a00c92cd08d62bb28?environmentId=200\n\nSome people reported that without this package they weren't able to install apps anymore BUT I personally removed this and\nI still can install apps.\nI think(not sure) that you can remove this safely if you also remove com.samsung.aasaservice and com.samsung.android.sm",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
