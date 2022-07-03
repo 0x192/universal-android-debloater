@@ -19881,48 +19881,48 @@
     "removal": "Recommended"
   },
   {
-      "id": "com.oppo.partnerbrowsercustomizations",
-      "list": "Oem",
-      "description": "Oppo Bookmarks\nOppo default browser customization. Inject Oppo bookmarks",
-      "dependencies": null,
-      "neededBy": null,
-      "labels": null,
-      "removal": "Recommended"
-    },
-    {
-      "id": "com.redteamobile.roaming",
-      "list": "Misc",
-      "description": "ORoaming\nLet's you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
-      "dependencies": ["com.redteamobile.roaming.deamon"],
-      "neededBy": null,
-      "labels": null,
-      "removal": "Recommended"
-    },
-    {
-      "id": "com.redteamobile.roaming.deamon",
-      "list": "Misc",
-      "description": "ORoaming\nRedtea Roaming service deamon for com.redteamobile.roaming",
-      "dependencies": null,
-      "neededBy": ["com.redteamobile.roaming"],
-      "labels": null,
-      "removal": "Recommended"
-    },
-    {
-      "id": "com.nearme.deamon",
-      "list": "Oem",
-      "description": "[MORE INFO NEEDED] Has the ability to install and remove packages",
-      "dependencies": null,
-      "neededBy": null,
-      "labels": null,
-      "removal": "Recommended"
-    },
-    {
-      "id": "com.nearme.statistics.rom",
-      "list": "Oem",
-      "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
-      "dependencies": null,
-      "neededBy": null,
-      "labels": null,
-      "removal": "Recommended"
-    }
+    "id": "com.oppo.partnerbrowsercustomizations",
+    "list": "Oem",
+    "description": "Oppo Bookmarks\nOppo default browser customization. Inject Oppo bookmarks",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming",
+    "list": "Misc",
+    "description": "ORoaming\nLet's you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
+    "dependencies": ["com.redteamobile.roaming.deamon"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming.deamon",
+    "list": "Misc",
+    "description": "ORoaming\nRedtea Roaming service deamon for com.redteamobile.roaming",
+    "dependencies": null,
+    "neededBy": ["com.redteamobile.roaming"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.deamon",
+    "list": "Oem",
+    "description": "[MORE INFO NEEDED] Has the ability to install and remove packages",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.statistics.rom",
+    "list": "Oem",
+    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  }
 ]
