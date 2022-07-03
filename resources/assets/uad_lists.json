@@ -2333,7 +2333,7 @@
   {
     "id": "com.huawei.videoeditor",
     "list": "Oem",
-    "description": "Huawei Video editor\n",
+    "description": "Huawei Video editor\nIncludes 2 ads trackers. Interacts with Huawei cloud. Pithus analysis: https://beta.pithus.org/report/19ef8cfb02f3853128603a140b4602db57ddf729a728b1ea6998e8b20752138f",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
