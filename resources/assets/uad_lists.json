@@ -2135,11 +2135,56 @@
   {
     "id": "com.huawei.hwvoipservice",
     "list": "Oem",
-    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/)\n",
+    "description": "Voice over IP service for Huawei MeeTime (com.huawei.meetime)",
+    "dependencies": null,
+    "neededBy": ["com.huawei.meetime"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.meetime",
+    "list": "Oem",
+    "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/). Voice and video calling application by Huawei. Only workds with EMUI 9.1+ Huawei phones. Huawei claims they use E2EE but this wasn't verified and there is not Whitepaper so don't trust them. They also collect metadata. There is no advantages to use this app instead of the reputed open-source Signal app.",
+    "dependencies": ["com.huawei.hwvoipservice"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.ohos.inputmethod",
+    "list": "Oem",
+    "description": "Huawei default Keyboard\nWARNING: Before unistalling, make sure to have a third-party keyboard installed.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.mycenter",
+    "list": "Oem",
+    "description": "Huawei Member Center\n Gives reward offers and news to Huawei users. Very intrusive app : 68 permissions inclusing CAMERA, ACCESS_FINE_LOCATIONtion, REQUEST_INSTALL_PACKAGES. Can run in the background and just after boot even if you haven't unlock your phone yet. Phones home.\nPithus analysis: https://beta.pithus.org/report/3af49c621aefeef0dca86a4f79b5f007d73698fa979d3ba1ac7d6f1ccaea9cdf",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.maps.app",
+    "list": "Oem",
+    "description": "Petal Maps (https://play.google.com/store/apps/details?id=com.huawei.maps.app)\nHuawei map and navigation app with HMS (Huawei Mobile Services) trackers.\nPithus analysis: https://beta.pithus.org/report/d15349e7a998306012462484f270f93794141113d6680fa8512931c270adf830",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.webview",
+    "list": "Oem",
+    "description": "Huawei Webview.\nAllows Android apps to display content from the web directly inside the app.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.iaware",
@@ -2198,7 +2243,7 @@
   {
     "id": "com.huawei.music",
     "list": "Oem",
-    "description": "Huawei Music app.\n",
+    "description": "Huawei Music app. Fat music player developed by Huawei (137Mo. Seriously?). There are a lof of better alternatives (e.g Metro on F-droid)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -2288,7 +2333,7 @@
   {
     "id": "com.huawei.videoeditor",
     "list": "Oem",
-    "description": "Huawei Video editor.\n",
+    "description": "Huawei Video editor\nIncludes 2 ads trackers. Interacts with Huawei cloud. Pithus analysis: https://beta.pithus.org/report/19ef8cfb02f3853128603a140b4602db57ddf729a728b1ea6998e8b20752138f",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
