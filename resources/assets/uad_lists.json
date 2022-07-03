@@ -12800,7 +12800,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather app. Unsafe to remove. Removal can trigger reboot loops. App reinstallation or phone wipe fixes it",
+    "description": "colorOS weather service. Removal seems to triggers bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12809,7 +12809,7 @@
   {
     "id": "com.coloros.weather2",
     "list": "Oem",
-    "description": "colorOS weather app. Unsafe to remove. Removal can trigger reboot loops. App reinstallation or phone wipe fixes it",
+    "description": "colorOS weather app. Removal seems to trigger bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
