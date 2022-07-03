@@ -4205,11 +4205,11 @@
   {
     "id": "com.samsung.android.smartmirroring",
     "list": "Oem",
-    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV\nhttps://www.samsung.com/us/apps/smart-view-2/\n",
+    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV\nhttps://www.samsung.com/us/apps/smart-view-2/. Dependency for com.samsung.android.video",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.samsung.android.video"],
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.spayfw",
@@ -5979,7 +5979,7 @@
     "id": "com.samsung.android.video",
     "list": "Oem",
     "description": "Samsung Video Player\nhttps://galaxystore.samsung.com/prepost/000003980724?appId=com.samsung.android.video\n",
-    "dependencies": null,
+    "dependencies": ["com.samsung.android.smartmirroring"],
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
