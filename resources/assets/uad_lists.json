@@ -7733,7 +7733,7 @@
   {
     "id": "com.oneplus.communication.data",
     "list": "Oem",
-    "description": "Communication important data\nOdd name. No idea what it does.\nContains the \"OPRecorderService\", but I've never seen it run. Also contains a \"OneplusAuthorizationActivity\" that doesn't seem to do anything when activated.",
+    "description": "Oneplus call recorder service. Feature accessible from the stock dialer app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
