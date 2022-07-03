@@ -13,8 +13,8 @@ pub struct Package {
     id: String,
     pub list: UadList,
     pub description: Option<String>,
-    dependencies: Option<String>,
-    needed_by: Option<String>,
+    dependencies: Option<Vec<String>>,
+    needed_by: Option<Vec<String>>,
     labels: Option<Vec<String>>,
     pub removal: Removal,
 }

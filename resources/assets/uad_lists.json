@@ -9454,7 +9454,7 @@
     "list": "Misc",
     "description": "gsim = Global SIM? (SIM = Subscriber Identity Module, as in SIM-card)\nConsidering the \"roaming\" context that's my best guess.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -15016,7 +15016,7 @@
     "list": "Oem",
     "description": "Cepheus is the device codename.\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -15025,7 +15025,7 @@
     "list": "Oem",
     "description": "Daisy is the device codename.\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -15034,7 +15034,7 @@
     "list": "Oem",
     "description": "Dipper is the device codename.\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17932,7 +17932,7 @@
     "list": "Carrier",
     "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17941,7 +17941,7 @@
     "list": "Carrier",
     "description": "Sprint Protect\nSupport app (see com.asurion.android.protech.att)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17950,7 +17950,7 @@
     "list": "Carrier",
     "description": "Sprint Family Locator (https://play.google.com/store/apps/details?id=com.locationlabs.finder.sprint)\nLets you locate any phone registered under the Sprint family plan\nLocation labs is owned by AGV which is owned by Avast.\nYou shouldn't trust Avast.\nFYI : https://www.google.com/search?hl=en&q=avast+privacy+nightmare\nhttps://www.vice.com/en_us/article/qjdkq7/avast-antivirus-sells-user-browsing-data-investigation\nhttps://www.pcmag.com/news/the-cost-of-avasts-free-antivirus-companies-can-spy-on-your-clicks",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17959,7 +17959,7 @@
     "list": "Carrier",
     "description": "Secure Wifi (https://play.google.com/store/apps/details?id=com.mobolize.sprint.securewifi)\nSprint VPN app provided by Mobolize. You need to pay for using it.\nYou'd better use a reliable third-party VPN if you really need to use one.\nThis one runs in background all time and every time it sees a \"unsecured network\" it will popup to encourage you to pay for this VPN.\nBest ressources I know for choosing a VPN:\nhttps://www.privacytools.io/providers/vpn/",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17968,7 +17968,7 @@
     "list": "Carrier",
     "description": "Sprint Music Plus (https://play.google.com/store/apps/details?id=com.sprint.android.musicplus2033)\nSprint’s official Music Store and player.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17977,7 +17977,7 @@
     "list": "Carrier",
     "description": "Safe & Found (https://play.google.com/store/apps/details?id=com.sprint.safefound)\nMobile safety and security application that helps protect and locate your \"loved ones\". \nYou have the ability to track and manage smartphones, tablets and Tracker all in one app.\nhttps://www.sprint.com/en/support/solutions/services/safe-and-found.html\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -17986,7 +17986,7 @@
     "list": "Oem",
     "description": "Apr Upload Service ???? [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -17995,7 +17995,7 @@
     "list": "Oem",
     "description": "Theme overlay for Apr Upload Service?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18004,7 +18004,7 @@
     "list": "Oem",
     "description": "Theme overlay for Apr Upload Service?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18013,7 +18013,7 @@
     "list": "Oem",
     "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18022,7 +18022,7 @@
     "list": "Oem",
     "description": "Theme overlay for a Spyware app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18031,7 +18031,7 @@
     "list": "Oem",
     "description": "Theme overlay for a Spyware app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18040,7 +18040,7 @@
     "list": "Oem",
     "description": "Theme overlay for a Spyware app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18049,7 +18049,7 @@
     "list": "Oem",
     "description": "Theme overlay for a Spyware app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18058,7 +18058,7 @@
     "list": "Oem",
     "description": "Battery protect is advertised to improve battery performance, but in practice it drains your battery and kills apps aggressively.\nhttps://dontkillmyapp.com/nokia\nNokia decided to stop using this app-killer in the future:\nhttps://www.androidpolice.com/2019/08/27/nokia-hmd-phones-disable-evenwell-background-process-app-killer/",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18067,7 +18067,7 @@
     "list": "Oem",
     "description": "Theme overlay for Battery Protect?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18076,7 +18076,7 @@
     "list": "Oem",
     "description": "Theme overlay for Battery Protect?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18085,7 +18085,7 @@
     "list": "Oem",
     "description": "Theme overlay for Battery Protect?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18094,7 +18094,7 @@
     "list": "Oem",
     "description": "??? [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18103,7 +18103,7 @@
     "list": "Oem",
     "description": "Probably related to adding fake bokeh (a focus blur effect) to photos.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18112,7 +18112,7 @@
     "list": "Oem",
     "description": "CP = Client Provisioning.\nSurely used to push new carrier internet/MMS settings automatically\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18121,7 +18121,7 @@
     "list": "Oem",
     "description": "Theme overlay for CPClient?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18130,7 +18130,7 @@
     "list": "Oem",
     "description": "Theme overlay for CPClient?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18139,7 +18139,7 @@
     "list": "Oem",
     "description": "Customer manager\nGiven its name I'd say it is useless but I don't have more info.\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18148,7 +18148,7 @@
     "list": "Oem",
     "description": "Theme overlay for Customer Manager?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18157,7 +18157,7 @@
     "list": "Oem",
     "description": "Theme overlay for Customer Manager?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18166,7 +18166,7 @@
     "list": "Oem",
     "description": "Theme overlay for Customer Manager?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18175,7 +18175,7 @@
     "list": "Oem",
     "description": "Data agent\nUsed for backup/restore? [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18184,7 +18184,7 @@
     "list": "Oem",
     "description": "Theme overlay for Data Agent?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18193,7 +18193,7 @@
     "list": "Oem",
     "description": "Theme overlay for Data Agent?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18202,7 +18202,7 @@
     "list": "Oem",
     "description": "Debug Config Tool?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18211,7 +18211,7 @@
     "list": "Oem",
     "description": "Theme overlay for Debug Config Tool?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18220,7 +18220,7 @@
     "list": "Oem",
     "description": "Theme overlay for Debug Config Tool?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18229,7 +18229,7 @@
     "list": "Oem",
     "description": "Some form of device monitoring?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18238,7 +18238,7 @@
     "list": "Oem",
     "description": "Theme overlay for Device Monitor Control?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18247,7 +18247,7 @@
     "list": "Oem",
     "description": "Theme overlay for Device Monitor Control?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18256,7 +18256,7 @@
     "list": "Oem",
     "description": "Likely part of the first-boot device setup (new/factory reset device).",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18265,7 +18265,7 @@
     "list": "Oem",
     "description": "Theme overlay for setup wizard?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18274,7 +18274,7 @@
     "list": "Oem",
     "description": "Provides terms and condition (legal notice)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18283,7 +18283,7 @@
     "list": "Oem",
     "description": "Nokia implementation of com.android.managedprovisioning? If so it manages Android user accounts, allowing you to add extra accounts. The typical use-case is setting up a corporate profile that is controlled by the employer on an employee's personal device, to keep personal and work data separate.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18292,7 +18292,7 @@
     "list": "Oem",
     "description": "Theme overlay for Managed Provisioning?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18301,7 +18301,7 @@
     "list": "Oem",
     "description": "Theme overlay for Managed Provisioning?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18310,7 +18310,7 @@
     "list": "Oem",
     "description": "Net Promoter Score\nPreinstalled survey.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18319,7 +18319,7 @@
     "list": "Oem",
     "description": "Theme overlay for Net Promoter Score?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18328,7 +18328,7 @@
     "list": "Oem",
     "description": "Theme overlay for Net Promoter Score?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18337,7 +18337,7 @@
     "list": "Oem",
     "description": "WTF is this? [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18346,7 +18346,7 @@
     "list": "Oem",
     "description": "Adds something (Nokia-)partner-related to your browser? Probably adds bookmarks.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18355,7 +18355,7 @@
     "list": "Oem",
     "description": "Theme overlay for some browser customization?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18364,7 +18364,7 @@
     "list": "Oem",
     "description": "Theme overlay for some browser customization?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18373,7 +18373,7 @@
     "list": "Oem",
     "description": "???? [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18382,7 +18382,7 @@
     "list": "Oem",
     "description": "Theme overlay for the dialer app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18391,7 +18391,7 @@
     "list": "Oem",
     "description": "Drains more battery than it saves.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18400,7 +18400,7 @@
     "list": "Oem",
     "description": "Theme overlay for Power Monitor?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18409,7 +18409,7 @@
     "list": "Oem",
     "description": "Theme overlay for Power Monitor?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18418,7 +18418,7 @@
     "list": "Oem",
     "description": "Theme overlay for the downloads app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18427,7 +18427,7 @@
     "list": "Oem",
     "description": "Provider for the Nokia weather app.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18436,7 +18436,7 @@
     "list": "Oem",
     "description": "Related to push notifications for Nokia apps?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18445,7 +18445,7 @@
     "list": "Oem",
     "description": "Theme overlay for pushagent?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18454,7 +18454,7 @@
     "list": "Oem",
     "description": "Theme overlay for pushagent?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18463,7 +18463,7 @@
     "list": "Oem",
     "description": "Nokia retail demonstration mode\nhttps://en.wikipedia.org/wiki/Demo_mode",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18472,7 +18472,7 @@
     "list": "Oem",
     "description": "Theme overlay for Nokia retail demonstration mode?\nhttps://en.wikipedia.org/wiki/Demo_mode",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18481,7 +18481,7 @@
     "list": "Oem",
     "description": "Theme overlay for Nokia retail demonstration mode?\nhttps://en.wikipedia.org/wiki/Demo_mode",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18490,7 +18490,7 @@
     "list": "Oem",
     "description": "Overlay related to settings. Overlays are usually themes.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18499,7 +18499,7 @@
     "list": "Oem",
     "description": "Settings utils\n(crapy) Audio rendering. \nSee https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/9#note_369056538\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18508,7 +18508,7 @@
     "list": "Oem",
     "description": "The first-boot device setup wizard for new/factory reset devices.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18517,7 +18517,7 @@
     "list": "Oem",
     "description": "Theme overlay for Setup Wizard?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18526,7 +18526,7 @@
     "list": "Oem",
     "description": "Theme overlay for Setup Wizard?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18535,7 +18535,7 @@
     "list": "Oem",
     "description": "Theme overlay for Setup Wizard?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18544,7 +18544,7 @@
     "list": "Oem",
     "description": "Apparently used to stabilize phone usage.\nSeems to drain battery.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18553,7 +18553,7 @@
     "list": "Oem",
     "description": "Theme overlay for STB Monitor?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18562,7 +18562,7 @@
     "list": "Oem",
     "description": "Theme overlay for STB Monitor?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18571,7 +18571,7 @@
     "list": "Oem",
     "description": "Overlay related to Telecom data? Overlays are usually themes.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18580,7 +18580,7 @@
     "list": "Oem",
     "description": "Theme overlay for something telecom-related?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18589,7 +18589,7 @@
     "list": "Oem",
     "description": "Logging stuff",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18598,7 +18598,7 @@
     "list": "Oem",
     "description": "Theme overlay for Usage Stats Log?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18607,7 +18607,7 @@
     "list": "Oem",
     "description": "Theme overlay for the Nokia weather app?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18616,7 +18616,7 @@
     "list": "Oem",
     "description": "Service for the weather app",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18625,7 +18625,7 @@
     "list": "Oem",
     "description": "Sends diagnostic data to HMD (Company behind Nokia)?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18634,7 +18634,7 @@
     "list": "Oem",
     "description": "Theme overlay for a Nokia telemetry package?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18643,7 +18643,7 @@
     "list": "Oem",
     "description": "also called android-ss-service-lib (Samsung-exclusive)\nThird-party that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE : Never trust a company which promotes spam blocking features\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n\nHave a look at their privacy policy. That's... pretty scary : https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)",
     "dependencies": null,
-    "neededBy": "com.samsung.android.smartcallprovider",
+    "neededBy": ["com.samsung.android.smartcallprovider"],
     "labels": null,
     "removal": "Recommended"
   },
@@ -18652,7 +18652,7 @@
     "list": "Oem",
     "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub\nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18661,7 +18661,7 @@
     "list": "Oem",
     "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18670,7 +18670,7 @@
     "list": "Oem",
     "description": "Default 3D live stickers\nAnnoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18679,7 +18679,7 @@
     "list": "Oem",
     "description": "Annoying Stickers/stamps of the Samsung camera app. C'mon it feels like Snapshat.\nhttps://developer.samsung.com/galaxy/stickers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18688,7 +18688,7 @@
     "list": "Oem",
     "description": "I think it enable doing things with LEDs on the cover\n\nhttps://www.samsung.com/hk_en/mobile-accessories/led-cover-for-galaxy-s10/EF-KG973CBEGWW/\nHOW IT WORKS : https://forum.xda-developers.com/galaxy-note-8/accessories/how-led-cover-t3686694",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18697,7 +18697,7 @@
     "list": "Oem",
     "description": "Samsung Gear VR (Virtual Reality) setup wizard (https://en.wikipedia.org/wiki/Samsung_Gear_VR)\nhttps://360samsungvr.com/portal/content/about_samsung_vr\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java\nSetup wizard : The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung VR services.\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18706,7 +18706,7 @@
     "list": "Oem",
     "description": "Bixby Voice Stub",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18715,7 +18715,7 @@
     "list": "Oem",
     "description": "Bixby stuff [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18724,7 +18724,7 @@
     "list": "Oem",
     "description": "Bixby stuff [MORE INFO NEEDED]",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18733,7 +18733,7 @@
     "list": "Oem",
     "description": "Bixby Service",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18742,7 +18742,7 @@
     "list": "Oem",
     "description": "Bixby service needed for voice control",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18751,7 +18751,7 @@
     "list": "Oem",
     "description": "Bixby voice wake-up",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18769,7 +18769,7 @@
     "list": "Oem",
     "description": "KNOX Work profile/space\nProvidess an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18778,7 +18778,7 @@
     "list": "Oem",
     "description": "Private mode (was replaced by Secure Folder)\nhttps://www.samsung.com/uk/support/mobile-devices/what-is-private-mode-and-how-do-i-use-it/\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18787,7 +18787,7 @@
     "list": "Oem",
     "description": "Set of hidden network settings (inlcuding frequency band choice).\nHow to see these settings: https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -18796,7 +18796,7 @@
     "list": "Oem",
     "description": "System UI for Bixby/Bixby2",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18805,7 +18805,7 @@
     "list": "Oem",
     "description": "Samsung Verizon Voicemail\nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18814,7 +18814,7 @@
     "list": "Oem",
     "description": "Asus Easy Mode (https://play.google.com/store/apps/details?id=com.asus.easylauncher)\nAlternative launcher with bigger icons and simpler interface",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18823,7 +18823,7 @@
     "list": "Oem",
     "description": "ZenUI Help (https://play.google.com/store/apps/details?id=com.asus.userfeedback)\nCustomer service app that provides FAQs, Mobile care service, user feedback, and public forums.\nLots of telemetry (insecure on top of that):\nhttps://beta.pithus.org/report/e80a1fa70adc097fc9817720b5c8c81cfd156a76e6d062759b2bc3d6937a97e7",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18832,7 +18832,7 @@
     "list": "Oem",
     "description": "Huawei Weather app (and its widget)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18841,7 +18841,7 @@
     "list": "Oem",
     "description": "Huawei Weather app (and its widget)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18850,7 +18850,7 @@
     "list": "Oem",
     "description": "Wi-Fi Direct feature.\nNote: Wifi direct enables devices to establish a direct Wi-Fi connection (without a router) over which the two can send and receive files.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18859,7 +18859,7 @@
     "list": "Oem",
     "description": "A one-time setup app that is no longer needed",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18868,7 +18868,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18877,7 +18877,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18886,7 +18886,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18895,7 +18895,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18904,7 +18904,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18913,7 +18913,7 @@
     "list": "Oem",
     "description": "Live wallpapers",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18922,7 +18922,7 @@
     "list": "Oem",
     "description": "Huawei Mirror app.\nMirror like \"Glass\"",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18931,7 +18931,7 @@
     "list": "Oem",
     "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18940,7 +18940,7 @@
     "list": "Oem",
     "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18949,7 +18949,7 @@
     "list": "Oem",
     "description": "Core stuff for the package above I guess.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18958,7 +18958,7 @@
     "list": "Oem",
     "description": "See above. Provide special (useless) features from Comcast? App title is \"Activation\".Safe to remove (tested only on non-Comcast phone).\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18967,7 +18967,7 @@
     "list": "Oem",
     "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18976,7 +18976,7 @@
     "list": "Oem",
     "description": "Lets you see some info about your warranty and how long it will last.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -18985,7 +18985,7 @@
     "list": "Oem",
     "description": "Sony themes",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -18994,7 +18994,7 @@
     "list": "Oem",
     "description": "Sony themes",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -19003,7 +19003,7 @@
     "list": "Oem",
     "description": "Sony themes",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -19012,7 +19012,7 @@
     "list": "Oem",
     "description": "Sony themes",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -19021,7 +19021,7 @@
     "list": "Oem",
     "description": "Xperia Loops\nUseless and ugly live wallaper from Sony.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19030,7 +19030,7 @@
     "list": "Oem",
     "description": "SuperWallpaperEARTH / SuperWallpaperMARS\nLive/animated Xiaomi wallaper",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19039,7 +19039,7 @@
     "list": "Google",
     "description": "\"OK Google\" detection service.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19048,7 +19048,7 @@
     "list": "Google",
     "description": "Inbox by Gmail (Discontinued)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19057,7 +19057,7 @@
     "list": "Google",
     "description": "Google Maps GPS (https://play.google.com/store/apps/details?id=com.google.android.apps.navlite)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19066,7 +19066,7 @@
     "list": "Google",
     "description": "Allows Android apps to back up their data on Google servers. (On Android 4.2)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19075,7 +19075,7 @@
     "list": "Google",
     "description": "Android Setup\nThe new/factory reset device basic configuration setup guides you through the basics of setting up your device.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19084,7 +19084,7 @@
     "list": "Google",
     "description": "Overlay for setupwizard?",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19093,7 +19093,7 @@
     "list": "Google",
     "description": "YouTube (https://play.google.com/store/apps/details?id=com.google.android.youtube)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19102,7 +19102,7 @@
     "list": "Google",
     "description": "AOSP Mail client\nNewer versions of AOSP Mail are renamed to com.android.email and Gmail was migrated to com.google.android.gm",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19111,7 +19111,7 @@
     "list": "Google",
     "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone\nOther exemple : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19120,7 +19120,7 @@
     "list": "Misc",
     "description": "Excel",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19129,16 +19129,16 @@
     "list": "Misc",
     "description": "Word",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
   {
     "id": "com.microsoft.office.outlook",
     "list": "Misc",
-    "description": "",
-    "dependencies": "Outlook",
-    "neededBy": "",
+    "description": "Outlook",
+    "dependencies": null,
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19147,7 +19147,7 @@
     "list": "Misc",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You’ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19156,7 +19156,7 @@
     "list": "Misc",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You’ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19165,7 +19165,7 @@
     "list": "Misc",
     "description": "Tidal Music (https://play.google.com/store/apps/details?id=com.aspiro.tidal)\nMusic streaming app",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19174,7 +19174,7 @@
     "list": "Misc",
     "description": "DraftKings - Daily Fantasy Sports for Cash\nApp has been removed from the Playstore.\nWorth reading : https://en.wikipedia.org/wiki/DraftKings",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19183,7 +19183,7 @@
     "list": "Misc",
     "description": "1Weather (https://play.google.com/store/apps/details?id=com.handmark.expressweather)\nForecasts alerts app (contain ads)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19192,7 +19192,7 @@
     "list": "Misc",
     "description": "Opera Max (discontinued)\nSystem-wide data-saving proxy that funnell all app data through Opera’s servers to compress images and videos",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19201,7 +19201,7 @@
     "list": "Misc",
     "description": "India News (https://play.google.com/store/apps/details?id=com.til.timesnews)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19210,7 +19210,7 @@
     "list": "Misc",
     "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses.\nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19219,7 +19219,7 @@
     "list": "Misc",
     "description": "Font",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19228,7 +19228,7 @@
     "list": "Misc",
     "description": "Font",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19237,7 +19237,7 @@
     "list": "Misc",
     "description": "Font",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19246,7 +19246,7 @@
     "list": "Misc",
     "description": "ANT+ plugin service (https://play.google.com/store/apps/details?id=com.dsi.ant.plugins.antplus)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19255,7 +19255,7 @@
     "list": "Aosp",
     "description": "Default Print Service.\nGeneric printing service that should work with most printers.\nWill break printing functionality if disabled, but other replacement print services can be downloaded from the Play Store.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19264,7 +19264,7 @@
     "list": "Aosp",
     "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often change the default signature displayed the end of each of your mail (e.g \"Sent from my Nokia phone\")",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
@@ -19273,7 +19273,7 @@
     "list": "Aosp",
     "description": "Enables you to pick a live wallpaper. Removing it will break some weather applications (especially ones with widgets) and wallpaper applications like Muzei.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19282,7 +19282,7 @@
     "list": "Pending",
     "description": "CBattery drain related on S10",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -19291,7 +19291,7 @@
     "list": "Oem",
     "description": "Samsung Payment Services\nRemoving this package will LOCK YOU OUT of your device with a full-screen overlay message saying that Device Services was uninstalled in an unauthorised manner. This is persistent upon reboots until a factory data reset is initiated. Filesystem can still be accessed if ADB permissions were granted beforehand.\nUnless you know what you're doing, you shouldn't uninstall this package.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Unsafe"
   },
@@ -19300,7 +19300,7 @@
     "list": "Oem",
     "description": "LG Update Center\nProvide Android upgrade and LG updates (Settings --> System --> Update Center)\nI believe you won't receive any updates if this packages is deleted.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19309,7 +19309,7 @@
     "list": "Oem",
     "description": "LG Black theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
@@ -19318,7 +19318,7 @@
     "list": "Oem",
     "description": "LG White theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19327,7 +19327,7 @@
     "list": "Oem",
     "description": "LG High Contrast theme.\nSafe to remove, but also probably pointless to do so as most theme packages are just data containers.\nMake sure you don't delete the package for the theme you're currently using, I don't know what will happen then.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19336,7 +19336,7 @@
     "list": "Oem",
     "description": "Always On Display.\nProbably a battery killer without an OLED screen.\nDisabling will remove the connected menu in the settings app.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19345,7 +19345,7 @@
     "list": "Oem",
     "description": "Equalizer settings.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19354,7 +19354,7 @@
     "list": "Oem",
     "description": "It looks like the Microsoft outlook/email in the logo. Believe this is some sort of microsoft integration.\nI don't 100% remember if I was able to add accounts to the phone still (eg. Nextcloud), I need to test that soon.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19363,7 +19363,7 @@
     "list": "Oem",
     "description": "Task storage\nProbably related to the task app (another bloatware). I say its safe to remove if you don't use it.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19372,7 +19372,7 @@
     "list": "Oem",
     "description": "Settings/features for games, such as resolution and frame rate limiting.\nA little side note, any games installed in the work profile can't use gametuner (maybe if you install this package into the work profile it'll work)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19381,7 +19381,7 @@
     "list": "Oem",
     "description": "I have never seen this menu in the settings app. I say its safe to remove. I can't think of any use case for this setting, it just allows you to change where you're allowed to touch the screen",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19390,7 +19390,7 @@
     "list": "Oem",
     "description": "Icon looks like email configuration. I'd say it's safe to remove. Probably related to the stock email app.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19399,7 +19399,7 @@
     "list": "Oem",
     "description": "I have no idea what it is, maybe some drawing program related to rcs. I removed it.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19408,7 +19408,7 @@
     "list": "Oem",
     "description": "Face Recognition\nRemove if you don't need it. If you want security I don't think this is a good idea to use it.",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19417,7 +19417,7 @@
     "list": "Oem",
     "description": "Multitasking framework\nAllows you to use multitasking features like multiple apps in one screen.\nDoes not remove screen pinning feature.\nI don't know if this removes the floating windows feature that you have to enable with ADB (to make it look more like a desktop)",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Advanced"
   },
@@ -19426,7 +19426,7 @@
     "list": "Misc",
     "description": "T-Mobile Diagnostics\n",
     "dependencies": null,
-    "neededBy": "",
+    "neededBy": null,
     "labels": null,
     "removal": "Recommended"
   },
