@@ -12944,8 +12944,8 @@
   {
     "id": "com.heytap.cloud",
     "list": "Oem",
-    "description": "HeyTap Cloud\n",
-    "dependencies": null,
+    "description": "HeyTap Cloud\nBad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html\nWhy does the app needs REQUEST_INSTALL_PACKAGES (can install packages)?\nPithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
+    "dependencies": ["com.heytap.mcs"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19877,6 +19877,42 @@
     "description": "Telemetry. Make requests (with weak crypto) to the Shalltry CDN (https://mi-test.shalltry.com). Collects IMEI, all the apps installed, localisation...\nPithus analysis: https://beta.pithus.org/report/9be13b57bde5620d2ff1824782a2ccc1d6517d437543549c720bc70b6dd02aee",
     "dependencies": null,
     "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.cosa",
+    "list": "Oem",
+    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.synergy",
+    "list": "Oem",
+    "description": "HeySynergy\nProvides the screencasting feature and OPPO's PC Connect (https://connect.oppo.com/). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone.\n\nPithus analysis: https://beta.pithus.org/report/16d9ea536683291fbffe46dedd3c655379b5fcfdb473ec1cab5290cf5af27fba",
+    "dependencies": ["com.heytap.mcs", "com.heytap.accessory"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.accessory",
+    "list": "Misc",
+    "description": "Accessory Framework\nQuick device connect feature. Can be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> Quick device connect) if not wanted.\nAllows you to search for nearby devices and connect to them without having to go through the Bluetooth or WiFi Direct settings' Ghosh! 32 permissions just for this?\n\nPithus analysis: https://beta.pithus.org/report/cc0ba95f0d0867ba6d883275cd2f6c4aa252ebc874f15f1ee240bb5bac330578",
+    "dependencies": ["com.heytap.mcs"],
+    "neededBy": ["com.oplus.synergy"],
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.mcs",
+    "list": "Misc",
+    "description": "System messages\n. Mobile Cloud Service? Message Controler System?.\nMy understanding is that this packages implements the communication logic of the Heytap services. It provides a MQTT client (and Firebase Cloud Manager for users outside of China) which frequently talks to heytapmobile.com. You can safely remove this package if you don't have a Heytap account.\nRuns constantly in the background\nPithus analysis: https://beta.pithus.org/report/8920395af63782fca8dfce18715a10ca5a2d8236d525208ea347eff8f738731e",
+    "dependencies": null,
+    "neededBy": ["com.heytap.cloud", "com.heytap.market", "com.oplus.synergy", "com.heytap.accessory"],
     "labels": null,
     "removal": "Recommended"
   }
