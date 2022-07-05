@@ -12944,8 +12944,8 @@
   {
     "id": "com.heytap.cloud",
     "list": "Oem",
-    "description": "HeyTap Cloud\n",
-    "dependencies": null,
+    "description": "HeyTap Cloud\nBad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html\nWhy does the app needs REQUEST_INSTALL_PACKAGES (can install packages)?\nPithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
+    "dependencies": ["com.heytap.mcs"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -19896,7 +19896,7 @@
     "dependencies": ["com.heytap.mcs", "com.heytap.accessory"],
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.heytap.accessory",
@@ -19905,7 +19905,7 @@
     "dependencies": ["com.heytap.mcs"],
     "neededBy": ["com.oplus.synergy"],
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.heytap.mcs",
