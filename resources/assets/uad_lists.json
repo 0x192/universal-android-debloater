@@ -6581,7 +6581,7 @@
   {
     "id": "com.android.galaxy4",
     "list": "Aosp",
-    "description": "built-in Dynamic wallpaper\n",
+    "description": "Built-in Dynamic wallpaper\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -6783,7 +6783,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.bluetooth",
@@ -6806,11 +6806,11 @@
   {
     "id": "com.android.browser.provider",
     "list": "Aosp",
-    "description": "Strange package. It is old (2014) and there is a hardcoded Picasa URL in the code\nhttps://android.googlesource.com/platform/packages/apps/Browser/+/refs/heads/master/src/com/android/browser/provider/BrowserProvider.java\nRelated to bookmarks but removing it doesn't seems to affect anything visible.\n",
+    "description": "Old package (2014). Chrome bookmarks provider? Injects Picasa URL (http://picasaweb.google.com) in the Chrome browser's bookmarks in the browser.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.calendar",
@@ -6927,7 +6927,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.gallery3d",
@@ -6945,7 +6945,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.inputdevices",
@@ -7125,7 +7125,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.pacprocessor",
@@ -7134,7 +7134,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.phone.recorder",
@@ -7148,11 +7148,11 @@
   {
     "id": "com.android.printservice.recommendation",
     "list": "Aosp",
-    "description": "I think this has to do with recommending a printservice app you can get from the Play store.\nI think printing still works with this off.",
+    "description": "Recommends 3rd-party print services apps in the PlayStore. Printing will probably still works without (by using the default print service).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.printspooler",
@@ -7170,7 +7170,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.calendar",
@@ -7179,7 +7179,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.drm",
@@ -7188,16 +7188,16 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.providers.userdictionary",
     "list": "Aosp",
-    "description": "Handles user dictionary for keyboard apps.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
+    "description": "Handles user dictionary for keyboard apps.\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html. WARNING: Removing this package may cause settings menu to crash on some Huawei phones",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.proxyhandler",
@@ -7206,7 +7206,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Exert"
   },
   {
     "id": "com.android.quicksearchbox",
@@ -7287,7 +7287,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.voicedialer",
@@ -7296,7 +7296,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.wallpaperpicker",
@@ -8147,7 +8147,7 @@
   {
     "id": "com.android.protips",
     "list": "Aosp",
-    "description": "Home screen tips\nRuns on boot.\nThe tip popups you get on the homescreen. Likely useless.",
+    "description": "Home screen tips\nRuns on boot.\nThe tip popups you get on the homescreen.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
