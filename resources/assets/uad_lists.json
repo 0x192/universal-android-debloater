@@ -16031,7 +16031,7 @@
   {
     "id": "com.xiaomi.scanner",
     "list": "Oem",
-    "description": "Mi Scanner\nLets you scan documents, crop, adjust grayscale and OCR.\n",
+    "description": "Mi Scanner\nQR code scanner with a lot of questionnable permissions : ACCESS_FINE_LOCATION, CALL_PHONE, READ_CONTACTS, REQUEST_INSTALL_PACKAGES, QUERY_ALL_PACKAGES, FOREGROUND_SERVICE, INTERNET\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
