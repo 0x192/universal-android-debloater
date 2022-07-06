@@ -44,6 +44,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Oppo  
 * [X] Samsung
 * [X] Sony
+* [X] Tecno
 * [ ] TCL
 * [ ] Wiko
 * [X] Xiaomi
