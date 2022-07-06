@@ -19910,9 +19910,9 @@
   {
     "id": "com.nearme.deamon",
     "list": "Oem",
-    "description": "[MORE INFO NEEDED] Has the ability to install and remove packages",
+    "description": "Package needed by com.nearme.statistics.rom to run service in background at every boot even though the app has been uninstalled",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": "com.nearme.statistics.rom",
     "labels": null,
     "removal": "Recommended"
   },
