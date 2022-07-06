@@ -6149,7 +6149,7 @@
   {
     "id": "com.sec.android.app.myfiles",
     "list": "Oem",
-    "description": "Samsung file manager app (https://play.google.com/store/apps/details?id=com.sec.android.app.myfiles) \n",
+    "description": "Samsung file manager app (https://play.google.com/store/apps/details?id=com.sec.android.app.myfiles)\nWARNING: If you remove this package on Android 10+, you will no longer be able to manage storage the same way as before. For example you will lose the ability to unmount or format the SD card from within the Settings app.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
