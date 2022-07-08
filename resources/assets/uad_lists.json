@@ -4952,7 +4952,7 @@
   {
     "id": "com.sec.android.app.sbrowser",
     "list": "Oem",
-    "description": "Samsung web browser (https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser)\n",
+    "description": "Samsung web browser (https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser)\n\nDon't use this browser. In their privacy policy: \"The information we obtain [...] include, identifiers associated with your devices, types of devices, web browser characteristics, device and operating system type and characteristics, language preferences, clickstream data, your interactions with Samsung Internet (such as the web pages you visit, links you click and features you use), dates and times of your use of Samsung Internet, and other information about your use of Samsung Internet\"\nhttps://developer.samsung.com/internet/privacy-policy-us.html",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4961,7 +4961,7 @@
   {
     "id": "com.sec.android.app.sbrowser.lite",
     "list": "Oem",
-    "description": "Samsung web browser lite\n",
+    "description": "Samsung web browser lite\nLite version of the Samsung browser (hah! Because the base one was too bloated?)\nDon't use this browser. In their privacy policy: \"The information we obtain [...] include, identifiers associated with your devices, types of devices, web browser characteristics, device and operating system type and characteristics, language preferences, clickstream data, your interactions with Samsung Internet (such as the web pages you visit, links you click and features you use), dates and times of your use of Samsung Internet, and other information about your use of Samsung Internet\"\nhttps://developer.samsung.com/internet/privacy-policy-us.html",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17705,7 +17705,7 @@
   {
     "id": "com.google.android.gm.lite",
     "list": "Google",
-    "description": "Gmail Go (https://play.google.com/store/apps/details?id=com.google.android.gm.lite)",
+    "description": "Gmail Go (https://play.google.com/store/apps/details?id=com.google.android.gm.lite)\nLite version of the Gmail app (hah! Because the base one is too bloated?). Don't use this app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19100,7 +19100,7 @@
   {
     "id": "com.google.android.apps.youtube.mango",
     "list": "Google",
-    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango)",
+    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango)\nLite version of the Youtube app. Shutdown by Google in august 2022.\nhttps://support.google.com/youtube/thread/162222567/youtube-go-is-going-away-in-august-of-this-year",
     "dependencies": null,
     "neededBy": "",
     "labels": null,
