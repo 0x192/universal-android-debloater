@@ -30,7 +30,7 @@ jobs:
           - update_feature: self-update
             update_name: '' # we don't want this in the binary filename
           - update_feature: no-self-update
-            update_name: "-noseflupdate"
+            update_name: "-noselfupdate"
     steps:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1

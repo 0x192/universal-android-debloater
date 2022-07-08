@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.5.1] - 2022-07-03
+
+Since `0.5.0`, all changes related to apps are available to users without downloading a new version of UAD as the software directly download the json debloat list from Github. These changes can be tracked in commits with `[Pkg]` in their name. [See the commits](https://github.com/0x192/universal-android-debloater/commits/main)
+
+### Added
+- [[#209](https://github.com/0x192/universal-android-debloater/issues/209)] Persistent highlighting when you click on a package
+
+### Changed
+- `neededBy` and `dependencies` field can now list multiple packages (feature not visible in the UI yet)
+
+### Fixed
+- [[#286](https://github.com/0x192/universal-android-debloater/issues/286)] UAD stuck on "Downloading UAD lists. Please wait" screen
+
+## Packaging
+- [[#256](https://github.com/0x192/universal-android-debloater/issues/256)] Fixed typo in the release name of the noseflupdate variation
+- Bump dependencies
+
 ## [0.5.0] - 2022-04-03
 
 ### Apps
@@ -35,6 +52,8 @@ Huge thanks to [@KarlRamstedt](https://github.com/KarlRamstedt) for their help i
 ### Packaging
 - Add a `no-self-update` build for MacOS and Linux. Useful if UAD is distributed into repositories. The update process will then be managed by a package manager.
 - MacOS builds are now also be released as a compressed tarball (like for Linux). You won't need to manually add the executable permission anymore. ([more info](https://github.com/actions/upload-artifact/issues/38))
+- Bump dependencies
+
 
 ## [0.4.1] - 2022-01-31
 
@@ -74,6 +93,8 @@ Huge thanks to [@KarlRamstedt](https://github.com/KarlRamstedt) for their help i
 
 ### Packaging
 - For Arch-based users, UAD is now available in the AUR: `universal-android-debloater-bin` (binary) and `universal-android-debloater` (from source)
+- Bump dependencies
+
 
 ## [0.3] - 2021-10-10
 
