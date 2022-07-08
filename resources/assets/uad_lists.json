@@ -19550,7 +19550,7 @@
   {
     "id": "com.huawei.fastapp",
     "list": "Oem",
-    "description": "Component of AppGallery (Huawei's app store) for installing Quick Apps",
+    "description": "Component of AppGallery (Huawei's app store) providing Quick Apps support. Quick Apps are Javascript+CSS apps that don't need any installation. This technology has its uses but I'm personally not a huge on having to rely on a JS engine to run an application\nMore information: https://www.xda-developers.com/huawei-quick-apps-alternative-google-instant-apps/\n OW2 Quick App whitepaper: https://quick-app-initiative.ow2.io/docs/Quick_App_White_Paper.pdf",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
