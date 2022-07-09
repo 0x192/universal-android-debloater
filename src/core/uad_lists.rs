@@ -12,10 +12,10 @@ use std::path::{Path, PathBuf};
 pub struct Package {
     id: String,
     pub list: UadList,
-    pub description: Option<String>,
-    dependencies: Option<Vec<String>>,
-    needed_by: Option<Vec<String>>,
-    labels: Option<Vec<String>>,
+    pub description: String,
+    dependencies: Vec<String>,
+    needed_by: Vec<String>,
+    labels: Vec<String>,
     pub removal: Removal,
 }
 
@@ -251,5 +251,15 @@ fn get_local_lists() -> Vec<Package> {
         serde_json::from_str(&data).expect("Unable to parse")
     } else {
         serde_json::from_str(DATA).expect("Unable to parse")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn assert_parse_json() {
+        const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
+        let _:Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
     }
 }
