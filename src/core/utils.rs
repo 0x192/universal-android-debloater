@@ -185,10 +185,11 @@ pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Ve
 }
 
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
-    let metadata = fs::metadata(file).unwrap();
-
-    match metadata.modified() {
-        Ok(time) => time.into(),
+    match fs::metadata(file) {
+        Ok(metadata) => match metadata.modified() {
+            Ok(time) => time.into(),
+            Err(_) => Utc::now(),
+        },
         Err(_) => Utc::now(),
     }
 }
