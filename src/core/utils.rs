@@ -36,7 +36,7 @@ pub fn fetch_packages(
 
         if uad_lists.contains_key(p_name) {
             description = &uad_lists.get(p_name).unwrap().description;
-            if description.is_empty(){
+            if description.is_empty() {
                 description = "[No description] : CONTRIBUTION WELCOMED"
             };
             uad_list = uad_lists.get(p_name).unwrap().list;
