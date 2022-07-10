@@ -1,5 +1,14 @@
 [
   {
+    "id": "ca.bell.wt.android.tunesappswidget",
+    "list": "Carrier",
+    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget) provided by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.sony.tvsideview.videoph",
     "list": "Oem",
     "description": "Video & TV SideView (replaced by https://play.google.com/store/apps/details?id=com.sony.tvsideview.phone)\nLets you use your smartphone or tablet as a TV remote control for the home. \n",
@@ -2474,6 +2483,15 @@
     "labels": null,
     "removal": "Recommended"
   },
+  {
+    "id": "com.android.messaging",
+    "list": "Oem",
+    "description": "Android messaging app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
   {
     "id": "com.huawei.hidisk",
     "list": "Oem",
@@ -5273,6 +5291,15 @@
     "labels": null,
     "removal": "Recommended"
   },
+  {
+    "id": "com.android.screenshot",
+    "list": "Oem",
+    "description": "The android screenshot tool. Probably safe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+    },
   {
     "id": "com.sec.android.provider.snote",
     "list": "Oem",
