@@ -8856,6 +8856,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.oneplus.chargingpilar",
+    "list": "Oem",
+    "description": "Attempts to find specific charging stations nearby",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oneplus.cloud.basiccolorblack.overlay",
     "list": "Oem",
     "description": "Theme overlay for some Oneplus Cloud thing?",
@@ -12771,6 +12780,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.coloros.activation",
+    "list": "Oem",
+    "description": "Maybe contacts Oppo servers for some sort of verification?",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
     "id": "com.coloros.appmanager",
     "list": "Oem",
     "description": "",
@@ -12994,6 +13012,15 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.statistics.rom",
+    "list": "Oem",
+    "description": "Breaks the search function in the Settings app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.nearme.themestore",
@@ -19947,6 +19974,33 @@
     "id": "com.oplus.games",
     "list": "Oem",
     "description": "Games (https://play.google.com/store/apps/details?id=com.oplus.games)\nOccasionally runs in the background as part of the system.\nAllows you to launch your game library, check game stats(such as playtime), activate game overlay features and performance settings to tweak game/battery performance during gaming.\nThis is the only way to access the recording buffer functionality (records the last X seconds into RAM and saves them when you tap save), so keep enabled if you need that or any of the other features.Note: new package name of com.oneplus.gamespace (since the merge between Oppo and OnePlus. Oplus = Oppo+OnePlus",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.logkit",
+    "list": "Oem",
+    "description": "Probably same as \"com.oem.oemlogkit\", which is a shady logging package on OnePlus devices.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.ocar",
+    "list": "Oem",
+    "description": "Related to Oppo's car app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.wifibackuprestore",
+    "list": "Oem",
+    "description": "Likely an application that makes data transfer easier across phones (via Wi-Fi).\nhttps://www.apkmirror.com/apk/oppo/wifibackuprestore-4/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
