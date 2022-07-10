@@ -15993,6 +15993,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.macro",
+    "list": "Oem",
+    "description": "MiMacro is an automation task on your Android like touch on MIUI Game Turbo.\nhttps://www.apkmirror.com/apk/xiaomi-inc/mimacro/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.midrop.overlay",
     "list": "Oem",
     "description": "Mi Drop overlay\nOverlays are usually themes.",
