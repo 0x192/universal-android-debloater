@@ -38,6 +38,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Fairphone
 * [ ] HTC
 * [X] Huawei
+* [X] iQOO (Vivo sub-brand)
 * [X] Motorola
 * [X] Nokia
 * [X] OnePlus
