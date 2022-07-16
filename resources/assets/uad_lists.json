@@ -19935,6 +19935,33 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.appplatform",
+    "list": "Oem",
+    "description": "Might be renamed package of com.heytap.appplatform which is related to Oppo's Heytap account services.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.athena",
+    "list": "Oem",
+    "description": "This package kills background processes; removing it will solve delay issues but disable the virtual ram and 'close all' button in the 'recent apps' page.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.atlas",
+    "list": "Oem",
+    "description": "Should perform like a free antivirus.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
     "id": "com.oplus.cosa",
     "list": "Oem",
     "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde",
@@ -19942,6 +19969,42 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.crashbox",
+    "list": "Oem",
+    "description": "Sends system failure data to developers.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.exsystemservice",
+    "list": "Oem",
+    "description": "The screenshot function will stop working when the app is disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.statistics.rom",
+    "list": "Oem",
+    "description": "Allows sending user data (can be opted out of). Breaks search functionality in the Settings app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.stdid",
+    "list": "Oem",
+    "description": "Needed for tracking battery usage on per app basis.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
   },
   {
     "id": "com.oplus.synergy",
@@ -19974,6 +20037,15 @@
     "id": "com.oplus.games",
     "list": "Oem",
     "description": "Games (https://play.google.com/store/apps/details?id=com.oplus.games)\nOccasionally runs in the background as part of the system.\nAllows you to launch your game library, check game stats(such as playtime), activate game overlay features and performance settings to tweak game/battery performance during gaming.\nThis is the only way to access the recording buffer functionality (records the last X seconds into RAM and saves them when you tap save), so keep enabled if you need that or any of the other features.Note: new package name of com.oneplus.gamespace (since the merge between Oppo and OnePlus. Oplus = Oppo+OnePlus",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.lfeh",
+    "list": "Oem",
+    "description": "Seems to be related to the the logging suite.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
