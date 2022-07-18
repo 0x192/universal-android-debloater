@@ -4853,7 +4853,7 @@
   {
     "id": "com.sec.android.app.DataCreate",
     "list": "Oem",
-    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*# (Status of data usage) \n- *#273283*255*3282*# (Data create menu) \n- *#*#273283*255*663282*#*#* (Backup all media files)\n", 
+    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*# (Status of data usage) \n- *#273283*255*3282*# (Data create menu) \n- *#*#273283*255*663282*#*#* (Backup all media files)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8109,15 +8109,6 @@
     "removal": "Unsafe"
   },
   {
-    "id": "com.android.fmradio",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
     "id": "com.mediatek.gba",
     "list": "Pending",
     "description": "",
@@ -8161,15 +8152,6 @@
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
-  },
-  {
-    "id": "com.mediatek.simprocessor",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
   },
   {
     "id": "com.mediatek.mms.appservice",
@@ -17732,7 +17714,7 @@
   {
     "id": "com.google.android.webview",
     "list": "Google",
-    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\n Based on Chrome\nlack of a WebView will cause some APPs to not function properly.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19978,6 +19960,231 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.tiqiaa.remote",
+    "list": "Oem",
+    "description": "ZazaRemote: A Universal Remote APP.\n It appears to be (https://app.mi.com/details?id=com.tiqiaa.icontrol) from the Xiaomi APP store\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.toolbox",
+    "list": "Oem",
+    "description": "Toolbox: contains a bunch a small utilites, most have there own APP but are only accessible from the Toolbox UI\nincluded; Noise test, Compass, Flashlight, Bubble Level, Picture Hanging, Heart rate, Measure height,\n Magnifier,Alarm, Plumb Bob, Protractor, Speedometer & a Pedometer.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.usbcamera",
+    "list": "Oem",
+    "description": "Toolbox > \"USB Camera\" Only usefull if you want to use a USB Camera\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game mode: Blocks calls & notifacations when selected APP's are open\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.newsos",
+    "list": "Oem",
+    "description": "SOS: a software application that can notify emergency contacts,\n reduce the power consumption of mobile phones,/n and extend standby time in order to wait for effective rescue. \n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.nfc",
+    "list": "Oem",
+    "description": "NFC card emulation: simulates various types of unencrypted entrance cards.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.fmradio",
+    "list": "Oem",
+    "description": "FM Radio: Plug in Head phones & listen to the Radio!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.haoba.btsmart",
+    "list": "Oem",
+    "description": "Agui_Unibuds: No icon, 90% sure only used if you use Uniherts Ear Buds(Unibuds).\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.scanning.agold.agoldscanning",
+    "list": "Oem",
+    "description": "\"Scan\" Settings > intelagent assistant: Scan. QR code & Bar code scanner.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "I forgot, please make this description better .... Ok ok i think it locks down your phone to reduce destractions\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mediatek.simprocessor",
+    "list": "Pending",
+    "description": "No icon, safe to remove but i have no idea what it does.\n acoording to https://www.olorin.me/2020/02/11/debloating-the-umidigi-f2/\n\"These control and import contacts saved on a SIM card. Not needed if you sync contacts with Google.\"\n (this https://www.jianshu.com/p/001dcf62d4eb may have more info)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+      "removal": "Advanced"
+  },
+  {
+    "id": "com.mediatek.ims.pco",
+    "list": "Pending",
+    "description": "No icon, Verizon activation according to reddit user u/opasly_wieprz)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+      "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.update",
+    "list": "Oem",
+    "description": "\"Wireless Update\" Settings > About Phone : Sytem update.\n Removing will prevent Automatic Wireless Updates\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "ccom.agui.update.overlay",
+    "list": "Oem",
+    "description": "Some how related to \"com.agui.update\",\n not sure why there are so many with a .overlay version\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.screenshot",
+    "list": "Oem",
+    "description": "Screenshot: provides the ability to take a screen shot,\n called on when double tapping the Red Button by defult\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.batterystatsdumper",
+    "list": "Oem",
+    "description": "No icon, \"Battery Stats Dumper\" used in diagnostics of battery drain.\n Enter *#*#010#*#* in the dial pad to access\n How to use PDF (https://drive.google.com/file/d/1t27zrsmeMh6FdWuFqQs6nh3HUabsUhyj/view?usp=sharing)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.app.imei",
+    "list": "Oem",
+    "description": "IMEI Tool: Change MEID's & IMEI's of both SIM's\nEnter *#*#08#*#* in the dial pad to access\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.appblock",
+    "list": "Oem",
+    "description": "\"App blocker\": Settings > intelagent assistant: App blocker\nReduce power consumption by restricting APPs\nRemoving this will disable it's function\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.providers.pedometer",
+    "list": "Oem",
+    "description": "Toolbox > \"Pedometer\" Pedometer/step counter\n It adds up all the steps you take during the day.\nbecause of a feature that integrates with the lock sceen the System UI crashes when removed,\n will eventually reboot into a revovery screen,\nrevoverable by reinstalling\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.agui.app.memtester",
+    "list": "Oem",
+    "description": "Used in disgnostics, normally invoked by MMI(Man-Machine Interface) Codes\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.cellbroadcastreceiver",
+    "list": "Pending",
+    "description": "One of Four\"Wireless emergency alerts\" related packages\nhttps://www.weather.gov/riw/WEA_Info\nhttps://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/public/wireless-emergency-alerts\nhttps://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea\nWireless Emergency Alerts (WEAs) are short emergency messages from Govermants authorities that are broadcasted from cell towers to\n WEA-enabled mobile devices in a locally targeted area. WEA is a partnership among FEMA,\n the Federal Communications Commission (FCC) and wireless providers to \"enhance public safety\".",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.cellbroadcastreceiver",
+    "list": "Pending",
+    "description": "One of Four\"Wireless emergency alerts\" related packages, this one being: CellBroadcastLegacyApp\nhttps://www.weather.gov/riw/WEA_Info\nhttps://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/public/wireless-emergency-alerts\nhttps://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea\nWireless Emergency Alerts (WEAs) are short emergency messages from Govermants authorities that are broadcasted from cell towers to\n WEA-enabled mobile devices in a locally targeted area. WEA is a partnership among FEMA,\n the Federal Communications Commission (FCC) and wireless providers to \"enhance public safety\".",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "list": "Pending",
+    "description": "One of Four\"Wireless emergency alerts\" related packages, this one being: AGoogleCellBroadcastConfigOverlay\nhttps://www.weather.gov/riw/WEA_Info\nhttps://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/public/wireless-emergency-alerts\nhttps://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea\nWireless Emergency Alerts (WEAs) are short emergency messages from Govermants authorities that are broadcasted from cell towers to\n WEA-enabled mobile devices in a locally targeted area. WEA is a partnership among FEMA,\n the Federal Communications Commission (FCC) and wireless providers to \"enhance public safety\".",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.cellbroadcastreceiver",
+    "list": "Pending",
+    "description": "One of Four\"Wireless emergency alerts\" related packages, this one being: GoogleCellBroadcastApp\nhttps://www.weather.gov/riw/WEA_Info\nhttps://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/public/wireless-emergency-alerts\nhttps://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea\nWireless Emergency Alerts (WEAs) are short emergency messages from Govermants authorities that are broadcasted from cell towers to\n WEA-enabled mobile devices in a locally targeted area. WEA is a partnership among FEMA,\n the Federal Communications Commission (FCC) and wireless providers to \"enhance public safety\".",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.cellbroadcastservice",
+    "list": "Pending",
+    "description": "One of Four\"Wireless emergency alerts\" related packages, this one being: GoogleCellBroadcastServiceModule\nhttps://www.weather.gov/riw/WEA_Info\nhttps://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/public/wireless-emergency-alerts\nhttps://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea\nWireless Emergency Alerts (WEAs) are short emergency messages from Govermants authorities that are broadcasted from cell towers to\n WEA-enabled mobile devices in a locally targeted area. WEA is a partnership among FEMA,\n the Federal Communications Commission (FCC) and wireless providers to \"enhance public safety\".",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.digitalturbine.toolbar",
