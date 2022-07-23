@@ -5780,11 +5780,11 @@
   {
     "id": "com.samsung.accessibility",
     "list": "Oem",
-    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone.",
+    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone.\n Also used for clearing system cache from apps such as SD-Maid.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.allshare.service.fileshare",
@@ -6374,11 +6374,11 @@
   {
     "id": "com.wssyncmldm",
     "list": "Oem",
-    "description": "Software update\nFetch System OTA updates\nWorks along with com.sec.android.soagent\n",
+    "description": "Software update\nFetch System OTA updates\nWorks along with com.sec.android.soagent\nRequired on Samsung Smartphones for OTA.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.applock",
