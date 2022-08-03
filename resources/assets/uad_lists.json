@@ -5816,7 +5816,7 @@
   {
     "id": "com.samsung.android.app.galaxyfinder",
     "list": "Oem",
-    "description": "S Finder is a search application that allows you to find what you want in an instant by searching the content on your \nGalaxy smartphone and on the web as well. (https://www.samsung.com/global/galaxy/what-is/s-finder/)\nNOTE : Removing this seems to also remove the search bar in the settings and the dialer. Can someone confirm?\n",
+    "description": "S Finder is a search application that allows you to find what you want in an instant by searching the content on your \nGalaxy smartphone and on the web as well. (https://www.samsung.com/global/galaxy/what-is/s-finder/)\nNOTE: Removing this removes the dialer. It also breaks the search in the app drawer. Search settings still work.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
