@@ -2945,16 +2945,16 @@
   {
     "id": "com.motorola.launcher3",
     "list": "Oem",
-    "description": "Motorola system Launcher\nIt's basically the home screen, the way icons apps are organized and displayed.\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER !\n",
+    "description": "Motorola system launcher\nA default home screen app, provides a layout and display for app icons and listing.\nRemoving this WILL make the home screen unreachable if you haven't set up another launcher app as default first.\nRemoving this WILL make the Recent Apps screen unreachable, since it also seems to provide that screen (tested on Android 12, sample size 1).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.motorola.launcherconfig",
     "list": "Oem",
-    "description": "Config file of the motorola launcher ? \nI guess launcher will not work anymore if you delete this package. Can someone confirm ?\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER !\n",
+    "description": "Config file of the motorola launcher? \nI guess launcher will not work anymore if you delete this package. Can someone confirm?\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER!\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
