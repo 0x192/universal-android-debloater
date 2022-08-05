@@ -2475,6 +2475,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.messaging",
+    "list": "Oem",
+    "description": "Android default messaging app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
+  {
     "id": "com.huawei.hidisk",
     "list": "Oem",
     "description": "Huawei File Manager app.\n",
@@ -3087,9 +3096,18 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.aura.oobe.samsung.gl",
+    "list": "Carrier",
+    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt is some kind of post-install recommended apps setup from the carrier. Asks for your age and gender and then recommends you to install popular apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.\nSee https://github.com/0x192/universal-android-debloater/issues/278",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.aura.oobe.samsung",
-    "list": "Oem",
-    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt's an app that promotes other apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.",
+    "list": "Carrier",
+    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt is some kind of post-install recommended apps setup from the carrier. Asks for your age and gender and then recommends you to install popular apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.\nSee https://github.com/0x192/universal-android-debloater/issues/278",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3287,11 +3305,11 @@
   {
     "id": "com.samsung.android.app.dressroom",
     "list": "Oem",
-    "description": "Samsung Wallpapers\nWallaper manager from the launcher. You can remove it and still set a wallpaper from the Gallery.\nHas INTERNET permission and... ACCESS_MEDIA_LOCATION\n",
+    "description": "Samsung Wallpapers\nWallaper manager. Needed to pick up a wallpaper on Android 10+.\nHas INTERNET permission and ACCESS_MEDIA_LOCATION\nBefore Android 10, you should still be able to set a wallpaper from the Samsung gallery without this package.\nWARNING: Removing this app will prevent you to set a new wallpaper on Android 10+ (even from the Gallery) or changing the Material You palette on Android 12+.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.app.episodes",
@@ -3971,11 +3989,11 @@
   {
     "id": "com.samsung.android.mdx.quickboard",
     "list": "Oem",
-    "description": "Media & Devices feature\nKind of a hub for managing medias played on smart devices (e.g play music to 2 Bluetooth devices simultaneously with Dual audio)\nhttps://www.samsung.com/latin_en/support/mobile-devices/media-and-device-feature/\nHas a lot of permissions and asks for ACESS_COARSE_LOCATION\nRemoving this package do not prevent you to connect your phones to smart devices.\n",
+    "description": "Media & Devices feature\nKind of a hub for managing medias played on smart devices (e.g play music to 2 Bluetooth devices simultaneously with Dual audio)\nhttps://www.samsung.com/latin_en/support/mobile-devices/media-and-device-feature/\nHas a lot of permissions and asks for ACCESS_COARSE_LOCATION, QUERY_ALL_PACKAGES.\nWARNING: Removing this package does not prevent you to connect your phones to smart devices, but oddly enough causes the brightness slider in the notification panel to not be displayed in landscape orientation (it's still shown in portrait)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.mobileservice",
@@ -5274,6 +5292,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.screenshot",
+    "list": "Oem",
+    "description": "Default android screenshot tool",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
+  {
     "id": "com.sec.android.provider.snote",
     "list": "Oem",
     "description": "Content provider for S Note (https://www.samsung.com/global/galaxy/apps/samsung-notes/).\nContent providers encapsulate data, providing centralized management of data shared between apps.\nhttps://developer.android.com/guide/topics/providers/content-providers.html",
@@ -5780,11 +5807,11 @@
   {
     "id": "com.samsung.accessibility",
     "list": "Oem",
-    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone.",
+    "description": "Accessibility settings (useful for apps creating virtual buttons such as a pie-menu)\nWeirdly, removing this package can cause a bootloop if you set a lock code on your phone.\n Also used for clearing system cache from apps such as SD-Maid.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.allshare.service.fileshare",
@@ -6374,11 +6401,11 @@
   {
     "id": "com.wssyncmldm",
     "list": "Oem",
-    "description": "Software update\nFetch System OTA updates\nWorks along with com.sec.android.soagent\n",
+    "description": "Software update\nFetch System OTA updates\nWorks along with com.sec.android.soagent\nRequired on Samsung Smartphones for OTA.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.applock",
@@ -6689,19 +6716,19 @@
   {
     "id": "com.android.stk2",
     "list": "Aosp",
-    "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nDo mind that disabling/uninstalling this package may break mobile identity management.",
+    "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for exemple your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
     "dependencies": null,
     "neededBy": null,
-    "labels": null,
+    "labels": ["mim"],
     "removal": "Advanced"
   },
   {
     "id": "com.android.stk",
     "list": "Aosp",
-    "description": "SIM toolkit\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nDo mind that disabling/uninstalling this package may break mobile identity management.",
+    "description": "SIM toolkit\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for exemple your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
     "dependencies": null,
     "neededBy": null,
-    "labels": null,
+    "labels": ["mim"],
     "removal": "Advanced"
   },
   {
@@ -15374,7 +15401,7 @@
   {
     "id": "com.miui.miwallpaper",
     "list": "Oem",
-    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.",
+    "description": "Mi Wallpaper\nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15987,6 +16014,15 @@
     "id": "com.xiaomi.midrop",
     "list": "Oem",
     "description": "Share Me (Mi Drop) (https://play.google.com/store/apps/details?id=com.xiaomi.midrop)\nP2P file transfer tool.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.xiaomi.macro",
+    "list": "Oem",
+    "description": "MiMacro is an automation task from Xiaomi like touch on MIUI Game Turbo.\nHas INTERNET and READ_PHONE_STATE permission allowing access to the phone number, serial number, whether a call is active, the number that a call is connected to...\nWhat is sure (from the code) is that the app collects the IMEI.\n\nPithus analysis: https://beta.pithus.org/report/2b056ed84fe500552a58184035b962ba68af29457c24930c0aa8c9eba4af7bcf",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19136,11 +19172,11 @@
   {
     "id": "com.google.android.setupwizard",
     "list": "Google",
-    "description": "Android Setup\nThe new/factory reset device basic configuration setup guides you through the basics of setting up your device.\nDo mind that disabling/uninstalling this package may break mobile identity management.",
+    "description": "Android Setup\nThe new/factory reset device basic configuration setup guides you through the basics of setting up your device.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.setupwizard.a_overlay",
@@ -19960,5 +19996,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "ca.bell.wt.android.tunesappswidget",
+    "list": "Carrier",
+    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
