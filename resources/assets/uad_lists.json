@@ -2475,6 +2475,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.messaging",
+    "list": "Oem",
+    "description": "Android default messaging app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
+  {
     "id": "com.huawei.hidisk",
     "list": "Oem",
     "description": "Huawei File Manager app.\n",
@@ -3089,7 +3098,7 @@
   {
     "id": "com.aura.oobe.samsung.gl",
     "list": "Carrier",
-    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt's an app that promotes other apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.",
+    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt is some kind of post-install recommended apps setup from the carrier. Asks for your age and gender and then recommends you to install popular apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.\nSee https://github.com/0x192/universal-android-debloater/issues/278",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3097,8 +3106,8 @@
   },
   {
     "id": "com.aura.oobe.samsung",
-    "list": "Oem",
-    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt's an app that promotes other apps.\nDeveloped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions and it also gathers data.",
+    "list": "Carrier",
+    "description": "AppCloud\nIt offers the \"Aura Out-Of-the-Box Experience\" (OOBE)\nIt is some kind of post-install recommended apps setup from the carrier. Asks for your age and gender and then recommends you to install popular apps.\nDevelopped by IronSource, an Israeli advertising company.\nhttps://en.wikipedia.org/wiki/IronSource\nhttps://aura.ironsrc.com/tools/drive-app-downloads/\nhttps://arxiv.org/pdf/2010.10088.pdf\nHas way too many permissions.\nSee https://github.com/0x192/universal-android-debloater/issues/278",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3296,11 +3305,11 @@
   {
     "id": "com.samsung.android.app.dressroom",
     "list": "Oem",
-    "description": "Samsung Wallpapers\nWallaper manager from the launcher. You can remove it and still set a wallpaper from the Gallery.\nHas INTERNET permission and... ACCESS_MEDIA_LOCATION\n",
+    "description": "Samsung Wallpapers\nWallaper manager. Needed to pick up a wallpaper on Android 10+.\nHas INTERNET permission and ACCESS_MEDIA_LOCATION\nBefore Android 10, you should still be able to set a wallpaper from the Samsung gallery without this package.\nWARNING: Removing this app will prevent you to set a new wallpaper on Android 10+ (even from the Gallery) or changing the Material You palette on Android 12+.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.app.episodes",
@@ -5282,6 +5291,15 @@
     "labels": null,
     "removal": "Recommended"
   },
+  {
+    "id": "com.android.screenshot",
+    "list": "Oem",
+    "description": "Default android screenshot tool",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
   {
     "id": "com.sec.android.provider.snote",
     "list": "Oem",
@@ -19969,5 +19987,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "ca.bell.wt.android.tunesappswidget",
+    "list": "Carrier",
+    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
