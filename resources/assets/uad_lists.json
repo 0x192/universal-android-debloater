@@ -2477,7 +2477,7 @@
   {
     "id": "com.android.messaging",
     "list": "Oem",
-    "description": "Android messaging app",
+    "description": "Android default messaging app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5285,11 +5285,11 @@
   {
     "id": "com.android.screenshot",
     "list": "Oem",
-    "description": "The android screenshot tool. Probably safe to remove.",
+    "description": "Default android screenshot tool",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
     },
   {
     "id": "com.sec.android.provider.snote",
