@@ -2945,7 +2945,7 @@
   {
     "id": "com.motorola.launcher3",
     "list": "Oem",
-    "description": "Motorola system launcher\nA default home screen app, provides a layout and display for app icons and listing.\nRemoving this WILL make the home screen unreachable if you haven't set up another launcher app as default first.\nRemoving this WILL make the Recent Apps screen unreachable, since it also seems to provide that screen (tested on Android 12, sample size 1).",
+    "description": "Motorola system launcher\nA default home screen app, provides a layout and display for app icons and listing.\nWARNING: Do not remove this package if you did not switch to a 3rd-pary launcher.\nKeep in mind that removing this package will break the `recent apps` button (even from another launcher).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
