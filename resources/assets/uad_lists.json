@@ -1,14 +1,5 @@
 [
   {
-    "id": "ca.bell.wt.android.tunesappswidget",
-    "list": "Carrier",
-    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
-  },
-  {
     "id": "com.sony.tvsideview.videoph",
     "list": "Oem",
     "description": "Video & TV SideView (replaced by https://play.google.com/store/apps/details?id=com.sony.tvsideview.phone)\nLets you use your smartphone or tablet as a TV remote control for the home. \n",
@@ -2486,7 +2477,7 @@
   {
     "id": "com.android.messaging",
     "list": "Oem",
-    "description": "Android messaging app",
+    "description": "Android default messaging app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3305,11 +3296,11 @@
   {
     "id": "com.samsung.android.app.dressroom",
     "list": "Oem",
-    "description": "Samsung Wallpapers\nWallaper manager from the launcher. You can remove it and still set a wallpaper from the Gallery.\nHas INTERNET permission and... ACCESS_MEDIA_LOCATION\n",
+    "description": "Samsung Wallpapers\nWallaper manager. Needed to pick up a wallpaper on Android 10+.\nHas INTERNET permission and ACCESS_MEDIA_LOCATION\nBefore Android 10, you should still be able to set a wallpaper from the Samsung gallery without this package.\nWARNING: Removing this app will prevent you to set a new wallpaper on Android 10+ (even from the Gallery) or changing the Material You palette on Android 12+.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.app.episodes",
@@ -5294,11 +5285,11 @@
   {
     "id": "com.android.screenshot",
     "list": "Oem",
-    "description": "The android screenshot tool. Probably safe to remove.",
+    "description": "Default android screenshot tool",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
     },
   {
     "id": "com.sec.android.provider.snote",
@@ -19987,5 +19978,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "ca.bell.wt.android.tunesappswidget",
+    "list": "Carrier",
+    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
