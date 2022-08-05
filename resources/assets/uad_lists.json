@@ -19978,5 +19978,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
+  },
+  {
+    "id": "ca.bell.wt.android.tunesappswidget",
+    "list": "Carrier",
+    "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
