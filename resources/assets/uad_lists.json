@@ -2475,6 +2475,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.messaging",
+    "list": "Oem",
+    "description": "Android default messaging app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
+  {
     "id": "com.huawei.hidisk",
     "list": "Oem",
     "description": "Huawei File Manager app.\n",
@@ -5273,6 +5282,15 @@
     "labels": null,
     "removal": "Recommended"
   },
+  {
+    "id": "com.android.screenshot",
+    "list": "Oem",
+    "description": "Default android screenshot tool",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+    },
   {
     "id": "com.sec.android.provider.snote",
     "list": "Oem",
