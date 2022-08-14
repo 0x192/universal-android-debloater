@@ -5,11 +5,13 @@ on:
       - '**.rs'
       - 'Cargo.lock'
       - 'Cargo.toml'
+      - '**.json'
   pull_request:
     paths:
-    - '**.rs'
-    - 'Cargo.lock'
-    - 'Cargo.toml'
+      - '**.rs'
+      - 'Cargo.lock'
+      - 'Cargo.toml'
+      - '**.json'
 
 jobs:
   check:
