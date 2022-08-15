@@ -107,7 +107,8 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
   <details>
   <summary>WINDOWS</summary>
 
-  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere. [Add the folder to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere.
+  - [Add the folder to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/) or download UAD in the same folder.
 
   - [Install USB drivers for your device](https://developer.android.com/studio/run/oem-usb#Drivers)
   - Check your device is detected:
