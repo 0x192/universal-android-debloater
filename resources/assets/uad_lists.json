@@ -12881,7 +12881,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to triggers bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather service. Removal seems to triggers SystemUI crash/bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12890,11 +12890,11 @@
   {
     "id": "com.coloros.weather2",
     "list": "Oem",
-    "description": "colorOS weather app. Removal seems to trigger bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather app.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Advanced"
   },
   {
     "id": "com.coloros.mcs",
@@ -20006,4 +20006,265 @@
     "labels": null,
     "removal": "Recommended"
   }
+  {
+    "id": "com.coloros.compass2",
+    "list": "Oem",
+    "description": "Compass App",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.gamespaceui",
+    "list": "Oem",
+    "description": "GameSpace For older COS/RUI",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.onekeylockscreen",
+    "list": "Oem",
+    "description": "Put the device in lock mode when you click the app icon",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.oshare",
+    "list": "Oem",
+    "description": "Oppo Share\nUnified file sharing service",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.phonemanager",
+    "list": "Oem",
+    "description": "Phone Manager\nProvides optimization tools and various security scanning services.\nHas obviously a lot of permissions which can't be revoke.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.securepay",
+    "list": "Oem",
+    "description": "Part of Phone Manager App\nRuns in background to provide secure environment for banking apps",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.systemclone",
+    "list": "Oem",
+    "description": "System Cloner\nCreates multiple user on device",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.video",
+    "list": "Oem",
+    "description": "Video Player",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.browser",
+    "list": "Oem",
+    "description": "Browser App\nSpam device with ads and notifications",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.habit.analysis",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.music",
+    "list": "Oem",
+    "description": "Music App",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.pictorial",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.themestore",
+    "list": "Oem",
+    "description": "Theme Store",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.usercenter",
+    "list": "Oem",
+    "description": "Login service for various HeyTap related services like HeyTap Cloud etc.\nNeeded if you want to join Early Access Testing for new ColorOS/RealmeUI",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.kekepay",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.logkit",
+    "list": "Oem",
+    "description": "Takes log and bug reporting app\nSafe to remove if you don't report bugs to OEM",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.multiapp",
+    "list": "Oem",
+    "description": "App Cloner/Dual App provider",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.pay",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.securitykeyboard",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.statistics.rom",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.realme.link",
+    "list": "Oem",
+    "description": "Companion app for various realme devices\nSafe to uninstall if you don't have realme watch/band ",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.realme.securitycheck",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.operationManual",
+    "list": "Oem",
+    "description": "",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.finshell.fin",
+    "list": "Misc",
+    "description": "Provides various Payment and Financial Services (Comes as a system app in Indian Variant)",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.glance.internet",
+    "list": "Misc",
+    "description": "Provide trending stories on Lockscreen",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.opos.cs",
+    "list": "Misc",
+    "description": "Hot Apps",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming",
+    "list": "Misc",
+    "description": "ORoaming App\nUse to purchase an International Data pack to access Internet without SIM card",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
 ]
