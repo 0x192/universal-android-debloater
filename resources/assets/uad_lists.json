@@ -20005,7 +20005,7 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-  }
+  },
   {
     "id": "com.coloros.compass2",
     "list": "Oem",
@@ -20266,5 +20266,5 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
-  },
+  }
 ]
