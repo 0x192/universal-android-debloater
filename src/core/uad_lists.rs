@@ -197,7 +197,7 @@ impl std::fmt::Display for Removal {
     }
 }
 
-pub async fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package>, ()>, bool) {
+pub fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package>, ()>, bool) {
     let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
     let mut error = false;
     let list: Vec<Package> = if remote {
