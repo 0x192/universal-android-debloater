@@ -1,9 +1,9 @@
+use crate::core::theme::Theme;
 use crate::core::utils::{last_modified_date, open_url};
-use crate::gui::style;
-use crate::gui::views::settings::Settings;
+use crate::gui::{style, UpdateState};
 use crate::CACHE_DIR;
-use iced::pure::{button, column, container, row, text, Element};
-use iced::{Alignment, Length, Space};
+use iced::widget::{button, column, container, row, text, Space};
+use iced::{Alignment, Element, Length, Renderer};
 use std::path::PathBuf;
 
 #[cfg(feature = "self-update")]
@@ -21,19 +21,12 @@ pub enum Message {
 
 impl About {
     pub fn update(&mut self, msg: Message) {
-        match msg {
-            Message::UrlPressed(url) => {
-                open_url(url);
-            }
-            Message::UpdateUadLists => {
-                // Action is taken by UadGui update()
-            }
-            Message::DoSelfUpdate => {
-                // Action is taken by UadGui update()
-            }
+        if let Message::UrlPressed(url) = msg {
+            open_url(url);
         }
+        // other events are handled by UadGui update()
     }
-    pub fn view(&mut self, settings: &Settings) -> Element<Message> {
+    pub fn view(&self, update_state: &UpdateState) -> Element<Message, Renderer<Theme>> {
         let about_text = text(
             "Universal Android Debloater (UAD) is a Free and Open-Source community project aiming at simplifying \
             the removal of pre-installed apps on any Android device.",
@@ -42,133 +35,118 @@ impl About {
         let descr_container = container(about_text)
             .width(Length::Fill)
             .padding(25)
-            .style(style::NavigationContainer(settings.theme.palette));
+            .style(style::Container::Navigation);
 
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
         let uad_list_text =
             text(format!("Documentation: v{}", date.format("%Y%m%d"))).width(Length::Units(250));
-        let last_update_text = text(settings.list_update_state.to_string())
-            .color(settings.theme.palette.normal.surface);
+        let last_update_text = text(update_state.uad_list.to_string());
         let uad_lists_btn = button("Update")
             .on_press(Message::UpdateUadLists)
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
         #[cfg(feature = "self-update")]
         let self_update_btn = button("Update")
             .on_press(Message::DoSelfUpdate)
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
         #[cfg(feature = "self-update")]
         let uad_version_text =
             text(format!("UAD version: v{}", env!("CARGO_PKG_VERSION"))).width(Length::Units(250));
 
         #[cfg(feature = "self-update")]
-        let self_update_text = match &settings.self_update_state.latest_release {
+        let self_update_text = match &update_state.self_update.latest_release {
             Some(r) => {
-                if settings.self_update_state.status == SelfUpdateStatus::Updating {
-                    settings.self_update_state.status.to_string()
+                if update_state.self_update.status == SelfUpdateStatus::Updating {
+                    update_state.self_update.status.to_string()
                 } else {
                     format!("(v{} available)", r.tag_name)
                 }
             }
             None => {
-                if settings.self_update_state.status == SelfUpdateStatus::Done {
+                if update_state.self_update.status == SelfUpdateStatus::Done {
                     "(No update available)".to_string()
                 } else {
-                    settings.self_update_state.status.to_string()
+                    update_state.self_update.status.to_string()
                 }
             }
         };
 
         #[cfg(feature = "self-update")]
-        let last_self_update_text =
-            text(self_update_text).color(settings.theme.palette.normal.surface);
+        let last_self_update_text = text(self_update_text).style(style::Text::Default);
 
         #[cfg(feature = "self-update")]
-        let self_update_row = row()
+        let self_update_row = row![uad_version_text, self_update_btn, last_self_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(iced::Length::Units(550))
-            .push(uad_version_text)
-            .push(self_update_btn)
-            .push(last_self_update_text);
+            .width(iced::Length::Units(550));
 
-        let uad_list_row = row()
+        let uad_list_row = row![uad_list_text, uad_lists_btn, last_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(iced::Length::Units(550))
-            .push(uad_list_text)
-            .push(uad_lists_btn)
-            .push(last_update_text);
+            .width(iced::Length::Units(550));
 
         #[cfg(feature = "self-update")]
-        let update_column = column()
+        let update_column = column![uad_list_row, self_update_row]
             .align_items(Alignment::Center)
-            .spacing(10)
-            .push(uad_list_row)
-            .push(self_update_row);
+            .spacing(10);
 
         #[cfg(not(feature = "self-update"))]
-        let update_column = column()
+        let update_column = column![uad_list_row]
             .align_items(Alignment::Center)
-            .spacing(10)
-            .push(uad_list_row);
+            .spacing(10);
 
         let update_container = container(update_column)
             .width(Length::Fill)
             .center_x()
             .padding(10)
-            .style(style::NavigationContainer(settings.theme.palette));
+            .style(style::Container::Navigation);
 
         let website_btn = button("Github page")
             .on_press(Message::UrlPressed(PathBuf::from(
                 "https://github.com/0x192/universal-android-debloater",
             )))
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
         let issue_btn = button("Have an issue?")
             .on_press(Message::UrlPressed(PathBuf::from(
                 "https://github.com/0x192/universal-android-debloater/issues",
             )))
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
         let log_btn = button("Locate the logfiles")
             .on_press(Message::UrlPressed(CACHE_DIR.to_path_buf()))
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
         let wiki_btn = button("Wiki")
             .on_press(Message::UrlPressed(PathBuf::from(
                 "https://github.com/0x192/universal-android-debloater/wiki",
             )))
             .padding(5)
-            .style(style::PrimaryButton(settings.theme.palette));
+            .style(style::Button::Primary);
 
-        let row = row()
-            .spacing(20)
-            .push(website_btn)
-            .push(wiki_btn)
-            .push(issue_btn)
-            .push(log_btn);
+        let row = row![website_btn, wiki_btn, issue_btn, log_btn,].spacing(20);
 
-        let content = column()
-            .width(Length::Fill)
-            .spacing(20)
-            .align_items(Alignment::Center)
-            .push(Space::new(Length::Fill, Length::Shrink))
-            .push(descr_container)
-            .push(update_container)
-            .push(row);
+        let content = column![
+            Space::new(Length::Fill, Length::Shrink),
+            descr_container,
+            update_container,
+            row,
+        ]
+        .width(Length::Fill)
+        .spacing(20)
+        .align_items(Alignment::Center);
 
         container(content)
             .width(Length::Fill)
             .height(Length::Fill)
             .padding(10)
-            .style(style::Content(settings.theme.palette))
+            .style(style::Container::Content)
             .into()
     }
 }

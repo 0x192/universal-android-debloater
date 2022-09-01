@@ -90,7 +90,7 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
     }
 }
 
-pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
+pub fn list_all_system_packages(user_id: Option<&User>) -> String {
     let action = match user_id {
         Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
         None => "pm list packages -s -u".to_string(),
@@ -101,7 +101,7 @@ pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
         .replace("package:", "")
 }
 
-pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> HashSet<String> {
+pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
     let user = match user_id {
         Some(user_id) => format!(" --user {}", user_id.id),
         None => "".to_string(),
@@ -137,10 +137,10 @@ pub fn action_handler(
             };
 
             match phone.android_sdk {
-                i if i >= 23 => commands,                // > Android Lollipop (6.0)
+                sdk if sdk >= 23 => commands,            // > Android Lollipop (6.0)
                 21 | 22 => vec!["pm hide", "pm clear"],  // Android Lollipop (5.x)
                 19 | 20 => vec!["pm block", "pm clear"], // Android KitKat (4.4/4.4W)
-                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the needed ADB commands need root
+                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the specific ADB commands need root
             }
         }
         PackageState::Uninstalled => {
@@ -217,7 +217,7 @@ pub fn get_user_list() -> Vec<User> {
 }
 
 // getprop ro.serialno
-pub async fn get_device_list() -> Vec<Phone> {
+pub async fn get_devices_list() -> Vec<Phone> {
     match retry(
         Fixed::from_millis(500).take(120),
         || match adb_shell_command(false, "devices") {

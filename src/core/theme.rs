@@ -7,6 +7,12 @@ pub struct Theme {
     pub palette: ColorPalette,
 }
 
+impl Default for Theme {
+    fn default() -> Self {
+        Theme::lupin()
+    }
+}
+
 #[derive(Debug, Clone, Copy)]
 pub struct BaseColors {
     pub background: Color,

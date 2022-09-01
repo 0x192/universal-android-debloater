@@ -5,10 +5,8 @@ use crate::core::theme::Theme;
 use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
-use crate::gui::ICONS;
 use chrono::offset::Utc;
 use chrono::DateTime;
-use iced::{alignment, Length, Text};
 use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
@@ -17,7 +15,7 @@ use std::process::Command;
 
 pub fn fetch_packages(
     uad_lists: &HashMap<String, Package>,
-    user_id: &Option<&User>,
+    user_id: Option<&User>,
 ) -> Vec<PackageRow> {
     let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
     let enabled_system_packages = hashset_system_packages(PackageState::Enabled, user_id);
@@ -120,14 +118,6 @@ pub fn import_selection(packages: &mut [PackageRow], selection: &mut Selection) 
     }
 
     Ok(())
-}
-
-pub fn icon(unicode: char) -> Text {
-    Text::new(&unicode.to_string())
-        .font(ICONS)
-        .width(Length::Units(17))
-        .horizontal_alignment(alignment::Horizontal::Center)
-        .size(17)
 }
 
 pub fn string_to_theme(theme: String) -> Theme {
