@@ -5,103 +5,57 @@ on:
       - '**.rs'
       - 'Cargo.lock'
       - 'Cargo.toml'
+      - '**.json'
+    tags-ignore:
+      - '*'
   pull_request:
     paths:
-    - '**.rs'
-    - 'Cargo.lock'
-    - 'Cargo.toml'
+      - '**.rs'
+      - 'Cargo.lock'
+      - 'Cargo.toml'
+      - '**.json'
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
+  lint:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        lint: [check, test, clippy, fmt]
+        exclude: # https://github.com/community/community/discussions/7835
+          - os: windows-latest
+            lint: clippy
+          - os: windows-latest
+            lint: fmt
+          - os: macOS-latest
+            lint: clippy
+          - os: macOS-latest
+            lint: fmt
+        include:
+          - lint: check
+            args: " --all-features"
+          - lint: test
+            args: ''
+          - lint: clippy
+            args: " --all --all-features -- -D warnings"
+          - lint: fmt
+            args: " --all -- --check"
     steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          sudo apt -qq update
-          sudo apt install -y lld
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: rui314/setup-mold@v1 # faster linker
+        with:
+          make-default: false
+      - uses: actions/cache@v3
         with:
           path: |
-            ~/.cargo/registry
-            ~/.cargo/git
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
             target
-          key: ${{ runner.os }}-check-${{ hashFiles('**/Cargo.lock') }}
-      - uses: actions-rs/toolchain@v1
+          key: ${{ runner.os }}-${{ matrix.lint }}-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.OS }}-${{ matrix.lint }}-
+      - uses: dtolnay/rust-toolchain@nightly
         with:
-          profile: minimal
-          toolchain: nightly
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: check
-          args: --all-features
-
-  test:
-    name: Test Suite
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          sudo apt -qq update
-          sudo apt install -y libxkbcommon-dev lld
-      - uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-test-${{ hashFiles('**/Cargo.lock') }}
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: test
-
-  fmt:
-    name: Rustfmt
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          override: true
-      - run: rustup component add rustfmt
-      - uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: --all -- --check
-
-  clippy:
-    name: Clippy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          sudo apt -qq update
-          sudo apt install -y lld
-      - uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-clippy-${{ hashFiles('**/Cargo.lock') }}
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          override: true
-      - run: rustup component add clippy
-      - uses: actions-rs/cargo@v1
-        with:
-          command: clippy
-          args: --all --all-features -- -D warnings
+          components: clippy,rustfmt
+      - run: cargo ${{ matrix.lint }}${{ matrix.args }}

@@ -1,12 +1,12 @@
-use crate::core::sync::{hashset_system_packages, list_all_system_packages, User};
+use crate::core::sync::{
+    adb_shell_command, hashset_system_packages, list_all_system_packages, User,
+};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
-use crate::gui::ICONS;
 use chrono::offset::Utc;
 use chrono::DateTime;
-use iced::{alignment, Length, Text};
 use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
@@ -15,7 +15,7 @@ use std::process::Command;
 
 pub fn fetch_packages(
     uad_lists: &HashMap<String, Package>,
-    user_id: &Option<&User>,
+    user_id: Option<&User>,
 ) -> Vec<PackageRow> {
     let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
     let enabled_system_packages = hashset_system_packages(PackageState::Enabled, user_id);
@@ -47,7 +47,8 @@ pub fn fetch_packages(
             state = PackageState::Disabled;
         }
 
-        let package_row = PackageRow::new(p_name, state, description, uad_list, removal, false);
+        let package_row =
+            PackageRow::new(p_name, state, description, uad_list, removal, false, false);
         user_package.push(package_row);
     }
     user_package.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
@@ -119,14 +120,6 @@ pub fn import_selection(packages: &mut [PackageRow], selection: &mut Selection) 
     Ok(())
 }
 
-pub fn icon(unicode: char) -> Text {
-    Text::new(&unicode.to_string())
-        .font(ICONS)
-        .width(Length::Units(17))
-        .horizontal_alignment(alignment::Horizontal::Center)
-        .size(17)
-}
-
 pub fn string_to_theme(theme: String) -> Theme {
     match theme.as_str() {
         "Dark" => Theme::dark(),
@@ -182,10 +175,11 @@ pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Ve
 }
 
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
-    let metadata = fs::metadata(file).unwrap();
-
-    match metadata.modified() {
-        Ok(time) => time.into(),
+    match fs::metadata(file) {
+        Ok(metadata) => match metadata.modified() {
+            Ok(time) => time.into(),
+            Err(_) => Utc::now(),
+        },
         Err(_) => Utc::now(),
     }
 }
@@ -201,5 +195,30 @@ pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
         }
     } else {
         last_update.num_days().to_string() + " day(s) ago"
+    }
+}
+
+pub async fn perform_commands(action: String, i: usize, label: String) -> Result<usize, ()> {
+    match adb_shell_command(true, &action) {
+        Ok(o) => {
+            // On old devices, adb commands can return the '0' exit code even if there
+            // is an error. On Android 4.4, ADB doesn't check if the package exists.
+            // It does not return any error if you try to `pm block` a non-existent package.
+            // Some commands are even killed by ADB before finishing and UAD can't catch
+            // the output.
+            if ["Error", "Failure"].iter().any(|&e| o.contains(e)) {
+                error!("[{}] {} -> {}", label, action, o);
+                Err(())
+            } else {
+                info!("[{}] {} -> {}", label, action, o);
+                Ok(i)
+            }
+        }
+        Err(err) => {
+            if !err.contains("[not installed for") {
+                error!("[{}] {} -> {}", label, action, err);
+            }
+            Err(())
+        }
     }
 }

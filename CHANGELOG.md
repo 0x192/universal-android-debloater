@@ -8,13 +8,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
-## [Unreleased]
+## [0.5.1] - 2022-07-03
+
+Since `0.5.0`, all changes related to apps are available to users without downloading a new version of UAD as the software directly download the json debloat list from Github. These changes can be tracked in commits with `[Pkg]` in their name. [See the commits](https://github.com/0x192/universal-android-debloater/commits/main)
 
 ### Added
-- Unselect all button. Note that the selec/unselect all buttons only affect the filtered packages.
+- [[#209](https://github.com/0x192/universal-android-debloater/issues/209)] Persistent highlighting when you click on a package
 
 ### Changed
+- `neededBy` and `dependencies` field can now list multiple packages (feature not visible in the UI yet)
+
+### Fixed
+- [[#286](https://github.com/0x192/universal-android-debloater/issues/286)] UAD stuck on "Downloading UAD lists. Please wait" screen
+
+## Packaging
+- [[#256](https://github.com/0x192/universal-android-debloater/issues/256)] Fixed typo in the release name of the noseflupdate variation
+- Bump dependencies
+
+## [0.5.0] - 2022-04-03
+
+### Apps
+
+- [[#115](https://github.com/0x192/universal-android-debloater/issues/115)] Added `com.tblenovo.lenovotips` to the recommended list.
+- [[#120](https://github.com/0x192/universal-android-debloater/pull/120)] Move Google keyboard to `Advanced` list (Default keyboards should not be in the `Recommended` list)
+- [[#169](https://github.com/0x192/universal-android-debloater/issues/154) Move `com.android.htmlviewer` to the `Expert` list. Removing it bootloop the device on MIUI 12.5.4+.
+
+Huge thanks to [@KarlRamstedt](https://github.com/KarlRamstedt) for their help in this major debloat list update:
+- [[#122](https://github.com/0x192/universal-android-debloater/pull/122)] Added a bunch of new packages
+- [[#122](https://github.com/0x192/universal-android-debloater/pull/122)] A lot of description updates and fixes
+- [[#122](https://github.com/0x192/universal-android-debloater/pull/122) | [#138](https://github.com/0x192/universal-android-debloater/pull/138)] Big revision of the recommendations according to more consistent criteria ([see the wiki](https://github.com/0x192/universal-android-debloater/wiki/FAQ#how-are-the-recommendations-chosen))
+
+### Added
+- [[#68](https://github.com/0x192/universal-android-debloater/issue/68)] **Unselect all button**: Let's you unselect all the packages you see on screen (i.e in the current filtered list).
+- [[#119](https://github.com/0x192/universal-android-debloater/issue/119)] **Reboot button**: Let's you quickly reboot the currently selected device.
+- [[#110](https://github.com/0x192/universal-android-debloater/pull/110)] **Remote `uad_lists.json` download**: The debloat list is now directly fetched from the main branch of this repo when you launch UAD. This means there is no longer the need to release a new version of UAD for updating the debloat lists! :rocket:
+- [[#121](https://github.com/0x192/universal-android-debloater/pull/121)] :arrows_counterclockwise: **UAD self-update**: UAD will now check at launch if there is a new version of itself and enable you to perform the update directly from the app! :rocket:
+
+### Changed
+- [[#165](https://github.com/0x192/universal-android-debloater/issues/165)] UAD now tries every 500ms (for 1min) to initiate an ADB connection until a device is found during `FindingPhones`the loading state.
+- All the init process was reworked and a status message is displayed at each stage (`DownloadingList`, `FindingPhones`,`LoadingPackages`,`UpdatingUad` `Ready`) so you know what is happening.
 - Minor UI changes
+
+### Packaging
+- Add a `no-self-update` build for MacOS and Linux. Useful if UAD is distributed into repositories. The update process will then be managed by a package manager.
+- MacOS builds are now also be released as a compressed tarball (like for Linux). You won't need to manually add the executable permission anymore. ([more info](https://github.com/actions/upload-artifact/issues/38))
+- Bump dependencies
+
 
 ## [0.4.1] - 2022-01-31
 
@@ -54,6 +93,8 @@ and `Removed`.
 
 ### Packaging
 - For Arch-based users, UAD is now available in the AUR: `universal-android-debloater-bin` (binary) and `universal-android-debloater` (from source)
+- Bump dependencies
+
 
 ## [0.3] - 2021-10-10
 

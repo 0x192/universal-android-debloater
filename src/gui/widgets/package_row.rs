@@ -1,12 +1,11 @@
 use crate::core::sync::Phone;
+use crate::core::theme::Theme;
 use crate::core::uad_lists::{PackageState, Removal, UadList};
-
 use crate::gui::style;
 use crate::gui::views::settings::Settings;
 
-use iced::{
-    alignment, button, Alignment, Button, Checkbox, Command, Element, Length, Row, Space, Text,
-};
+use iced::widget::{button, checkbox, row, text, Space};
+use iced::{alignment, Alignment, Command, Element, Length, Renderer};
 
 #[derive(Clone, Debug)]
 pub struct PackageRow {
@@ -15,9 +14,8 @@ pub struct PackageRow {
     pub description: String,
     pub uad_list: UadList,
     pub removal: Removal,
-    package_btn_state: button::State,
-    action_btn_state: button::State,
     pub selected: bool,
+    pub current: bool,
 }
 
 #[derive(Clone, Debug)]
@@ -35,6 +33,7 @@ impl PackageRow {
         uad_list: UadList,
         removal: Removal,
         selected: bool,
+        current: bool,
     ) -> Self {
         Self {
             name: name.to_string(),
@@ -42,9 +41,8 @@ impl PackageRow {
             description: description.to_string(),
             uad_list,
             removal,
-            package_btn_state: button::State::default(),
-            action_btn_state: button::State::default(),
             selected,
+            current,
         }
     }
 
@@ -52,7 +50,7 @@ impl PackageRow {
         Command::none()
     }
 
-    pub fn view(&mut self, settings: &Settings, _phone: &Phone) -> Element<Message> {
+    pub fn view(&self, settings: &Settings, _phone: &Phone) -> Element<Message, Renderer<Theme>> {
         //let trash_svg = format!("{}/resources/assets/trash.svg", env!("CARGO_MANIFEST_DIR"));
         //let restore_svg = format!("{}/resources/assets/rotate.svg", env!("CARGO_MANIFEST_DIR"));
         let button_style;
@@ -67,20 +65,20 @@ impl PackageRow {
                 } else {
                     "Uninstall"
                 };
-                button_style = style::PackageButton::Uninstall(settings.theme.palette);
+                button_style = style::Button::UninstallPackage;
             }
             PackageState::Disabled => {
                 action_text = "Enable";
-                button_style = style::PackageButton::Restore(settings.theme.palette);
+                button_style = style::Button::RestorePackage;
             }
             PackageState::Uninstalled => {
                 action_text = "Restore";
-                button_style = style::PackageButton::Restore(settings.theme.palette);
+                button_style = style::Button::RestorePackage;
             }
             PackageState::All => {
                 action_text = "Error";
-                button_style = style::PackageButton::Restore(settings.theme.palette);
-                warn!("Incredible! Something impossible happenned!");
+                button_style = style::Button::RestorePackage;
+                warn!("Incredible! Something impossible happened!");
             }
         }
         // Disable any removal action for unsafe packages if expert_mode is disabled
@@ -88,45 +86,46 @@ impl PackageRow {
             || self.state != PackageState::Enabled
             || settings.phone.expert_mode
         {
-            selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
-                .style(style::SelectionCheckBox::Enabled(settings.theme.palette));
+            selection_checkbox = checkbox("", self.selected, Message::ToggleSelection)
+                .style(style::CheckBox::PackageEnabled);
 
-            action_btn = Button::new(
-                &mut self.action_btn_state,
-                Text::new(action_text)
+            action_btn = button(
+                text(action_text)
                     .horizontal_alignment(alignment::Horizontal::Center)
                     .width(Length::Units(100)),
             )
             .on_press(Message::ActionPressed);
         } else {
-            selection_checkbox = Checkbox::new(self.selected, "", Message::ToggleSelection)
-                .style(style::SelectionCheckBox::Disabled(settings.theme.palette));
+            selection_checkbox = checkbox("", self.selected, Message::ToggleSelection)
+                .style(style::CheckBox::PackageDisabled);
 
-            action_btn = Button::new(
-                &mut self.action_btn_state,
-                Text::new(action_text)
+            action_btn = button(
+                text(action_text)
                     .horizontal_alignment(alignment::Horizontal::Center)
                     .width(Length::Units(100)),
             );
         }
 
-        Row::new()
-            .push(
-                Button::new(
-                    &mut self.package_btn_state,
-                    Row::new()
-                        .align_items(Alignment::Center)
-                        .push(selection_checkbox)
-                        .push(Text::new(&self.name).width(Length::FillPortion(8)))
-                        .push(action_btn.style(button_style)),
-                )
-                .padding(8)
-                .style(style::PackageRow(settings.theme.palette))
-                .width(Length::Fill)
-                .on_press(Message::PackagePressed),
+        row![
+            button(
+                row![
+                    selection_checkbox,
+                    text(&self.name).width(Length::FillPortion(8)),
+                    action_btn.style(button_style)
+                ]
+                .align_items(Alignment::Center)
             )
-            .push(Space::with_width(Length::Units(15)))
-            .align_items(Alignment::Center)
-            .into()
+            .padding(8)
+            .style(if self.current {
+                style::Button::SelectedPackage
+            } else {
+                style::Button::NormalPackage
+            })
+            .width(Length::Fill)
+            .on_press(Message::PackagePressed),
+            Space::with_width(Length::Units(15))
+        ]
+        .align_items(Alignment::Center)
+        .into()
     }
 }

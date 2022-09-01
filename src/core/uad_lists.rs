@@ -1,6 +1,6 @@
+use crate::core::utils::{format_diff_time_from_now, last_modified_date};
 use crate::CACHE_DIR;
-/*use chrono::DateTime;
-use chrono::Utc;*/
+use retry::{delay::Fixed, retry, OperationResult};
 use serde::Deserialize;
 use serde_json;
 use std::collections::HashMap;
@@ -13,8 +13,8 @@ pub struct Package {
     id: String,
     pub list: UadList,
     pub description: Option<String>,
-    dependencies: Option<String>,
-    needed_by: Option<String>,
+    dependencies: Option<Vec<String>>,
+    needed_by: Option<Vec<String>>,
     labels: Option<Vec<String>>,
     pub removal: Removal,
 }
@@ -29,6 +29,31 @@ pub enum UadList {
     Oem,
     Pending,
     Unlisted,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum UadListState {
+    Downloading,
+    Done,
+    Failed,
+}
+
+impl Default for UadListState {
+    fn default() -> Self {
+        UadListState::Downloading
+    }
+}
+
+impl std::fmt::Display for UadListState {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
+        let s = match self {
+            UadListState::Downloading => "Checking updates...".to_string(),
+            UadListState::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
+            UadListState::Failed => "Failed to check update!".to_string(),
+        };
+        write!(f, "{}", s)
+    }
 }
 
 impl Default for UadList {
@@ -172,26 +197,32 @@ impl std::fmt::Display for Removal {
     }
 }
 
-pub async fn load_debloat_lists(remote: bool) -> HashMap<String, Package> {
+pub fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package>, ()>, bool) {
     let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
-
+    let mut error = false;
     let list: Vec<Package> = if remote {
-        let req = ureq::get(
-            "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
+        match retry(Fixed::from_millis(500).take(120), || {
+            match ureq::get(
+                "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
             main/resources/assets/uad_lists.json",
-        )
-        .call();
-
-        match req {
-            Ok(data) => {
-                let text = data.into_string().unwrap();
-                fs::write(cached_uad_lists, &text).expect("Unable to write file");
-                serde_json::from_str(&text).expect("Unable to parse")
+            )
+            .call()
+            {
+                Ok(data) => {
+                    let text = data.into_string().unwrap();
+                    fs::write(cached_uad_lists.clone(), &text).expect("Unable to write file");
+                    let list = serde_json::from_str(&text).expect("Unable to parse");
+                    OperationResult::Ok(list)
+                }
+                Err(e) => {
+                    warn!("Could not load remote debloat list: {}", e);
+                    error = true;
+                    OperationResult::Retry(Vec::<Package>::new())
+                }
             }
-            Err(e) => {
-                warn!("Could not load remote debloat list: {}", e);
-                get_local_lists()
-            }
+        }) {
+            Ok(list) => list,
+            Err(_) => vec![],
         }
     } else {
         warn!("Could not load remote debloat list");
@@ -204,7 +235,11 @@ pub async fn load_debloat_lists(remote: bool) -> HashMap<String, Package> {
         let name = p.id.clone();
         package_lists.insert(name, p);
     }
-    package_lists
+    if error {
+        (Err(()), remote)
+    } else {
+        (Ok(package_lists), remote)
+    }
 }
 
 fn get_local_lists() -> Vec<Package> {
@@ -216,5 +251,15 @@ fn get_local_lists() -> Vec<Package> {
         serde_json::from_str(&data).expect("Unable to parse")
     } else {
         serde_json::from_str(DATA).expect("Unable to parse")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_parse_json() {
+        const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
+        let _: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
     }
 }

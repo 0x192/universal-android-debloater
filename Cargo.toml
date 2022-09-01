@@ -1,7 +1,7 @@
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.4.1"
+version = "0.5.1"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
 homepage = "https://github.com/0x192/universal-android-debloater"
@@ -15,11 +15,11 @@ edition = "2021"
 default = ["wgpu", "self-update"]
 wgpu = [] # iced/wgpu is default
 glow = ["iced/glow"] # OpenGL support
-self-update = ["flate2", "tar", "retry"]
+self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
-iced = { git = "https://github.com/hecrj/iced.git" }
+iced = { git = "https://github.com/0x192/iced.git", branch = "patch/theme" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"
@@ -30,7 +30,7 @@ regex = "^1.5"
 toml = "^0"
 dirs = "^4.0"
 ureq = { version = "*", features = ["json"] }
-retry = { version = "^1.0", optional = true }
+retry = { version = "^1.0" }
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }

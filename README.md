@@ -1,7 +1,7 @@
 # Universal Android Debloater GUI
 **DISCLAIMER**: Use at your own risk. I am not responsible for anything that could happen to your phone. 
 
-<img src="/resources/screenshots/v0.4.1.png" width="850" alt="uad_screenshot">
+<img src="/resources/screenshots/v0.5.0.png" width="850" alt="uad_screenshot">
 
 **This software is still in an early stage of development. Check out the issues, and feel free to contribute!**
 
@@ -44,6 +44,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Oppo  
 * [X] Samsung
 * [X] Sony
+* [X] Tecno
 * [ ] TCL
 * [ ] Wiko
 * [X] Xiaomi
@@ -64,61 +65,60 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 - Enable *Developer Options* on your smartphone.
 - Turn on *USB Debugging* from the developer panel.
 - From the settings, disconnect from any OEM accounts (when you delete an OEM account package it could lock you on the lockscreen because the phone can't associate your identity anymore)
-- Install ADB:
-<p>
-<details>
-<summary>LINUX</summary>
+- Install ADB (see the intructions by clicking on your OS below):
+  <p>
+  <details>
+  <summary>LINUX</summary>
 
-- Install *Android platform tools* on your PC :
+  - Install *Android platform tools* on your PC :
 
-Debian Base:
-```bash
-$ sudo apt install android-sdk-platform-tools
-```
-Arch-Linux Base:
-```bash
-$ sudo pacman -S android-tools
-```
-Red Hat Base:
-```bash
-$ sudo yum install android-tools
-```
-OpenSUSE Base:
-```bash
-$ sudo zypper install android-tools
-```
-</details>
-</p>
+  Debian Base:
+  ```bash
+  $ sudo apt install android-sdk-platform-tools
+  ```
+  Arch-Linux Base:
+  ```bash
+  $ sudo pacman -S android-tools
+  ```
+  Red Hat Base:
+  ```bash
+  $ sudo yum install android-tools
+  ```
+  OpenSUSE Base:
+  ```bash
+  $ sudo zypper install android-tools
+  ```
+  </details>
+  </p>
 
-<p>
-<details>
-<summary>MAC OS</summary>
+  <p>
+  <details>
+  <summary>MAC OS</summary>
 
-- Install [Homebrew](https://brew.sh/)
-- Install *Android platform tools*
+  - Install [Homebrew](https://brew.sh/)
+  - Install *Android platform tools*
+    ```bash
+    $ brew install android-platform-tools
+    ```
+  </details>
+  </p>
 
-```bash
-$ brew install android-platform-tools
-```
-</details>
-</p>
+  <p>
+  <details>
+  <summary>WINDOWS</summary>
 
-<p>
-<details>
-<summary>WINDOWS</summary>
+  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere. [Add the folder to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 
-- Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere. [Add the folder to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
-
-- [Install USB drivers for your device](https://developer.android.com/studio/run/oem-usb#Drivers)
-- Check your device is detected:
-```batch
-> adb devices
-```
-</details>
-</p>
+  - [Install USB drivers for your device](https://developer.android.com/studio/run/oem-usb#Drivers)
+  - Check your device is detected:
+    ```batch
+    > adb devices
+    ```
+  </details>
+  </p>
 
 
-- Download the latest stable release of UAD GUI [here](https://github.com/0x192/universal-android-debloater/releases).
+- Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases). Take the `opengl` version only if the default version (with a Vulkan backend) doesn't launch.
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those Chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 
