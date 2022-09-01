@@ -58,7 +58,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         run: mv target/release/uad_gui bin/uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}
       - name: Tarball Linux/MacOS binary
-        if: matrix.os != 'ubuntu-latest'
+        if: matrix.os != 'windows-latest'
         run: tar -czf bin/uad_gui${{ matrix.update_name }}-${{ matrix.build_target }}${{ matrix.renderer }}{.tar.gz,}
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
