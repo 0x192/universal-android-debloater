@@ -1,23 +1,18 @@
 use crate::core::config::Config;
 use crate::core::sync::{get_android_sdk, Phone as CorePhone};
 use crate::core::theme::Theme;
-use crate::core::uad_lists::UadListState;
-use crate::core::update::{Release, SelfUpdateState, SelfUpdateStatus};
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
 use crate::IN_FILE_CONFIGURATION;
 
-use iced::pure::widget::Text;
-use iced::pure::{button, checkbox, column, container, pick_list, row, text, Element};
-use iced::{Length, Space};
+use iced::widget::{button, checkbox, column, container, pick_list, row, text, Space};
+use iced::{Element, Length, Renderer};
 use std::path::PathBuf;
 
 #[derive(Debug, Clone)]
 pub struct Settings {
     pub phone: Phone,
     pub theme: Theme,
-    pub self_update_state: SelfUpdateState,
-    pub list_update_state: UadListState,
 }
 
 #[derive(Debug, Clone)]
@@ -42,8 +37,6 @@ impl Default for Settings {
         Self {
             phone: Phone::default(),
             theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
-            self_update_state: SelfUpdateState::default(),
-            list_update_state: UadListState::default(),
         }
     }
 }
@@ -55,21 +48,11 @@ pub enum Message {
     MultiUserMode(bool),
     ApplyTheme(Theme),
     UrlPressed(PathBuf),
-    GetLatestRelease(Result<Option<Release>, ()>),
 }
 
 impl Settings {
     pub fn update(&mut self, phone: &CorePhone, msg: Message) {
         match msg {
-            Message::GetLatestRelease(release) => {
-                match release {
-                    Ok(r) => {
-                        self.self_update_state.status = SelfUpdateStatus::Done;
-                        self.self_update_state.latest_release = r
-                    }
-                    Err(_) => self.self_update_state.status = SelfUpdateStatus::Failed,
-                };
-            }
             Message::ExpertMode(toggled) => {
                 info!(
                     "Expert mode {}",
@@ -103,58 +86,52 @@ impl Settings {
         }
     }
 
-    pub fn view(&mut self, phone: &CorePhone) -> Element<Message> {
+    pub fn view(&self, phone: &CorePhone) -> Element<Message, Renderer<Theme>> {
         let general_category_text = text("General").size(25);
 
-        let theme_picklist = pick_list(Theme::all(), Some(self.theme.clone()), Message::ApplyTheme)
-            .style(style::PickList(self.theme.palette));
+        let theme_picklist = pick_list(Theme::all(), Some(self.theme.clone()), Message::ApplyTheme);
 
         let uad_category_text = text("Non-persistent settings").size(25);
 
         let expert_mode_descr =
-            text("Most of unsafe packages are known to bootloop the device if removed.")
-                .size(15)
-                .color(self.theme.palette.normal.surface);
+            text("Most of unsafe packages are known to bootloop the device if removed.").size(15);
 
         let expert_mode_checkbox = checkbox(
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
             self.phone.expert_mode,
             Message::ExpertMode,
         )
-        .style(style::SettingsCheckBox::Enabled(self.theme.palette));
+        .style(style::CheckBox::SettingsEnabled);
 
         let multi_user_mode_descr =
             text("Disabling this setting will typically prevent affecting your work profile")
-                .size(15)
-                .color(self.theme.palette.normal.surface);
+                .size(15);
 
         let multi_user_mode_checkbox = checkbox(
             "Affect all the users of the phone (not only the selected user)",
             self.phone.multi_user_mode,
             Message::MultiUserMode,
         )
-        .style(style::SettingsCheckBox::Enabled(self.theme.palette));
+        .style(style::CheckBox::SettingsEnabled);
 
-        let disable_color = if phone.android_sdk >= 23 {
+        let _disable_color = if phone.android_sdk >= 23 {
             self.theme.palette.normal.surface
         } else {
             self.theme.palette.normal.primary
         };
 
         let disable_checkbox_style = if phone.android_sdk >= 23 {
-            style::SettingsCheckBox::Enabled(self.theme.palette)
+            style::CheckBox::SettingsEnabled
         } else {
-            style::SettingsCheckBox::Disabled(self.theme.palette)
+            style::CheckBox::SettingsDisabled
         };
 
         let disable_mode_descr =
             text("In some cases, it can be better to disable a package instead of uninstalling it")
-                .size(15)
-                .color(disable_color);
+                .size(15);
 
-        let _unavailable_text = Text::new("[Unavailable before Android 8.0]")
-            .size(16)
-            .color(self.theme.palette.bright.error);
+        /*        let _unavailable_text = text("[Unavailable before Android 8.0]")
+        .size(16);*/
 
         let unavailable_btn = button(text("Unavailable").size(13))
             .on_press(Message::UrlPressed(PathBuf::from(
@@ -162,7 +139,7 @@ impl Settings {
                     why-is-the-disable-mode-setting-not-available-for-my-device",
             )))
             .height(Length::Units(22))
-            .style(style::UnavailableButton(self.theme.palette));
+            .style(style::Button::Unavailable);
 
         // Disabling package without root isn't really possible before Android Oreo (8.0)
         // see https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
@@ -174,40 +151,43 @@ impl Settings {
         .style(disable_checkbox_style);
 
         let disable_setting_row = if phone.android_sdk >= 23 {
-            row()
-                .width(Length::Fill)
-                .push(disable_mode_checkbox)
-                .push(Space::new(Length::Fill, Length::Shrink))
+            row![
+                disable_mode_checkbox,
+                Space::new(Length::Fill, Length::Shrink),
+            ]
+            .width(Length::Fill)
         } else {
-            row()
-                .width(Length::Fill)
-                .push(disable_mode_checkbox)
-                .push(Space::new(Length::Fill, Length::Shrink))
-                .push(unavailable_btn)
+            row![
+                disable_mode_checkbox,
+                Space::new(Length::Fill, Length::Shrink),
+                unavailable_btn,
+            ]
+            .width(Length::Fill)
         };
 
-        let content = column()
-            .width(Length::Fill)
-            .spacing(10)
-            .push(general_category_text)
-            .push("Theme")
-            .push(theme_picklist)
-            .push(Space::new(Length::Fill, Length::Shrink))
-            .push(uad_category_text)
-            .push(expert_mode_checkbox)
-            .push(expert_mode_descr)
-            .push(Space::new(Length::Fill, Length::Shrink))
-            .push(multi_user_mode_checkbox)
-            .push(multi_user_mode_descr)
-            .push(Space::new(Length::Fill, Length::Shrink))
-            .push(disable_setting_row)
-            .push(disable_mode_descr);
+        let content = column![
+            general_category_text,
+            "Theme",
+            theme_picklist,
+            Space::new(Length::Fill, Length::Shrink),
+            uad_category_text,
+            expert_mode_checkbox,
+            expert_mode_descr,
+            Space::new(Length::Fill, Length::Shrink),
+            multi_user_mode_checkbox,
+            multi_user_mode_descr,
+            Space::new(Length::Fill, Length::Shrink),
+            disable_setting_row,
+            disable_mode_descr,
+        ]
+        .width(Length::Fill)
+        .spacing(10);
 
         container(content)
             .padding(10)
             .width(Length::Fill)
             .height(Length::Fill)
-            .style(style::Content(self.theme.palette))
+            .style(style::Container::Content)
             .into()
     }
 }

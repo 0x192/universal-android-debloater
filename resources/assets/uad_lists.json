@@ -5699,7 +5699,7 @@
   {
     "id": "com.sec.sve",
     "list": "Oem",
-    "description": "SecVideoEngineService is arguably a Samsung video engine service (handle enconding/decoding ?) for displaying video trough Samsung apps. \n3 permissions : RECORD_AUDIO, CAMERA, INTERACT_ACROSS_USERS_FULL\nMay break WiFi Calling after a reboot.\n",
+    "description": "SecVideoEngineService is arguably a Samsung video engine service (handle enconding/decoding ?) for displaying video trough Samsung apps. \n3 permissions : RECORD_AUDIO, CAMERA, INTERACT_ACROSS_USERS_FULL\n\nNote: Removing it will break WiFi Calling.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -5910,7 +5910,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.app.multiwindow",
@@ -20007,6 +20007,51 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oppo.partnerbrowsercustomizations",
+    "list": "Oem",
+    "description": "Oppo Bookmarks\nOppo default browser customization. Injects Oppo bookmarks",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming",
+    "list": "Misc",
+    "description": "ORoaming\nLet's you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
+    "dependencies": ["com.redteamobile.roaming.deamon"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.redteamobile.roaming.deamon",
+    "list": "Misc",
+    "description": "ORoaming\nRedtea Roaming service deamon for com.redteamobile.roaming",
+    "dependencies": null,
+    "neededBy": ["com.redteamobile.roaming"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.deamon",
+    "list": "Oem",
+    "description": "Package needed by com.nearme.statistics.rom to run service in background at every boot even though the app has been uninstalled",
+    "dependencies": null,
+    "neededBy": ["com.nearme.statistics.rom"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nearme.statistics.rom",
+    "list": "Oem",
+    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.coloros.compass2",
     "list": "Oem",
     "description": "Compass App",
@@ -20054,7 +20099,7 @@
   {
     "id": "com.coloros.securepay",
     "list": "Oem",
-    "description": "Part of Phone Manager App\nRuns in background to provide secure environment for banking apps",
+    "description": "Part of Phone Manager App\nRuns in background to provide secure environment on banking apps",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20234,7 +20279,7 @@
   {
     "id": "com.finshell.fin",
     "list": "Misc",
-    "description": "Provides various Payment and Financial Services (Comes as a system app in Indian Variant)",
+    "description": "Provides various Payment and Financial Services (Comes as system app in Indian Variant)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20253,15 +20298,6 @@
     "id": "com.opos.cs",
     "list": "Misc",
     "description": "Hot Apps",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
-  },
-  {
-    "id": "com.redteamobile.roaming",
-    "list": "Misc",
-    "description": "ORoaming App\nUse to purchase an International Data pack to access Internet without SIM card",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
