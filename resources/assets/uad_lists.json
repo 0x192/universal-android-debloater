@@ -5910,7 +5910,7 @@
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.app.multiwindow",
