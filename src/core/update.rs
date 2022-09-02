@@ -206,7 +206,7 @@ pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> Result<
     use flate2::read::GzDecoder;
     use std::fs::File;
     use tar::Archive;
-    let mut archive = Archive::new(GzDecoder::new(File::open(&archive_path).unwrap()));
+    let mut archive = Archive::new(GzDecoder::new(File::open(archive_path).unwrap()));
 
     let mut temp_file = File::create(temp_file).unwrap();
 
