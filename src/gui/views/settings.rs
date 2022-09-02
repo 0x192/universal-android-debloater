@@ -1,9 +1,8 @@
-use crate::core::config::Config;
-use crate::core::sync::{get_android_sdk, Phone as CorePhone};
+use crate::core::config::{Config, DeviceSettings, GeneralSettings};
+use crate::core::sync::Phone;
 use crate::core::theme::Theme;
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
-use crate::IN_FILE_CONFIGURATION;
 
 use iced::widget::{button, checkbox, column, container, pick_list, row, text, Space};
 use iced::{Element, Length, Renderer};
@@ -11,38 +10,22 @@ use std::path::PathBuf;
 
 #[derive(Debug, Clone)]
 pub struct Settings {
-    pub phone: Phone,
-    pub theme: Theme,
-}
-
-#[derive(Debug, Clone)]
-pub struct Phone {
-    pub expert_mode: bool,
-    pub disable_mode: bool,
-    pub multi_user_mode: bool,
-}
-
-impl Default for Phone {
-    fn default() -> Self {
-        Self {
-            expert_mode: false,
-            disable_mode: false,
-            multi_user_mode: get_android_sdk() > 21,
-        }
-    }
+    pub general: GeneralSettings,
+    pub device: DeviceSettings,
 }
 
 impl Default for Settings {
     fn default() -> Self {
         Self {
-            phone: Phone::default(),
-            theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
+            general: Config::load_configuration_file().general,
+            device: DeviceSettings::default(),
         }
     }
 }
 
 #[derive(Debug, Clone)]
 pub enum Message {
+    LoadDeviceSettings,
     ExpertMode(bool),
     DisableMode(bool),
     MultiUserMode(bool),
@@ -51,57 +34,80 @@ pub enum Message {
 }
 
 impl Settings {
-    pub fn update(&mut self, phone: &CorePhone, msg: Message) {
+    pub fn update(&mut self, phone: &Phone, msg: Message) {
         match msg {
             Message::ExpertMode(toggled) => {
-                info!(
-                    "Expert mode {}",
-                    if toggled { "enabled" } else { "disabled" }
-                );
-                self.phone.expert_mode = toggled;
+                self.general.expert_mode = toggled;
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::DisableMode(toggled) => {
                 if phone.android_sdk >= 23 {
-                    info!(
-                        "Disable mode {}",
-                        if toggled { "enabled" } else { "disabled" }
-                    );
-                    self.phone.disable_mode = toggled;
+                    self.device.disable_mode = toggled;
+                    debug!("Config change: {:?}", self);
+                    Config::save_changes(self, &phone.adb_id);
                 }
             }
             Message::MultiUserMode(toggled) => {
-                info!(
-                    "Multi-user mode {}",
-                    if toggled { "enabled" } else { "disabled" }
-                );
-                self.phone.multi_user_mode = toggled;
+                self.device.multi_user_mode = toggled;
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::ApplyTheme(theme) => {
-                self.theme = theme;
-                Config::save_changes(self);
+                self.general.theme = theme.to_string();
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::UrlPressed(url) => {
                 open_url(url);
             }
+            Message::LoadDeviceSettings => {
+                match Config::load_configuration_file()
+                    .devices
+                    .iter()
+                    .find(|d| d.device_id == phone.adb_id)
+                {
+                    Some(device) => self.device = device.clone(),
+                    None => {
+                        self.device = DeviceSettings {
+                            device_id: phone.adb_id.clone(),
+                            multi_user_mode: phone.android_sdk > 21,
+                            disable_mode: false,
+                        }
+                    }
+                };
+            }
         }
     }
 
-    pub fn view(&self, phone: &CorePhone) -> Element<Message, Renderer<Theme>> {
+    pub fn view(&self, phone: &Phone) -> Element<Message, Renderer<Theme>> {
         let general_category_text = text("General").size(25);
 
-        let theme_picklist = pick_list(Theme::all(), Some(self.theme.clone()), Message::ApplyTheme);
-
-        let uad_category_text = text("Non-persistent settings").size(25);
+        let theme_picklist = pick_list(
+            Theme::all(),
+            Some(string_to_theme(self.general.theme.clone())),
+            Message::ApplyTheme,
+        );
 
         let expert_mode_descr =
             text("Most of unsafe packages are known to bootloop the device if removed.").size(15);
 
         let expert_mode_checkbox = checkbox(
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
-            self.phone.expert_mode,
+            self.general.expert_mode,
             Message::ExpertMode,
         )
         .style(style::CheckBox::SettingsEnabled);
+
+        let uad_category_text = text(phone.model.to_owned()).size(25);
+
+        let warning = container(
+            text("The following settings only affect the currently selected device")
+                .style(style::Text::Danger),
+        )
+        .padding(10)
+        .width(Length::Fill)
+        .style(style::Container::Description);
 
         let multi_user_mode_descr =
             text("Disabling this setting will typically prevent affecting your work profile")
@@ -109,16 +115,10 @@ impl Settings {
 
         let multi_user_mode_checkbox = checkbox(
             "Affect all the users of the phone (not only the selected user)",
-            self.phone.multi_user_mode,
+            self.device.multi_user_mode,
             Message::MultiUserMode,
         )
         .style(style::CheckBox::SettingsEnabled);
-
-        let _disable_color = if phone.android_sdk >= 23 {
-            self.theme.palette.normal.surface
-        } else {
-            self.theme.palette.normal.primary
-        };
 
         let disable_checkbox_style = if phone.android_sdk >= 23 {
             style::CheckBox::SettingsEnabled
@@ -145,7 +145,7 @@ impl Settings {
         // see https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
         let disable_mode_checkbox = checkbox(
             "Clear and disable packages instead of uninstalling them",
-            self.phone.disable_mode,
+            self.device.disable_mode,
             Message::DisableMode,
         )
         .style(disable_checkbox_style);
@@ -170,9 +170,11 @@ impl Settings {
             "Theme",
             theme_picklist,
             Space::new(Length::Fill, Length::Shrink),
-            uad_category_text,
             expert_mode_checkbox,
             expert_mode_descr,
+            Space::new(Length::Fill, Length::Shrink),
+            uad_category_text,
+            warning,
             Space::new(Length::Fill, Length::Shrink),
             multi_user_mode_checkbox,
             multi_user_mode_descr,

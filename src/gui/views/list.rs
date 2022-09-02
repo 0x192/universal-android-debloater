@@ -174,7 +174,7 @@ impl List {
 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
-                        if package.removal == Removal::Unsafe && !settings.phone.expert_mode {
+                        if package.removal == Removal::Unsafe && !settings.general.expert_mode {
                             package.selected = false;
                         } else {
                             package.selected = toggle;
@@ -200,7 +200,7 @@ impl List {
                             &self.selected_user.unwrap(),
                             package,
                             selected_device,
-                            &settings.phone,
+                            &settings.device,
                         );
 
                         for (i, action) in actions.into_iter().enumerate() {
@@ -259,7 +259,7 @@ impl List {
                         &self.selected_user.unwrap(),
                         &self.phone_packages[i_user][i],
                         selected_device,
-                        &settings.phone,
+                        &settings.device,
                     );
                     for (j, action) in actions.into_iter().enumerate() {
                         // Only the first command can change the package state
@@ -314,14 +314,14 @@ impl List {
                     let package = &mut self.phone_packages[i_user][i];
                     update_selection_count(&mut self.selection, package.state, false);
 
-                    if !settings.phone.multi_user_mode {
-                        package.state = package.state.opposite(settings.phone.disable_mode);
+                    if !settings.device.multi_user_mode {
+                        package.state = package.state.opposite(settings.device.disable_mode);
                         package.selected = false;
                     } else {
                         for u in &selected_device.user_list {
                             self.phone_packages[u.index][i].state = self.phone_packages[u.index][i]
                                 .state
-                                .opposite(settings.phone.disable_mode);
+                                .opposite(settings.device.disable_mode);
                             self.phone_packages[u.index][i].selected = false;
                         }
                     }
@@ -431,11 +431,11 @@ impl List {
                     .width(Length::Fill)
                     .style(style::Container::Description);
 
-                let restore_action = match settings.phone.disable_mode {
+                let restore_action = match settings.device.disable_mode {
                     true => "Enable/Restore",
                     false => "Restore",
                 };
-                let remove_action = match settings.phone.disable_mode {
+                let remove_action = match settings.device.disable_mode {
                     true => "Disable",
                     false => "Uninstall",
                 };

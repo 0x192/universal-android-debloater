@@ -1,6 +1,6 @@
+use crate::core::config::DeviceSettings;
 use crate::core::uad_lists::PackageState;
 use crate::core::utils::request_builder;
-use crate::gui::views::settings::Phone as SettingsPhone;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use retry::{delay::Fixed, retry, OperationResult};
@@ -125,7 +125,7 @@ pub fn action_handler(
     selected_u: &User,
     package: &PackageRow,
     phone: &Phone,
-    settings: &SettingsPhone,
+    settings: &DeviceSettings,
 ) -> Vec<String> {
     // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
     // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!

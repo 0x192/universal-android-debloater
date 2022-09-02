@@ -3,7 +3,6 @@
 #[macro_use]
 extern crate log;
 
-use crate::core::config::Config;
 use crate::core::utils::setup_uad_dir;
 use fern::{
     colors::{Color, ColoredLevelConfig},
@@ -22,9 +21,6 @@ static CONFIG_DIR: PathBuf = setup_uad_dir(dirs::config_dir());
 
 #[dynamic]
 static CACHE_DIR: PathBuf = setup_uad_dir(dirs::cache_dir());
-
-#[dynamic]
-static IN_FILE_CONFIGURATION: Config = Config::load_configuration_file();
 
 fn main() {
     setup_logger().expect("setup logging");
