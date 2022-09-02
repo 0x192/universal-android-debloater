@@ -184,7 +184,9 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
             let release: Release =
                 serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
                     .unwrap();
-            if release.tag_name.as_str() > env!("CARGO_PKG_VERSION") {
+            if release.tag_name.as_str() != "dev-build"
+                && release.tag_name.as_str() > env!("CARGO_PKG_VERSION")
+            {
                 Ok(Some(release))
             } else {
                 Ok(None)
