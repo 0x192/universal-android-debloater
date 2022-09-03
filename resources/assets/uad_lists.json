@@ -12881,7 +12881,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to triggers SystemUI crash/bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "ColorOS weather service. Removal seems to triggers SystemUI crash/bootloops\nSee: https://github.com//issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
