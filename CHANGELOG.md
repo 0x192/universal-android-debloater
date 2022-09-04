@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.6] - Unreleased
+
+### Added
+- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] Device-specific persistent configuration. Some settings are now device-specific which means you can maintain different settings across several devices.
+
+### Changed
+- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] All settings are now persistent.
+
 ## [0.5.1] - 2022-07-03
 
 Since `0.5.0`, all changes related to apps are available to users without downloading a new version of UAD as the software directly download the json debloat list from Github. These changes can be tracked in commits with `[Pkg]` in their name. [See the commits](https://github.com/0x192/universal-android-debloater/commits/main)
