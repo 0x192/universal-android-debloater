@@ -11,7 +11,8 @@ and `Removed`.
 ## [0.6] - Unreleased
 
 ### Added
-- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] Device-specific persistent configuration. Some settings are now device-specific which means you can maintain different settings across several devices.
+- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] Device-specific persistent configuration. Some settings are now device-specific which means you can maintain different settings across several devices. 
+**Note: Settings specification has changed. Previous user settings will be erased**.
 
 ### Changed
 - [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] All settings are now persistent.

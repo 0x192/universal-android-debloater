@@ -9,6 +9,7 @@ use std::path::PathBuf;
 #[derive(Default, Debug, Serialize, Deserialize, Clone)]
 pub struct Config {
     pub general: GeneralSettings,
+    #[serde(skip_serializing_if = "Vec::is_empty", default = "Vec::new")]
     pub devices: Vec<DeviceSettings>,
 }
 
@@ -66,6 +67,9 @@ impl Config {
                 Ok(config) => config,
                 Err(e) => {
                     error!("Invalid config file: `{}`", e);
+                    error!("Restoring default config file");
+                    let toml = toml::to_string(&Config::default()).unwrap();
+                    fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
                     Config::default()
                 }
             },
