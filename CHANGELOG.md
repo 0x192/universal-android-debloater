@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.5.2] - 2022-09-04
+
+Since `0.5.0`, all changes related to apps are available to users without downloading a new version of UAD as the software directly download the json debloat list from Github. These changes can be tracked in commits with `[Pkg]` or `pkg:` in their name. [See the commits](https://github.com/0x192/universal-android-debloater/commits/main)
+
+### Changed
+- Prevents UAD to prompt update for `dev-build`: there is now a "beta" build available on Github each time a commit changing the software is pushed on the main branch. 
+
 ## [0.5.1] - 2022-07-03
 
 Since `0.5.0`, all changes related to apps are available to users without downloading a new version of UAD as the software directly download the json debloat list from Github. These changes can be tracked in commits with `[Pkg]` in their name. [See the commits](https://github.com/0x192/universal-android-debloater/commits/main)

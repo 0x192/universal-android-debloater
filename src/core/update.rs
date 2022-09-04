@@ -177,19 +177,20 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
 pub fn get_latest_release() -> Result<Option<Release>, ()> {
     debug!("Checking for UAD update");
 
-    match ureq::get("https://api.github.com/repos/0x192/universal-android-debloater/releases")
-        .call()
+    match ureq::get(
+        "https://api.github.com/repos/0x192/universal-android-debloater/releases?per_page=2",
+    )
+    .call()
     {
         Ok(res) => {
-            let release: Release =
-                serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
-                    .unwrap();
-            if release.tag_name.as_str() != "dev-build"
-                && release.tag_name.as_str() > env!("CARGO_PKG_VERSION")
-            {
-                Ok(Some(release))
-            } else {
-                Ok(None)
+            let releases = res.into_json::<Vec<Release>>().unwrap();
+
+            match releases.iter().find(|r| {
+                r.tag_name.as_str() > env!("CARGO_PKG_VERSION")
+                    && r.tag_name.as_str() != "dev-build"
+            }) {
+                Some(release) => Ok(Some(release.clone())),
+                None => Ok(None),
             }
         }
         Err(_) => {
