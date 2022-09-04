@@ -4279,7 +4279,7 @@
     "list": "Oem",
     "description": "Samsung Pay Framework needed for Samsung Pay\nSee below\n",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.samsung.android.spay"],
     "labels": null,
     "removal": "Recommended"
   },
@@ -4287,7 +4287,7 @@
     "id": "com.samsung.android.spay",
     "list": "Oem",
     "description": "Samsung Pay (https://play.google.com/store/apps/details?id=com.samsung.android.spay)\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones \nand other Samsung-produced devices\nhttps://en.wikipedia.org/wiki/Samsung_Pay\nNOTE : Samsung Pay is KNOX dependant and will never work again if you root your phone.\nFYI : Your data are sold (https://www.sammobile.com/news/samsung-pay-new-privacy-policy-your-data-sold/)\n",
-    "dependencies": null,
+    "dependencies": ["com.sec.android.app.samsungapps", "com.samsung.android.spayfw"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -4997,9 +4997,9 @@
   {
     "id": "com.sec.android.app.samsungapps",
     "list": "Oem",
-    "description": "Samsung Galaxy Store\nSamsung app store.\nhttps://en.wikipedia.org/wiki/Samsung_Galaxy_Store\n",
+    "description": "Samsung Galaxy Store\nSamsung app store.\nRequired for Samsung Pay feature to work.\n\nhttps://en.wikipedia.org/wiki/Samsung_Galaxy_Store\n",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.samsung.android.spay"],
     "labels": null,
     "removal": "Recommended"
   },
