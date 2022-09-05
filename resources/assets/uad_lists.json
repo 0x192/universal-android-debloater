@@ -20216,7 +20216,7 @@
   {
     "id": "com.oplus.securitykeyboard",
     "list": "Oem",
-    "description": "",
+    "description": "Secure Keyboard",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
