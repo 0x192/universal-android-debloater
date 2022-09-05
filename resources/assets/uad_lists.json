@@ -20207,7 +20207,7 @@
   {
     "id": "com.oplus.pay",
     "list": "Oem",
-    "description": "",
+    "description": "Secure payment APK",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
