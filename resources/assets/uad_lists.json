@@ -20225,7 +20225,7 @@
   {
     "id": "com.oplus.statistics.rom",
     "list": "Oem",
-    "description": "",
+    "description": "User Experience Program, runs in background",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
