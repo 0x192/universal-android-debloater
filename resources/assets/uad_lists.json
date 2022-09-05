@@ -20252,7 +20252,7 @@
   {
     "id": "com.realme.securitycheck",
     "list": "Oem",
-    "description": "",
+    "description": "Security Analysis, for data collection",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
