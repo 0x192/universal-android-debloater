@@ -20216,7 +20216,7 @@
   {
     "id": "com.oplus.securitykeyboard",
     "list": "Oem",
-    "description": "Secure Keyboard",
+    "description": "Secure Keyboard\nKeyboard that appears only when typing a password on apps and webpages, if enabled on Keyboard and Input settings",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
