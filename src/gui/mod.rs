@@ -6,7 +6,7 @@ use crate::core::sync::{get_devices_list, Phone};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::UadListState;
 use crate::core::update::{get_latest_release, Release, SelfUpdateState, SelfUpdateStatus};
-use crate::core::utils::perform_commands;
+use crate::core::utils::{perform_commands, string_to_theme};
 
 use views::about::{About as AboutView, Message as AboutMessage};
 use views::list::{List as AppsView, LoadingState as ListLoadingState, Message as AppsMessage};
@@ -83,7 +83,7 @@ impl Application for UadGui {
     }
 
     fn theme(&self) -> Theme {
-        self.settings_view.theme.clone()
+        string_to_theme(self.settings_view.general.theme.clone())
     }
 
     fn title(&self) -> String {
@@ -103,6 +103,7 @@ impl Application for UadGui {
                     None => devices_list.first().map(|x| x.to_owned()),
                 };
                 self.devices_list = devices_list;
+                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
                 self.update(Message::AppsAction(AppsMessage::LoadUadList(true)))
             }
             Message::AppsPress => {
@@ -193,6 +194,7 @@ impl Application for UadGui {
                     s_device.android_sdk, s_device.model
                 );
                 self.apps_view.loading_state = ListLoadingState::FindingPhones;
+                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
                 self.update(Message::AppsAction(AppsMessage::LoadPhonePackages((
                     self.apps_view.uad_lists.clone(),
                     UadListState::Done,
