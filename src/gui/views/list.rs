@@ -87,6 +87,12 @@ impl List {
         let i_user = self.selected_user.unwrap_or(User { id: 0, index: 0 }).index;
         match message {
             Message::LoadUadList(remote) => {
+                info!("{:-^65}", "-");
+                info!(
+                    "ANDROID_SDK: {} | DEVICE: {}",
+                    selected_device.android_sdk, selected_device.model
+                );
+                info!("{:-^65}", "-");
                 self.loading_state = LoadingState::DownloadingList;
                 Command::perform(
                     Self::init_apps_view(remote, selected_device.clone()),

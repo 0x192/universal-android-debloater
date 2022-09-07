@@ -190,9 +190,10 @@ impl Application for UadGui {
                 env::set_var("ANDROID_SERIAL", s_device.adb_id);
                 info!("{:-^65}", "-");
                 info!(
-                    "ANDROID_SDK: {} | PHONE: {}",
+                    "ANDROID_SDK: {} | DEVICE: {}",
                     s_device.android_sdk, s_device.model
                 );
+                info!("{:-^65}", "-");
                 self.apps_view.loading_state = ListLoadingState::FindingPhones;
                 self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
                 self.update(Message::AppsAction(AppsMessage::LoadPhonePackages((
