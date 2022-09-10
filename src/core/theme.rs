@@ -1,16 +1,11 @@
 use iced::Color;
-use std::cmp::Ordering;
 
-#[derive(Debug, Clone)]
-pub struct Theme {
-    pub name: String,
-    pub palette: ColorPalette,
-}
-
-impl Default for Theme {
-    fn default() -> Self {
-        Theme::lupin()
-    }
+#[derive(Default, Debug, PartialEq, Eq, Copy, Clone)]
+pub enum Theme {
+    #[default]
+    Lupin,
+    Dark,
+    Light,
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -43,14 +38,10 @@ pub struct ColorPalette {
 }
 
 impl Theme {
-    pub fn all() -> Vec<Theme> {
-        vec![Theme::dark(), Theme::light(), Theme::lupin()]
-    }
-
-    pub fn dark() -> Theme {
-        Theme {
-            name: "Dark".to_string(),
-            palette: ColorPalette {
+    pub const ALL: [Self; 3] = [Self::Lupin, Self::Dark, Self::Light];
+    pub fn palette(&self) -> ColorPalette {
+        match self {
+            Self::Dark => ColorPalette {
                 base: BaseColors {
                     background: hex_to_color("#111111").unwrap(),
                     foreground: hex_to_color("#1C1C1C").unwrap(),
@@ -68,13 +59,7 @@ impl Theme {
                     error: hex_to_color("#C13047").unwrap(),
                 },
             },
-        }
-    }
-
-    pub fn light() -> Theme {
-        Theme {
-            name: "Light".to_string(),
-            palette: ColorPalette {
+            Self::Light => ColorPalette {
                 base: BaseColors {
                     background: hex_to_color("#EEEEEE").unwrap(),
                     foreground: hex_to_color("#E0E0E0").unwrap(),
@@ -92,13 +77,7 @@ impl Theme {
                     error: hex_to_color("#C13047").unwrap(),
                 },
             },
-        }
-    }
-
-    pub fn lupin() -> Theme {
-        Theme {
-            name: "Lupin".to_string(),
-            palette: ColorPalette {
+            Self::Lupin => ColorPalette {
                 base: BaseColors {
                     background: hex_to_color("#282a36").unwrap(),
                     foreground: hex_to_color("#353746").unwrap(),
@@ -120,36 +99,15 @@ impl Theme {
     }
 }
 
-impl PartialEq for Theme {
-    fn eq(&self, other: &Self) -> bool {
-        self.name == other.name
-    }
-}
-
-impl PartialOrd for Theme {
-    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.name.cmp(&other.name))
-    }
-}
-
-impl Eq for Theme {}
-
-impl Ord for Theme {
-    fn cmp(&self, other: &Self) -> Ordering {
-        self.name.cmp(&other.name)
-    }
-}
-
 impl std::fmt::Display for Theme {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,
             "{}",
-            match self.name.as_str() {
-                "Dark" => "Dark",
-                "Light" => "Light",
-                "Lupin" => "Lupin",
-                _ => "Unknown theme",
+            match self {
+                Theme::Dark => "Dark",
+                Theme::Light => "Light",
+                Theme::Lupin => "Lupin",
             }
         )
     }

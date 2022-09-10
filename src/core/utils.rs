@@ -122,10 +122,10 @@ pub fn import_selection(packages: &mut [PackageRow], selection: &mut Selection) 
 
 pub fn string_to_theme(theme: String) -> Theme {
     match theme.as_str() {
-        "Dark" => Theme::dark(),
-        "Light" => Theme::light(),
-        "Lupin" => Theme::lupin(),
-        _ => Theme::lupin(),
+        "Dark" => Theme::Dark,
+        "Light" => Theme::Light,
+        "Lupin" => Theme::Lupin,
+        _ => Theme::Lupin,
     }
 }
 

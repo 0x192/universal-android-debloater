@@ -6,6 +6,7 @@ use crate::gui::style;
 
 use iced::widget::{button, checkbox, column, container, pick_list, row, text, Space};
 use iced::{Element, Length, Renderer};
+
 use std::path::PathBuf;
 
 #[derive(Debug, Clone)]
@@ -84,7 +85,7 @@ impl Settings {
         let general_category_text = text("General").size(25);
 
         let theme_picklist = pick_list(
-            Theme::all(),
+            Theme::ALL.as_ref(),
             Some(string_to_theme(self.general.theme.clone())),
             Message::ApplyTheme,
         );

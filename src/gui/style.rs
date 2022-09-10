@@ -19,8 +19,8 @@ impl application::StyleSheet for Theme {
 
     fn appearance(&self, _style: Self::Style) -> application::Appearance {
         application::Appearance {
-            background_color: self.palette.base.background,
-            text_color: self.palette.base.foreground,
+            background_color: self.palette().base.background,
+            text_color: self.palette().base.foreground,
         }
     }
 }
@@ -44,19 +44,19 @@ impl container::StyleSheet for Theme {
     fn appearance(&self, style: Self::Style) -> container::Appearance {
         let from_appearance = |c: Color| container::Appearance {
             background: Some(Background::Color(c)),
-            text_color: Some(self.palette.bright.surface),
+            text_color: Some(self.palette().bright.surface),
             ..container::Appearance::default()
         };
 
         match style {
-            Container::Content => from_appearance(self.palette.base.background),
-            Container::Navigation => from_appearance(self.palette.base.background),
+            Container::Content => from_appearance(self.palette().base.background),
+            Container::Navigation => from_appearance(self.palette().base.background),
             Container::Description => container::Appearance {
-                background: Some(Background::Color(self.palette.base.foreground)),
-                text_color: Some(self.palette.bright.surface),
+                background: Some(Background::Color(self.palette().base.foreground)),
+                text_color: Some(self.palette().bright.surface),
                 border_radius: 5.0,
                 border_width: 0.0,
-                border_color: self.palette.base.background,
+                border_color: self.palette().base.background,
             },
         }
     }
@@ -84,7 +84,7 @@ impl button::StyleSheet for Theme {
     type Style = Button;
 
     fn active(&self, style: Self::Style) -> button::Appearance {
-        let p = self.palette;
+        let p = self.palette();
 
         let appearance = button::Appearance {
             border_width: 1.0,
@@ -130,7 +130,7 @@ impl button::StyleSheet for Theme {
 
     fn hovered(&self, style: Self::Style) -> button::Appearance {
         let active = self.active(style);
-        let p = self.palette;
+        let p = self.palette();
 
         let hover_appearance = |bg, tc: Option<Color>| button::Appearance {
             background: Some(Background::Color(Color { a: 0.25, ..bg })),
@@ -152,7 +152,7 @@ impl button::StyleSheet for Theme {
 
     fn disabled(&self, style: Self::Style) -> button::Appearance {
         let active = self.active(style);
-        let p = self.palette;
+        let p = self.palette();
 
         let disabled_appearance = |bg, tc: Option<Color>| button::Appearance {
             background: Some(Background::Color(Color { a: 0.05, ..bg })),
@@ -199,7 +199,7 @@ impl scrollable::StyleSheet for Theme {
             border_width: 0.0,
             border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: self.palette.base.foreground,
+                color: self.palette().base.foreground,
                 border_radius: 0.0,
                 border_width: 0.0,
                 border_color: Color::TRANSPARENT,
@@ -207,8 +207,8 @@ impl scrollable::StyleSheet for Theme {
         };
 
         match style {
-            Scrollable::Description => from_appearance(self.palette.base.foreground),
-            Scrollable::Packages => from_appearance(self.palette.base.background),
+            Scrollable::Description => from_appearance(self.palette().base.foreground),
+            Scrollable::Packages => from_appearance(self.palette().base.background),
         }
     }
 
@@ -250,51 +250,51 @@ impl checkbox::StyleSheet for Theme {
     fn active(&self, style: Self::Style, _is_checked: bool) -> checkbox::Appearance {
         match style {
             CheckBox::PackageEnabled => checkbox::Appearance {
-                background: Background::Color(self.palette.base.background),
-                checkmark_color: self.palette.bright.primary,
+                background: Background::Color(self.palette().base.background),
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: self.palette.base.background,
-                text_color: Some(self.palette.bright.surface),
+                border_color: self.palette().base.background,
+                text_color: Some(self.palette().bright.surface),
             },
             CheckBox::PackageDisabled => checkbox::Appearance {
                 background: Background::Color(Color {
                     a: 0.55,
-                    ..self.palette.base.background
+                    ..self.palette().base.background
                 }),
-                checkmark_color: self.palette.bright.primary,
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: self.palette.normal.primary,
-                text_color: Some(self.palette.normal.primary),
+                border_color: self.palette().normal.primary,
+                text_color: Some(self.palette().normal.primary),
             },
             CheckBox::SettingsEnabled => checkbox::Appearance {
-                background: Background::Color(self.palette.base.background),
-                checkmark_color: self.palette.bright.primary,
+                background: Background::Color(self.palette().base.background),
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: self.palette.bright.primary,
-                text_color: Some(self.palette.bright.surface),
+                border_color: self.palette().bright.primary,
+                text_color: Some(self.palette().bright.surface),
             },
             CheckBox::SettingsDisabled => checkbox::Appearance {
-                background: Background::Color(self.palette.base.foreground),
-                checkmark_color: self.palette.bright.primary,
+                background: Background::Color(self.palette().base.foreground),
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: self.palette.normal.primary,
-                text_color: Some(self.palette.normal.primary),
+                border_color: self.palette().normal.primary,
+                text_color: Some(self.palette().normal.primary),
             },
         }
     }
 
     fn hovered(&self, style: Self::Style, is_checked: bool) -> checkbox::Appearance {
         let from_appearance = || checkbox::Appearance {
-            background: Background::Color(self.palette.base.foreground),
-            checkmark_color: self.palette.bright.primary,
+            background: Background::Color(self.palette().base.foreground),
+            checkmark_color: self.palette().bright.primary,
             border_radius: 5.0,
             border_width: 2.0,
-            border_color: self.palette.bright.primary,
-            text_color: Some(self.palette.bright.surface),
+            border_color: self.palette().bright.primary,
+            text_color: Some(self.palette().bright.surface),
         };
 
         match style {
@@ -322,35 +322,35 @@ impl text_input::StyleSheet for Theme {
 
     fn active(&self, _style: Self::Style) -> text_input::Appearance {
         text_input::Appearance {
-            background: Background::Color(self.palette.base.foreground),
+            background: Background::Color(self.palette().base.foreground),
             border_radius: 5.0,
             border_width: 0.0,
-            border_color: self.palette.base.foreground,
+            border_color: self.palette().base.foreground,
         }
     }
 
     fn focused(&self, _style: Self::Style) -> text_input::Appearance {
         text_input::Appearance {
-            background: Background::Color(self.palette.base.foreground),
+            background: Background::Color(self.palette().base.foreground),
             border_radius: 2.0,
             border_width: 1.0,
             border_color: Color {
                 a: 0.5,
-                ..self.palette.normal.primary
+                ..self.palette().normal.primary
             },
         }
     }
 
     fn placeholder_color(&self, _style: Self::Style) -> Color {
-        self.palette.normal.surface
+        self.palette().normal.surface
     }
 
     fn value_color(&self, _style: Self::Style) -> Color {
-        self.palette.bright.primary
+        self.palette().bright.primary
     }
 
     fn selection_color(&self, _style: Self::Style) -> Color {
-        self.palette.normal.primary
+        self.palette().normal.primary
     }
 
     /// Produces the style of an hovered text input.
@@ -374,7 +374,7 @@ impl menu::StyleSheet for Theme {
     type Style = ();
 
     fn appearance(&self, _style: Self::Style) -> menu::Appearance {
-        let p = self.palette;
+        let p = self.palette();
 
         menu::Appearance {
             text_color: p.bright.surface,
@@ -393,23 +393,23 @@ impl pick_list::StyleSheet for Theme {
 
     fn active(&self, _style: ()) -> pick_list::Appearance {
         pick_list::Appearance {
-            text_color: self.palette.bright.surface,
-            background: self.palette.base.background.into(),
+            text_color: self.palette().bright.surface,
+            background: self.palette().base.background.into(),
             border_width: 1.0,
             border_color: Color {
                 a: 0.5,
-                ..self.palette.normal.primary
+                ..self.palette().normal.primary
             },
             border_radius: 2.0,
             icon_size: 0.5,
-            placeholder_color: self.palette.bright.surface,
+            placeholder_color: self.palette().bright.surface,
         }
     }
 
     fn hovered(&self, style: ()) -> pick_list::Appearance {
         let active = self.active(style);
         pick_list::Appearance {
-            text_color: self.palette.bright.primary,
+            border_color: self.palette().normal.primary,
             ..active
         }
     }
@@ -441,7 +441,7 @@ impl text::StyleSheet for Theme {
         match style {
             Text::Default => Default::default(),
             Text::Danger => text::Appearance {
-                color: Some(self.palette.bright.error),
+                color: Some(self.palette().bright.error),
             },
             Text::Color(c) => text::Appearance { color: Some(c) },
         }
