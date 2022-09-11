@@ -4518,6 +4518,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.discover",
+    "list": "Oem",
+    "description": "It shows up as a pane on OneUI home and prompts you to install all sorts of random apps. OneUI works perfectly fine if you uninstall these and simply removes the discover pane.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.discover.sep",
+    "list": "Oem",
+    "description": "Related to `com.samsung.discover` but doesnt seem to do much on its own. Safe to remove without any effect.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.samsung.ecomm",
     "list": "Oem",
     "description": "Shop Samsung (https://play.google.com/store/apps/details?id=com.samsung.ecomm)\nApp where you can buy all (and only) Samsung products.\nhttps://www.samsung.com/us/explore/shop-samsung-app/\n",
