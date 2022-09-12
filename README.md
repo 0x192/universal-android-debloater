@@ -43,7 +43,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Nokia
 * [X] OnePlus
 * [X] Oppo
-* [ ] Realme
+* [x] Realme
 * [X] Samsung
 * [X] Sony
 * [X] Tecno
