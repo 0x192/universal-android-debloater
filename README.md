@@ -41,6 +41,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Huawei
 * [X] Motorola
 * [X] Nokia
+* [X] Nothing
 * [X] OnePlus
 * [X] Oppo
 * [x] Realme
