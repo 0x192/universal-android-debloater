@@ -107,6 +107,6 @@ pub fn nav_menu<'a>(
     container(row)
         .width(Length::Fill)
         .padding(10)
-        .style(style::Container::Navigation)
+        .style(style::Container::Frame)
         .into()
 }

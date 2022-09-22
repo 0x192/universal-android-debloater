@@ -435,7 +435,7 @@ impl List {
                 let description_panel = container(description_scroll)
                     .height(Length::FillPortion(2))
                     .width(Length::Fill)
-                    .style(style::Container::Description);
+                    .style(style::Container::Frame);
 
                 let restore_action = match settings.device.disable_mode {
                     true => "Enable/Restore",
@@ -503,11 +503,7 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center);
 
-                container(content)
-                    .height(Length::Fill)
-                    .padding(10)
-                    .style(style::Container::Content)
-                    .into()
+                container(content).height(Length::Fill).padding(10).into()
             }
         }
     }
@@ -602,6 +598,6 @@ fn waiting_view<'a>(
         .height(Length::Fill)
         .center_y()
         .center_x()
-        .style(style::Container::Content)
+        .style(style::Container::default())
         .into()
 }

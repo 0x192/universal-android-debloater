@@ -35,7 +35,7 @@ impl About {
         let descr_container = container(about_text)
             .width(Length::Fill)
             .padding(25)
-            .style(style::Container::Navigation);
+            .style(style::Container::Frame);
 
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
         let uad_list_text =
@@ -102,7 +102,7 @@ impl About {
             .width(Length::Fill)
             .center_x()
             .padding(10)
-            .style(style::Container::Navigation);
+            .style(style::Container::Frame);
 
         let website_btn = button("Github page")
             .on_press(Message::UrlPressed(PathBuf::from(
@@ -146,7 +146,6 @@ impl About {
             .width(Length::Fill)
             .height(Length::Fill)
             .padding(10)
-            .style(style::Container::Content)
             .into()
     }
 }
