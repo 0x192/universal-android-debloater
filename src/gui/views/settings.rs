@@ -4,9 +4,8 @@ use crate::core::theme::Theme;
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
 
-use iced::widget::{button, checkbox, column, container, pick_list, row, text, Space};
+use iced::widget::{button, checkbox, column, container, radio, row, text, Space};
 use iced::{Element, Length, Renderer};
-
 use std::path::PathBuf;
 
 #[derive(Debug, Clone)]
@@ -82,16 +81,24 @@ impl Settings {
     }
 
     pub fn view(&self, phone: &Phone) -> Element<Message, Renderer<Theme>> {
-        let general_category_text = text("General").size(25);
-
-        let theme_picklist = pick_list(
-            Theme::ALL.as_ref(),
-            Some(string_to_theme(self.general.theme.clone())),
-            Message::ApplyTheme,
-        );
-
-        let expert_mode_descr =
-            text("Most of unsafe packages are known to bootloop the device if removed.").size(15);
+        let radio_btn_theme = Theme::ALL
+            .iter()
+            .fold(row![].spacing(10), |column, option| {
+                column.push(
+                    radio(
+                        format!("{}", option.clone()),
+                        *option,
+                        Some(string_to_theme(self.general.theme.clone())),
+                        Message::ApplyTheme,
+                    )
+                    .size(23),
+                )
+            });
+        let theme_ctn = container(radio_btn_theme)
+            .padding(10)
+            .width(Length::Fill)
+            .height(Length::Shrink)
+            .style(style::Container::Frame);
 
         let expert_mode_checkbox = checkbox(
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
@@ -100,18 +107,26 @@ impl Settings {
         )
         .style(style::CheckBox::SettingsEnabled);
 
-        let uad_category_text = text(phone.model.to_owned()).size(25);
+        let expert_mode_descr =
+            text("Most of unsafe packages are known to bootloop the device if removed.")
+                .style(style::Text::Commentary)
+                .size(15);
 
-        let warning = container(
-            text("The following settings only affect the currently selected device")
-                .style(style::Text::Danger),
+        let warning_ctn = container(
+            row![
+                text("The following settings only affect the currently selected device :")
+                    .style(style::Text::Danger),
+                text(phone.model.to_owned())
+            ]
+            .spacing(7),
         )
         .padding(10)
         .width(Length::Fill)
-        .style(style::Container::Description);
+        .style(style::Container::BorderedFrame);
 
         let multi_user_mode_descr =
             text("Disabling this setting will typically prevent affecting your work profile")
+                .style(style::Text::Commentary)
                 .size(15);
 
         let multi_user_mode_checkbox = checkbox(
@@ -129,10 +144,8 @@ impl Settings {
 
         let disable_mode_descr =
             text("In some cases, it can be better to disable a package instead of uninstalling it")
+                .style(style::Text::Commentary)
                 .size(15);
-
-        /*        let _unavailable_text = text("[Unavailable before Android 8.0]")
-        .size(16);*/
 
         let unavailable_btn = button(text("Unavailable").size(13))
             .on_press(Message::UrlPressed(PathBuf::from(
@@ -166,31 +179,42 @@ impl Settings {
             .width(Length::Fill)
         };
 
+        let general_ctn = container(column![expert_mode_checkbox, expert_mode_descr].spacing(10))
+            .padding(10)
+            .width(Length::Fill)
+            .height(Length::Shrink)
+            .style(style::Container::Frame);
+
+        let device_specific_ctn = container(
+            column![
+                multi_user_mode_checkbox,
+                multi_user_mode_descr,
+                disable_setting_row,
+                disable_mode_descr,
+            ]
+            .spacing(10),
+        )
+        .padding(10)
+        .width(Length::Fill)
+        .height(Length::Shrink)
+        .style(style::Container::Frame);
+
         let content = column![
-            general_category_text,
-            "Theme",
-            theme_picklist,
-            Space::new(Length::Fill, Length::Shrink),
-            expert_mode_checkbox,
-            expert_mode_descr,
-            Space::new(Length::Fill, Length::Shrink),
-            uad_category_text,
-            warning,
-            Space::new(Length::Fill, Length::Shrink),
-            multi_user_mode_checkbox,
-            multi_user_mode_descr,
-            Space::new(Length::Fill, Length::Shrink),
-            disable_setting_row,
-            disable_mode_descr,
+            text("Theme").size(25),
+            theme_ctn,
+            text("General").size(25),
+            general_ctn,
+            text("Current device").size(25),
+            warning_ctn,
+            device_specific_ctn,
         ]
         .width(Length::Fill)
-        .spacing(10);
+        .spacing(20);
 
         container(content)
             .padding(10)
             .width(Length::Fill)
             .height(Length::Fill)
-            .style(style::Container::Content)
             .into()
     }
 }
