@@ -1,4 +1,4 @@
-use iced::Color;
+use iced::{color, Color};
 
 #[derive(Default, Debug, PartialEq, Eq, Copy, Clone)]
 pub enum Theme {
@@ -43,56 +43,56 @@ impl Theme {
         match self {
             Self::Dark => ColorPalette {
                 base: BaseColors {
-                    background: hex_to_color("#111111").unwrap(),
-                    foreground: hex_to_color("#1C1C1C").unwrap(),
+                    background: color!(0x111111),
+                    foreground: color!(0x1C1C1C),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#5E4266").unwrap(),
-                    secondary: hex_to_color("#386e50").unwrap(),
-                    surface: hex_to_color("#828282").unwrap(),
-                    error: hex_to_color("#992B2B").unwrap(),
+                    primary: color!(0x5E4266),
+                    secondary: color!(0x386e50),
+                    surface: color!(0x828282),
+                    error: color!(0x992B2B),
                 },
                 bright: BrightColors {
-                    primary: hex_to_color("#BA84FC").unwrap(),
-                    secondary: hex_to_color("#49eb7a").unwrap(),
-                    surface: hex_to_color("#E0E0E0").unwrap(),
-                    error: hex_to_color("#C13047").unwrap(),
+                    primary: color!(0xBA84FC),
+                    secondary: color!(0x49eb7a),
+                    surface: color!(0xE0E0E0),
+                    error: color!(0xC13047),
                 },
             },
             Self::Light => ColorPalette {
                 base: BaseColors {
-                    background: hex_to_color("#EEEEEE").unwrap(),
-                    foreground: hex_to_color("#E0E0E0").unwrap(),
+                    background: color!(0xEEEEEE),
+                    foreground: color!(0xE0E0E0),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#230F08").unwrap(),
-                    secondary: hex_to_color("#F9D659").unwrap(),
-                    surface: hex_to_color("#818181").unwrap(),
-                    error: hex_to_color("#992B2B").unwrap(),
+                    primary: color!(0x230F08),
+                    secondary: color!(0xF9D659),
+                    surface: color!(0x818181),
+                    error: color!(0x992B2B),
                 },
                 bright: BrightColors {
-                    primary: hex_to_color("#673AB7").unwrap(),
-                    secondary: hex_to_color("#3797A4").unwrap(),
-                    surface: hex_to_color("#000000").unwrap(),
-                    error: hex_to_color("#C13047").unwrap(),
+                    primary: color!(0x673AB7),
+                    secondary: color!(0x3797A4),
+                    surface: color!(0x000000),
+                    error: color!(0xC13047),
                 },
             },
             Self::Lupin => ColorPalette {
                 base: BaseColors {
-                    background: hex_to_color("#282a36").unwrap(),
-                    foreground: hex_to_color("#353746").unwrap(),
+                    background: color!(0x282a36),
+                    foreground: color!(0x353746),
                 },
                 normal: NormalColors {
-                    primary: hex_to_color("#58406F").unwrap(),
-                    secondary: hex_to_color("#386e50").unwrap(),
-                    surface: hex_to_color("#a2a4a3").unwrap(),
-                    error: hex_to_color("#A13034").unwrap(),
+                    primary: color!(0x58406F),
+                    secondary: color!(0x386e50),
+                    surface: color!(0xa2a4a3),
+                    error: color!(0xA13034),
                 },
                 bright: BrightColors {
-                    primary: hex_to_color("#bd94f9").unwrap(),
-                    secondary: hex_to_color("#49eb7a").unwrap(),
-                    surface: hex_to_color("#f4f8f3").unwrap(),
-                    error: hex_to_color("#E63E6D").unwrap(),
+                    primary: color!(0xbd94f9),
+                    secondary: color!(0x49eb7a),
+                    surface: color!(0xf4f8f3),
+                    error: color!(0xE63E6D),
                 },
             },
         }
@@ -111,25 +111,4 @@ impl std::fmt::Display for Theme {
             }
         )
     }
-}
-
-fn hex_to_color(hex: &str) -> Option<Color> {
-    if hex.len() == 7 {
-        let hash = &hex[0..1];
-        let r = u8::from_str_radix(&hex[1..3], 16);
-        let g = u8::from_str_radix(&hex[3..5], 16);
-        let b = u8::from_str_radix(&hex[5..7], 16);
-
-        return match (hash, r, g, b) {
-            ("#", Ok(r), Ok(g), Ok(b)) => Some(Color {
-                r: r as f32 / 255.0,
-                g: g as f32 / 255.0,
-                b: b as f32 / 255.0,
-                a: 1.0,
-            }),
-            _ => None,
-        };
-    }
-
-    None
 }
