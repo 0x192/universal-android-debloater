@@ -156,24 +156,6 @@ pub fn open_url(dir: PathBuf) {
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
-    if !users.is_empty() {
-        users
-            .iter()
-            .flat_map(|u| {
-                commands
-                    .iter()
-                    .map(|c| format!("{} --user {} {}", c, u.id, package))
-            })
-            .collect()
-    } else {
-        commands
-            .iter()
-            .map(|c| format!("{} {}", c, package))
-            .collect()
-    }
-}
-
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
     match fs::metadata(file) {
         Ok(metadata) => match metadata.modified() {
@@ -198,7 +180,7 @@ pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
     }
 }
 
-pub async fn perform_commands(action: String, i: usize, label: String) -> Result<usize, ()> {
+pub async fn perform_adb_commands(action: String, i: usize, label: String) -> Result<usize, ()> {
     match adb_shell_command(true, &action) {
         Ok(o) => {
             // On old devices, adb commands can return the '0' exit code even if there

@@ -1,6 +1,5 @@
 use crate::core::config::DeviceSettings;
 use crate::core::uad_lists::PackageState;
-use crate::core::utils::request_builder;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use retry::{delay::Fixed, retry, OperationResult};
@@ -121,9 +120,32 @@ pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> H
         .collect()
 }
 
+// Minimum information for processing adb commands
+pub struct CorePackage {
+    pub name: String,
+    pub state: PackageState,
+}
+
+impl From<&mut PackageRow> for CorePackage {
+    fn from(pr: &mut PackageRow) -> Self {
+        CorePackage {
+            name: pr.name.clone(),
+            state: pr.state,
+        }
+    }
+}
+impl From<&PackageRow> for CorePackage {
+    fn from(pr: &PackageRow) -> Self {
+        CorePackage {
+            name: pr.name.clone(),
+            state: pr.state,
+        }
+    }
+}
+
 pub fn action_handler(
-    selected_u: &User,
-    package: &PackageRow,
+    user: &User,
+    package: &CorePackage,
     phone: &Phone,
     settings: &DeviceSettings,
 ) -> Vec<String> {
@@ -137,7 +159,7 @@ pub fn action_handler(
             };
 
             match phone.android_sdk {
-                sdk if sdk >= 23 => commands,            // > Android Lollipop (6.0)
+                sdk if sdk >= 23 => commands,            // > Android Marshmallow (6.0)
                 21 | 22 => vec!["pm hide", "pm clear"],  // Android Lollipop (5.x)
                 19 | 20 => vec!["pm block", "pm clear"], // Android KitKat (4.4/4.4W)
                 _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the specific ADB commands need root
@@ -165,7 +187,25 @@ pub fn action_handler(
     } else if phone.android_sdk < 21 {
         request_builder(commands, &package.name, &[])
     } else {
-        request_builder(commands, &package.name, &[*selected_u])
+        request_builder(commands, &package.name, &[*user])
+    }
+}
+
+pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
+    if !users.is_empty() {
+        users
+            .iter()
+            .flat_map(|u| {
+                commands
+                    .iter()
+                    .map(|c| format!("{} --user {} {}", c, u.id, package))
+            })
+            .collect()
+    } else {
+        commands
+            .iter()
+            .map(|c| format!("{} {}", c, package))
+            .collect()
     }
 }
 

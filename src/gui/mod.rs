@@ -6,7 +6,7 @@ use crate::core::sync::{get_devices_list, Phone};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::UadListState;
 use crate::core::update::{get_latest_release, Release, SelfUpdateState, SelfUpdateStatus};
-use crate::core::utils::{perform_commands, string_to_theme};
+use crate::core::utils::{perform_adb_commands, string_to_theme};
 
 use views::about::{About as AboutView, Message as AboutMessage};
 use views::list::{List as AppsView, LoadingState as ListLoadingState, Message as AppsMessage};
@@ -131,7 +131,7 @@ impl Application for UadGui {
                 self.selected_device = None;
                 self.devices_list = vec![];
                 Command::perform(
-                    perform_commands("reboot".to_string(), 0, "ADB".to_string()),
+                    perform_adb_commands("reboot".to_string(), 0, "ADB".to_string()),
                     |_| Message::Nothing,
                 )
             }
