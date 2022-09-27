@@ -20050,5 +20050,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.setupindiaservicestnc",
+    "list": "Oem",
+    "description": "Samsung Services\nResponsible for the persistent notification after every system update if you don't agree to data collection.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
