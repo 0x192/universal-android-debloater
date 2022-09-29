@@ -20054,7 +20054,7 @@
   {
     "id": "com.samsung.android.setupindiaservicestnc",
     "list": "Oem",
-    "description": "Samsung Services\nResponsible for the persistent notification after every system update if you don't agree to data collection.",
+    "description": "Samsung Services\nResponsible for the persistent notification after every system update if you don't agree to data collection.\nThe only way to dismiss it without agreeing to anything is to click the small text and uncheck all the items in a list. Then the 'Agree' button becomes a 'Skip' button. Removing this package doesn't have any known side effects.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
