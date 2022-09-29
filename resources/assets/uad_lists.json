@@ -3215,7 +3215,7 @@
   {
     "id": "com.samsung.android.allshare.service.mediashare",
     "list": "Oem",
-    "description": "Samsung Allshare service (now called SmartView).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/\n",
+    "description": "Samsung Allshare service (now called SmartView).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3548,7 +3548,7 @@
   {
     "id": "com.samsung.android.app.watchmanagerstub",
     "list": "Oem",
-    "description": "Stub for the Galaxy Wearable app.\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java\n",
+    "description": "Stub for the Galaxy Wearable app.\nStub = https://stackoverflow.com/questions/10648280/what-is-stub-and-aidl-for-in-java",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -3872,7 +3872,7 @@
   {
     "id": "com.samsung.android.ipsgeofence",
     "list": "Oem",
-    "description": "Samsung Visit In app\n\nIPSGeofence\nIPS = Indoor Positioning System.\nThe concept of Indoor Positioning System designates a network of connected devices within a building making it possible \nto trace the position of another device – and therefore potentially of a person – in environments where GPS systems are \nnot efficient .\nGeofencing is a technique which consists in activating preconfigured actions when a device enters a \ncertain geographical area. For example, a user can use it to automatically turn on Wi-Fi and home lights when their smartphone \nis detected nearby.\nIn short, if enabled, this app will track your location everywhere and all the time!\nhttps://www.comparitech.com/blog/vpn-privacy/what-is-geofencing-privacy/\n",
+    "description": "Samsung Visit In app\n\nIPSGeofence\nIPS = Indoor Positioning System.\nThe concept of Indoor Positioning System designates a network of connected devices within a building making it possible to trace the position of another device – and therefore potentially of a person – in environments where GPS systems are \nnot efficient .\nGeofencing is a technique which consists in activating preconfigured actions when a device enters a certain geographical area.\nFor example, a user can use it to automatically turn on Wi-Fi and home lights when their smartphone is detected nearby.\nIn short, if enabled, this app will track your location everywhere and all the time!\nhttps://www.comparitech.com/blog/vpn-privacy/what-is-geofencing-privacy/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4277,7 +4277,7 @@
   {
     "id": "com.samsung.android.spayfw",
     "list": "Oem",
-    "description": "Samsung Pay Framework needed for Samsung Pay\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones \nand other Samsung-produced devices\nSee below\n",
+    "description": "Samsung Pay Framework needed for Samsung Pay\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones and other Samsung-produced devices. See below.",
     "dependencies": null,
     "neededBy": ["com.samsung.android.spay"],
     "labels": null,
