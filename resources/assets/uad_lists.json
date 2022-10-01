@@ -17939,7 +17939,7 @@
   {
     "id": "com.google.android.packageinstaller",
     "list": "Google",
-    "description": "Occasionally runs in the background.\nRelated to installing Google-specific packages? Possibly something to do with Play services and backend updates/installations. Installing an app through Google Play worked fine with it disabled.",
+    "description": "Occasionally runs in the background.\nRelated to installing Google-specific packages? Possibly something to do with Play Services and back-end updates/installations. Installing an app through Google Play worked fine with it disabled.\nNOTE: Some Huawei devices bootloop after uninstalling/disabling this package and require a full restore via eRecovery. Be careful!",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
