@@ -17939,7 +17939,7 @@
   {
     "id": "com.google.android.packageinstaller",
     "list": "Google",
-    "description": "Google package installer. Seems to replace com.android.packageinstaller on newer phones. It is strangly not needed on older devices (you can still install APKs without it by using the AOSP package installer) but since Android 9, it also handles permissions control and could bootloop your device if removed.\nSource: https://source.android.com/docs/core/architecture/modular-system/permissioncontroller.\n",
+    "description": "Google package installer. Seems to replace com.android.packageinstaller on newer phones. It is strangely not needed on older devices (you can still install APKs without it by using the AOSP package installer) but since Android 9, it also handles permissions control and could bootloop your device if removed.\nSource: https://source.android.com/docs/core/architecture/modular-system/permissioncontroller.",
     "neededBy": null,
     "labels": null,
     "removal": "Unsafe"
