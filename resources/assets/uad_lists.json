@@ -5978,7 +5978,7 @@
   {
     "id": "com.samsung.android.lool",
     "list": "Oem",
-    "description": "Samsung Device Care (phone optimizer) (https://play.google.com/store/apps/details?id=com.samsung.android.lool)\nThis package phone home (China, Qihoo 360)\nThe clean feature (in storage setting) is provided by Qihoo 360 which is a shady company (https://en.wikipedia.org/wiki/Qihoo_360)\nhttps://www.reddit.com/r/Android/comments/ektg8u/chinese_spyware_preinstalled_on_all_samsung/\nhttps://www.virustotal.com/gui/file/048ead2be8d18bbe2b05651380069b3740dd05703e9bd66630da986026518398/details\nNOTE : If you don't want to delete this package, at least use a firewall (Netguard/AfWall+) to block internet access\n",
+    "description": "Samsung Device Care (phone optimizer) (https://play.google.com/store/apps/details?id=com.samsung.android.lool)\nThis package phone home (China, Qihoo 360)\nThe clean feature (in storage setting) is provided by Qihoo 360 which is a shady company (https://en.wikipedia.org/wiki/Qihoo_360)\nhttps://www.reddit.com/r/Android/comments/ektg8u/chinese_spyware_preinstalled_on_all_samsung/\nhttps://www.virustotal.com/gui/file/048ead2be8d18bbe2b05651380069b3740dd05703e9bd66630da986026518398/details\nDisabling/Removing this package may remove the option to manage Power Saving, Fast Charging & Battery Protection on some devices\nNOTE : If you don't want to delete this package, at least use a firewall (Netguard/AfWall+) to block internet access\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
