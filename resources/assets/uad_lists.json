@@ -20058,5 +20058,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.aura.oobe.kbdi",
+    "list": "Oem",
+    "description": "Appcloud\nPersistent notification until you click on it and agree to install games.\nSort of game cloud\nSafe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
