@@ -17183,7 +17183,7 @@
   {
     "id": "com.google.android.apps.wellbeing",
     "list": "Google",
-    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits.",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits. Uninstalling this app may break the settings app (disabling should not).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
