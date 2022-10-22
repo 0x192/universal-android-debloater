@@ -102,13 +102,21 @@ impl List {
             }
             Message::LoadPhonePackages(list_box) => {
                 let (uad_list, list_state) = list_box;
-                self.loading_state = LoadingState::LoadingPackages;
-                self.uad_lists = uad_list.clone();
-                *list_update_state = list_state;
-                Command::perform(
-                    Self::load_packages(uad_list, selected_device.user_list.clone()),
-                    Message::ApplyFilters,
-                )
+
+                // The refresh button has been pushed or UAD has just been launched
+                if self.uad_lists.is_empty() {
+                    self.loading_state = LoadingState::LoadingPackages;
+                }
+                if *list_update_state != UadListState::Done {
+                    self.uad_lists = uad_list.clone();
+                    *list_update_state = list_state;
+                    Command::perform(
+                        Self::load_packages(uad_list, selected_device.user_list.clone()),
+                        Message::ApplyFilters,
+                    )
+                } else {
+                    Command::none()
+                }
             }
             Message::ApplyFilters(packages) => {
                 self.phone_packages = packages;
@@ -535,23 +543,18 @@ impl List {
         remote: bool,
         phone: Phone,
     ) -> (HashMap<String, Package>, UadListState) {
-        let (uad_lists, remote) = load_debloat_lists(remote);
+        let (uad_lists, _) = load_debloat_lists(remote);
         match uad_lists {
             Ok(list) => {
                 env::set_var("ANDROID_SERIAL", phone.adb_id.clone());
                 if phone.adb_id.is_empty() {
                     error!("AppsView ready but no phone found");
                 }
-
-                if !remote {
-                    (list, UadListState::Failed)
-                } else {
-                    (list, UadListState::Done)
-                }
+                (list, UadListState::Done)
             }
-            Err(_) => {
-                error!("Error loading debloat list for the phone");
-                (HashMap::new(), UadListState::Failed)
+            Err(local_list) => {
+                error!("Error loading remote debloat list for the phone. Fallback to embedded (and outdated) list");
+                (local_list, UadListState::Failed)
             }
         }
     }
