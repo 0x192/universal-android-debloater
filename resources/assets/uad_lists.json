@@ -6572,7 +6572,7 @@
   {
     "id": "com.android.companiondevicemanager",
     "list": "Aosp",
-    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)\nHave in mind that removing this package will result in the inability to read the SD card from your computer's file manager when connecting through USB.",
+    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)\nWARNING: Have in mind that removing this package will result in the inability to read the SD card from your computer's file manager when connecting through USB.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
