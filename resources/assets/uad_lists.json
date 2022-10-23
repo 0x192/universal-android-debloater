@@ -3215,7 +3215,7 @@
   {
     "id": "com.samsung.android.allshare.service.mediashare",
     "list": "Oem",
-    "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub. \nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app\n\nSamsung Allshare service (now called SmartView).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/\n",
+    "description": "Samsung Allshare service (now called SmartView). Used to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -18748,7 +18748,7 @@
   {
     "id": "com.samsung.android.airtel.stubapp",
     "list": "Oem",
-    "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis pasckage isn't the app itself but only a stub\nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app",
+    "description": "My Airtel Stub app\nMy Airtel is a customer service app designed for Airtel subscribers in Sri Lanka\nThis package isn't the app itself but only a stub\nIt's basically a non-functional empty shell which often only redirect you to the PlayStore to download the full app",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
