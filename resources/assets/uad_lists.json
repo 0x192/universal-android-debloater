@@ -19250,6 +19250,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.microsoft.office.onenote",
+    "list": "Misc",
+    "description": "OneNote",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.aaa.android.discounts",
     "list": "Misc",
     "description": "AAA Mobile (https://play.google.com/store/apps/details?id=com.aaa.android.discounts)\nKind of GPS that helps you find Point of interest (POI) like hotels, restaurants, and car repair facilities from the AAA databases.\nNOTE : You’ll have to sign up for an AAA membership to enjoy all of the features and functionality of the Android app.\nAAA = American Automobile Association",
