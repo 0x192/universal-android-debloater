@@ -11828,7 +11828,7 @@
   {
     "id": "com.lge.ime.solution.text",
     "list": "Oem",
-    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young) : https://en.wikipedia.org/wiki/XT9\n",
+    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young): https://en.wikipedia.org/wiki/XT9\nNOTE: On LG G6 (and maybe on other LG phones) removing this may prevent you from typing using the stock keyboard.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
