@@ -4457,7 +4457,7 @@
   {
     "id": "com.samsung.android.forest",
     "list": "Oem",
-    "description": "Digital Wellbeing (old version of com.samsung.android.wellbeing)\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357",
+    "description": "Digital Wellbeing (old version of com.samsung.android.wellbeing)\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357\nNOTE for Dex users: uninstalling this package makes the UI unstable, in particular the taskbar is not loaded and UI continues to crash.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
