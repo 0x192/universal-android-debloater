@@ -4,7 +4,8 @@ use crate::core::uad_lists::{
     load_debloat_lists, Opposite, Package, PackageState, Removal, UadList, UadListState,
 };
 use crate::core::utils::{
-    export_selection, fetch_packages, import_selection, perform_commands, update_selection_count,
+    export_selection, fetch_packages, import_selection, perform_adb_commands,
+    update_selection_count,
 };
 use crate::gui::style;
 use std::collections::HashMap;
@@ -87,6 +88,12 @@ impl List {
         let i_user = self.selected_user.unwrap_or(User { id: 0, index: 0 }).index;
         match message {
             Message::LoadUadList(remote) => {
+                info!("{:-^65}", "-");
+                info!(
+                    "ANDROID_SDK: {} | DEVICE: {}",
+                    selected_device.android_sdk, selected_device.model
+                );
+                info!("{:-^65}", "-");
                 self.loading_state = LoadingState::DownloadingList;
                 Command::perform(
                     Self::init_apps_view(remote, selected_device.clone()),
@@ -95,13 +102,21 @@ impl List {
             }
             Message::LoadPhonePackages(list_box) => {
                 let (uad_list, list_state) = list_box;
-                self.loading_state = LoadingState::LoadingPackages;
-                self.uad_lists = uad_list.clone();
-                *list_update_state = list_state;
-                Command::perform(
-                    Self::load_packages(uad_list, selected_device.user_list.clone()),
-                    Message::ApplyFilters,
-                )
+
+                // The refresh button has been pushed or UAD has just been launched
+                if self.uad_lists.is_empty() {
+                    self.loading_state = LoadingState::LoadingPackages;
+                }
+                if *list_update_state != UadListState::Done {
+                    self.uad_lists = uad_list.clone();
+                    *list_update_state = list_state;
+                    Command::perform(
+                        Self::load_packages(uad_list, selected_device.user_list.clone()),
+                        Message::ApplyFilters,
+                    )
+                } else {
+                    Command::none()
+                }
             }
             Message::ApplyFilters(packages) => {
                 self.phone_packages = packages;
@@ -174,7 +189,7 @@ impl List {
 
                 match row_message {
                     RowMessage::ToggleSelection(toggle) => {
-                        if package.removal == Removal::Unsafe && !settings.phone.expert_mode {
+                        if package.removal == Removal::Unsafe && !settings.general.expert_mode {
                             package.selected = false;
                         } else {
                             package.selected = toggle;
@@ -198,32 +213,25 @@ impl List {
                         let mut commands = vec![];
                         let actions = action_handler(
                             &self.selected_user.unwrap(),
-                            package,
+                            &package.into(),
                             selected_device,
-                            &settings.phone,
+                            &settings.device,
                         );
 
                         for (i, action) in actions.into_iter().enumerate() {
                             // Only the first command can change the package state
-                            if i != 0 {
-                                commands.push(Command::perform(
-                                    perform_commands(
-                                        action,
-                                        i_package,
-                                        package.removal.to_string(),
-                                    ),
-                                    |_| Message::Nothing,
-                                ));
-                            } else {
-                                commands.push(Command::perform(
-                                    perform_commands(
-                                        action,
-                                        i_package,
-                                        package.removal.to_string(),
-                                    ),
-                                    Message::ChangePackageState,
-                                ));
-                            }
+                            commands.push(Command::perform(
+                                perform_adb_commands(
+                                    action,
+                                    i_package,
+                                    package.removal.to_string(),
+                                ),
+                                if i == 0 {
+                                    Message::ChangePackageState
+                                } else {
+                                    |_| Message::Nothing
+                                },
+                            ));
                         }
                         Command::batch(commands)
                     }
@@ -257,31 +265,24 @@ impl List {
                 for i in selected_packages {
                     let actions = action_handler(
                         &self.selected_user.unwrap(),
-                        &self.phone_packages[i_user][i],
+                        &(&self.phone_packages[i_user][i]).into(),
                         selected_device,
-                        &settings.phone,
+                        &settings.device,
                     );
                     for (j, action) in actions.into_iter().enumerate() {
                         // Only the first command can change the package state
-                        if j != 0 {
-                            commands.push(Command::perform(
-                                perform_commands(
-                                    action,
-                                    i,
-                                    self.phone_packages[i_user][i].removal.to_string(),
-                                ),
-                                |_| Message::Nothing,
-                            ));
-                        } else {
-                            commands.push(Command::perform(
-                                perform_commands(
-                                    action,
-                                    i,
-                                    self.phone_packages[i_user][i].removal.to_string(),
-                                ),
-                                Message::ChangePackageState,
-                            ));
-                        }
+                        commands.push(Command::perform(
+                            perform_adb_commands(
+                                action,
+                                i,
+                                self.phone_packages[i_user][i].removal.to_string(),
+                            ),
+                            if j == 0 {
+                                Message::ChangePackageState
+                            } else {
+                                |_| Message::Nothing
+                            },
+                        ));
                     }
                 }
                 Command::batch(commands)
@@ -314,14 +315,14 @@ impl List {
                     let package = &mut self.phone_packages[i_user][i];
                     update_selection_count(&mut self.selection, package.state, false);
 
-                    if !settings.phone.multi_user_mode {
-                        package.state = package.state.opposite(settings.phone.disable_mode);
+                    if !settings.device.multi_user_mode {
+                        package.state = package.state.opposite(settings.device.disable_mode);
                         package.selected = false;
                     } else {
                         for u in &selected_device.user_list {
                             self.phone_packages[u.index][i].state = self.phone_packages[u.index][i]
                                 .state
-                                .opposite(settings.phone.disable_mode);
+                                .opposite(settings.device.disable_mode);
                             self.phone_packages[u.index][i].selected = false;
                         }
                     }
@@ -429,13 +430,13 @@ impl List {
                 let description_panel = container(description_scroll)
                     .height(Length::FillPortion(2))
                     .width(Length::Fill)
-                    .style(style::Container::Description);
+                    .style(style::Container::Frame);
 
-                let restore_action = match settings.phone.disable_mode {
+                let restore_action = match settings.device.disable_mode {
                     true => "Enable/Restore",
                     false => "Restore",
                 };
-                let remove_action = match settings.phone.disable_mode {
+                let remove_action = match settings.device.disable_mode {
                     true => "Disable",
                     false => "Uninstall",
                 };
@@ -497,11 +498,7 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center);
 
-                container(content)
-                    .height(Length::Fill)
-                    .padding(10)
-                    .style(style::Container::Content)
-                    .into()
+                container(content).height(Length::Fill).padding(10).into()
             }
         }
     }
@@ -546,23 +543,18 @@ impl List {
         remote: bool,
         phone: Phone,
     ) -> (HashMap<String, Package>, UadListState) {
-        let (uad_lists, remote) = load_debloat_lists(remote);
+        let (uad_lists, _) = load_debloat_lists(remote);
         match uad_lists {
             Ok(list) => {
                 env::set_var("ANDROID_SERIAL", phone.adb_id.clone());
                 if phone.adb_id.is_empty() {
                     error!("AppsView ready but no phone found");
                 }
-
-                if !remote {
-                    (list, UadListState::Failed)
-                } else {
-                    (list, UadListState::Done)
-                }
+                (list, UadListState::Done)
             }
-            Err(_) => {
-                error!("Error loading debloat list for the phone");
-                (HashMap::new(), UadListState::Failed)
+            Err(local_list) => {
+                error!("Error loading remote debloat list for the phone. Fallback to embedded (and outdated) list");
+                (local_list, UadListState::Failed)
             }
         }
     }
@@ -596,6 +588,6 @@ fn waiting_view<'a>(
         .height(Length::Fill)
         .center_y()
         .center_x()
-        .style(style::Container::Content)
+        .style(style::Container::default())
         .into()
 }

@@ -19,7 +19,7 @@ pub fn nav_menu<'a>(
     self_update_state: &SelfUpdateState,
 ) -> Element<'a, Message, Renderer<Theme>> {
     let apps_refresh_btn = button(
-        Text::new('\u{E900}')
+        Text::new("\u{E900}")
             .font(ICONS)
             .width(Length::Units(17))
             .horizontal_alignment(alignment::Horizontal::Center)
@@ -107,6 +107,6 @@ pub fn nav_menu<'a>(
     container(row)
         .width(Length::Fill)
         .padding(10)
-        .style(style::Container::Navigation)
+        .style(style::Container::Frame)
         .into()
 }

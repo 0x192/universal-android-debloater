@@ -60,7 +60,7 @@ impl PackageRow {
 
         match self.state {
             PackageState::Enabled => {
-                action_text = if settings.phone.disable_mode {
+                action_text = if settings.device.disable_mode {
                     "Disable"
                 } else {
                     "Uninstall"
@@ -84,7 +84,7 @@ impl PackageRow {
         // Disable any removal action for unsafe packages if expert_mode is disabled
         if self.removal != Removal::Unsafe
             || self.state != PackageState::Enabled
-            || settings.phone.expert_mode
+            || settings.general.expert_mode
         {
             selection_checkbox = checkbox("", self.selected, Message::ToggleSelection)
                 .style(style::CheckBox::PackageEnabled);

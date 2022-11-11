@@ -1,48 +1,31 @@
-use crate::core::config::Config;
-use crate::core::sync::{get_android_sdk, Phone as CorePhone};
+use crate::core::config::{Config, DeviceSettings, GeneralSettings};
+use crate::core::sync::Phone;
 use crate::core::theme::Theme;
 use crate::core::utils::{open_url, string_to_theme};
 use crate::gui::style;
-use crate::IN_FILE_CONFIGURATION;
 
-use iced::widget::{button, checkbox, column, container, pick_list, row, text, Space};
+use iced::widget::{button, checkbox, column, container, radio, row, text, Space};
 use iced::{Element, Length, Renderer};
 use std::path::PathBuf;
 
 #[derive(Debug, Clone)]
 pub struct Settings {
-    pub phone: Phone,
-    pub theme: Theme,
-}
-
-#[derive(Debug, Clone)]
-pub struct Phone {
-    pub expert_mode: bool,
-    pub disable_mode: bool,
-    pub multi_user_mode: bool,
-}
-
-impl Default for Phone {
-    fn default() -> Self {
-        Self {
-            expert_mode: false,
-            disable_mode: false,
-            multi_user_mode: get_android_sdk() > 21,
-        }
-    }
+    pub general: GeneralSettings,
+    pub device: DeviceSettings,
 }
 
 impl Default for Settings {
     fn default() -> Self {
         Self {
-            phone: Phone::default(),
-            theme: string_to_theme(IN_FILE_CONFIGURATION.theme.clone()),
+            general: Config::load_configuration_file().general,
+            device: DeviceSettings::default(),
         }
     }
 }
 
 #[derive(Debug, Clone)]
 pub enum Message {
+    LoadDeviceSettings,
     ExpertMode(bool),
     DisableMode(bool),
     MultiUserMode(bool),
@@ -51,74 +34,107 @@ pub enum Message {
 }
 
 impl Settings {
-    pub fn update(&mut self, phone: &CorePhone, msg: Message) {
+    pub fn update(&mut self, phone: &Phone, msg: Message) {
         match msg {
             Message::ExpertMode(toggled) => {
-                info!(
-                    "Expert mode {}",
-                    if toggled { "enabled" } else { "disabled" }
-                );
-                self.phone.expert_mode = toggled;
+                self.general.expert_mode = toggled;
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::DisableMode(toggled) => {
                 if phone.android_sdk >= 23 {
-                    info!(
-                        "Disable mode {}",
-                        if toggled { "enabled" } else { "disabled" }
-                    );
-                    self.phone.disable_mode = toggled;
+                    self.device.disable_mode = toggled;
+                    debug!("Config change: {:?}", self);
+                    Config::save_changes(self, &phone.adb_id);
                 }
             }
             Message::MultiUserMode(toggled) => {
-                info!(
-                    "Multi-user mode {}",
-                    if toggled { "enabled" } else { "disabled" }
-                );
-                self.phone.multi_user_mode = toggled;
+                self.device.multi_user_mode = toggled;
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::ApplyTheme(theme) => {
-                self.theme = theme;
-                Config::save_changes(self);
+                self.general.theme = theme.to_string();
+                debug!("Config change: {:?}", self);
+                Config::save_changes(self, &phone.adb_id);
             }
             Message::UrlPressed(url) => {
                 open_url(url);
             }
+            Message::LoadDeviceSettings => {
+                match Config::load_configuration_file()
+                    .devices
+                    .iter()
+                    .find(|d| d.device_id == phone.adb_id)
+                {
+                    Some(device) => self.device = device.clone(),
+                    None => {
+                        self.device = DeviceSettings {
+                            device_id: phone.adb_id.clone(),
+                            multi_user_mode: phone.android_sdk > 21,
+                            disable_mode: false,
+                        }
+                    }
+                };
+            }
         }
     }
 
-    pub fn view(&self, phone: &CorePhone) -> Element<Message, Renderer<Theme>> {
-        let general_category_text = text("General").size(25);
-
-        let theme_picklist = pick_list(Theme::all(), Some(self.theme.clone()), Message::ApplyTheme);
-
-        let uad_category_text = text("Non-persistent settings").size(25);
-
-        let expert_mode_descr =
-            text("Most of unsafe packages are known to bootloop the device if removed.").size(15);
+    pub fn view(&self, phone: &Phone) -> Element<Message, Renderer<Theme>> {
+        let radio_btn_theme = Theme::ALL
+            .iter()
+            .fold(row![].spacing(10), |column, option| {
+                column.push(
+                    radio(
+                        format!("{}", option.clone()),
+                        *option,
+                        Some(string_to_theme(self.general.theme.clone())),
+                        Message::ApplyTheme,
+                    )
+                    .size(23),
+                )
+            });
+        let theme_ctn = container(radio_btn_theme)
+            .padding(10)
+            .width(Length::Fill)
+            .height(Length::Shrink)
+            .style(style::Container::Frame);
 
         let expert_mode_checkbox = checkbox(
             "Allow to uninstall packages marked as \"unsafe\" (I KNOW WHAT I AM DOING)",
-            self.phone.expert_mode,
+            self.general.expert_mode,
             Message::ExpertMode,
         )
         .style(style::CheckBox::SettingsEnabled);
 
+        let expert_mode_descr =
+            text("Most of unsafe packages are known to bootloop the device if removed.")
+                .style(style::Text::Commentary)
+                .size(15);
+
+        let warning_ctn = container(
+            row![
+                text("The following settings only affect the currently selected device :")
+                    .style(style::Text::Danger),
+                text(phone.model.to_owned())
+            ]
+            .spacing(7),
+        )
+        .padding(10)
+        .width(Length::Fill)
+        .style(style::Container::BorderedFrame);
+
         let multi_user_mode_descr =
             text("Disabling this setting will typically prevent affecting your work profile")
+                .style(style::Text::Commentary)
                 .size(15);
 
         let multi_user_mode_checkbox = checkbox(
             "Affect all the users of the phone (not only the selected user)",
-            self.phone.multi_user_mode,
+            self.device.multi_user_mode,
             Message::MultiUserMode,
         )
         .style(style::CheckBox::SettingsEnabled);
-
-        let _disable_color = if phone.android_sdk >= 23 {
-            self.theme.palette.normal.surface
-        } else {
-            self.theme.palette.normal.primary
-        };
 
         let disable_checkbox_style = if phone.android_sdk >= 23 {
             style::CheckBox::SettingsEnabled
@@ -128,10 +144,8 @@ impl Settings {
 
         let disable_mode_descr =
             text("In some cases, it can be better to disable a package instead of uninstalling it")
+                .style(style::Text::Commentary)
                 .size(15);
-
-        /*        let _unavailable_text = text("[Unavailable before Android 8.0]")
-        .size(16);*/
 
         let unavailable_btn = button(text("Unavailable").size(13))
             .on_press(Message::UrlPressed(PathBuf::from(
@@ -145,7 +159,7 @@ impl Settings {
         // see https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
         let disable_mode_checkbox = checkbox(
             "Clear and disable packages instead of uninstalling them",
-            self.phone.disable_mode,
+            self.device.disable_mode,
             Message::DisableMode,
         )
         .style(disable_checkbox_style);
@@ -165,29 +179,42 @@ impl Settings {
             .width(Length::Fill)
         };
 
+        let general_ctn = container(column![expert_mode_checkbox, expert_mode_descr].spacing(10))
+            .padding(10)
+            .width(Length::Fill)
+            .height(Length::Shrink)
+            .style(style::Container::Frame);
+
+        let device_specific_ctn = container(
+            column![
+                multi_user_mode_checkbox,
+                multi_user_mode_descr,
+                disable_setting_row,
+                disable_mode_descr,
+            ]
+            .spacing(10),
+        )
+        .padding(10)
+        .width(Length::Fill)
+        .height(Length::Shrink)
+        .style(style::Container::Frame);
+
         let content = column![
-            general_category_text,
-            "Theme",
-            theme_picklist,
-            Space::new(Length::Fill, Length::Shrink),
-            uad_category_text,
-            expert_mode_checkbox,
-            expert_mode_descr,
-            Space::new(Length::Fill, Length::Shrink),
-            multi_user_mode_checkbox,
-            multi_user_mode_descr,
-            Space::new(Length::Fill, Length::Shrink),
-            disable_setting_row,
-            disable_mode_descr,
+            text("Theme").size(25),
+            theme_ctn,
+            text("General").size(25),
+            general_ctn,
+            text("Current device").size(25),
+            warning_ctn,
+            device_specific_ctn,
         ]
         .width(Length::Fill)
-        .spacing(10);
+        .spacing(20);
 
         container(content)
             .padding(10)
             .width(Length::Fill)
             .height(Length::Fill)
-            .style(style::Container::Content)
             .into()
     }
 }

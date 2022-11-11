@@ -184,7 +184,9 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
             let release: Release =
                 serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
                     .unwrap();
-            if release.tag_name.as_str() > env!("CARGO_PKG_VERSION") {
+            if release.tag_name.as_str() != "dev-build"
+                && release.tag_name.as_str() > env!("CARGO_PKG_VERSION")
+            {
                 Ok(Some(release))
             } else {
                 Ok(None)
@@ -204,7 +206,7 @@ pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> Result<
     use flate2::read::GzDecoder;
     use std::fs::File;
     use tar::Archive;
-    let mut archive = Archive::new(GzDecoder::new(File::open(&archive_path).unwrap()));
+    let mut archive = Archive::new(GzDecoder::new(File::open(archive_path).unwrap()));
 
     let mut temp_file = File::create(temp_file).unwrap();
 

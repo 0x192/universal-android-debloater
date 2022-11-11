@@ -6,7 +6,7 @@ use crate::core::sync::{get_devices_list, Phone};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::UadListState;
 use crate::core::update::{get_latest_release, Release, SelfUpdateState, SelfUpdateStatus};
-use crate::core::utils::perform_commands;
+use crate::core::utils::{perform_adb_commands, string_to_theme};
 
 use views::about::{About as AboutView, Message as AboutMessage};
 use views::list::{List as AppsView, LoadingState as ListLoadingState, Message as AppsMessage};
@@ -83,7 +83,7 @@ impl Application for UadGui {
     }
 
     fn theme(&self) -> Theme {
-        self.settings_view.theme.clone()
+        string_to_theme(self.settings_view.general.theme.clone())
     }
 
     fn title(&self) -> String {
@@ -103,6 +103,7 @@ impl Application for UadGui {
                     None => devices_list.first().map(|x| x.to_owned()),
                 };
                 self.devices_list = devices_list;
+                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
                 self.update(Message::AppsAction(AppsMessage::LoadUadList(true)))
             }
             Message::AppsPress => {
@@ -130,7 +131,7 @@ impl Application for UadGui {
                 self.selected_device = None;
                 self.devices_list = vec![];
                 Command::perform(
-                    perform_commands("reboot".to_string(), 0, "ADB".to_string()),
+                    perform_adb_commands("reboot".to_string(), 0, "ADB".to_string()),
                     |_| Message::Nothing,
                 )
             }
@@ -189,10 +190,12 @@ impl Application for UadGui {
                 env::set_var("ANDROID_SERIAL", s_device.adb_id);
                 info!("{:-^65}", "-");
                 info!(
-                    "ANDROID_SDK: {} | PHONE: {}",
+                    "ANDROID_SDK: {} | DEVICE: {}",
                     s_device.android_sdk, s_device.model
                 );
+                info!("{:-^65}", "-");
                 self.apps_view.loading_state = ListLoadingState::FindingPhones;
+                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
                 self.update(Message::AppsAction(AppsMessage::LoadPhonePackages((
                     self.apps_view.uad_lists.clone(),
                     UadListState::Done,
