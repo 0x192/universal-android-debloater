@@ -8055,6 +8055,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oneplus.opshelf",
+    "list": "Oem",
+    "description": "OnePlus Shelf (https://play.google.com/store/apps/details?id=com.oneplus.opshelf)\nWidget panel accessible from swiping down on the top-right side of the screen allowing quick access to apps, meteo, spotify, memos...\n\nPithus analysis: https://beta.pithus.org/report/a50f166c8c2fae1204650c7af1cb287e20ad5286a89b013ada787f4b1b90fc64.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oneplus.iconpack.circle",
     "list": "Oem",
     "description": "OnePlus Icon Pack - Round (https://play.google.com/store/apps/details?id=com.oneplus.iconpack.circle)\n",
