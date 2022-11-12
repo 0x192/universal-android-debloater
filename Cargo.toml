@@ -1,7 +1,7 @@
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.5.0"
+version = "0.5.1"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
 homepage = "https://github.com/0x192/universal-android-debloater"
@@ -19,7 +19,7 @@ self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
-iced = { git = "https://github.com/hecrj/iced.git", features = ["pure"] }
+iced = { git = "https://github.com/iced-rs/iced.git" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"

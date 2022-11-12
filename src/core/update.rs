@@ -29,7 +29,7 @@ pub struct SelfUpdateState {
     pub status: SelfUpdateStatus,
 }
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub enum SelfUpdateStatus {
     Updating,
     Checking,
@@ -63,7 +63,7 @@ pub async fn download_file<T: ToString>(url: T, dest_file: PathBuf) -> Result<()
 
     match ureq::get(&url).call() {
         Ok(res) => {
-            let mut file = fs::File::create(&dest_file).unwrap();
+            let mut file = fs::File::create(dest_file).unwrap();
 
             if let Err(e) = copy(&mut res.into_reader(), &mut file) {
                 return Err(e.to_string());
@@ -88,7 +88,7 @@ pub async fn download_update_to_temp_file(
     let download_path = current_bin_path
         .parent()
         .unwrap()
-        .join(&format!("tmp_{}", bin_name));
+        .join(format!("tmp_{}", bin_name));
 
     // Path to temporarily force rename current process to, se we can then
     // rename `download_path` to `current_bin_path` and then launch new version
@@ -96,7 +96,7 @@ pub async fn download_update_to_temp_file(
     let tmp_path = current_bin_path
         .parent()
         .unwrap()
-        .join(&format!("tmp2_{}", bin_name));
+        .join(format!("tmp2_{}", bin_name));
 
     // MacOS and Linux release are gziped tarball
     #[cfg(not(target_os = "windows"))]
@@ -184,7 +184,9 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
             let release: Release =
                 serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
                     .unwrap();
-            if release.tag_name.as_str() > env!("CARGO_PKG_VERSION") {
+            if release.tag_name.as_str() != "dev-build"
+                && release.tag_name.as_str() > env!("CARGO_PKG_VERSION")
+            {
                 Ok(Some(release))
             } else {
                 Ok(None)
@@ -204,7 +206,7 @@ pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> Result<
     use flate2::read::GzDecoder;
     use std::fs::File;
     use tar::Archive;
-    let mut archive = Archive::new(GzDecoder::new(File::open(&archive_path).unwrap()));
+    let mut archive = Archive::new(GzDecoder::new(File::open(archive_path).unwrap()));
 
     let mut temp_file = File::create(temp_file).unwrap();
 

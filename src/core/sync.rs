@@ -1,6 +1,5 @@
+use crate::core::config::DeviceSettings;
 use crate::core::uad_lists::PackageState;
-use crate::core::utils::request_builder;
-use crate::gui::views::settings::Phone as SettingsPhone;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use retry::{delay::Fixed, retry, OperationResult};
@@ -90,7 +89,7 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
     }
 }
 
-pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
+pub fn list_all_system_packages(user_id: Option<&User>) -> String {
     let action = match user_id {
         Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
         None => "pm list packages -s -u".to_string(),
@@ -101,7 +100,7 @@ pub fn list_all_system_packages(user_id: &Option<&User>) -> String {
         .replace("package:", "")
 }
 
-pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> HashSet<String> {
+pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
     let user = match user_id {
         Some(user_id) => format!(" --user {}", user_id.id),
         None => "".to_string(),
@@ -121,11 +120,34 @@ pub fn hashset_system_packages(state: PackageState, user_id: &Option<&User>) -> 
         .collect()
 }
 
+// Minimum information for processing adb commands
+pub struct CorePackage {
+    pub name: String,
+    pub state: PackageState,
+}
+
+impl From<&mut PackageRow> for CorePackage {
+    fn from(pr: &mut PackageRow) -> Self {
+        CorePackage {
+            name: pr.name.clone(),
+            state: pr.state,
+        }
+    }
+}
+impl From<&PackageRow> for CorePackage {
+    fn from(pr: &PackageRow) -> Self {
+        CorePackage {
+            name: pr.name.clone(),
+            state: pr.state,
+        }
+    }
+}
+
 pub fn action_handler(
-    selected_u: &User,
-    package: &PackageRow,
+    user: &User,
+    package: &CorePackage,
     phone: &Phone,
-    settings: &SettingsPhone,
+    settings: &DeviceSettings,
 ) -> Vec<String> {
     // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
     // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
@@ -137,10 +159,10 @@ pub fn action_handler(
             };
 
             match phone.android_sdk {
-                i if i >= 23 => commands,                // > Android Lollipop (6.0)
+                sdk if sdk >= 23 => commands,            // > Android Marshmallow (6.0)
                 21 | 22 => vec!["pm hide", "pm clear"],  // Android Lollipop (5.x)
                 19 | 20 => vec!["pm block", "pm clear"], // Android KitKat (4.4/4.4W)
-                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the needed ADB commands need root
+                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the specific ADB commands need root
             }
         }
         PackageState::Uninstalled => {
@@ -165,7 +187,25 @@ pub fn action_handler(
     } else if phone.android_sdk < 21 {
         request_builder(commands, &package.name, &[])
     } else {
-        request_builder(commands, &package.name, &[*selected_u])
+        request_builder(commands, &package.name, &[*user])
+    }
+}
+
+pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
+    if !users.is_empty() {
+        users
+            .iter()
+            .flat_map(|u| {
+                commands
+                    .iter()
+                    .map(|c| format!("{} --user {} {}", c, u.id, package))
+            })
+            .collect()
+    } else {
+        commands
+            .iter()
+            .map(|c| format!("{} {}", c, package))
+            .collect()
     }
 }
 
@@ -217,7 +257,7 @@ pub fn get_user_list() -> Vec<User> {
 }
 
 // getprop ro.serialno
-pub async fn get_device_list() -> Vec<Phone> {
+pub async fn get_devices_list() -> Vec<Phone> {
     match retry(
         Fixed::from_millis(500).take(120),
         || match adb_shell_command(false, "devices") {

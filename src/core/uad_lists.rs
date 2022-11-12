@@ -13,8 +13,8 @@ pub struct Package {
     id: String,
     pub list: UadList,
     pub description: Option<String>,
-    dependencies: Option<String>,
-    needed_by: Option<String>,
+    dependencies: Option<Vec<String>>,
+    needed_by: Option<Vec<String>>,
     labels: Option<Vec<String>>,
     pub removal: Removal,
 }
@@ -197,11 +197,12 @@ impl std::fmt::Display for Removal {
     }
 }
 
-pub async fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package>, ()>, bool) {
+type PackageHashMap = HashMap<String, Package>;
+pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMap>, bool) {
     let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
     let mut error = false;
     let list: Vec<Package> = if remote {
-        match retry(Fixed::from_millis(500).take(120), || {
+        match retry(Fixed::from_millis(1000).take(60), || {
             match ureq::get(
                 "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
             main/resources/assets/uad_lists.json",
@@ -222,7 +223,7 @@ pub async fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package
             }
         }) {
             Ok(list) => list,
-            Err(_) => vec![],
+            Err(_) => get_local_lists(),
         }
     } else {
         warn!("Could not load remote debloat list");
@@ -236,7 +237,7 @@ pub async fn load_debloat_lists(remote: bool) -> (Result<HashMap<String, Package
         package_lists.insert(name, p);
     }
     if error {
-        (Err(()), remote)
+        (Err(package_lists), remote)
     } else {
         (Ok(package_lists), remote)
     }
@@ -251,5 +252,15 @@ fn get_local_lists() -> Vec<Package> {
         serde_json::from_str(&data).expect("Unable to parse")
     } else {
         serde_json::from_str(DATA).expect("Unable to parse")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_parse_json() {
+        const DATA: &str = include_str!("../../resources/assets/uad_lists.json");
+        let _: Vec<Package> = serde_json::from_str(DATA).expect("Unable to parse");
     }
 }
