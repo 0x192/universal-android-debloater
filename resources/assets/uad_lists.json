@@ -20044,7 +20044,7 @@
   {
     "id": "com.nearme.statistics.rom",
     "list": "Oem",
-    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
+    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\n\nNote: removing it may break the search feature in the settings on some ColorOS versions.\n\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20306,6 +20306,105 @@
     "id": "com.opos.cs",
     "list": "Misc",
     "description": "Hot Apps\nGenerate app folders on home screen that recommended sponsored apps and games.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oneplus.chargingpilar",
+    "list": "Oem",
+    "description": "Geolocates the phone to find OnePlus charging stations nearby. Connects to 'gateway.oneplus.net'\n\nPithus analysis: https://beta.pithus.org/report/8c157eeec2931d3d1140aa8c452d7afa570e04c9d51e6cd5987dbb3ec43df4f9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.activation",
+    "list": "Oem",
+    "description": "E-warranty card\nLet's you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot\n\nPithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.appplatform",
+    "list": "Oem",
+    "description": "App Services\nMight be renamed package of com.heytap.appplatform which is related to Oppo's Heytap account services. Provides a RomUpdateService. Probably not safe to remove.\n\nPithus analysis: https://beta.pithus.org/report/2025ceb69d9379a01771de71ff00051eb0f0c7f44226a72c2066db9649b6dcd2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.athena",
+    "list": "Oem",
+    "description": "OnePlus background process manager. Removing it will solve the notification delay you can have but will disable the virtual ram expansion feature (swap RAM to disk) and the 'close all' button in the 'recent apps' page.\nRemoving this app may deteriorate battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.atlas",
+    "list": "Oem",
+    "description": "Atlas Service\nSeems to be a Sound provider. Performs a lot of actions upon audio related events. Still not clear it is really necessary. Runs at boot and stay in background. Pithus analysis: https://beta.pithus.org/report/6d0f9433431cd34a8e9aaef99b329b3623118a1699033be36032f64653dab3d0",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.crashbox",
+    "list": "Oem",
+    "description": "Sends system failure data to developers. Automatically runs at boot.\n\nPithus analysis: https://beta.pithus.org/report/6031048af7434e9cfe3435244dd105ac70e3bfe1f25ecdcca9b2a40b356590a2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.exsystemservice",
+    "list": "Oem",
+    "description": "[NEED MORE INFO / APK NEEDED] Lots of permissions. The screenshot function will stop working when the app is disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.stdid",
+    "list": "Oem",
+    "description": "StdID\nNeeded for tracking battery usage on per app basis. Dependency for GameSpace\n\n [MORE INFO NEEDED / APK NEEDED]",
+    "dependencies": null,
+    "neededBy": ["com.oneplus.gamespace", "com.coloros.gamespace"],
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.lfeh",
+    "list": "Oem",
+    "description": "Seems to be related to the the logging suite.\n\nPithus analysis: https://beta.pithus.org/report/0542dbdbe10fd3a868ea497ec92670619670f574bbce37d949975dc109cd316f",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.ocar",
+    "list": "Oem",
+    "description": "Car+\n Related to Oppo's car app [APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.wifibackuprestore",
+    "list": "Oem",
+    "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
