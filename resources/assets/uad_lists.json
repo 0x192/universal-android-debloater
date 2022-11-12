@@ -11828,11 +11828,11 @@
   {
     "id": "com.lge.ime.solution.text",
     "list": "Oem",
-    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young): https://en.wikipedia.org/wiki/XT9\nNOTE: On LG G6 (and maybe on other LG phones) removing this may prevent you from typing using the stock keyboard.",
+    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young) : https://en.wikipedia.org/wiki/XT9\n\nWARNING: On LG G6 (and maybe on other LG phones) removing this may cause the LG keyboard to stop inputing characters. Make sure to use another keyboard before removing this package.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.lge.launcher2.theme.optimus",
@@ -12881,7 +12881,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to triggers bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather service. Removal seems to triggera a bootloops on some phones.\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12890,11 +12890,11 @@
   {
     "id": "com.coloros.weather2",
     "list": "Oem",
-    "description": "colorOS weather app. Removal seems to trigger bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "ColorOS weather app. Removal seems to trigger a bootloop on some phones. You should try, several users removed this app without any trouble on Oppo/Realme device with Android 11+\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.coloros.mcs",
@@ -20044,7 +20044,7 @@
   {
     "id": "com.nearme.statistics.rom",
     "list": "Oem",
-    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
+    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\n\nNote: removing it may break the search feature in the settings on some ColorOS versions.\n\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20054,6 +20054,357 @@
     "id": "com.samsung.android.setupindiaservicestnc",
     "list": "Oem",
     "description": "Samsung Services\nResponsible for the persistent notification after every system update if you don't agree to data collection.\nThe only way to dismiss it without agreeing to anything is to click the small text and uncheck all the items in a list. Then the 'Agree' button becomes a 'Skip' button. Removing this package doesn't have any known side effects.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.compass2",
+    "list": "Oem",
+    "description": "ColorOS default compass app\nKeep in mind that by using this app you give your location to the weather Oppo servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.gamespaceui",
+    "list": "Oem",
+    "description": "GameSpace\nGaming utility aiming at 'optimizing your gaming experience'. Has a lot of permissions. For instance, it has internet access, will scans all the apps you have on your phones (to find games), can performs Bluetooth scan and has access to the metadata of your media files (e.g the place where you took a picture).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.onekeylockscreen",
+    "list": "Oem",
+    "description": "Lock your phone if you click on the app icon. Completely useless unless your physical power button is damaged.\nThis app still has the permission to list all the apps installed on the phone.\n\nPithus analysis: https://beta.pithus.org/report/ece4088357c0a47dffd96bdc46a7b535d448c1a3619d995f7032df3be6cb0a38",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.oshare",
+    "list": "Oem",
+    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.phonemanager",
+    "list": "Oem",
+    "description": "Phone Manager\nProvides so called 'optimization tools' and various security scanning services.\nThese virus scanning services may have privacy implications.\n\nPithus analysis: https://beta.pithus.org/report/6b7d9e117ffb600b852f3785ede4f3773385fc291376e94a061bf7ed787dec48",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.securepay",
+    "list": "Oem",
+    "description": "Payement system from Oppo allowing you to pay with your phone\n\nPithus analysis: https://beta.pithus.org/report/65246664d3795a5ac1b402d28456903e1b3bd76176de8298b3ea96c6c592ae9a",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.systemclone",
+    "list": "Oem",
+    "description": "System Cloner\nCreates multiple users on device",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.video",
+    "list": "Oem",
+    "description": "Video Player\nDefault Oppo video player with too much permissions (21) for a video player! \nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.browser",
+    "list": "Oem",
+    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.habit.analysis",
+    "list": "Oem",
+    "description": "Most liky used to track your habits from IoT HeyTap devices [TO BE CONFIRMED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.music",
+    "list": "Oem",
+    "description": "Default Oppo Music App with insecure WebView Implementation (execution of user controlled code in WebView is an important security hole.\nHas also weird permissions (QUERY_ALL_PACKAGES and BLUETOOTH ?)\n\nhttps://beta.pithus.org/report/befa0ec0616c553632379f069453b0ca74ee29fd1428b9fce19c1657e6f97d8b",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.pictorial",
+    "list": "Oem",
+    "description": "Lock Screen Magazine which can display ads depending of your ColorOS version",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.themestore",
+    "list": "Oem",
+    "description": "Theme Store with 73 permissions! (including CAMERA, CALL_PHONE, READ_CONTACTS, REQUEST_INSTALL_PACKAGES...) and 2 trackers.\n\nPithus analysis: https://beta.pithus.org/report/e8c4fc2bae420cf5f094ce914f25accdede5152f9d801db6eb32a4020a7726b2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.usercenter",
+    "list": "Oem",
+    "description": "Login service for various HeyTap related services like HeyTap Cloud etc.\nNeeded if you want to join Early Access Testing for new ColorOS/RealmeUI\n\n[APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.kekepay",
+    "list": "Oem",
+    "description": "Chinese pay service? Safe to remove but no documentation found online\n[APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.logkit",
+    "list": "Oem",
+    "description": "Logs service and bug reporting app\nSafe to remove if you don't report bugs to OEM",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.multiapp",
+    "list": "Oem",
+    "description": "App Cloner. Allows to clone an app. Have access to all installed apps. Is bundled with OnePlus analytics\n\nPithus analysis: https://beta.pithus.org/report/8a1d0783debb405ebadb3fc52507de5f69ecb55f499732b7331dac74ad69ffd7",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.pay",
+    "list": "Oem",
+    "description": "Secure Payment\nLet's you pay with your phone. Privacy issue aside, you should probably not trust their security: https://www.bitdefender.com/blog/hotforsecurity/hackers-attack-oneplus-again-this-time-stealing-customer-details",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.securitykeyboard",
+    "list": "Oem",
+    "description": "Secure Keyboard\nKeyboard that appears only when typing a password on apps and webpages, if enabled on Keyboard and Input settings",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.statistics.rom",
+    "list": "Oem",
+    "description": "User Experience Program\nIntrusive telemetry. Runs at boot and constantly stays in background\n\nPithus analysis: https://beta.pithus.org/report/7720549a5b4bc305a15e19b3e17ba6857a52e6e12db94006677c59f2fad84331",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.realme.link",
+    "list": "Oem",
+    "description": "RealMe Link (https://play.google.com/store/apps/details?id=com.realme.link)\nCompanion app for various realme IoT devices. Useless if you don't have a realme watch/band",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.realme.securitycheck",
+    "list": "Oem",
+    "description": "Security Analysis\n. Antivirus analysis on app install. It's up to you. Remonving it may decrease your security for a bit more privacy (if we consider this app does this job well which is to be verified) [APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.operationManual",
+    "list": "Oem",
+    "description": "Oppo User Manuel",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.finshell.fin",
+    "list": "Misc",
+    "description": "FinShell Pay (https://play.google.com/store/apps/details?id=com.finshell.fin)\nProvides various Payment and Financial Services. Pretty bad privacy policy: https://rwallet.finshell.co.in/html/user/privacy_policy.html",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.glance.internet",
+    "list": "Misc",
+    "description": "Displays unsolicited \"trending\" stories on Lockscreen",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.opos.cs",
+    "list": "Misc",
+    "description": "Hot Apps\nGenerate app folders on home screen that recommended sponsored apps and games.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oneplus.chargingpilar",
+    "list": "Oem",
+    "description": "Geolocates the phone to find OnePlus charging stations nearby. Connects to 'gateway.oneplus.net'\n\nPithus analysis: https://beta.pithus.org/report/8c157eeec2931d3d1140aa8c452d7afa570e04c9d51e6cd5987dbb3ec43df4f9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.activation",
+    "list": "Oem",
+    "description": "E-warranty card\nLet's you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot\n\nPithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.appplatform",
+    "list": "Oem",
+    "description": "App Services\nMight be renamed package of com.heytap.appplatform which is related to Oppo's Heytap account services. Provides a RomUpdateService. Probably not safe to remove.\n\nPithus analysis: https://beta.pithus.org/report/2025ceb69d9379a01771de71ff00051eb0f0c7f44226a72c2066db9649b6dcd2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.athena",
+    "list": "Oem",
+    "description": "OnePlus background process manager. Removing it will solve the notification delay you can have but will disable the virtual ram expansion feature (swap RAM to disk) and the 'close all' button in the 'recent apps' page.\nRemoving this app may deteriorate battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.atlas",
+    "list": "Oem",
+    "description": "Atlas Service\nSeems to be a Sound provider. Performs a lot of actions upon audio related events. Still not clear it is really necessary. Runs at boot and stay in background. Pithus analysis: https://beta.pithus.org/report/6d0f9433431cd34a8e9aaef99b329b3623118a1699033be36032f64653dab3d0",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.crashbox",
+    "list": "Oem",
+    "description": "Sends system failure data to developers. Automatically runs at boot.\n\nPithus analysis: https://beta.pithus.org/report/6031048af7434e9cfe3435244dd105ac70e3bfe1f25ecdcca9b2a40b356590a2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.exsystemservice",
+    "list": "Oem",
+    "description": "[NEED MORE INFO / APK NEEDED] Lots of permissions. The screenshot function will stop working when the app is disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.stdid",
+    "list": "Oem",
+    "description": "StdID\nNeeded for tracking battery usage on per app basis. Dependency for GameSpace\n\n [MORE INFO NEEDED / APK NEEDED]",
+    "dependencies": null,
+    "neededBy": ["com.oneplus.gamespace", "com.coloros.gamespace"],
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.lfeh",
+    "list": "Oem",
+    "description": "Seems to be related to the the logging suite.\n\nPithus analysis: https://beta.pithus.org/report/0542dbdbe10fd3a868ea497ec92670619670f574bbce37d949975dc109cd316f",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.ocar",
+    "list": "Oem",
+    "description": "Car+\n Related to Oppo's car app [APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.wifibackuprestore",
+    "list": "Oem",
+    "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
