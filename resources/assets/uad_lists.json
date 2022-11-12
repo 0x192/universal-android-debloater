@@ -8144,6 +8144,7 @@
     "labels": null,
     "removal": "Advanced"
   },
+  {
     "id": "com.zte.burntest.camera",
     "list": "Oem",
     "description": "Possibly a hidden stress testing app for camera.",
