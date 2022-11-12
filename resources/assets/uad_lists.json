@@ -20512,7 +20512,7 @@
   {
     "id": "com.oneplus.dialer",
     "list": "Oem",
-    "description": "OnePlus Dialer used in OxygenOS 11 and lower. Remember that you'll need to download another call application.",
+    "description": "OnePlus Dialer used in OxygenOS 11 and lower.\nNote: don't forget to download another phone dialer app before removing this package.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
