@@ -41,11 +41,12 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Motorola
 * [X] Nokia
 * [X] OnePlus
-* [X] Oppo  
+* [X] Oppo
 * [X] Samsung
 * [X] Sony
 * [X] Tecno
 * [ ] TCL
+* [X] Unihertz
 * [ ] Wiko
 * [X] Xiaomi
 * [ ] ZTE
