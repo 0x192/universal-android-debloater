@@ -8992,12 +8992,12 @@
   },
   {
     "id": "com.oneplus.diagnosemanager",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Logging app for diagnosis/troubleshooting when the SIM card state change. Only used on devices running OxygenOS 9 and lower. Runs at boot and triggers when SIM card state change.\n\nPithus analysis: https://beta.pithus.org/report/f4c76054795bf55012edf1f60e992b6e339085b9ca2cbe685917a62dd07492c0",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.dirac.simplemanager",
@@ -16328,7 +16328,7 @@
   {
     "id": "com.android.incallui",
     "list": "Oem",
-    "description": "Xiaomi Phone (Here we go again! Another confusing package name)\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.\n",
+    "description": "Xiaomi (and OnePlus) Phone dialer (here we go again! Another confusing package name)\n\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20490,5 +20490,32 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.android.soundpicker",
+    "list": "Google",
+    "description": "Google Sounds. Needed to pick up a phone ringtone. No weird permissions.\n\nPithus analysis: https://beta.pithus.org/report/f5f7c265c6d98666c78267b91643bbfb635021d5d4f85c93407079ba4aad88ee",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oneplus.geoiptime",
+    "list": "Oem",
+    "description": "Set the Timezone (it is not a NTP client). Automatically starts at boot and connects to checkip.amazonaws.com  and gateway.oneplus.com.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oneplus.dialer",
+    "list": "Oem",
+    "description": "OnePlus Dialer used in OxygenOS 11 and lower.\nNote: don't forget to download another phone dialer app before removing this package.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
   }
 ]
