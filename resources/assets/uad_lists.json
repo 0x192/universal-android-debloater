@@ -15401,7 +15401,7 @@
   {
     "id": "com.miui.miwallpaper",
     "list": "Oem",
-    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper. \nIt may also result in longer boot times: approximately 15 seconds longer.",
+    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.\nNote: it may also result in longer boot times (~15s) because the system try to call miwallpaper during boot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
