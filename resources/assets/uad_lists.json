@@ -7355,7 +7355,7 @@
   {
     "id": "com.android.webview",
     "list": "Aosp",
-    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -13178,7 +13178,7 @@
   {
     "id": "com.oppo.webview",
     "list": "Oem",
-    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15923,7 +15923,7 @@
   {
     "id": "com.mi.webkit.core",
     "list": "Oem",
-    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\n\n.An open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17786,7 +17786,7 @@
   {
     "id": "com.google.android.webview",
     "list": "Google",
-    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\n\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
