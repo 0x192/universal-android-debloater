@@ -8154,15 +8154,6 @@
     "removal": "Unsafe"
   },
   {
-    "id": "com.android.fmradio",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
     "id": "com.mediatek.gba",
     "list": "Pending",
     "description": "",
@@ -8206,15 +8197,6 @@
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
-  },
-  {
-    "id": "com.mediatek.simprocessor",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
   },
   {
     "id": "com.mediatek.mms.appservice",
@@ -8434,18 +8416,18 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
-    "list": "Pending",
-    "description": "Dark theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Dark theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
-    "list": "Pending",
-    "description": "Light theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Light theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -8453,7 +8435,7 @@
   {
     "id": "com.android.cellbroadcastreceiver.overlay.common",
     "list": "Aosp",
-    "description": "com.android.cellbroadcastreceiver Theme pack\nGuessing it's a pack of themes for the cellbroadcastreceiver, based on the name.",
+    "description": "com.android.cellbroadcastreceiver Theme pack",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9759,17 +9741,17 @@
     "id": "com.google.android.cellbroadcastreceiver",
     "list": "Aosp",
     "description": "Wireless emergency alerts\nCell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nRuns at boot and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
-    "dependencies": null,
+    "dependencies": ["com.google.android.cellbroadcastservice"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.google.android.cellbroadcastservice",
-    "list": "Pending",
+    "list": "Aosp",
     "description": "Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.google.android.cellbroadcastreceiver"],
     "labels": null,
     "removal": "Expert"
   },
@@ -9831,15 +9813,6 @@
     "id": "com.google.android.overlay.gmsconfig.photos",
     "list": "Pending",
     "description": "Android System Theme pack\nGuessing it's a pack of overlay themes for Android System or Google Play Services based on the name.",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
-    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
-    "list": "Pending",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12754,9 +12727,9 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.overlay.base.s600ww",
-    "list": "Pending",
-    "description": "Theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Oem",
+    "description": "Nokia theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -20517,7 +20490,7 @@
     "neededBy": null,
     "labels": null,
     "removal": "Advanced"
-  }
+  },
   {
     "id": "com.tiqiaa.remote",
     "list": "Misc",
@@ -20697,5 +20670,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "list": "Google",
+    "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
+    "dependencies": ["com.google.android.cellbroadcastreceiver"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   }
 ]
