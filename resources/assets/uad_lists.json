@@ -20518,4 +20518,184 @@
     "labels": null,
     "removal": "Advanced"
   }
+  {
+    "id": "com.tiqiaa.remote",
+    "list": "Misc",
+    "description": "ZazaRemote (https://play.google.com/store/apps/details?id=com.tiqiaa.remote)\nA Universal infrared control app full of trackers and with unecessary permissions.\n\nPithus analysis: https://beta.pithus.org/report/93eed47a45c00998f2111907afc26b5697aaf7fb19c0efb6b42d46addf0e297c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.toolbox",
+    "list": "Misc",
+    "description": "Toolbox\n contains a bunch a small utilites, most have there own APP but are only accessible from the Toolbox UI\nincluded; Noise test, Compass, Flashlight, Bubble Level, Picture Hanging, Heart rate, Measure height,\n Magnifier,Alarm, Plumb Bob, Protractor, Speedometer & a Pedometer.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.usbcamera",
+    "list": "Oem",
+    "description": "Toolbox > \"USB Camera\" Only usefull if you want to use a USB Camera\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.newsos",
+    "list": "Oem",
+    "description": "SOS\nNotify emergency contacts. When triggered, will also put the phone in a low comsumption mode\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.nfc",
+    "list": "Oem",
+    "description": "NFC card emulation: simulates various types of unencrypted entrance cards.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.fmradio",
+    "list": "Aosp",
+    "description": "FM Radio\n Plug in Head phones & listen to the Radio!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.haoba.btsmart",
+    "list": "Misc",
+    "description": "Agui Unibuds\nIot stuff. May only be needed if you use Uniherts Ear Buds (Unibuds).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.scanning.agold.agoldscanning",
+    "list": "Oem",
+    "description": "\"Scan\" Settings > intelligent assistant: Scan. QR code & Bar code scanner.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "Student Mode\nLocks down your phone to reduce distractions\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mediatek.simprocessor",
+    "list": "Misc",
+    "description": "This control and import contacts saved on a SIM card. Not needed if you don't store your contacts on the SIM card\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.mediatek.ims.pco",
+    "list": "Misc",
+    "description": "Protocol Configuration Options service for IMS\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling). This package enable automatic configuration pushed by your carrier. You could possibly remove it if you don't use IMS.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update",
+    "list": "Oem",
+    "description": "\"Wireless Update\" Settings > About Phone : Sytem update.\nRemoving will prevent Automatic Wireless Updates\n",
+    "dependencies": null,
+    "neededBy": ["com.agui.update.overlay"],
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update.overlay",
+    "list": "Oem",
+    "description": "Overlay for com.agui.update. Overlay are usually themes.\n",
+    "dependencies": ["com.agui.update"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.screenshot",
+    "list": "Oem",
+    "description": "Screenshot\nScreenshot utility triggered when double tapping the Red Button\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.batterystatsdumper",
+    "list": "Oem",
+    "description": "Battery Stats Dumper\nLets you check and clear battery usage statistics.\nEnter *#*#010#*#* in the dial pad to access this hidden menu.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.app.imei",
+    "list": "Oem",
+    "description": "IMEI Tool: Change MEID's & IMEI's of both SIM's\nEnter *#*#08#*#* in the dial pad to access\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.appblock",
+    "list": "Oem",
+    "description": "App blocker\nSettings > Intelligent assistance: App blocker\n Unihertz power management service killing background apps to improve battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.providers.pedometer",
+    "list": "Oem",
+    "description": "Toolbox > \"Pedometer\" Pedometer/step counter.\nBecause of a feature that integrates with the lock sceen the System UI crashes when removed.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.agui.app.memtester",
+    "list": "Oem",
+    "description": "Memory tester\nHidden test menu. Used in diagnostics, normally invoked by MMI(Man-Machine Interface) Codes\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  }
 ]
