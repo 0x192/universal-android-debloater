@@ -8120,7 +8120,7 @@
   {
     "id": "cn.zte.recorder",
     "list": "Oem",
-    "description": "ZTE Voice Recorder",
+    "description": "ZTE Voice Recorder with... 33 permissions and talking with Baidu servers. Pithus analysis: https://beta.pithus.org/report/bab47d32f5b93cdf4d3a3cb082d1d0e7ba3e323356391b2d46e63617c1d15324",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8129,7 +8129,7 @@
   {
     "id": "com.zte.videoplayer",
     "list": "Oem",
-    "description": "ZTE Video Player",
+    "description": "ZTE Video Player with INTERNET and ACCESS_NETWORK_STATE permissions\nPithus analysis: https://beta.pithus.org/report/caf2da956d33c5550e42d4250b0fa31dc605f39545c2eff36438fd88a0fc7c28",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
