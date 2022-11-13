@@ -16409,11 +16409,11 @@
   {
     "id": "com.miui.notification",
     "list": "Oem",
-    "description": "Handles notifications in MIUI (badly according to reviews). Does it only handles notifications for Xiaomi apps?\nEmbeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)\nCan someone remove this package just to see if it breaks all notifications for all apps? It doesn't seem so.\nIf you try don't forget to check if the settings app still works fine.\n",
+    "description": "Notifications are working without this app.\nIt is possible to access the app notification setting with long pressing on the notification without the app. However notification settings in the settings menu will be broken without this package. The app is mandatory to enable notifications of apps that have been disabled before.\nNote: embeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.powerkeeper",
@@ -16517,7 +16517,7 @@
   {
     "id": "com.xiaomi.powerchecker",
     "list": "Oem",
-    "description": "Power Detector \nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
+    "description": "Power Detector\nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16526,7 +16526,7 @@
   {
     "id": "com.xiaomi.miplay_client",
     "list": "Oem",
-    "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n\n",
+    "description": "MiPlay Client\nProvides support for Miracast (https://en.wikipedia.org/wiki/Miracast).\nIt provides the Wireless Display feature (Settings - Connection & sharing - Cast).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
