@@ -4522,7 +4522,7 @@
     "list": "Oem",
     "description": "It shows up as a pane on OneUI home and prompts you to install all sorts of random apps. OneUI works perfectly fine if you uninstall these and simply removes the discover pane.",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.samsung.discover.sep"],
     "labels": null,
     "removal": "Recommended"
   },
@@ -4530,7 +4530,7 @@
     "id": "com.samsung.discover.sep",
     "list": "Oem",
     "description": "Related to `com.samsung.discover` but doesnt seem to do much on its own. Safe to remove without any effect.",
-    "dependencies": null,
+    "dependencies": ["com.samsung.discover"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
