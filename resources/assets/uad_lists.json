@@ -4457,7 +4457,7 @@
   {
     "id": "com.samsung.android.forest",
     "list": "Oem",
-    "description": "Digital Wellbeing (old version of com.samsung.android.wellbeing)\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357",
+    "description": "Digital Wellbeing (old version of com.samsung.android.wellbeing)\nThat's an app for device and app usage tracking and limiting.\nhttps://galaxystore.samsung.com/prepost/000004807357\nNOTE for Dex users: uninstalling this package makes the UI unstable, in particular the taskbar is not loaded and UI continues to crash.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -4513,6 +4513,24 @@
     "list": "Oem",
     "description": "Samsung DEX UI\nExtends your smartphone into a \"desktop computing experience\".\nhttps://developer.samsung.com/samsung-dex/how-it-works\n",
     "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.discover",
+    "list": "Oem",
+    "description": "It shows up as a pane on OneUI home and prompts you to install all sorts of random apps. OneUI works perfectly fine if you uninstall these and simply removes the discover pane.",
+    "dependencies": null,
+    "neededBy": ["com.samsung.discover.sep"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.discover.sep",
+    "list": "Oem",
+    "description": "Related to `com.samsung.discover` but doesnt seem to do much on its own. Safe to remove without any effect.",
+    "dependencies": ["com.samsung.discover"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -7355,7 +7373,7 @@
   {
     "id": "com.android.webview",
     "list": "Aosp",
-    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7860,7 +7878,7 @@
     "id": "com.oneplus.gamespace",
     "list": "Oem",
     "description": "OnePlus Game Space\nOccasionally runs in the background as part of the system.\nAllows you to launch your game library, check game stats(such as playtime), activate game overlay features, change performance settings to tweak game/battery performance during gaming.\nThis is the only way to access the recording buffer functionality (records the last X seconds into RAM and saves them when you tap save), so keep enabled if you need that or any of the other features.",
-    "dependencies": null,
+    "dependencies": ["com.oplus.cosa"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -8055,6 +8073,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oneplus.opshelf",
+    "list": "Oem",
+    "description": "OnePlus Shelf (https://play.google.com/store/apps/details?id=com.oneplus.opshelf)\nWidget panel accessible from swiping down on the top-right side of the screen allowing quick access to apps, meteo, spotify, memos...\n\nPithus analysis: https://beta.pithus.org/report/a50f166c8c2fae1204650c7af1cb287e20ad5286a89b013ada787f4b1b90fc64.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oneplus.iconpack.circle",
     "list": "Oem",
     "description": "OnePlus Icon Pack - Round (https://play.google.com/store/apps/details?id=com.oneplus.iconpack.circle)\n",
@@ -8145,15 +8172,6 @@
     "removal": "Unsafe"
   },
   {
-    "id": "com.android.fmradio",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
     "id": "com.mediatek.gba",
     "list": "Pending",
     "description": "",
@@ -8197,15 +8215,6 @@
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
-  },
-  {
-    "id": "com.mediatek.simprocessor",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
   },
   {
     "id": "com.mediatek.mms.appservice",
@@ -8425,18 +8434,18 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
-    "list": "Pending",
-    "description": "Dark theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Dark theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
-    "list": "Pending",
-    "description": "Light theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Light theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -8444,7 +8453,7 @@
   {
     "id": "com.android.cellbroadcastreceiver.overlay.common",
     "list": "Aosp",
-    "description": "com.android.cellbroadcastreceiver Theme pack\nGuessing it's a pack of themes for the cellbroadcastreceiver, based on the name.",
+    "description": "com.android.cellbroadcastreceiver Theme pack",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8983,12 +8992,12 @@
   },
   {
     "id": "com.oneplus.diagnosemanager",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Logging app for diagnosis/troubleshooting when the SIM card state change. Only used on devices running OxygenOS 9 and lower. Runs at boot and triggers when SIM card state change.\n\nPithus analysis: https://beta.pithus.org/report/f4c76054795bf55012edf1f60e992b6e339085b9ca2cbe685917a62dd07492c0",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.oneplus.dirac.simplemanager",
@@ -9750,17 +9759,17 @@
     "id": "com.google.android.cellbroadcastreceiver",
     "list": "Aosp",
     "description": "Wireless emergency alerts\nCell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nRuns at boot and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
-    "dependencies": null,
+    "dependencies": ["com.google.android.cellbroadcastservice"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.google.android.cellbroadcastservice",
-    "list": "Pending",
+    "list": "Aosp",
     "description": "Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.google.android.cellbroadcastreceiver"],
     "labels": null,
     "removal": "Expert"
   },
@@ -9822,15 +9831,6 @@
     "id": "com.google.android.overlay.gmsconfig.photos",
     "list": "Pending",
     "description": "Android System Theme pack\nGuessing it's a pack of overlay themes for Android System or Google Play Services based on the name.",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
-    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
-    "list": "Pending",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -11828,11 +11828,11 @@
   {
     "id": "com.lge.ime.solution.text",
     "list": "Oem",
-    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young) : https://en.wikipedia.org/wiki/XT9\n",
+    "description": "XT9 \nText predicting and correction for the LG keyboard.\nFor your culture (if you're young) : https://en.wikipedia.org/wiki/XT9\n\nWARNING: On LG G6 (and maybe on other LG phones) removing this may cause the LG keyboard to stop inputing characters. Make sure to use another keyboard before removing this package.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.lge.launcher2.theme.optimus",
@@ -12745,9 +12745,9 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.overlay.base.s600ww",
-    "list": "Pending",
-    "description": "Theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Oem",
+    "description": "Nokia theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -12881,7 +12881,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to triggers bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather service. Removal seems to triggera a bootloops on some phones.\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12890,11 +12890,11 @@
   {
     "id": "com.coloros.weather2",
     "list": "Oem",
-    "description": "colorOS weather app. Removal seems to trigger bootloops\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "ColorOS weather app. Removal seems to trigger a bootloop on some phones. You should try, several users removed this app without any trouble on Oppo/Realme device with Android 11+\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.coloros.mcs",
@@ -13169,7 +13169,7 @@
   {
     "id": "com.oppo.webview",
     "list": "Oem",
-    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15401,11 +15401,11 @@
   {
     "id": "com.miui.miwallpaper",
     "list": "Oem",
-    "description": "Mi Wallpaper\nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.",
+    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.\nNote: it may also result in longer boot times (~15s) because the system try to call miwallpaper during boot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.nextpay",
@@ -15914,7 +15914,7 @@
   {
     "id": "com.mi.webkit.core",
     "list": "Oem",
-    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\n\n.An open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16319,7 +16319,7 @@
   {
     "id": "com.android.incallui",
     "list": "Oem",
-    "description": "Xiaomi Phone (Here we go again! Another confusing package name)\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.\n",
+    "description": "Xiaomi (and OnePlus) Phone dialer (here we go again! Another confusing package name)\n\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16427,11 +16427,11 @@
   {
     "id": "com.miui.notification",
     "list": "Oem",
-    "description": "Handles notifications in MIUI (badly according to reviews). Does it only handles notifications for Xiaomi apps?\nEmbeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)\nCan someone remove this package just to see if it breaks all notifications for all apps? It doesn't seem so.\nIf you try don't forget to check if the settings app still works fine.\n",
+    "description": "Notifications are working without this app.\nIt is possible to access the app notification setting with long pressing on the notification without the app. However notification settings in the settings menu will be broken without this package. The app is mandatory to enable notifications of apps that have been disabled before.\nNote: embeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.powerkeeper",
@@ -16535,7 +16535,7 @@
   {
     "id": "com.xiaomi.powerchecker",
     "list": "Oem",
-    "description": "Power Detector \nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
+    "description": "Power Detector\nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16544,7 +16544,7 @@
   {
     "id": "com.xiaomi.miplay_client",
     "list": "Oem",
-    "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n\n",
+    "description": "MiPlay Client\nProvides support for Miracast (https://en.wikipedia.org/wiki/Miracast).\nIt provides the Wireless Display feature (Settings - Connection & sharing - Cast).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16994,7 +16994,7 @@
   {
     "id": "com.google.android.apps.messaging",
     "list": "Google",
-  "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.",
+  "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.\nWARNING: Removing this may cause issues with receiving 2FA verification text messages and calls from Google on some devices. Please let us know your experience with this on https://github.com/0x192/universal-android-debloater/pull/250 (give your phone model + Android version)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17183,7 +17183,7 @@
   {
     "id": "com.google.android.apps.wellbeing",
     "list": "Google",
-    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits.",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits.\nWARNING: It is now a hard dependency for the settings app on Android 12+ on Pixel phones. Disable this package instead of uninstalling it or the settings will crash on launch.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17273,7 +17273,7 @@
   {
     "id": "com.google.android.deskclock",
     "list": "Google",
-    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n",
+    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n\nWARNING: on some phones, removing this makes it so alarms and notifications only vibrate and don't make any sound (via any installed app), and makes the 'Alarm' section unavailable in 'Settings > Sound & Vibration'.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17777,7 +17777,7 @@
   {
     "id": "com.google.android.webview",
     "list": "Google",
-    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\n\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19637,6 +19637,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.tblenovo.center",
+    "list": "Oem",
+    "description": "Useless dashboard related to the User Experience Program (com.lenovo.ue.device). Has 25 permission (including ones you probably don't want to give to this kind of sketchy app\n\nPithus analysis: https://beta.pithus.org/report/dcb4acac003896077eaaeb8c7dc770d3171891784d98f7127f8495a3dec9954d",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.lenovo.ue.device",
+    "list": "Oem",
+    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.tblenovo.lenovotips",
     "list": "Oem",
     "description": "Useless Lenovo Tips app used by Lenovo to display un-dismissable and un-mutable ads in notifications.\nhttps://news.ycombinator.com/item?id=28382081",
@@ -19945,9 +19963,9 @@
   {
     "id": "com.oplus.cosa",
     "list": "Oem",
-    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde",
+    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.oneplus.gamespace"],
     "labels": null,
     "removal": "Recommended"
   },
@@ -20044,7 +20062,7 @@
   {
     "id": "com.nearme.statistics.rom",
     "list": "Oem",
-    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
+    "description": "User Experience Program\n Collect user data and sends them to Oppo. Instrusive and starts at boot\nSee https://support.oppo.com/uk/answer/?aid=neu105\n\nNote: removing it may break the search feature in the settings on some ColorOS versions.\n\nPithus analysis: https://beta.pithus.org/report/5e06191ac6f8aefd39642f6341ee4897039815f5059dbe093a7bd2fe1e20c038",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20058,6 +20076,645 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.compass2",
+    "list": "Oem",
+    "description": "ColorOS default compass app\nKeep in mind that by using this app you give your location to the weather Oppo servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.gamespaceui",
+    "list": "Oem",
+    "description": "GameSpace\nGaming utility aiming at 'optimizing your gaming experience'. Has a lot of permissions. For instance, it has internet access, will scans all the apps you have on your phones (to find games), can performs Bluetooth scan and has access to the metadata of your media files (e.g the place where you took a picture).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.onekeylockscreen",
+    "list": "Oem",
+    "description": "Lock your phone if you click on the app icon. Completely useless unless your physical power button is damaged.\nThis app still has the permission to list all the apps installed on the phone.\n\nPithus analysis: https://beta.pithus.org/report/ece4088357c0a47dffd96bdc46a7b535d448c1a3619d995f7032df3be6cb0a38",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.oshare",
+    "list": "Oem",
+    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.phonemanager",
+    "list": "Oem",
+    "description": "Phone Manager\nProvides so called 'optimization tools' and various security scanning services.\nThese virus scanning services may have privacy implications.\n\nPithus analysis: https://beta.pithus.org/report/6b7d9e117ffb600b852f3785ede4f3773385fc291376e94a061bf7ed787dec48",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.securepay",
+    "list": "Oem",
+    "description": "Payement system from Oppo allowing you to pay with your phone\n\nPithus analysis: https://beta.pithus.org/report/65246664d3795a5ac1b402d28456903e1b3bd76176de8298b3ea96c6c592ae9a",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.systemclone",
+    "list": "Oem",
+    "description": "System Cloner\nCreates multiple users on device",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.coloros.video",
+    "list": "Oem",
+    "description": "Video Player\nDefault Oppo video player with too much permissions (21) for a video player! \nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.browser",
+    "list": "Oem",
+    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.habit.analysis",
+    "list": "Oem",
+    "description": "Most liky used to track your habits from IoT HeyTap devices [TO BE CONFIRMED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.music",
+    "list": "Oem",
+    "description": "Default Oppo Music App with insecure WebView Implementation (execution of user controlled code in WebView is an important security hole.\nHas also weird permissions (QUERY_ALL_PACKAGES and BLUETOOTH ?)\n\nhttps://beta.pithus.org/report/befa0ec0616c553632379f069453b0ca74ee29fd1428b9fce19c1657e6f97d8b",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.pictorial",
+    "list": "Oem",
+    "description": "Lock Screen Magazine which can display ads depending of your ColorOS version",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.themestore",
+    "list": "Oem",
+    "description": "Theme Store with 73 permissions! (including CAMERA, CALL_PHONE, READ_CONTACTS, REQUEST_INSTALL_PACKAGES...) and 2 trackers.\n\nPithus analysis: https://beta.pithus.org/report/e8c4fc2bae420cf5f094ce914f25accdede5152f9d801db6eb32a4020a7726b2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.usercenter",
+    "list": "Oem",
+    "description": "Login service for various HeyTap related services like HeyTap Cloud etc.\nNeeded if you want to join Early Access Testing for new ColorOS/RealmeUI\n\n[APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.kekepay",
+    "list": "Oem",
+    "description": "Chinese pay service? Safe to remove but no documentation found online\n[APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.logkit",
+    "list": "Oem",
+    "description": "Logs service and bug reporting app\nSafe to remove if you don't report bugs to OEM",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.multiapp",
+    "list": "Oem",
+    "description": "App Cloner. Allows to clone an app. Have access to all installed apps. Is bundled with OnePlus analytics\n\nPithus analysis: https://beta.pithus.org/report/8a1d0783debb405ebadb3fc52507de5f69ecb55f499732b7331dac74ad69ffd7",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.pay",
+    "list": "Oem",
+    "description": "Secure Payment\nLet's you pay with your phone. Privacy issue aside, you should probably not trust their security: https://www.bitdefender.com/blog/hotforsecurity/hackers-attack-oneplus-again-this-time-stealing-customer-details",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.securitykeyboard",
+    "list": "Oem",
+    "description": "Secure Keyboard\nKeyboard that appears only when typing a password on apps and webpages, if enabled on Keyboard and Input settings",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.statistics.rom",
+    "list": "Oem",
+    "description": "User Experience Program\nIntrusive telemetry. Runs at boot and constantly stays in background\n\nPithus analysis: https://beta.pithus.org/report/7720549a5b4bc305a15e19b3e17ba6857a52e6e12db94006677c59f2fad84331",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.realme.link",
+    "list": "Oem",
+    "description": "RealMe Link (https://play.google.com/store/apps/details?id=com.realme.link)\nCompanion app for various realme IoT devices. Useless if you don't have a realme watch/band",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.realme.securitycheck",
+    "list": "Oem",
+    "description": "Security Analysis\n. Antivirus analysis on app install. It's up to you. Remonving it may decrease your security for a bit more privacy (if we consider this app does this job well which is to be verified) [APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.operationManual",
+    "list": "Oem",
+    "description": "Oppo User Manuel",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.sos",
+    "list": "Oem",
+    "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.finshell.fin",
+    "list": "Misc",
+    "description": "FinShell Pay (https://play.google.com/store/apps/details?id=com.finshell.fin)\nProvides various Payment and Financial Services. Pretty bad privacy policy: https://rwallet.finshell.co.in/html/user/privacy_policy.html",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.glance.internet",
+    "list": "Misc",
+    "description": "Displays unsolicited \"trending\" stories on Lockscreen",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.opos.cs",
+    "list": "Misc",
+    "description": "Hot Apps\nGenerate app folders on home screen that recommended sponsored apps and games.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oneplus.chargingpilar",
+    "list": "Oem",
+    "description": "Geolocates the phone to find OnePlus charging stations nearby. Connects to 'gateway.oneplus.net'\n\nPithus analysis: https://beta.pithus.org/report/8c157eeec2931d3d1140aa8c452d7afa570e04c9d51e6cd5987dbb3ec43df4f9",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.activation",
+    "list": "Oem",
+    "description": "E-warranty card\nLet's you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot\n\nPithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.appplatform",
+    "list": "Oem",
+    "description": "App Services\nMight be renamed package of com.heytap.appplatform which is related to Oppo's Heytap account services. Provides a RomUpdateService. Probably not safe to remove.\n\nPithus analysis: https://beta.pithus.org/report/2025ceb69d9379a01771de71ff00051eb0f0c7f44226a72c2066db9649b6dcd2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.athena",
+    "list": "Oem",
+    "description": "OnePlus background process manager. Removing it will solve the notification delay you can have but will disable the virtual ram expansion feature (swap RAM to disk) and the 'close all' button in the 'recent apps' page.\nRemoving this app may deteriorate battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.atlas",
+    "list": "Oem",
+    "description": "Atlas Service\nSeems to be a Sound provider. Performs a lot of actions upon audio related events. Still not clear it is really necessary. Runs at boot and stay in background. Pithus analysis: https://beta.pithus.org/report/6d0f9433431cd34a8e9aaef99b329b3623118a1699033be36032f64653dab3d0",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.crashbox",
+    "list": "Oem",
+    "description": "Sends system failure data to developers. Automatically runs at boot.\n\nPithus analysis: https://beta.pithus.org/report/6031048af7434e9cfe3435244dd105ac70e3bfe1f25ecdcca9b2a40b356590a2",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.exsystemservice",
+    "list": "Oem",
+    "description": "[NEED MORE INFO / APK NEEDED] Lots of permissions. The screenshot function will stop working when the app is disabled.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oplus.stdid",
+    "list": "Oem",
+    "description": "StdID\nNeeded for tracking battery usage on per app basis. Dependency for GameSpace\n\n [MORE INFO NEEDED / APK NEEDED]",
+    "dependencies": null,
+    "neededBy": ["com.oneplus.gamespace", "com.coloros.gamespace"],
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oplus.lfeh",
+    "list": "Oem",
+    "description": "Seems to be related to the the logging suite.\n\nPithus analysis: https://beta.pithus.org/report/0542dbdbe10fd3a868ea497ec92670619670f574bbce37d949975dc109cd316f",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.ocar",
+    "list": "Oem",
+    "description": "Car+\n Related to Oppo's car app [APK NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.wifibackuprestore",
+    "list": "Oem",
+    "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tripledot.solitaire",
+    "list": "Misc",
+    "description": "Solitaire (https://play.google.com/store/apps/details?id=com.tripledot.solitaire)\nPreinstalled game on some Samsung phones. 30 permissions, 23 trackers: https://reports.exodus-privacy.eu.org/reports/com.tripledot.solitaire/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "net.supertreat.solitaire",
+    "list": "Misc",
+    "description": "Solitaire (https://play.google.com/store/apps/details?id=net.supertreat.solitaire)\nPreinstalled game on some Samsung phones. 8 permissions, 17 trackers: https://reports.exodus-privacy.eu.org/reports/net.supertreat.solitaire/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "air.com.playtika.slotomania",
+    "list": "Misc",
+    "description": "Slotomania (https://play.google.com/store/apps/details?id=air.com.playtika.slotomania)\nPreinstalled game on some Samsung phones. 31 permissions, 13 trackers: https://reports.exodus-privacy.eu.org/reports/air.com.playtika.slotomania/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.staplegames.blocksClassicSGGP",
+    "list": "Misc",
+    "description": "Block (https://play.google.com/store/apps/details?id=com.staplegames.blocksClassicSGGP)\nPreinstalled game on some Samsung phones. 9 permissions, 26 trackers: https://reports.exodus-privacy.eu.org/reports/com.staplegames.blocksClassicSGGP/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "in.playsimple.tripcross",
+    "list": "Misc",
+    "description": "Crossword Jam (https://play.google.com/store/apps/details?id=in.playsimple.tripcross)\nPreinstalled game on some Samsung phones. 12 permissions, 25 trackers : https://reports.exodus-privacy.eu.org/reports/in.playsimple.tripcross/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tripledot.woodoku",
+    "list": "Misc",
+    "description": "Woodoku (https://play.google.com/store/apps/details?id=com.tripledot.woodoku)\nPreinstalled game on some Samsung phones.28 permissions, 24 trackers: https://reports.exodus-privacy.eu.org/reports/com.tripledot.woodoku/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.pandora.android",
+    "list": "Misc",
+    "description": "Pandora (https://play.google.com/store/apps/details?id=com.pandora.android)\nVery instrusive music and podcasts app. 17 permissions and 14 trackers: https://reports.exodus-privacy.eu.org/reports/com.pandora.android/latest/",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.digitalturbine.toolbar",
+    "list": "Misc",
+    "description": "Digital Turbine\n. Adware and used by carriers to showcase their apps\n\nFYI: Digital Turbine is an advertising company.\n[HELP: CAN SOMEONE UPLOAD THE APK?]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.soundpicker",
+    "list": "Google",
+    "description": "Google Sounds. Needed to pick up a phone ringtone. No weird permissions.\n\nPithus analysis: https://beta.pithus.org/report/f5f7c265c6d98666c78267b91643bbfb635021d5d4f85c93407079ba4aad88ee",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oneplus.geoiptime",
+    "list": "Oem",
+    "description": "Set the Timezone (it is not a NTP client). Automatically starts at boot and connects to checkip.amazonaws.com  and gateway.oneplus.com.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.oneplus.dialer",
+    "list": "Oem",
+    "description": "OnePlus Dialer used in OxygenOS 11 and lower.\nNote: don't forget to download another phone dialer app before removing this package.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.tiqiaa.remote",
+    "list": "Misc",
+    "description": "ZazaRemote (https://play.google.com/store/apps/details?id=com.tiqiaa.remote)\nA Universal infrared control app full of trackers and with unecessary permissions.\n\nPithus analysis: https://beta.pithus.org/report/93eed47a45c00998f2111907afc26b5697aaf7fb19c0efb6b42d46addf0e297c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.toolbox",
+    "list": "Misc",
+    "description": "Toolbox\n contains a bunch a small utilites, most have there own APP but are only accessible from the Toolbox UI\nincluded; Noise test, Compass, Flashlight, Bubble Level, Picture Hanging, Heart rate, Measure height,\n Magnifier,Alarm, Plumb Bob, Protractor, Speedometer & a Pedometer.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.usbcamera",
+    "list": "Oem",
+    "description": "Toolbox > \"USB Camera\" Only usefull if you want to use a USB Camera\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.newsos",
+    "list": "Oem",
+    "description": "SOS\nNotify emergency contacts. When triggered, will also put the phone in a low comsumption mode\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.nfc",
+    "list": "Oem",
+    "description": "NFC card emulation: simulates various types of unencrypted entrance cards.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.fmradio",
+    "list": "Aosp",
+    "description": "FM Radio\n Plug in Head phones & listen to the Radio!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.haoba.btsmart",
+    "list": "Misc",
+    "description": "Agui Unibuds\nIot stuff. May only be needed if you use Uniherts Ear Buds (Unibuds).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.scanning.agold.agoldscanning",
+    "list": "Oem",
+    "description": "\"Scan\" Settings > intelligent assistant: Scan. QR code & Bar code scanner.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "Student Mode\nLocks down your phone to reduce distractions\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mediatek.simprocessor",
+    "list": "Misc",
+    "description": "This control and import contacts saved on a SIM card. Not needed if you don't store your contacts on the SIM card\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.mediatek.ims.pco",
+    "list": "Misc",
+    "description": "Protocol Configuration Options service for IMS\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling). This package enable automatic configuration pushed by your carrier. You could possibly remove it if you don't use IMS.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update",
+    "list": "Oem",
+    "description": "\"Wireless Update\" Settings > About Phone : Sytem update.\nRemoving will prevent Automatic Wireless Updates\n",
+    "dependencies": null,
+    "neededBy": ["com.agui.update.overlay"],
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update.overlay",
+    "list": "Oem",
+    "description": "Overlay for com.agui.update. Overlay are usually themes.\n",
+    "dependencies": ["com.agui.update"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.screenshot",
+    "list": "Oem",
+    "description": "Screenshot\nScreenshot utility triggered when double tapping the Red Button\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.batterystatsdumper",
+    "list": "Oem",
+    "description": "Battery Stats Dumper\nLets you check and clear battery usage statistics.\nEnter *#*#010#*#* in the dial pad to access this hidden menu.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.app.imei",
+    "list": "Oem",
+    "description": "IMEI Tool: Change MEID's & IMEI's of both SIM's\nEnter *#*#08#*#* in the dial pad to access\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.appblock",
+    "list": "Oem",
+    "description": "App blocker\nSettings > Intelligent assistance: App blocker\n Unihertz power management service killing background apps to improve battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.providers.pedometer",
+    "list": "Oem",
+    "description": "Toolbox > \"Pedometer\" Pedometer/step counter.\nBecause of a feature that integrates with the lock sceen the System UI crashes when removed.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.agui.app.memtester",
+    "list": "Oem",
+    "description": "Memory tester\nHidden test menu. Used in diagnostics, normally invoked by MMI(Man-Machine Interface) Codes\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "list": "Google",
+    "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
+    "dependencies": ["com.google.android.cellbroadcastreceiver"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   },
   {
     "id": "com.aura.oobe.kbdi",
