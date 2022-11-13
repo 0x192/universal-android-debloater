@@ -5006,11 +5006,11 @@
   {
     "id": "com.sec.android.app.safetyassurance",
     "list": "Oem",
-    "description": "Safety assurance is related to emergency features. It is especially used for SOS messages.\nhttps://www.samsung.com/nz/support/mobile-devices/samsung-sos-smart-phone-emergency-message-guide/\nNOTE: removing this app will prevent you from using services like SOS messages. Removal is on your own personal risk.",
+    "description": "Safety assurance is related to emergency features. It is especially used for SOS messages.\nhttps://www.samsung.com/nz/support/mobile-devices/samsung-sos-smart-phone-emergency-message-guide/\nHas obviously a huge amount of permissions.\n\nPithus analysis: https://beta.pithus.org/report/a06501fce61a39cb2b38df088eba4d0ce7ca3ed8fce3e8b672d8eb807538fb1f",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.sec.android.app.sbrowser",
