@@ -1757,7 +1757,7 @@
   {
     "id": "com.huawei.android.FloatTasks",
     "list": "Oem",
-    "description": "Floating dock function and NaviDot.\nhttps://consumer.huawei.com/en/support/how-to/detail-troubleshooting/en-us00310067/\n",
+    "description": "Floating/Navigation dock (also called NaviDot).\nhttps://consumer.huawei.com/en/support/how-to/detail-troubleshooting/en-us00310067/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
