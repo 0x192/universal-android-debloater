@@ -63,7 +63,7 @@ pub async fn download_file<T: ToString>(url: T, dest_file: PathBuf) -> Result<()
 
     match ureq::get(&url).call() {
         Ok(res) => {
-            let mut file = fs::File::create(&dest_file).unwrap();
+            let mut file = fs::File::create(dest_file).unwrap();
 
             if let Err(e) = copy(&mut res.into_reader(), &mut file) {
                 return Err(e.to_string());
@@ -88,7 +88,7 @@ pub async fn download_update_to_temp_file(
     let download_path = current_bin_path
         .parent()
         .unwrap()
-        .join(&format!("tmp_{}", bin_name));
+        .join(format!("tmp_{}", bin_name));
 
     // Path to temporarily force rename current process to, se we can then
     // rename `download_path` to `current_bin_path` and then launch new version
@@ -96,7 +96,7 @@ pub async fn download_update_to_temp_file(
     let tmp_path = current_bin_path
         .parent()
         .unwrap()
-        .join(&format!("tmp2_{}", bin_name));
+        .join(format!("tmp2_{}", bin_name));
 
     // MacOS and Linux release are gziped tarball
     #[cfg(not(target_os = "windows"))]

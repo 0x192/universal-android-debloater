@@ -35,20 +35,24 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [ ] Gionee
 * [X] LG
 * [X] Google
+* [ ] iQOO
 * [X] Fairphone
 * [ ] HTC
 * [X] Huawei
 * [X] Motorola
 * [X] Nokia
 * [X] OnePlus
-* [X] Oppo  
+* [X] Oppo
+* [X] Realme
 * [X] Samsung
 * [X] Sony
 * [X] Tecno
 * [ ] TCL
+* [X] Unihertz
+* [ ] Vivo
 * [ ] Wiko
 * [X] Xiaomi
-* [ ] ZTE
+* [X] ZTE
 
 ## Mobile carriers debloat lists
 |   Country       | Carriers                          |
@@ -107,7 +111,8 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
   <details>
   <summary>WINDOWS</summary>
 
-  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere. [Add the folder to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) and unzip it somewhere.
+  - [Add the android platform tools to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/) **OR** make sure to launch UAD from the same directory.
 
   - [Install USB drivers for your device](https://developer.android.com/studio/run/oem-usb#Drivers)
   - Check your device is detected:

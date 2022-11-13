@@ -222,7 +222,7 @@ impl Application for UadGui {
                             args.remove(idx);
                         }
 
-                        match std::process::Command::new(&relaunch_path)
+                        match std::process::Command::new(relaunch_path)
                             .args(args)
                             .arg("--self-update-temp")
                             .arg(&cleanup_path)
