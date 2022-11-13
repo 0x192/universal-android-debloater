@@ -49,7 +49,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Tecno
 * [ ] TCL
 * [X] Unihertz
-* [ ] Vivo
+* [X] Vivo/iQOO
 * [ ] Wiko
 * [X] Xiaomi
 * [X] ZTE

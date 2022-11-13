@@ -20724,5 +20724,140 @@
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
+  },
+  {
+    "id": "com.bkk.theme",
+    "list": "Oem",
+    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLet's you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.bbk.iqoo.logsystem",
+    "list": "Oem",
+    "description": "User experience service\nTelemetry app.\nNote:Disabling this will break trial version system upgrade feature.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mobile.iroaming",
+    "list": "Oem",
+    "description": "Data Store\nOnly useful if you need roaming mobile data when travelling overseas. Has a lot of dangerous permissions and phone home to Vivo domains.\n\nPithus analysis: https://beta.pithus.org/report/d7cfa53942159a0e9c1bf3643b5f38496daee4c0225e8155249db9fdc979187c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.space",
+    "list": "Oem",
+    "description": "Open Vivo official website.\nUseless app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.baidu.input_vivo",
+    "list": "Oem",
+    "description": "Default keyboard (Baidu IME customized for Vivo devices).\nThe number of requested permissions for this keyboard is terrifying. You really should use another keyboard. Pithus analysis: https://beta.pithus.org/report/d4cdf8fedcd94436ade720cb8df9b4ef32aca6c7822cae6c8698937d68e20363",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.bbk.calendar",
+    "list": "Oem",
+    "description": "Default calendar app.\n50 permissions for a calendar app. What could go wrong?\n\nPithus analysis: https://beta.pithus.org/report/db107cb828a1ec9b7cbcd9fd86542da877fdf4cf947c18c8a48a2b09e568ad10",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.share",
+    "list": "Oem",
+    "description": "Vivo share\nTransfer data between vivo device & PC",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.yozo.vivo.office",
+    "list": "Oem",
+    "description": "Vivo document reader\nA lot of permissions for a simple document reader. It can access to internet, can list all the apps you installed, can get your phone number, current cellular network information, the status of any ongoing calls and more!\n\nPithus analysis: https://beta.pithus.org/report/8902163722f5df1ae6228b80124cfa94c2b8a0210a8f6bbb3441e05d69a76d0b",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.browser",
+    "list": "Oem",
+    "description": "Vivo browser full of trackers (https://play.google.com/store/apps/details?id=com.vivo.browser)\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.dream.weather",
+    "list": "Oem",
+    "description": "Vivo weather app",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.hybrid",
+    "list": "Oem",
+    "description": "Quick App\nProvides Quick App support. Quick Apps are Javascript+CSS apps that don't need any installation. This technology has its uses but I'm personally not a huge fan on having to rely on a JS engine to run an application\nThis system app has a lot of permissions (including SEND_SMS, CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO... why?)\nMore information: https://www.xda-developers.com/huawei-quick-apps-alternative-google-instant-apps/\n OW2 Quick App whitepaper: https://quick-app-initiative.ow2.io/docs/Quick_App_White_Paper.pdf",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.puresearch",
+    "list": "Oem",
+    "description": "Search Widget\nDesktop search bar",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.voicewakeup",
+    "list": "Oem",
+    "description": "Voice wake-up. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...). Kind of a \"smart assistant\" ? Is constantly listening waiting for a trigger word [MORE INFO NEEDED]",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.bbk.appstore",
+    "list": "Oem",
+    "description": "Vivo app store.\nNote: apps from this store can still be upgraded with the built-in check upgrade feature even with this package removed",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.bbk.account",
+    "list": "Oem",
+    "description": "Vivo account\nVivo privacy policy is really bad: https://privacy.vivo.com/privacy\nNote: Removing this will obviously break fuctions that require Vivo account authentication: accessibility, data backup etc.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
   }
 ]
