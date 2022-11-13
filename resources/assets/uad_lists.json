@@ -15509,7 +15509,7 @@
   {
     "id": "com.miui.bugreport",
     "list": "Oem",
-    "description": "Mi Feedback\nUsed to seend bug report to devs\n",
+    "description": "Mi Feedback\nUsed to send bug report to devs\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16157,7 +16157,7 @@
   {
     "id": "com.xiaomi.simactivate.service",
     "list": "Oem",
-    "description": "Xiaomi SIM Activation Service\nSIM authentication process to access exclusive features in certain MIUI applications.\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\nAfter SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages).\nYou will be able to synchronize you messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account.\n\nNote: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
+    "description": "Xiaomi SIM Activation Service\nSIM authentication process to access exclusive features in certain MIUI applications.\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\nAfter SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages).\nYou will be able to synchronize your messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account.\n\nNote: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
