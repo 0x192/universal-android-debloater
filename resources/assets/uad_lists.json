@@ -17237,7 +17237,7 @@
   {
     "id": "com.google.android.deskclock",
     "list": "Google",
-    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n\nWARNING:On some phones, removing this makes it so alarms and notifications only vibrate and don't make any sound (via any installed app), and makes the 'Alarm' section unavailable in 'Settings > Sound & Vibration'.",
+    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n\nWARNING: on some phones, removing this makes it so alarms and notifications only vibrate and don't make any sound (via any installed app), and makes the 'Alarm' section unavailable in 'Settings > Sound & Vibration'.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
