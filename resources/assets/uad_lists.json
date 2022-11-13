@@ -20629,7 +20629,7 @@
   {
     "id": "com.vivo.voicewakeup",
     "list": "Oem",
-    "description": "Voice wake-up. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...). Kind of a \"smart assistant\" ? Is constantly listening waiting for a trigger word [MORE INFO NEEDED]",
+    "description": "Voice wake-up for the Jovi voice assistant. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...).\nNote: Vivo privacy policy is really bad: https://privacy.vivo.com/privacy",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
