@@ -35,6 +35,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [ ] Gionee
 * [X] LG
 * [X] Google
+* [ ] iQOO
 * [X] Fairphone
 * [ ] HTC
 * [X] Huawei
@@ -42,14 +43,16 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Nokia
 * [X] OnePlus
 * [X] Oppo
+* [X] Realme
 * [X] Samsung
 * [X] Sony
 * [X] Tecno
 * [ ] TCL
 * [X] Unihertz
+* [ ] Vivo
 * [ ] Wiko
 * [X] Xiaomi
-* [ ] ZTE
+* [X] ZTE
 
 ## Mobile carriers debloat lists
 |   Country       | Carriers                          |
