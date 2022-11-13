@@ -4518,6 +4518,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.discover",
+    "list": "Oem",
+    "description": "It shows up as a pane on OneUI home and prompts you to install all sorts of random apps. OneUI works perfectly fine if you uninstall these and simply removes the discover pane.",
+    "dependencies": null,
+    "neededBy": ["com.samsung.discover.sep"],
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.discover.sep",
+    "list": "Oem",
+    "description": "Related to `com.samsung.discover` but doesnt seem to do much on its own. Safe to remove without any effect.",
+    "dependencies": ["com.samsung.discover"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.samsung.ecomm",
     "list": "Oem",
     "description": "Shop Samsung (https://play.google.com/store/apps/details?id=com.samsung.ecomm)\nApp where you can buy all (and only) Samsung products.\nhttps://www.samsung.com/us/explore/shop-samsung-app/\n",
@@ -6572,11 +6590,11 @@
   {
     "id": "com.android.companiondevicemanager",
     "list": "Aosp",
-    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc.\nOnly needed for Google smart IoT devices (WearOS/Android Wear)",
+    "description": "Companion Device Manager\nThis handles connections to other devices, like Bluetooth Headphones, desktop Operating Systems, etc\nWARNING: have in mind that removing this package will result in the inability to read the SD card from your computer's file manager when connecting through USB.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.dreams.basic",
@@ -7355,7 +7373,7 @@
   {
     "id": "com.android.webview",
     "list": "Aosp",
-    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "AOSP webview\nDeprecated and replaced by com.google.android.webview\nAllows Android apps to display content from the web directly inside the app. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7860,7 +7878,7 @@
     "id": "com.oneplus.gamespace",
     "list": "Oem",
     "description": "OnePlus Game Space\nOccasionally runs in the background as part of the system.\nAllows you to launch your game library, check game stats(such as playtime), activate game overlay features, change performance settings to tweak game/battery performance during gaming.\nThis is the only way to access the recording buffer functionality (records the last X seconds into RAM and saves them when you tap save), so keep enabled if you need that or any of the other features.",
-    "dependencies": null,
+    "dependencies": ["com.oplus.cosa"],
     "neededBy": null,
     "labels": null,
     "removal": "Recommended"
@@ -8154,15 +8172,6 @@
     "removal": "Unsafe"
   },
   {
-    "id": "com.android.fmradio",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
     "id": "com.mediatek.gba",
     "list": "Pending",
     "description": "",
@@ -8206,15 +8215,6 @@
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
-  },
-  {
-    "id": "com.mediatek.simprocessor",
-    "list": "Pending",
-    "description": "",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Recommended"
   },
   {
     "id": "com.mediatek.mms.appservice",
@@ -8434,18 +8434,18 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
-    "list": "Pending",
-    "description": "Dark theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Dark theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
-    "list": "Pending",
-    "description": "Light theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Aosp",
+    "description": "Light theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -8453,7 +8453,7 @@
   {
     "id": "com.android.cellbroadcastreceiver.overlay.common",
     "list": "Aosp",
-    "description": "com.android.cellbroadcastreceiver Theme pack\nGuessing it's a pack of themes for the cellbroadcastreceiver, based on the name.",
+    "description": "com.android.cellbroadcastreceiver Theme pack",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -9759,17 +9759,17 @@
     "id": "com.google.android.cellbroadcastreceiver",
     "list": "Aosp",
     "description": "Wireless emergency alerts\nCell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nRuns at boot and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
-    "dependencies": null,
+    "dependencies": ["com.google.android.cellbroadcastservice"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
   },
   {
     "id": "com.google.android.cellbroadcastservice",
-    "list": "Pending",
+    "list": "Aosp",
     "description": "Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.google.android.cellbroadcastreceiver"],
     "labels": null,
     "removal": "Expert"
   },
@@ -9831,15 +9831,6 @@
     "id": "com.google.android.overlay.gmsconfig.photos",
     "list": "Pending",
     "description": "Android System Theme pack\nGuessing it's a pack of overlay themes for Android System or Google Play Services based on the name.",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
-    "removal": "Expert"
-  },
-  {
-    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
-    "list": "Pending",
-    "description": "",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -12754,9 +12745,9 @@
   },
   {
     "id": "com.android.cellbroadcastreceiver.overlay.base.s600ww",
-    "list": "Pending",
-    "description": "Theme overlay for cellbroadcastreceiver?",
-    "dependencies": null,
+    "list": "Oem",
+    "description": "Nokia theme overlay for com.android.cellbroadcastreceiver",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
@@ -13178,7 +13169,7 @@
   {
     "id": "com.oppo.webview",
     "list": "Oem",
-    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "Oppo Webview\nA WebView is a system component for the Android operating system (OS) that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15410,11 +15401,11 @@
   {
     "id": "com.miui.miwallpaper",
     "list": "Oem",
-    "description": "Mi Wallpaper\nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.",
+    "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.\nNote: it may also result in longer boot times (~15s) because the system try to call miwallpaper during boot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.nextpay",
@@ -15518,7 +15509,7 @@
   {
     "id": "com.miui.bugreport",
     "list": "Oem",
-    "description": "Mi Feedback\nUsed to seend bug report to devs\n",
+    "description": "Mi Feedback\nUsed to send bug report to devs\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15923,7 +15914,7 @@
   {
     "id": "com.mi.webkit.core",
     "list": "Oem",
-    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nOn open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
+    "description": "MI WebView\nXiaomi alternative to Google WebView\nREMINDER : It is a system component for the Android operating system that allows Android apps to display content \nfrom the web directly inside an application. It's based on Chrome.\nWARNING: Make to have another Webview before uninstalling it or some apps may not work properly\n\n.An open-source privacy oriented Webview is Bromite (https://www.bromite.org/system_web_view)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16166,7 +16157,7 @@
   {
     "id": "com.xiaomi.simactivate.service",
     "list": "Oem",
-    "description": "Xiaomi SIM Activation Service\nSIM authentication process to access exclusive features in certain MIUI applications.\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\nAfter SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages).\nYou will be able to synchronize you messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account.\n\nNote: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
+    "description": "Xiaomi SIM Activation Service\nSIM authentication process to access exclusive features in certain MIUI applications.\nFor the activation to work you need to send a international SMS to China.\nYour carrier may block this by default and/or you'll probably need to pay extra for this.\nAfter SIM activation, you can send text messages (Mi Messages) to other Mi users using internet connection (like i-messages).\nYou will be able to synchronize your messages into Mi Cloud and this also enables the Mi Find Device feature which allows you to track your phone’s location from your online Mi account.\n\nNote: To enable/disable Mi Messages go to Settings -> System Apps -> Messaging and reboot",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16436,11 +16427,11 @@
   {
     "id": "com.miui.notification",
     "list": "Oem",
-    "description": "Handles notifications in MIUI (badly according to reviews). Does it only handles notifications for Xiaomi apps?\nEmbeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)\nCan someone remove this package just to see if it breaks all notifications for all apps? It doesn't seem so.\nIf you try don't forget to check if the settings app still works fine.\n",
+    "description": "Notifications are working without this app.\nIt is possible to access the app notification setting with long pressing on the notification without the app. However notification settings in the settings menu will be broken without this package. The app is mandatory to enable notifications of apps that have been disabled before.\nNote: embeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.powerkeeper",
@@ -16544,7 +16535,7 @@
   {
     "id": "com.xiaomi.powerchecker",
     "list": "Oem",
-    "description": "Power Detector \nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
+    "description": "Power Detector\nSecurity> Battery> Activity Control. \nDetects abnormal power usage by apps (not all. Some Xiaomi apps are whitelisted)\nNeeded for 'com.miui.powerkeeper' to work.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -16553,7 +16544,7 @@
   {
     "id": "com.xiaomi.miplay_client",
     "list": "Oem",
-    "description": "MiPlay Client\nProvides support for Miracast?\nhttps://en.wikipedia.org/wiki/Miracast\nMy guess is it provides the Wireless Display feature (Settings - Connection & sharing - Cast)\nCan someone confirm?\n\n",
+    "description": "MiPlay Client\nProvides support for Miracast (https://en.wikipedia.org/wiki/Miracast).\nIt provides the Wireless Display feature (Settings - Connection & sharing - Cast).",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17282,7 +17273,7 @@
   {
     "id": "com.google.android.deskclock",
     "list": "Google",
-    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n",
+    "description": "Google clock app (https://play.google.com/store/apps/details?id=com.google.android.deskclock)\n\nWARNING: on some phones, removing this makes it so alarms and notifications only vibrate and don't make any sound (via any installed app), and makes the 'Alarm' section unavailable in 'Settings > Sound & Vibration'.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17786,7 +17777,7 @@
   {
     "id": "com.google.android.webview",
     "list": "Google",
-    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\n\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19646,6 +19637,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.tblenovo.center",
+    "list": "Oem",
+    "description": "Useless dashboard related to the User Experience Program (com.lenovo.ue.device). Has 25 permission (including ones you probably don't want to give to this kind of sketchy app\n\nPithus analysis: https://beta.pithus.org/report/dcb4acac003896077eaaeb8c7dc770d3171891784d98f7127f8495a3dec9954d",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.lenovo.ue.device",
+    "list": "Oem",
+    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.tblenovo.lenovotips",
     "list": "Oem",
     "description": "Useless Lenovo Tips app used by Lenovo to display un-dismissable and un-mutable ads in notifications.\nhttps://news.ycombinator.com/item?id=28382081",
@@ -19954,9 +19963,9 @@
   {
     "id": "com.oplus.cosa",
     "list": "Oem",
-    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde",
+    "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.",
     "dependencies": null,
-    "neededBy": null,
+    "neededBy": ["com.oneplus.gamespace"],
     "labels": null,
     "removal": "Recommended"
   },
@@ -20519,6 +20528,204 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.tiqiaa.remote",
+    "list": "Misc",
+    "description": "ZazaRemote (https://play.google.com/store/apps/details?id=com.tiqiaa.remote)\nA Universal infrared control app full of trackers and with unecessary permissions.\n\nPithus analysis: https://beta.pithus.org/report/93eed47a45c00998f2111907afc26b5697aaf7fb19c0efb6b42d46addf0e297c",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.toolbox",
+    "list": "Misc",
+    "description": "Toolbox\n contains a bunch a small utilites, most have there own APP but are only accessible from the Toolbox UI\nincluded; Noise test, Compass, Flashlight, Bubble Level, Picture Hanging, Heart rate, Measure height,\n Magnifier,Alarm, Plumb Bob, Protractor, Speedometer & a Pedometer.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.usbcamera",
+    "list": "Oem",
+    "description": "Toolbox > \"USB Camera\" Only usefull if you want to use a USB Camera\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.game",
+    "list": "Oem",
+    "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.newsos",
+    "list": "Oem",
+    "description": "SOS\nNotify emergency contacts. When triggered, will also put the phone in a low comsumption mode\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.agui.nfc",
+    "list": "Oem",
+    "description": "NFC card emulation: simulates various types of unencrypted entrance cards.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.fmradio",
+    "list": "Aosp",
+    "description": "FM Radio\n Plug in Head phones & listen to the Radio!\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.haoba.btsmart",
+    "list": "Misc",
+    "description": "Agui Unibuds\nIot stuff. May only be needed if you use Uniherts Ear Buds (Unibuds).",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.scanning.agold.agoldscanning",
+    "list": "Oem",
+    "description": "\"Scan\" Settings > intelligent assistant: Scan. QR code & Bar code scanner.\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.studentmodel",
+    "list": "Oem",
+    "description": "Student Mode\nLocks down your phone to reduce distractions\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mediatek.simprocessor",
+    "list": "Misc",
+    "description": "This control and import contacts saved on a SIM card. Not needed if you don't store your contacts on the SIM card\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.mediatek.ims.pco",
+    "list": "Misc",
+    "description": "Protocol Configuration Options service for IMS\nIMS(Ip Multimedia Subsystem) is an open industry standard for voice and multimedia communications over packet-based IP networks (VoLTE/VoIP/Wifi calling). This package enable automatic configuration pushed by your carrier. You could possibly remove it if you don't use IMS.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update",
+    "list": "Oem",
+    "description": "\"Wireless Update\" Settings > About Phone : Sytem update.\nRemoving will prevent Automatic Wireless Updates\n",
+    "dependencies": null,
+    "neededBy": ["com.agui.update.overlay"],
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.update.overlay",
+    "list": "Oem",
+    "description": "Overlay for com.agui.update. Overlay are usually themes.\n",
+    "dependencies": ["com.agui.update"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.screenshot",
+    "list": "Oem",
+    "description": "Screenshot\nScreenshot utility triggered when double tapping the Red Button\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.batterystatsdumper",
+    "list": "Oem",
+    "description": "Battery Stats Dumper\nLets you check and clear battery usage statistics.\nEnter *#*#010#*#* in the dial pad to access this hidden menu.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.agui.app.imei",
+    "list": "Oem",
+    "description": "IMEI Tool: Change MEID's & IMEI's of both SIM's\nEnter *#*#08#*#* in the dial pad to access\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.appblock",
+    "list": "Oem",
+    "description": "App blocker\nSettings > Intelligent assistance: App blocker\n Unihertz power management service killing background apps to improve battery performance.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.agui.providers.pedometer",
+    "list": "Oem",
+    "description": "Toolbox > \"Pedometer\" Pedometer/step counter.\nBecause of a feature that integrates with the lock sceen the System UI crashes when removed.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.agui.app.memtester",
+    "list": "Oem",
+    "description": "Memory tester\nHidden test menu. Used in diagnostics, normally invoked by MMI(Man-Machine Interface) Codes\n",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "list": "Google",
+    "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
+    "dependencies": ["com.google.android.cellbroadcastreceiver"],
+    "neededBy": null,
+    "labels": null,
+    "removal": "Expert"
+  },
+  {
+    "id": "com.aura.oobe.kbdi",
+    "list": "Oem",
+    "description": "Appcloud\nPersistent notification until you click on it and agree to install games. Sort of game cloud preinstalled in some Xiaomi phones\nSafe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
     "id": "com.bkk.theme",
     "list": "Oem",
     "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLet's you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
@@ -20629,7 +20836,7 @@
   {
     "id": "com.vivo.voicewakeup",
     "list": "Oem",
-    "description": "Voice wake-up for the Jovi voice assistant. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...).\nNote: Vivo privacy policy is really bad: https://privacy.vivo.com/privacy",
+    "description": "Voice wake-up. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...). Kind of a \"smart assistant\" ? Is constantly listening waiting for a trigger word [MORE INFO NEEDED]",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
