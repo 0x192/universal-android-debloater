@@ -16427,7 +16427,7 @@
   {
     "id": "com.miui.notification",
     "list": "Oem",
-    "description": "Notifications are working without this app.\nIt is possible to access the app notification setting with long pressing on the notification without the app. Notification settings in the settings menue will be broken without the app. The app is mandatory to enable notifications of apps that have been disabled before.",
+    "description": "Notifications are working without this app.\nIt is possible to access the app notification setting with long pressing on the notification without the app. However notification settings in the settings menu will be broken without this package. The app is mandatory to enable notifications of apps that have been disabled before.\nNote: embeds a tracking statistics service\n(usage tracking : `id`,`pkgName`,`latestSentTime`,`sentCount`,`avgSentDaily`,`avgSentWeekly)",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
