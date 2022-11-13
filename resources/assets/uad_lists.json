@@ -20715,5 +20715,14 @@
     "neededBy": null,
     "labels": null,
     "removal": "Expert"
+  },
+  {
+    "id": "com.aura.oobe.kbdi",
+    "list": "Oem",
+    "description": "Appcloud\nPersistent notification until you click on it and agree to install games. Sort of game cloud preinstalled in some Xiaomi phones\nSafe to remove.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
   }
 ]
