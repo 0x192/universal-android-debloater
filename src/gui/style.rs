@@ -1,338 +1,209 @@
-use crate::core::theme::ColorPalette;
-use iced::{button, checkbox, container, pick_list, scrollable, text_input, Background, Color};
+use crate::core::theme::Theme;
+use iced::overlay::menu;
+use iced::widget::{
+    button, checkbox, container, pick_list, radio, rule, scrollable, text, text_input,
+};
+use iced::{application, Background, Color};
 
-pub struct Content(pub ColorPalette);
-impl container::StyleSheet for Content {
-    fn style(&self) -> container::Style {
-        container::Style {
-            background: Some(Background::Color(self.0.base.background)),
-            text_color: Some(self.0.bright.surface),
-            ..container::Style::default()
+#[derive(Default, Debug, Clone, Copy)]
+pub enum Application {
+    #[default]
+    Default,
+}
+
+impl application::StyleSheet for Theme {
+    type Style = Application;
+
+    fn appearance(&self, _style: Self::Style) -> application::Appearance {
+        application::Appearance {
+            background_color: self.palette().base.background,
+            text_color: self.palette().bright.surface,
         }
     }
 }
 
-pub struct NavigationContainer(pub ColorPalette);
-impl container::StyleSheet for NavigationContainer {
-    fn style(&self) -> container::Style {
-        container::Style {
-            background: Some(Background::Color(self.0.base.foreground)),
-            text_color: Some(self.0.bright.surface),
-            ..container::Style::default()
-        }
-    }
+#[derive(Default, Debug, Clone, Copy)]
+pub enum Container {
+    #[default]
+    Invisible,
+    Frame,
+    BorderedFrame,
 }
 
-pub struct PrimaryButton(pub ColorPalette);
-impl button::StyleSheet for PrimaryButton {
-    fn active(&self) -> button::Style {
-        button::Style {
-            border_color: Color {
-                a: 0.5,
-                ..self.0.bright.primary
+impl container::StyleSheet for Theme {
+    type Style = Container;
+
+    fn appearance(&self, style: Self::Style) -> container::Appearance {
+        match style {
+            Container::Invisible => container::Appearance::default(),
+            Container::Frame => container::Appearance {
+                background: Some(Background::Color(self.palette().base.foreground)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 5.0,
+                ..container::Appearance::default()
             },
-            border_width: 1.0,
-            border_radius: 2.0,
-            text_color: self.0.bright.primary,
-            ..button::Style::default()
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color {
-                a: 0.25,
-                ..self.0.normal.surface
-            })),
-            text_color: self.0.bright.primary,
-            ..self.active()
-        }
-    }
-}
-
-pub struct UnavailableButton(pub ColorPalette);
-impl button::StyleSheet for UnavailableButton {
-    fn active(&self) -> button::Style {
-        button::Style {
-            border_color: Color {
-                a: 0.5,
-                ..self.0.bright.error
-            },
-            border_width: 1.0,
-            border_radius: 2.0,
-            text_color: self.0.bright.error,
-            ..button::Style::default()
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color {
-                a: 0.25,
-                ..self.0.normal.primary
-            })),
-            text_color: self.0.normal.error,
-            ..self.active()
-        }
-    }
-}
-
-pub struct SelfUpdateButton(pub ColorPalette);
-impl button::StyleSheet for SelfUpdateButton {
-    fn active(&self) -> button::Style {
-        button::Style {
-            border_color: Color {
-                a: 0.5,
-                ..self.0.bright.secondary
-            },
-            border_width: 1.0,
-            border_radius: 2.0,
-            text_color: self.0.bright.secondary,
-            ..button::Style::default()
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color {
-                a: 0.25,
-                ..self.0.normal.surface
-            })),
-            text_color: self.0.bright.secondary,
-            ..self.active()
-        }
-    }
-}
-
-pub struct RefreshButton(pub ColorPalette);
-impl button::StyleSheet for RefreshButton {
-    fn active(&self) -> button::Style {
-        button::Style {
-            border_color: Color {
-                a: 0.5,
-                ..self.0.bright.primary
-            },
-            border_width: 1.0,
-            border_radius: 2.0,
-            text_color: self.0.bright.primary,
-            ..button::Style::default()
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        button::Style {
-            background: Some(Background::Color(Color {
-                a: 0.25,
-                ..self.0.normal.surface
-            })),
-            text_color: self.0.bright.primary,
-            ..self.active()
-        }
-    }
-}
-
-pub enum PackageButton {
-    Uninstall(ColorPalette),
-    Restore(ColorPalette),
-}
-
-impl button::StyleSheet for PackageButton {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Uninstall(palette) => button::Style {
-                border_color: Color {
-                    a: 0.5,
-                    ..palette.bright.error
-                },
+            Container::BorderedFrame => container::Appearance {
+                background: Some(Background::Color(self.palette().base.foreground)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 5.0,
                 border_width: 1.0,
-                border_radius: 2.0,
-                text_color: palette.bright.error,
-                ..button::Style::default()
-            },
-            Self::Restore(palette) => button::Style {
-                border_color: Color {
-                    a: 0.5,
-                    ..palette.bright.secondary
-                },
-                border_width: 1.0,
-                border_radius: 2.0,
-                text_color: palette.bright.secondary,
-                ..button::Style::default()
-            },
-        }
-    }
-
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Restore(palette) => button::Style {
-                background: Some(Background::Color(Color {
-                    a: 0.25,
-                    ..palette.normal.primary
-                })),
-                text_color: palette.bright.primary,
-                ..self.active()
-            },
-            Self::Uninstall(palette) => button::Style {
-                background: Some(Background::Color(Color {
-                    a: 0.25,
-                    ..palette.normal.primary
-                })),
-                text_color: palette.bright.primary,
-                ..self.active()
-            },
-        }
-    }
-
-    fn disabled(&self) -> button::Style {
-        match self {
-            Self::Restore(palette) => button::Style {
-                background: Some(Background::Color(Color {
-                    a: 0.05,
-                    ..palette.normal.primary
-                })),
-                text_color: Color {
-                    a: 0.50,
-                    ..palette.bright.primary
-                },
-                ..self.active()
-            },
-            Self::Uninstall(palette) => button::Style {
-                background: Some(Background::Color(Color {
-                    a: 0.01,
-                    ..palette.bright.error
-                })),
-                text_color: Color {
-                    a: 0.50,
-                    ..palette.bright.error
-                },
-                ..self.active()
+                border_color: self.palette().normal.error,
             },
         }
     }
 }
 
-pub enum PackageRow {
-    Normal(ColorPalette),
-    Current(ColorPalette),
+#[derive(Default, Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Button {
+    #[default]
+    Primary,
+    Unavailable,
+    SelfUpdate,
+    Refresh,
+    UninstallPackage,
+    RestorePackage,
+    NormalPackage,
+    SelectedPackage,
 }
-impl button::StyleSheet for PackageRow {
-    fn active(&self) -> button::Style {
-        match self {
-            Self::Normal(palette) => button::Style {
-                background: Some(Background::Color(palette.base.foreground)),
-                text_color: palette.bright.surface,
+
+impl button::StyleSheet for Theme {
+    type Style = Button;
+
+    fn active(&self, style: Self::Style) -> button::Appearance {
+        let p = self.palette();
+
+        let appearance = button::Appearance {
+            border_width: 1.0,
+            border_radius: 2.0,
+            ..button::Appearance::default()
+        };
+
+        let active_appearance = |bg: Option<Color>, mc| button::Appearance {
+            background: Some(Background::Color(bg.unwrap_or(p.base.foreground))),
+            border_color: Color { a: 0.5, ..mc },
+            text_color: mc,
+            ..appearance
+        };
+
+        match style {
+            Button::Primary => active_appearance(None, p.bright.primary),
+            Button::Unavailable => active_appearance(None, p.bright.error),
+            Button::Refresh => active_appearance(None, p.bright.primary),
+            Button::SelfUpdate => active_appearance(None, p.bright.primary),
+            Button::UninstallPackage => active_appearance(None, p.bright.error),
+            Button::RestorePackage => active_appearance(None, p.bright.secondary),
+            Button::NormalPackage => button::Appearance {
+                background: Some(Background::Color(p.base.foreground)),
+                text_color: p.bright.surface,
                 border_radius: 5.0,
                 border_width: 0.0,
-                border_color: palette.base.background,
-                ..button::Style::default()
+                border_color: p.base.background,
+                ..appearance
             },
-            Self::Current(palette) => button::Style {
+            Button::SelectedPackage => button::Appearance {
                 background: Some(Background::Color(Color {
                     a: 0.25,
-                    ..palette.normal.primary
+                    ..p.normal.primary
                 })),
-                text_color: palette.bright.primary,
+                text_color: p.bright.primary,
                 border_radius: 5.0,
                 border_width: 0.0,
-                border_color: palette.normal.primary,
-                ..button::Style::default()
+                border_color: p.normal.primary,
+                ..appearance
             },
         }
     }
-    fn hovered(&self) -> button::Style {
-        match self {
-            Self::Normal(palette) => button::Style {
-                background: Some(Background::Color(Color {
-                    a: 0.30,
-                    ..palette.normal.primary
-                })),
-                text_color: palette.bright.primary,
-                ..self.active()
+
+    fn hovered(&self, style: Self::Style) -> button::Appearance {
+        let active = self.active(style);
+        let p = self.palette();
+
+        let hover_appearance = |bg, tc: Option<Color>| button::Appearance {
+            background: Some(Background::Color(Color { a: 0.25, ..bg })),
+            text_color: tc.unwrap_or(bg),
+            ..active
+        };
+
+        match style {
+            Button::Primary => hover_appearance(p.bright.primary, None),
+            Button::Unavailable => hover_appearance(p.bright.error, None),
+            Button::Refresh => hover_appearance(p.bright.primary, None),
+            Button::SelfUpdate => hover_appearance(p.bright.primary, None),
+            Button::UninstallPackage => hover_appearance(p.bright.error, None),
+            Button::RestorePackage => hover_appearance(p.bright.secondary, None),
+            Button::NormalPackage => hover_appearance(p.normal.primary, Some(p.bright.surface)),
+            Button::SelectedPackage => hover_appearance(p.normal.primary, None),
+        }
+    }
+
+    fn disabled(&self, style: Self::Style) -> button::Appearance {
+        let active = self.active(style);
+        let p = self.palette();
+
+        let disabled_appearance = |bg, tc: Option<Color>| button::Appearance {
+            background: Some(Background::Color(Color { a: 0.05, ..bg })),
+            text_color: Color {
+                a: 0.50,
+                ..tc.unwrap_or(bg)
             },
-            Self::Current(_) => button::Style { ..self.active() },
+            ..active
+        };
+
+        match style {
+            Button::RestorePackage => disabled_appearance(p.normal.primary, Some(p.bright.primary)),
+            Button::UninstallPackage => disabled_appearance(p.bright.error, None),
+            _ => button::Appearance { ..active },
         }
     }
-    fn pressed(&self) -> button::Style {
-        button::Style { ..self.active() }
-    }
-}
 
-pub struct Description(pub ColorPalette);
-impl container::StyleSheet for Description {
-    fn style(&self) -> container::Style {
-        container::Style {
-            background: Some(Background::Color(self.0.base.foreground)),
-            text_color: Some(self.0.bright.surface),
-            border_radius: 5.0,
-            border_width: 0.0,
-            border_color: self.0.base.background,
+    fn pressed(&self, style: Self::Style) -> button::Appearance {
+        button::Appearance {
+            ..self.active(style)
         }
     }
 }
 
-pub struct DescriptionScrollable(pub ColorPalette);
-impl scrollable::StyleSheet for DescriptionScrollable {
-    fn active(&self) -> scrollable::Scrollbar {
-        scrollable::Scrollbar {
-            background: Some(Background::Color(self.0.base.foreground)),
+#[derive(Default, Debug, Clone, Copy)]
+pub enum Scrollable {
+    #[default]
+    Description,
+    Packages,
+}
+
+impl scrollable::StyleSheet for Theme {
+    type Style = Scrollable;
+
+    fn active(&self, style: Self::Style) -> scrollable::Scrollbar {
+        let from_appearance = |c: Color| scrollable::Scrollbar {
+            background: Some(Background::Color(c)),
             border_radius: 5.0,
             border_width: 0.0,
             border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: self.0.base.foreground,
+                color: self.palette().base.foreground,
                 border_radius: 0.0,
                 border_width: 0.0,
                 border_color: Color::TRANSPARENT,
             },
+        };
+
+        match style {
+            Scrollable::Description => from_appearance(self.palette().base.foreground),
+            Scrollable::Packages => from_appearance(self.palette().base.background),
         }
     }
 
-    fn hovered(&self) -> scrollable::Scrollbar {
-        let active = self.active();
-
+    fn hovered(&self, style: Self::Style) -> scrollable::Scrollbar {
         scrollable::Scrollbar {
-            scroller: scrollable::Scroller { ..active.scroller },
-            ..active
-        }
-    }
-
-    fn dragging(&self) -> scrollable::Scrollbar {
-        let hovered = self.hovered();
-        scrollable::Scrollbar {
-            scroller: scrollable::Scroller { ..hovered.scroller },
-            ..hovered
-        }
-    }
-}
-
-pub struct Scrollable(pub ColorPalette);
-impl scrollable::StyleSheet for Scrollable {
-    fn active(&self) -> scrollable::Scrollbar {
-        scrollable::Scrollbar {
-            background: Some(Background::Color(self.0.base.background)),
-            border_radius: 0.0,
-            border_width: 0.0,
-            border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: self.0.base.foreground,
-                border_radius: 2.0,
-                border_width: 0.0,
-                border_color: Color::TRANSPARENT,
+                ..self.active(style).scroller
             },
+            ..self.active(style)
         }
     }
 
-    fn hovered(&self) -> scrollable::Scrollbar {
-        let active = self.active();
-
-        scrollable::Scrollbar {
-            scroller: scrollable::Scroller { ..active.scroller },
-            ..active
-        }
-    }
-
-    fn dragging(&self) -> scrollable::Scrollbar {
-        let hovered = self.hovered();
+    fn dragging(&self, style: Self::Style) -> scrollable::Scrollbar {
+        let hovered = self.hovered(style);
         scrollable::Scrollbar {
             scroller: scrollable::Scroller { ..hovered.scroller },
             ..hovered
@@ -340,180 +211,250 @@ impl scrollable::StyleSheet for Scrollable {
     }
 }
 
-pub enum SelectionCheckBox {
-    Enabled(ColorPalette),
-    Disabled(ColorPalette),
+#[derive(Default, Debug, Clone, Copy)]
+pub enum CheckBox {
+    #[default]
+    PackageEnabled,
+    PackageDisabled,
+    SettingsEnabled,
+    SettingsDisabled,
 }
 
-impl checkbox::StyleSheet for SelectionCheckBox {
-    fn active(&self, _is_checked: bool) -> checkbox::Style {
-        match self {
-            Self::Enabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.background),
-                checkmark_color: palette.bright.primary,
+impl checkbox::StyleSheet for Theme {
+    type Style = CheckBox;
+
+    fn active(&self, style: Self::Style, _is_checked: bool) -> checkbox::Appearance {
+        match style {
+            CheckBox::PackageEnabled => checkbox::Appearance {
+                background: Background::Color(self.palette().base.background),
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: palette.base.background,
-                text_color: Some(palette.bright.surface),
+                border_color: self.palette().base.background,
+                text_color: Some(self.palette().bright.surface),
             },
-            Self::Disabled(palette) => checkbox::Style {
+            CheckBox::PackageDisabled => checkbox::Appearance {
                 background: Background::Color(Color {
                     a: 0.55,
-                    ..palette.base.background
+                    ..self.palette().base.background
                 }),
-                checkmark_color: palette.bright.primary,
-                border_radius: 5.0,
-                border_width: 0.0,
-                border_color: palette.normal.primary,
-                text_color: Some(palette.normal.primary),
-            },
-        }
-    }
-
-    fn hovered(&self, is_checked: bool) -> checkbox::Style {
-        match self {
-            Self::Enabled(palette) => checkbox::Style {
-                background: Background::Color(Color {
-                    a: 0.5,
-                    ..palette.bright.primary
-                }),
-                checkmark_color: palette.bright.primary,
-                border_radius: 5.0,
-                border_width: 2.0,
-                border_color: Color {
-                    a: 0.5,
-                    ..palette.bright.primary
-                },
-                text_color: Some(palette.bright.surface),
-            },
-
-            Self::Disabled(_) => checkbox::Style {
-                ..self.active(is_checked)
-            },
-        }
-    }
-}
-
-pub enum SettingsCheckBox {
-    Enabled(ColorPalette),
-    Disabled(ColorPalette),
-}
-
-impl checkbox::StyleSheet for SettingsCheckBox {
-    fn active(&self, _is_checked: bool) -> checkbox::Style {
-        match self {
-            Self::Enabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.background),
-                checkmark_color: palette.bright.primary,
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: palette.bright.primary,
-                text_color: Some(palette.bright.surface),
+                border_color: self.palette().normal.primary,
+                text_color: Some(self.palette().normal.primary),
             },
-            Self::Disabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.foreground),
-                checkmark_color: palette.bright.primary,
+            CheckBox::SettingsEnabled => checkbox::Appearance {
+                background: Background::Color(self.palette().base.background),
+                checkmark_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
-                border_color: palette.normal.primary,
-                text_color: Some(palette.normal.primary),
+                border_color: self.palette().bright.primary,
+                text_color: Some(self.palette().bright.surface),
+            },
+            CheckBox::SettingsDisabled => checkbox::Appearance {
+                background: Background::Color(self.palette().base.foreground),
+                checkmark_color: self.palette().bright.primary,
+                border_radius: 5.0,
+                border_width: 1.0,
+                border_color: self.palette().normal.primary,
+                text_color: Some(self.palette().bright.surface),
             },
         }
     }
-    fn hovered(&self, is_checked: bool) -> checkbox::Style {
-        match self {
-            Self::Enabled(palette) => checkbox::Style {
-                background: Background::Color(palette.base.foreground),
-                checkmark_color: palette.bright.primary,
-                border_radius: 5.0,
-                border_width: 2.0,
-                border_color: palette.bright.primary,
-                text_color: Some(palette.bright.surface),
-            },
-            Self::Disabled(_) => checkbox::Style {
-                ..self.active(is_checked)
-            },
+
+    fn hovered(&self, style: Self::Style, is_checked: bool) -> checkbox::Appearance {
+        let from_appearance = || checkbox::Appearance {
+            background: Background::Color(self.palette().base.foreground),
+            checkmark_color: self.palette().bright.primary,
+            border_radius: 5.0,
+            border_width: 2.0,
+            border_color: self.palette().bright.primary,
+            text_color: Some(self.palette().bright.surface),
+        };
+
+        match style {
+            CheckBox::PackageEnabled => from_appearance(),
+            CheckBox::SettingsEnabled => from_appearance(),
+            CheckBox::PackageDisabled => self.active(style, is_checked),
+            CheckBox::SettingsDisabled => self.active(style, is_checked),
         }
     }
 }
 
-pub struct SearchInput(pub ColorPalette);
-impl text_input::StyleSheet for SearchInput {
-    fn active(&self) -> text_input::Style {
-        text_input::Style {
-            background: Background::Color(self.0.base.foreground),
+#[derive(Default, Debug, Clone, Copy)]
+pub enum TextInput {
+    #[default]
+    Default,
+}
+
+impl text_input::StyleSheet for Theme {
+    type Style = TextInput;
+
+    fn active(&self, _style: Self::Style) -> text_input::Appearance {
+        text_input::Appearance {
+            background: Background::Color(self.palette().base.foreground),
             border_radius: 5.0,
             border_width: 0.0,
-            border_color: self.0.base.foreground,
+            border_color: self.palette().base.foreground,
         }
     }
 
-    fn focused(&self) -> text_input::Style {
-        text_input::Style {
-            background: Background::Color(self.0.base.foreground),
+    fn focused(&self, _style: Self::Style) -> text_input::Appearance {
+        text_input::Appearance {
+            background: Background::Color(self.palette().base.foreground),
             border_radius: 2.0,
             border_width: 1.0,
             border_color: Color {
                 a: 0.5,
-                ..self.0.normal.primary
+                ..self.palette().normal.primary
             },
         }
     }
 
-    fn placeholder_color(&self) -> Color {
-        self.0.normal.surface
+    fn placeholder_color(&self, _style: Self::Style) -> Color {
+        self.palette().normal.surface
     }
 
-    fn value_color(&self) -> Color {
-        self.0.bright.primary
+    fn value_color(&self, _style: Self::Style) -> Color {
+        self.palette().bright.primary
     }
 
-    fn selection_color(&self) -> Color {
-        self.0.bright.secondary
+    fn selection_color(&self, _style: Self::Style) -> Color {
+        self.palette().normal.primary
     }
 
     /// Produces the style of an hovered text input.
-    fn hovered(&self) -> text_input::Style {
-        self.focused()
+    fn hovered(&self, style: Self::Style) -> text_input::Appearance {
+        self.focused(style)
     }
 }
 
-pub struct PickList(pub ColorPalette);
-impl pick_list::StyleSheet for PickList {
-    fn menu(&self) -> pick_list::Menu {
-        pick_list::Menu {
-            text_color: self.0.bright.surface,
-            background: Background::Color(self.0.base.foreground),
+#[derive(Default, Debug, Clone, Copy)]
+pub enum PickList {
+    #[default]
+    Default,
+}
+
+impl menu::StyleSheet for Theme {
+    type Style = ();
+
+    fn appearance(&self, _style: Self::Style) -> menu::Appearance {
+        let p = self.palette();
+
+        menu::Appearance {
+            text_color: p.bright.surface,
+            background: p.base.background.into(),
             border_width: 1.0,
-            border_color: self.0.base.background,
-            selected_background: Background::Color(Color {
-                a: 0.15,
-                ..self.0.normal.primary
-            }),
-            selected_text_color: self.0.bright.primary,
+            border_radius: 2.0,
+            border_color: p.base.background,
+            selected_text_color: p.bright.surface,
+            selected_background: p.normal.primary.into(),
         }
     }
+}
 
-    fn active(&self) -> pick_list::Style {
-        pick_list::Style {
-            text_color: self.0.bright.surface,
-            background: self.0.base.background.into(),
+impl pick_list::StyleSheet for Theme {
+    type Style = ();
+
+    fn active(&self, _style: ()) -> pick_list::Appearance {
+        pick_list::Appearance {
+            text_color: self.palette().bright.surface,
+            background: self.palette().base.background.into(),
             border_width: 1.0,
             border_color: Color {
                 a: 0.5,
-                ..self.0.normal.primary
+                ..self.palette().normal.primary
             },
             border_radius: 2.0,
             icon_size: 0.5,
-            placeholder_color: self.0.bright.surface,
+            placeholder_color: self.palette().bright.surface,
         }
     }
 
-    fn hovered(&self) -> pick_list::Style {
-        let active = self.active();
-        pick_list::Style {
-            text_color: self.0.bright.primary,
+    fn hovered(&self, style: ()) -> pick_list::Appearance {
+        let active = self.active(style);
+        pick_list::Appearance {
+            border_color: self.palette().normal.primary,
             ..active
+        }
+    }
+}
+
+#[derive(Default, Clone, Copy)]
+pub enum Text {
+    #[default]
+    Default,
+    Danger,
+    Commentary,
+    Color(Color),
+}
+
+impl From<Color> for Text {
+    fn from(color: Color) -> Self {
+        Text::Color(color)
+    }
+}
+
+impl text::StyleSheet for Theme {
+    type Style = Text;
+
+    fn appearance(&self, style: Self::Style) -> text::Appearance {
+        match style {
+            Text::Default => Default::default(),
+            Text::Danger => text::Appearance {
+                color: Some(self.palette().bright.error),
+            },
+            Text::Commentary => text::Appearance {
+                color: Some(self.palette().normal.surface),
+            },
+            Text::Color(c) => text::Appearance { color: Some(c) },
+        }
+    }
+}
+
+impl radio::StyleSheet for Theme {
+    type Style = ();
+
+    fn active(&self, _style: Self::Style, _is_selected: bool) -> radio::Appearance {
+        radio::Appearance {
+            background: Color::TRANSPARENT.into(),
+            dot_color: self.palette().bright.primary,
+            border_width: 1.0,
+            border_color: self.palette().bright.primary,
+            text_color: None,
+        }
+    }
+
+    fn hovered(&self, style: Self::Style, _is_selected: bool) -> radio::Appearance {
+        let active = self.active(style, true);
+
+        radio::Appearance {
+            dot_color: self.palette().bright.primary,
+            border_color: self.palette().bright.primary,
+            border_width: 2.0,
+            ..active
+        }
+    }
+}
+
+#[derive(Default, Clone, Copy)]
+pub enum Rule {
+    #[default]
+    Default,
+}
+
+impl rule::StyleSheet for Theme {
+    type Style = Rule;
+
+    fn style(&self, style: Self::Style) -> rule::Appearance {
+        match style {
+            Rule::Default => rule::Appearance {
+                color: self.palette().bright.surface,
+                width: 2,
+                radius: 2.0,
+                fill_mode: rule::FillMode::Full,
+            },
         }
     }
 }
