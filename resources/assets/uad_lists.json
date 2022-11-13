@@ -20,7 +20,7 @@
   {
     "id": "com.sonyericsson.android.omacp",
     "list": "Oem",
-    "description": "omacp = OMA Client Provisioning. It is a protocol specified by the Open Mobile Alliance (OMA).\nIt is used by carrier to send \"configuration SMS\" which can setup network settings (such as APN).\nIn my case, it was automatic and I never needed configuration messages. I'm pretty sure that in France this package is useless.\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\nThese special \"confirguration SMS\" can be abused : \nhttps://www.zdnet.fr/actualites/les-smartphones-samsung-huawei-lg-et-sony-vulnerables-a-des-attaques-par-provisioning-39890045.htm\nhttps://www.csoonline.com/article/3435729/sms-based-provisioning-messages-enable-advanced-phishing-on-android-phones.html\n",
+    "description": "omacp = OMA Client Provisioning. It is a protocol specified by the Open Mobile Alliance (OMA).\nIt is used by carrier to send \"configuration SMS\" which can setup network settings (such as APN).\nIn my case, it was automatic and I never needed configuration messages. I'm pretty sure that in France this package is useless.\nMaybe it's useful if carriers change their APN... but you still can change it manually, it's not difficult.\nThese special \"configuration SMS\" can be abused : \nhttps://www.zdnet.fr/actualites/les-smartphones-samsung-huawei-lg-et-sony-vulnerables-a-des-attaques-par-provisioning-39890045.htm\nhttps://www.csoonline.com/article/3435729/sms-based-provisioning-messages-enable-advanced-phishing-on-android-phones.html\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -488,7 +488,7 @@
   {
     "id": "com.sonymobile.music.youtubekaraokeplugin",
     "list": "Oem",
-    "description": "Youtube karaoke plugin for sony music app\n",
+    "description": "YouTube karaoke plugin for sony music app\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -497,7 +497,7 @@
   {
     "id": "com.sonymobile.music.youtubeplugin",
     "list": "Oem",
-    "description": "Youtube plugin for sony music app\n",
+    "description": "YouTube plugin for sony music app\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -7859,7 +7859,7 @@
   {
     "id": "com.oneplus.factorymode",
     "list": "Oem",
-    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to acess the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK preinstalled.\nFor now, this only works in ADB, which requires local access to the device.",
+    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to acess the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK pre-installed.\nFor now, this only works in ADB, which requires local access to the device.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -8039,7 +8039,7 @@
   {
     "id": "net.oneplus.push",
     "list": "Oem",
-    "description": "Push\nOnePlus push notifications.\nOnly used by OnePlus' preinstalled apps. Pushes \"surveys and other junk\" according a user.\nhttps://forums.oneplus.com/threads/psa-non-root-root-stop-oneplus-push-notifications.580058/\nOnePlus can remotely send push notifications:\nhttps://www.androidpolice.com/2019/07/01/oneplus-accidentally-pushed-a-cryptic-notification-to-all-7-pro-users/",
+    "description": "Push\nOnePlus push notifications.\nOnly used by OnePlus' pre-installed apps. Pushes \"surveys and other junk\" according a user.\nhttps://forums.oneplus.com/threads/psa-non-root-root-stop-oneplus-push-notifications.580058/\nOnePlus can remotely send push notifications:\nhttps://www.androidpolice.com/2019/07/01/oneplus-accidentally-pushed-a-cryptic-notification-to-all-7-pro-users/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14096,7 +14096,7 @@
   {
     "id": "com.ebay.carrier",
     "list": "Misc",
-    "description": "Kind of weird ebay apps preinstalled by carriers.\n",
+    "description": "Kind of weird ebay apps pre-installed by carriers.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14267,7 +14267,7 @@
   {
     "id": "com.king.candycrushsaga",
     "list": "Misc",
-    "description": "Candy Crush Saga (https://play.google.com/store/apps/details?id=com.king.candycrushsaga)\nI don't understand why this game is so popular (I guess the fact it is preinstalled in a lot of phone helps)\n",
+    "description": "Candy Crush Saga (https://play.google.com/store/apps/details?id=com.king.candycrushsaga)\nI don't understand why this game is so popular (I guess the fact it is pre-installed in a lot of phone helps)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14798,7 +14798,7 @@
   {
     "id": "jp.co.omronsoft.openwnn",
     "list": "Misc",
-    "description": "Japanese keyboard/IME (Don't know why it's preinstalled on US/european devices)\nNote : IME = input method editor \n",
+    "description": "Japanese keyboard/IME (don't know why it's pre-installed on US/european devices)\nNote : IME = input method editor \n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14870,7 +14870,7 @@
   {
     "id": "zpub.res",
     "list": "Misc",
-    "description": "3-party app preinstalled in ZTE phone.\n",
+    "description": "third-party app pre-installed on ZTE phones.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -14915,7 +14915,7 @@
   {
     "id": "co.sitic.pp",
     "list": "Misc",
-    "description": "Designed to remotely lock the phone (by sending a simple SMS) in case you don't pay your bill \nhttps://www.reddit.com/r/Android/comments/fde3l6/3rd_party_telemetry_found_in_nokia_smartphones/fjh4zbx/?context=3\nThis app was preinstalled on phone not served by that carrier (América Móvil) from South America. \nNormally you should not have this app anymore because it was removed by Nokia during an Android 10 update.\n",
+    "description": "Designed to remotely lock the phone (by sending a simple SMS) in case you don't pay your bill \nhttps://www.reddit.com/r/Android/comments/fde3l6/3rd_party_telemetry_found_in_nokia_smartphones/fjh4zbx/?context=3\nThis app was pre-installed on phone not served by that carrier (América Móvil) from South America. \nNormally you should not have this app anymore because it was removed by Nokia during an Android 10 update.\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -15077,7 +15077,7 @@
   {
     "id": "com.mediatek.wfo.impl",
     "list": "Misc",
-    "description": "According to olorin (https://www.olorin.me/2019/09/08/debloating-the-umidigi-f1-play/) it's MediaTek’s default fingerprint app (and he removed it).\nCan someone confirm what this package does?\nRemember that any preinstalled apps you don't actually need just increase the surface attack.\nVulnerability found in 2019: https://nvd.nist.gov/vuln/detail/CVE-2019-15368\nAny app co-located on the device could modify a system property through an exported interface without proper authorization.",
+    "description": "According to olorin (https://www.olorin.me/2019/09/08/debloating-the-umidigi-f1-play/) it's MediaTek’s default fingerprint app (and he removed it).\nCan someone confirm what this package does?\nRemember that any pre-installed apps you don't actually need just increase the surface attack.\nVulnerability found in 2019: https://nvd.nist.gov/vuln/detail/CVE-2019-15368\nAny app co-located on the device could modify a system property through an exported interface without proper authorization.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17192,7 +17192,7 @@
   {
     "id": "com.google.android.apps.youtube.creator",
     "list": "Google",
-    "description": "Youtube Studio (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.creator)\n",
+    "description": "YouTube Studio (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.creator)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17201,7 +17201,7 @@
   {
     "id": "com.google.android.apps.youtube.gaming",
     "list": "Google",
-    "description": "Youtube Gaming -(discontinued in March 2019, features integrated in main youtube app)\n",
+    "description": "YouTube Gaming -(discontinued in March 2019, features integrated in main youtube app)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17210,7 +17210,7 @@
   {
     "id": "com.google.android.apps.youtube.kids",
     "list": "Google",
-    "description": "Youtube Kid (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids)\n",
+    "description": "YouTube Kid (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17219,7 +17219,7 @@
   {
     "id": "com.google.android.apps.youtube.music",
     "list": "Google",
-    "description": "Youtube Music (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)\n",
+    "description": "YouTube Music (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -17228,7 +17228,7 @@
   {
     "id": "com.google.android.apps.youtube.vr",
     "list": "Google",
-    "description": "Youtube VR (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.vr)\n",
+    "description": "YouTube VR (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.vr)\n",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19198,7 +19198,7 @@
   {
     "id": "com.google.android.apps.youtube.mango",
     "list": "Google",
-    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango)\nLite version of the Youtube app. Shutdown by Google in august 2022.\nhttps://support.google.com/youtube/thread/162222567/youtube-go-is-going-away-in-august-of-this-year",
+    "description": "YouTube Go (https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.mango)\nLite version of the YouTube app. Shutdown by Google in august 2022.\nhttps://support.google.com/youtube/thread/162222567/youtube-go-is-going-away-in-august-of-this-year",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -19639,7 +19639,7 @@
   {
     "id": "com.tblenovo.center",
     "list": "Oem",
-    "description": "Useless dashboard related to the User Experience Program (com.lenovo.ue.device). Has 25 permission (including ones you probably don't want to give to this kind of sketchy app\n\nPithus analysis: https://beta.pithus.org/report/dcb4acac003896077eaaeb8c7dc770d3171891784d98f7127f8495a3dec9954d",
+    "description": "Useless dashboard related to the User Experience Program (com.lenovo.ue.device). Has 25 permissions (including ones you probably don't want to give to this kind of sketchy app\n\nPithus analysis: https://beta.pithus.org/report/dcb4acac003896077eaaeb8c7dc770d3171891784d98f7127f8495a3dec9954d",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
@@ -20719,7 +20719,7 @@
   {
     "id": "com.aura.oobe.kbdi",
     "list": "Oem",
-    "description": "Appcloud\nPersistent notification until you click on it and agree to install games. Sort of game cloud preinstalled in some Xiaomi phones\nSafe to remove.",
+    "description": "Appcloud\nPersistent notification until you click on it and agree to install games. Sort of game cloud pre-installed in some Xiaomi phones\nSafe to remove.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
