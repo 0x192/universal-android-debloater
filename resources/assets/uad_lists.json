@@ -19252,7 +19252,7 @@
   {
     "id": "com.microsoft.office.onenote",
     "list": "Misc",
-    "description": "OneNote",
+    "description": "OneNote (https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)\nMicrosoft and privacy you know... This app has a lot of permissions. For example it has access to phone state, including the phone number of the device, current cellular network information, the status of any ongoing calls...",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
