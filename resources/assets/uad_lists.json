@@ -19640,7 +19640,16 @@
   {
     "id": "com.tblenovo.center",
     "list": "Oem",
-    "description": "Useless dashboard.",
+    "description": "Useless dashboard related to the User Experience Program (com.lenovo.ue.device). Has 25 permission (including ones you probably don't want to give to this kind of sketchy app\n\nPithus analysis: https://beta.pithus.org/report/dcb4acac003896077eaaeb8c7dc770d3171891784d98f7127f8495a3dec9954d",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.lenovo.ue.device",
+    "list": "Oem",
+    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
