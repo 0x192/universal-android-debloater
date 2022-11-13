@@ -13529,11 +13529,11 @@
   {
     "id": "com.samsung.android.privateshare",
     "list": "Oem",
-    "description": "Blockchain-powered file sharing system for Samsung phones",
+    "description": "Blockchain-powered file sharing system for Samsung phones.\nWhy blockchain? Because it's a nice buzzword! The privacy policy of this Samsung service is really bad: https://libreddit.spike.codes/r/privacy/comments/rqbb9b/samsung_private_share_is_not_so_private/",
     "dependencies": null,
     "neededBy": null,
     "labels": null,
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.qualcomm.atfwd",
