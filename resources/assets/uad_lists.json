@@ -17444,7 +17444,7 @@
   {
     "id": "com.google.android.tts",
     "list": "Google",
-    "description": "Speech Services by Google (https://play.google.com/store/apps/details?id=com.google.android.tts)\nDefault Text To Speech (TTS) engine on most of Android devices. It enables apps to convert text into voice.\n\nPithus analysis: https://beta.pithus.org/report/08f97758fbfae1e17c4a8e5ee1a1e6d2726ce6b0b4931d5452f2376d60f1b4fb\n\nNote: many apps like navigation and health/sport apps rely on a TTS engine to provide speech services. Open-source TTS engines available on Android exists but, as of the end of 2022, there is only RHVoice (https://f-droid.org/en/packages/com.github.olga_yakovleva.rhvoice.android/) and it doesn't support a lot of languages. Mimic3 (https://mycroft.ai/mimic-3/) is probably the future of IoT open-source TTS engine but there is no Android support yet"
+    "description": "Speech Services by Google (https://play.google.com/store/apps/details?id=com.google.android.tts)\nDefault Text To Speech (TTS) engine on most of Android devices. It enables apps to convert text into voice.\n\nPithus analysis: https://beta.pithus.org/report/08f97758fbfae1e17c4a8e5ee1a1e6d2726ce6b0b4931d5452f2376d60f1b4fb\n\nNote: many apps like navigation and health/sport apps rely on a TTS engine to provide speech services. Open-source TTS engines available on Android exists but, as of the end of 2022, there is only RHVoice (https://f-droid.org/en/packages/com.github.olga_yakovleva.rhvoice.android/) and it doesn't support a lot of languages. Mimic3 (https://mycroft.ai/mimic-3/) is probably the future of IoT open-source TTS engine but there is no Android support yet",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
