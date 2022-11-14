@@ -4889,7 +4889,7 @@
   {
     "id": "com.sec.android.app.DataCreate",
     "list": "Oem",
-    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*# (Status of data usage) \n- *#273283*255*3282*# (Data create menu) \n- *#*#273283*255*663282*#*#* (Backup all media files)\n", 
+    "description": "Automation Test\nAnother hidden test app. A lot of mention of samsung note (memo). Has access to basically everything on the phone\nRelated to these hidden menus (accessible by typing these codes in the samsung dialer) :\n- *#3282*727336*# (Status of data usage) \n- *#273283*255*3282*# (Data create menu) \n- *#*#273283*255*663282*#*#* (Backup all media files)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17444,7 +17444,7 @@
   {
     "id": "com.google.android.tts",
     "list": "Google",
-    "description": "Speech Services by Google (https://play.google.com/store/apps/details?id=com.google.android.tts)\nLets apps read text on your screen aloud, in many languages.",
+    "description": "Speech Services by Google (https://play.google.com/store/apps/details?id=com.google.android.tts)\nLets apps read text on your screen aloud, in many languages. Removing can stop background voice services in applications like Strava's Audio Cues",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
