@@ -5,10 +5,8 @@ use crate::core::theme::Theme;
 use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
 use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
-use crate::gui::ICONS;
 use chrono::offset::Utc;
 use chrono::DateTime;
-use iced::{alignment, Length, Text};
 use std::collections::HashMap;
 use std::fs;
 use std::io::{self, prelude::*, BufReader};
@@ -17,7 +15,7 @@ use std::process::Command;
 
 pub fn fetch_packages(
     uad_lists: &HashMap<String, Package>,
-    user_id: &Option<&User>,
+    user_id: Option<&User>,
 ) -> Vec<PackageRow> {
     let all_system_packages = list_all_system_packages(user_id); // installed and uninstalled packages
     let enabled_system_packages = hashset_system_packages(PackageState::Enabled, user_id);
@@ -122,20 +120,12 @@ pub fn import_selection(packages: &mut [PackageRow], selection: &mut Selection) 
     Ok(())
 }
 
-pub fn icon(unicode: char) -> Text {
-    Text::new(&unicode.to_string())
-        .font(ICONS)
-        .width(Length::Units(17))
-        .horizontal_alignment(alignment::Horizontal::Center)
-        .size(17)
-}
-
 pub fn string_to_theme(theme: String) -> Theme {
     match theme.as_str() {
-        "Dark" => Theme::dark(),
-        "Light" => Theme::light(),
-        "Lupin" => Theme::lupin(),
-        _ => Theme::lupin(),
+        "Dark" => Theme::Dark,
+        "Light" => Theme::Light,
+        "Lupin" => Theme::Lupin,
+        _ => Theme::Lupin,
     }
 }
 
@@ -166,24 +156,6 @@ pub fn open_url(dir: PathBuf) {
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
-    if !users.is_empty() {
-        users
-            .iter()
-            .flat_map(|u| {
-                commands
-                    .iter()
-                    .map(|c| format!("{} --user {} {}", c, u.id, package))
-            })
-            .collect()
-    } else {
-        commands
-            .iter()
-            .map(|c| format!("{} {}", c, package))
-            .collect()
-    }
-}
-
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
     match fs::metadata(file) {
         Ok(metadata) => match metadata.modified() {
@@ -208,7 +180,7 @@ pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
     }
 }
 
-pub async fn perform_commands(action: String, i: usize, label: String) -> Result<usize, ()> {
+pub async fn perform_adb_commands(action: String, i: usize, label: String) -> Result<usize, ()> {
     match adb_shell_command(true, &action) {
         Ok(o) => {
             // On old devices, adb commands can return the '0' exit code even if there
