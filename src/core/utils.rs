@@ -28,14 +28,14 @@ pub fn fetch_packages(
 
     for p_name in all_system_packages.lines() {
         state = PackageState::Uninstalled;
-        description = "[No description]";
+        description = "[No description] : CONTRIBUTION WELCOMED";
         uad_list = UadList::Unlisted;
         removal = Removal::Unlisted;
 
         if uad_lists.contains_key(p_name) {
-            description = match &uad_lists.get(p_name).unwrap().description {
-                Some(descr) => descr,
-                None => "[No description]",
+            description = &uad_lists.get(p_name).unwrap().description;
+            if description.is_empty() {
+                description = "[No description] : CONTRIBUTION WELCOMED"
             };
             uad_list = uad_lists.get(p_name).unwrap().list;
             removal = uad_lists.get(p_name).unwrap().removal;
