@@ -12,10 +12,10 @@ use std::path::{Path, PathBuf};
 pub struct Package {
     id: String,
     pub list: UadList,
-    pub description: Option<String>,
-    dependencies: Option<Vec<String>>,
-    needed_by: Option<Vec<String>>,
-    labels: Option<Vec<String>>,
+    pub description: String,
+    dependencies: Vec<String>,
+    needed_by: Vec<String>,
+    labels: Vec<String>,
     pub removal: Removal,
 }
 
