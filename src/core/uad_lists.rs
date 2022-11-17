@@ -1,7 +1,7 @@
 use crate::core::utils::{format_diff_time_from_now, last_modified_date};
 use crate::CACHE_DIR;
 use retry::{delay::Fixed, retry, OperationResult};
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use serde_json;
 use std::collections::HashMap;
 use std::fs;
@@ -94,7 +94,7 @@ impl std::fmt::Display for UadList {
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum PackageState {
     All,
     Enabled,
