@@ -130,7 +130,7 @@ impl Settings {
                 Message::DeviceBackedUp,
             ),
             Message::DeviceBackedUp(_) => {
-                error!("[BACKUP] Backup done");
+                info!("[BACKUP] Backup successfully created");
                 self.device.backup.backups =
                     list_available_backups(&BACKUP_DIR.join(phone.adb_id.clone()));
                 self.device.backup.selected = self.device.backup.backups.first().cloned();
