@@ -324,10 +324,16 @@ impl Settings {
             }
         };
 
-        let locate_backup_btn = button("Open backup directory")
-            .on_press(Message::UrlPressed(BACKUP_DIR.join(phone.adb_id.clone())))
-            .padding(5)
-            .style(style::Button::Primary);
+        let locate_backup_btn = if self.device.backup.backups.is_empty() {
+            button("Open backup directory")
+                .padding(5)
+                .style(style::Button::Primary)
+        } else {
+            button("Open backup directory")
+                .on_press(Message::UrlPressed(BACKUP_DIR.join(phone.adb_id.clone())))
+                .padding(5)
+                .style(style::Button::Primary)
+        };
 
         let backup_row = row![
             backup_btn,
