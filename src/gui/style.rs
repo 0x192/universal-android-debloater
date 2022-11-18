@@ -14,7 +14,7 @@ pub enum Application {
 impl application::StyleSheet for Theme {
     type Style = Application;
 
-    fn appearance(&self, _style: Self::Style) -> application::Appearance {
+    fn appearance(&self, _style: &Self::Style) -> application::Appearance {
         application::Appearance {
             background_color: self.palette().base.background,
             text_color: self.palette().bright.surface,
@@ -33,7 +33,7 @@ pub enum Container {
 impl container::StyleSheet for Theme {
     type Style = Container;
 
-    fn appearance(&self, style: Self::Style) -> container::Appearance {
+    fn appearance(&self, style: &Self::Style) -> container::Appearance {
         match style {
             Container::Invisible => container::Appearance::default(),
             Container::Frame => container::Appearance {
@@ -69,7 +69,7 @@ pub enum Button {
 impl button::StyleSheet for Theme {
     type Style = Button;
 
-    fn active(&self, style: Self::Style) -> button::Appearance {
+    fn active(&self, style: &Self::Style) -> button::Appearance {
         let p = self.palette();
 
         let appearance = button::Appearance {
@@ -114,7 +114,7 @@ impl button::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: Self::Style) -> button::Appearance {
+    fn hovered(&self, style: &Self::Style) -> button::Appearance {
         let active = self.active(style);
         let p = self.palette();
 
@@ -136,7 +136,7 @@ impl button::StyleSheet for Theme {
         }
     }
 
-    fn disabled(&self, style: Self::Style) -> button::Appearance {
+    fn disabled(&self, style: &Self::Style) -> button::Appearance {
         let active = self.active(style);
         let p = self.palette();
 
@@ -157,7 +157,7 @@ impl button::StyleSheet for Theme {
         }
     }
 
-    fn pressed(&self, style: Self::Style) -> button::Appearance {
+    fn pressed(&self, style: &Self::Style) -> button::Appearance {
         button::Appearance {
             ..self.active(style)
         }
@@ -174,7 +174,7 @@ pub enum Scrollable {
 impl scrollable::StyleSheet for Theme {
     type Style = Scrollable;
 
-    fn active(&self, style: Self::Style) -> scrollable::Scrollbar {
+    fn active(&self, style: &Self::Style) -> scrollable::Scrollbar {
         let from_appearance = |c: Color| scrollable::Scrollbar {
             background: Some(Background::Color(c)),
             border_radius: 5.0,
@@ -194,7 +194,7 @@ impl scrollable::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: Self::Style) -> scrollable::Scrollbar {
+    fn hovered(&self, style: &Self::Style) -> scrollable::Scrollbar {
         scrollable::Scrollbar {
             scroller: scrollable::Scroller {
                 ..self.active(style).scroller
@@ -203,7 +203,7 @@ impl scrollable::StyleSheet for Theme {
         }
     }
 
-    fn dragging(&self, style: Self::Style) -> scrollable::Scrollbar {
+    fn dragging(&self, style: &Self::Style) -> scrollable::Scrollbar {
         let hovered = self.hovered(style);
         scrollable::Scrollbar {
             scroller: scrollable::Scroller { ..hovered.scroller },
@@ -224,7 +224,7 @@ pub enum CheckBox {
 impl checkbox::StyleSheet for Theme {
     type Style = CheckBox;
 
-    fn active(&self, style: Self::Style, _is_checked: bool) -> checkbox::Appearance {
+    fn active(&self, style: &Self::Style, _is_checked: bool) -> checkbox::Appearance {
         match style {
             CheckBox::PackageEnabled => checkbox::Appearance {
                 background: Background::Color(self.palette().base.background),
@@ -264,7 +264,7 @@ impl checkbox::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: Self::Style, is_checked: bool) -> checkbox::Appearance {
+    fn hovered(&self, style: &Self::Style, is_checked: bool) -> checkbox::Appearance {
         let from_appearance = || checkbox::Appearance {
             background: Background::Color(self.palette().base.foreground),
             checkmark_color: self.palette().bright.primary,
@@ -292,7 +292,7 @@ pub enum TextInput {
 impl text_input::StyleSheet for Theme {
     type Style = TextInput;
 
-    fn active(&self, _style: Self::Style) -> text_input::Appearance {
+    fn active(&self, _style: &Self::Style) -> text_input::Appearance {
         text_input::Appearance {
             background: Background::Color(self.palette().base.foreground),
             border_radius: 5.0,
@@ -301,7 +301,7 @@ impl text_input::StyleSheet for Theme {
         }
     }
 
-    fn focused(&self, _style: Self::Style) -> text_input::Appearance {
+    fn focused(&self, _style: &Self::Style) -> text_input::Appearance {
         text_input::Appearance {
             background: Background::Color(self.palette().base.foreground),
             border_radius: 2.0,
@@ -313,20 +313,20 @@ impl text_input::StyleSheet for Theme {
         }
     }
 
-    fn placeholder_color(&self, _style: Self::Style) -> Color {
+    fn placeholder_color(&self, _style: &Self::Style) -> Color {
         self.palette().normal.surface
     }
 
-    fn value_color(&self, _style: Self::Style) -> Color {
+    fn value_color(&self, _style: &Self::Style) -> Color {
         self.palette().bright.primary
     }
 
-    fn selection_color(&self, _style: Self::Style) -> Color {
+    fn selection_color(&self, _style: &Self::Style) -> Color {
         self.palette().normal.primary
     }
 
     /// Produces the style of an hovered text input.
-    fn hovered(&self, style: Self::Style) -> text_input::Appearance {
+    fn hovered(&self, style: &Self::Style) -> text_input::Appearance {
         self.focused(style)
     }
 }
@@ -340,7 +340,7 @@ pub enum PickList {
 impl menu::StyleSheet for Theme {
     type Style = ();
 
-    fn appearance(&self, _style: Self::Style) -> menu::Appearance {
+    fn appearance(&self, _style: &Self::Style) -> menu::Appearance {
         let p = self.palette();
 
         menu::Appearance {
@@ -358,7 +358,7 @@ impl menu::StyleSheet for Theme {
 impl pick_list::StyleSheet for Theme {
     type Style = ();
 
-    fn active(&self, _style: ()) -> pick_list::Appearance {
+    fn active(&self, _style: &()) -> pick_list::Appearance {
         pick_list::Appearance {
             text_color: self.palette().bright.surface,
             background: self.palette().base.background.into(),
@@ -373,7 +373,7 @@ impl pick_list::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: ()) -> pick_list::Appearance {
+    fn hovered(&self, style: &()) -> pick_list::Appearance {
         let active = self.active(style);
         pick_list::Appearance {
             border_color: self.palette().normal.primary,
@@ -417,7 +417,7 @@ impl text::StyleSheet for Theme {
 impl radio::StyleSheet for Theme {
     type Style = ();
 
-    fn active(&self, _style: Self::Style, _is_selected: bool) -> radio::Appearance {
+    fn active(&self, _style: &Self::Style, _is_selected: bool) -> radio::Appearance {
         radio::Appearance {
             background: Color::TRANSPARENT.into(),
             dot_color: self.palette().bright.primary,
@@ -427,7 +427,7 @@ impl radio::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: Self::Style, _is_selected: bool) -> radio::Appearance {
+    fn hovered(&self, style: &Self::Style, _is_selected: bool) -> radio::Appearance {
         let active = self.active(style, true);
 
         radio::Appearance {
@@ -448,7 +448,7 @@ pub enum Rule {
 impl rule::StyleSheet for Theme {
     type Style = Rule;
 
-    fn style(&self, style: Self::Style) -> rule::Appearance {
+    fn appearance(&self, style: &Self::Style) -> rule::Appearance {
         match style {
             Rule::Default => rule::Appearance {
                 color: self.palette().bright.surface,
