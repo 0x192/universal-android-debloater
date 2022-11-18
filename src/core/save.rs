@@ -58,7 +58,8 @@ pub async fn backup_phone(
                 return Err(e.to_string());
             };
 
-            let backup_filename = format!("{}.json", chrono::Local::now().format("%Y-%m-%d-%H-%M"));
+            let backup_filename =
+                format!("{}.json", chrono::Local::now().format("%Y-%m-%d_%H-%M-%S"));
 
             match fs::write(backup_path.join(backup_filename), json) {
                 Ok(_) => Ok(()),
