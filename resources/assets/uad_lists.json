@@ -14295,9 +14295,9 @@
     "id": "com.micredit.in",
     "list": "Misc",
     "description": "Mi Credit. It is some type of app to give loan to people from India and China it seems: https://www.reddit.com/r/Xiaomi/comments/oo3gol/what_is_the_mi_credit_app_and_why_is_it_hidden/\n(https://play.google.com/store/apps/details?id=com.micredit.in.gp)\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
     "removal": "Recommended"
   },
   {
@@ -15132,9 +15132,9 @@
     "id": "cn.wps.xiaomi.abroad.lite",
     "list": "Oem",
     "description": "Mi Doc viewer\nDocuments (*.doc/docx, *.ppt/pptx, *.xls/xlsx, *.pdf, *.wps, and *.txt) viewer powered by WPS Office\nFYI: WPS is a Chinese closed-source software. It's as bad as Microsoft Office (privacy-wise)\nhttps://www.wps.com/privacy-policy\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
     "removal": "Recommended"
   },
   {
@@ -15483,9 +15483,9 @@
     "id": "com.miui.android.fashiongallery",
     "list": "Oem",
     "description": "Mi Wallpaper Carousel (https://play.google.com/store/apps/details?id=com.miui.android.fashiongallery)\nA lockscreen customization app. Displays a new photo every time you check your lockscreen.\n",
-    "dependencies": null,
-    "neededBy": null,
-    "labels": null,
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
     "removal": "Recommended"
   },
   {
