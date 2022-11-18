@@ -1,4 +1,5 @@
-use crate::core::sync::get_android_sdk;
+use crate::core::sync::{get_android_sdk, User};
+use crate::core::utils::DisplayablePath;
 use crate::gui::views::settings::Settings;
 use crate::CONFIG_DIR;
 use serde::{Deserialize, Serialize};
@@ -19,19 +20,31 @@ pub struct GeneralSettings {
     pub expert_mode: bool,
 }
 
+#[derive(Default, Debug, Clone)]
+pub struct BackupSettings {
+    pub backups: Vec<DisplayablePath>,
+    pub selected: Option<DisplayablePath>,
+    pub users: Vec<User>,
+    pub selected_user: Option<User>,
+    pub backup_state: String,
+}
+
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct DeviceSettings {
     pub device_id: String,
     pub disable_mode: bool,
     pub multi_user_mode: bool,
+    #[serde(skip)]
+    pub backup: BackupSettings,
 }
 
 impl Default for DeviceSettings {
     fn default() -> Self {
         Self {
-            device_id: "".to_string(),
+            device_id: String::new(),
             multi_user_mode: get_android_sdk() > 21,
             disable_mode: false,
+            backup: BackupSettings::default(),
         }
     }
 }

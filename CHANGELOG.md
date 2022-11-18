@@ -10,12 +10,18 @@ and `Removed`.
 
 ## [0.6] - Unreleased
 
+**WARNING: Settings specification has changed. Previous user settings will be erased**.
+
 ### Added
-- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] Device-specific persistent configuration. Some settings are now device-specific which means you can maintain different settings across several devices. 
-**Note: Settings specification has changed. Previous user settings will be erased**.
+- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] **Device-specific persistent configuration:** Some settings are now device-specific which means you can maintain different settings across several devices.
+
+- [[#447](https://github.com/0x192/universal-android-debloater/pull/447)] **Backup/Restore the state of a device:** Quick and easy way to save the state of all the system apps on a device and restore it.
 
 ### Changed
 - [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] All settings are now persistent.
+
+### Removed
+- The `Export current selection` button and the unintuitive auto import selection (see https://github.com/0x192/universal-android-debloater/issues/192) have been replaced by the new backup/restore system.
 
 ## [0.5.1] - 2022-07-03
 

@@ -1,8 +1,10 @@
 use crate::core::config::DeviceSettings;
 use crate::core::uad_lists::PackageState;
+use crate::gui::views::list::PackageInfo;
 use crate::gui::widgets::package_row::PackageRow;
 use regex::Regex;
 use retry::{delay::Fixed, retry, OperationResult};
+use serde::{Deserialize, Serialize};
 use static_init::dynamic;
 use std::collections::HashSet;
 use std::env;
@@ -89,6 +91,44 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
     }
 }
 
+#[derive(Debug, Clone)]
+pub enum CommandType {
+    PackageManager(PackageInfo),
+    Shell,
+}
+pub async fn perform_adb_commands(
+    action: String,
+    command_type: CommandType,
+) -> Result<CommandType, ()> {
+    let label = match command_type {
+        CommandType::PackageManager(ref p) => p.removal.to_string(),
+        CommandType::Shell => "Shell".to_string(),
+    };
+
+    match adb_shell_command(true, &action) {
+        Ok(o) => {
+            // On old devices, adb commands can return the '0' exit code even if there
+            // is an error. On Android 4.4, ADB doesn't check if the package exists.
+            // It does not return any error if you try to `pm block` a non-existent package.
+            // Some commands are even killed by ADB before finishing and UAD can't catch
+            // the output.
+            if ["Error", "Failure"].iter().any(|&e| o.contains(e)) {
+                error!("[{}] {} -> {}", label, action, o);
+                Err(())
+            } else {
+                info!("[{}] {} -> {}", label, action, o);
+                Ok(command_type)
+            }
+        }
+        Err(err) => {
+            if !err.contains("[not installed for") {
+                error!("[{}] {} -> {}", label, action, err);
+            }
+            Err(())
+        }
+    }
+}
+
 pub fn list_all_system_packages(user_id: Option<&User>) -> String {
     let action = match user_id {
         Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
@@ -121,6 +161,7 @@ pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> H
 }
 
 // Minimum information for processing adb commands
+#[derive(Debug, Deserialize, Serialize, Clone, PartialEq, Eq)]
 pub struct CorePackage {
     pub name: String,
     pub state: PackageState,
@@ -143,8 +184,51 @@ impl From<&PackageRow> for CorePackage {
     }
 }
 
+pub fn apply_pkg_state_commands(
+    package: &CorePackage,
+    wanted_state: &PackageState,
+    selected_user: &User,
+    phone: &Phone,
+) -> Vec<String> {
+    let commands = match wanted_state {
+        PackageState::Enabled => {
+            match package.state {
+                PackageState::Disabled => match phone.android_sdk {
+                    i if i >= 23 => vec!["pm enable"],
+                    _ => vec!["pm enable"],
+                },
+                PackageState::Uninstalled => match phone.android_sdk {
+                    i if i >= 23 => vec!["cmd package install-existing"],
+                    21 | 22 => vec!["pm unhide"],
+                    19 | 20 => vec!["pm unblock", "pm clear"],
+                    _ => vec![], // Impossible action already prevented by the GUI
+                },
+                _ => vec![],
+            }
+        }
+        PackageState::Disabled => match package.state {
+            PackageState::Uninstalled | PackageState::Enabled => match phone.android_sdk {
+                sdk if sdk >= 23 => vec!["pm disable-user", "am force-stop", "pm clear"],
+                _ => vec![],
+            },
+            _ => vec![],
+        },
+        PackageState::Uninstalled => match package.state {
+            PackageState::Enabled | PackageState::Disabled => match phone.android_sdk {
+                sdk if sdk >= 23 => vec!["pm uninstall"], // > Android Marshmallow (6.0)
+                21 | 22 => vec!["pm hide", "pm clear"],   // Android Lollipop (5.x)
+                19 | 20 => vec!["pm block", "pm clear"],  // Android KitKat (4.4/4.4W)
+                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the specific ADB commands need root
+            },
+            _ => vec![],
+        },
+        _ => vec![],
+    };
+    request_builder(commands, &package.name, &[*selected_user])
+}
+
 pub fn action_handler(
-    user: &User,
+    selected_user: &User,
     package: &CorePackage,
     phone: &Phone,
     settings: &DeviceSettings,
@@ -182,12 +266,12 @@ pub fn action_handler(
         PackageState::All => vec![], // This can't happen (like... never)
     };
 
-    if settings.multi_user_mode {
-        request_builder(commands, &package.name, &phone.user_list)
-    } else if phone.android_sdk < 21 {
+    if phone.android_sdk < 21 {
         request_builder(commands, &package.name, &[])
+    } else if settings.multi_user_mode {
+        request_builder(commands, &package.name, &phone.user_list)
     } else {
-        request_builder(commands, &package.name, &[*user])
+        request_builder(commands, &package.name, &[*selected_user])
     }
 }
 
