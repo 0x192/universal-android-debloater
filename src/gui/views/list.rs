@@ -13,7 +13,7 @@ use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::widget::{
     button, column, container, pick_list, row, scrollable, text, text_input, Space,
 };
-use iced::{Alignment, Command, Element, Length, Renderer};
+use iced::{alignment, Alignment, Command, Element, Length, Renderer};
 
 #[derive(Debug, Default, Clone)]
 pub struct Selection {
@@ -483,16 +483,41 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center);
 
-                let content = column![
-                    control_panel,
-                    packages_scrollable,
-                    description_panel,
-                    action_row,
-                ]
-                .width(Length::Fill)
-                .spacing(10)
-                .align_items(Alignment::Center);
+                let unavailable = container(
+                    column![
+                        text("ADB is not authorized to access this user!").size(22)
+                            .style(style::Text::Danger),
+                        text("The most likely reason is that it is the user of your work profile (also called Secure Folder on Samsung devices). There's really no solution, other than disabling your work profile completely in your device settings.")
+                            .style(style::Text::Commentary)
+                            .horizontal_alignment(alignment::Horizontal::Center),
+                    ]
+                    .spacing(6)
+                    .align_items(Alignment::Center)
+                )
+                .padding(10)
+                .center_x()
+                .style(style::Container::BorderedFrame);
 
+                let content = if !self.phone_packages[self.selected_user.unwrap().index].is_empty()
+                {
+                    column![
+                        control_panel,
+                        packages_scrollable,
+                        description_panel,
+                        action_row,
+                    ]
+                    .width(Length::Fill)
+                    .spacing(10)
+                    .align_items(Alignment::Center)
+                } else {
+                    column![
+                        control_panel,
+                        container(unavailable).height(Length::Fill).center_y(),
+                    ]
+                    .width(Length::Fill)
+                    .spacing(10)
+                    .align_items(Alignment::Center)
+                };
                 container(content).height(Length::Fill).padding(10).into()
             }
         }

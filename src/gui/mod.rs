@@ -14,7 +14,10 @@ use views::settings::{Message as SettingsMessage, Settings as SettingsView};
 use widgets::navigation_menu::nav_menu;
 
 use iced::widget::column;
-use iced::{window::Settings as Window, Application, Command, Element, Length, Renderer, Settings};
+use iced::{
+    window::Settings as Window, Alignment, Application, Command, Element, Length, Renderer,
+    Settings,
+};
 use std::{env, path::PathBuf};
 
 #[cfg(feature = "self-update")]
@@ -309,6 +312,7 @@ impl Application for UadGui {
 
         column![navigation_container, main_container]
             .width(Length::Fill)
+            .align_items(Alignment::Center)
             .into()
     }
 }
