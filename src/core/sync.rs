@@ -224,7 +224,10 @@ pub fn apply_pkg_state_commands(
         },
         _ => vec![],
     };
-    request_builder(commands, &package.name, &[*selected_user]).iter().map(|(_, command)| command.clone()).collect()
+    request_builder(commands, &package.name, &[*selected_user])
+        .iter()
+        .map(|(_, command)| command.clone())
+        .collect()
 }
 
 pub fn action_handler(
@@ -275,7 +278,11 @@ pub fn action_handler(
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<(Option<usize>, String)> {
+pub fn request_builder(
+    commands: Vec<&str>,
+    package: &str,
+    users: &[User],
+) -> Vec<(Option<usize>, String)> {
     if !users.is_empty() {
         users
             .iter()

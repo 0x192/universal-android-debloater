@@ -321,7 +321,9 @@ impl List {
                         package.selected = false;
                     } else {
                         self.phone_packages[p.i_user.unwrap()][p.index].state = self.phone_packages
-                            [p.i_user.unwrap()][p.index].state.opposite(settings.device.disable_mode);
+                            [p.i_user.unwrap()][p.index]
+                            .state
+                            .opposite(settings.device.disable_mode);
                         self.phone_packages[p.i_user.unwrap()][p.index].selected = false;
                     }
                     self.selection
