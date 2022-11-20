@@ -224,7 +224,7 @@ pub fn apply_pkg_state_commands(
         },
         _ => vec![],
     };
-    request_builder(commands, &package.name, &[*selected_user])
+    request_builder(commands, &package.name, &[*selected_user]).iter().map(|(_, command)| command.clone()).collect()
 }
 
 pub fn action_handler(
@@ -232,7 +232,7 @@ pub fn action_handler(
     package: &CorePackage,
     phone: &Phone,
     settings: &DeviceSettings,
-) -> Vec<String> {
+) -> Vec<(Option<usize>, String)> {
     // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
     // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
     let commands = match package.state {
@@ -275,20 +275,20 @@ pub fn action_handler(
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<String> {
+pub fn request_builder(commands: Vec<&str>, package: &str, users: &[User]) -> Vec<(Option<usize>, String)> {
     if !users.is_empty() {
         users
             .iter()
             .flat_map(|u| {
                 commands
                     .iter()
-                    .map(|c| format!("{} --user {} {}", c, u.id, package))
+                    .map(|c| (Some(u.index), format!("{} --user {} {}", c, u.id, package)))
             })
             .collect()
     } else {
         commands
             .iter()
-            .map(|c| format!("{} {}", c, package))
+            .map(|c| (None, format!("{} {}", c, package)))
             .collect()
     }
 }
