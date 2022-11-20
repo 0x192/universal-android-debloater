@@ -25,6 +25,7 @@ pub struct Selection {
 
 #[derive(Debug, Default, Clone)]
 pub struct PackageInfo {
+    pub i_user: Option<usize>,
     pub index: usize,
     pub removal: String,
 }
@@ -225,8 +226,9 @@ impl List {
                             &settings.device,
                         );
 
-                        for (i, action) in actions.into_iter().enumerate() {
+                        for (i, (i_user, action)) in actions.into_iter().enumerate() {
                             let p_info = PackageInfo {
+                                i_user,
                                 index: i_package,
                                 removal: package.removal.to_string(),
                             };
@@ -277,10 +279,12 @@ impl List {
                         &settings.device,
                     );
 
-                    for (j, action) in actions.into_iter().enumerate() {
+                    let package = &mut self.phone_packages[i_user][i];
+                    for (j, (i_user, action)) in actions.into_iter().enumerate() {
                         let p_info = PackageInfo {
+                            i_user,
                             index: i,
-                            removal: self.phone_packages[i_user][i].removal.to_string(),
+                            removal: package.removal.to_string(),
                         };
                         // Only the first command can change the package state
                         commands.push(Command::perform(
@@ -312,17 +316,15 @@ impl List {
                     let package = &mut self.phone_packages[i_user][p.index];
                     update_selection_count(&mut self.selection, package.state, false);
 
-                    if !settings.device.multi_user_mode {
+                    if !settings.device.multi_user_mode || p.i_user.is_none() {
                         package.state = package.state.opposite(settings.device.disable_mode);
                         package.selected = false;
                     } else {
-                        for u in &selected_device.user_list {
-                            self.phone_packages[u.index][p.index].state = self.phone_packages
-                                [u.index][p.index]
-                                .state
-                                .opposite(settings.device.disable_mode);
-                            self.phone_packages[u.index][p.index].selected = false;
-                        }
+                        self.phone_packages[p.i_user.unwrap()][p.index].state = self.phone_packages
+                            [p.i_user.unwrap()][p.index]
+                            .state
+                            .opposite(settings.device.disable_mode);
+                        self.phone_packages[p.i_user.unwrap()][p.index].selected = false;
                     }
                     self.selection
                         .selected_packages
