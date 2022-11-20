@@ -120,10 +120,6 @@ pub fn restore_backup(
 
             let mut commands = vec![];
             for u in phone_backup.users {
-                if u.id != settings.backup.selected_user.unwrap().id {
-                    continue;
-                }
-
                 let mut _index = 0;
                 match selected_device.user_list.iter().find(|x| x.id == u.id) {
                     Some(i) => _index = i.index,
