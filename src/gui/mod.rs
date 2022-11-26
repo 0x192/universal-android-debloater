@@ -325,6 +325,6 @@ impl UadGui {
             default_text_size: 17,
             ..iced::Settings::default()
         };
-        Self::run(settings).unwrap_err();
+        _ = Self::run(settings);
     }
 }
