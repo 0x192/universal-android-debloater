@@ -78,14 +78,23 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
         }
         Ok(o) => {
             if !o.status.success() {
-                let stdout = String::from_utf8(o.stdout).unwrap().trim_end().to_string();
-                let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
+                let stdout = String::from_utf8(o.stdout)
+                    .map_err(|e| e.to_string())?
+                    .trim_end()
+                    .to_string();
+                let stderr = String::from_utf8(o.stderr)
+                    .map_err(|e| e.to_string())?
+                    .trim_end()
+                    .to_string();
 
                 // ADB does really weird things. Some errors are not redirected to stderr
                 let err = if stdout.is_empty() { stderr } else { stdout };
                 Err(err)
             } else {
-                Ok(String::from_utf8(o.stdout).unwrap().trim_end().to_string())
+                Ok(String::from_utf8(o.stdout)
+                    .map_err(|e| e.to_string())?
+                    .trim_end()
+                    .to_string())
             }
         }
     }

@@ -63,7 +63,7 @@ pub async fn download_file<T: ToString>(url: T, dest_file: PathBuf) -> Result<()
 
     match ureq::get(&url).call() {
         Ok(res) => {
-            let mut file = fs::File::create(dest_file).unwrap();
+            let mut file = fs::File::create(dest_file).map_err(|e| e.to_string())?;
 
             if let Err(e) = copy(&mut res.into_reader(), &mut file) {
                 return Err(e.to_string());
@@ -82,12 +82,12 @@ pub async fn download_update_to_temp_file(
     bin_name: String,
     release: Release,
 ) -> Result<(PathBuf, PathBuf), ()> {
-    let current_bin_path = std::env::current_exe().unwrap();
+    let current_bin_path = std::env::current_exe().map_err(|_| ())?;
 
     // Path to download the new version to
     let download_path = current_bin_path
         .parent()
-        .unwrap()
+        .ok_or(())?
         .join(format!("tmp_{}", bin_name));
 
     // Path to temporarily force rename current process to, se we can then
@@ -95,7 +95,7 @@ pub async fn download_update_to_temp_file(
     // cleanly as `current_bin_path`
     let tmp_path = current_bin_path
         .parent()
-        .unwrap()
+        .ok_or(())?
         .join(format!("tmp2_{}", bin_name));
 
     // MacOS and Linux release are gziped tarball
@@ -108,20 +108,21 @@ pub async fn download_update_to_temp_file(
             .iter()
             .find(|a| a.name == asset_name)
             .cloned()
-            .unwrap();
+            .ok_or(())?;
 
-        let archive_path = current_bin_path.parent().unwrap().join(&asset_name);
+        let archive_path = current_bin_path.parent().ok_or(())?.join(&asset_name);
 
         if let Err(e) = download_file(asset.download_url, archive_path.clone()).await {
             error!("Couldn't download UAD update: {}", e);
             return Err(());
         }
+
         if extract_binary_from_tar(&archive_path, &download_path).is_err() {
             error!("Couldn't extract UAD release tarball");
             return Err(());
         }
 
-        std::fs::remove_file(&archive_path).unwrap();
+        std::fs::remove_file(&archive_path).map_err(|_| ())?;
     }
 
     // For Windows we download the new binary directly
@@ -132,7 +133,7 @@ pub async fn download_update_to_temp_file(
             .iter()
             .find(|a| a.name == bin_name)
             .cloned()
-            .unwrap();
+            .ok_or(())?;
 
         if let Err(e) = download_file(asset.download_url, download_path.clone()).await {
             error!("Couldn't download UAD update: {}", e);
@@ -145,7 +146,7 @@ pub async fn download_update_to_temp_file(
     {
         use std::os::unix::fs::PermissionsExt;
 
-        let mut permissions = fs::metadata(&download_path).unwrap().permissions();
+        let mut permissions = fs::metadata(&download_path).map_err(|_| ())?.permissions();
         permissions.set_mode(0o755);
         if let Err(e) = fs::set_permissions(&download_path, permissions) {
             error!("[SelfUpdate] Couldn't set permission to temp file: {}", e);
@@ -181,9 +182,14 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
         .call()
     {
         Ok(res) => {
-            let release: Release =
-                serde_json::from_value(res.into_json::<serde_json::Value>().unwrap()[0].clone())
-                    .unwrap();
+            let release: Release = serde_json::from_value(
+                res.into_json::<serde_json::Value>()
+                    .map_err(|_| ())?
+                    .get(0)
+                    .ok_or(())?
+                    .clone(),
+            )
+            .map_err(|_| ())?;
             if release.tag_name.as_str() != "dev-build"
                 && release.tag_name.as_str() > env!("CARGO_PKG_VERSION")
             {
@@ -202,25 +208,24 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
 /// Extracts the binary from a `tar.gz` archive to temp_file path
 #[cfg(feature = "self-update")]
 #[cfg(not(target_os = "windows"))]
-pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> Result<(), ()> {
+pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> io::Result<()> {
     use flate2::read::GzDecoder;
     use std::fs::File;
     use tar::Archive;
-    let mut archive = Archive::new(GzDecoder::new(File::open(archive_path).unwrap()));
+    let mut archive = Archive::new(GzDecoder::new(File::open(archive_path)?));
 
-    let mut temp_file = File::create(temp_file).unwrap();
+    let mut temp_file = File::create(temp_file)?;
 
-    for file in archive.entries().unwrap() {
-        let mut file = file.unwrap();
+    for file in archive.entries()? {
+        let mut file = file?;
 
-        let path = file.path().unwrap();
+        let path = file.path()?;
         if path.to_str().is_some() {
-            io::copy(&mut file, &mut temp_file).unwrap();
+            io::copy(&mut file, &mut temp_file)?;
             return Ok(());
         }
     }
-
-    Err(())
+    Err(io::ErrorKind::NotFound.into())
 }
 
 /// Hardcoded binary names for each compilation target

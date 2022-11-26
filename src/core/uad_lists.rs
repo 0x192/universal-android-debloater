@@ -210,7 +210,7 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
             .call()
             {
                 Ok(data) => {
-                    let text = data.into_string().unwrap();
+                    let text = data.into_string().expect("response should be Ok type");
                     fs::write(cached_uad_lists.clone(), &text).expect("Unable to write file");
                     let list = serde_json::from_str(&text).expect("Unable to parse");
                     OperationResult::Ok(list)
