@@ -10613,7 +10613,7 @@
   {
     "id": "com.samsung.android.sume.nn.service",
     "list": "Pending",
-    "description": "",
+    "description": "Manages system resources (Performance/Battery) in Samsung phones. Removing this package won't break your phone, but the changes in performance are unclear",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
