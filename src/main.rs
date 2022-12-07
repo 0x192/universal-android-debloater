@@ -22,9 +22,9 @@ static CONFIG_DIR: PathBuf = setup_uad_dir(dirs::config_dir());
 #[dynamic]
 static CACHE_DIR: PathBuf = setup_uad_dir(dirs::cache_dir());
 
-fn main() {
+fn main() -> iced::Result {
     setup_logger().expect("setup logging");
-    gui::UadGui::start();
+    gui::UadGui::start()
 }
 
 pub fn setup_logger() -> Result<(), fern::InitError> {
