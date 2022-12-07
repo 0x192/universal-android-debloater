@@ -113,7 +113,15 @@ pub fn restore_backup(
     packages: &[Vec<PackageRow>],
     settings: &DeviceSettings,
 ) -> Result<Vec<BackupPackage>, String> {
-    match fs::read_to_string(settings.backup.selected.as_ref().unwrap().path.clone()) {
+    match fs::read_to_string(
+        settings
+            .backup
+            .selected
+            .as_ref()
+            .ok_or("field should be Some type")?
+            .path
+            .clone(),
+    ) {
         Ok(data) => {
             let phone_backup: PhoneBackup =
                 serde_json::from_str(&data).expect("Unable to parse backup file");
@@ -143,7 +151,10 @@ pub fn restore_backup(
                     let p_commands = apply_pkg_state_commands(
                         &package,
                         &backup_package.state,
-                        &settings.backup.selected_user.unwrap(),
+                        &settings
+                            .backup
+                            .selected_user
+                            .ok_or("field should be Some type")?,
                         selected_device,
                     );
                     if !p_commands.is_empty() {

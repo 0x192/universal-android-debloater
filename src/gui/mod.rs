@@ -314,8 +314,8 @@ impl Application for UadGui {
 }
 
 impl UadGui {
-    pub fn start() {
-        let settings: Settings<()> = Settings {
+    pub fn start() -> iced::Result {
+        Self::run(Settings {
             window: Window {
                 size: (1050, 800),
                 resizable: true,
@@ -323,8 +323,7 @@ impl UadGui {
                 ..iced::window::Settings::default()
             },
             default_text_size: 17,
-            ..iced::Settings::default()
-        };
-        Self::run(settings).unwrap_err();
+            ..Settings::default()
+        })
     }
 }
