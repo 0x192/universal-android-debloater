@@ -14294,7 +14294,7 @@
   {
     "id": "com.micredit.in",
     "list": "Misc",
-    "description": "Mi Credit. Personal Loan app (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\n",
+    "description": "Mi Credit (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\nApp providing loans to MIUI users from India and China\n\nNote: https://web.archive.org/web/20221207193942/https://onsitego.com/blog/xiaomi-quietly-discontinues-mi-credit-mi-pay-india/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15131,7 +15131,7 @@
   {
     "id": "cn.wps.xiaomi.abroad.lite",
     "list": "Oem",
-    "description": "Mi Doc viewer\nDocuments (*.doc/docx, *.ppt/pptx, *.xls/xlsx, *.pdf, *.wps, and *.txt) viewer powered by WPS Office\nFYI: WPS is a chinese closed-source software. It's as bad as Microsoft office (privacy-wise)\nhttps://www.wps.com/privacy-policy\n",
+    "description": "Mi Doc viewer\nDocuments (*.doc/docx, *.ppt/pptx, *.xls/xlsx, *.pdf, *.wps, and *.txt) viewer powered by WPS Office\nFYI: WPS is a Chinese closed-source software. It's as bad as Microsoft Office (privacy-wise)\nhttps://www.wps.com/privacy-policy\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15482,7 +15482,7 @@
   {
     "id": "com.miui.android.fashiongallery",
     "list": "Oem",
-    "description": "Mi Wallpaper Carousel (https://play.google.com/store/apps/details?id=com.miui.android.fashiongallery)\nDisplay new photos on your lock screen every time you turn ON your screen.\n",
+    "description": "Mi Wallpaper Carousel (https://play.google.com/store/apps/details?id=com.miui.android.fashiongallery)\nA lockscreen customization app. Displays a new photo every on your lock screen every time you turn ON your screen.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15518,7 +15518,16 @@
   {
     "id": "com.miui.cleanmaster",
     "list": "Oem",
-    "description": "Mi Cleaner\nClean useless files\n",
+    "description": "Mi Cleaner\nnShady Xiaomi cleaner app developed by Cheetah mobile which has previously been caught in ad fraud and user data theft in 2018. The app has been banned from the PlayStore and then reintroduced under the package name 'com.miui.cleaner'.\n\nhttps://www.gadgets360.com/apps/news/banned-security-app-clean-master-by-cheetah-mobile-collected-user-private-data-report-2189633",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.miui.cleaner",
+    "list": "Oem",
+    "description": "Mi Cleaner\nShady Xiaomi cleaner app developed by Cheetah mobile which has previously been caught in ad fraud and user data theft with this app in 2018 (previously called com.miui.cleanmaster and banned from the PlayStore). This \"new\" app is still full of trackers\nhttps://www.gadgets360.com/apps/news/banned-security-app-clean-master-by-cheetah-mobile-collected-user-private-data-report-2189633\n\nPithus analysis: https://beta.pithus.org/report/f7f7ee425a8dc928db75105bd8f52e9b02f11dec3b398aac9fef1d42809d8ec1",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
