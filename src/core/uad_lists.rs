@@ -52,7 +52,7 @@ impl std::fmt::Display for UadListState {
             UadListState::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
             UadListState::Failed => "Failed to check update!".to_string(),
         };
-        write!(f, "{}", s)
+        write!(f, "{s}")
     }
 }
 

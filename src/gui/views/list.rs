@@ -360,7 +360,7 @@ impl List {
                 waiting_view(settings, text, false)
             }
             LoadingState::RestoringDevice(output) => {
-                let text = format!("Restoring device: {}", output);
+                let text = format!("Restoring device: {output}");
                 waiting_view(settings, &text, false)
             }
             LoadingState::Ready(_) => {

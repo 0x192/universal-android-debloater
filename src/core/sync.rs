@@ -156,8 +156,8 @@ pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> H
     };
 
     let action = match state {
-        PackageState::Enabled => format!("pm list packages -s -e{}", user),
-        PackageState::Disabled => format!("pm list package -s -d{}", user),
+        PackageState::Enabled => format!("pm list packages -s -e{user}"),
+        PackageState::Disabled => format!("pm list package -s -d{user}"),
         _ => "".to_string(), // You probably don't need to use this function for anything else
     };
 
@@ -304,7 +304,7 @@ pub fn request_builder(
     } else {
         commands
             .iter()
-            .map(|c| (None, format!("{} {}", c, package)))
+            .map(|c| (None, format!("{c} {package}")))
             .collect()
     }
 }
@@ -313,7 +313,7 @@ pub fn get_phone_model() -> String {
     match adb_shell_command(true, "getprop ro.product.model") {
         Ok(model) => model,
         Err(err) => {
-            println!("ERROR: {}", err);
+            println!("ERROR: {err}");
             if err.contains("adb: no devices/emulators found") {
                 "no devices/emulators found".to_string()
             } else {
