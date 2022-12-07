@@ -159,6 +159,6 @@ impl fmt::Display for DisplayablePath {
                 "[File steam not found]".to_string()
             }
         };
-        write!(f, "{}", stem)
+        write!(f, "{stem}")
     }
 }

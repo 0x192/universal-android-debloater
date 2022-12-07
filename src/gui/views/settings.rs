@@ -168,7 +168,7 @@ impl Settings {
                     Command::batch(commands)
                 }
                 Err(e) => {
-                    self.device.backup.backup_state = format!("ERROR: {}", e);
+                    self.device.backup.backup_state = format!("ERROR: {e}");
                     error!("[BACKUP] {}", e);
                     Command::none()
                 }

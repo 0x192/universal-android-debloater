@@ -51,7 +51,7 @@ impl std::fmt::Display for SelfUpdateStatus {
             SelfUpdateStatus::Failed => "Failed to check update!",
             SelfUpdateStatus::Done => "Done",
         };
-        write!(f, "{}", s)
+        write!(f, "{s}")
     }
 }
 
@@ -88,7 +88,7 @@ pub async fn download_update_to_temp_file(
     let download_path = current_bin_path
         .parent()
         .unwrap()
-        .join(format!("tmp_{}", bin_name));
+        .join(format!("tmp_{bin_name}"));
 
     // Path to temporarily force rename current process to, se we can then
     // rename `download_path` to `current_bin_path` and then launch new version
@@ -96,12 +96,12 @@ pub async fn download_update_to_temp_file(
     let tmp_path = current_bin_path
         .parent()
         .unwrap()
-        .join(format!("tmp2_{}", bin_name));
+        .join(format!("tmp2_{bin_name}"));
 
     // MacOS and Linux release are gziped tarball
     #[cfg(not(target_os = "windows"))]
     {
-        let asset_name = format!("{}.tar.gz", bin_name);
+        let asset_name = format!("{bin_name}.tar.gz");
 
         let asset = release
             .assets
