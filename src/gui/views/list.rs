@@ -153,9 +153,13 @@ impl List {
                                 self.phone_packages[i_user][i].state,
                                 false,
                             );
-                            self.selection
+
+                            self.selection.selected_packages = self
+                                .selection
                                 .selected_packages
-                                .drain_filter(|s_i| *s_i == i);
+                                .iter()
+                                .partition::<Vec<_>, _>(|&&s_i| s_i == i)
+                                .1;
                         }
                     } else if !self.selection.selected_packages.contains(&i) {
                         self.selection.selected_packages.push(i);
@@ -205,9 +209,12 @@ impl List {
                             if package.selected {
                                 self.selection.selected_packages.push(i_package);
                             } else {
-                                self.selection
+                                self.selection.selected_packages = self
+                                    .selection
                                     .selected_packages
-                                    .drain_filter(|s_i| *s_i == i_package);
+                                    .iter()
+                                    .partition(|&&s_i| s_i == i_package)
+                                    .1;
                             }
                             update_selection_count(
                                 &mut self.selection,
@@ -260,14 +267,20 @@ impl List {
 
                 match action {
                     Action::Remove => {
-                        selected_packages.drain_filter(|i| {
-                            self.phone_packages[i_user][*i].state != PackageState::Enabled
-                        });
+                        selected_packages = selected_packages
+                            .into_iter()
+                            .partition(|&i| {
+                                self.phone_packages[i_user][i].state != PackageState::Enabled
+                            })
+                            .1;
                     }
                     Action::Restore => {
-                        selected_packages.drain_filter(|i| {
-                            self.phone_packages[i_user][*i].state == PackageState::Enabled
-                        });
+                        selected_packages = selected_packages
+                            .into_iter()
+                            .partition(|&i| {
+                                self.phone_packages[i_user][i].state == PackageState::Enabled
+                            })
+                            .1;
                     }
                 }
                 let mut commands = vec![];
@@ -326,9 +339,12 @@ impl List {
                             .opposite(settings.device.disable_mode);
                         self.phone_packages[p.i_user.unwrap()][p.index].selected = false;
                     }
-                    self.selection
+                    self.selection.selected_packages = self
+                        .selection
                         .selected_packages
-                        .drain_filter(|s_i| *s_i == p.index);
+                        .iter()
+                        .partition(|&&s_i| s_i == p.index)
+                        .1;
                     Self::filter_package_lists(self);
                 }
                 Command::none()
