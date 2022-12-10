@@ -4,7 +4,7 @@ use crate::core::save::{
 };
 use crate::core::sync::{perform_adb_commands, CommandType, Phone};
 use crate::core::theme::Theme;
-use crate::core::utils::{open_url, string_to_theme, DisplayablePath};
+use crate::core::utils::{open_url, string_to_theme, unavailable_users, DisplayablePath};
 use crate::gui::style;
 use crate::gui::views::list::PackageInfo;
 use crate::gui::widgets::package_row::PackageRow;
@@ -178,7 +178,11 @@ impl Settings {
         }
     }
 
-    pub fn view(&self, phone: &Phone) -> Element<Message, Renderer<Theme>> {
+    pub fn view(
+        &self,
+        packages: &[Vec<PackageRow>],
+        phone: &Phone,
+    ) -> Element<Message, Renderer<Theme>> {
         let radio_btn_theme = Theme::ALL
             .iter()
             .fold(row![].spacing(10), |column, option| {
@@ -230,10 +234,14 @@ impl Settings {
         .width(Length::Fill)
         .style(style::Container::BorderedFrame);
 
-        let multi_user_mode_descr =
-            text("Disabling this setting will typically prevent affecting your work profile")
-                .style(style::Text::Commentary)
-                .size(15);
+        let multi_user_mode_descr = row![
+            text("This will not affect the following protected work profile users: ")
+                .size(15)
+                .style(style::Text::Commentary),
+            text(unavailable_users(&phone.user_list, packages).join(", "))
+                .size(15)
+                .style(style::Text::Danger)
+        ];
 
         let multi_user_mode_checkbox = checkbox(
             "Affect all the users of the phone (not only the selected user)",
