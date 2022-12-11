@@ -487,7 +487,7 @@ impl List {
                     column![
                         text("ADB is not authorized to access this user!").size(22)
                             .style(style::Text::Danger),
-                        text("The most likely reason is that it is the user of your work profile (also called Secure Folder on Samsung devices). There's really no solution, other than disabling your work profile completely in your device settings.")
+                        text("The most likely reason is that it is the user of your work profile (also called Secure Folder on Samsung devices). There's really no solution, other than completely disabling your work profile in your device settings.")
                             .style(style::Text::Commentary)
                             .horizontal_alignment(alignment::Horizontal::Center),
                     ]
