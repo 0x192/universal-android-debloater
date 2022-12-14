@@ -3132,6 +3132,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.android.galaxycontinuity",
+    "list": "Oem",
+    "description": "Samsung Flow\nIt's a service to 'seamlessly' connect your devices. You can authenticate your Tablet/PC with your smartphone, share content between devices, and sync notifications or view contents from your smartphone on your Tablet/PC.\nYou can turn on the smartphone's Mobile Hotspot to keep your Tablet/PC connected. You can also log in to your Tablet/PC with your biometric data (Iris, Fingerprints) if you register with Samsung Pass.\nhttps://play.google.com/store/apps/details?id=com.samsung.android.galaxycontinuity",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.knox.vpn.proxyhandler",
     "list": "Oem",
     "description": "Third-party package that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE: Never trust a company that promotes spam blocking features.\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\nHave a look at their privacy policy. It's... pretty scary: https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)\nSamsung Knox allows business and personal content to \"securely\" coexist on the same handset.\nThis package handles proxies alongside KNOX.",
