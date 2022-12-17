@@ -10612,8 +10612,8 @@
   },
   {
     "id": "com.samsung.android.sume.nn.service",
-    "list": "Pending",
-    "description": "Manages system resources (Performance/Battery) in Samsung phones. Removing this package won't break your phone, but the changes in performance are unclear",
+    "list": "Oem",
+    "description": "Provides the photo remaster feature in the Gallery app. Has the camera permission and can access all your medias but performs its job locally on the device.\n\nhttps://www.samsung.com/au/support/mobile-devices/remastering-photos-on-samsung-phone/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
