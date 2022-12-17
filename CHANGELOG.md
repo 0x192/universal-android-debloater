@@ -17,8 +17,13 @@ and `Removed`.
 
 - [[#447](https://github.com/0x192/universal-android-debloater/pull/447)] **Backup/Restore the state of a device:** Quick and easy way to save the state of all the system apps on a device and restore it.
 
+- [[#450](https://github.com/0x192/universal-android-debloater/pull/450)] **Warn the user when a work profile is detected:** Displays a warning message when switching to a work profile user and displays unavailable work profile users in the settings.
+
 ### Changed
-- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] All settings are now persistent.
+- [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] ALL settings are now persistent.
+
+### Fixed
+- [[#448](https://github.com/0x192/universal-android-debloater/pull/448)] UAD crash when interacting with work profiles on recent phones.
 
 ### Removed
 - The `Export current selection` button and the unintuitive auto import selection (see https://github.com/0x192/universal-android-debloater/issues/192) have been replaced by the new backup/restore system.
@@ -60,7 +65,7 @@ Huge thanks to [@KarlRamstedt](https://github.com/KarlRamstedt) for their help i
 - [[#121](https://github.com/0x192/universal-android-debloater/pull/121)] :arrows_counterclockwise: **UAD self-update**: UAD will now check at launch if there is a new version of itself and enable you to perform the update directly from the app! :rocket:
 
 ### Changed
-- [[#165](https://github.com/0x192/universal-android-debloater/issues/165)] UAD now tries every 500ms (for 1min) to initiate an ADB connection until a device is found during `FindingPhones`the loading state.
+- [[#165](https://github.com/0x192/universal-android-debloater/issues/165)] UAD now tries every 500ms (for 1min) to initiate an ADB connection until a device is found during the `FindingPhones` loading state.
 - All the init process was reworked and a status message is displayed at each stage (`DownloadingList`, `FindingPhones`,`LoadingPackages`,`UpdatingUad` `Ready`) so you know what is happening.
 - Minor UI changes
 

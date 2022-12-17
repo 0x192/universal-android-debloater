@@ -14,7 +14,10 @@ use views::settings::{Message as SettingsMessage, Settings as SettingsView};
 use widgets::navigation_menu::nav_menu;
 
 use iced::widget::column;
-use iced::{window::Settings as Window, Application, Command, Element, Length, Renderer, Settings};
+use iced::{
+    window::Settings as Window, Alignment, Application, Command, Element, Length, Renderer,
+    Settings,
+};
 use std::{env, path::PathBuf};
 
 #[cfg(feature = "self-update")]
@@ -303,12 +306,13 @@ impl Application for UadGui {
                 .map(Message::AboutAction),
             View::Settings => self
                 .settings_view
-                .view(&selected_device)
+                .view(&self.apps_view.phone_packages, &selected_device)
                 .map(Message::SettingsAction),
         };
 
         column![navigation_container, main_container]
             .width(Length::Fill)
+            .align_items(Alignment::Center)
             .into()
     }
 }

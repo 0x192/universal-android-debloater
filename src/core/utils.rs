@@ -162,3 +162,21 @@ impl fmt::Display for DisplayablePath {
         write!(f, "{stem}")
     }
 }
+
+pub fn unavailable_users(user_list: &[User], packages: &[Vec<PackageRow>]) -> Vec<String> {
+    let mut unavailable_users = vec![];
+
+    for (u_index, p_list) in packages.iter().enumerate() {
+        if p_list.is_empty() {
+            unavailable_users.push(
+                user_list
+                    .iter()
+                    .find(|u| u.index == u_index)
+                    .unwrap()
+                    .id
+                    .to_string(),
+            );
+        }
+    }
+    unavailable_users
+}
