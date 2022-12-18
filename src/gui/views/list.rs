@@ -204,7 +204,9 @@ impl List {
                             if package.selected {
                                 self.selection.selected_packages.push(i_package);
                             } else {
-                                self.selection.selected_packages.retain(|&s_i| s_i != i_package);
+                                self.selection
+                                    .selected_packages
+                                    .retain(|&s_i| s_i != i_package);
                             }
                             update_selection_count(
                                 &mut self.selection,
@@ -259,15 +261,10 @@ impl List {
                     Action::Remove => {
                         selected_packages.retain(|&i| {
                             self.phone_packages[i_user][i].state == PackageState::Enabled
-                        })
-;
+                        });
                     }
-                    Action::Restore => {
-                        selected_packages
-                            .retain(|&i| {
-                                self.phone_packages[i_user][i].state != PackageState::Enabled
-                            })
-                    }
+                    Action::Restore => selected_packages
+                        .retain(|&i| self.phone_packages[i_user][i].state != PackageState::Enabled),
                 }
                 let mut commands = vec![];
                 for i in selected_packages {
@@ -325,7 +322,9 @@ impl List {
                             .opposite(settings.device.disable_mode);
                         self.phone_packages[p.i_user.unwrap()][p.index].selected = false;
                     }
-                    self.selection.selected_packages.retain(|&s_i| s_i != p.index);
+                    self.selection
+                        .selected_packages
+                        .retain(|&s_i| s_i != p.index);
                     Self::filter_package_lists(self);
                 }
                 Command::none()
