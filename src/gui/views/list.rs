@@ -153,9 +153,8 @@ impl List {
                                 self.phone_packages[i_user][i].state,
                                 false,
                             );
-                            self.selection
-                                .selected_packages
-                                .drain_filter(|s_i| *s_i == i);
+
+                            self.selection.selected_packages.retain(|&s_i| s_i != i);
                         }
                     } else if !self.selection.selected_packages.contains(&i) {
                         self.selection.selected_packages.push(i);
@@ -207,7 +206,7 @@ impl List {
                             } else {
                                 self.selection
                                     .selected_packages
-                                    .drain_filter(|s_i| *s_i == i_package);
+                                    .retain(|&s_i| s_i != i_package);
                             }
                             update_selection_count(
                                 &mut self.selection,
@@ -260,15 +259,12 @@ impl List {
 
                 match action {
                     Action::Remove => {
-                        selected_packages.drain_filter(|i| {
-                            self.phone_packages[i_user][*i].state != PackageState::Enabled
+                        selected_packages.retain(|&i| {
+                            self.phone_packages[i_user][i].state == PackageState::Enabled
                         });
                     }
-                    Action::Restore => {
-                        selected_packages.drain_filter(|i| {
-                            self.phone_packages[i_user][*i].state == PackageState::Enabled
-                        });
-                    }
+                    Action::Restore => selected_packages
+                        .retain(|&i| self.phone_packages[i_user][i].state != PackageState::Enabled),
                 }
                 let mut commands = vec![];
                 for i in selected_packages {
@@ -328,7 +324,7 @@ impl List {
                     }
                     self.selection
                         .selected_packages
-                        .drain_filter(|s_i| *s_i == p.index);
+                        .retain(|&s_i| s_i != p.index);
                     Self::filter_package_lists(self);
                 }
                 Command::none()
