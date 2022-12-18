@@ -53,7 +53,7 @@ jobs:
             target
           key: ${{ runner.os }}-${{ matrix.lint }}-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.OS }}-${{ matrix.lint }}-
-      - uses: dtolnay/rust-toolchain@nightly
+      - uses: dtolnay/rust-toolchain@stable
         with:
           components: clippy,rustfmt
       - run: cargo ${{ matrix.lint }}${{ matrix.args }}
