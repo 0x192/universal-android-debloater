@@ -20232,6 +20232,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.heytap.market",
+    "list": "Oem",
+    "description": "App Market application\nIt is safe to remove.If you are not using it",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oplus.kekepay",
     "list": "Oem",
     "description": "Chinese pay service? Safe to remove but no documentation found online\n[APK NEEDED]",
