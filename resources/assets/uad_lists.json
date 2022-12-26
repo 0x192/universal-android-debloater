@@ -20135,9 +20135,9 @@
   {
     "id": "com.coloros.oshare",
     "list": "Oem",
-    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n[Warning] It cause issue when you try to send screenshot directly through send button (provided just after screenshot) but screenshot is saved and can be send by opening photos or gallery app \n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
+    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n[Warning] OEM gallery or Photos app share option will break and screenshot cannot send directly with propmt appear just after screenshot. But screenshot is saved and can be send by differnt similar application\n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
     "dependencies": [],
-    "neededBy": [],
+    "neededBy": ["com.coloros.gallery3d"],
     "labels": [],
     "removal": "Recommended"
   },
