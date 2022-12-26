@@ -20133,6 +20133,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.heytap.market",
+    "list": "Oem",
+    "description": "Oppo application Market .Safe to remove unless you are using it",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.coloros.oshare",
     "list": "Oem",
     "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n[Warning]May break the functionality to share photos from oem photos app only and share with send prompt after screenshot is not working(though screenshot is saved and could be send through different similar application) \n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
