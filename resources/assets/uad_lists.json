@@ -21402,9 +21402,9 @@
     "removal": "Expert"
   },
   {
-    "id": "com.samsung.android.cidmanager",
+    "id": "com.samsung.packageinstalleroverlay",
     "list": "Oem",
-    "description": "In order to ensure that a user’s phone receives the appropriate firmware updates, this app is used to identify the carrier network. In other words - it helps to ensure that the correct country-specific firmware is delivered OTA.",
+    "description": "It's used to display an overlay window when installing or updating apps. Shows information about the app and provides the user with the option to cancel the process. Probably breaks manual installation of apps (needs more testing).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
