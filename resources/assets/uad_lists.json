@@ -21285,6 +21285,51 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.samsung.android.watch.watchface.analogmodular",
+    "list": "WearOS",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.simpleclassic",
+    "list": "WearOS",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.emergency",
+    "list": "WearOS",
+    "description": "Watchface in the emergency launcher.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.companionhelper",
+    "list": "WearOS",
+    "description": "Watchfaces fail to load without this. Removing it also breaks editing and changing watchfaces.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.tickingsound",
+    "list": "WearOS",
+    "description": "Ticking sound on watchfaces that support it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.samsung.android.watch.weather",
     "list": "WearOS",
     "description": "Weather application from Samsung.",
@@ -21367,7 +21412,7 @@
   },
   {
     "id": "com.samsung.android.wcs.exstention",
-    "list": "Oem",
+    "list": "WearOS",
     "description": "Samsung Internet Extensions\nSamsung Internet for Android allows users to customize their browsing experience by installing extensions, which are additional software packages that add new features and functionality to the browser and help developers offer tailored services to users on mobile devices.\n\nNOTE: Disabling this broke the UI on my Watch5 for some reason so PROCEED WITH CAUTION.",
     "dependencies": [],
     "neededBy": [],
@@ -21382,6 +21427,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.sec.android.soagent",
+    "list": "Oem",
+    "description": "System application that is responsible for checking and installing software updates.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.packageinstalleroverlay",
+    "list": "Oem",
+    "description": "",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.google.android.wearable.healthservices",
