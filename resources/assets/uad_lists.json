@@ -21448,7 +21448,7 @@
   },
   {
     "id": "com.google.android.wearable.healthservices",
-    "list": "Oem",
+    "list": "WearOS",
     "description": "Health Services by Google\nPlay Store link: https://play.google.com/store/apps/details?id=com.google.android.wearable.healthservices&hl=en_US&gl=US\n\nDisabling this on my Watch5 broke heart rate measuring and some workouts.",
     "dependencies": [],
     "neededBy": [],
@@ -21457,8 +21457,134 @@
   },
   {
     "id": "com.samsung.android.service.health",
-    "list": "Oem",
+    "list": "WearOS",
     "description": "Health Platform\n\nIt is a data aggregator. You can use it to link multiple health apps (like Strava, google fit etc) together. This app will unify their collected data and store them all together.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.wear.shealth",
+    "list": "WearOS",
+    "description": "Samsung Health app for WearOS.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.wearable.samsungaccount",
+    "list": "WearOS",
+    "description": "Samsung account settings. Breaks settings app if uninstalled.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.watch.timer",
+    "list": "WearOS",
+    "description": "Timer",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recomended"
+  },
+  {
+    "id": "com.samsung.android.watch.stopwatch",
+    "list": "WearOS",
+    "description": "Stopwatch",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recomended"
+  },
+  {
+    "id": "com.samsung.android.watch.screencapture",
+    "list": "WearOS",
+    "description": "This is responsible for taking screenshots.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.flashlight",
+    "list": "WearOS",
+    "description": "Flashlight",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.compass",
+    "list": "WearOS",
+    "description": "Samsung Compass app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recomended"
+  },
+  {
+    "id": "com.samsung.android.watch.alarm",
+    "list": "WearOS",
+    "description": "Alarms.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recomended"
+  },
+  {
+    "id": "com.samsung.android.storage.watchstoragemanager",
+    "list": "WearOS",
+    "description": "Storage manager. Based on internet posts it's not safe to disable.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.watch.timer",
+    "list": "WearOS",
+    "description": "Timer app from Samsung.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recomended"
+  },
+  {
+    "id": "com.samsung.android.gallery.watch",
+    "list": "WearOS",
+    "description": "Gallery app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.wearable.ambient",
+    "list": "WearOS",
+    "description": "It's like doze on Android phones. Not recommended to disable, as this package reduces battery drain when idle.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.apps.wearable.settings",
+    "list": "WearOS",
+    "description": "Settings",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.modulemetadata",
+    "list": "aosp",
+    "description": "It's used to manage and store metadata about installed modules, and is accessed by the system server. Breaks some core functionality if disabled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
