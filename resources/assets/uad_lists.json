@@ -21332,11 +21332,11 @@
   {
     "id": "com.samsung.android.wear.contacts.sync",
     "list": "WearOS",
-    "description": "Syncs contacts from phone to watch. I uninstalled it since i don't use my watch to call anyone.",
+    "description": "Handles 'open on phone' events. Also, settings often crash when this uninstalled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.cts.ctsshim",
