@@ -19350,6 +19350,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.monotype.android.font.applemint",
+    "list": "Misc",
+    "description": "Font",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.monotype.android.font.tinkerbell",
+    "list": "Misc",
+    "description": "Font",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.monotype.android.font.chococooky",
     "list": "Misc",
     "description": "Font",
