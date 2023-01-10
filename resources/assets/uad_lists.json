@@ -6194,11 +6194,11 @@
   {
     "id": "com.sec.android.app.launcher",
     "list": "Oem",
-    "description": "Samsung One UI Home launcher (homescreen) (https://play.google.com/store/apps/details?id=com.sec.android.app.launcher)\nIt is samsung Touchwiz default launcher\nDO NOT REMOVE THIS IF YOU DON'T USE ANOTHER LAUNCHER !\n",
+    "description": "Samsung One UI Home launcher (homescreen) (https://play.google.com/store/apps/details?id=com.sec.android.app.launcher)\nIt is also Samsung's TouchWiz default launcher\n WARNING: REMOVING THIS APP REMOVES SWIPE GESTURES. CHOOSING ANOTHER LAUNCHER AS DEFAULT DOES NOT FIX THIS ISSUE.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.app.clockpackage",
