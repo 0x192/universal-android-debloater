@@ -20135,7 +20135,7 @@
   {
     "id": "com.heytap.market",
     "list": "Oem",
-    "description": "Oppo application Market .Safe to remove unless you are using it",
+    "description": "Oppo application Market. Safe to remove unless you are using it.\nhttps://developers.oppomobile.com/newservice/capability?pagename=app_store",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
