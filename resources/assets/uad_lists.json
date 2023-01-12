@@ -13104,6 +13104,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oppo.rftoolkit",
+    "list": "Oem",
+    "description": "Monitors the broadcast action events (BOOT_COMPLETED)",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.oppo.securepay",
     "list": "Oem",
     "description": "Payment Protection\n",
@@ -19998,6 +20007,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.batterywarning",
+    "list": "Oem",
+    "description": "Battery warning.\nUses accessbility, GPS and Wi-Fi.",
+    "dependencies": [],
+    "neededBy": ["com.oneplus.gamespace"],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.oplus.synergy",
     "list": "Oem",
     "description": "HeySynergy\nProvides the screencasting feature and OPPO's PC Connect (https://connect.oppo.com/). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone.\n\nPithus analysis: https://beta.pithus.org/report/16d9ea536683291fbffe46dedd3c655379b5fcfdb473ec1cab5290cf5af27fba",
@@ -20059,6 +20077,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.oppo.engineermode",
+    "list": "Oem",
+    "description": "Engineer mode (hardware tests), uses a dialer code, safe to disable",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.redteamobile.roaming",
@@ -20325,6 +20352,15 @@
     "id": "com.oppo.sos",
     "list": "Oem",
     "description": "Emergency Alert service by clicking power button 5 times. It will automatically call contacts (and/or send a SMS) you designated as emergency contacts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oppoex.afterservice",
+    "list": "Oem",
+    "description": "AFter-Sales Service\nChecks `Build.FINGERPRINT` and `Build.MANUFACTURER`, uses SQLite Database, reads/writes to external etorage.\nUses internet, SMS, GPS/Wi-Fi. Probably safe to remove if you don't need after service information.\nHardcoded URLs:\nhttps://after-sales-eu.coloros.com/after_service_information_india.xml\nhttps://after-sales-eu.coloros.com/after_service_information.xml",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
