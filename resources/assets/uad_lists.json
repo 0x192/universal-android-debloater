@@ -20088,6 +20088,24 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.oppo.engineermode.camera",
+    "list": "Oem",
+    "description": "Related to com.oppo.engineermode. This application likely doesn't work without that app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.oppo.engineermode.network",
+    "list": "Oem",
+    "description": "Related to com.oppo.engineermode. This application likely doesn't work without that app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.redteamobile.roaming",
     "list": "Misc",
     "description": "ORoaming\nLet's you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
@@ -20923,5 +20941,104 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.ape.mtbf",
+    "list": "Oem",
+    "description": "Named 'MTBF Tools'\nDialer Code: 68238665. Uses SQLite Database. Reads/writes to External Storage. All sorts of permissions (camera, mic, battery, radio, led, sim, gps, nfc).\nFound more details at https://twitter.com/dbauduin/status/940126704261099520\nHardcoded URLs (an api and a book): http://www.andykhan.com/jexcelapi\nhttp://www.amazon.co.uk/exec/obidos/ASIN/0571058086/qid=1099836249/sr=1-3/ref=sr_1_11_3/202-6017285-1620664\nhttps://www.amazon.co.uk/exec/obidos/ASIN/0571058086qid=1099836249/sr=1-3/ref=sr_1_11_3/202-6017285-1620664",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.ape.factory",
+    "list": "Oem",
+    "description": "Checks Build.SERIAL and ro.build.type\nAll permissions and activities (camera, mic, battery, radio, led, sim, gps, nfc). Reads/writes to External Storage",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.yha.runtime",
+    "list": "Oem",
+    "description": "RunTimeTest\nReads/writes to External Storage. Uses wifi, camera, sensors, mic, etc. Lots of activities (hardware tests?):\nFlashTest, VibratorTest, WIFITest, Reboot, LCDTest, AudioLoop, VideoTest, CameraTest, Tester3dTeapot, FullMemTest, ScreenSaver.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.yha.factory",
+    "list": "Oem",
+    "description": "related to com.yha.runtime",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.yha.engineersecret",
+    "list": "Oem",
+    "description": "Reads/writes to External Storage. Gets the IMEI, uses gps/wifi lots of activities (hardware tests?):\nIMeiAndPcbCheck, DeviceListActivity, CheckSoftwareInfo, GpsActivity, BluetoothTest, BluetoothSearch, LteSarTest, NetworkSearch, DecryptionActivity",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.android.phone.injection",
+    "list": "Oem",
+    "description": "Possibly safe, or useless as removal doesn't seem to change anything.\nIt's a very small APK, it's a single class which only assigns a constant numeric value to a variable called 'telephony_injection'",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.unisoc.phone",
+    "list": "Oem",
+    "description": "LockAssistant\nRuns before the user unlocks the device (direct-boot aware). Reads IMEI, SMS, call log, uses gps/wifi. Unisoc is a CPU manufacturer.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.spreadtrum.sgps",
+    "list": "Oem",
+    "description": "SGPS.\nDialer Code: 2266. Uses internet and gps. Reads/writes to External Storage. Hardcoded URL:\nhttps://earth.google.com/kml/2.0\nPerhaps some kind of GPS system app by Unisoc? Note: Unisoc was formerly known as Spreadtrum.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.sprd.uasetting",
+    "list": "Oem",
+    "description": "UASettings\nReads/writes to External Storage. Note: sprd = Spreadtrum",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.sprd.validationtools",
+    "list": "Oem",
+    "description": "See:\nhttps://github.com/wangjicong/Android-6.0-packages/blob/master/code/apps/ValidationTools/src/com/sprd/validationtools/ValidationToolsMainActivity.java",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.sprd.logmanager",
+    "list": "Oem",
+    "description": "YLog\nReads ro.product.device. Uses SQLite Database. Reads/writes to External Storage. Hardcoded URL: www.google.com. Don't know what it's supposed to log but disabling it doesn't seem to affect usage.\nNote: sprd = Spreadtrum",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   }
 ]
