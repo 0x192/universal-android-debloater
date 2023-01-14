@@ -417,15 +417,13 @@ impl List {
                         });
 
                 let packages_scrollable = scrollable(packages)
-                    .scrollbar_margin(2)
                     .height(Length::FillPortion(6))
                     .style(style::Scrollable::Packages);
 
                 // let mut packages_v: Vec<&str> = self.packages.lines().collect();
 
-                let description_scroll = scrollable(text(&self.description))
-                    .scrollbar_margin(7)
-                    .style(style::Scrollable::Description);
+                let description_scroll =
+                    scrollable(text(&self.description)).style(style::Scrollable::Description);
 
                 let description_panel = container(description_scroll)
                     .height(Length::FillPortion(2))
