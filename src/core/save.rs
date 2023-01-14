@@ -66,10 +66,7 @@ pub async fn backup_phone(
                 Err(err) => Err(err.to_string()),
             }
         }
-        Err(err) => {
-            error!("[BACKUP]: {}", err);
-            Err(err.to_string())
-        }
+        Err(err) => Err(err.to_string()),
     }
 }
 
@@ -173,6 +170,6 @@ pub fn restore_backup(
             }
             Ok(commands)
         }
-        Err(e) => Err("[BACKUP]: ".to_owned() + &e.to_string()),
+        Err(e) => Err(e.to_string()),
     }
 }

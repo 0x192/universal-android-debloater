@@ -2,7 +2,7 @@ use crate::core::config::{BackupSettings, Config, DeviceSettings, GeneralSetting
 use crate::core::save::{
     backup_phone, list_available_backup_user, list_available_backups, restore_backup, BACKUP_DIR,
 };
-use crate::core::sync::{perform_adb_commands, CommandType, Phone};
+use crate::core::sync::{get_android_sdk, perform_adb_commands, CommandType, Phone};
 use crate::core::theme::Theme;
 use crate::core::utils::{open_url, string_to_theme, unavailable_users, DisplayablePath};
 use crate::gui::style;
@@ -158,8 +158,12 @@ impl Settings {
                         }
                     }
                     if r_packages.is_empty() {
-                        self.device.backup.backup_state =
-                            "Device state is already restored".to_string();
+                        if get_android_sdk() == 0 {
+                            self.device.backup.backup_state = "Device is not connected".to_string();
+                        } else {
+                            self.device.backup.backup_state =
+                                "Device state is already restored".to_string();
+                        }
                     }
                     info!(
                         "[RESTORE] Restoring backup {}",
@@ -168,8 +172,8 @@ impl Settings {
                     Command::batch(commands)
                 }
                 Err(e) => {
-                    self.device.backup.backup_state = format!("ERROR: {e}");
-                    error!("[BACKUP] {}", e);
+                    self.device.backup.backup_state = e.to_string();
+                    error!("{} - {}", self.device.backup.selected.as_ref().unwrap(), e);
                     Command::none()
                 }
             },
