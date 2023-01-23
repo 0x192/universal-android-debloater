@@ -1782,6 +1782,33 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.android.hwaps",
+    "list": "Oem",
+    "description": "Bonuses program from Honor Club. They don't work outside China anyway.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.hwouc",
+    "list": "Oem",
+    "description": "OTA updates. Safe to remove if you have a very outdated device or flashed recovery.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.android.hwupgradeguide",
+    "list": "Oem",
+    "description": "Responsible for the initial setup of the device after the first launch, or rather one of the stages of the initial setup",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.android.instantonline",
     "list": "Oem",
     "description": "no noticable consequences\n",
@@ -1816,6 +1843,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.projectmenu",
+    "list": "Oem",
+    "description": "Referred as Huawei phones' secret menu\nMore info:\nhttps://consumer.huawei.com/en/community/details/Tips-Tricks-5-Secret-Menu-Codes-That-Unlock-Hidden-Features-on-Your-Huawei-Smartphone/topicId_5248/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.android.pushagent",
@@ -1881,6 +1917,15 @@
     "removal": "Recommended"
   },
   {
+  "id": "com.huawei.autoinstallapkfrommcc",
+  "list": "Oem",
+  "description": "This service after system boots up, is checking what mobile carrier you are using, then loads a list of packages and then installs/uninstalls them based on MCC codes.\nCan possibly be abused by malware. More info:\nhttps://forum.xda-developers.com/t/investigating-huawei-system-app-your-help-needed.3995621/",
+  "dependencies": [],
+  "neededBy": [],
+  "labels": [],
+  "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.bd",
     "list": "Oem",
     "description": "HwUE (Huawei UserExperience)\nWhen a company call a something 'UserExperience' you know you don't need this.\nAnalytics service, run at boot. Collect information about packages/apps usages.\nHas a nice custom permission called com.huawei.permission.BIG_DATA\n",
@@ -1911,6 +1956,15 @@
     "id": "com.huawei.browserhomepage",
     "list": "Oem",
     "description": "Huawei Browser component.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.behaviorauth",
+    "list": "Oem",
+    "description": "Pre-installed spyware which continuously analyses the user’s behaviour, using nothing but the sensor data produced by the device.\nIt looks at the way a user interacts with the device, what activities are being performed and how these activities are being performed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2433,6 +2487,15 @@
     "id": "com.huawei.calendar",
     "list": "Oem",
     "description": "Huawei Calendar app.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.calendar",
+    "list": "Oem",
+    "description": "Huawei's stock Camera app",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6948,6 +7011,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.cts.ctsshim",
+    "list": "Aosp",
+    "description": "Compatibility Test Suite\nUsed by manufacturer to test your copy of the device for performance. It just exists and doesn't run in background. More info:\nhttps://source.android.com/docs/compatibility/cts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.android.deskclock",
     "list": "Aosp",
     "description": "AOSP Clock app\nSome OEMs (like Huawei & Xiaomi) use the same package name for their app.\n",
@@ -7056,6 +7128,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.internal.display.cutout.emulation.narrow",
+    "list": "Aosp",
+    "description": "Display cutout variant\nhttps://developer.android.com/develop/ui/views/layout/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.internal.display.cutout.emulation.noCutout",
     "list": "Aosp",
     "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
@@ -7075,6 +7156,15 @@
   },
   {
     "id": "com.android.internal.display.cutout.emulation.waterfall",
+    "list": "Aosp",
+    "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.internal.display.cutout.emulation.wide",
     "list": "Aosp",
     "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
     "dependencies": [],
@@ -16695,6 +16785,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.partnerbrowsercustomizations.tmobile",
+    "list": "Carrier",
+    "description": "The proprietary application of the mobile operator T-Mobile, presumably displays ads, is responsible for the operation of some of the operator's settings",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.android.chrome",
     "list": "Google",
     "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background.\nJust use Firefox instead, it's FOSS and functionally superior.. not that it's a high bar to clear when Chrome on Android has been slowly getting worse over the last few years.",
@@ -20538,6 +20637,15 @@
     "removal": "Expert"
   },
   {
+  "id": "com.android.supl",
+  "list": "Aosp",
+  "description": "Secure User Plane Location\nA required thing for A-GPS to work",
+  "dependencies": [],
+  "neededBy": [],
+  "labels": [],
+  "removal": "Expert"
+  },
+  {
     "id": "com.oneplus.geoiptime",
     "list": "Oem",
     "description": "Set the Timezone (it is not a NTP client). Automatically starts at boot and connects to checkip.amazonaws.com  and gateway.oneplus.com.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
@@ -20745,6 +20853,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.google.android.overlay.settingsProvider",
+    "list": "Aosp",
+    "description": "Receives and applies settings received in a text or service message. It's better to leave it, because some wrote about the fall of programs after removal",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.aura.oobe.kbdi",
     "list": "Oem",
     "description": "Appcloud\nPersistent notification until you click on it and agree to install games. Sort of game cloud pre-installed in some Xiaomi phones\nSafe to remove.",
@@ -20887,5 +21004,41 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "androidhwext",
+    "list": "Oem",
+    "description": "The framework responsible for the themes (even the standard one) of EMUI to launch. Also, it's the core for the Themes app. REMOVING IT CAUSES A BOOTLOOP!",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.android.frameworkres.overlay",
+    "list": "Aosp",
+    "description": "Runtime Resource Overlay\nThis framework provides the ability to replace application resources while the application is running. More info:\nhttps://source.android.com/docs/core/runtime/rros",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.frameworkhwnext.honor",
+    "list": "Oem",
+    "description": "Framework necessary for Themes app to launch",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.huawei.HiMediaEngine",
+    "list": "Oem",
+    "description": "Either it's a core of Huawei Music online part or the Huawei's TV app remote control. In both ways it isn't useful anyway.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
