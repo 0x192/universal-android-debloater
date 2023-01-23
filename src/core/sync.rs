@@ -41,10 +41,11 @@ impl std::fmt::Display for Phone {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Copy)]
+#[derive(Default, Debug, Clone, PartialEq, Eq, Copy)]
 pub struct User {
     pub id: u16,
     pub index: usize,
+    pub protected: bool,
 }
 
 impl std::fmt::Display for User {
@@ -241,7 +242,7 @@ pub fn apply_pkg_state_commands(
 
 pub fn action_handler(
     selected_user: &User,
-    package: &CorePackage,
+    package: CorePackage,
     phone: &Phone,
     settings: &DeviceSettings,
 ) -> Vec<(Option<usize>, String)> {
@@ -295,6 +296,7 @@ pub fn request_builder(
     if !users.is_empty() {
         users
             .iter()
+            .filter(|&u| !u.protected)
             .flat_map(|u| {
                 commands
                     .iter()
@@ -340,6 +342,10 @@ pub fn get_phone_brand() -> String {
     )
 }
 
+pub fn is_protected_user(user_id: &str) -> bool {
+    adb_shell_command(true, &("pm list packages --user ".to_owned() + user_id)).is_err()
+}
+
 pub fn get_user_list() -> Vec<User> {
     #[dynamic]
     static RE: Regex = Regex::new(r"\{([0-9]+)").unwrap();
@@ -350,6 +356,7 @@ pub fn get_user_list() -> Vec<User> {
             .map(|(i, u)| User {
                 id: u.as_str()[1..].parse().unwrap(),
                 index: i,
+                protected: is_protected_user(&u.as_str()[1..]),
             })
             .collect(),
         Err(_) => vec![],

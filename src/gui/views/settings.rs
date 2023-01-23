@@ -4,7 +4,7 @@ use crate::core::save::{
 };
 use crate::core::sync::{get_android_sdk, perform_adb_commands, CommandType, Phone};
 use crate::core::theme::Theme;
-use crate::core::utils::{open_url, string_to_theme, unavailable_users, DisplayablePath};
+use crate::core::utils::{open_url, string_to_theme, DisplayablePath};
 use crate::gui::style;
 use crate::gui::views::list::PackageInfo;
 use crate::gui::widgets::package_row::PackageRow;
@@ -182,11 +182,7 @@ impl Settings {
         }
     }
 
-    pub fn view(
-        &self,
-        packages: &[Vec<PackageRow>],
-        phone: &Phone,
-    ) -> Element<Message, Renderer<Theme>> {
+    pub fn view(&self, phone: &Phone) -> Element<Message, Renderer<Theme>> {
         let radio_btn_theme = Theme::ALL
             .iter()
             .fold(row![].spacing(10), |column, option| {
@@ -242,9 +238,17 @@ impl Settings {
             text("This will not affect the following protected work profile users: ")
                 .size(15)
                 .style(style::Text::Commentary),
-            text(unavailable_users(&phone.user_list, packages).join(", "))
-                .size(15)
-                .style(style::Text::Danger)
+            text(
+                phone
+                    .user_list
+                    .iter()
+                    .filter(|&u| u.protected)
+                    .map(|u| u.id.to_string())
+                    .collect::<Vec<String>>()
+                    .join(", ")
+            )
+            .size(15)
+            .style(style::Text::Danger)
         ];
 
         let multi_user_mode_checkbox = checkbox(

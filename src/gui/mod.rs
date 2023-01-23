@@ -306,7 +306,7 @@ impl Application for UadGui {
                 .map(Message::AboutAction),
             View::Settings => self
                 .settings_view
-                .view(&self.apps_view.phone_packages, &selected_device)
+                .view(&selected_device)
                 .map(Message::SettingsAction),
         };
 

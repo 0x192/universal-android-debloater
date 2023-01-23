@@ -1,3 +1,4 @@
+use crate::core::config::DeviceSettings;
 use crate::core::sync::{action_handler, perform_adb_commands, CommandType, Phone, User};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::{
@@ -94,7 +95,7 @@ impl List {
         list_update_state: &mut UadListState,
         message: Message,
     ) -> Command<Message> {
-        let i_user = self.selected_user.unwrap_or(User { id: 0, index: 0 }).index;
+        let i_user = self.selected_user.unwrap_or_default().index;
         match message {
             Message::RestoringDevice(output) => {
                 if let Ok(res) = output {
@@ -137,7 +138,7 @@ impl List {
                 self.selected_package_state = Some(PackageState::Enabled);
                 self.selected_removal = Some(Removal::Recommended);
                 self.selected_list = Some(UadList::All);
-                self.selected_user = Some(User { id: 0, index: 0 });
+                self.selected_user = Some(User::default());
                 Self::filter_package_lists(self);
                 self.loading_state = LoadingState::Ready("".to_string());
                 Command::none()
@@ -216,33 +217,13 @@ impl List {
                         }
                         Command::none()
                     }
-                    RowMessage::ActionPressed => {
-                        let mut commands = vec![];
-                        let actions = action_handler(
-                            &self.selected_user.unwrap(),
-                            &package.into(),
-                            selected_device,
-                            &settings.device,
-                        );
-
-                        for (i, (i_user, action)) in actions.into_iter().enumerate() {
-                            let p_info = PackageInfo {
-                                i_user,
-                                index: i_package,
-                                removal: package.removal.to_string(),
-                            };
-                            // Only the first command can change the package state
-                            commands.push(Command::perform(
-                                perform_adb_commands(action, CommandType::PackageManager(p_info)),
-                                if i == 0 {
-                                    Message::ChangePackageState
-                                } else {
-                                    |_| Message::Nothing
-                                },
-                            ));
-                        }
-                        Command::batch(commands)
-                    }
+                    RowMessage::ActionPressed => Command::batch(build_action_pkg_commands(
+                        &self.selected_user.unwrap(),
+                        package,
+                        selected_device,
+                        &settings.device,
+                        i_package,
+                    )),
                     RowMessage::PackagePressed => {
                         self.description = package.clone().description;
                         package.current = true;
@@ -268,30 +249,13 @@ impl List {
                 }
                 let mut commands = vec![];
                 for i in selected_packages {
-                    let actions = action_handler(
+                    commands.append(&mut build_action_pkg_commands(
                         &self.selected_user.unwrap(),
-                        &(&self.phone_packages[i_user][i]).into(),
+                        &self.phone_packages[i_user][i],
                         selected_device,
                         &settings.device,
-                    );
-
-                    let package = &mut self.phone_packages[i_user][i];
-                    for (j, (i_user, action)) in actions.into_iter().enumerate() {
-                        let p_info = PackageInfo {
-                            i_user,
-                            index: i,
-                            removal: package.removal.to_string(),
-                        };
-                        // Only the first command can change the package state
-                        commands.push(Command::perform(
-                            perform_adb_commands(action, CommandType::PackageManager(p_info)),
-                            if j == 0 {
-                                Message::ChangePackageState
-                            } else {
-                                |_| Message::Nothing
-                            },
-                        ));
-                    }
+                        i,
+                    ));
                 }
                 Command::batch(commands)
             }
@@ -315,7 +279,7 @@ impl List {
                     if !settings.device.multi_user_mode || p.i_user.is_none() {
                         package.state = package.state.opposite(settings.device.disable_mode);
                         package.selected = false;
-                    } else {
+                    } else if !self.phone_packages[p.i_user.unwrap()].is_empty() {
                         self.phone_packages[p.i_user.unwrap()][p.index].state = self.phone_packages
                             [p.i_user.unwrap()][p.index]
                             .state
@@ -604,4 +568,35 @@ fn waiting_view<'a>(
         .center_x()
         .style(style::Container::default())
         .into()
+}
+
+fn build_action_pkg_commands(
+    selected_user: &User,
+    package: &PackageRow,
+    device: &Phone,
+    settings: &DeviceSettings,
+    p_index: usize,
+) -> Vec<Command<Message>> {
+    let actions = action_handler(selected_user, package.into(), device, settings);
+
+    let mut commands = vec![];
+    let mut user_id = None;
+    for (j, (i_user, action)) in actions.into_iter().enumerate() {
+        let p_info = PackageInfo {
+            i_user,
+            index: p_index,
+            removal: package.removal.to_string(),
+        };
+        // Only the first command can change the package state
+        commands.push(Command::perform(
+            perform_adb_commands(action, CommandType::PackageManager(p_info)),
+            if j == 0 || i_user != user_id {
+                Message::ChangePackageState
+            } else {
+                |_| Message::Nothing
+            },
+        ));
+        user_id = i_user
+    }
+    commands
 }

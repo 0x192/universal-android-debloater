@@ -88,7 +88,11 @@ pub fn list_available_backup_user(backup: DisplayablePath) -> Vec<User> {
 
             let mut users = vec![];
             for u in phone_backup.users {
-                users.push(User { id: u.id, index: 0 });
+                users.push(User {
+                    id: u.id,
+                    index: 0,
+                    protected: false,
+                });
             }
             users
         }
