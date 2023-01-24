@@ -2214,6 +2214,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.huawei.ohos.inputmethod",
+    "list": "Oem",
+    "description": "SMS/MMS recieving/sending service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.huawei.mycenter",
     "list": "Oem",
     "description": "Huawei Member Center\n Gives reward offers and news to Huawei users. Very intrusive app : 68 permissions inclusing CAMERA, ACCESS_FINE_LOCATIONtion, REQUEST_INSTALL_PACKAGES. Can run in the background and just after boot even if you haven't unlock your phone yet. Phones home.\nPithus analysis: https://beta.pithus.org/report/3af49c621aefeef0dca86a4f79b5f007d73698fa979d3ba1ac7d6f1ccaea9cdf",
@@ -2257,6 +2266,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.iconnect",
+    "list": "Oem",
+    "description": "AppGallery Connect\nDedicated to providing one-stop services for app creation, development, distribution, operations and engagement. Useless for ordinary users.\nMore info:\nhttps://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-introduction-0000001057492641",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.imedia.sws",
+    "list": "Oem",
+    "description": "Huawei Histen\nAn equaliser for Huawei devices. Removing it will cause other music apps' equalisers stop working.\nMore info:\nhttps://www.honor.ru/club/topicdetail/topicid-23039/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.intelligent",
@@ -2412,6 +2439,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.wifiprobqeservice",
+    "list": "Oem",
+    "description": "Performs Wi-Fi diagnostics",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.iflytek.speechsuite",
     "list": "Oem",
     "description": "Default voice input method from iflytek, a big chinese company (https://en.wikipedia.org/wiki/IFlytek)\nIFLytek was implicated in human rights violations : \nhttps://asia.nikkei.com/Economy/Trade-war/US-sanctions-8-China-tech-companies-over-role-in-Xinjiang-abuses\nArchive: https://web.archive.org/save/https://asia.nikkei.com/Economy/Trade-war/US-sanctions-8-China-tech-companies-over-role-in-Xinjiang-abuses\n",
@@ -2493,7 +2529,7 @@
     "removal": "Advanced"
   },
   {
-    "id": "com.huawei.calendar",
+    "id": "com.huawei.camera",
     "list": "Oem",
     "description": "Huawei's stock Camera app",
     "dependencies": [],
@@ -2527,6 +2563,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.printservice",
+    "list": "Oem",
+    "description": "Print service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.rcsserviceapplication",
+    "list": "Oem",
+    "description": "Huawei Rich Communication Service\nProvides sending messages to another Huawei phone",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.android.mediacenter",
@@ -19134,6 +19188,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.languagedownloader",
+    "list": "Oem",
+    "description": "Allows you to load the system languages when changing them",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.lbs",
+    "list": "Oem",
+    "description": "(China only) Huawei's own services needed to determine the location of the smartphone during screen locking by GPS. Also has the fingerprints permission. It sends this data to:\nwww.google.com\nstreamback.ff.avast.com\nconnectivitycheck.android.com",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.mirror",
     "list": "Oem",
     "description": "Huawei Mirror app.\nMirror like \"Glass\"",
@@ -19143,9 +19215,54 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.motionservice",
+    "list": "Oem",
+    "description": "Gestures pack related to device movement by your hand. Example: flip your phone to hang up a call",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.nb.service",
+    "list": "Oem",
+    "description": "Service for discovering nearby devices by GPS",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.nearby",
+    "list": "Oem",
+    "description": "Service for discovering nearby devices by anything but GPS",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.numberidentity",
+    "list": "Oem",
+    "description": "Designed to block unwanted calls, but only works properly in China",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.scanner",
     "list": "Oem",
     "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.screenrecorder",
+    "list": "Oem",
+    "description": "Stock screen recorder\nUseful only in pre-Android Pie for having system audio recording without root",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
