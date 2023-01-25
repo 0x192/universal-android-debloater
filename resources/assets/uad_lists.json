@@ -10405,8 +10405,8 @@
   },
   {
     "id": "com.samsung.android.appseparation",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Separated apps\nSeparated Apps isolates third-party apps in a sandboxed folder. The third-party apps cannot intercommunicate with work apps or access confidential work data. Keep in mind that Separated Apps does not provide the same privacy guarantees as the new work profile on company-owned devices. As such, it is not intended for personal apps and data.\nhttps://docs.samsungknox.com/admin/knox-platform-for-enterprise/separated-apps.htm\nPithus analysis:\nhttps://beta.pithus.org/report/cae5798a835dc434037400436fba27f5eed960c6f476a7b7d17d85a1425530c0",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
