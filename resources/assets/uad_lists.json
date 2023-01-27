@@ -10410,7 +10410,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.brightnessbackupservice",
