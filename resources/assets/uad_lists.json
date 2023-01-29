@@ -20887,5 +20887,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.miui.yellowpage",
+    "list": "Oem",
+    "description": "Mi YellowPages\nSome kind of caller id app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
