@@ -10558,8 +10558,8 @@
   },
   {
     "id": "com.samsung.android.scs",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Samsung Core Services (SCS)\nIt's an application for quick and easy provision of the main features used by Samsung applications through application updates rather than through the distribution of software updates.\nProvides improved search, extraction, and intelligence features based on text and images. Used in various Samsung applications such as Camera, Gallery, Messages, Contacts, Settings, and Finder.\nhttps://galaxystore.samsung.com/prepost/000005514204",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
