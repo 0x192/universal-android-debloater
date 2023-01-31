@@ -1,5 +1,5 @@
 use crate::core::config::DeviceSettings;
-use crate::core::sync::{action_handler, perform_adb_commands, CommandType, Phone, User};
+use crate::core::sync::{apply_pkg_state_commands, perform_adb_commands, CommandType, Phone, User};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::{
     load_debloat_lists, Opposite, Package, PackageState, Removal, UadList, UadListState,
@@ -26,15 +26,9 @@ pub struct Selection {
 
 #[derive(Debug, Default, Clone)]
 pub struct PackageInfo {
-    pub i_user: Option<usize>,
+    pub i_user: usize,
     pub index: usize,
     pub removal: String,
-}
-
-#[derive(Debug, Clone)]
-pub enum Action {
-    Remove,
-    Restore,
 }
 
 #[derive(Debug, Clone)]
@@ -81,7 +75,7 @@ pub enum Message {
     UserSelected(User),
     PackageStateSelected(PackageState),
     RemovalSelected(Removal),
-    ApplyActionOnSelection(Action),
+    ApplyActionOnSelection,
     List(usize, RowMessage),
     ChangePackageState(Result<CommandType, ()>),
     Nothing,
@@ -219,7 +213,7 @@ impl List {
                     }
                     RowMessage::ActionPressed => Command::batch(build_action_pkg_commands(
                         &self.selected_user.unwrap(),
-                        package,
+                        &self.phone_packages,
                         selected_device,
                         &settings.device,
                         i_package,
@@ -235,26 +229,15 @@ impl List {
                     }
                 }
             }
-            Message::ApplyActionOnSelection(action) => {
-                let mut selected_packages = self.selection.selected_packages.clone();
-
-                match action {
-                    Action::Remove => {
-                        selected_packages.retain(|&i| {
-                            self.phone_packages[i_user][i].state == PackageState::Enabled
-                        });
-                    }
-                    Action::Restore => selected_packages
-                        .retain(|&i| self.phone_packages[i_user][i].state != PackageState::Enabled),
-                }
+            Message::ApplyActionOnSelection => {
                 let mut commands = vec![];
-                for i in selected_packages {
+                for i in &self.selection.selected_packages {
                     commands.append(&mut build_action_pkg_commands(
                         &self.selected_user.unwrap(),
-                        &self.phone_packages[i_user][i],
+                        &self.phone_packages,
                         selected_device,
                         &settings.device,
-                        i,
+                        *i,
                     ));
                 }
                 Command::batch(commands)
@@ -273,19 +256,10 @@ impl List {
             }
             Message::ChangePackageState(res) => {
                 if let Ok(CommandType::PackageManager(p)) = res {
-                    let package = &mut self.phone_packages[i_user][p.index];
-                    update_selection_count(&mut self.selection, package.state, false);
+                    let package = &mut self.phone_packages[p.i_user][p.index];
+                    package.state = package.state.opposite(settings.device.disable_mode);
 
-                    if !settings.device.multi_user_mode || p.i_user.is_none() {
-                        package.state = package.state.opposite(settings.device.disable_mode);
-                        package.selected = false;
-                    } else if !self.phone_packages[p.i_user.unwrap()].is_empty() {
-                        self.phone_packages[p.i_user.unwrap()][p.index].state = self.phone_packages
-                            [p.i_user.unwrap()][p.index]
-                            .state
-                            .opposite(settings.device.disable_mode);
-                        self.phone_packages[p.i_user.unwrap()][p.index].selected = false;
-                    }
+                    update_selection_count(&mut self.selection, package.state, false);
                     self.selection
                         .selected_packages
                         .retain(|&s_i| s_i != p.index);
@@ -408,7 +382,7 @@ impl List {
                     restore_action,
                     self.selection.uninstalled + self.selection.disabled
                 )))
-                .on_press(Message::ApplyActionOnSelection(Action::Restore))
+                .on_press(Message::ApplyActionOnSelection)
                 .padding(5)
                 .style(style::Button::Primary);
 
@@ -416,7 +390,7 @@ impl List {
                     "{} selection ({})",
                     remove_action, self.selection.enabled
                 )))
-                .on_press(Message::ApplyActionOnSelection(Action::Remove))
+                .on_press(Message::ApplyActionOnSelection)
                 .padding(5)
                 .style(style::Button::Primary);
 
@@ -572,31 +546,38 @@ fn waiting_view<'a>(
 
 fn build_action_pkg_commands(
     selected_user: &User,
-    package: &PackageRow,
+    packages: &[Vec<PackageRow>],
     device: &Phone,
     settings: &DeviceSettings,
     p_index: usize,
 ) -> Vec<Command<Message>> {
-    let actions = action_handler(selected_user, package.into(), device, settings);
+    let pkg = &packages[selected_user.index][p_index];
+    let wanted_state = pkg.state.opposite(settings.disable_mode);
 
     let mut commands = vec![];
-    let mut user_id = None;
-    for (j, (i_user, action)) in actions.into_iter().enumerate() {
-        let p_info = PackageInfo {
-            i_user,
-            index: p_index,
-            removal: package.removal.to_string(),
-        };
-        // Only the first command can change the package state
-        commands.push(Command::perform(
-            perform_adb_commands(action, CommandType::PackageManager(p_info)),
-            if j == 0 || i_user != user_id {
-                Message::ChangePackageState
-            } else {
-                |_| Message::Nothing
-            },
-        ));
-        user_id = i_user
+    for u in device.user_list.iter().filter(|&&u| {
+        !u.protected
+            && (u != *selected_user || settings.multi_user_mode)
+            && packages[u.index][p_index].state != wanted_state
+    }) {
+        let u_pkg = packages[u.index][p_index].clone();
+        let actions = apply_pkg_state_commands(u_pkg.into(), &wanted_state, u, device);
+        for (j, action) in actions.into_iter().enumerate() {
+            let p_info = PackageInfo {
+                i_user: u.index,
+                index: p_index,
+                removal: pkg.removal.to_string(),
+            };
+            // Only the first command can change the package state
+            commands.push(Command::perform(
+                perform_adb_commands(action, CommandType::PackageManager(p_info)),
+                if j == 0 {
+                    Message::ChangePackageState
+                } else {
+                    |_| Message::Nothing
+                },
+            ));
+        }
     }
     commands
 }

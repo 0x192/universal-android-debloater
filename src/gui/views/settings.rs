@@ -142,7 +142,7 @@ impl Settings {
                     *nb_running_async_adb_commands = 0;
                     for p in &r_packages {
                         let p_info = PackageInfo {
-                            i_user: None,
+                            i_user: 0,
                             index: p.index,
                             removal: "RESTORE".to_string(),
                         };

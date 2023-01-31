@@ -150,7 +150,7 @@ pub fn restore_backup(
                         }
                     }
                     let p_commands = apply_pkg_state_commands(
-                        &package,
+                        package,
                         &backup_package.state,
                         &settings
                             .backup

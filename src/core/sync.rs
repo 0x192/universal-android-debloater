@@ -1,4 +1,3 @@
-use crate::core::config::DeviceSettings;
 use crate::core::uad_lists::PackageState;
 use crate::gui::views::list::PackageInfo;
 use crate::gui::widgets::package_row::PackageRow;
@@ -185,6 +184,15 @@ impl From<&mut PackageRow> for CorePackage {
         }
     }
 }
+impl From<PackageRow> for CorePackage {
+    fn from(pr: PackageRow) -> Self {
+        CorePackage {
+            name: pr.name.clone(),
+            state: pr.state,
+        }
+    }
+}
+
 impl From<&PackageRow> for CorePackage {
     fn from(pr: &PackageRow) -> Self {
         CorePackage {
@@ -195,11 +203,13 @@ impl From<&PackageRow> for CorePackage {
 }
 
 pub fn apply_pkg_state_commands(
-    package: &CorePackage,
+    package: CorePackage,
     wanted_state: &PackageState,
     selected_user: &User,
     phone: &Phone,
 ) -> Vec<String> {
+    // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
+    // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
     let commands = match wanted_state {
         PackageState::Enabled => {
             match package.state {
@@ -234,80 +244,21 @@ pub fn apply_pkg_state_commands(
         },
         _ => vec![],
     };
-    request_builder(commands, &package.name, &[*selected_user])
-        .iter()
-        .map(|(_, command)| command.clone())
-        .collect()
-}
-
-pub fn action_handler(
-    selected_user: &User,
-    package: CorePackage,
-    phone: &Phone,
-    settings: &DeviceSettings,
-) -> Vec<(Option<usize>, String)> {
-    // https://github.com/0x192/universal-android-debloater/wiki/ADB-reference
-    // ALWAYS PUT THE COMMAND THAT CHANGES THE PACKAGE STATE FIRST!
-    let commands = match package.state {
-        PackageState::Enabled => {
-            let commands = match settings.disable_mode {
-                true => vec!["pm disable-user", "am force-stop", "pm clear"],
-                false => vec!["pm uninstall"],
-            };
-
-            match phone.android_sdk {
-                sdk if sdk >= 23 => commands,            // > Android Marshmallow (6.0)
-                21 | 22 => vec!["pm hide", "pm clear"],  // Android Lollipop (5.x)
-                19 | 20 => vec!["pm block", "pm clear"], // Android KitKat (4.4/4.4W)
-                _ => vec!["pm uninstall"], // Disable mode is unavailable on older devices because the specific ADB commands need root
-            }
-        }
-        PackageState::Uninstalled => {
-            match phone.android_sdk {
-                i if i >= 23 => vec!["cmd package install-existing"],
-                21 | 22 => vec!["pm unhide"],
-                19 | 20 => vec!["pm unblock", "pm clear"],
-                _ => vec![], // Impossible action already prevented by the GUI
-            }
-        }
-        // `pm enable` doesn't work without root before Android 6.x and this is most likely the same on even older devices too.
-        // Should never happen as disable_mode is unavailable on older devices
-        PackageState::Disabled => match phone.android_sdk {
-            i if i >= 23 => vec!["pm enable"],
-            _ => vec!["pm enable"],
-        },
-        PackageState::All => vec![], // This can't happen (like... never)
-    };
-
     if phone.android_sdk < 21 {
-        request_builder(commands, &package.name, &[])
-    } else if settings.multi_user_mode {
-        request_builder(commands, &package.name, &phone.user_list)
+        request_builder(commands, &package.name, None)
     } else {
-        request_builder(commands, &package.name, &[*selected_user])
+        request_builder(commands, &package.name, Some(selected_user))
     }
 }
 
-pub fn request_builder(
-    commands: Vec<&str>,
-    package: &str,
-    users: &[User],
-) -> Vec<(Option<usize>, String)> {
-    if !users.is_empty() {
-        users
-            .iter()
-            .filter(|&u| !u.protected)
-            .flat_map(|u| {
-                commands
-                    .iter()
-                    .map(|c| (Some(u.index), format!("{} --user {} {}", c, u.id, package)))
-            })
-            .collect()
-    } else {
+pub fn request_builder(commands: Vec<&str>, package: &str, user: Option<&User>) -> Vec<String> {
+    if let Some(u) = user {
         commands
             .iter()
-            .map(|c| (None, format!("{c} {package}")))
+            .map(|c| format!("{} --user {} {}", c, u.id, package))
             .collect()
+    } else {
+        commands.iter().map(|c| format!("{c} {package}")).collect()
     }
 }
 
