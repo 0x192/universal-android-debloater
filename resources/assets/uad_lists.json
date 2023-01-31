@@ -1797,7 +1797,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.android.hwupgradeguide",
@@ -2130,7 +2130,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.huawei.himovie.overseas",
@@ -2181,6 +2181,15 @@
     "id": "com.huawei.HwMultiScreenShot",
     "list": "Oem",
     "description": "Scrolling screenshot feature\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.hwpanpayservice",
+    "list": "Oem",
+    "description": "Payment related service. Safe to remove.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2385,6 +2394,16 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.systemmanager",
+    "list": "Oem",
+    "description": "Huawei System Manager app\nDO NOT remove this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  
+  {
     "id": "com.huawei.tips",
     "list": "Oem",
     "description": "HUAWEI Feature Advisor\nPeriodically gives you notifications on how to use certain features on your phone.\n",
@@ -2424,6 +2443,15 @@
     "id": "com.huawei.wallet",
     "list": "Oem",
     "description": "Huawei Wallet (renammed Huawei Pay)\nMobile payment and e-wallet service for Huawei devices that offers the same services as Apple Pay, Samsung Pay etc...\nhttps://consumer.huawei.com/en/mobileservices/huawei-wallet/\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.wallet.sdk.walletsdk",
+    "list": "Oem",
+    "description": "Wallet app\nSafe to remove.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
