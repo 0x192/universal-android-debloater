@@ -4007,7 +4007,7 @@
   {
     "id": "com.samsung.android.mobileservice",
     "list": "Oem",
-    "description": "Samsung Experience Service (https://play.google.com/store/apps/details?id=com.samsung.android.mobileservice)\nHandle you samsung account and is needed to use some samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\n",
+    "description": "Group Sharing\nHandle you samsung account and is needed to use some samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\nhttps://techshift.net/what-is-samsung-group-sharing/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6554,7 +6554,7 @@
   {
     "id": "com.samsung.android.sm.policy",
     "list": "Oem",
-    "description": "SPCM (Striped Phase Change Memory ?) client.\nIt kills rarely used apps running in background.\nSurely linked to Smart Manager. I think it can have a very bad impact on battery performance if deleted. I'm testing.\n",
+    "description": "SCPM (SeCurity Policy Manager?) client.\nIt kills rarely used apps running in background.\nSurely linked to Smart Manager. I think it can have a very bad impact on battery performance if deleted. I'm testing.\nPerhaps the replacement of Samsung Security Policy Update\nhttps://www.samsung.com/levant/support/mobile-devices/what-is-security-enhancement-for-android/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10387,12 +10387,12 @@
   },
   {
     "id": "com.samsung.android.app.sharelive",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Samsung QuickShare\nRelated to `com.samsung.android.aware.service`.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.app.telephonyui",
