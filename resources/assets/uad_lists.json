@@ -8154,12 +8154,66 @@
     "removal": "Recommended"
   },
   {
+    "id": "cn.zte.recorder",
+    "list": "Oem",
+    "description": "ZTE Voice Recorder with... 33 permissions and talking with Baidu servers. Pithus analysis: https://beta.pithus.org/report/bab47d32f5b93cdf4d3a3cb082d1d0e7ba3e323356391b2d46e63617c1d15324",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.zte.videoplayer",
+    "list": "Oem",
+    "description": "ZTE Video Player with INTERNET and ACCESS_NETWORK_STATE permissions\nPithus analysis: https://beta.pithus.org/report/caf2da956d33c5550e42d4250b0fa31dc605f39545c2eff36438fd88a0fc7c28",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.zte.heartyservice.strategy",
+    "list": "Oem",
+    "description": "Process killer, unloads programs from memory.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.zte.burntest.camera",
+    "list": "Oem",
+    "description": "Possibly a hidden stress testing app for camera.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
     "id": "com.zte.weather",
     "list": "Oem",
     "description": "ZTE Weather app.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.zte.contacts.sub",
+    "list": "Oem",
+    "description": "Possibly related to contact sync.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.zte.privacypolicy",
+    "list": "Oem",
+    "description": "ZTE privacy policy app.",
+    "dependencies": null,
+    "neededBy": null,
+    "labels": null,
     "removal": "Recommended"
   },
   {
