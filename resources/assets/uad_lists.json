@@ -10495,7 +10495,7 @@
   },
   {
     "id": "com.samsung.android.mcfds",
-    "list": "OEM",
+    "list": "Oem",
     "description": "Samsung Continuity Service\nhttps://galaxystore.samsung.com/prepost/000006390343?appId=com.samsung.android.mcfds",
     "dependencies": [],
     "neededBy": [],
