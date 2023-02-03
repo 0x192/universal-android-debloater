@@ -10423,12 +10423,12 @@
   },
   {
     "id": "com.samsung.android.accessibility.talkback",
-    "list": "Pending",
-    "description": "\n",
+    "list": "OEM",
+    "description": "Samsung Talkback.\nhttps://galaxystore.samsung.com/prepost/000005296612?appId=com.samsung.android.accessibility.talkback",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.app.earphonetypec",
