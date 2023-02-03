@@ -10423,7 +10423,7 @@
   },
   {
     "id": "com.samsung.android.accessibility.talkback",
-    "list": "OEM",
+    "list": "Oem",
     "description": "Samsung Talkback.\nhttps://galaxystore.samsung.com/prepost/000005296612?appId=com.samsung.android.accessibility.talkback",
     "dependencies": [],
     "neededBy": [],
