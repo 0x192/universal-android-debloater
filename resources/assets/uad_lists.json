@@ -1784,7 +1784,7 @@
   {
     "id": "com.huawei.android.hwaps",
     "list": "Oem",
-    "description": "Bonuses program from Honor Club. They don't work outside China anyway.",
+    "description": "Bonuses program from Honor Club. They don't work outside China anyway. It's part of the PowerGenie, the task killer app.\nIf you want to remove it, uninstall `com.huawei.powergenie` along the way.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2532,7 +2532,7 @@
   {
     "id": "com.huawei.android.internal.app",
     "list": "Oem",
-    "description": "Component of Huawei sharing. I read someone saying \"Do not remove or you won't be able to send files to apps\".\nCan someone test it ? \n",
+    "description": "Component of Huawei sharing\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
