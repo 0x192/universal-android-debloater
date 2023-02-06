@@ -107,7 +107,12 @@ impl Application for UadGui {
                     None => devices_list.first().map(|x| x.to_owned()),
                 };
                 self.devices_list = devices_list;
-                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+
+                #[allow(unused_must_use)]
+                {
+                    self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+                }
+
                 self.update(Message::AppsAction(AppsMessage::LoadUadList(true)))
             }
             Message::AppsPress => {
@@ -152,13 +157,16 @@ impl Application for UadGui {
                 if let SettingsMessage::RestoringDevice(ref output) = msg {
                     self.nb_running_async_adb_commands -= 1;
                     self.view = View::List;
-                    self.apps_view.update(
-                        &mut self.settings_view,
-                        &mut self.selected_device.clone().unwrap_or_default(),
-                        &mut self.update_state.uad_list,
-                        AppsMessage::RestoringDevice(output.clone()),
-                    );
 
+                    #[allow(unused_must_use)]
+                    {
+                        self.apps_view.update(
+                            &mut self.settings_view,
+                            &mut self.selected_device.clone().unwrap_or_default(),
+                            &mut self.update_state.uad_list,
+                            AppsMessage::RestoringDevice(output.clone()),
+                        );
+                    }
                     if self.nb_running_async_adb_commands == 0 {
                         return self.update(Message::RefreshButtonPressed);
                     }
@@ -221,7 +229,11 @@ impl Application for UadGui {
                 );
                 info!("{:-^65}", "-");
                 self.apps_view.loading_state = ListLoadingState::FindingPhones("".to_string());
-                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+
+                #[allow(unused_must_use)]
+                {
+                    self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+                }
                 self.update(Message::AppsAction(AppsMessage::LoadPhonePackages((
                     self.apps_view.uad_lists.clone(),
                     UadListState::Done,

@@ -28,6 +28,7 @@ pub enum Container {
     Invisible,
     Frame,
     BorderedFrame,
+    Background,
 }
 
 impl container::StyleSheet for Theme {
@@ -48,6 +49,12 @@ impl container::StyleSheet for Theme {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().normal.error,
+            },
+            Container::Background => container::Appearance {
+                background: Some(Background::Color(self.palette().base.background)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 5.0,
+                ..container::Appearance::default()
             },
         }
     }
