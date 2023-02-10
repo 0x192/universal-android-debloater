@@ -120,7 +120,8 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
     ```
   </details>
   </p>
-- If you already have installed the Android SDK, you already have ADB, just ensure that `platform-tools` is in the system-wide `PATH` environment variable (you need to know where the SDK is installed to do this).
+
+- If you have the Android SDK, you already have ADB, just ensure that `platform-tools` is in the system-wide `PATH` environment variable (you need to know where the SDK is installed to do this).
 If you don't have admin privileges, [download `platform-tools`](https://developer.android.com/studio/releases/platform-tools#downloads), then add it to your user `PATH`.
 
 - Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases). Take the `opengl` version only if the default version (with a Vulkan backend) doesn't launch.
