@@ -17849,7 +17849,7 @@
   {
     "id": "com.google.android.webview",
     "list": "Google",
-    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nBased on Chrome.\n\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
+    "description": "Android System WebView (https://play.google.com/store/apps/details?id=com.google.android.webview)\nAllows Android apps to display content from the web directly inside the app.\nMake sure you have a replacement installed if you delete it as many third-party apps (that use WebView) will crash.\nBased on Chrome.\n\nBromite is an open-source, privacy-oriented Webview replacement: https://www.bromite.org/system_web_view",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
