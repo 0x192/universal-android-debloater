@@ -393,6 +393,7 @@ impl pick_list::StyleSheet for Theme {
 pub enum Text {
     #[default]
     Default,
+    Ok,
     Danger,
     Commentary,
     Color(Color),
@@ -410,6 +411,9 @@ impl text::StyleSheet for Theme {
     fn appearance(&self, style: Self::Style) -> text::Appearance {
         match style {
             Text::Default => Default::default(),
+            Text::Ok => text::Appearance {
+                color: Some(self.palette().bright.secondary),
+            },
             Text::Danger => text::Appearance {
                 color: Some(self.palette().bright.error),
             },

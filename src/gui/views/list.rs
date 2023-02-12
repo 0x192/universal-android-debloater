@@ -446,6 +446,7 @@ impl List {
                         content.padding(10),
                         self.apply_selection_modal(
                             selected_device,
+                            settings,
                             &self.phone_packages[self.selected_user.unwrap().index],
                         ),
                     )
@@ -458,11 +459,12 @@ impl List {
         }
     }
 
-    fn apply_selection_modal<'a>(
+    fn apply_selection_modal(
         &self,
         device: &Phone,
+        settings: &Settings,
         packages: &[PackageRow],
-    ) -> Element<'a, Message, Renderer<Theme>> {
+    ) -> Element<Message, Renderer<Theme>> {
         let mut h_recap: HashMap<Removal, (u8, u8)> = HashMap::new();
         for p in packages.iter().filter(|p| p.selected) {
             if p.state != PackageState::Uninstalled {
@@ -521,7 +523,7 @@ impl List {
             .iter()
             .filter(|&&r| r != Removal::All)
             .fold(column![].spacing(6).width(Length::Fill), |col, r| {
-                col.push(recap(&mut h_recap, *r))
+                col.push(recap(&settings, &mut h_recap, *r))
             });
 
         container(
@@ -681,6 +683,7 @@ fn build_action_pkg_commands(
 }
 
 fn recap<'a>(
+    settings: &Settings,
     recap: &mut HashMap<Removal, (u8, u8)>,
     removal: Removal,
 ) -> Element<'a, Message, Renderer<Theme>> {
@@ -689,16 +692,24 @@ fn recap<'a>(
             text(removal).size(25).width(Length::FillPortion(1)),
             vertical_rule(5),
             row![
-                "Remove ",
+                if settings.device.disable_mode {
+                    text("Disable").style(style::Text::Danger)
+                } else {
+                    text("Remove").style(style::Text::Danger)
+                },
                 horizontal_space(Length::Fill),
-                text(recap.entry(removal).or_insert((0, 0)).0.to_string())
+                text(recap.entry(removal).or_insert((0, 0)).0.to_string()).style(style::Text::Danger)
             ]
             .width(Length::FillPortion(1)),
             vertical_rule(5),
             row![
-                "Restore ",
+                if settings.device.disable_mode {
+                    text("Enable").style(style::Text::Ok)
+                } else {
+                    text("Restore").style(style::Text::Ok)
+                },
                 horizontal_space(Length::Fill),
-                text(recap.entry(removal).or_insert((0, 0)).1.to_string())
+                text(recap.entry(removal).or_insert((0, 0)).1.to_string()).style(style::Text::Ok)
             ]
             .width(Length::FillPortion(1))
         ]
