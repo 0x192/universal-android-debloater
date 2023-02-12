@@ -6,7 +6,7 @@
 **This software is still in an early stage of development. Check out the issues, and feel free to contribute!**
 
 ## Summary
-This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater), which aims to improve privacy and system performance (energy, speed, & memory) by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface).
+This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater), which aims to improve privacy and system performance (battery life, speed, & memory) by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface).
 
 Packages are as well documented as possible in order to provide a better understanding of what you can delete or not. The worst thing which could happen is removing an essential system package needed during boot causing then an unfortunate bootloop. After about 5 failed system boots, the device will automatically reboot in recovery mode and you'll have to perform a FACTORY RESET. So make a backup first!
 
