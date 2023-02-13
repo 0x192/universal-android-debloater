@@ -20941,5 +20941,59 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "checkupdate.bluproducts.com.tracfoneupdate",
+    "list": "Oem",
+    "description": "Appears to just run the normal Google system update check so redundant.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.bjglobal.pcomonitor",
+    "list": "Carrier",
+    "description": "Periodically checks SIM status and reports to carrier.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.dti.tracfone",
+    "list": "Carrier",
+    "description": "Tracfone's implementation of DT Ignite. Preloads a ton of junk apps on first run.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tracfone.generic.mysites",
+    "list": "Carrier",
+    "description": "MySites is an insecure bookmark online bookmark site",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tracfone.preload.accountservices",
+    "list": "Carrier",
+    "description": "Removal Highly Recommended! Device Pulse: Carrier Spyware. 3rd party description: One functionality unique to the Tracfone app is that it mirrors everything you do on your phone and stores the information on a cloud database. In addition, it also provides information about your phone's hardware, such as its RAM, battery health, etc.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.tf.tfsecurity",
+    "list": "Carrier",
+    "description": "Tracfone Carrier Unlock App.  This let's you enter the carrier provided unlock codes to unlock the phones carrier lock. If you're already unlocked or not unlocking, this is un-needed.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   }
 ]
