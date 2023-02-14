@@ -6995,7 +6995,7 @@
   {
     "id": "com.android.gallery3d",
     "list": "Aosp",
-    "description": "Xiaomi Gallery app",
+    "description": "Xiaomi Gallery app and the AOSP Gallery app\nIt may appear on Chinese OEMs as documented.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
