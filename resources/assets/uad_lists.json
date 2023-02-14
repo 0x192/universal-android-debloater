@@ -9812,7 +9812,16 @@
   {
     "id": "com.google.android.as",
     "list": "Google",
-    "description": "Android System Intelligence (previously Device Personalization Services) (https://play.google.com/store/apps/details?id=com.google.android.as)\nRuns in the background.\n\"Enables intelligent features across Android\", like: Live Caption, Screen Attention, Improved Copy-Paste, App Predictions in the launcher, Notification Smart Actions, Smart Text Selection and Linkifying text in apps.",
+    "description": "Android System Intelligence (previously Device Personalization Services) (https://play.google.com/store/apps/details?id=com.google.android.as)\nRuns in the background.\n\"Enables intelligent features across Android\", like: Live Caption, Screen Attention, Improved Copy-Paste, App Predictions in the launcher, Notification Smart Actions, Smart Text Selection and Linkifying text in apps.\nAlso known as device learning, e.g. enhanced keyboard auto suggestions, keeps the screen on when looking at it (with help of the camera), smart replies.\nhttps://milaq.net/android-bloatware",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.as.oss",
+    "list": "Google",
+    "description": "On-device behavior analysis\nEnables live caption, music recognition and smart replies.\nhttps://milaq.net/android-bloatware",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17166,6 +17175,15 @@
     "id": "com.google.android.apps.santatracker",
     "list": "Google",
     "description": "Google Santa Tracker (discontinued)",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.apps.scone",
+    "list": "Google",
+    "description": "Automatically switches basebands between LTE and 5G on demand",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
