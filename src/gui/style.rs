@@ -28,6 +28,7 @@ pub enum Container {
     Invisible,
     Frame,
     BorderedFrame,
+    Tooltip,
     Background,
 }
 
@@ -50,6 +51,14 @@ impl container::StyleSheet for Theme {
                 border_width: 1.0,
                 border_color: self.palette().normal.error,
             },
+            Container::Tooltip => container::Appearance {
+                background: Some(Background::Color(self.palette().base.foreground)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 8.0,
+                border_width: 1.0,
+                border_color: self.palette().normal.primary,
+            },
+
             Container::Background => container::Appearance {
                 background: Some(Background::Color(self.palette().base.background)),
                 text_color: Some(self.palette().bright.surface),

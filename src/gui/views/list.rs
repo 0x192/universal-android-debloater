@@ -6,6 +6,7 @@ use crate::core::uad_lists::{
 };
 use crate::core::utils::{fetch_packages, update_selection_count};
 use crate::gui::style;
+use crate::gui::widgets::navigation_menu::ICONS;
 use std::collections::HashMap;
 use std::env;
 
@@ -14,7 +15,7 @@ use crate::gui::widgets::modal::Modal;
 use crate::gui::widgets::package_row::{Message as RowMessage, PackageRow};
 use iced::widget::{
     button, column, container, horizontal_space, pick_list, radio, row, scrollable, text,
-    text_input, vertical_rule, Space,
+    text_input, tooltip, vertical_rule, Space,
 };
 use iced::{alignment, Alignment, Command, Element, Length, Renderer};
 
@@ -502,15 +503,31 @@ impl List {
             .center_x()
             .style(style::Container::Frame);
 
-        let explaination_ctn = container(
-        column![
-        text("The selected user will become the reference for the package state changes on the other users").style(style::Text::Danger),
-        text("EXAMPLE: you select user 0. If a selected package on user 0 is enabled and \
-        this same package is uninstalled on user 10, then the package on both users will be uninstalled.")
-        ].spacing(10)
-    )
-    .center_x()
-    .style(style::Container::BorderedFrame);
+        let explaination_ctn =
+            container(
+                row![
+                    text("The selected user will become the reference for the package state changes on the other users").style(style::Text::Danger),
+                    tooltip(
+                        text("\u{EA0C}")
+                            .font(ICONS)
+                            .width(Length::Units(17))
+                            .horizontal_alignment(alignment::Horizontal::Center)
+                            .style(style::Text::Commentary)
+                            .size(17),
+                        "Let's say you select user 0. If a selected package on user 0\n\
+                        is enabled and this same package is uninstalled on user 10,\n\
+                        then the package on both users will be uninstalled.",
+                        tooltip::Position::Top,
+                    )
+                    .gap(20)
+                    .padding(10)
+                    .size(17)
+                    .style(style::Container::Tooltip)
+                ].spacing(10)
+            )
+            .center_x()
+            .padding(10)
+            .style(style::Container::BorderedFrame);
 
         let modal_btn_row = row![
             button(text("Cancel")).on_press(Message::SelectionModalAction),
@@ -538,7 +555,7 @@ impl List {
                 column![
                     title_ctn,
                     users_ctn,
-                    row![explaination_ctn.padding(10)].padding([0, 10, 0, 10]),
+                    row![explaination_ctn].padding([0, 10, 0, 10]),
                     container(recap_view).padding(10),
                     modal_btn_row,
                 ]
@@ -698,7 +715,8 @@ fn recap<'a>(
                     text("Remove").style(style::Text::Danger)
                 },
                 horizontal_space(Length::Fill),
-                text(recap.entry(removal).or_insert((0, 0)).0.to_string()).style(style::Text::Danger)
+                text(recap.entry(removal).or_insert((0, 0)).0.to_string())
+                    .style(style::Text::Danger)
             ]
             .width(Length::FillPortion(1)),
             vertical_rule(5),
