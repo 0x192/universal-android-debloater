@@ -540,7 +540,7 @@ impl List {
             .iter()
             .filter(|&&r| r != Removal::All)
             .fold(column![].spacing(6).width(Length::Fill), |col, r| {
-                col.push(recap(&settings, &mut h_recap, *r))
+                col.push(recap(settings, &mut h_recap, *r))
             });
 
         container(
