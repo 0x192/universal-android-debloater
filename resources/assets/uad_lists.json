@@ -7029,7 +7029,7 @@
     "removal": "Expert"
   },
   {
-    "id": "om.android.inputmethod.pinyin",
+    "id": "com.android.inputmethod.pinyin",
     "list": "Oem",
     "description": "It is the built in software keyboard for LDPlayer. Getting rid of this breaks any keyboard input including from PC hardware keyboard.",
     "dependencies": [],
@@ -17976,7 +17976,7 @@
   {
     "id": "com.google.android.inputmethod.pinyin",
     "list": "Google",
-    "description": "Google Keyboard + Pinyin (chinese) characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)\n)\n",
+    "description": "Google Keyboard + Pinyin (Chinese) characters\n(https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
