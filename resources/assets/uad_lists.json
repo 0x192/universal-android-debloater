@@ -20941,5 +20941,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.ecomm.global.in",
+    "list": "Oem",
+    "description": "Samsung shop bloatware.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
