@@ -29,7 +29,7 @@
   {
     "id": "com.sonyericsson.conversations.res.overlay",
     "list": "Oem",
-    "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ?\n",
+    "description": "Used to display an overlay notification (above other apps) when you receive SMS with Sony SMS app?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
