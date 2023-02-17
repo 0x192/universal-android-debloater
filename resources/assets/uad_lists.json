@@ -2025,6 +2025,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.filemanager",
+    "list": "Oem",
+    "description": "Huawei file manager\nProbably fine to remove as long as you have another file manager.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.game.kitserver",
     "list": "Oem",
     "description": "Probably safe to remove if you don't play games\n",
@@ -2059,6 +2068,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.hms5gkit.agentservice",
+    "list": "Oem",
+    "description": "Something to do with 5G? For some reason this is also installed on a non-5G device. Can be uninstalled from phone settings so should be safe if you don't have 5G.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.huawei.hwid",
@@ -2176,6 +2194,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.hwdockbar",
+    "list": "Oem",
+    "description": "Huawei Multi-Window dock\nProbably fine to remove if you're not using Huawei Multi-Window features.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.huawei.HwMultiScreenShot",
