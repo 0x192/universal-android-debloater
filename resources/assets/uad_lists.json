@@ -20959,5 +20959,41 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.omusic.gPhone",
+    "list": "Misc",
+    "description": "friDay music\nA treasure house of global music, thousands of situational playlists, complete classification of Chinese, Western, Japanese and Korean, classical, and original soundtracks, allowing you to easily travel the digital music world.\nhttps://play.google.com/store/apps/details?id=com.omusic.gPhone",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.gohappy.mobileapp",
+    "list": "Misc",
+    "description": "Shopping app of friDay\nhttps://play.google.com/store/apps/details?id=com.gohappy.mobileacom.fetself",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.fet.fridaywallet",
+    "list": "Misc",
+    "description": "friDay Wealth Management\nProvides customized deposit goal progress management services\nhttps://play.google.com/store/apps/details?id=com.fet.fridaywallet",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "net.fetnet.fetvod",
+    "list": "Misc",
+    "description": "Streaming service\nRegistered members can watch the movies, dramas, variety shows and animations\nhttps://play.google.com/store/apps/details?id=net.fetnet.fetvod",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
