@@ -264,11 +264,9 @@ impl List {
                 if let Ok(CommandType::PackageManager(p)) = res {
                     let package = &mut self.phone_packages[p.i_user][p.index];
                     package.state = package.state.opposite(settings.device.disable_mode);
-
+                    package.selected = false;
                     update_selection_count(&mut self.selection, package.state, false);
-                    self.selection
-                        .selected_packages
-                        .retain(|&s_i| s_i != p.index);
+                    self.selection.selected_packages.retain(|&s_i| s_i != p.index);
                     Self::filter_package_lists(self);
                 }
                 Command::none()
