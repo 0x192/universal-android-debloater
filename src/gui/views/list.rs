@@ -379,13 +379,21 @@ impl List {
                     .width(Length::Fill)
                     .style(style::Container::Frame);
 
-                let review_selection = button(text(format!(
+                let review_selection = if !self.selection.selected_packages.is_empty() {
+                    button(text(format!(
+                                        "Review selection ({})",
+                                        self.selection.selected_packages.len()
+                                    )))
+                                    .on_press(Message::ApplyActionOnSelection)
+                                    .padding(5)
+                                    .style(style::Button::Primary)
+                    } else {
+                    button(text(format!(
                     "Review selection ({})",
                     self.selection.selected_packages.len()
                 )))
-                .on_press(Message::ApplyActionOnSelection)
                 .padding(5)
-                .style(style::Button::Primary);
+                };
 
                 let select_all_btn = button("Select all")
                     .padding(5)
