@@ -266,7 +266,9 @@ impl List {
                     package.state = package.state.opposite(settings.device.disable_mode);
                     package.selected = false;
                     update_selection_count(&mut self.selection, package.state, false);
-                    self.selection.selected_packages.retain(|&s_i| s_i != p.index);
+                    self.selection
+                        .selected_packages
+                        .retain(|&s_i| s_i != p.index);
                     Self::filter_package_lists(self);
                 }
                 Command::none()
@@ -379,18 +381,18 @@ impl List {
 
                 let review_selection = if !self.selection.selected_packages.is_empty() {
                     button(text(format!(
-                                        "Review selection ({})",
-                                        self.selection.selected_packages.len()
-                                    )))
-                                    .on_press(Message::ApplyActionOnSelection)
-                                    .padding(5)
-                                    .style(style::Button::Primary)
-                    } else {
+                        "Review selection ({})",
+                        self.selection.selected_packages.len()
+                    )))
+                    .on_press(Message::ApplyActionOnSelection)
+                    .padding(5)
+                    .style(style::Button::Primary)
+                } else {
                     button(text(format!(
-                    "Review selection ({})",
-                    self.selection.selected_packages.len()
-                )))
-                .padding(5)
+                        "Review selection ({})",
+                        self.selection.selected_packages.len()
+                    )))
+                    .padding(5)
                 };
 
                 let select_all_btn = button("Select all")
