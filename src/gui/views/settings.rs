@@ -252,7 +252,7 @@ impl Settings {
         ];
 
         let multi_user_mode_checkbox = checkbox(
-            "Affect all the users of the phone (not only the selected user)",
+            "Changing the state of a package on a user will also modify it for all other users",
             self.device.multi_user_mode,
             Message::MultiUserMode,
         )
