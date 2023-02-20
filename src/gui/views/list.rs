@@ -511,31 +511,32 @@ impl List {
             .center_x()
             .style(style::Container::Frame);
 
-        let explaination_ctn =
-            container(
-                row![
-                    text("The action for the selected user will be applied to all other users").style(style::Text::Danger),
-                    tooltip(
-                        text("\u{EA0C}")
-                            .font(ICONS)
-                            .width(Length::Units(17))
-                            .horizontal_alignment(alignment::Horizontal::Center)
-                            .style(style::Text::Commentary)
-                            .size(17),
-                        "Let's say you choose user 0. If a selected package on user 0\n\
+        let explaination_ctn = container(
+            row![
+                text("The action for the selected user will be applied to all other users")
+                    .style(style::Text::Danger),
+                tooltip(
+                    text("\u{EA0C}")
+                        .font(ICONS)
+                        .width(Length::Units(17))
+                        .horizontal_alignment(alignment::Horizontal::Center)
+                        .style(style::Text::Commentary)
+                        .size(17),
+                    "Let's say you choose user 0. If a selected package on user 0\n\
                         is enabled and if this same package is disabled on user 10,\n\
                         then the package on both users will be uninstalled.",
-                        tooltip::Position::Top,
-                    )
-                    .gap(20)
-                    .padding(10)
-                    .size(17)
-                    .style(style::Container::Tooltip)
-                ].spacing(10)
-            )
-            .center_x()
-            .padding(10)
-            .style(style::Container::BorderedFrame);
+                    tooltip::Position::Top,
+                )
+                .gap(20)
+                .padding(10)
+                .size(17)
+                .style(style::Container::Tooltip)
+            ]
+            .spacing(10),
+        )
+        .center_x()
+        .padding(10)
+        .style(style::Container::BorderedFrame);
 
         let modal_btn_row = row![
             button(text("Cancel")).on_press(Message::SelectionModalAction),
@@ -552,7 +553,14 @@ impl List {
             });
 
         container(
-            if device.user_list.iter().filter(|&u| !u.protected).collect::<Vec<&User>>().len() > 1 && settings.device.multi_user_mode
+            if device
+                .user_list
+                .iter()
+                .filter(|&u| !u.protected)
+                .collect::<Vec<&User>>()
+                .len()
+                > 1
+                && settings.device.multi_user_mode
             {
                 column![
                     title_ctn,
@@ -564,9 +572,14 @@ impl List {
                 .spacing(10)
                 .align_items(Alignment::Center)
             } else if !settings.device.multi_user_mode {
-                column![title_ctn, users_ctn, container(recap_view).padding(10), modal_btn_row,]
-                    .spacing(10)
-                    .align_items(Alignment::Center)
+                column![
+                    title_ctn,
+                    users_ctn,
+                    container(recap_view).padding(10),
+                    modal_btn_row,
+                ]
+                .spacing(10)
+                .align_items(Alignment::Center)
             } else {
                 column![title_ctn, container(recap_view).padding(10), modal_btn_row,]
                     .spacing(10)
