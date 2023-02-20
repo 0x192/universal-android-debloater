@@ -514,7 +514,7 @@ impl List {
         let explaination_ctn =
             container(
                 row![
-                    text("The selected user will become the reference for the package state changes on the other users").style(style::Text::Danger),
+                    text("The action for the selected user will be applied to all other users").style(style::Text::Danger),
                     tooltip(
                         text("\u{EA0C}")
                             .font(ICONS)
@@ -522,8 +522,8 @@ impl List {
                             .horizontal_alignment(alignment::Horizontal::Center)
                             .style(style::Text::Commentary)
                             .size(17),
-                        "Let's say you select user 0. If a selected package on user 0\n\
-                        is enabled and this same package is uninstalled on user 10,\n\
+                        "Let's say you choose user 0. If a selected package on user 0\n\
+                        is enabled and if this same package is disabled on user 10,\n\
                         then the package on both users will be uninstalled.",
                         tooltip::Position::Top,
                     )
@@ -552,13 +552,7 @@ impl List {
             });
 
         container(
-            if device
-                .user_list
-                .iter()
-                .filter(|&u| !u.protected)
-                .collect::<Vec<&User>>()
-                .len()
-                > 1
+            if device.user_list.iter().filter(|&u| !u.protected).collect::<Vec<&User>>().len() > 1 && settings.device.multi_user_mode
             {
                 column![
                     title_ctn,
@@ -569,6 +563,10 @@ impl List {
                 ]
                 .spacing(10)
                 .align_items(Alignment::Center)
+            } else if !settings.device.multi_user_mode {
+                column![title_ctn, users_ctn, container(recap_view).padding(10), modal_btn_row,]
+                    .spacing(10)
+                    .align_items(Alignment::Center)
             } else {
                 column![title_ctn, container(recap_view).padding(10), modal_btn_row,]
                     .spacing(10)
@@ -720,7 +718,7 @@ fn recap<'a>(
                 if settings.device.disable_mode {
                     text("Disable").style(style::Text::Danger)
                 } else {
-                    text("Remove").style(style::Text::Danger)
+                    text("Uninstall").style(style::Text::Danger)
                 },
                 horizontal_space(Length::Fill),
                 text(recap.entry(removal).or_insert((0, 0)).0.to_string())
