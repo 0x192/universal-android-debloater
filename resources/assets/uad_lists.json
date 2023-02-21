@@ -3737,7 +3737,7 @@
   {
     "id": "com.samsung.android.dynamiclock",
     "list": "Oem",
-    "description": "Samsung Dynamic Lock\nAutomatically changes your Lock screen’s wallpaper\nhttps://www.samsung.com/us/support/answer/ANS00084210/\n",
+    "description": "Samsung Wallpaper services (AKA \"Dynamic Lock\")\nAutomatically changes your Lock screen’s wallpaper\nhttps://www.samsung.com/us/support/answer/ANS00084210/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
