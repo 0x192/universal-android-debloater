@@ -15,7 +15,7 @@ com.this.is.a.application
 com.this.is.another.application
 ...
 ```
-## Documentation chage
+## Documentation change
 **List**: `Google`|`Misc`|`Oem` (manufacturer)|`Aosp`|`Pending`|`Carrier` (isp).
 **Removal**: `Recommended`, `Advanced`, `Expert` (this can break important features), `Unsafe` (this can bootloop the phone or break extremely important features).
 
