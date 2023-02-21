@@ -12867,9 +12867,8 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
-  
   {
     "id": "com.coloros.appmanager",
     "list": "Oem",
@@ -14362,7 +14361,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.linkedin.android",
