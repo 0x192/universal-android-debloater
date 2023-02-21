@@ -9,6 +9,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.sony.tvsideview.phone",
+    "list": "Oem",
+    "description": "Sony's TV remote control app\nhttps://play.google.com/store/apps/details?id=com.sony.tvsideview.phone",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.sonyericsson.android.addoncamera.artfilter",
     "list": "Oem",
     "description": "Sony Creative effect\nGives options for various photographic toning effects in the Sony camera app.\nI'm not 100% sure for this one. Can someone confirm ? \n",
@@ -664,6 +673,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.sonyericsson.android.conversations",
+    "list": "Oem",
+    "description": "Sony's default messages (SMS) app\nhttps://www.apkmirror.com/apk/sony-mobile-communications/messaging-sony-mobile-communications/messaging-sony-mobile-communications-29-3-a-6-12-release/messaging-29-3-a-6-12-android-apk-download",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.sonymobile.android.contacts",
@@ -20689,6 +20707,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.scee.psxandroid",
+    "list": "Oem",
+    "description": "PlayStation app\nhttps://play.google.com/store/apps/details?id=com.scee.psxandroid",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.agui.studentmodel",
