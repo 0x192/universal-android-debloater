@@ -165,12 +165,14 @@ impl List {
             Message::ToggleAllSelected(selected) => {
                 #[allow(unused_must_use)]
                 for i in self.filtered_packages.clone() {
-                    self.update(
-                        settings,
-                        selected_device,
-                        list_update_state,
-                        Message::List(i, RowMessage::ToggleSelection(selected)),
-                    );
+                    if self.phone_packages[i_user][i].selected != selected {
+                        self.update(
+                            settings,
+                            selected_device,
+                            list_update_state,
+                            Message::List(i, RowMessage::ToggleSelection(selected)),
+                        );
+                    }
                 }
                 Command::none()
             }
@@ -208,28 +210,38 @@ impl List {
                     RowMessage::ToggleSelection(toggle) => {
                         if package.removal == Removal::Unsafe && !settings.general.expert_mode {
                             package.selected = false;
-                        } else {
-                            if settings.device.multi_user_mode {
-                                for u in selected_device.user_list.iter().filter(|&u| !u.protected)
-                                {
-                                    self.phone_packages[u.index][i_package].selected = toggle;
-                                }
-                            } else {
-                                package.selected = toggle;
-                            }
-                            if self.phone_packages[i_user][i_package].selected {
-                                self.selection.selected_packages.push(i_package);
-                            } else {
-                                self.selection
-                                    .selected_packages
-                                    .retain(|&s_i| s_i != i_package);
-                            }
-                            update_selection_count(
-                                &mut self.selection,
-                                self.phone_packages[i_user][i_package].state,
-                                self.phone_packages[i_user][i_package].selected,
-                            );
+                            return Command::none();
                         }
+
+                        if settings.device.multi_user_mode {
+                            for u in selected_device.user_list.iter().filter(|&u| !u.protected) {
+                                self.phone_packages[u.index][i_package].selected = toggle;
+                                if toggle {
+                                    self.selection.selected_packages.push(i_package);
+                                }
+                            }
+                            if !toggle {
+                                self.selection.selected_packages.retain(|x| *x == i_package)
+                            }
+                        } else {
+                            package.selected = toggle;
+                            if toggle {
+                                self.selection.selected_packages.push(i_package);
+                            } else if let Some(pos) = self
+                                .selection
+                                .selected_packages
+                                .iter()
+                                .position(|x| *x == i_package)
+                            {
+                                self.selection.selected_packages.remove(pos);
+                            }
+                        }
+
+                        update_selection_count(
+                            &mut self.selection,
+                            self.phone_packages[i_user][i_package].state,
+                            self.phone_packages[i_user][i_package].selected,
+                        );
                         Command::none()
                     }
                     RowMessage::ActionPressed => Command::batch(build_action_pkg_commands(
