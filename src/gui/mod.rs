@@ -127,11 +127,11 @@ impl Application for UadGui {
                 Command::none()
             }
             Message::RefreshButtonPressed => {
-                self.apps_view.loading_state = ListLoadingState::FindingPhones("".to_string());
+                self.apps_view = AppsView::default();
                 Command::perform(get_devices_list(), Message::LoadDevices)
             }
             Message::RebootButtonPressed => {
-                self.apps_view.loading_state = ListLoadingState::FindingPhones("".to_string());
+                self.apps_view = AppsView::default();
                 self.selected_device = None;
                 self.devices_list = vec![];
                 Command::perform(
