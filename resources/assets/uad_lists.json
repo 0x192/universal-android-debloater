@@ -14787,6 +14787,42 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.yandex.browser",
+    "list": "Oem",
+    "description": "Yandex' browser\nMay be installed with Samsung firmware update to comply with http://publication.pravo.gov.ru/Document/View/0001202011230051 if you're Russian. Can be installed manually from Google Play.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "ru.yandex.disk",
+    "list": "Oem",
+    "description": "Yandex' file cloud storage\nMay be installed with Samsung firmware update to comply with http://publication.pravo.gov.ru/Document/View/0001202011230051 if you're Russian. Can be installed manually from Google Play.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "ru.yandex.searchplugin",
+    "list": "Oem",
+    "description": "Yandex' search engine plugin\nMay be installed with Samsung firmware update to comply with http://publication.pravo.gov.ru/Document/View/0001202011230051 if you're Russian. Can be installed manually from Google Play.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "ru.yandex.yandexmaps",
+    "list": "Oem",
+    "description": "Yandex' Maps\nMay be installed with Samsung firmware update to comply with http://publication.pravo.gov.ru/Document/View/0001202011230051 if you're Russian. Can be installed manually from Google Play.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.yellowpages.android.ypmobile",
     "list": "Misc",
     "description": "Yellow Pages (https://play.google.com/store/apps/details?id=com.yellowpages.android.ypmobile)\n",
