@@ -16524,6 +16524,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.mi.globalminusscreen",
+    "list": "Oem",
+    "description": "Xiaomi App Vault\nhttps://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen&gl=US",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.miui.mishare.connectivity",
     "list": "Oem",
     "description": "Mi Share\nUnified file sharing service between Xiaomi, Oppo, Realme and Vivo devices using Wifi-direct\nSettings -> Connection & sharing -> Mi Share\nFYI : Wifi direct allows 2 devices to establish a direct Wi-Fi connection without requiring a wireless router.\n",
