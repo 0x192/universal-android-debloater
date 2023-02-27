@@ -1754,6 +1754,15 @@
     "labels": [],
     "removal": "Recommended"
   },
+    {
+    "id": "com.huawei.android.dsdscardmanager",
+    "list": "Oem",
+    "description": "SIM management",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   {
     "id": "com.huawei.android.FloatTasks",
     "list": "Oem",
@@ -2150,6 +2159,15 @@
     "labels": [],
     "removal": "Advanced"
   },
+    {
+    "id": "com.huawei.hiview",
+    "list": "Oem",
+    "description": "Provides info on exposure and so on in the gallery",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   {
     "id": "com.huawei.himovie.overseas",
     "list": "Oem",
@@ -2316,6 +2334,15 @@
     "id": "com.huawei.imedia.sws",
     "list": "Oem",
     "description": "Huawei Histen\nAn equaliser for Huawei devices. Removing it will cause other music apps' equalisers stop working.\nMore info:\nhttps://www.honor.ru/club/topicdetail/topicid-23039/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.imedia.sws",
+    "list": "Oem",
+    "description": "Related to Wi-Fi calling",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2528,6 +2555,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+    {
+    "id": "com.hisi.mapcon",
+    "list": "Oem",
+    "description": "Provides GPS services",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.KoBackup",
@@ -21180,7 +21216,7 @@
   {
     "id": "androidhwext",
     "list": "Oem",
-    "description": "The framework responsible for the themes (even the standard one) of EMUI to launch. Also, it's the core for the Themes app. REMOVING IT CAUSES A BOOTLOOP!",
+    "description": "EMUI Graphical User Interface:\nhttps://fixyourandroid.com/about/androidhwext\nThe framework responsible for the themes (even the standard one) of EMUI to launch. Also, it's the core for the Themes app. REMOVING IT CAUSES A BOOTLOOP!",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21199,6 +21235,15 @@
     "id": "com.android.frameworkhwnext.honor",
     "list": "Oem",
     "description": "Framework necessary for Themes app to launch",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+    {
+    "id": "com.android.frameworkhwext",
+    "list": "Oem",
+    "description": "There is not much info but others seem to have disabled this and similar, see:\nhttps://forum.xda-developers.com/t/guide-list-of-bloatware-safe-to-remove-how-to-do-it.3866647.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
