@@ -2259,6 +2259,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.mediacontroller",
+    "list": "Oem",
+    "description": "Can be disabled via Settings. Will disable the media controls in quick settings. Won't remove them however.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.ohos.inputmethod",
     "list": "Oem",
     "description": "Huawei default Keyboard\nWARNING: Before unistalling, make sure to have a third-party keyboard installed.\n",
@@ -2406,6 +2415,15 @@
     "id": "com.huawei.pcassistant",
     "list": "Oem",
     "description": "HiSuite service. Used by HiSuite PC software.\nHiSuite enables you to backup your data and restore them from/to your phone.\nhttps://consumer.huawei.com/en/support/hisuite/\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.permissioncontroller",
+    "list": "Oem",
+    "description": "Can be disabled via Settings as well",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
