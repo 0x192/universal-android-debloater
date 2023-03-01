@@ -13545,6 +13545,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "org.mipay.android.manager",
+    "list": "Oem",
+    "description": "Probably a left over service for the app Mi Pay\nhttps://play.google.com/store/apps/details?id=com.qianbaotong.qianbaotongao&gl=US",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.qti.qualcomm.datastatusnotification",
     "list": "Misc",
     "description": "Sends you a message when you reach a specified data limit?\nContains a service, but I've never it run. But I've also never run out of data or used the Android data warning system.",
