@@ -16481,7 +16481,7 @@
   {
     "id": "com.miui.audiomonitor",
     "list": "Oem",
-    "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this? \n",
+    "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this?\nMight be related to the recording app, as it has the same icon.\nNOTE: at least for MIUI 13 this setting doesn't come activated by default. You need to go to: Settings - Sound & vibration - Sound assistant - Adjust Media sound in multiple apps.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
