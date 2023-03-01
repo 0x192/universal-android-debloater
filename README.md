@@ -133,7 +133,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 
 Hey-hey-hey! Don't go away so fast! This is a community project. That means I need you! I'm sure you want to make this project better anyway.
 
-==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki)
+==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki#how-to-contribute)
 
 ## Special thanks
 
