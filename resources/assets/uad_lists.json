@@ -20941,5 +20941,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.asus.launcher",
+    "list": "Oem",
+    "description": "The launcher provided by Asus.\nWarning: disabling it causes the home gesture, task switcher gesture and task switcher button on the navbar to stop working, even when you are using a third party launcher",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
   }
 ]
