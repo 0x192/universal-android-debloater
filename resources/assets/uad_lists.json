@@ -4367,7 +4367,7 @@
   {
     "id": "com.samsung.android.themecenter",
     "list": "Oem",
-    "description": "Samsung theme center\nRuns at startup and enable you to download theme from samsung\nSafe to remove.",
+    "description": "Samsung Theme Center (AKA Galaxy Themes Service)\nRuns at startup and allows you to apply themes from `com.samsung.android.themestore`. Safe to remove.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
