@@ -565,42 +565,43 @@ impl List {
                                     |col, selection| {
                                         col.push(
                                             row![
-                                                    row![text(
-                                                        self.phone_packages[selection.0]
-                                                            [selection.1]
-                                                            .removal
-                                                    )]
-                                                    .width(Length::Units(100)),
-                                                    row![text(
-                                                        self.phone_packages[selection.0]
-                                                            [selection.1]
-                                                            .uad_list
-                                                    )]
-                                                    .width(Length::Units(60)),
-                                                    row![text(
-                                                        self.phone_packages[selection.0]
-                                                            [selection.1]
-                                                            .name
-                                                            .clone()
-                                                    ),],
-                                                    horizontal_space(Length::Fill),
-                                                    row![match self.phone_packages[selection.0]
-                                                        [selection.1]
-                                                        .state
-                                                        .opposite(settings.device.disable_mode)
-                                                    {
-                                                        PackageState::Enabled =>
-                                                            text("Restore").style(style::Text::Ok),
-                                                        PackageState::Disabled => text("Disable")
-                                                            .style(style::Text::Danger),
-                                                        PackageState::Uninstalled =>
+                                                row![text(
+                                                    self.phone_packages[selection.0][selection.1]
+                                                        .removal
+                                                )]
+                                                .width(Length::Units(100)),
+                                                row![text(
+                                                    self.phone_packages[selection.0][selection.1]
+                                                        .uad_list
+                                                )]
+                                                .width(Length::Units(60)),
+                                                row![text(
+                                                    self.phone_packages[selection.0][selection.1]
+                                                        .name
+                                                        .clone()
+                                                ),],
+                                                horizontal_space(Length::Fill),
+                                                row![match self.phone_packages[selection.0]
+                                                    [selection.1]
+                                                    .state
+                                                {
+                                                    PackageState::Enabled =>
+                                                        if settings.device.disable_mode {
+                                                            text("Disable")
+                                                                .style(style::Text::Danger)
+                                                        } else {
                                                             text("Uninstall")
-                                                                .style(style::Text::Danger),
-                                                        _ => text("Impossible")
-                                                            .style(style::Text::Danger),
-                                                    },]
-                                                    .width(Length::Units(60)),
-                                                ]
+                                                                .style(style::Text::Danger)
+                                                        },
+                                                    PackageState::Disabled =>
+                                                        text("Enable").style(style::Text::Ok),
+                                                    PackageState::Uninstalled =>
+                                                        text("Restore").style(style::Text::Ok),
+                                                    _ => text("Impossible")
+                                                        .style(style::Text::Danger),
+                                                },]
+                                                .width(Length::Units(60)),
+                                            ]
                                             .width(Length::Fill)
                                             .spacing(20),
                                         )
