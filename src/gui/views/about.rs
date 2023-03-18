@@ -38,8 +38,7 @@ impl About {
             .style(style::Container::Frame);
 
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
-        let uad_list_text =
-            text(format!("Documentation: v{}", date.format("%Y%m%d"))).width(Length::Units(250));
+        let uad_list_text = text(format!("Documentation: v{}", date.format("%Y%m%d"))).width(250);
         let last_update_text = text(update_state.uad_list.to_string());
         let uad_lists_btn = button("Update")
             .on_press(Message::UpdateUadLists)
@@ -54,7 +53,7 @@ impl About {
 
         #[cfg(feature = "self-update")]
         let uad_version_text =
-            text(format!("UAD version: v{}", env!("CARGO_PKG_VERSION"))).width(Length::Units(250));
+            text(format!("UAD version: v{}", env!("CARGO_PKG_VERSION"))).width(250);
 
         #[cfg(feature = "self-update")]
         let self_update_text = match &update_state.self_update.latest_release {
@@ -81,12 +80,12 @@ impl About {
         let self_update_row = row![uad_version_text, self_update_btn, last_self_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(iced::Length::Units(550));
+            .width(550);
 
         let uad_list_row = row![uad_list_text, uad_lists_btn, last_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(iced::Length::Units(550));
+            .width(550);
 
         #[cfg(feature = "self-update")]
         let update_column = column![uad_list_row, self_update_row]

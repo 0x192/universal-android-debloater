@@ -317,7 +317,7 @@ impl List {
                     self.selected_user,
                     Message::UserSelected,
                 )
-                .width(Length::Units(85));
+                .width(85);
 
                 let divider = Space::new(Length::Fill, Length::Shrink);
 
@@ -510,7 +510,7 @@ impl List {
                 tooltip(
                     text("\u{EA0C}")
                         .font(ICONS)
-                        .width(Length::Units(17))
+                        .width(17)
                         .horizontal_alignment(alignment::Horizontal::Center)
                         .style(style::Text::Commentary)
                         .size(17),
@@ -569,12 +569,12 @@ impl List {
                                                     self.phone_packages[selection.0][selection.1]
                                                         .removal
                                                 )]
-                                                .width(Length::Units(100)),
+                                                .width(100),
                                                 row![text(
                                                     self.phone_packages[selection.0][selection.1]
                                                         .uad_list
                                                 )]
-                                                .width(Length::Units(60)),
+                                                .width(60),
                                                 row![text(
                                                     self.phone_packages[selection.0][selection.1]
                                                         .name
@@ -600,7 +600,7 @@ impl List {
                                                     _ => text("Impossible")
                                                         .style(style::Text::Danger),
                                                 },]
-                                                .width(Length::Units(60)),
+                                                .width(60),
                                             ]
                                             .width(Length::Fill)
                                             .spacing(20),
@@ -662,7 +662,7 @@ impl List {
                 .align_items(Alignment::Center)
             },
         )
-        .width(Length::Units(800))
+        .width(800)
         .height(Length::Shrink)
         .max_height(700)
         .style(style::Container::Background)
@@ -837,7 +837,7 @@ fn recap<'a>(
     )
     .padding(10)
     .width(Length::Fill)
-    .height(Length::Units(45))
+    .height(45)
     .style(style::Container::Frame)
     .into()
 }

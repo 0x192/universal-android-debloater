@@ -244,7 +244,7 @@ impl checkbox::StyleSheet for Theme {
         match style {
             CheckBox::PackageEnabled => checkbox::Appearance {
                 background: Background::Color(self.palette().base.background),
-                checkmark_color: self.palette().bright.primary,
+                icon_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().base.background,
@@ -255,7 +255,7 @@ impl checkbox::StyleSheet for Theme {
                     a: 0.55,
                     ..self.palette().base.background
                 }),
-                checkmark_color: self.palette().bright.primary,
+                icon_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().normal.primary,
@@ -263,7 +263,7 @@ impl checkbox::StyleSheet for Theme {
             },
             CheckBox::SettingsEnabled => checkbox::Appearance {
                 background: Background::Color(self.palette().base.background),
-                checkmark_color: self.palette().bright.primary,
+                icon_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().bright.primary,
@@ -271,7 +271,7 @@ impl checkbox::StyleSheet for Theme {
             },
             CheckBox::SettingsDisabled => checkbox::Appearance {
                 background: Background::Color(self.palette().base.foreground),
-                checkmark_color: self.palette().bright.primary,
+                icon_color: self.palette().bright.primary,
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().normal.primary,
@@ -283,7 +283,7 @@ impl checkbox::StyleSheet for Theme {
     fn hovered(&self, style: &Self::Style, is_checked: bool) -> checkbox::Appearance {
         let from_appearance = || checkbox::Appearance {
             background: Background::Color(self.palette().base.foreground),
-            checkmark_color: self.palette().bright.primary,
+            icon_color: self.palette().bright.primary,
             border_radius: 5.0,
             border_width: 2.0,
             border_color: self.palette().bright.primary,

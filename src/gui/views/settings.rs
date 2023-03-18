@@ -274,7 +274,7 @@ impl Settings {
                 "https://github.com/0x192/universal-android-debloater/wiki/FAQ#\
                     why-is-the-disable-mode-setting-not-available-for-my-device",
             )))
-            .height(Length::Units(22))
+            .height(22)
             .style(style::Button::Unavailable);
 
         // Disabling package without root isn't really possible before Android Oreo (8.0)
@@ -326,18 +326,18 @@ impl Settings {
             .padding(5)
             .on_press(Message::BackupDevice)
             .style(style::Button::Primary)
-            .width(Length::Units(77));
+            .width(77);
 
         let restore_btn = |enabled| {
             if enabled {
                 button(text("Restore").horizontal_alignment(alignment::Horizontal::Center))
                     .padding(5)
                     .on_press(Message::RestoreDevice)
-                    .width(Length::Units(77))
+                    .width(77)
             } else {
                 button(text("No backup").horizontal_alignment(alignment::Horizontal::Center))
                     .padding(5)
-                    .width(Length::Units(77))
+                    .width(77)
             }
         };
 
