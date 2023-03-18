@@ -192,21 +192,21 @@ impl scrollable::StyleSheet for Theme {
 
     fn active(&self, style: &Self::Style) -> scrollable::Scrollbar {
         let from_appearance = |c: Color| scrollable::Scrollbar {
-            background: Some(Background::Color(c)),
+            background: Some(Background::Color(Color::TRANSPARENT)),
             border_radius: 5.0,
             border_width: 0.0,
             border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: self.palette().base.foreground,
+                color: c,
                 border_radius: 5.0,
-                border_width: 0.0,
+                border_width: 1.0,
                 border_color: Color::TRANSPARENT,
             },
         };
 
         match style {
-            Scrollable::Description => from_appearance(self.palette().base.foreground),
-            Scrollable::Packages => from_appearance(self.palette().base.background),
+            Scrollable::Description => from_appearance(self.palette().normal.surface),
+            Scrollable::Packages => from_appearance(self.palette().base.foreground),
         }
     }
 
