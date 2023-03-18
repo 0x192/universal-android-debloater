@@ -28,6 +28,8 @@ pub enum Container {
     Invisible,
     Frame,
     BorderedFrame,
+    Tooltip,
+    Background,
 }
 
 impl container::StyleSheet for Theme {
@@ -48,6 +50,20 @@ impl container::StyleSheet for Theme {
                 border_radius: 5.0,
                 border_width: 1.0,
                 border_color: self.palette().normal.error,
+            },
+            Container::Tooltip => container::Appearance {
+                background: Some(Background::Color(self.palette().base.foreground)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 8.0,
+                border_width: 1.0,
+                border_color: self.palette().normal.primary,
+            },
+
+            Container::Background => container::Appearance {
+                background: Some(Background::Color(self.palette().base.background)),
+                text_color: Some(self.palette().bright.surface),
+                border_radius: 5.0,
+                ..container::Appearance::default()
             },
         }
     }
@@ -152,7 +168,7 @@ impl button::StyleSheet for Theme {
         match style {
             Button::RestorePackage => disabled_appearance(p.normal.primary, Some(p.bright.primary)),
             Button::UninstallPackage => disabled_appearance(p.bright.error, None),
-            Button::Primary => disabled_appearance(p.normal.primary, Some(p.bright.primary)),
+            Button::Primary => disabled_appearance(p.bright.primary, Some(p.bright.primary)),
             _ => button::Appearance { ..active },
         }
     }
@@ -176,21 +192,21 @@ impl scrollable::StyleSheet for Theme {
 
     fn active(&self, style: &Self::Style) -> scrollable::Scrollbar {
         let from_appearance = |c: Color| scrollable::Scrollbar {
-            background: Some(Background::Color(c)),
+            background: Some(Background::Color(Color::TRANSPARENT)),
             border_radius: 5.0,
             border_width: 0.0,
             border_color: Color::TRANSPARENT,
             scroller: scrollable::Scroller {
-                color: self.palette().base.foreground,
+                color: c,
                 border_radius: 5.0,
-                border_width: 0.0,
+                border_width: 1.0,
                 border_color: Color::TRANSPARENT,
             },
         };
 
         match style {
-            Scrollable::Description => from_appearance(self.palette().base.foreground),
-            Scrollable::Packages => from_appearance(self.palette().base.background),
+            Scrollable::Description => from_appearance(self.palette().normal.surface),
+            Scrollable::Packages => from_appearance(self.palette().base.foreground),
         }
     }
 
@@ -386,6 +402,7 @@ impl pick_list::StyleSheet for Theme {
 pub enum Text {
     #[default]
     Default,
+    Ok,
     Danger,
     Commentary,
     Color(Color),
@@ -403,6 +420,9 @@ impl text::StyleSheet for Theme {
     fn appearance(&self, style: Self::Style) -> text::Appearance {
         match style {
             Text::Default => Default::default(),
+            Text::Ok => text::Appearance {
+                color: Some(self.palette().bright.secondary),
+            },
             Text::Danger => text::Appearance {
                 color: Some(self.palette().bright.error),
             },

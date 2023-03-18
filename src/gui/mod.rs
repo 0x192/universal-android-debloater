@@ -107,7 +107,12 @@ impl Application for UadGui {
                     None => devices_list.first().map(|x| x.to_owned()),
                 };
                 self.devices_list = devices_list;
-                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+
+                #[allow(unused_must_use)]
+                {
+                    self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+                }
+
                 self.update(Message::AppsAction(AppsMessage::LoadUadList(true)))
             }
             Message::AppsPress => {
@@ -149,21 +154,46 @@ impl Application for UadGui {
                 )
                 .map(Message::AppsAction),
             Message::SettingsAction(msg) => {
-                if let SettingsMessage::RestoringDevice(ref output) = msg {
-                    self.nb_running_async_adb_commands -= 1;
-                    self.view = View::List;
-                    self.apps_view.update(
-                        &mut self.settings_view,
-                        &mut self.selected_device.clone().unwrap_or_default(),
-                        &mut self.update_state.uad_list,
-                        AppsMessage::RestoringDevice(output.clone()),
-                    );
+                match msg {
+                    SettingsMessage::RestoringDevice(ref output) => {
+                        self.nb_running_async_adb_commands -= 1;
+                        self.view = View::List;
 
-                    if self.nb_running_async_adb_commands == 0 {
-                        return self.update(Message::RefreshButtonPressed);
+                        #[allow(unused_must_use)]
+                        {
+                            self.apps_view.update(
+                                &mut self.settings_view,
+                                &mut self.selected_device.clone().unwrap_or_default(),
+                                &mut self.update_state.uad_list,
+                                AppsMessage::RestoringDevice(output.clone()),
+                            );
+                        }
+                        if self.nb_running_async_adb_commands == 0 {
+                            return self.update(Message::RefreshButtonPressed);
+                        }
                     }
+                    SettingsMessage::MultiUserMode(toggled) => {
+                        if toggled {
+                            for user in self.apps_view.phone_packages.clone() {
+                                for (i, _) in
+                                    user.iter().enumerate().filter(|&(_, pkg)| pkg.selected)
+                                {
+                                    for u in self
+                                        .selected_device
+                                        .as_ref()
+                                        .unwrap()
+                                        .user_list
+                                        .iter()
+                                        .filter(|&u| !u.protected)
+                                    {
+                                        self.apps_view.phone_packages[u.index][i].selected = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    _ => (),
                 }
-
                 self.settings_view
                     .update(
                         &self.selected_device.clone().unwrap_or_default(),
@@ -221,7 +251,11 @@ impl Application for UadGui {
                 );
                 info!("{:-^65}", "-");
                 self.apps_view.loading_state = ListLoadingState::FindingPhones("".to_string());
-                self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+
+                #[allow(unused_must_use)]
+                {
+                    self.update(Message::SettingsAction(SettingsMessage::LoadDeviceSettings));
+                }
                 self.update(Message::AppsAction(AppsMessage::LoadPhonePackages((
                     self.apps_view.uad_lists.clone(),
                     UadListState::Done,

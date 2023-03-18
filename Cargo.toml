@@ -20,6 +20,7 @@ no-self-update = []
 
 [dependencies]
 iced = { git = "https://github.com/iced-rs/iced.git" }
+iced_native = { git = "https://github.com/iced-rs/iced.git"}
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"

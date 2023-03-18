@@ -1,7 +1,6 @@
 use crate::core::sync::{hashset_system_packages, list_all_system_packages, User};
 use crate::core::theme::Theme;
 use crate::core::uad_lists::{Package, PackageState, Removal, UadList};
-use crate::gui::views::list::Selection;
 use crate::gui::widgets::package_row::PackageRow;
 use chrono::offset::Utc;
 use chrono::DateTime;
@@ -50,33 +49,6 @@ pub fn fetch_packages(
     }
     user_package.sort_by(|a, b| a.name.to_lowercase().cmp(&b.name.to_lowercase()));
     user_package
-}
-
-pub fn update_selection_count(selection: &mut Selection, p_state: PackageState, add: bool) {
-    match p_state {
-        PackageState::Enabled => {
-            if add {
-                selection.enabled += 1
-            } else if selection.enabled > 0 {
-                selection.enabled -= 1
-            };
-        }
-        PackageState::Disabled => {
-            if add {
-                selection.disabled += 1
-            } else if selection.disabled > 0 {
-                selection.disabled -= 1
-            };
-        }
-        PackageState::Uninstalled => {
-            if add {
-                selection.uninstalled += 1
-            } else if selection.uninstalled > 0 {
-                selection.uninstalled -= 1
-            };
-        }
-        PackageState::All => {}
-    };
 }
 
 pub fn string_to_theme(theme: String) -> Theme {

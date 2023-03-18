@@ -252,7 +252,7 @@ impl Settings {
         ];
 
         let multi_user_mode_checkbox = checkbox(
-            "Affect all the users of the phone (not only the selected user)",
+            "Affect all the users of the device (not only the selected user)",
             self.device.multi_user_mode,
             Message::MultiUserMode,
         )
