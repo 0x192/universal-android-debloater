@@ -75,7 +75,7 @@ pub enum Message {
     List(usize, RowMessage),
     ChangePackageState(Result<CommandType, ()>),
     Nothing,
-    SelectionModalAction,
+    ModalHide,
     ModalUserSelected(User),
     ModalValidate,
 }
@@ -90,7 +90,7 @@ impl List {
     ) -> Command<Message> {
         let i_user = self.selected_user.unwrap_or_default().index;
         match message {
-            Message::SelectionModalAction => {
+            Message::ModalHide => {
                 self.selection_modal = false;
                 Command::none()
             }
@@ -451,7 +451,7 @@ impl List {
                             &self.phone_packages[self.selected_user.unwrap().index],
                         ),
                     )
-                    .on_blur(Message::SelectionModalAction)
+                    .on_blur(Message::ModalHide)
                     .into()
                 } else {
                     container(content).height(Length::Fill).padding(10).into()
@@ -531,7 +531,7 @@ impl List {
         .style(style::Container::BorderedFrame);
 
         let modal_btn_row = row![
-            button(text("Cancel")).on_press(Message::SelectionModalAction),
+            button(text("Cancel")).on_press(Message::ModalHide),
             horizontal_space(Length::Fill),
             button(text("Apply")).on_press(Message::ModalValidate),
         ]
