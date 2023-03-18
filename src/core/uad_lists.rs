@@ -19,8 +19,9 @@ pub struct Package {
     pub removal: Removal,
 }
 
-#[derive(Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Default, Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum UadList {
+    #[default]
     All,
     Aosp,
     Carrier,
@@ -31,17 +32,12 @@ pub enum UadList {
     Unlisted,
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Default, Debug, Clone, Copy, PartialEq, Eq)]
 pub enum UadListState {
+    #[default]
     Downloading,
     Done,
     Failed,
-}
-
-impl Default for UadListState {
-    fn default() -> Self {
-        UadListState::Downloading
-    }
 }
 
 impl std::fmt::Display for UadListState {
@@ -53,12 +49,6 @@ impl std::fmt::Display for UadListState {
             UadListState::Failed => "Failed to check update!".to_string(),
         };
         write!(f, "{s}")
-    }
-}
-
-impl Default for UadList {
-    fn default() -> UadList {
-        UadList::All
     }
 }
 
@@ -94,18 +84,13 @@ impl std::fmt::Display for UadList {
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Default, Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum PackageState {
     All,
+    #[default]
     Enabled,
     Uninstalled,
     Disabled,
-}
-
-impl Default for PackageState {
-    fn default() -> PackageState {
-        PackageState::Enabled
-    }
 }
 
 impl PackageState {
@@ -153,20 +138,15 @@ impl Opposite for PackageState {
 }
 
 // Bad names. To be changed!
-#[derive(Debug, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Default, Debug, Deserialize, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Removal {
     All,
+    #[default]
     Recommended,
     Advanced,
     Expert,
     Unsafe,
     Unlisted,
-}
-
-impl Default for Removal {
-    fn default() -> Removal {
-        Removal::Recommended
-    }
 }
 
 impl Removal {

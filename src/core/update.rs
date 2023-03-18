@@ -29,18 +29,13 @@ pub struct SelfUpdateState {
     pub status: SelfUpdateStatus,
 }
 
-#[derive(Debug, PartialEq, Eq, Clone)]
+#[derive(Default, Debug, PartialEq, Eq, Clone)]
 pub enum SelfUpdateStatus {
     Updating,
+    #[default]
     Checking,
     Done,
     Failed,
-}
-
-impl Default for SelfUpdateStatus {
-    fn default() -> Self {
-        SelfUpdateStatus::Checking
-    }
 }
 
 impl std::fmt::Display for SelfUpdateStatus {
