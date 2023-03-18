@@ -7013,11 +7013,11 @@
   {
     "id": "com.android.inputdevices",
     "list": "Aosp",
-    "description": "Only contains a receiver named \"Android keyboard\", possibly for an external keyboard.\nLocates available keyboard layouts. Apps can offer additional keyboard layouts to the user by declaring a suitable broadcast receiver in their manifest.",
+    "description": "Only contains a receiver named \"Android keyboard\", possibly for an external keyboard.\nLocates available keyboard layouts. Apps can offer additional keyboard layouts to the user by declaring a suitable broadcast receiver in their manifest.\nWARNING: If you are using the default Samsung keyboard, then deleting this package on some phones may cause the keyboard to completely stop working. You may get locked out of your phone if the only method to authenticate yourself is using password.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.android.inputmethod.latin",
