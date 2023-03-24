@@ -14190,7 +14190,7 @@
   },
   {
     "id": "com.samsung.android.dialer",
-    "list": "Pending",
+    "list": "Oem",
     "description": "Samsung phone app",
     "dependencies": [],
     "neededBy": [],
