@@ -13785,7 +13785,7 @@
   },
   {
     "id": "com.samsung.android.app.telephonyui",
-    "list": "Pending",
+    "list": "Oem",
     "description": "Breaks mobile data if disabled",
     "dependencies": [],
     "neededBy": [],
@@ -14793,7 +14793,7 @@
   },
   {
     "id": "com.samsung.android.providers.contacts",
-    "list": "Pending",
+    "list": "Oem",
     "description": "Likely same as com.android.providers.contacts, but for Samsung phones.\nBreaks contact functionality if disabled.",
     "dependencies": [],
     "neededBy": [],
