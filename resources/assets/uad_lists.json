@@ -13777,11 +13777,11 @@
   {
     "id": "com.samsung.android.app.telephonyui",
     "list": "Pending",
-    "description": "",
+    "description": "Breaks mobile data if disabled",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.samsung.android.app.tips",
@@ -14785,7 +14785,7 @@
   {
     "id": "com.samsung.android.providers.contacts",
     "list": "Pending",
-    "description": "Likely same as com.android.providers.contacts, but for Samsung phones.\nProbably breaks contact functionality if disabled.",
+    "description": "Likely same as com.android.providers.contacts, but for Samsung phones.\nBreaks contact functionality if disabled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
