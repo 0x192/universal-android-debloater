@@ -58,9 +58,10 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 |   Country       | Carriers                          |
 |-----------------|-----------------------------------|
 | France          | Orange, SFR, Free, Bouygues       |
-| USA             | T-Mobile, Verizon, Sprint, AT&T   |
 | Germany         | Telekom                           |
+| Korea           | SK Telelcom                       |
 | UK              | EE                                |
+| USA             | T-Mobile, Verizon, Sprint, AT&T   |
 
 
 ## How to use it
