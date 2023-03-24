@@ -13496,6 +13496,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.samsung.android.app.dtv.dmb",
+    "list": "Oem",
+    "description": "DMB (Digital Multimedia Broadcasting) App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.samsung.android.app.earphonetypec",
     "list": "Pending",
     "description": "",
@@ -17534,6 +17543,42 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.skt.prod.dialer",
+    "list": "Carrier",
+    "description": "SKT Tphone app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.skt.prod.phone.phonemodesetupwizard",
+    "list": "Carrier",
+    "description": "Asks you if you want to use Samsung Phone mode or SKT T Phone mode in setup\nSafe to remove",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.skt.skaf.A000Z00040",
+    "list": "Carrier",
+    "description": "Onestore app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "Com.sktelecom.minit",
+    "list": "Carrier",
+    "description": "Mobile T World app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.skype.m2",
     "list": "Misc",
     "description": "Skype Lite (https://play.google.com/store/apps/details?id=com.skype.m2)\n",
@@ -19395,6 +19440,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.tms",
+    "list": "Carrier",
+    "description": "T Membership app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.touchtype.swiftkey",
