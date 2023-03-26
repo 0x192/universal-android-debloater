@@ -2,16 +2,16 @@ name: Continuous Integration
 on:
   push:
     paths:
-      - '**.rs'
-      - 'Cargo.lock'
-      - 'Cargo.toml'
-      - '**.json'
+      - "**.rs"
+      - "Cargo.lock"
+      - "Cargo.toml"
+      - "**.json"
   pull_request:
     paths:
-      - '**.rs'
-      - 'Cargo.lock'
-      - 'Cargo.toml'
-      - '**.json'
+      - "**.rs"
+      - "Cargo.lock"
+      - "Cargo.toml"
+      - "**.json"
 
 jobs:
   lint:
@@ -33,7 +33,7 @@ jobs:
           - lint: check
             args: " --all-features"
           - lint: test
-            args: ''
+            args: ""
           - lint: clippy
             args: " --all --all-features -- -D warnings"
           - lint: fmt
