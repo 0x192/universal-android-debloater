@@ -188,11 +188,13 @@ where
         let content_bounds = layout.children().next().unwrap().bounds();
 
         if let Some(message) = self.on_blur.as_ref() {
-            if let Event::Mouse(mouse::Event::ButtonPressed(mouse::Button::Left)) = &event {
-                if !content_bounds.contains(cursor_position) {
-                    shell.publish(message.clone());
-                    return event::Status::Captured;
-                }
+            if matches!(
+                &event,
+                Event::Mouse(mouse::Event::ButtonPressed(mouse::Button::Left))
+            ) && !content_bounds.contains(cursor_position)
+            {
+                shell.publish(message.clone());
+                return event::Status::Captured;
             }
         }
 

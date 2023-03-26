@@ -29,7 +29,7 @@ impl Default for Phone {
             model: "fetching devices...".to_string(),
             android_sdk: 0,
             user_list: vec![],
-            adb_id: "".to_string(),
+            adb_id: String::new(),
         }
     }
 }
@@ -54,9 +54,10 @@ impl std::fmt::Display for User {
 }
 
 pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
-    let adb_command = match shell {
-        true => vec!["shell", args],
-        false => vec![args],
+    let adb_command = if shell {
+        vec!["shell", args]
+    } else {
+        vec![args]
     };
 
     #[cfg(target_os = "windows")]
@@ -77,7 +78,12 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
             Err("ADB was not found".to_string())
         }
         Ok(o) => {
-            if !o.status.success() {
+            if o.status.success() {
+                Ok(String::from_utf8(o.stdout)
+                    .map_err(|e| e.to_string())?
+                    .trim_end()
+                    .to_string())
+            } else {
                 let stdout = String::from_utf8(o.stdout)
                     .map_err(|e| e.to_string())?
                     .trim_end()
@@ -90,11 +96,6 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
                 // ADB does really weird things. Some errors are not redirected to stderr
                 let err = if stdout.is_empty() { stderr } else { stdout };
                 Err(err)
-            } else {
-                Ok(String::from_utf8(o.stdout)
-                    .map_err(|e| e.to_string())?
-                    .trim_end()
-                    .to_string())
             }
         }
     }
@@ -145,20 +146,20 @@ pub fn list_all_system_packages(user_id: Option<&User>) -> String {
     };
 
     adb_shell_command(true, &action)
-        .unwrap_or_else(|_| "".to_string())
+        .unwrap_or_else(|_| String::new())
         .replace("package:", "")
 }
 
 pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
     let user = match user_id {
         Some(user_id) => format!(" --user {}", user_id.id),
-        None => "".to_string(),
+        None => String::new(),
     };
 
     let action = match state {
         PackageState::Enabled => format!("pm list packages -s -e{user}"),
         PackageState::Disabled => format!("pm list package -s -d{user}"),
-        _ => "".to_string(), // You probably don't need to use this function for anything else
+        _ => String::new(), // You probably don't need to use this function for anything else
     };
 
     adb_shell_command(true, &action)
@@ -178,7 +179,7 @@ pub struct CorePackage {
 
 impl From<&mut PackageRow> for CorePackage {
     fn from(pr: &mut PackageRow) -> Self {
-        CorePackage {
+        Self {
             name: pr.name.clone(),
             state: pr.state,
         }
@@ -186,7 +187,7 @@ impl From<&mut PackageRow> for CorePackage {
 }
 impl From<PackageRow> for CorePackage {
     fn from(pr: PackageRow) -> Self {
-        CorePackage {
+        Self {
             name: pr.name.clone(),
             state: pr.state,
         }
@@ -195,7 +196,7 @@ impl From<PackageRow> for CorePackage {
 
 impl From<&PackageRow> for CorePackage {
     fn from(pr: &PackageRow) -> Self {
-        CorePackage {
+        Self {
             name: pr.name.clone(),
             state: pr.state,
         }
@@ -203,8 +204,8 @@ impl From<&PackageRow> for CorePackage {
 }
 
 pub fn apply_pkg_state_commands(
-    package: CorePackage,
-    wanted_state: &PackageState,
+    package: &CorePackage,
+    wanted_state: PackageState,
     selected_user: &User,
     phone: &Phone,
 ) -> Vec<String> {
@@ -242,16 +243,16 @@ pub fn apply_pkg_state_commands(
             },
             _ => vec![],
         },
-        _ => vec![],
+        PackageState::All => vec![],
     };
     if phone.android_sdk < 21 {
-        request_builder(commands, &package.name, None)
+        request_builder(&commands, &package.name, None)
     } else {
-        request_builder(commands, &package.name, Some(selected_user))
+        request_builder(&commands, &package.name, Some(selected_user))
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, user: Option<&User>) -> Vec<String> {
+pub fn request_builder(commands: &[&str], package: &str, user: Option<&User>) -> Vec<String> {
     if let Some(u) = user {
         commands
             .iter()
@@ -277,17 +278,14 @@ pub fn get_phone_model() -> String {
 }
 
 pub fn get_android_sdk() -> u8 {
-    match adb_shell_command(true, "getprop ro.build.version.sdk") {
-        Ok(sdk) => sdk.parse().unwrap(),
-        Err(_) => 0,
-    }
+    adb_shell_command(true, "getprop ro.build.version.sdk").map_or(0, |sdk| sdk.parse().unwrap())
 }
 
 pub fn get_phone_brand() -> String {
     format!(
         "{} {}",
         adb_shell_command(true, "getprop ro.product.brand")
-            .unwrap_or_else(|_| "".to_string())
+            .unwrap_or_else(|_| String::new())
             .trim(),
         get_phone_model()
     )

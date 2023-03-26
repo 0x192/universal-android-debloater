@@ -44,9 +44,9 @@ impl std::fmt::Display for UadListState {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
         let s = match self {
-            UadListState::Downloading => "Checking updates...".to_string(),
-            UadListState::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
-            UadListState::Failed => "Failed to check update!".to_string(),
+            Self::Downloading => "Checking updates...".to_string(),
+            Self::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
+            Self::Failed => "Failed to check update!".to_string(),
         };
         write!(f, "{s}")
     }
@@ -71,14 +71,14 @@ impl std::fmt::Display for UadList {
             f,
             "{}",
             match self {
-                UadList::All => "All lists",
-                UadList::Aosp => "aosp",
-                UadList::Carrier => "carrier",
-                UadList::Google => "google",
-                UadList::Misc => "misc",
-                UadList::Oem => "oem",
-                UadList::Pending => "pending",
-                UadList::Unlisted => "unlisted",
+                Self::All => "All lists",
+                Self::Aosp => "aosp",
+                Self::Carrier => "carrier",
+                Self::Google => "google",
+                Self::Misc => "misc",
+                Self::Oem => "oem",
+                Self::Pending => "pending",
+                Self::Unlisted => "unlisted",
             }
         )
     }
@@ -108,10 +108,10 @@ impl std::fmt::Display for PackageState {
             f,
             "{}",
             match self {
-                PackageState::All => "All packages",
-                PackageState::Enabled => "Enabled",
-                PackageState::Uninstalled => "Uninstalled",
-                PackageState::Disabled => "Disabled",
+                Self::All => "All packages",
+                Self::Enabled => "Enabled",
+                Self::Uninstalled => "Uninstalled",
+                Self::Disabled => "Disabled",
             }
         )
     }
@@ -122,17 +122,17 @@ pub trait Opposite {
 }
 
 impl Opposite for PackageState {
-    fn opposite(&self, disable: bool) -> PackageState {
+    fn opposite(&self, disable: bool) -> Self {
         match self {
-            PackageState::Enabled => {
+            Self::Enabled => {
                 if disable {
-                    PackageState::Disabled
+                    Self::Disabled
                 } else {
-                    PackageState::Uninstalled
+                    Self::Uninstalled
                 }
             }
-            PackageState::Uninstalled | PackageState::Disabled => PackageState::Enabled,
-            PackageState::All => PackageState::All,
+            Self::Uninstalled | Self::Disabled => Self::Enabled,
+            Self::All => Self::All,
         }
     }
 }
@@ -166,12 +166,12 @@ impl std::fmt::Display for Removal {
             f,
             "{}",
             match self {
-                Removal::All => "All",
-                Removal::Recommended => "Recommended",
-                Removal::Advanced => "Advanced",
-                Removal::Expert => "Expert",
-                Removal::Unsafe => "Unsafe",
-                Removal::Unlisted => "Unlisted",
+                Self::All => "All",
+                Self::Recommended => "Recommended",
+                Self::Advanced => "Advanced",
+                Self::Expert => "Expert",
+                Self::Unsafe => "Unsafe",
+                Self::Unlisted => "Unlisted",
             }
         )
     }

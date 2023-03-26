@@ -31,7 +31,7 @@ pub fn fetch_packages(
         if uad_lists.contains_key(p_name) {
             description = &uad_lists.get(p_name).unwrap().description;
             if description.is_empty() {
-                description = "[No description] : CONTRIBUTION WELCOMED"
+                description = "[No description] : CONTRIBUTION WELCOMED";
             };
             uad_list = uad_lists.get(p_name).unwrap().list;
             removal = uad_lists.get(p_name).unwrap().removal;
@@ -51,8 +51,8 @@ pub fn fetch_packages(
     user_package
 }
 
-pub fn string_to_theme(theme: String) -> Theme {
-    match theme.as_str() {
+pub fn string_to_theme(theme: &str) -> Theme {
+    match theme {
         "Dark" => Theme::Dark,
         "Light" => Theme::Light,
         "Lupin" => Theme::Lupin,
@@ -80,7 +80,7 @@ pub fn open_url(dir: PathBuf) {
         Ok(o) => {
             if !o.status.success() {
                 let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
-                error!("Can't open the following URL: {}", stderr)
+                error!("Can't open the following URL: {}", stderr);
             }
         }
         Err(e) => error!("Failed to run command to open the file explorer: {}", e),
@@ -118,19 +118,19 @@ pub struct DisplayablePath {
 
 impl fmt::Display for DisplayablePath {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let stem = match self.path.file_stem() {
-            Some(p) => match p.to_os_string().into_string() {
+        let stem = if let Some(p) = self.path.file_stem() {
+            match p.to_os_string().into_string() {
                 Ok(stem) => stem,
                 Err(e) => {
                     error!("[PATH ENCODING]: {:?}", e);
                     "[PATH ENCODING ERROR]".to_string()
                 }
-            },
-            None => {
-                error!("[PATH STEM]: No file stem found");
-                "[File steam not found]".to_string()
             }
+        } else {
+            error!("[PATH STEM]: No file stem found");
+            "[File steam not found]".to_string()
         };
+
         write!(f, "{stem}")
     }
 }
