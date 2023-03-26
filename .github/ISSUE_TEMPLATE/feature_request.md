@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: You want a new feature
-title: ''
+title: ""
 labels: enhancement
-assignees: ''
-
+assignees: ""
 ---
 
 **Describe the feature you want**

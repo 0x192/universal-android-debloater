@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: You have an issue with the UAD software itself
-title: ''
+title: ""
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 **Describe the bug**
