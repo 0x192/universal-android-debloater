@@ -75,23 +75,15 @@ impl Config {
     }
 
     pub fn load_configuration_file() -> Self {
-        match fs::read_to_string(&*CONFIG_FILE) {
-            Ok(s) => match toml::from_str(&s) {
-                Ok(config) => config,
-                Err(e) => {
-                    error!("Invalid config file: `{}`", e);
-                    error!("Restoring default config file");
-                    let toml = toml::to_string(&Config::default()).unwrap();
-                    fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
-                    Config::default()
-                }
-            },
-            Err(_) => {
-                let default_conf = toml::to_string(&Config::default()).unwrap();
-                fs::write(&*CONFIG_FILE, default_conf)
-                    .expect("Could not write config file to disk!");
-                Config::default()
+        if let Ok(s) = fs::read_to_string(&*CONFIG_FILE) {
+            if let Ok(config) = toml::from_str(&s) {
+                return config;
             }
+            error!("Invalid config file: `{}`", e);
+            error!("Restoring default config file");
         }
+        let toml = toml::to_string(&Config::default()).unwrap();
+        fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
+        Config::default()
     }
 }
