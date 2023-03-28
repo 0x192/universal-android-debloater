@@ -2619,6 +2619,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.motorola.blur.service.blur",
+    "list": "Oem",
+    "description": "MOTOBLUR service\nAutomatically syncs messages, emails, social status updates, contacts and pictures from your accounts straight to your Home screen. It's a serious privacy concern:\nhttps://www.beneaththewaves.net/Projects/Motorola_Is_Listening.html",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.motorola.brapps",
     "list": "Oem",
     "description": "Motorola App Box (https://play.google.com/store/apps/details?id=com.motorola.brapps)\nOffers you a selection of applications developed by Brazilians and also apps selected for you.\n",
