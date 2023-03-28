@@ -1,21 +1,12 @@
 [
   {
-    "id": "air.com.playtika.slotomania",
-    "list": "Misc",
-    "description": "Slotomania (https://play.google.com/store/apps/details?id=air.com.playtika.slotomania)\nPreinstalled game on some Samsung phones. 31 permissions, 13 trackers: https://reports.exodus-privacy.eu.org/reports/air.com.playtika.slotomania/latest/",
+    "id": "Com.sktelecom.minit",
+    "list": "Carrier",
+    "description": "Mobile T World app",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
-  },
-  {
-    "id": "android",
-    "list": "Aosp",
-    "description": "Android System\nAndroid system framework? Apk file name: framework-res\nCould be THE core of the android system.\nProbably very unsafe to disable.",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Unsafe"
   },
   {
     "id": "android.auto_generated_rro__",
@@ -371,7 +362,7 @@
   {
     "id": "com.agui.game",
     "list": "Oem",
-    "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
+    "description": "Game (From Unihertz Jelly2)\nRemoves distractions when selected apps are in use.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -380,7 +371,7 @@
   {
     "id": "com.agui.game",
     "list": "Oem",
-    "description": "Game (From Unihertz Jelly2)\nRemoves distractions when selected apps are in use.",
+    "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -425,7 +416,7 @@
   {
     "id": "com.agui.studentmodel",
     "list": "Oem",
-    "description": "Student Mode\nLocks down your phone to reduce distractions\n",
+    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile phone reasonably. Under this mode, user is not allowed to install applications or factory reset. Applications not in white-list are disabled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -434,7 +425,7 @@
   {
     "id": "com.agui.studentmodel",
     "list": "Oem",
-    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile phone reasonably. Under this mode, user is not allowed to install applications or factory reset. Applications not in white-list are disabled.",
+    "description": "Student Mode\nLocks down your phone to reduce distractions\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -589,6 +580,33 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.BBKClock",
+    "list": "Oem",
+    "description": "Vivo Clock App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.BBKPhoneInstructions",
+    "list": "Pending",
+    "description": "",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.BBKPhoneInstructions",
+    "list": "Pending",
+    "description": "",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.LGSetupWizard",
     "list": "Oem",
     "description": "The first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for LG services.\n",
@@ -596,6 +614,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.android.VideoPlayer",
+    "list": "Oem",
+    "description": "Vivo Video Player App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.android.apps.tag",
@@ -623,6 +650,51 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.android.bbk.lockscreen3",
+    "list": "Oem",
+    "description": "Vivo Lock App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.bbkcalculator",
+    "list": "Oem",
+    "description": "Vivo Calculator App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.bbklog",
+    "list": "Pending",
+    "description": "",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.bbkmusic",
+    "list": "Oem",
+    "description": "Vivo Music App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.bbksoundrecorder",
+    "list": "Oem",
+    "description": "Vivo Sound recorder App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.android.bio.face.service",
@@ -731,6 +803,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.android.camera",
+    "list": "Oem",
+    "description": "Vivo Camera App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.android.camera2",
@@ -1057,6 +1138,15 @@
     "id": "com.android.fileexplorer",
     "list": "Oem",
     "description": "Xiaomi/Mi File Explorer (Again it's a really poor choice for a package name considering it is not the AOSP File explorer)\nIt's a Closed-source app based on the AOSP version.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.android.filemanager",
+    "list": "Oem",
+    "description": "Vivo File manager App",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1507,6 +1597,15 @@
     "id": "com.android.noisefield",
     "list": "Aosp",
     "description": "\"Noise filed\" live wallpaper.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.notes",
+    "list": "Oem",
+    "description": "Vivo Notes App",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2732,6 +2831,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.bbk.SuperPowerSave",
+    "list": "Pending",
+    "description": "Vivo Super Power Save?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.bbk.account",
     "list": "Oem",
     "description": "Vivo account\nVivo privacy policy is really bad: https://privacy.vivo.com/privacy\nNote: Removing this will obviously break fuctions that require Vivo account authentication: accessibility, data backup etc.",
@@ -2759,6 +2867,24 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.bbk.cloud",
+    "list": "Oem",
+    "description": "VivoCloud App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.bbk.cloud",
+    "list": "Oem",
+    "description": "VivoCloud App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.bbk.iqoo.logsystem",
     "list": "Oem",
     "description": "User experience service\nTelemetry app.\nNote:Disabling this will break trial version system upgrade feature.",
@@ -2768,18 +2894,27 @@
     "removal": "Recommended"
   },
   {
-    "id": "com.bjbyhd.screenreader_huawei",
+    "id": "com.bbk.launcher2",
     "list": "Oem",
-    "description": "An accessibility feature for visually impaired people\n",
+    "description": "Vivo Launcher",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.bbk.theme",
+    "list": "Oem",
+    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLet's you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
   },
   {
-    "id": "com.bkk.theme",
+    "id": "com.bjbyhd.screenreader_huawei",
     "list": "Oem",
-    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLet's you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
+    "description": "An accessibility feature for visually impaired people\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3423,6 +3558,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.emoji.keyboard.touchpal.vivo",
+    "list": "Oem",
+    "description": "Vivo TouchPal Keyboard",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.enhance.gameservice",
@@ -7471,6 +7615,15 @@
     "id": "com.instagram.android",
     "list": "Misc",
     "description": "Instagram  (https://play.google.com/store/apps/details?id=com.instagram.android)\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.iqoo.secure",
+    "list": "Oem",
+    "description": "Vivo iManager App",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17570,15 +17723,6 @@
     "removal": "Recommended"
   },
   {
-    "id": "Com.sktelecom.minit",
-    "list": "Carrier",
-    "description": "Mobile T World app",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
-  {
     "id": "com.skype.m2",
     "list": "Misc",
     "description": "Skype Lite (https://play.google.com/store/apps/details?id=com.skype.m2)\n",
@@ -19901,6 +20045,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.vivo.FMRadio",
+    "list": "Oem",
+    "description": "Vivo FM Radio App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.appstore",
+    "list": "Oem",
+    "description": "Vivo V-Appstore App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.vivo.browser",
     "list": "Oem",
     "description": "Vivo browser full of trackers (https://play.google.com/store/apps/details?id=com.vivo.browser)\n",
@@ -19910,9 +20072,54 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.vivo.childrenmode",
+    "list": "Oem",
+    "description": "Vivo Kids Mode App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.compass",
+    "list": "Oem",
+    "description": "Vivo Compass App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.vivo.dream.weather",
     "list": "Oem",
     "description": "Vivo weather app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.easyshare",
+    "list": "Oem",
+    "description": "Vivo EasyShare App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.email",
+    "list": "Oem",
+    "description": "Vivo Email App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.gallery",
+    "list": "Oem",
+    "description": "Vivo Gallery App",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -19958,6 +20165,24 @@
     "id": "com.vivo.voicewakeup",
     "list": "Oem",
     "description": "Voice wake-up. Has a lot of permissions (REQUEST_INSTALL_PACKAGES, READ_EXTERNAL_STORAGE, RECORD_AUDIO...). Kind of a \"smart assistant\" ? Is constantly listening waiting for a trigger word [MORE INFO NEEDED]",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.weather",
+    "list": "Oem",
+    "description": "Vivo Weather App",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.website",
+    "list": "Oem",
+    "description": "Vivo.com App",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
