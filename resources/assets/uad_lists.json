@@ -9,6 +9,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "android",
+    "list": "Aosp",
+    "description": "Android System\nAndroid system framework? Apk file name: framework-res\nCould be THE core of the android system.\nProbably very unsafe to disable.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  {
     "id": "android.auto_generated_rro__",
     "list": "Aosp",
     "description": "rro = Runtime Resources Overlay.\nChanges values of a package config, based in the overlay definitions (heavily used by OEM for custom themming android) \nLink: https://source.android.com/devices/architecture/rros and https://code.tutsplus.com/tutorials/quick-tip-theme-android-with-the-runtime-resource-overlay-framework--cms-29708\n",
@@ -362,15 +371,6 @@
   {
     "id": "com.agui.game",
     "list": "Oem",
-    "description": "Game (From Unihertz Jelly2)\nRemoves distractions when selected apps are in use.",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
-  {
-    "id": "com.agui.game",
-    "list": "Oem",
     "description": "Game mode\nBlocks calls & notifications when selected APP's are open\n",
     "dependencies": [],
     "neededBy": [],
@@ -412,15 +412,6 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
-  },
-  {
-    "id": "com.agui.studentmodel",
-    "list": "Oem",
-    "description": "Student mode (From Unihertz Jelly2)\nSets limits to time - range, network, application limits and so on, to use a mobile phone reasonably. Under this mode, user is not allowed to install applications or factory reset. Applications not in white-list are disabled.",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
   },
   {
     "id": "com.agui.studentmodel",
