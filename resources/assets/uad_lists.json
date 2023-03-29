@@ -20126,6 +20126,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.vivo.motormode",
+    "list": "Oem",
+    "description": "Motorcycle mode",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.vivo.puresearch",
     "list": "Oem",
     "description": "Search Widget\nDesktop search bar",
