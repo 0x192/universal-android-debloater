@@ -22,8 +22,8 @@ In any case, you can NOT brick your device with this software! That's the main t
 NB : System apps cannot really be uninstalled without root (see the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ))
 
 ## Universal debloat lists
-* [X] GFAM (Google/Facebook/Amazon/Microsoft)
 * [X] AOSP
+* [X] GFAM (Google/Facebook/Amazon/Microsoft)
 * [X] Manufacturers (OEM)
 * [X] Mobile carriers
 * [X] Qualcomm / Mediatek / Miscellaneous
@@ -32,13 +32,13 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [ ] Archos
 * [X] Asus
 * [ ] Blackberry
-* [ ] Gionee
-* [X] LG
-* [X] Google
-* [ ] iQOO
 * [X] Fairphone
+* [ ] Gionee
+* [X] Google
 * [ ] HTC
 * [X] Huawei
+* [ ] iQOO
+* [X] LG
 * [X] Motorola
 * [X] Nokia
 * [X] OnePlus
@@ -46,8 +46,8 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 * [X] Realme
 * [X] Samsung
 * [X] Sony
-* [X] Tecno
 * [ ] TCL
+* [X] Tecno
 * [X] Unihertz
 * [X] Vivo/iQOO
 * [ ] Wiko
