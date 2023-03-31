@@ -5393,7 +5393,7 @@
   {
     "id": "com.sec.android.widgetapp.easymodecontactswidget",
     "list": "Oem",
-    "description": "Favourite Contacts widget\nLet's you add favorite contacts to home screen\nhttps://www.samsung.com/au/getstarted/advanced/create-favourite-contacts-on-your-home-screen/\nIs it only usable when enabling the \"simple use\" senior mode?\n",
+    "description": "Favourite Contacts widget\nLets you add favorite contacts to home screen\nhttps://www.samsung.com/au/getstarted/advanced/create-favourite-contacts-on-your-home-screen/\nIs it only usable when enabling the \"simple use\" senior mode?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5564,7 +5564,7 @@
   {
     "id": "com.sec.kidsplat.installer",
     "list": "Oem",
-    "description": "Kids Mode (replaced by Kids Home : com.samsung.android.kidsinstaller)\nSamsung Kids Home (https://www.samsung.com/global/galaxy/apps/kids-mode/)\nLet's you shape a safe environment for your child to happily explore and connect with the world.\nNOTE : You shouldn't give your phone to a child. That's bad ! \nhttps://ifstudies.org/blog/a-smartphone-will-change-your-child-in-ways-you-might-not-expect-or-want\n",
+    "description": "Kids Mode (replaced by Kids Home : com.samsung.android.kidsinstaller)\nSamsung Kids Home (https://www.samsung.com/global/galaxy/apps/kids-mode/)\nLets you shape a safe environment for your child to happily explore and connect with the world.\nNOTE : You shouldn't give your phone to a child. That's bad ! \nhttps://ifstudies.org/blog/a-smartphone-will-change-your-child-in-ways-you-might-not-expect-or-want\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5879,7 +5879,7 @@
   {
     "id": "com.samsung.android.app.motionpanoramaviewer",
     "list": "Oem",
-    "description": "Motion panorama viewer\nLet's you see the result of a motion panorama\nhttps://www.samsung.com/global/galaxy/what-is/motion-panorama/\n",
+    "description": "Motion panorama viewer\nLets you see the result of a motion panorama\nhttps://www.samsung.com/global/galaxy/what-is/motion-panorama/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5888,7 +5888,7 @@
   {
     "id": "com.samsung.android.app.selfmotionpanoramaviewer",
     "list": "Oem",
-    "description": "Selfie panorama viewer\nLet's you see the result of a selfie motion panorama\nhttps://www.samsung.com/global/galaxy/what-is/motion-panorama/\n",
+    "description": "Selfie panorama viewer\nLets you see the result of a selfie motion panorama\nhttps://www.samsung.com/global/galaxy/what-is/motion-panorama/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5924,7 +5924,7 @@
   {
     "id": "com.samsung.app.newtrim",
     "list": "Oem",
-    "description": "Samsung Video trimmer\nLet's you quickly trim video files (from the gallery “Edit -> Studio -> Video Trimmer”)\n",
+    "description": "Samsung Video trimmer\nLets you quickly trim video files (from the gallery “Edit -> Studio -> Video Trimmer”)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6158,7 +6158,7 @@
   {
     "id": "com.samsung.sdm.sdmviewer",
     "list": "Oem",
-    "description": "Let's you view installed updates?\n",
+    "description": "Lets you view installed updates?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6167,7 +6167,7 @@
   {
     "id": "com.samsung.tmowfc.wfcpref",
     "list": "Oem",
-    "description": "Wifi Calling for T-mobile clients only! (tmowfc = t-mobile only wifi calling)\nLet's you call or text on Wi-Fi networks with your T-Mobile phone number\nhttps://www.t-mobile.com/support/coverage/wi-fi-calling-from-t-mobile\nVoLTE/IMS is needed for this to work (see com.sec.imsservice)\n",
+    "description": "Wifi Calling for T-mobile clients only! (tmowfc = t-mobile only wifi calling)\nLets you call or text on Wi-Fi networks with your T-Mobile phone number\nhttps://www.t-mobile.com/support/coverage/wi-fi-calling-from-t-mobile\nVoLTE/IMS is needed for this to work (see com.sec.imsservice)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6248,7 +6248,7 @@
   {
     "id": "com.sec.android.app.vepreload",
     "list": "Oem",
-    "description": "Samsung video editor\nLet's you add add transitions, music, stickers and text to your videos. You can also change the speed of the action, \nor even add filters to switch up the mood of your videos.\n",
+    "description": "Samsung video editor\nLets you add add transitions, music, stickers and text to your videos. You can also change the speed of the action, \nor even add filters to switch up the mood of your videos.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6401,7 +6401,7 @@
   {
     "id": "com.sec.vsimservice",
     "list": "Oem",
-    "description": "VSim Service \nLet's you use a virtual sim\nhttps://www.quora.com/What-is-VSIM-virtual-SIM-technology\nHas a LOT of permissions (and involving IMS service)\nRun at startup.\nFYI : https://security.stackexchange.com/questions/223290/esim-vs-sim-card-what-is-more-secure\n",
+    "description": "VSim Service \nLets you use a virtual sim\nhttps://www.quora.com/What-is-VSIM-virtual-SIM-technology\nHas a LOT of permissions (and involving IMS service)\nRun at startup.\nFYI : https://security.stackexchange.com/questions/223290/esim-vs-sim-card-what-is-more-secure\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6437,7 +6437,7 @@
   {
     "id": "com.samsung.android.applock",
     "list": "Oem",
-    "description": "Samsung App Lock\nLet's you lock your app (Settins > Advanced fuctions > App lock)\nYou should lock your apps storing private data (provides data at rest encryption when your phone is locked)\n",
+    "description": "Samsung App Lock\nLets you lock your app (Settins > Advanced fuctions > App lock)\nYou should lock your apps storing private data (provides data at rest encryption when your phone is locked)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6491,7 +6491,7 @@
   {
     "id": "com.samsung.android.app.soundpicker",
     "list": "Oem",
-    "description": "Let's you select a sound for alarm/ringtone\n",
+    "description": "Lets you select a sound for alarm/ringtone\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7004,7 +7004,7 @@
   {
     "id": "com.android.hotspot2",
     "list": "Aosp",
-    "description": "Provides wifi tethering (let's you share your mobile device's Internet connection with other devices)\nhttps://en.wikipedia.org/wiki/Tethering)\n",
+    "description": "Provides wifi tethering (lets you share your mobile device's Internet connection with other devices)\nhttps://en.wikipedia.org/wiki/Tethering)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7085,7 +7085,7 @@
   {
     "id": "com.android.internal.systemui.navbar.gestural",
     "list": "Aosp",
-    "description": "Gesture navigation\nLet's you use swipes and other actions to navigate your device, rather than buttons.\nhttps://android-developers.googleblog.com/2019/08/gesture-navigation-backstory.html",
+    "description": "Gesture navigation\nLets you use swipes and other actions to navigate your device, rather than buttons.\nhttps://android-developers.googleblog.com/2019/08/gesture-navigation-backstory.html",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7724,7 +7724,7 @@
   {
     "id": "com.oneplus.backuprestore",
     "list": "Oem",
-    "description": "OnePlus Switch (https://play.google.com/store/apps/details?id=com.oneplus.backuprestore)\nLet's you migrate contacts, text messages, photos, and other data from one device to another.\nCan also backup data as a compressed archive.",
+    "description": "OnePlus Switch (https://play.google.com/store/apps/details?id=com.oneplus.backuprestore)\nLets you migrate contacts, text messages, photos, and other data from one device to another.\nCan also backup data as a compressed archive.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8003,7 +8003,7 @@
   {
     "id": "com.oneplus.opsports",
     "list": "Oem",
-    "description": "Cricket Scores (https://play.google.com/store/apps/details?id=com.oneplus.opsports)\nLet's you access and follow cricket teams and tournaments.",
+    "description": "Cricket Scores (https://play.google.com/store/apps/details?id=com.oneplus.opsports)\nLets you access and follow cricket teams and tournaments.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -12026,7 +12026,7 @@
   {
     "id": "com.lge.phonemanagement",
     "list": "Oem",
-    "description": "Smart Doctor App\nEnables you to shut down idle apps and delete temporary files.\nLet's you also see phone battery, mobile data, apps, network status and usage patterns.\nOn the paper it seems good but in practise, Android handle 8+ handles very well idles apps. \nhttps://www.lg.com/ca_en/support/product-help/CT20098088-20150129256824-others\n",
+    "description": "Smart Doctor App\nEnables you to shut down idle apps and delete temporary files.\nLets you also see phone battery, mobile data, apps, network status and usage patterns.\nOn the paper it seems good but in practise, Android handle 8+ handles very well idles apps. \nhttps://www.lg.com/ca_en/support/product-help/CT20098088-20150129256824-others\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -12071,7 +12071,7 @@
   {
     "id": "com.lge.remote.setting",
     "list": "Oem",
-    "description": "LG AirDrive\nLet's you to control files in your device via a wireless connection. \nTo use it, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
+    "description": "LG AirDrive\nLets you to control files in your device via a wireless connection. \nTo use it, you need to sign in to your LG account on both the PC and mobile device.\nhttps://www.lg.com/africa/support/product-help/CT20080025-1436354408798-others\n \nLG AirDrive settings\nSee package above.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -12332,7 +12332,7 @@
   {
     "id": "com.lge.floatingbar",
     "list": "Oem",
-    "description": "LG Floating bar\nLet's you put shortcuts to apps or features, as well as quick access to contacts and music player controls on a \"floating bar\" on the Home screen.\nhttps://www.neowin.net/news/lg-v30-closer-look-floating-bar/\n",
+    "description": "LG Floating bar\nLets you put shortcuts to apps or features, as well as quick access to contacts and music player controls on a \"floating bar\" on the Home screen.\nhttps://www.neowin.net/news/lg-v30-closer-look-floating-bar/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -13979,7 +13979,7 @@
   {
     "id": "cci.usage",
     "list": "Misc",
-    "description": "My Consumer Cellular (https://play.google.com/store/apps/details?id=cci.usage)\nLet's you manage your Consumer Cellular account, track your usage, pay your bill.\nConsumer Cellular is an American postpaid mobile virtual network operator\nhttps://en.wikipedia.org/wiki/Consumer_Cellular\n",
+    "description": "My Consumer Cellular (https://play.google.com/store/apps/details?id=cci.usage)\nLets you manage your Consumer Cellular account, track your usage, pay your bill.\nConsumer Cellular is an American postpaid mobile virtual network operator\nhttps://en.wikipedia.org/wiki/Consumer_Cellular\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14114,7 +14114,7 @@
   {
     "id": "com.directv.dvrscheduler",
     "list": "Misc",
-    "description": "DIRECTV (https://play.google.com/store/apps/details?id=com.directv.dvrscheduler)\nOffical app from DIRECTV (subsidiary of AT&T)\nLet's you watch Live TV, recorded shows, VODs and schedule recordings on your DVR\nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
+    "description": "DIRECTV (https://play.google.com/store/apps/details?id=com.directv.dvrscheduler)\nOffical app from DIRECTV (subsidiary of AT&T)\nLets you watch Live TV, recorded shows, VODs and schedule recordings on your DVR\nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14546,7 +14546,7 @@
   {
     "id": "com.republicwireless.tel",
     "list": "Misc",
-    "description": "Republic (https://play.google.com/store/apps/details?id=com.republicwireless.tel&hl)\nLet's you manage your Republic wireless account.\nRepublic Wireless is an american mobile virtual network operator (https://en.wikipedia.org/wiki/Republic_Wireless)\n",
+    "description": "Republic (https://play.google.com/store/apps/details?id=com.republicwireless.tel&hl)\nLets you manage your Republic wireless account.\nRepublic Wireless is an american mobile virtual network operator (https://en.wikipedia.org/wiki/Republic_Wireless)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14915,7 +14915,7 @@
   {
     "id": "tv.fubo.mobile.vpl",
     "list": "Misc",
-    "description": "fuboTV (https://play.google.com/store/apps/details?id=tv.fubo.mobile)\nLet's you Watch live Sports, TV Shows, Movies & News\n",
+    "description": "fuboTV (https://play.google.com/store/apps/details?id=tv.fubo.mobile)\nLets you Watch live Sports, TV Shows, Movies & News\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14924,7 +14924,7 @@
   {
     "id": "tv.peel.app",
     "list": "Misc",
-    "description": "Peel Universal Smart TV Remote Control (discontinued)\nLet's you remotely control devices like your TV, DVD or Blu-ray player.\n",
+    "description": "Peel Universal Smart TV Remote Control (discontinued)\nLets you remotely control devices like your TV, DVD or Blu-ray player.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15392,7 +15392,7 @@
   {
     "id": "com.miui.cit",
     "list": "Oem",
-    "description": "Hardware tests\nSecret codes (https://nitter.net/fs0c131y/status/933353182956326913#m) let's you run hardware tests.\nhttps://c.mi.com/thread-1744085-1-0.html\n",
+    "description": "Hardware tests\nSecret codes (https://nitter.net/fs0c131y/status/933353182956326913#m) lets you run hardware tests.\nhttps://c.mi.com/thread-1744085-1-0.html\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15410,7 +15410,7 @@
   {
     "id": "com.miui.huanji",
     "list": "Oem",
-    "description": "Mi Mover (https://play.google.com/store/apps/details?id=com.miui.huanji)\nLet's you transfer your contacts, messages, personal files, all the installed apps (but not their data) \nand all the settings (app + system) from an android phone to a Xiaomi phone.\nThe 2 phones will establish a direct wifi connection.\n",
+    "description": "Mi Mover (https://play.google.com/store/apps/details?id=com.miui.huanji)\nLets you transfer your contacts, messages, personal files, all the installed apps (but not their data) \nand all the settings (app + system) from an android phone to a Xiaomi phone.\nThe 2 phones will establish a direct wifi connection.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16400,7 +16400,7 @@
   {
     "id": "com.android.thememanager",
     "list": "Oem",
-    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package names.\nLet's you select and apply themes provided by Xiaomi.\nNOTE: Disabling will break the ability to change lock-screen wallpaper.",
+    "description": "MIUI Themes (manager)\nXiaomi seems to love confusing package names.\nLets you select and apply themes provided by Xiaomi.\nNOTE: Disabling will break the ability to change lock-screen wallpaper.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17174,7 +17174,7 @@
   {
     "id": "com.google.android.apps.subscriptions.red",
     "list": "Google",
-    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLet's you manage your Google cloud storage.\nOccasionally runs in the background.",
+    "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLets you manage your Google cloud storage.\nOccasionally runs in the background.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17255,7 +17255,7 @@
   {
     "id": "com.google.android.apps.wellbeing",
     "list": "Google",
-    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLet's you track device and app usage and set usage limits.\nWARNING: It is now a hard dependency for the settings app on Android 12+ on Pixel phones. Disable this package instead of uninstalling it or the settings will crash on launch.",
+    "description": "Digital Wellbeing (https://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing)\nLets you track device and app usage and set usage limits.\nWARNING: It is now a hard dependency for the settings app on Android 12+ on Pixel phones. Disable this package instead of uninstalling it or the settings will crash on launch.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17372,7 +17372,7 @@
   {
     "id": "com.google.android.instantapps.supervisor",
     "list": "Google",
-    "description": "Let's you try new games directly on Google Play.\nhttps://www.zdnet.com/article/googles-instant-apps-goes-live-now-you-can-try-android-apps-before-installing-them/\n",
+    "description": "Lets you try new games directly on Google Play.\nhttps://www.zdnet.com/article/googles-instant-apps-goes-live-now-you-can-try-android-apps-before-installing-them/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -19145,7 +19145,7 @@
   {
     "id": "com.sonyericsson.warrantytime",
     "list": "Oem",
-    "description": "Let's you see some info about your warranty and how long it will last.",
+    "description": "Lets you see some info about your warranty and how long it will last.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -19451,7 +19451,7 @@
   {
     "id": "com.android.email.partnerprovider",
     "list": "Aosp",
-    "description": "Let's Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often changes the default signature displayed at the end of each of your mail (e.g \"Sent from my Nokia phone\")",
+    "description": "Lets Google partners (OEM in most of the case) to customize the default email settings.\nThe manufacturer often changes the default signature displayed at the end of each of your mail (e.g \"Sent from my Nokia phone\")",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20504,7 +20504,7 @@
   {
     "id": "com.oplus.wifibackuprestore",
     "list": "Oem",
-    "description": "Let's you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
+    "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
