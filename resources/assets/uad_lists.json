@@ -3971,7 +3971,7 @@
   {
     "id": "com.samsung.android.mdm",
     "list": "Oem",
-    "description": "MDMApp (Mobile Device Management app)\nUsed to monitor and manage remotely  mobile devices.\nFor exemple locking split-screen, blocking safe mode boot, enabling branding logo in the lock screen, remotely configuring IMAP email...\nMost likely related to KNOX \nhttps://www.samsungknox.com/en/solutions/it-solutions/knox-manage\nhttps://developer.samsung.com/tech-insights/knox/mobile-device-management\n",
+    "description": "MDMApp (Mobile Device Management app)\nUsed to monitor and manage remotely  mobile devices.\nFor example locking split-screen, blocking safe mode boot, enabling branding logo in the lock screen, remotely configuring IMAP email...\nMost likely related to KNOX \nhttps://www.samsungknox.com/en/solutions/it-solutions/knox-manage\nhttps://developer.samsung.com/tech-insights/knox/mobile-device-management\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6824,7 +6824,7 @@
   {
     "id": "com.android.apps.tag",
     "list": "Aosp",
-    "description": "Support for NFC tags interactions (5 permissions, Contacts/Phone On by default).\nNFC Tags are for instance used in buses to validate your transport card with your phone.\nOther exemple: https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) with this disabled.",
+    "description": "Support for NFC tags interactions (5 permissions, Contacts/Phone On by default).\nNFC Tags are for instance used in buses to validate your transport card with your phone.\nOther example: https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) with this disabled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
