@@ -6050,7 +6050,7 @@
   {
     "id": "com.samsung.android.smartfitting",
     "list": "Oem",
-    "description": "Smart Fitting Service\nAdapt the size/ratio of the screen. Automatic mode is default but there is a manual mode\nhttps://www.samsung.com/levant/support/mobile-devices/galaxy-s8-s8-plus-what-is-the-smart-fitting-display-for-vod-games/\n",
+    "description": "Smart Fitting Service\nAdapts the size/ratio of the screen. Automatic mode is default but there is a manual mode\nhttps://www.samsung.com/levant/support/mobile-devices/galaxy-s8-s8-plus-what-is-the-smart-fitting-display-for-vod-games/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6221,7 +6221,7 @@
   {
     "id": "com.sec.android.app.personalization",
     "list": "Oem",
-    "description": "Has something to do with personalization?\nHas 2 permissions: READ_PHONE_STATE and CHANGE_PHONE_STATE",
+    "description": "Has something to do with personalization?\nHas 2 permissions: `READ_PHONE_STATE` and `CHANGE_PHONE_STATE`",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7355,7 +7355,7 @@
   {
     "id": "com.android.voicedialer",
     "list": "Aosp",
-    "description": "AOSP Voice dialer. Let's you call someone or open an app with your voice from the dialer.\nOEM often use their own code (embeded in their voice-controlled digital assistant)\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own voice dialer app.\n",
+    "description": "AOSP Voice dialer. Lets you call someone or open an app with your voice from the dialer.\nOEM often use their own code (embeded in their voice-controlled digital assistant)\nNOTE: On some phones Huawei & Xiaomi also use this package name for their own voice dialer app.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -12935,7 +12935,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to trigger a bootloops on some phones.\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather service. Removal seems to trigger a bootloop on some phones.\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -13034,7 +13034,7 @@
   {
     "id": "com.heytap.cloud",
     "list": "Oem",
-    "description": "HeyTap Cloud\nBad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html\nWhy does the app need REQUEST_INSTALL_PACKAGES (can install packages)?\nPithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
+    "description": "HeyTap Cloud\nBad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html\nWhy does the app need `REQUEST_INSTALL_PACKAGES` (can install packages)?\nPithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
     "dependencies": ["com.heytap.mcs"],
     "neededBy": [],
     "labels": [],
@@ -14060,7 +14060,7 @@
   {
     "id": "com.contextlogic.wish",
     "list": "Misc",
-    "description": "Wish Shopping (https://play.google.com/store/apps/details?id=com.contextlogic.wish)\nYou should not buy from Wish if you want my opinion.\n",
+    "description": "Wish Shopping (https://play.google.com/store/apps/details?id=com.contextlogic.wish)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14465,7 +14465,7 @@
   {
     "id": "com.pinsight.v1",
     "list": "Misc",
-    "description": "App Spotlight\nMakes you discover new apps from the Google Play store. The selection criteria is unkown.\n",
+    "description": "App Spotlight\nMakes you discover new apps from the Google Play store. The selection criteria is unknown.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -14582,7 +14582,7 @@
   {
     "id": "com.servicemagic.consumer",
     "list": "Misc",
-    "description": "HomeAdvisor: Contractors for Home Improvement (https://play.google.com/store/apps/details?id=com.servicemagic.consumer)\nHelps you find local contractors from the service Home Advisor network\nHomeAdvisor collects users data when a request is made and then sells that data to local contractors in exchange for money.\nWorth Reading : https://en.wikipedia.org/wiki/HomeAdvisor#Critism\n",
+    "description": "HomeAdvisor: Contractors for Home Improvement (https://play.google.com/store/apps/details?id=com.servicemagic.consumer)\nHelps you find local contractors from the service Home Advisor network\nHomeAdvisor collects users data when a request is made and then sells that data to local contractors in exchange for money.\nWorth Reading: https://en.wikipedia.org/wiki/HomeAdvisor#Critism\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15536,7 +15536,7 @@
   {
     "id": "com.miui.analytics",
     "list": "Oem",
-    "description": "Xiaomi Analytics\nThis app is shady. According to a guy who tried to reverse engineered the app, Xiaomi Analytics can replace any (signed?) package \nthey want silently on your device within 24 hours. Maybe that no longer the case now but... you don't want analytics anyway.\nSource : http://blog.thijsbroenink.com/2016/09/xiaomis-analytics-app-reverse-engineered/\n",
+    "description": "Xiaomi Analytics\nThis app is shady. According to a guy who tried to reverse engineer the app, Xiaomi Analytics can replace any (signed?) package \nthey want silently on your device within 24 hours. Maybe that no longer the case now but... you don't want analytics anyway.\nSource : http://blog.thijsbroenink.com/2016/09/xiaomis-analytics-app-reverse-engineered/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16121,7 +16121,7 @@
   {
     "id": "com.xiaomi.o2o",
     "list": "Oem",
-    "description": "o2o = online-to-offline\n==> Describes systems enticing consumers within a digital environment to make purchases of goods or services from physical businesses.\nhttps://en.wikipedia.org/wiki/Online_to_offline\nNOTE : This package can make phone calls without user intervention.\n",
+    "description": "o2o = online-to-offline\n==> Describes systems enticing consumers within a digital environment to make purchases of goods or services from physical businesses.\nhttps://en.wikipedia.org/wiki/Online_to_offline\nNOTE: This package can make phone calls without user intervention.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16148,7 +16148,7 @@
   {
     "id": "com.xiaomi.scanner",
     "list": "Oem",
-    "description": "Mi Scanner\nQR code scanner with a lot of questionable permissions : ACCESS_FINE_LOCATION, CALL_PHONE, READ_CONTACTS, REQUEST_INSTALL_PACKAGES, QUERY_ALL_PACKAGES, FOREGROUND_SERVICE, INTERNET\n",
+    "description": "Mi Scanner\nQR code scanner with a lot of questionable permissions : `ACCESS_FINE_LOCATION`, `CALL_PHONE`, `READ_CONTACTS`, `REQUEST_INSTALL_PACKAGES`, `QUERY_ALL_PACKAGES`, `FOREGROUND_SERVICE`, `INTERNET`\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -19289,7 +19289,7 @@
   {
     "id": "com.google.android.tag",
     "list": "Google",
-    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone\nOther example : https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to a NFC device (e.g a speaker) if removed.\n",
+    "description": "Support for NFC tags interactions (5 permissions : Contacts/Phone On by default).\nNFC Tags are for instance used in bus to let you validate your transport card with your phone\nOther example: https://en.wikipedia.org/wiki/TecTile\nYou will still be able to connect to an NFC device (e.g a speaker) if removed.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20117,7 +20117,7 @@
   {
     "id": "com.redteamobile.roaming",
     "list": "Misc",
-    "description": "ORoaming\nLet's you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
+    "description": "ORoaming\nLets you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
     "dependencies": ["com.redteamobile.roaming.deamon"],
     "neededBy": [],
     "labels": [],
@@ -20315,7 +20315,7 @@
   {
     "id": "com.oplus.pay",
     "list": "Oem",
-    "description": "Secure Payment\nLet's you pay with your phone. Privacy issue aside, you should probably not trust their security: https://www.bitdefender.com/blog/hotforsecurity/hackers-attack-oneplus-again-this-time-stealing-customer-details",
+    "description": "Secure Payment\nLets you pay with your phone. Privacy issue aside, you should probably not trust their security: https://www.bitdefender.com/blog/hotforsecurity/hackers-attack-oneplus-again-this-time-stealing-customer-details",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20423,7 +20423,7 @@
   {
     "id": "com.coloros.activation",
     "list": "Oem",
-    "description": "E-warranty card\nLet's you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot\n\nPithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
+    "description": "E-warranty card\nLets you check if your registered phone is still under warranty (will send your IMEI to esa-reg-eup.myoppo.com. Has a lot of permissions and run at boot\n\nPithus analysis: https://beta.pithus.org/report/2a1dc5caedd2347fa009563e9b4d1c11b1cb42726f9046151934c456fdd77d88",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20594,7 +20594,7 @@
   {
     "id": "com.oneplus.geoiptime",
     "list": "Oem",
-    "description": "Set the Timezone (it is not a NTP client). Automatically starts at boot and connects to checkip.amazonaws.com and gateway.oneplus.com.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
+    "description": "Sets the Timezone (it is not an NTP client). Automatically starts at boot and connects to `checkip.amazonaws.com` and `gateway.oneplus.com`.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20810,7 +20810,7 @@
   {
     "id": "com.bkk.theme",
     "list": "Oem",
-    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLet's you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
+    "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLets you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
