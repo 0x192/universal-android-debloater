@@ -5978,7 +5978,7 @@
   {
     "id": "com.samsung.android.bluelightfilter",
     "list": "Oem",
-    "description": "Blue ligth filter\nYou should use it, it's great\n",
+    "description": "Blue light filter\Using the sunrise/sunset option uses the ACCESS_FINE_LOCATION permission. It's better to program the activation of the filter according to the time.\nNote: reducing blue light can prevent eyestrain and other health issues. See https://www.webmd.com/eye-health/blue-light-reduce-effects",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
