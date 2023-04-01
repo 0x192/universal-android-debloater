@@ -59,7 +59,8 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
         false => vec![args],
     };
 
-    let command = Command::new("adb").args(adb_command);
+    let mut command = Command::new("adb");
+    command.args(adb_command);
 
     #[cfg(target_os = "windows")]
     let command = command.creation_flags(0x08000000); // do not open a cmd window
@@ -156,6 +157,7 @@ pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> H
         .unwrap_or_default()
         .replace("package:", "")
         .lines()
+        .map(|s| String::from(s))
         .collect()
 }
 
@@ -272,8 +274,8 @@ pub fn get_phone_brand() -> String {
     format!(
         "{} {}",
         adb_shell_command(true, "getprop ro.product.brand")
-            .map(|s| s.trim())
-            .unwrap_or(""),
+            .map(|s| s.trim().to_string())
+            .unwrap_or("".to_string()),
         get_phone_model()
     )
 }
