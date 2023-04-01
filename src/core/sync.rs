@@ -160,7 +160,7 @@ pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> H
         .unwrap_or_default()
         .replace("package:", "")
         .lines()
-        .map(|s| String::from(s))
+        .map(String::from)
         .collect()
 }
 
