@@ -423,7 +423,8 @@ impl List {
                 .center_x()
                 .style(style::Container::BorderedFrame);
 
-                let content = if !self.phone_packages[self.selected_user.unwrap().index].is_empty()
+                let content = if selected_device.user_list.is_empty()
+                    || !self.phone_packages[self.selected_user.unwrap().index].is_empty()
                 {
                     column![
                         control_panel,
