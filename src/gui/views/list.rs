@@ -363,10 +363,11 @@ impl List {
                     .height(Length::FillPortion(6))
                     .style(style::Scrollable::Packages);
 
-                let description_scroll =
-                    scrollable(text(&self.description)).style(style::Scrollable::Description);
+                let description_scroll = scrollable(text(&self.description).width(Length::Fill))
+                    .style(style::Scrollable::Description);
 
                 let description_panel = container(description_scroll)
+                    .padding(6)
                     .height(Length::FillPortion(2))
                     .width(Length::Fill)
                     .style(style::Container::Frame);
@@ -422,7 +423,8 @@ impl List {
                 .center_x()
                 .style(style::Container::BorderedFrame);
 
-                let content = if !self.phone_packages[self.selected_user.unwrap().index].is_empty()
+                let content = if selected_device.user_list.is_empty()
+                    || !self.phone_packages[self.selected_user.unwrap().index].is_empty()
                 {
                     column![
                         control_panel,
