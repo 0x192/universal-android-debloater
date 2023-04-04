@@ -20941,5 +20941,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.kuackmedia.orange",
+    "list": "Carrier",
+    "description": "Altice Music\nIt's a music application that allows you to stream music, but it comes pre-installed.\nhttps://play.google.com/store/apps/details?id=com.kuackmedia.orange",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
