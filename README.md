@@ -1,14 +1,14 @@
 # Universal Android Debloater GUI
-**DISCLAIMER**: Use at your own risk. I am not responsible for anything that could happen to your phone.
+**DISCLAIMER**: Use at your own risk. I am not responsible for anything that could happen to your device.
 
 <img src="/resources/screenshots/v0.5.0.png" width="850" alt="uad_screenshot">
 
 **This software is still in an early stage of development. Check out the issues, and feel free to contribute!**
 
 ## Summary
-This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater), which aims to improve privacy and battery performance by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface).
+This is a complete rewrite in Rust of the [UAD project](https://gitlab.com/W1nst0n/universal-android-debloater), which aims to improve privacy and system performance (battery life, speed, & memory) by removing unnecessary and obscure system apps. This can also contribute to improve security by reducing [the attack surface](https://en.wikipedia.org/wiki/Attack_surface).
 
-Packages are as well documented as possible in order to provide a better understanding of what you can delete or not. The worst thing which could happen is removing an essential system package needed during boot causing then an unfortunate bootloop. After about 5 failed system boots, the phone will automatically reboot in recovery mode and you'll have to perform a FACTORY RESET. So make a backup first!
+Packages are as well documented as possible in order to provide a better understanding of what you can delete or not. The worst thing which could happen is removing an essential system package needed during boot causing then an unfortunate bootloop. After about 5 failed system boots, the device will automatically reboot in recovery mode and you'll have to perform a FACTORY RESET. So make a backup first!
 
 In any case, you can NOT brick your device with this software! That's the main thing, right?
 
@@ -57,7 +57,7 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 ## Mobile carriers debloat lists
 |   Country       | Carriers                          |
 |-----------------|-----------------------------------|
-| France          | Orange, SFR, Free, Bouygues       |
+| France          | Altice/Orange, SFR, Free, Bouygues       |
 | USA             | T-Mobile, Verizon, Sprint, AT&T   |
 | Germany         | Telekom                           |
 | UK              | EE                                |
@@ -66,9 +66,8 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
 ## How to use it
 - **Read the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ)!**
 - **Do a proper backup of your data! You can never be too careful!**
-- Enable *Developer Options* on your smartphone.
-- Turn on *USB Debugging* from the developer panel.
-- From the settings, disconnect from any OEM accounts (when you delete an OEM account package it could lock you on the lockscreen because the phone can't associate your identity anymore)
+- [Enable *Developer Options*](https://developer.android.com/studio/debug/dev-options) on your Android device, then [turn on *USB Debugging*](https://developer.android.com/studio/debug/dev-options#Enable-debugging).
+- From the settings, disconnect from any OEM accounts (when you delete an OEM account package it could lock you on the lockscreen, because the device can't associate your identity anymore)
 - Install ADB (see the intructions by clicking on your OS below):
   <p>
   <details>
@@ -122,12 +121,14 @@ NB : System apps cannot really be uninstalled without root (see the [FAQ](https:
   </details>
   </p>
 
+- If you have the Android SDK, you already have ADB, just ensure that `platform-tools` is in the system-wide `PATH` environment variable (you need to know where the SDK is installed to do this).
+If you don't have admin privileges, [download `platform-tools`](https://developer.android.com/studio/releases/platform-tools#downloads), then add it to your user `PATH`.
 
 - Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases). Take the `opengl` version only if the default version (with a Vulkan backend) doesn't launch.
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock apps because those Chinese manufacturers (especially Xiaomi and Huawei) have been using the name of AOSP packages for their own (modified & closed-source) apps.
 
-**IMPORTANT NOTE:** You will have to run this software whenever your OEM pushes an update to your phone as some *uninstalled* system apps could be reinstalled.
+**IMPORTANT NOTE:** You will have to run this software whenever your OEM pushes an update to your device, as some *uninstalled* system apps could be reinstalled.
 
 ## How to contribute
 
