@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Your phone:** <phone model>
+**Your device:** <device model>
 
 **Packages:**
 ```
@@ -15,12 +15,12 @@ com.this.is.a.bad.application
 com.this.is.another.bad.application
 ...
 ```
-- [ ] **I removed all those packages on my phone**
+- [ ] **I removed all those packages on my device**
 If not why. Leave the brackets blank and explain why.
 
 ## Document each package the best you can
 **List**: `Google`|`Misc`|`Oem` (manufacturer)|`Aosp`|`Pending`|`Carrier` (isp).
-**Removal**: `Recommended`, `Advanced`, `Expert` (this can break important features), `Unsafe` (this can bootloop the phone or break extremely important features).
+**Removal**: `Recommended`, `Advanced`, `Expert` (this can break important features), `Unsafe` (this can bootloop the device or break extremely important features).
 
 ### \<package name\>
 **List**: \<list\> 
