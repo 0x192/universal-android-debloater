@@ -1784,7 +1784,7 @@
   {
     "id": "com.huawei.android.hwouc",
     "list": "Oem",
-    "description": "Huawei EMUI System Update Service.\nRemoving this will disable System updates and remove 'System & Updates -> Software update' from settings. Highly recommended if you hate EMUI 12 and don't accidentally want to update to it.",
+    "description": "Huawei EMUI System Update Service.\nRemoving this will disable System updates and remove 'System & Updates -> Software update' from settings. Highly recommended if you don't like the new, pending EMUI update and don't want to update to it.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
