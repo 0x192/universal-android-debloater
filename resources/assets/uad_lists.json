@@ -1422,6 +1422,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.dti.tim",
+    "list": "Carrier",
+    "description": "Mobile Service Manager\nThis package is a bloatware app made by TIM (perhaps an Italian carrier?) that has many permissions so it may be able to spy you or install apps without your consent.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.locationlabs.cni.att",
     "list": "Carrier",
     "description": "AT&T Smart Limits\nParental Control tool.\nhttps://m.att.com/shopmobile/wireless/features/smart-limits.html\n",
