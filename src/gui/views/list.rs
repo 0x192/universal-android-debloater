@@ -468,12 +468,13 @@ impl List {
         settings: &Settings,
         packages: &[PackageRow],
     ) -> Element<Message, Renderer<Theme>> {
+        // (nb_to_restore, nb_to_remove)
         let mut h_recap: HashMap<Removal, (u8, u8)> = HashMap::new();
         for p in packages.iter().filter(|p| p.selected) {
-            if p.state != PackageState::Uninstalled {
-                h_recap.entry(p.removal).or_insert((0, 0)).0 += 1;
-            } else {
+            if p.state == PackageState::Uninstalled || p.state == PackageState::Disabled {
                 h_recap.entry(p.removal).or_insert((0, 0)).1 += 1;
+            } else {
+                h_recap.entry(p.removal).or_insert((0, 0)).0 += 1;
             }
         }
 
