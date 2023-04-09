@@ -56,22 +56,17 @@ impl About {
             text(format!("UAD version: v{}", env!("CARGO_PKG_VERSION"))).width(250);
 
         #[cfg(feature = "self-update")]
-        let self_update_text = match &update_state.self_update.latest_release {
-            Some(r) => {
-                if update_state.self_update.status == SelfUpdateStatus::Updating {
-                    update_state.self_update.status.to_string()
-                } else {
-                    format!("(v{} available)", r.tag_name)
-                }
-            }
-            None => {
-                if update_state.self_update.status == SelfUpdateStatus::Done {
-                    "(No update available)".to_string()
-                } else {
-                    update_state.self_update.status.to_string()
-                }
-            }
-        };
+        #[rustfmt::skip]
+        let self_update_text = update_state.self_update.latest_release.as_ref().map_or_else(||
+            if update_state.self_update.status == SelfUpdateStatus::Done {
+                "(No update available)".to_string()
+            } else {
+                update_state.self_update.status.to_string()
+            }, |r| if update_state.self_update.status == SelfUpdateStatus::Updating {
+                update_state.self_update.status.to_string()
+            } else {
+                format!("(v{} available)", r.tag_name)
+            });
 
         #[cfg(feature = "self-update")]
         let last_self_update_text = text(self_update_text).style(style::Text::Default);

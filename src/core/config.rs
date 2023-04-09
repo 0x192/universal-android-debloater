@@ -61,16 +61,16 @@ impl Config {
             .find(|x| x.device_id == *device_id)
         {
             *device = settings.device.clone();
-            config.general = settings.general.clone();
         } else {
             debug!("config: New device settings saved");
             config.devices.push(settings.device.clone());
-            config.general = settings.general.clone();
         }
+        config.general = settings.general.clone();
         let toml = toml::to_string(&config).unwrap();
         fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
     }
 
+    #[allow(clippy::option_if_let_else)]
     pub fn load_configuration_file() -> Self {
         if let Ok(s) = fs::read_to_string(&*CONFIG_FILE) {
             match toml::from_str(&s) {

@@ -87,14 +87,13 @@ pub fn open_url(dir: PathBuf) {
     }
 }
 
+#[rustfmt::skip]
+#[allow(clippy::option_if_let_else)]
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
-    match fs::metadata(file) {
-        Ok(metadata) => match metadata.modified() {
-            Ok(time) => time.into(),
-            Err(_) => Utc::now(),
-        },
+    fs::metadata(file).map_or_else(|_| Utc::now(), |metadata| match metadata.modified() {
+        Ok(time) => time.into(),
         Err(_) => Utc::now(),
-    }
+    })
 }
 
 pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
@@ -118,18 +117,19 @@ pub struct DisplayablePath {
 
 impl fmt::Display for DisplayablePath {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let stem = if let Some(p) = self.path.file_stem() {
-            match p.to_os_string().into_string() {
+        let stem = self.path.file_stem().map_or_else(
+            || {
+                error!("[PATH STEM]: No file stem found");
+                "[File steam not found]".to_string()
+            },
+            |p| match p.to_os_string().into_string() {
                 Ok(stem) => stem,
                 Err(e) => {
                     error!("[PATH ENCODING]: {:?}", e);
                     "[PATH ENCODING ERROR]".to_string()
                 }
-            }
-        } else {
-            error!("[PATH STEM]: No file stem found");
-            "[File steam not found]".to_string()
-        };
+            },
+        );
 
         write!(f, "{stem}")
     }

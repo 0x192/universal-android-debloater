@@ -95,6 +95,7 @@ impl Application for UadGui {
     }
     fn update(&mut self, msg: Message) -> Command<Message> {
         match msg {
+            #[allow(clippy::option_if_let_else)]
             Message::LoadDevices(devices_list) => {
                 self.selected_device = match &self.selected_device {
                     Some(s_device) => {

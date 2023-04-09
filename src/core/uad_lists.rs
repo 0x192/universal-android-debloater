@@ -177,10 +177,10 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
     let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
     let mut error = false;
     let list: Vec<Package> = if remote {
-        match retry(Fixed::from_millis(1000).take(60), || {
+        retry(Fixed::from_millis(1000).take(60), || {
             match ureq::get(
                 "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
-            main/resources/assets/uad_lists.json",
+           main/resources/assets/uad_lists.json",
             )
             .call()
             {
@@ -196,10 +196,8 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
                     OperationResult::Retry(Vec::<Package>::new())
                 }
             }
-        }) {
-            Ok(list) => list,
-            Err(_) => get_local_lists(),
-        }
+        })
+        .map_or_else(|_| get_local_lists(), |list| list)
     } else {
         warn!("Could not load remote debloat list");
         get_local_lists()

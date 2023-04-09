@@ -140,6 +140,7 @@ pub async fn perform_adb_commands(
 }
 
 pub fn list_all_system_packages(user_id: Option<&User>) -> String {
+    #[allow(clippy::option_if_let_else)]
     let action = match user_id {
         Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
         None => "pm list packages -s -u".to_string(),
@@ -151,6 +152,7 @@ pub fn list_all_system_packages(user_id: Option<&User>) -> String {
 }
 
 pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
+    #[allow(clippy::option_if_let_else)]
     let user = match user_id {
         Some(user_id) => format!(" --user {}", user_id.id),
         None => String::new(),
@@ -253,14 +255,15 @@ pub fn apply_pkg_state_commands(
 }
 
 pub fn request_builder(commands: &[&str], package: &str, user: Option<&User>) -> Vec<String> {
-    if let Some(u) = user {
-        commands
-            .iter()
-            .map(|c| format!("{} --user {} {}", c, u.id, package))
-            .collect()
-    } else {
-        commands.iter().map(|c| format!("{c} {package}")).collect()
-    }
+    user.map_or_else(
+        || commands.iter().map(|c| format!("{c} {package}")).collect(),
+        |u| {
+            commands
+                .iter()
+                .map(|c| format!("{} --user {} {}", c, u.id, package))
+                .collect()
+        },
+    )
 }
 
 pub fn get_phone_model() -> String {
@@ -298,6 +301,8 @@ pub fn is_protected_user(user_id: &str) -> bool {
 pub fn get_user_list() -> Vec<User> {
     #[dynamic]
     static RE: Regex = Regex::new(r"\{([0-9]+)").unwrap();
+
+    #[allow(clippy::option_if_let_else)]
     match adb_shell_command(true, "pm list users") {
         Ok(users) => RE
             .find_iter(&users)
@@ -314,7 +319,7 @@ pub fn get_user_list() -> Vec<User> {
 
 // getprop ro.serialno
 pub async fn get_devices_list() -> Vec<Phone> {
-    match retry(
+    retry(
         Fixed::from_millis(500).take(120),
         || match adb_shell_command(false, "devices") {
             Ok(devices) => {
@@ -339,8 +344,6 @@ pub async fn get_devices_list() -> Vec<Phone> {
                 OperationResult::Retry(test)
             }
         },
-    ) {
-        Ok(devices) => devices,
-        Err(_) => vec![],
-    }
+    )
+    .map_or_else(|_| vec![], |devices| devices)
 }
