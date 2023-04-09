@@ -428,7 +428,9 @@ impl List {
                 {
                     column![
                         control_panel,
-                        container(unavailable).height(Length::Fill).center_y(),
+                        packages_scrollable,
+                        description_panel,
+                        action_row,
                     ]
                     .width(Length::Fill)
                     .spacing(10)
@@ -436,9 +438,7 @@ impl List {
                 } else {
                     column![
                         control_panel,
-                        packages_scrollable,
-                        description_panel,
-                        action_row,
+                        container(unavailable).height(Length::Fill).center_y(),
                     ]
                     .width(Length::Fill)
                     .spacing(10)
