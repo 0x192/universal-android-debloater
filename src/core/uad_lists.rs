@@ -94,12 +94,7 @@ pub enum PackageState {
 }
 
 impl PackageState {
-    pub const ALL: [Self; 4] = [
-        Self::All,
-        Self::Enabled,
-        Self::Uninstalled,
-        Self::Disabled,
-    ];
+    pub const ALL: [Self; 4] = [Self::All, Self::Enabled, Self::Uninstalled, Self::Disabled];
 }
 
 impl std::fmt::Display for PackageState {
