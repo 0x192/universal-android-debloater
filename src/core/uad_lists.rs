@@ -53,15 +53,15 @@ impl std::fmt::Display for UadListState {
 }
 
 impl UadList {
-    pub const ALL: [UadList; 8] = [
-        UadList::All,
-        UadList::Aosp,
-        UadList::Carrier,
-        UadList::Google,
-        UadList::Misc,
-        UadList::Oem,
-        UadList::Pending,
-        UadList::Unlisted,
+    pub const ALL: [Self; 8] = [
+        Self::All,
+        Self::Aosp,
+        Self::Carrier,
+        Self::Google,
+        Self::Misc,
+        Self::Oem,
+        Self::Pending,
+        Self::Unlisted,
     ];
 }
 
@@ -94,11 +94,11 @@ pub enum PackageState {
 }
 
 impl PackageState {
-    pub const ALL: [PackageState; 4] = [
-        PackageState::All,
-        PackageState::Enabled,
-        PackageState::Uninstalled,
-        PackageState::Disabled,
+    pub const ALL: [Self; 4] = [
+        Self::All,
+        Self::Enabled,
+        Self::Uninstalled,
+        Self::Disabled,
     ];
 }
 
@@ -150,13 +150,13 @@ pub enum Removal {
 }
 
 impl Removal {
-    pub const ALL: [Removal; 6] = [
-        Removal::All,
-        Removal::Recommended,
-        Removal::Advanced,
-        Removal::Expert,
-        Removal::Unsafe,
-        Removal::Unlisted,
+    pub const ALL: [Self; 6] = [
+        Self::All,
+        Self::Recommended,
+        Self::Advanced,
+        Self::Expert,
+        Self::Unsafe,
+        Self::Unlisted,
     ];
 }
 
