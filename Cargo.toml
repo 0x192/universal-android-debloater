@@ -13,29 +13,29 @@ edition = "2021"
 
 [features]
 default = ["wgpu", "self-update"]
-wgpu = [] # iced/wgpu is default
-glow = ["iced/glow"] # OpenGL support
+wgpu = []                         # Iced/wgpu is default
+glow = ["iced/glow"]              # OpenGL support
 self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
 iced = { git = "https://github.com/iced-rs/iced.git" }
-iced_native = { git = "https://github.com/iced-rs/iced.git"}
+iced_native = { git = "https://github.com/iced-rs/iced.git" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"
 fern = { version = "^0", features = ["colored"] }
-log = "^0"
-chrono = "^0"
+chrono = { version = "^0.4", default-features = false, features = ["std", "clock"] }
+log = "^0.4"
 regex = "^1.5"
 toml = "^0"
-dirs = "^4.0"
+dirs = "^5.0.0"
 ureq = { version = "*", features = ["json"] }
-retry = { version = "^1.0" }
+retry = { version = "^2.0.0" }
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }
-tar = { version = "^0", optional = true }
+tar = { version = "^0.4", optional = true }
 
 [profile.release]
 opt-level = "s"
