@@ -133,6 +133,7 @@ pub async fn perform_adb_commands(
     }
 }
 
+#[allow(clippy::option_if_let_else)]
 pub fn user_flag(user_id: Option<&User>) -> String {
     match user_id {
         Some(user_id) => format!(" --user {}", user_id.id),
@@ -246,7 +247,7 @@ pub fn apply_pkg_state_commands(
     }
 }
 
-pub fn request_builder(commands: Vec<&str>, package: &str, user: Option<&User>) -> Vec<String> {
+pub fn request_builder(commands: &[&str], package: &str, user: Option<&User>) -> Vec<String> {
     #[allow(clippy::option_if_let_else)]
     match user {
         Some(u) => commands
@@ -277,7 +278,7 @@ pub fn get_phone_brand() -> String {
         "{} {}",
         adb_shell_command(true, "getprop ro.product.brand")
             .map(|s| s.trim().to_string())
-            .unwrap_or(String::new()),
+            .unwrap_or_default(),
         get_phone_model()
     )
 }
