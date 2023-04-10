@@ -38,7 +38,7 @@ pub enum LoadingState {
 
 impl Default for LoadingState {
     fn default() -> Self {
-        Self::FindingPhones("".to_string())
+        Self::FindingPhones(String::new())
     }
 }
 
@@ -96,7 +96,7 @@ impl List {
             }
             Message::ModalValidate => {
                 let mut commands = vec![];
-                self.selected_packages.sort();
+                self.selected_packages.sort_unstable();
                 self.selected_packages.dedup();
                 for selection in &self.selected_packages {
                     commands.append(&mut build_action_pkg_commands(
@@ -114,7 +114,7 @@ impl List {
                     if let CommandType::PackageManager(p) = res {
                         self.loading_state = LoadingState::RestoringDevice(
                             self.phone_packages[i_user][p.index].name.clone(),
-                        )
+                        );
                     }
                 } else {
                     self.loading_state = LoadingState::RestoringDevice("Error [TODO]".to_string());
@@ -128,7 +128,7 @@ impl List {
                     selected_device.android_sdk, selected_device.model
                 );
                 info!("{:-^65}", "-");
-                self.loading_state = LoadingState::DownloadingList("".to_string());
+                self.loading_state = LoadingState::DownloadingList(String::new());
                 Command::perform(
                     Self::init_apps_view(remote, selected_device.clone()),
                     Message::LoadPhonePackages,
@@ -136,7 +136,7 @@ impl List {
             }
             Message::LoadPhonePackages(list_box) => {
                 let (uad_list, list_state) = list_box;
-                self.loading_state = LoadingState::LoadingPackages("".to_string());
+                self.loading_state = LoadingState::LoadingPackages(String::new());
                 self.uad_lists = uad_list.clone();
                 *list_update_state = list_state;
                 Command::perform(
@@ -152,7 +152,7 @@ impl List {
                 self.selected_list = Some(UadList::All);
                 self.selected_user = Some(User::default());
                 Self::filter_package_lists(self);
-                self.loading_state = LoadingState::Ready("".to_string());
+                self.loading_state = LoadingState::Ready(String::new());
                 Command::none()
             }
             Message::ToggleAllSelected(selected) => {
@@ -193,7 +193,7 @@ impl List {
                 #[allow(unused_must_use)]
                 {
                     self.phone_packages[i_user][i_package]
-                        .update(row_message.clone())
+                        .update(&row_message)
                         .map(move |row_message| Message::List(i_package, row_message));
                 }
 
@@ -600,7 +600,7 @@ impl List {
                                                         text("Enable").style(style::Text::Ok),
                                                     PackageState::Uninstalled =>
                                                         text("Restore").style(style::Text::Ok),
-                                                    _ => text("Impossible")
+                                                    PackageState::All => text("Impossible")
                                                         .style(style::Text::Danger),
                                                 },]
                                                 .width(60),
@@ -625,13 +625,7 @@ impl List {
         .padding([0, 10, 0, 10]);
 
         container(
-            if device
-                .user_list
-                .iter()
-                .filter(|&u| !u.protected)
-                .collect::<Vec<&User>>()
-                .len()
-                > 1
+            if device.user_list.iter().filter(|&u| !u.protected).count() > 1
                 && settings.device.multi_user_mode
             {
                 column![
@@ -696,13 +690,13 @@ impl List {
         let mut phone_packages = vec![];
 
         if user_list.len() <= 1 {
-            phone_packages.push(fetch_packages(&uad_list, None))
+            phone_packages.push(fetch_packages(&uad_list, None));
         } else {
             phone_packages.extend(
                 user_list
                     .iter()
                     .map(|user| fetch_packages(&uad_list, Some(user))),
-            )
+            );
         };
         phone_packages
     }
@@ -775,10 +769,10 @@ fn build_action_pkg_commands(
     }) {
         let u_pkg = packages[u.index][selection.1].clone();
         let actions = if settings.multi_user_mode {
-            apply_pkg_state_commands(u_pkg.into(), &wanted_state, u, device)
+            apply_pkg_state_commands(&u_pkg.into(), wanted_state, u, device)
         } else {
-            let wanted_state = &u_pkg.state.opposite(settings.disable_mode);
-            apply_pkg_state_commands(u_pkg.into(), wanted_state, u, device)
+            let wanted_state = u_pkg.state.opposite(settings.disable_mode);
+            apply_pkg_state_commands(&u_pkg.into(), wanted_state, u, device)
         };
         for (j, action) in actions.into_iter().enumerate() {
             let p_info = PackageInfo {

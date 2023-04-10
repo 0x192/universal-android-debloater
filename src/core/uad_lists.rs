@@ -44,24 +44,24 @@ impl std::fmt::Display for UadListState {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let date = last_modified_date(CACHE_DIR.join("uad_lists.json"));
         let s = match self {
-            UadListState::Downloading => "Checking updates...".to_string(),
-            UadListState::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
-            UadListState::Failed => "Failed to check update!".to_string(),
+            Self::Downloading => "Checking updates...".to_string(),
+            Self::Done => format!("Done (last was {})", format_diff_time_from_now(date)),
+            Self::Failed => "Failed to check update!".to_string(),
         };
         write!(f, "{s}")
     }
 }
 
 impl UadList {
-    pub const ALL: [UadList; 8] = [
-        UadList::All,
-        UadList::Aosp,
-        UadList::Carrier,
-        UadList::Google,
-        UadList::Misc,
-        UadList::Oem,
-        UadList::Pending,
-        UadList::Unlisted,
+    pub const ALL: [Self; 8] = [
+        Self::All,
+        Self::Aosp,
+        Self::Carrier,
+        Self::Google,
+        Self::Misc,
+        Self::Oem,
+        Self::Pending,
+        Self::Unlisted,
     ];
 }
 
@@ -71,14 +71,14 @@ impl std::fmt::Display for UadList {
             f,
             "{}",
             match self {
-                UadList::All => "All lists",
-                UadList::Aosp => "aosp",
-                UadList::Carrier => "carrier",
-                UadList::Google => "google",
-                UadList::Misc => "misc",
-                UadList::Oem => "oem",
-                UadList::Pending => "pending",
-                UadList::Unlisted => "unlisted",
+                Self::All => "All lists",
+                Self::Aosp => "aosp",
+                Self::Carrier => "carrier",
+                Self::Google => "google",
+                Self::Misc => "misc",
+                Self::Oem => "oem",
+                Self::Pending => "pending",
+                Self::Unlisted => "unlisted",
             }
         )
     }
@@ -94,12 +94,7 @@ pub enum PackageState {
 }
 
 impl PackageState {
-    pub const ALL: [PackageState; 4] = [
-        PackageState::All,
-        PackageState::Enabled,
-        PackageState::Uninstalled,
-        PackageState::Disabled,
-    ];
+    pub const ALL: [Self; 4] = [Self::All, Self::Enabled, Self::Uninstalled, Self::Disabled];
 }
 
 impl std::fmt::Display for PackageState {
@@ -108,10 +103,10 @@ impl std::fmt::Display for PackageState {
             f,
             "{}",
             match self {
-                PackageState::All => "All packages",
-                PackageState::Enabled => "Enabled",
-                PackageState::Uninstalled => "Uninstalled",
-                PackageState::Disabled => "Disabled",
+                Self::All => "All packages",
+                Self::Enabled => "Enabled",
+                Self::Uninstalled => "Uninstalled",
+                Self::Disabled => "Disabled",
             }
         )
     }
@@ -122,17 +117,17 @@ pub trait Opposite {
 }
 
 impl Opposite for PackageState {
-    fn opposite(&self, disable: bool) -> PackageState {
+    fn opposite(&self, disable: bool) -> Self {
         match self {
-            PackageState::Enabled => {
+            Self::Enabled => {
                 if disable {
-                    PackageState::Disabled
+                    Self::Disabled
                 } else {
-                    PackageState::Uninstalled
+                    Self::Uninstalled
                 }
             }
-            PackageState::Uninstalled | PackageState::Disabled => PackageState::Enabled,
-            PackageState::All => PackageState::All,
+            Self::Uninstalled | Self::Disabled => Self::Enabled,
+            Self::All => Self::All,
         }
     }
 }
@@ -150,13 +145,13 @@ pub enum Removal {
 }
 
 impl Removal {
-    pub const ALL: [Removal; 6] = [
-        Removal::All,
-        Removal::Recommended,
-        Removal::Advanced,
-        Removal::Expert,
-        Removal::Unsafe,
-        Removal::Unlisted,
+    pub const ALL: [Self; 6] = [
+        Self::All,
+        Self::Recommended,
+        Self::Advanced,
+        Self::Expert,
+        Self::Unsafe,
+        Self::Unlisted,
     ];
 }
 
@@ -166,12 +161,12 @@ impl std::fmt::Display for Removal {
             f,
             "{}",
             match self {
-                Removal::All => "All",
-                Removal::Recommended => "Recommended",
-                Removal::Advanced => "Advanced",
-                Removal::Expert => "Expert",
-                Removal::Unsafe => "Unsafe",
-                Removal::Unlisted => "Unlisted",
+                Self::All => "All",
+                Self::Recommended => "Recommended",
+                Self::Advanced => "Advanced",
+                Self::Expert => "Expert",
+                Self::Unsafe => "Unsafe",
+                Self::Unlisted => "Unlisted",
             }
         )
     }
@@ -182,10 +177,10 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
     let cached_uad_lists: PathBuf = CACHE_DIR.join("uad_lists.json");
     let mut error = false;
     let list: Vec<Package> = if remote {
-        match retry(Fixed::from_millis(1000).take(60), || {
+        retry(Fixed::from_millis(1000).take(60), || {
             match ureq::get(
                 "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
-            main/resources/assets/uad_lists.json",
+           main/resources/assets/uad_lists.json",
             )
             .call()
             {
@@ -201,10 +196,8 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
                     OperationResult::Retry(Vec::<Package>::new())
                 }
             }
-        }) {
-            Ok(list) => list,
-            Err(_) => get_local_lists(),
-        }
+        })
+        .map_or_else(|_| get_local_lists(), |list| list)
     } else {
         warn!("Could not load remote debloat list");
         get_local_lists()

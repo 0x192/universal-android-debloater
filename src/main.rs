@@ -42,7 +42,7 @@ pub fn setup_logger() -> Result<(), fern::InitError> {
                 record.file().unwrap_or("?"),
                 record.line().map(|l| l.to_string()).unwrap_or_default(),
                 message
-            ))
+            ));
         }
     };
 

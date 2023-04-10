@@ -55,43 +55,38 @@ static CONFIG_FILE: PathBuf = CONFIG_DIR.join("config.toml");
 impl Config {
     pub fn save_changes(settings: &Settings, device_id: &String) {
         let mut config = Self::load_configuration_file();
-        match config
+        if let Some(device) = config
             .devices
             .iter_mut()
             .find(|x| x.device_id == *device_id)
         {
-            Some(device) => {
-                *device = settings.device.clone();
-                config.general = settings.general.clone();
-            }
-            None => {
-                debug!("config: New device settings saved");
-                config.devices.push(settings.device.clone());
-                config.general = settings.general.clone();
-            }
+            *device = settings.device.clone();
+        } else {
+            debug!("config: New device settings saved");
+            config.devices.push(settings.device.clone());
         }
+        config.general = settings.general.clone();
         let toml = toml::to_string(&config).unwrap();
         fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
     }
 
+    #[allow(clippy::option_if_let_else)]
     pub fn load_configuration_file() -> Self {
-        match fs::read_to_string(&*CONFIG_FILE) {
-            Ok(s) => match toml::from_str(&s) {
+        if let Ok(s) = fs::read_to_string(&*CONFIG_FILE) {
+            match toml::from_str(&s) {
                 Ok(config) => config,
                 Err(e) => {
                     error!("Invalid config file: `{}`", e);
                     error!("Restoring default config file");
-                    let toml = toml::to_string(&Config::default()).unwrap();
+                    let toml = toml::to_string(&Self::default()).unwrap();
                     fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
-                    Config::default()
+                    Self::default()
                 }
-            },
-            Err(_) => {
-                let default_conf = toml::to_string(&Config::default()).unwrap();
-                fs::write(&*CONFIG_FILE, default_conf)
-                    .expect("Could not write config file to disk!");
-                Config::default()
             }
+        } else {
+            let default_conf = toml::to_string(&Self::default()).unwrap();
+            fs::write(&*CONFIG_FILE, default_conf).expect("Could not write config file to disk!");
+            Self::default()
         }
     }
 }

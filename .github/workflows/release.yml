@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - '**.rs'
-      - 'Cargo.lock'
-      - 'Cargo.toml'
+      - "**.rs"
+      - "Cargo.lock"
+      - "Cargo.toml"
     tags-ignore:
       - dev-build
 

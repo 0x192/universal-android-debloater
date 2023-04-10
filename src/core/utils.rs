@@ -31,7 +31,7 @@ pub fn fetch_packages(
         if uad_lists.contains_key(p_name) {
             description = &uad_lists.get(p_name).unwrap().description;
             if description.is_empty() {
-                description = "[No description] : CONTRIBUTION WELCOMED"
+                description = "[No description] : CONTRIBUTION WELCOMED";
             };
             uad_list = uad_lists.get(p_name).unwrap().list;
             removal = uad_lists.get(p_name).unwrap().removal;
@@ -51,8 +51,8 @@ pub fn fetch_packages(
     user_package
 }
 
-pub fn string_to_theme(theme: String) -> Theme {
-    match theme.as_str() {
+pub fn string_to_theme(theme: &str) -> Theme {
+    match theme {
         "Dark" => Theme::Dark,
         "Light" => Theme::Light,
         "Lupin" => Theme::Lupin,
@@ -80,21 +80,20 @@ pub fn open_url(dir: PathBuf) {
         Ok(o) => {
             if !o.status.success() {
                 let stderr = String::from_utf8(o.stderr).unwrap().trim_end().to_string();
-                error!("Can't open the following URL: {}", stderr)
+                error!("Can't open the following URL: {}", stderr);
             }
         }
         Err(e) => error!("Failed to run command to open the file explorer: {}", e),
     }
 }
 
+#[rustfmt::skip]
+#[allow(clippy::option_if_let_else)]
 pub fn last_modified_date(file: PathBuf) -> DateTime<Utc> {
-    match fs::metadata(file) {
-        Ok(metadata) => match metadata.modified() {
-            Ok(time) => time.into(),
-            Err(_) => Utc::now(),
-        },
+    fs::metadata(file).map_or_else(|_| Utc::now(), |metadata| match metadata.modified() {
+        Ok(time) => time.into(),
         Err(_) => Utc::now(),
-    }
+    })
 }
 
 pub fn format_diff_time_from_now(date: DateTime<Utc>) -> String {
@@ -118,19 +117,20 @@ pub struct DisplayablePath {
 
 impl fmt::Display for DisplayablePath {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let stem = match self.path.file_stem() {
-            Some(p) => match p.to_os_string().into_string() {
+        let stem = self.path.file_stem().map_or_else(
+            || {
+                error!("[PATH STEM]: No file stem found");
+                "[File steam not found]".to_string()
+            },
+            |p| match p.to_os_string().into_string() {
                 Ok(stem) => stem,
                 Err(e) => {
                     error!("[PATH ENCODING]: {:?}", e);
                     "[PATH ENCODING ERROR]".to_string()
                 }
             },
-            None => {
-                error!("[PATH STEM]: No file stem found");
-                "[File steam not found]".to_string()
-            }
-        };
+        );
+
         write!(f, "{stem}")
     }
 }

@@ -25,6 +25,7 @@ impl<'a, Message, Renderer> Modal<'a, Message, Renderer> {
         }
     }
 
+    #[allow(clippy::missing_const_for_fn)]
     /// Sets the message that will be produces when the background
     /// of the [`Modal`] is pressed
     pub fn on_blur(self, on_blur: Message) -> Self {
@@ -187,6 +188,7 @@ where
     ) -> event::Status {
         let content_bounds = layout.children().next().unwrap().bounds();
 
+        #[allow(clippy::equatable_if_let)]
         if let Some(message) = self.on_blur.as_ref() {
             if let Event::Mouse(mouse::Event::ButtonPressed(mouse::Button::Left)) = &event {
                 if !content_bounds.contains(cursor_position) {
