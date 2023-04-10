@@ -20187,13 +20187,22 @@
     "removal": "Recommended"
   },
   {
-    "id": "com.coloros.oshare",
+    "id": "com.heytap.market",
     "list": "Oem",
-    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (READ_CONTACTS ? Really ?).\n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
-    "dependencies": [],
+    "description": "Heytap/Oppo app store.There is no benefit of using this app store and you should not keep a privileged app with as many permissions.\n\nhttps://developers.oppomobile.com/newservice/capability?pagename=app_store\nPithus analysis: https://beta.pithus.org/report/3a2a10af9310411d814fd6dd252adec1ab0c06adf32a675b7534c3edc0e534bf",
+    "dependencies": ["com.heytap.mcs"],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.coloros.oshare",
+    "list": "Oem",
+    "description": "Oppo Share\nFile sharing app to transfer data from/to Oppo devices only. Seems to use weak crypto (AES ECB mode) and has weird permissions (such as `READ_CONTACTS`).\nWARNING: removing this app will break the functionality to share photos directly from ColorOS Photos app and break the 'share with' prompt after taking a screenshot.\n\nPithus analysis: https://beta.pithus.org/report/170f4a14be24a2e2135cd956a038aae9e2f78c845f3161b84c5545dbec03fad9",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.coloros.phonemanager",
