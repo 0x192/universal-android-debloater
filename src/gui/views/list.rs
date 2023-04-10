@@ -227,12 +227,15 @@ impl List {
                         }
                         Command::none()
                     }
-                    RowMessage::ActionPressed => Command::batch(build_action_pkg_commands(
-                        &self.phone_packages,
-                        selected_device,
-                        &settings.device,
-                        (i_user, i_package),
-                    )),
+                    RowMessage::ActionPressed => {
+                        self.phone_packages[i_user][i_package].selected = true;
+                        Command::batch(build_action_pkg_commands(
+                            &self.phone_packages,
+                            selected_device,
+                            &settings.device,
+                            (i_user, i_package),
+                        ))
+                    }
                     RowMessage::PackagePressed => {
                         self.description = package.clone().description;
                         package.current = true;
