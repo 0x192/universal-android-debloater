@@ -20950,5 +20950,644 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.wearable.assistant",
+    "list": "Oem",
+    "description": "Google Assistant for Android wearables (https://play.google.com/store/apps/details?id=com.google.android.wearable.assistant)\n\nHas obviously all the dangerous permissions: https://beta.pithus.org/report/efccf27aa68d9c263e4288d38af76f855b5fd4156034ebdaabeb185d8c4f1411",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.wearable.batteryservices",
+    "list": "Oem",
+    "description": "It's used to manage battery-related things on Android smartwatches, like monitoring the battery level, managing power consumption (auto battery saving I think), and handling battery-related events (pop-up when battery at 15%, etc.). It is typically used by developers to create battery-aware applications for wearable devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.advancedcallservice",
+    "list": "Oem",
+    "description": "Advanced Calling feature on an Android is a feature that allows you to make calls while using other applications with the use of CELLULAR DATA. In order for this feature to work, HD Voice must be enabled in settings.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.clockwork.oemsetup",
+    "list": "Oem",
+    "description": "Installs carrier apps after the first time setup. Haven't noticed any consequences after uninstalling. I also saw some similar bloatware packages on the net, ending with clockwork.gestures.tutorial - first time use tutorial or clockwork.flashlight, clockwork.nfc, clockwork.brightness",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.apps.wearable.retailattractloop",
+    "list": "Oem",
+    "description": "Demo mode - you see it in the stores (the video playing while idle).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.mediacontroller",
+    "list": "Oem",
+    "description": "Ability to controls phone's audio from your watch.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.shealthmonitor",
+    "list": "Oem",
+    "description": "Samsung Health Monitor\n\nEnables you to record ECG and blood pressure.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.cameracontroller",
+    "list": "Oem",
+    "description": "Mirrors phone's camera to your watch. I can't find a use case for my usage. Safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.watch.findmywatch",
+    "list": "Oem",
+    "description": "The watch will start ringing, if connected to phone via BT or WiFi, when pressing 'start ringing' on the phone. Also fetches location and is able to lock or factory reset.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.findmyphone",
+    "list": "Oem",
+    "description": "The phone will start ringing, if connected to watch via BT or WiFi, when pressing 'start ringing' on the watch.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.runestone.app",
+    "list": "Oem",
+    "description": "Customization Service from Samsung. Provides customized content and recommendations. Collects a lot of personal information.\nSee: https://www.samsung.com/us/account/customization-service/\n\nPithus analysis: https://beta.pithus.org/report/0f26752e636a9689bf0603e6023939e23a8cbd7197dea7b44c7ac93e2a930c24",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.analoguefont",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.animal",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.aremoji",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.basicclock",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.basicdashboard",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.bespoke",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.bitmoji",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.boldindex",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.digitalfont",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.digitalmodular",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.dualwatch",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.dynamicfont",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.gradientfont",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.healthmodular",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.infomodular",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.large",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.livewallpaper",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.mypebble",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.myphoto",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.mystyle",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.premiumanalog",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.simpleanalogue",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.simplecomplication",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.superfiction",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.together",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.typography",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.weather",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.analogmodular",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.simpleclassic",
+    "list": "Oem",
+    "description": "Preinstalled watchface.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.emergency",
+    "list": "Oem",
+    "description": "Watchface in the emergency launcher.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.companionhelper",
+    "list": "Oem",
+    "description": "Watchfaces fail to load without this. Removing it also breaks editing and changing watchfaces.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.watch.watchface.tickingsound",
+    "list": "Oem",
+    "description": "Ticking sound on watchfaces that support it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.weather",
+    "list": "Oem",
+    "description": "Weather application from Samsung.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.watch.worldclock",
+    "list": "Oem",
+    "description": "Worldclock app. This also includes a widget, displaying time in different time zones.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.wear.blockednumber",
+    "list": "Oem",
+    "description": "Blocked number storage. Doesn't affect the dialer or contacts.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.wear.musictransfer",
+    "list": "Oem",
+    "description": "Used to sync music with the watch.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.wearable.setupwizard",
+    "list": "Oem",
+    "description": "Samsung Wearable Setup Wizard\nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung services.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.wear.contacts.sync",
+    "list": "Oem",
+    "description": "Handles 'open on phone' events. Also, settings often crash when this is uninstalled.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.cts.ctsshim",
+    "list": "Oem",
+    "description": "Compatibility Test Service. Used by developers to identify and resolve compatibility issues with Android apps.\nA shim is basically a compatibility layer for an API, that makes sure anything that uses the API does so correctly.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.cidmanager",
+    "list": "Oem",
+    "description": "In order to ensure that a user’s phone receives the appropriate firmware updates, this app is used to identify the carrier network. In other words - it helps to ensure that the correct country-specific firmware is delivered OTA.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.packageinstalleroverlay",
+    "list": "Oem",
+    "description": "It's used to display an overlay window when installing or updating apps. Shows information about the app and provides the user with the option to cancel the process. Probably breaks manual installation of apps (needs more testing).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.wcs.exstention",
+    "list": "Oem",
+    "description": "Samsung Internet Extensions\nSamsung Internet for Android allows users to customize their browsing experience by installing extensions, which are additional software packages that add new features and functionality to the browser and help developers offer tailored services to users on mobile devices.\n\nNOTE: Disabling this broke the UI on my Watch5 for some reason so PROCEED WITH CAUTION.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.stextclassifier",
+    "list": "Oem",
+    "description": "From https://developer.android.com/reference/android/view/textclassifier/TextClassifier:\nInterface for providing text classification related features.\n\nThe TextClassifier may be used to understand the meaning of text, as well as generating predicted next actions based on the text.\n\nSo it got something to do with text/spelling correction? But a samsung implementation of it. It needs some further testing, so far it doesn't affect even the auto-correct.\nNote: this app has no permission and doesn't run in background when not in used",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.sec.android.soagent",
+    "list": "Oem",
+    "description": "System application that is responsible for checking and installing software updates.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.packageinstalleroverlay",
+    "list": "Oem",
+    "description": "Most likely the overlay that appears when you installed an application.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.wearable.healthservices",
+    "list": "Oem",
+    "description": "Health Services by Google\n (https://play.google.com/store/apps/details?id=com.google.android.wearable.healthservices)\n\nDisabling this on a Watch5 broke heart rate measuring and some workouts.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.service.health",
+    "list": "Oem",
+    "description": "Health Platform (https://play.google.com/store/apps/details?id=com.samsung.android.service.health)\n\nIt is a data aggregator. You can use it to link multiple health apps (like Strava, google fit etc) together. This app will unify their collected data and store them all together.\nConstantly phones to Samsung servers.\n\nPithus analysis: https://beta.pithus.org/report/968364daf4fbb1828dfe9d8dbcce6d5f7f9a79522a5267c4be5bba19e6cd88b0",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.wear.shealth",
+    "list": "Oem",
+    "description": "Samsung Health app for WearOS.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.wearable.samsungaccount",
+    "list": "Oem",
+    "description": "Samsung account settings. Breaks settings app if uninstalled.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.watch.stopwatch",
+    "list": "Oem",
+    "description": "Samsung Stopwatch",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.watch.screencapture",
+    "list": "Oem",
+    "description": "Provides the ability to take screenshots from the smart watch.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.flashlight",
+    "list": "Oem",
+    "description": "Samsung Flashlight",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.watch.compass",
+    "list": "Oem",
+    "description": "Samsung Compass app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.watch.alarm",
+    "list": "Oem",
+    "description": "Samsung Alarm app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.storage.watchstoragemanager",
+    "list": "Oem",
+    "description": "Storage manager. DO NOT REMOVE THIS",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.samsung.android.watch.timer",
+    "list": "Oem",
+    "description": "Timer app from Samsung.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.gallery.watch",
+    "list": "Oem",
+    "description": "Samsung Watch gallery app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.wearable.ambient",
+    "list": "Oem",
+    "description": "It's like doze on Android phones. Not recommended to disable, as this package reduces battery drain when idle.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.apps.wearable.settings",
+    "list": "Oem",
+    "description": "WearOS settings",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.modulemetadata",
+    "list": "Aosp",
+    "description": "It's used to manage and store metadata about installed modules, and is accessed by the system server. Breaks some core functionality if disabled.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   }
 ]
