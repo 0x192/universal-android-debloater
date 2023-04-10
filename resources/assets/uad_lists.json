@@ -20945,7 +20945,7 @@
   {
     "id": "com.google.android.wearable.assistant",
     "list": "WearOS",
-    "description": "Google Assistant for Android wearables.",
+    "description": "Google Assistant for Android wearables (https://play.google.com/store/apps/details?id=com.google.android.wearable.assistant)\n\nHas obviously all the dangerous permissions: https://beta.pithus.org/report/efccf27aa68d9c263e4288d38af76f855b5fd4156034ebdaabeb185d8c4f1411",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20958,7 +20958,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.advancedcallservice",
@@ -20972,7 +20972,7 @@
   {
     "id": "com.google.android.clockwork.oemsetup",
     "list": "WearOS",
-    "description": "Installs carrier apps after the first time setup. Haven't noticed any concequences after uninstalling. I also saw some similar bloatware packages on the net, ending with clockwork.gestures.tutorial - first time use tutorial or clockwork.flashlight, clockwork.nfc, clockwork.brightness",
+    "description": "Installs carrier apps after the first time setup. Haven't noticed any consequences after uninstalling. I also saw some similar bloatware packages on the net, ending with clockwork.gestures.tutorial - first time use tutorial or clockwork.flashlight, clockwork.nfc, clockwork.brightness",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20994,7 +20994,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.shealthmonitor",
@@ -21003,7 +21003,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.watch.cameracontroller",
@@ -21035,7 +21035,7 @@
   {
     "id": "com.samsung.android.watch.runestone.app",
     "list": "WearOS",
-    "description": "Customization Service from Samsung. IMHO doesn't do anything useful.",
+    "description": "Customization Service from Samsung. Provides customized content and recommendations. Collects a lot of personal information.\nSee: https://www.samsung.com/us/account/customization-service/\n\nPithus analysis: https://beta.pithus.org/report/0f26752e636a9689bf0603e6023939e23a8cbd7197dea7b44c7ac93e2a930c24",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21354,12 +21354,12 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.android.wear.musictransfer",
     "list": "WearOS",
-    "description": "Used to sync music with watch.",
+    "description": "Used to sync music with the watch.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21368,7 +21368,7 @@
   {
     "id": "com.samsung.android.wearable.setupwizard",
     "list": "WearOS",
-    "description": "Safe to remove after first time setup.",
+    "description": "Samsung Wearable Setup Wizard\nThe first time you turn your device on, a Welcome screen is displayed. It guides you through the basics of setting up your device.\nIt's the setup for Samsung services.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21377,7 +21377,7 @@
   {
     "id": "com.samsung.android.wear.contacts.sync",
     "list": "WearOS",
-    "description": "Handles 'open on phone' events. Also, settings often crash when this uninstalled.",
+    "description": "Handles 'open on phone' events. Also, settings often crash when this is uninstalled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21386,7 +21386,7 @@
   {
     "id": "com.android.cts.ctsshim",
     "list": "WearOS",
-    "description": "Basically an app for devs to compatibility test their app.",
+    "description": "Compatibility Test Service. Used by developers to identify and resolve compatibility issues with Android apps.\nA shim is basically a compatibility layer for an API, that makes sure anything that uses the API does so correctly.\nhttps://android.googlesource.com/platform/frameworks/base/+/51e458e/packages/CtsShim\nhttps://en.wikipedia.org/wiki/Shim_(computing)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21422,11 +21422,11 @@
   {
     "id": "com.samsung.android.stextclassifier",
     "list": "Oem",
-    "description": "From https://developer.android.com/reference/android/view/textclassifier/TextClassifier:\nInterface for providing text classification related features.\n\nThe TextClassifier may be used to understand the meaning of text, as well as generating predicted next actions based on the text.\n\nSo it got something to do with text/spelling correction? But a samsung implementation of it. It needs some further testing, so far it doesn't affect even the autocorrect.",
+    "description": "From https://developer.android.com/reference/android/view/textclassifier/TextClassifier:\nInterface for providing text classification related features.\n\nThe TextClassifier may be used to understand the meaning of text, as well as generating predicted next actions based on the text.\n\nSo it got something to do with text/spelling correction? But a samsung implementation of it. It needs some further testing, so far it doesn't affect even the auto-correct.\nNote: this app has no permission and doesn't run in background when not in used",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.soagent",
@@ -21435,12 +21435,12 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.samsung.packageinstalleroverlay",
     "list": "Oem",
-    "description": "",
+    "description": "Most likely the overlay that appears when you installed an application.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21449,7 +21449,7 @@
   {
     "id": "com.google.android.wearable.healthservices",
     "list": "WearOS",
-    "description": "Health Services by Google\nPlay Store link: https://play.google.com/store/apps/details?id=com.google.android.wearable.healthservices&hl=en_US&gl=US\n\nDisabling this on my Watch5 broke heart rate measuring and some workouts.",
+    "description": "Health Services by Google\n (https://play.google.com/store/apps/details?id=com.google.android.wearable.healthservices)\n\nDisabling this on a Watch5 broke heart rate measuring and some workouts.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21458,11 +21458,11 @@
   {
     "id": "com.samsung.android.service.health",
     "list": "WearOS",
-    "description": "Health Platform\n\nIt is a data aggregator. You can use it to link multiple health apps (like Strava, google fit etc) together. This app will unify their collected data and store them all together.",
+    "description": "Health Platform (https://play.google.com/store/apps/details?id=com.samsung.android.service.health)\n\nIt is a data aggregator. You can use it to link multiple health apps (like Strava, google fit etc) together. This app will unify their collected data and store them all together.\nConstantly phones to Samsung servers.\n\nPithus analysis: https://beta.pithus.org/report/968364daf4fbb1828dfe9d8dbcce6d5f7f9a79522a5267c4be5bba19e6cd88b0",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.wear.shealth",
@@ -21483,27 +21483,18 @@
     "removal": "Expert"
   },
   {
-    "id": "com.samsung.android.watch.timer",
-    "list": "WearOS",
-    "description": "Timer",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recomended"
-  },
-  {
     "id": "com.samsung.android.watch.stopwatch",
     "list": "WearOS",
-    "description": "Stopwatch",
+    "description": "Samsung Stopwatch",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recomended"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.watch.screencapture",
     "list": "WearOS",
-    "description": "This is responsible for taking screenshots.",
+    "description": "Provides the ability to take screenshots from the smart watch.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21512,7 +21503,7 @@
   {
     "id": "com.samsung.android.watch.flashlight",
     "list": "WearOS",
-    "description": "Flashlight",
+    "description": "Samsung Flashlight",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21525,25 +21516,25 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recomended"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.watch.alarm",
     "list": "WearOS",
-    "description": "Alarms.",
+    "description": "Samsung Alarm app.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recomended"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.storage.watchstoragemanager",
     "list": "WearOS",
-    "description": "Storage manager. Based on internet posts it's not safe to disable.",
+    "description": "Storage manager. DO NOT REMOVE THIS",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   {
     "id": "com.samsung.android.watch.timer",
@@ -21552,12 +21543,12 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recomended"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.gallery.watch",
     "list": "WearOS",
-    "description": "Gallery app",
+    "description": "Samsung Watch gallery app",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21575,7 +21566,7 @@
   {
     "id": "com.google.android.apps.wearable.settings",
     "list": "WearOS",
-    "description": "Settings",
+    "description": "WearOS settings",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21583,7 +21574,7 @@
   },
   {
     "id": "com.android.modulemetadata",
-    "list": "aosp",
+    "list": "Aosp",
     "description": "It's used to manage and store metadata about installed modules, and is accessed by the system server. Breaks some core functionality if disabled.",
     "dependencies": [],
     "neededBy": [],
