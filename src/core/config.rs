@@ -70,23 +70,17 @@ impl Config {
         fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
     }
 
-    #[allow(clippy::option_if_let_else)]
     pub fn load_configuration_file() -> Self {
-        if let Ok(s) = fs::read_to_string(&*CONFIG_FILE) {
-            match toml::from_str(&s) {
-                Ok(config) => config,
-                Err(e) => {
-                    error!("Invalid config file: `{}`", e);
-                    error!("Restoring default config file");
-                    let toml = toml::to_string(&Self::default()).unwrap();
-                    fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
-                    Self::default()
-                }
-            }
-        } else {
-            let default_conf = toml::to_string(&Self::default()).unwrap();
-            fs::write(&*CONFIG_FILE, default_conf).expect("Could not write config file to disk!");
-            Self::default()
+        match fs::read_to_string(&*CONFIG_FILE) {
+            Ok(s) => match toml::from_str(&s) {
+                Ok(config) => return config,
+                Err(e) => error!("Invalid config file: `{}`", e),
+            },
+            Err(e) => error!("Failed to read config file: `{}`", e),
         }
+        error!("Restoring default config file");
+        let toml = toml::to_string(&Self::default()).unwrap();
+        fs::write(&*CONFIG_FILE, toml).expect("Could not write config file to disk!");
+        Self::default()
     }
 }

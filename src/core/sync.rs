@@ -36,7 +36,7 @@ impl Default for Phone {
 
 impl std::fmt::Display for Phone {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.model,)
+        write!(f, "{}", self.model)
     }
 }
 
@@ -60,19 +60,13 @@ pub fn adb_shell_command(shell: bool, args: &str) -> Result<String, String> {
         vec![args]
     };
 
+    let mut command = Command::new("adb");
+    command.args(adb_command);
+
     #[cfg(target_os = "windows")]
-    let output = Command::new("adb")
-        .args(adb_command)
-        .creation_flags(0x08000000) // do not open a cmd window
-        .output();
+    let command = command.creation_flags(0x08000000); // do not open a cmd window
 
-    #[cfg(target_os = "macos")]
-    let output = Command::new("adb").args(adb_command).output();
-
-    #[cfg(not(any(target_os = "macos", target_os = "windows")))]
-    let output = Command::new("adb").args(adb_command).output();
-
-    match output {
+    match command.output() {
         Err(e) => {
             error!("ADB: {}", e);
             Err("ADB was not found".to_string())
@@ -139,12 +133,16 @@ pub async fn perform_adb_commands(
     }
 }
 
+#[allow(clippy::option_if_let_else)]
+pub fn user_flag(user_id: Option<&User>) -> String {
+    match user_id {
+        Some(user_id) => format!(" --user {}", user_id.id),
+        None => "".to_string(),
+    }
+}
+
 pub fn list_all_system_packages(user_id: Option<&User>) -> String {
-    #[allow(clippy::option_if_let_else)]
-    let action = match user_id {
-        Some(user_id) => format!("pm list packages -s -u --user {}", user_id.id),
-        None => "pm list packages -s -u".to_string(),
-    };
+    let action = format!("pm list packages -s -u{}", user_flag(user_id));
 
     adb_shell_command(true, &action)
         .unwrap_or_else(|_| String::new())
@@ -152,12 +150,7 @@ pub fn list_all_system_packages(user_id: Option<&User>) -> String {
 }
 
 pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
-    #[allow(clippy::option_if_let_else)]
-    let user = match user_id {
-        Some(user_id) => format!(" --user {}", user_id.id),
-        None => String::new(),
-    };
-
+    let user = user_flag(user_id);
     let action = match state {
         PackageState::Enabled => format!("pm list packages -s -e{user}"),
         PackageState::Disabled => format!("pm list package -s -d{user}"),
@@ -255,29 +248,25 @@ pub fn apply_pkg_state_commands(
 }
 
 pub fn request_builder(commands: &[&str], package: &str, user: Option<&User>) -> Vec<String> {
-    user.map_or_else(
-        || commands.iter().map(|c| format!("{c} {package}")).collect(),
-        |u| {
-            commands
-                .iter()
-                .map(|c| format!("{} --user {} {}", c, u.id, package))
-                .collect()
-        },
-    )
+    #[allow(clippy::option_if_let_else)]
+    match user {
+        Some(u) => commands
+            .iter()
+            .map(|c| format!("{} --user {} {}", c, u.id, package))
+            .collect(),
+        None => commands.iter().map(|c| format!("{c} {package}")).collect(),
+    }
 }
 
 pub fn get_phone_model() -> String {
-    match adb_shell_command(true, "getprop ro.product.model") {
-        Ok(model) => model,
-        Err(err) => {
-            println!("ERROR: {err}");
-            if err.contains("adb: no devices/emulators found") {
-                "no devices/emulators found".to_string()
-            } else {
-                err
-            }
+    adb_shell_command(true, "getprop ro.product.model").unwrap_or_else(|err| {
+        println!("ERROR: {err}");
+        if err.contains("adb: no devices/emulators found") {
+            "no devices/emulators found".to_string()
+        } else {
+            err
         }
-    }
+    })
 }
 
 pub fn get_android_sdk() -> u8 {
@@ -288,33 +277,31 @@ pub fn get_phone_brand() -> String {
     format!(
         "{} {}",
         adb_shell_command(true, "getprop ro.product.brand")
-            .unwrap_or_else(|_| String::new())
-            .trim(),
+            .map(|s| s.trim().to_string())
+            .unwrap_or_default(),
         get_phone_model()
     )
 }
 
 pub fn is_protected_user(user_id: &str) -> bool {
-    adb_shell_command(true, &("pm list packages --user ".to_owned() + user_id)).is_err()
+    adb_shell_command(true, &format!("pm list packages --user {user_id}")).is_err()
 }
 
 pub fn get_user_list() -> Vec<User> {
     #[dynamic]
     static RE: Regex = Regex::new(r"\{([0-9]+)").unwrap();
-
-    #[allow(clippy::option_if_let_else)]
-    match adb_shell_command(true, "pm list users") {
-        Ok(users) => RE
-            .find_iter(&users)
-            .enumerate()
-            .map(|(i, u)| User {
-                id: u.as_str()[1..].parse().unwrap(),
-                index: i,
-                protected: is_protected_user(&u.as_str()[1..]),
-            })
-            .collect(),
-        Err(_) => vec![],
-    }
+    adb_shell_command(true, "pm list users")
+        .map(|users| {
+            RE.find_iter(&users)
+                .enumerate()
+                .map(|(i, u)| User {
+                    id: u.as_str()[1..].parse().unwrap(),
+                    index: i,
+                    protected: is_protected_user(&u.as_str()[1..]),
+                })
+                .collect()
+        })
+        .unwrap_or_default()
 }
 
 // getprop ro.serialno
@@ -345,5 +332,5 @@ pub async fn get_devices_list() -> Vec<Phone> {
             }
         },
     )
-    .map_or_else(|_| vec![], |devices| devices)
+    .unwrap_or_default()
 }
