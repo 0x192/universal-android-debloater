@@ -265,6 +265,7 @@ impl Application for UadGui {
             Message::_NewReleaseDownloaded(res) => {
                 debug!("UAD update has been download!");
 
+                #[cfg(feature = "self-update")]
                 if let Ok((relaunch_path, cleanup_path)) = res {
                     // Remove first arg, which is path to binary. We don't use this first
                     // arg as binary path because it's not reliable, per the docs.
