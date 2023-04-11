@@ -6743,7 +6743,7 @@
   {
     "id": "com.android.stk2",
     "list": "Aosp",
-    "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
+    "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management\nNOTE: removing this package removes the launcher icon. `com.android.stk2` relies on `com.android.stk` and vice-versa.",
     "dependencies": [],
     "neededBy": [],
     "labels": ["mim"],
@@ -6752,7 +6752,7 @@
   {
     "id": "com.android.stk",
     "list": "Aosp",
-    "description": "SIM toolkit\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
+    "description": "SIM toolkit\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management\nNOTE: removing this package removes the launcher icon. `com.android.stk` relies on `com.android.stk2` and vice-versa.",
     "dependencies": [],
     "neededBy": [],
     "labels": ["mim"],
