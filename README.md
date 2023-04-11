@@ -35,38 +35,38 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 
 ## Universal Debloat Lists
 
-- [X] AOSP
-- [X] GFAM (Google/Facebook/Amazon/Microsoft)
-- [X] Manufacturers (OEM)
-- [X] Mobile carriers
-- [X] Qualcomm / Mediatek / Miscellaneous
+- [x] AOSP
+- [x] GFAM (Google/Facebook/Amazon/Microsoft)
+- [x] Manufacturers (OEM)
+- [x] Mobile carriers
+- [x] Qualcomm / Mediatek / Miscellaneous
 
 ## Manufacturers debloat lists
 
 - [ ] Archos
-- [X] Asus
+- [x] Asus
 - [ ] Blackberry
-- [X] Fairphone
+- [x] Fairphone
 - [ ] Gionee
-- [X] Google
+- [x] Google
 - [ ] HTC
-- [X] Huawei
+- [x] Huawei
 - [ ] iQOO
-- [X] LG
-- [X] Motorola
-- [X] Nokia
-- [X] OnePlus
-- [X] Oppo
-- [X] Realme
-- [X] Samsung
-- [X] Sony
+- [x] LG
+- [x] Motorola
+- [x] Nokia
+- [x] OnePlus
+- [x] Oppo
+- [x] Realme
+- [x] Samsung
+- [x] Sony
 - [ ] TCL
-- [X] Tecno
-- [X] Unihertz
-- [X] Vivo/iQOO
+- [x] Tecno
+- [x] Unihertz
+- [x] Vivo/iQOO
 - [ ] Wiko
-- [X] Xiaomi
-- [X] ZTE
+- [x] Xiaomi
+- [x] ZTE
 
 ## Mobile carriers debloat lists
 
