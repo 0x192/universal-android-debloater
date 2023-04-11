@@ -35,8 +35,8 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 
 ## Universal Debloat Lists
 
-- [x] GFAM (Google/Facebook/Amazon/Microsoft)
 - [x] AOSP
+- [x] GFAM (Google/Facebook/Amazon/Microsoft)
 - [x] Manufacturers (OEM)
 - [x] Mobile carriers
 - [x] Qualcomm / Mediatek / Miscellaneous
@@ -46,13 +46,13 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [ ] Archos
 - [x] Asus
 - [ ] Blackberry
-- [ ] Gionee
-- [x] LG
-- [x] Google
-- [ ] iQOO
 - [x] Fairphone
+- [ ] Gionee
+- [x] Google
 - [ ] HTC
 - [x] Huawei
+- [ ] iQOO
+- [x] LG
 - [x] Motorola
 - [x] Nokia
 - [x] OnePlus
@@ -60,8 +60,8 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [x] Realme
 - [x] Samsung
 - [x] Sony
-- [x] Tecno
 - [ ] TCL
+- [x] Tecno
 - [x] Unihertz
 - [x] Vivo/iQOO
 - [ ] Wiko
@@ -73,9 +73,10 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 | Country | Carriers                        |
 | ------- | ------------------------------- |
 | France  | Orange, SFR, Free, Bouygues     |
-| USA     | T-Mobile, Verizon, Sprint, AT&T |
 | Germany | Telekom                         |
+| Korea   | SK Telelcom                     |
 | UK      | EE                              |
+| USA     | T-Mobile, Verizon, Sprint, AT&T |
 
 ## How to use it
 
