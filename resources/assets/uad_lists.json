@@ -3575,7 +3575,7 @@
   {
     "id": "com.samsung.android.ardrawing",
     "list": "Oem",
-    "description": "AR Doodles (accessible through AR Zone)\nLets you draw on your face using the front camera and uses AR Core for drawing on the environment with the rear camera.\nOnly Sasmung AR app (afaik) that requests location access, and it refuses to run without it\n",
+    "description": "AR Doodles (accessible through AR Zone)\nLets you draw on your face using the front camera and uses AR Core for drawing on the environment with the rear camera.\nOnly Samsung AR app (afaik) that requests location access, and it refuses to run without it\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
