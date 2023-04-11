@@ -10549,12 +10549,12 @@
   },
   {
     "id": "com.samsung.android.mcfds",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Samsung Continuity Service\nhttps://galaxystore.samsung.com/prepost/000006390343?appId=com.samsung.android.mcfds",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.motionphoto.viewer",
