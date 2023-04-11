@@ -41,10 +41,10 @@ pub enum SelfUpdateStatus {
 impl std::fmt::Display for SelfUpdateStatus {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let s = match self {
-            SelfUpdateStatus::Checking => "Checking updates...",
-            SelfUpdateStatus::Updating => "Updating...",
-            SelfUpdateStatus::Failed => "Failed to check update!",
-            SelfUpdateStatus::Done => "Done",
+            Self::Checking => "Checking updates...",
+            Self::Updating => "Updating...",
+            Self::Failed => "Failed to check update!",
+            Self::Done => "Done",
         };
         write!(f, "{s}")
     }
@@ -52,7 +52,7 @@ impl std::fmt::Display for SelfUpdateStatus {
 
 /// Download a file from the internet
 #[cfg(feature = "self-update")]
-pub async fn download_file<T: ToString>(url: T, dest_file: PathBuf) -> Result<(), String> {
+pub async fn download_file<T: ToString + Send>(url: T, dest_file: PathBuf) -> Result<(), String> {
     let url = url.to_string();
     debug!("downloading file from {}", &url);
 
@@ -200,7 +200,7 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
     }
 }
 
-/// Extracts the binary from a `tar.gz` archive to temp_file path
+/// Extracts the binary from a `tar.gz` archive to `temp_file` path
 #[cfg(feature = "self-update")]
 #[cfg(not(target_os = "windows"))]
 pub fn extract_binary_from_tar(archive_path: &Path, temp_file: &Path) -> io::Result<()> {

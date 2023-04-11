@@ -34,6 +34,7 @@ pub fn nav_menu<'a>(
         .padding(5)
         .style(style::Button::Refresh);
 
+    #[allow(clippy::option_if_let_else)]
     let uad_version_text = if let Some(r) = &self_update_state.latest_release {
         if self_update_state.status == SelfUpdateStatus::Updating {
             Text::new("Updating please wait...")
@@ -48,17 +49,17 @@ pub fn nav_menu<'a>(
         Text::new(env!("CARGO_PKG_VERSION"))
     };
 
-    let mut apps_btn = button("Apps")
-        .on_press(Message::AppsPress)
-        .padding(5)
-        .style(style::Button::Primary);
-
-    if self_update_state.latest_release.is_some() {
-        apps_btn = button("Update")
+    let apps_btn = if self_update_state.latest_release.is_some() {
+        button("Update")
             .on_press(Message::AboutAction(AboutMessage::DoSelfUpdate))
             .padding(5)
-            .style(style::Button::SelfUpdate);
-    }
+            .style(style::Button::SelfUpdate)
+    } else {
+        button("Apps")
+            .on_press(Message::AppsPress)
+            .padding(5)
+            .style(style::Button::Primary)
+    };
 
     let about_btn = button("About")
         .on_press(Message::AboutPressed)

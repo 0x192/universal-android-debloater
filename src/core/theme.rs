@@ -39,7 +39,7 @@ pub struct ColorPalette {
 
 impl Theme {
     pub const ALL: [Self; 3] = [Self::Lupin, Self::Dark, Self::Light];
-    pub fn palette(&self) -> ColorPalette {
+    pub fn palette(self) -> ColorPalette {
         match self {
             Self::Dark => ColorPalette {
                 base: BaseColors {
@@ -105,9 +105,9 @@ impl std::fmt::Display for Theme {
             f,
             "{}",
             match self {
-                Theme::Dark => "Dark",
-                Theme::Light => "Light",
-                Theme::Lupin => "Lupin",
+                Self::Dark => "Dark",
+                Self::Light => "Light",
+                Self::Lupin => "Lupin",
             }
         )
     }

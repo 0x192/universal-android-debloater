@@ -46,7 +46,7 @@ impl PackageRow {
         }
     }
 
-    pub fn update(&mut self, _message: Message) -> Command<Message> {
+    pub fn update(&mut self, _message: &Message) -> Command<Message> {
         Command::none()
     }
 

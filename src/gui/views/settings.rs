@@ -96,7 +96,7 @@ impl Settings {
                             selected: backups.first().cloned(),
                             users: phone.user_list.clone(),
                             selected_user: phone.user_list.first().copied(),
-                            backup_state: "".to_string(),
+                            backup_state: String::new(),
                         };
                     }
                     None => {
@@ -109,7 +109,7 @@ impl Settings {
                                 selected: backups.first().cloned(),
                                 users: phone.user_list.clone(),
                                 selected_user: phone.user_list.first().copied(),
-                                backup_state: "".to_string(),
+                                backup_state: String::new(),
                             },
                         }
                     }
@@ -190,7 +190,7 @@ impl Settings {
                     radio(
                         format!("{}", option.clone()),
                         *option,
-                        Some(string_to_theme(self.general.theme.clone())),
+                        Some(string_to_theme(&self.general.theme)),
                         Message::ApplyTheme,
                     )
                     .size(23),
@@ -224,7 +224,7 @@ impl Settings {
             row![
                 text("The following settings only affect the currently selected device :")
                     .style(style::Text::Danger),
-                text(phone.model.to_owned()),
+                text(phone.model.clone()),
                 Space::new(Length::Fill, Length::Shrink),
                 text(phone.adb_id.clone()).style(style::Text::Commentary)
             ]
@@ -390,16 +390,16 @@ impl Settings {
                 .style(style::Container::BorderedFrame)
         };
 
-        let content = if !phone.adb_id.clone().is_empty() {
+        let content = if phone.adb_id.clone().is_empty() {
             column![
                 text("Theme").size(25),
                 theme_ctn,
                 text("General").size(25),
                 general_ctn,
                 text("Current device").size(25),
-                warning_ctn,
-                device_specific_ctn,
-                backup_restore_ctn,
+                no_device_ctn(),
+                text("Backup / Restore").size(25),
+                no_device_ctn(),
             ]
             .width(Length::Fill)
             .spacing(20)
@@ -410,9 +410,9 @@ impl Settings {
                 text("General").size(25),
                 general_ctn,
                 text("Current device").size(25),
-                no_device_ctn(),
-                text("Backup / Restore").size(25),
-                no_device_ctn(),
+                warning_ctn,
+                device_specific_ctn,
+                backup_restore_ctn,
             ]
             .width(Length::Fill)
             .spacing(20)
