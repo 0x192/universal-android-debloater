@@ -1424,7 +1424,7 @@
   {
     "id": "com.dti.tim",
     "list": "Carrier",
-    "description": "Mobile Service Manager\nThis package is a bloatware app made by TIM (perhaps an Italian carrier?) that has many permissions so it may be able to spy you or install apps without your consent.",
+    "description": "Mobile Service Manager\nThis package is a bloatware app made by TIM (an Italian carrier) that has many permissions so it may be able to spy you or install apps without your consent. ",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
