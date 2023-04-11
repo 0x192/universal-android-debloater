@@ -33,7 +33,7 @@ That's the main point, right?
 
 NB : System apps cannot truly be uninstalled without root (see the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ))
 
-## Universal debloat lists
+## Universal Debloat Lists
 
 - [X] AOSP
 - [X] GFAM (Google/Facebook/Amazon/Microsoft)
