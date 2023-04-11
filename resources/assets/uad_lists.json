@@ -7334,6 +7334,15 @@
     "labels": [],
     "removal": "Expert"
   },
+    {
+    "id": "com.android.theme.font.notoserifsource",
+    "list": "Aosp",
+    "description": "Noto Serif / Source Sans Pro",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   {
     "id": "com.android.theme.icon_pack.rounded.systemui",
     "list": "Aosp",
@@ -19398,6 +19407,24 @@
     "id": "com.yelp.android",
     "list": "Misc",
     "description": "Yelp (https://play.google.com/store/apps/details?id=com.yelp.android)\nYelp lets users post reviews and rate businesses.\nWorth reading : https://en.wikipedia.org/wiki/Yelp#Controversy_and_litigation",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.monotype.android.font.applemint",
+    "list": "Misc",
+    "description": "Font",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.monotype.android.font.tinkerbell",
+    "list": "Misc",
+    "description": "Font",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
