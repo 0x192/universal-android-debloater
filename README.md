@@ -34,6 +34,7 @@ That's the main point, right?
 NB : System apps cannot truly be uninstalled without root (see the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ))
 
 ## Universal debloat lists
+
 - [X] AOSP
 - [X] GFAM (Google/Facebook/Amazon/Microsoft)
 - [X] Manufacturers (OEM)
@@ -41,6 +42,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [X] Qualcomm / Mediatek / Miscellaneous
 
 ## Manufacturers debloat lists
+
 - [ ] Archos
 - [X] Asus
 - [ ] Blackberry
@@ -67,6 +69,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [X] ZTE
 
 ## Mobile carriers debloat lists
+
 | Country | Carriers                        |
 | ------- | ------------------------------- |
 | France  | Orange, SFR, Free, Bouygues     |
