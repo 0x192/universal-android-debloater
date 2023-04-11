@@ -2088,6 +2088,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.himovie",
+    "list": "Oem",
+    "description": "Huawei Video Player\nBloated on newer versions. Can be safely removed if you don't want it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.hitouch",
     "list": "Oem",
     "description": "Huawei HiTouch\nAssistant capable to recognize the objects in a photo and to search them through various shopping sites.\nhttps://consumer.huawei.com/uk/support/faq/have-you-tried-the-new-hitouch-assistant/\n",
