@@ -2414,7 +2414,7 @@
   {
     "id": "com.huawei.android.internal.app",
     "list": "Oem",
-    "description": "Component of Huawei sharing. I read someone saying \"Do not remove or you won't be able to send files to apps\".\nCan someone test it ? \n",
+    "description": "Component of Huawei sharing. I read someone saying \"Do not remove or you won't be able to send files to apps\n No noticable changes found on Huawei P9 Lite Mini",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
