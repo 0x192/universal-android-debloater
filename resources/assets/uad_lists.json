@@ -2718,6 +2718,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.motorola.gamemode",
+    "list": "Oem",
+    "description": "Moto Gametime.\nAllows the user to block calls, quick screenshots, float social apps, etc when playing a game.\nhttps://play.google.com/store/apps/details?id=com.motorola.gamemode&gl=US",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.motorola.genie",
     "list": "Oem",
     "description": "Device Help (previously Moto Help) (https://play.google.com/store/apps/details?id=com.motorola.genie)\nAn app that checks hardware status and gives the user contacts for support.\n",
@@ -2748,6 +2757,15 @@
     "id": "com.motorola.lifetimedata",
     "list": "Oem",
     "description": "Not 100% sure but it's most likely the Total Call Timer or more generally it handles info like the date of manufacture of your device,\nusage time since first boot etc... \nTotal Call Timer gives you the time you spent calling.\nI don't know how to access to these info. It's surely a hidden menu (and may be accessible through the dialer with a special code)\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.motorola.livewallpaper3",
+    "list": "Oem",
+    "description": "Motorola Interactive Wallpaper.\nIt's just a glorified live wallpaper feature. The user can still apply live wallpapers from other apps.\nhttps://play.google.com/store/apps/details?id=com.motorola.livewallpaper3&gl=US",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2793,6 +2811,15 @@
     "id": "com.motorola.motodisplay",
     "list": "Oem",
     "description": "Moto Display (https://play.google.com/store/apps/details?id=com.motorola.motodisplay)\nDisplays notifications with the screen off (like the Always On Display feature from other OEMs)\nhttps://support.motorola.com/uk/en/solution/ms108519",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.motorola.motofpstouch",
+    "list": "Oem",
+    "description": "Moto Power Touch.\nAllows the user to create custom actions depending on how the user presses the power button.\nhttps://play.google.com/store/apps/details?id=com.motorola.motofpstouch&gl=US",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
