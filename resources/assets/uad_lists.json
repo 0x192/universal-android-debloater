@@ -2011,7 +2011,9 @@
     "list": "Oem",
     "description": "Huawei Mobile Services (https://play.google.com/store/apps/details?id=com.huawei.hwid)\nHuawei’s alternative to Google Play Services. Needed to access advanced Huawei features.\nA Huawei ID is required to access services, like Themes, Mobile Cloud, HiCare, Huawei Wear, Huawei Health\nSee more: https://www.xda-developers.com/huawei-hms-core-android-alternative-google-play-services-gms/",
     "dependencies": [],
-    "neededBy": ["com.huawei.fastapp"],
+    "neededBy": [
+      "com.huawei.fastapp"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -2137,7 +2139,9 @@
     "list": "Oem",
     "description": "Voice over IP service for Huawei MeeTime (com.huawei.meetime)",
     "dependencies": [],
-    "neededBy": ["com.huawei.meetime"],
+    "neededBy": [
+      "com.huawei.meetime"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -2145,7 +2149,9 @@
     "id": "com.huawei.meetime",
     "list": "Oem",
     "description": "MeeTime (https://consumer.huawei.com/en/support/content/en-us00956296/). Voice and video calling application by Huawei. Only workds with EMUI 9.1+ Huawei phones. Huawei claims they use E2EE but this wasn't verified and there is not Whitepaper so don't trust them. They also collect metadata. There is no advantages to use this app instead of the reputed open-source Signal app.",
-    "dependencies": ["com.huawei.hwvoipservice"],
+    "dependencies": [
+      "com.huawei.hwvoipservice"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -2482,7 +2488,7 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
-    },
+  },
   {
     "id": "com.huawei.hidisk",
     "list": "Oem",
@@ -4279,7 +4285,9 @@
     "list": "Oem",
     "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV\nhttps://www.samsung.com/us/apps/smart-view-2/. Dependency for com.samsung.android.video",
     "dependencies": [],
-    "neededBy": ["com.samsung.android.video"],
+    "neededBy": [
+      "com.samsung.android.video"
+    ],
     "labels": [],
     "removal": "Advanced"
   },
@@ -4288,7 +4296,9 @@
     "list": "Oem",
     "description": "Samsung Pay Framework needed for Samsung Pay\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones and other Samsung-produced devices. See below.",
     "dependencies": [],
-    "neededBy": ["com.samsung.android.spay"],
+    "neededBy": [
+      "com.samsung.android.spay"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -4296,7 +4306,10 @@
     "id": "com.samsung.android.spay",
     "list": "Oem",
     "description": "Samsung Pay (https://play.google.com/store/apps/details?id=com.samsung.android.spay)\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones \nand other Samsung-produced devices\nhttps://en.wikipedia.org/wiki/Samsung_Pay\nNOTE : Samsung Pay is KNOX dependant and will never work again if you root your phone.\nFYI : Your data are sold (https://www.sammobile.com/news/samsung-pay-new-privacy-policy-your-data-sold/)\n",
-    "dependencies": ["com.sec.android.app.samsungapps", "com.samsung.android.spayfw"],
+    "dependencies": [
+      "com.sec.android.app.samsungapps",
+      "com.samsung.android.spayfw"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -4531,7 +4544,9 @@
     "list": "Oem",
     "description": "It shows up as a pane on OneUI home and prompts you to install all sorts of random apps. OneUI works perfectly fine if you uninstall these and simply removes the discover pane.",
     "dependencies": [],
-    "neededBy": ["com.samsung.discover.sep"],
+    "neededBy": [
+      "com.samsung.discover.sep"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -4539,7 +4554,9 @@
     "id": "com.samsung.discover.sep",
     "list": "Oem",
     "description": "Related to `com.samsung.discover` but doesnt seem to do much on its own. Safe to remove without any effect.",
-    "dependencies": ["com.samsung.discover"],
+    "dependencies": [
+      "com.samsung.discover"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -5026,7 +5043,9 @@
     "list": "Oem",
     "description": "Samsung Galaxy Store\nSamsung app store.\nRequired for Samsung Pay feature to work.\n\nhttps://en.wikipedia.org/wiki/Samsung_Galaxy_Store\n",
     "dependencies": [],
-    "neededBy": ["com.samsung.android.spay"],
+    "neededBy": [
+      "com.samsung.android.spay"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -5326,7 +5345,7 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
-    },
+  },
   {
     "id": "com.sec.android.provider.snote",
     "list": "Oem",
@@ -6087,7 +6106,9 @@
     "id": "com.samsung.android.video",
     "list": "Oem",
     "description": "Samsung Video Player\nhttps://galaxystore.samsung.com/prepost/000003980724?appId=com.samsung.android.video\n",
-    "dependencies": ["com.samsung.android.smartmirroring"],
+    "dependencies": [
+      "com.samsung.android.smartmirroring"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -6746,7 +6767,9 @@
     "description": "SIM toolkit\nSpecial package for dual-sim devices?\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
     "dependencies": [],
     "neededBy": [],
-    "labels": ["mim"],
+    "labels": [
+      "mim"
+    ],
     "removal": "Advanced"
   },
   {
@@ -6755,7 +6778,9 @@
     "description": "SIM toolkit\nEnables carriers to initiate \"value-added services\". Basically, some operators provide SIM-cards with applications installed on them.\nhttps://en.wikipedia.org/wiki/SIM_Application_Toolkit#cite_note-CellularZA-1\nHas been abused:\n- SimJacker: https://thehackernews.com/2019/09/simjacker-mobile-hacking.html\n- WIBattack: https://www.zdnet.com/article/new-sim-card-attack-disclosed-similar-to-simjacker/\nWARNING: do mind that disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
     "dependencies": [],
     "neededBy": [],
-    "labels": ["mim"],
+    "labels": [
+      "mim"
+    ],
     "removal": "Advanced"
   },
   {
@@ -7887,7 +7912,9 @@
     "id": "com.oneplus.gamespace",
     "list": "Oem",
     "description": "OnePlus Game Space\nOccasionally runs in the background as part of the system.\nAllows you to launch your game library, check game stats(such as playtime), activate game overlay features, change performance settings to tweak game/battery performance during gaming.\nThis is the only way to access the recording buffer functionality (records the last X seconds into RAM and saves them when you tap save), so keep enabled if you need that or any of the other features.",
-    "dependencies": ["com.oplus.cosa"],
+    "dependencies": [
+      "com.oplus.cosa"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -8030,7 +8057,7 @@
   {
     "id": "net.oneplus.odm",
     "list": "Oem",
-  "description": "\"OnePlus System Service\"\nShady telemetry app.\nSends loads of data to OnePlus' servers, including IMEI, phone number, MAC addresses, mobile network names and IMSI prefixes, Wi-Fi connection info, the phone's serial number and every time an app was opened.\nSource: https://www.chrisdcmoore.co.uk/post/oneplus-analytics/\nPress: https://www.androidpolice.com/2017/10/10/never-settle-oneplus-found-collecting-personally-identifiable-analytics-data-phone-owners/",
+    "description": "\"OnePlus System Service\"\nShady telemetry app.\nSends loads of data to OnePlus' servers, including IMEI, phone number, MAC addresses, mobile network names and IMSI prefixes, Wi-Fi connection info, the phone's serial number and every time an app was opened.\nSource: https://www.chrisdcmoore.co.uk/post/oneplus-analytics/\nPress: https://www.androidpolice.com/2017/10/10/never-settle-oneplus-found-collecting-personally-identifiable-analytics-data-phone-owners/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8499,7 +8526,9 @@
     "id": "com.android.cellbroadcastreceiver.basiccolorblack.overlay",
     "list": "Aosp",
     "description": "Dark theme overlay for com.android.cellbroadcastreceiver",
-    "dependencies": ["com.android.cellbroadcastreceiver"],
+    "dependencies": [
+      "com.android.cellbroadcastreceiver"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -8508,7 +8537,9 @@
     "id": "com.android.cellbroadcastreceiver.basiccolorwhite.overlay",
     "list": "Aosp",
     "description": "Light theme overlay for com.android.cellbroadcastreceiver",
-    "dependencies": ["com.android.cellbroadcastreceiver"],
+    "dependencies": [
+      "com.android.cellbroadcastreceiver"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -9822,7 +9853,9 @@
     "id": "com.google.android.cellbroadcastreceiver",
     "list": "Aosp",
     "description": "Wireless emergency alerts\nCell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nRuns at boot and is also triggered after exiting airplane mode.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know\nhttps://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver/+/refs/heads/master/src/com/android/cellbroadcastreceiver",
-    "dependencies": ["com.google.android.cellbroadcastservice"],
+    "dependencies": [
+      "com.google.android.cellbroadcastservice"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -9832,7 +9865,9 @@
     "list": "Aosp",
     "description": "Cell broadcast is designed to deliver messages to multiple users in an area.\nThis is notably used by ISP to send Emergency/Government alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast\nhttps://www.androidcentral.com/amber-alerts-and-android-what-you-need-know",
     "dependencies": [],
-    "neededBy": ["com.google.android.cellbroadcastreceiver"],
+    "neededBy": [
+      "com.google.android.cellbroadcastreceiver"
+    ],
     "labels": [],
     "removal": "Expert"
   },
@@ -12801,7 +12836,9 @@
     "id": "com.android.cellbroadcastreceiver.overlay.base.s600ww",
     "list": "Oem",
     "description": "Nokia theme overlay for com.android.cellbroadcastreceiver",
-    "dependencies": ["com.android.cellbroadcastreceiver"],
+    "dependencies": [
+      "com.android.cellbroadcastreceiver"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -13035,7 +13072,9 @@
     "id": "com.heytap.cloud",
     "list": "Oem",
     "description": "HeyTap Cloud\nBad privacy policy: https://muc.heytap.com/document/heytap/oversea/privacyPolicy/privacyPolicy_en-US.html\nWhy does the app need `REQUEST_INSTALL_PACKAGES` (can install packages)?\nPithus analysis: https://beta.pithus.org/report/dbf265db47f8632453bb83ef51ea1d921413c02a8d24c989345896de83704a75",
-    "dependencies": ["com.heytap.mcs"],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -15876,6 +15915,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.boundax.koreapreloadappinstaller",
+    "list": "Oem",
+    "description": "서비스 앱 설치 (Install the Services app), Didn`t found much info about this app, problaby safe to remove for all outside of korea \nhttps://beta.pithus.org/report/5c8127cd32cf61ec1382b05dca622a971242283a6f60f774574abee8c0774873",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.miui.yellowpage",
     "list": "Oem",
     "description": "Yellow Page from MIUI.\nREMINDER : Yellow pages contain phone numbers of companies and services. They are provided by Xiaomi partners or businesses themselves.\n",
@@ -17066,7 +17114,7 @@
   {
     "id": "com.google.android.apps.messaging",
     "list": "Google",
-  "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.\nWARNING: Removing this may cause issues with receiving 2FA verification text messages and calls from Google on some devices. Please let us know your experience with this on https://github.com/0x192/universal-android-debloater/pull/250 (give your phone model + Android version)",
+    "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nQKSMS is a good FOSS replacement.\nWARNING: Removing this may cause issues with receiving 2FA verification text messages and calls from Google on some devices. Please let us know your experience with this on https://github.com/0x192/universal-android-debloater/pull/250 (give your phone model + Android version)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -18814,7 +18862,9 @@
     "list": "Oem",
     "description": "also called android-ss-service-lib (Samsung-exclusive)\nThird-party that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE : Never trust a company which promotes spam blocking features\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\n\nHave a look at their privacy policy. That's... pretty scary : https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)",
     "dependencies": [],
-    "neededBy": ["com.samsung.android.smartcallprovider"],
+    "neededBy": [
+      "com.samsung.android.smartcallprovider"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -19247,7 +19297,9 @@
     "description": "Android Setup\nThe new/factory reset device basic configuration setup guides you through the basics of setting up your device.\nWARNING: Oddly enough, disabling/uninstalling this package will break mobile identity management which could be used by apps (for example your Bank) to authenticate you. See https://en.wikipedia.org/wiki/Mobile_identity_management",
     "dependencies": [],
     "neededBy": [],
-    "labels": ["mim"],
+    "labels": [
+      "mim"
+    ],
     "removal": "Advanced"
   },
   {
@@ -20047,7 +20099,9 @@
     "list": "Oem",
     "description": "App Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\n\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.",
     "dependencies": [],
-    "neededBy": ["com.oneplus.gamespace"],
+    "neededBy": [
+      "com.oneplus.gamespace"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -20055,7 +20109,10 @@
     "id": "com.oplus.synergy",
     "list": "Oem",
     "description": "HeySynergy\nProvides the screencasting feature and OPPO's PC Connect (https://connect.oppo.com/). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone.\n\nPithus analysis: https://beta.pithus.org/report/16d9ea536683291fbffe46dedd3c655379b5fcfdb473ec1cab5290cf5af27fba",
-    "dependencies": ["com.heytap.mcs", "com.heytap.accessory"],
+    "dependencies": [
+      "com.heytap.mcs",
+      "com.heytap.accessory"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -20064,8 +20121,12 @@
     "id": "com.heytap.accessory",
     "list": "Misc",
     "description": "Accessory Framework\nQuick device connect feature. Can be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> Quick device connect) if not wanted.\nAllows you to search for nearby devices and connect to them without having to go through the Bluetooth or WiFi Direct settings' Ghosh! 32 permissions just for this?\n\nPithus analysis: https://beta.pithus.org/report/cc0ba95f0d0867ba6d883275cd2f6c4aa252ebc874f15f1ee240bb5bac330578",
-    "dependencies": ["com.heytap.mcs"],
-    "neededBy": ["com.oplus.synergy"],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
+    "neededBy": [
+      "com.oplus.synergy"
+    ],
     "labels": [],
     "removal": "Advanced"
   },
@@ -20074,7 +20135,12 @@
     "list": "Misc",
     "description": "System messages\n. Mobile Cloud Service? Message Controler System?.\nMy understanding is that this packages implements the communication logic of the Heytap services. It provides a MQTT client (and Firebase Cloud Manager for users outside of China) which frequently talks to heytapmobile.com. You can safely remove this package if you don't have a Heytap account.\nRuns constantly in the background\nPithus analysis: https://beta.pithus.org/report/8920395af63782fca8dfce18715a10ca5a2d8236d525208ea347eff8f738731e",
     "dependencies": [],
-    "neededBy": ["com.heytap.cloud", "com.heytap.market", "com.oplus.synergy", "com.heytap.accessory"],
+    "neededBy": [
+      "com.heytap.cloud",
+      "com.heytap.market",
+      "com.oplus.synergy",
+      "com.heytap.accessory"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -20091,7 +20157,9 @@
     "id": "com.huawei.fastapp",
     "list": "Oem",
     "description": "Quick App Center\nComponent of AppGallery (Huawei's app store) providing Quick Apps support. Quick Apps are Javascript+CSS apps that don't need any installation. This technology has its uses but I'm personally not a huge fan on having to rely on a JS engine to run an application\nThis system app has a lot of permissions (including SEND_SMS, CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO... why?)\nMore information: https://www.xda-developers.com/huawei-quick-apps-alternative-google-instant-apps/\n OW2 Quick App whitepaper: https://quick-app-initiative.ow2.io/docs/Quick_App_White_Paper.pdf",
-    "dependencies": ["com.huawei.hwid"],
+    "dependencies": [
+      "com.huawei.hwid"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -20118,7 +20186,9 @@
     "id": "com.redteamobile.roaming",
     "list": "Misc",
     "description": "ORoaming\nLets you buy RedTeaMobile data plan to access Internet in foreign country with a virtual SIM card\nSee https://support.oppo.com/uk/answer/?aid=neu9139\nPithus analysis: https://beta.pithus.org/report/d017d4f6623bf8e71456e6bffe551ef6f3ff3095c62cef3df6d968354898c097",
-    "dependencies": ["com.redteamobile.roaming.deamon"],
+    "dependencies": [
+      "com.redteamobile.roaming.deamon"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -20128,7 +20198,9 @@
     "list": "Misc",
     "description": "ORoaming\nRedtea Roaming service deamon for com.redteamobile.roaming",
     "dependencies": [],
-    "neededBy": ["com.redteamobile.roaming"],
+    "neededBy": [
+      "com.redteamobile.roaming"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -20137,7 +20209,9 @@
     "list": "Oem",
     "description": "Package needed by com.nearme.statistics.rom to run service in background at every boot even though the app has been uninstalled",
     "dependencies": [],
-    "neededBy": ["com.nearme.statistics.rom"],
+    "neededBy": [
+      "com.nearme.statistics.rom"
+    ],
     "labels": [],
     "removal": "Recommended"
   },
@@ -20190,7 +20264,9 @@
     "id": "com.heytap.market",
     "list": "Oem",
     "description": "Heytap/Oppo app store.There is no benefit of using this app store and you should not keep a privileged app with as many permissions.\n\nhttps://developers.oppomobile.com/newservice/capability?pagename=app_store\nPithus analysis: https://beta.pithus.org/report/3a2a10af9310411d814fd6dd252adec1ab0c06adf32a675b7534c3edc0e534bf",
-    "dependencies": ["com.heytap.mcs"],
+    "dependencies": [
+      "com.heytap.mcs"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -20488,7 +20564,10 @@
     "list": "Oem",
     "description": "StdID\nNeeded for tracking battery usage on per app basis. Dependency for GameSpace\n\n [MORE INFO NEEDED / APK NEEDED]",
     "dependencies": [],
-    "neededBy": ["com.oneplus.gamespace", "com.coloros.gamespace"],
+    "neededBy": [
+      "com.oneplus.gamespace",
+      "com.coloros.gamespace"
+    ],
     "labels": [],
     "removal": "Advanced"
   },
@@ -20731,7 +20810,9 @@
     "list": "Oem",
     "description": "\"Wireless Update\" Settings > About Phone : Sytem update.\nRemoving will prevent Automatic Wireless Updates\n",
     "dependencies": [],
-    "neededBy": ["com.agui.update.overlay"],
+    "neededBy": [
+      "com.agui.update.overlay"
+    ],
     "labels": [],
     "removal": "Expert"
   },
@@ -20739,7 +20820,9 @@
     "id": "com.agui.update.overlay",
     "list": "Oem",
     "description": "Overlay for com.agui.update. Overlay are usually themes.\n",
-    "dependencies": ["com.agui.update"],
+    "dependencies": [
+      "com.agui.update"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -20802,7 +20885,9 @@
     "id": "com.google.android.overlay.modules.cellbroadcastreceiver",
     "list": "Google",
     "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
-    "dependencies": ["com.google.android.cellbroadcastreceiver"],
+    "dependencies": [
+      "com.google.android.cellbroadcastreceiver"
+    ],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
