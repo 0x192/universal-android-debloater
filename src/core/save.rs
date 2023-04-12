@@ -118,10 +118,12 @@ pub fn restore_backup(
 
             let mut commands = vec![];
             for u in phone_backup.users {
-                let index = match selected_device.user_list.iter().find(|x| x.id == u.id) {
-                    Some(i) => i.index,
-                    None => return Err(format!("user {} doesn't exist", u.id)),
-                };
+                let index = selected_device
+                    .user_list
+                    .iter()
+                    .find(|x| x.id == u.id)
+                    .ok_or(format!("user {} doesn't exist", u.id))?
+                    .index;
 
                 for (i, backup_package) in u.packages.iter().enumerate() {
                     let package: CorePackage = packages[index]
