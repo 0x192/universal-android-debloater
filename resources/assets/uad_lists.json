@@ -16328,7 +16328,7 @@
   {
     "id": "com.miui.wmsvc",
     "list": "Oem",
-    "description": "WMService\nRuns at boot, has access to internet + GPS\nI quickly looked at the decompiled code and saw some unsanitized SQL inputs, which is BAD! (vulnerable to SQL injection)\nTries to get your android unique Google advertising ID from Google Play Services.\nFeeds and launches the spying/analytics app \"com.miui.hybrid\".\nDoesn't seem to do anything important, only tracking.\nWARNING: Some people said removing this package causes bootloop, others said it doesn't. Safe to remove no one seems to experience bootloop on miui 12 and upper. \n https://github.com/0x192/universal-android-debloater/issues/137",
+    "description": "WMService\nRuns at boot, has access to internet + GPS\nI quickly looked at the decompiled code and saw some unsanitized SQL inputs, which is BAD! (vulnerable to SQL injection)\nTries to get your android unique Google advertising ID from Google Play Services.\nFeeds and launches the spying/analytics app \"com.miui.hybrid\".\nDoesn't seem to do anything important, only tracking.\nWARNING: Some people said removing this package causes bootloop, others said it doesn't. Safe to remove — no one seems to experience bootloops on MIUI 12 and higher.\nSee https://github.com/0x192/universal-android-debloater/issues/137 for more information.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
