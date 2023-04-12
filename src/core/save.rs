@@ -35,17 +35,8 @@ pub async fn backup_phone(
     };
 
     for u in users {
-        let mut user_backup = UserBackup {
-            id: u.id,
-            ..UserBackup::default()
-        };
-
-        for p in phone_packages[u.index].clone() {
-            user_backup.packages.push(CorePackage {
-                name: p.name.clone(),
-                state: p.state,
-            });
-        }
+        let packages: Vec<CorePackage> = phone_packages[u.index].iter().map(|p| p.into()).collect();
+        let user_backup = UserBackup { id: u.id, packages };
         backup.users.push(user_backup);
     }
 
