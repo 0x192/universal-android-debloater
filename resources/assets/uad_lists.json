@@ -13248,6 +13248,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.americanexpress.plenti",
+    "list": "Carrier",
+    "description": "Plenti\nGet points and promos with your American Express card",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.amazon.avod.thirdpartyclient",
     "list": "Misc",
     "description": "Amazon Prime Video (https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient)\nVOD service from Amazon.\nhttps://en.wikipedia.org/wiki/Prime_Video\n",
@@ -14115,6 +14124,15 @@
     "id": "com.directv.dvrscheduler",
     "list": "Misc",
     "description": "DIRECTV (https://play.google.com/store/apps/details?id=com.directv.dvrscheduler)\nOffical app from DIRECTV (subsidiary of AT&T)\nLets you watch Live TV, recorded shows, VODs and schedule recordings on your DVR\nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.directv.promo.shade",
+    "list": "Carrier",
+    "description": "DIRECTV Remote\nOfficial app from DIRECTV (subsidiary of AT&T). With the DIRECTV Remote for AT&T Samsung devices, control of your favorite DIRECTV shows is just a swipe away. Swipe down from the status bar at the top of your screen to automatically connect and control your DIRECTV receivers, it's that simple.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
