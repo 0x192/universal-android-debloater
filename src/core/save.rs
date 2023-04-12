@@ -103,61 +103,59 @@ pub fn restore_backup(
     packages: &[Vec<PackageRow>],
     settings: &DeviceSettings,
 ) -> Result<Vec<BackupPackage>, String> {
-    match fs::read_to_string(
+    let data = fs::read_to_string(
         &settings
             .backup
             .selected
             .as_ref()
             .ok_or("field should be Some type")?
             .path,
-    ) {
-        Ok(data) => {
-            let phone_backup: PhoneBackup =
-                serde_json::from_str(&data).expect("Unable to parse backup file");
+    )
+    .map_err(|e| e.to_string())?;
 
-            let mut commands = vec![];
-            for u in phone_backup.users {
-                let index = selected_device
-                    .user_list
-                    .iter()
-                    .find(|x| x.id == u.id)
-                    .ok_or(format!("user {} doesn't exist", u.id))?
-                    .index;
+    let phone_backup: PhoneBackup =
+        serde_json::from_str(&data).expect("Unable to parse backup file");
 
-                for (i, backup_package) in u.packages.iter().enumerate() {
-                    let package: CorePackage = packages[index]
-                        .iter()
-                        .find(|x| x.name == backup_package.name)
-                        .ok_or(format!(
-                            "{} not found for user {}",
-                            backup_package.name, u.id
-                        ))?
-                        .into();
-                    let p_commands = apply_pkg_state_commands(
-                        &package,
-                        backup_package.state,
-                        &settings
-                            .backup
-                            .selected_user
-                            .ok_or("field should be Some type")?,
-                        selected_device,
-                    );
-                    if !p_commands.is_empty() {
-                        commands.push(BackupPackage {
-                            index: i,
-                            commands: p_commands,
-                        });
-                    }
-                }
-            }
-            if !commands.is_empty() {
+    let mut commands = vec![];
+    for u in phone_backup.users {
+        let index = selected_device
+            .user_list
+            .iter()
+            .find(|x| x.id == u.id)
+            .ok_or(format!("user {} doesn't exist", u.id))?
+            .index;
+
+        for (i, backup_package) in u.packages.iter().enumerate() {
+            let package: CorePackage = packages[index]
+                .iter()
+                .find(|x| x.name == backup_package.name)
+                .ok_or(format!(
+                    "{} not found for user {}",
+                    backup_package.name, u.id
+                ))?
+                .into();
+            let p_commands = apply_pkg_state_commands(
+                &package,
+                backup_package.state,
+                &settings
+                    .backup
+                    .selected_user
+                    .ok_or("field should be Some type")?,
+                selected_device,
+            );
+            if !p_commands.is_empty() {
                 commands.push(BackupPackage {
-                    index: 0,
-                    commands: vec![],
+                    index: i,
+                    commands: p_commands,
                 });
             }
-            Ok(commands)
         }
-        Err(e) => Err(e.to_string()),
     }
+    if !commands.is_empty() {
+        commands.push(BackupPackage {
+            index: 0,
+            commands: vec![],
+        });
+    }
+    Ok(commands)
 }
