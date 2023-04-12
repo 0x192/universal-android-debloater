@@ -64,8 +64,8 @@ pub fn list_available_backups(dir: &Path) -> Vec<DisplayablePath> {
         Ok(files) => files
             .filter_map(|e| e.ok())
             .map(|e| DisplayablePath { path: e.path() })
-            .collect::<Vec<_>>(),
-        Err(_) => vec![],
+            .collect(),
+        _ => vec![],
     }
 }
 
