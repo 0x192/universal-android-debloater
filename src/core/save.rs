@@ -29,25 +29,27 @@ pub async fn backup_phone(
     device_id: String,
     phone_packages: Vec<Vec<PackageRow>>,
 ) -> Result<(), String> {
-    let mut backup = PhoneBackup {
-        device_id: device_id.clone(),
-        ..PhoneBackup::default()
-    };
+    let users = users
+        .iter()
+        .map(|u| {
+            let packages = phone_packages[u.index].iter().map(|p| p.into()).collect();
+            UserBackup { id: u.id, packages }
+        })
+        .collect();
 
-    for u in users {
-        let packages: Vec<CorePackage> = phone_packages[u.index].iter().map(|p| p.into()).collect();
-        let user_backup = UserBackup { id: u.id, packages };
-        backup.users.push(user_backup);
-    }
+    let backup = PhoneBackup {
+        device_id: device_id.clone(),
+        users,
+    };
 
     match serde_json::to_string_pretty(&backup) {
         Ok(json) => {
             let backup_path = &*BACKUP_DIR.join(device_id);
 
-            if let Err(e) = fs::create_dir_all(backup_path) {
+            fs::create_dir_all(backup_path).map_err(|e| {
                 error!("BACKUP: could not create backup dir: {}", e);
-                return Err(e.to_string());
-            };
+                e.to_string()
+            })?;
 
             let backup_filename =
                 format!("{}.json", chrono::Local::now().format("%Y-%m-%d_%H-%M-%S"));
