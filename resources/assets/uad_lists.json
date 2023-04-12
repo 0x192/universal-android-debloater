@@ -1,4 +1,49 @@
 [
+      {
+    "id": "net.fetnet.fetvod",
+    "list": "Misc",
+    "description": "Registered members can watch the first episodes of movies, dramas, variety shows and animations of the whole museum online at 0 yuan every month. Paying members get 2 extra coupons per issue, which can be cancelled at any time online\nhttps://play.google.com/store/apps/details?id=net.fetnet.fetvod",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+      {
+    "id": "com.fet.fridaywallet",
+    "list": "Misc",
+    "description": "FriDay Wealth Management + provides customized deposit goal progress management services. Customers can generate a deposit plan through friDay wealth management + automatic calculation according to the dream target deposit amount and estimated time, and freely choose daily or weekly. Frequency of saving money and managing progress towards goals\nhttps://play.google.com/store/apps/details?id=com.fet.fridaywallet",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+      {
+    "id": "com.fetself",
+    "list": "Misc",
+    "description": "Remote Heart Life, A lot of good things, give back to Yuan Chuan Coins every day, and give back the most thoughtful!\nhttps://play.google.com/store/apps/details?id=com.fetself",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },  
+  {
+    "id": "com.gohappy.mobileapp",
+    "list": "Misc",
+    "description": "Create a better shopping experience, let you master the fun of mobile shopping and let’s buy a better life. Provides more than 800,000 products in all categories such as Far Eastern Department Store, SOGO Department Store, Ibuy, brand outlet and 3C, home, fashion, etc. Enjoy discount coupons to get cash discounts, HAPPY GO points accumulation points, 10-day appreciation period!\nhttps://play.google.com/store/apps/details?id=com.gohappy.mobileapp\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+    {
+    "id": "com.omusic.gPhone",
+    "list": "misc",
+    "description": "friDay music, a treasure house of global music, thousands of situational playlists, complete classification of Chinese, Western, Japanese and Korean, classical, and original soundtracks, allowing you to easily travel the digital music world.\nhttps://play.google.com/store/apps/details?id=com.omusic.gPhone\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   {
     "id": "com.sony.tvsideview.videoph",
     "list": "Oem",
@@ -29,7 +74,7 @@
   {
     "id": "com.sonyericsson.conversations.res.overlay",
     "list": "Oem",
-    "description": "Used to display a overlay notification (= on top of others app) when you receive a SMS with Sony SMS app ?\n",
+    "description": "Used to display an overlay notification (on top of other apps) when you receive SMS with Sony SMS app?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
