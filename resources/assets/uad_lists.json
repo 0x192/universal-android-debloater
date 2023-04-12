@@ -16643,29 +16643,29 @@
   {
     "id": "com.xiaomi.finddevice",
     "list": "Oem",
-    "description": "Find My Device feature (in the Settings)\nEnables you to locate your lost phone and erase your data remotely. \nYour phone needs to be connected to internet (Wifi/mobile data) for this feature to work. \nREMOVING THIS PACKAGE WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : You cannot disable it via adb\nAccording some sources, disabling MIUI optimizations in the Developer\nsettings and removing the apk file in a custom recovery does not cause a\nbootloop, but I didn't test this.\n",
+    "description": "Find My Device feature (in the Settings)\nEnables you to locate your lost phone and erase your data remotely. \nYour phone needs to be connected to internet (Wifi/mobile data) for this feature to work. REMOVING THIS MIGHT BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.securitycenter",
     "list": "Oem",
-    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : I don't have a Xiaomi phone on hand anymore but maybe only disabling it will work : adb shell 'pm disable-user com.miui.securitycenter'\nCan someone try?\n",
+    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nREMOVING THIS MIGHT BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.securitycore",
     "list": "Oem",
-    "description": "Core features of the \"com.miui.securitycenter\"\nRemoving com.miui.securitycenter will cause your device to bootlop so I guess you should not remove this package neither.\n(Can someone try just in case?)\n",
+    "description": "Core features of the \"com.miui.securitycenter\"\nREMOVING THIS MIGHT BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.system",
@@ -16688,11 +16688,11 @@
   {
     "id": "com.miui.securityadd",
     "list": "Oem",
-    "description": "Related to the MIUI Security app\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : I don't have a Xiaomi phone on hand anymore but maybe only disabling it will work : adb shell 'pm disable-user com.miui.securityadd'\nCan someone try ?\n",
+    "description": "Related to the MIUI Security app\nREMOVING THIS MIGHT BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.xiaomi.misettings",
