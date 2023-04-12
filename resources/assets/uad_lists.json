@@ -6860,7 +6860,7 @@
   {
     "id": "com.android.browser",
     "list": "Aosp",
-    "description": "Mi Browser\nYou really should use something else.\nFYI https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/\n",
+    "description": "Mi Browser and browser for the LDPlayer emulator\nYou really should use something else.\nFYI https://www.xda-developers.com/xiaomi-mi-web-browser-pro-mint-collecting-browsing-data-incognito-mode/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
