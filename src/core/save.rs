@@ -104,13 +104,12 @@ pub fn restore_backup(
     settings: &DeviceSettings,
 ) -> Result<Vec<BackupPackage>, String> {
     match fs::read_to_string(
-        settings
+        &settings
             .backup
             .selected
             .as_ref()
             .ok_or("field should be Some type")?
-            .path
-            .clone(),
+            .path,
     ) {
         Ok(data) => {
             let phone_backup: PhoneBackup =
