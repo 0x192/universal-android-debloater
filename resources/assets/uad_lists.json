@@ -7029,6 +7029,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.inputmethod.pinyin",
+    "list": "Oem",
+    "description": "It is the built in software keyboard for LDPlayer. Getting rid of this breaks any keyboard input including from PC hardware keyboard.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.internal.display.cutout.emulation.corner",
     "list": "Aosp",
     "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
@@ -12852,6 +12861,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.cyanogenmod.filemanager",
+    "list": "Oem",
+    "description": "Built in file manager",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.coloros.appmanager",
     "list": "Oem",
     "description": "",
@@ -14335,6 +14353,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.ldmnq.launcher3",
+    "list": "Oem",
+    "description": "Built in launcher\nFull of ads but not safe to disable unless you have another launcher",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.linkedin.android",
@@ -17948,7 +17975,7 @@
   {
     "id": "com.google.android.inputmethod.pinyin",
     "list": "Google",
-    "description": "Google Keyboard + Pinyin (chinese) characters (https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)\n)\n",
+    "description": "Google Keyboard + Pinyin (Chinese) characters\n(https://play.google.com/store/apps/details?id=com.google.android.inputmethod.pinyin)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
