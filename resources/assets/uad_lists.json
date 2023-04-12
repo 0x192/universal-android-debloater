@@ -15032,7 +15032,7 @@
   {
     "id": "com.mediatek",
     "list": "Misc",
-    "description": "Mediatek is a Taiwanese chipset manufacturer.\nCan someone share the apk? This package name is really weird.\nIt is most likely a set of general APIs for accessing general mediatek functionalities.\nCan someone share the apk?\n",
+    "description": "Mediatek is a Taiwanese chipset manufacturer.\nThis package name is really weird.\nIt is most likely a set of general APIs for accessing general mediatek functionalities.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
