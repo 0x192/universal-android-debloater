@@ -1422,6 +1422,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.dti.tim",
+    "list": "Carrier",
+    "description": "Mobile Service Manager\nIt's a system app that can't be opened but keeps running in the background. It can install/uninstall apps without notifying you, access internet, run at the boot of the system, kill background processes, ads and other permissions.\nIts only bloatware, OTA updates work the same without it. Uninstalling didn't give any negative side-effects.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.locationlabs.cni.att",
     "list": "Carrier",
     "description": "AT&T Smart Limits\nParental Control tool.\nhttps://m.att.com/shopmobile/wireless/features/smart-limits.html\n",
