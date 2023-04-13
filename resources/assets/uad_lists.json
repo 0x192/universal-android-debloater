@@ -12854,11 +12854,11 @@
   {
     "id": "com.coloros.appmanager",
     "list": "Oem",
-    "description": "",
+    "description": "App Management\nUsed to uninstall applications. Might break GameSpace.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.coloros.assistantscreen",
