@@ -12854,11 +12854,11 @@
   {
     "id": "com.coloros.appmanager",
     "list": "Oem",
-    "description": "",
+    "description": "App Management\nUsed to uninstall applications, but uninstalling apps works nonetheless, even after uninstalling this package. GameSpace's game assistant does not work anymore after uninstalling this package.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.coloros.assistantscreen",
