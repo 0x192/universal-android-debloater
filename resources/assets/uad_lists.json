@@ -12854,7 +12854,7 @@
   {
     "id": "com.coloros.appmanager",
     "list": "Oem",
-    "description": "App Management\nUsed to uninstall applications. Might break GameSpace.",
+    "description": "App Management\nUsed to uninstall applications, but uninstalling apps works nonetheless, even after uninstalling this package. GameSpace's game assistant does not work anymore after uninstalling this package.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
