@@ -12,8 +12,8 @@ use std::path::{Path, PathBuf};
 pub static BACKUP_DIR: PathBuf = CACHE_DIR.join("backups");
 
 #[derive(Default, Deserialize, Serialize, Debug, Clone, PartialEq, Eq)]
-struct PhoneBackup {
-    device_id: String,
+struct PhoneBackup<'a> {
+    device_id: &'a str,
     users: Vec<UserBackup>,
 }
 
@@ -38,7 +38,7 @@ pub async fn backup_phone(
         .collect();
 
     let backup = PhoneBackup {
-        device_id: device_id.clone(),
+        device_id: &device_id,
         users,
     };
 
