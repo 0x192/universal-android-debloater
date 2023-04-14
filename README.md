@@ -169,7 +169,7 @@ an update to your phone as some _uninstalled_ system apps could be reinstalled.
 Hey-hey-hey! Don't go away so fast! This is a community project.
 That means I need you! I'm sure you want to make this project better anyway.
 
-==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki)
+==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki#how-to-contribute)
 
 ## Special thanks
 
