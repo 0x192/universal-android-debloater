@@ -15921,6 +15921,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.boundax.koreapreloadappinstaller",
+    "list": "Oem",
+    "description": "App installer\nDidn't find much info about this app, probably safe to remove for everyone outside Korea\nhttps://beta.pithus.org/report/5c8127cd32cf61ec1382b05dca622a971242283a6f60f774574abee8c0774873",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.mi_connect_service",
     "list": "Oem",
     "description": "MiConnectService\nHandles connection to IoT stuff\nSeems to be linked to Mi Home (com.xiaomi.smarthome)\n",
@@ -16328,11 +16337,11 @@
   {
     "id": "com.miui.wmsvc",
     "list": "Oem",
-    "description": "WMService\nRuns at boot, has access to internet + GPS\nI quickly looked at the decompiled code and saw some unsanitized SQL inputs, which is BAD! (vulnerable to SQL injection)\nTries to get your android unique Google advertising ID from Google Play Services.\nFeeds and launches the spying/analytics app \"com.miui.hybrid\".\nDoesn't seem to do anything important, only tracking.\nWARNING: Some people said removing this package causes bootloop, others said it doesn't. Can someone check this? I think it should be okay to remove if you remove all other dependent Xiaomi packages(bloat).",
+    "description": "WMService\nRuns at boot, has access to internet + GPS\nI quickly looked at the decompiled code and saw some unsanitized SQL inputs, which is BAD! (vulnerable to SQL injection)\nTries to get your android unique Google advertising ID from Google Play Services.\nFeeds and launches the spying/analytics app \"com.miui.hybrid\".\nDoesn't seem to do anything important, only tracking.\nWARNING: Some people said removing this package causes bootloop, others said it doesn't. Safe to remove — no one seems to experience bootloops on MIUI 12 and higher.\nSee https://github.com/0x192/universal-android-debloater/issues/137 for more information.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.xiaomi.xmsf",
