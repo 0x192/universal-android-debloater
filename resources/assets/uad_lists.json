@@ -15923,7 +15923,7 @@
   {
     "id": "com.boundax.koreapreloadappinstaller",
     "list": "Oem",
-    "description": "Install the Services app, Didn`t find much info about this app, probably safe to remove for everyone outside Korea\nhttps://beta.pithus.org/report/5c8127cd32cf61ec1382b05dca622a971242283a6f60f774574abee8c0774873",
+    "description": "App installer\nDidn't find much info about this app, probably safe to remove for everyone outside Korea\nhttps://beta.pithus.org/report/5c8127cd32cf61ec1382b05dca622a971242283a6f60f774574abee8c0774873",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
