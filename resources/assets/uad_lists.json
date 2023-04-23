@@ -17363,7 +17363,7 @@
   {
     "id": "com.google.android.googlequicksearchbox",
     "list": "Google",
-    "description": "Google app (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)\nRuns in the background.\nIncludes Google Search Box widget and Google Assistant. If you need a shortcut to Google on your homescreen just use a web-browser shortcut. Does also remove the Google Sound Search widget, but you can get that functionality from an app like Shazam, that additionally doesn't run in the background constantly like this package does.",
+    "description": "Google app (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)\nRuns in the background.\nIncludes Google Search Box widget, Google Voice input and Google Assistant. If you need a shortcut to Google on your homescreen just use a web-browser shortcut. Does also remove the Google Sound Search widget, but you can get that functionality from an app like Shazam, that additionally doesn't run in the background constantly like this package does.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
