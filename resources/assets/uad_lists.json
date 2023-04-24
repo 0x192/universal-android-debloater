@@ -8975,11 +8975,11 @@
   {
     "id": "com.oneplus.config",
     "list": "Oem",
-    "description": "OPConfig\nOccasionally runs in the background.\nPackage source is: OPOnlineConfig.apk\nGuessing it might handle communication certificates and general network config for Oneplus apps.\nOnly has INTERNET and RECEIVE_BOOT_COMPLETED permissions.",
+    "description": "OPConfig\nOccasionally runs in the background.\nPackage source is: OPOnlineConfig.apk\nSecretly limits performance for certain apps like browsers, social media apps... by a huge amount under Android 11.\nReboot after uninstalling for it to restore your performance - you can see the improvement by running a JS benchmark in a browser over on https://chromium.github.io/octane/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.oneplus.contacts",
