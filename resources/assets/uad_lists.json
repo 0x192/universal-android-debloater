@@ -17903,7 +17903,7 @@
   {
     "id": "com.android.vending",
     "list": "Google",
-    "description": "Google Play Store\nWARNING: Uninstalling Google Play Store and using alternative sources like Aurora Store or F-droid for app installation or updates may cause issues.\nApplications may get stuck at the installing or updating screen.\nTo be able to update or install through alternatives, you might need to keep this app installed.",
+    "description": "Google Play Store\nWARNING: Uninstalling Google Play Store on Android 13 and using alternative sources like Aurora Store or F-droid for app installation or updates may cause issues.\nApplications may get stuck at the installing or updating screen.\nTo be able to update or install through alternatives, you might need to keep this app installed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
