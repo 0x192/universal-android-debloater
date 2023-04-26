@@ -20052,6 +20052,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.sau",
+    "list": "Oem",
+    "description": "System Upgrade Services\nRelated to system updates\nDisabling this will break system updates\nPithus analysis: https://beta.pithus.org/report/1ff5328107852d067c6fafefb129e556017b7122af569c074bcf6913ae225682",
+    "dependencies": [],
+    "neededBy": ["com.oplus.romupdate"],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.oplus.synergy",
     "list": "Oem",
     "description": "HeySynergy\nProvides the screencasting feature and OPPO's PC Connect (https://connect.oppo.com/). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone.\n\nPithus analysis: https://beta.pithus.org/report/16d9ea536683291fbffe46dedd3c655379b5fcfdb473ec1cab5290cf5af27fba",
@@ -20496,6 +20505,15 @@
     "id": "com.oplus.lfeh",
     "list": "Oem",
     "description": "Seems to be related to the the logging suite.\n\nPithus analysis: https://beta.pithus.org/report/0542dbdbe10fd3a868ea497ec92670619670f574bbce37d949975dc109cd316f",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.location",
+    "list": "Oem",
+    "description": "OplusLocationService\nExtra location telemetry, not related to any GPS functions.\n\nPithus analysis: https://beta.pithus.org/report/53193686ebc656e02cb9b9e9a69b7387b1de1f79a61b105310fa53e84095fcfe",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
