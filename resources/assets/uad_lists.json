@@ -17102,7 +17102,7 @@
   {
     "id": "com.google.android.apps.photos",
     "list": "Google",
-    "description": "Google Photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)",
+    "description": "Google Photos (https://play.google.com/store/apps/details?id=com.google.android.apps.photos)\nMay break screen capture quick edit if removed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
