@@ -20529,6 +20529,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.olc",
+    "list": "Oem",
+    "description": "Olc\nSystem logger.\n\nPithus analysis: https://beta.pithus.org/report/805177a4193d101e281cc31987694c85adea75d5737e43b08bfa668a6eb71c95",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.postmanservice",
+    "list": "Oem",
+    "description": "Diagnostic Tool\n System logger.\n\nPithus analysis: https://beta.pithus.org/report/f53aea481cd3b563379a90a9727029795b5688db032c1de104aa36f34aac9144",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oplus.wifibackuprestore",
     "list": "Oem",
     "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
