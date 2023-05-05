@@ -20054,7 +20054,7 @@
   {
     "id": "com.oplus.sau",
     "list": "Oem",
-    "description": "System Upgrade Services\nRelated to system updates\nDisabling this will break system updates\n\nPithus analysis: https://beta.pithus.org/report/1ff5328107852d067c6fafefb129e556017b7122af569c074bcf6913ae225682",
+    "description": "System Upgrade Services\nRelated to system updates. Disabling this will break system updates. Pithus analysis:\nhttps://beta.pithus.org/report/1ff5328107852d067c6fafefb129e556017b7122af569c074bcf6913ae225682",
     "dependencies": [],
     "neededBy": ["com.oplus.romupdate"],
     "labels": [],
