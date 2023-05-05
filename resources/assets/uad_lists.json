@@ -20513,7 +20513,7 @@
   {
     "id": "com.oplus.location",
     "list": "Oem",
-    "description": "OplusLocationService\nExtra location telemetry, not related to any GPS functions.\n\nPithus analysis: https://beta.pithus.org/report/53193686ebc656e02cb9b9e9a69b7387b1de1f79a61b105310fa53e84095fcfe",
+    "description": "OplusLocationService\nExtra location telemetry, not related to any GPS functions.\nPithus analysis: https://beta.pithus.org/report/53193686ebc656e02cb9b9e9a69b7387b1de1f79a61b105310fa53e84095fcfe",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
