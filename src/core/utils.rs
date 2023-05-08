@@ -120,7 +120,7 @@ impl fmt::Display for DisplayablePath {
         let stem = self.path.file_stem().map_or_else(
             || {
                 error!("[PATH STEM]: No file stem found");
-                "[File steam not found]".to_string()
+                "[File stem not found]".to_string()
             },
             |p| match p.to_os_string().into_string() {
                 Ok(stem) => stem,
