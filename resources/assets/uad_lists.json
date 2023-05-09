@@ -19730,11 +19730,11 @@
   {
     "id": "com.lenovo.ue.device",
     "list": "Oem",
-    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.",
+    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.\nNOTE: removing this package may cause a factory reset, see:\nhttps://github.com/0x192/universal-android-debloater/issues/713.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Unsafe"
   },
   {
     "id": "com.tblenovo.lenovotips",
