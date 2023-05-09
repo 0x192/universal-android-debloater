@@ -3224,7 +3224,7 @@
   {
     "id": "com.samsung.android.allshare.service.mediashare",
     "list": "Oem",
-    "description": "Samsung Allshare service (now called SmartView).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/",
+    "description": "Samsung AllShare service (now called SmartView and/or Nearby Service).\nUsed to stream content from your phone to a Samsung smart TV.\nhttps://www.samsung.com/us/apps/smart-view-2/. On devices where the display-name is 'Nearby Service', 'Smart View' will continue to work properly (it doesn't depend on Nearby Service).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
