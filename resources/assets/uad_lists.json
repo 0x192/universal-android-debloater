@@ -20531,7 +20531,7 @@
   {
     "id": "com.oplus.olc",
     "list": "Oem",
-    "description": "Olc\nSystem logger.\n\nPithus analysis: https://beta.pithus.org/report/805177a4193d101e281cc31987694c85adea75d5737e43b08bfa668a6eb71c95",
+    "description": "Olc\nSystem logger. Seems to access location (possibly through mobile network), although the purpose of it is still unknown.\n\nPithus analysis: https://beta.pithus.org/report/805177a4193d101e281cc31987694c85adea75d5737e43b08bfa668a6eb71c95",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
