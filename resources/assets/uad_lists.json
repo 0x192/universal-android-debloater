@@ -4295,7 +4295,7 @@
   {
     "id": "com.samsung.android.spay",
     "list": "Oem",
-    "description": "Samsung Pay (https://play.google.com/store/apps/details?id=com.samsung.android.spay)\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones \nand other Samsung-produced devices\nhttps://en.wikipedia.org/wiki/Samsung_Pay\nNOTE : Samsung Pay is KNOX dependant and will never work again if you root your phone.\nFYI : Your data are sold (https://www.sammobile.com/news/samsung-pay-new-privacy-policy-your-data-sold/)\n",
+    "description": "Samsung Pay (https://play.google.com/store/apps/details?id=com.samsung.android.spay)\nSamsung Pay is a mobile payment and digital wallet service by Samsung Electronics that lets users make payments using compatible phones \nand other Samsung-produced devices\nhttps://en.wikipedia.org/wiki/Samsung_Pay\nNOTE : Samsung Pay is KNOX dependant and will never work again if you root your phone.\nFYI : Your data is sold (https://www.sammobile.com/news/samsung-pay-new-privacy-policy-your-data-sold/)\n",
     "dependencies": ["com.sec.android.app.samsungapps", "com.samsung.android.spayfw"],
     "neededBy": [],
     "labels": [],
@@ -20052,6 +20052,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.sau",
+    "list": "Oem",
+    "description": "System Upgrade Services\nRelated to system updates. Disabling this will break system updates. Pithus analysis:\nhttps://beta.pithus.org/report/1ff5328107852d067c6fafefb129e556017b7122af569c074bcf6913ae225682",
+    "dependencies": [],
+    "neededBy": ["com.oplus.romupdate"],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.oplus.synergy",
     "list": "Oem",
     "description": "HeySynergy\nProvides the screencasting feature and OPPO's PC Connect (https://connect.oppo.com/). Don't bother downloading 'PC Connect Desktop' if the 'Phone Connect' Quick Settings tile isn't available on your phone.\n\nPithus analysis: https://beta.pithus.org/report/16d9ea536683291fbffe46dedd3c655379b5fcfdb473ec1cab5290cf5af27fba",
@@ -20502,9 +20511,36 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.oplus.location",
+    "list": "Oem",
+    "description": "OplusLocationService\nExtra location telemetry, not related to any GPS functions.\nPithus analysis: https://beta.pithus.org/report/53193686ebc656e02cb9b9e9a69b7387b1de1f79a61b105310fa53e84095fcfe",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oplus.ocar",
     "list": "Oem",
     "description": "Car+\n Related to Oppo's car app [APK NEEDED]",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.olc",
+    "list": "Oem",
+    "description": "Olc (system logger)\nSeems to access location (possibly through mobile network), although the purpose of it is still unknown.\nPithus analysis: https://beta.pithus.org/report/805177a4193d101e281cc31987694c85adea75d5737e43b08bfa668a6eb71c95",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.oplus.postmanservice",
+    "list": "Oem",
+    "description": "Diagnostic Tool and system logger.\nPithus analysis: https://beta.pithus.org/report/f53aea481cd3b563379a90a9727029795b5688db032c1de104aa36f34aac9144",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
