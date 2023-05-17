@@ -16512,7 +16512,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Unsafe"
   },
   {
     "id": "com.miui.zman",
