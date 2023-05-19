@@ -10441,12 +10441,12 @@
   },
   {
     "id": "com.samsung.android.app.sharelive",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Samsung Quick Share from the Galaxy Store\nDoesn't break anything if you remove it. But obviously you can't use Quick Share.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.app.telephonyui",
