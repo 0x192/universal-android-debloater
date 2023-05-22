@@ -17091,6 +17091,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.apps.pixelmigrate",
+    "list": "Google",
+    "description": "Migrate data to your new Pixel device with a USB-C cable or whatever. Reviews say it doesn't work very well anyway.\n(https://play.google.com/store/apps/details?id=com.google.android.apps.pixelmigrate)",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.google.android.apps.pdfviewer",
     "list": "Google",
     "description": "Google PDF Viewer\nShouldn't run in the background, so no reason to disable.\nDiscontinued, but still works perfectly on Android 11. In fact, this is the best standalone PDF-viewer I've found. The default PDF-viewer in recent Android releases is now integrated into Google Drive.",
