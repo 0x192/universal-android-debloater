@@ -17093,7 +17093,7 @@
   {
     "id": "com.google.apps.pixelmigrate",
     "list": "Google",
-    "description": "Migrate data to your new Pixel device with a USB-C cable or whatever. Best removed. Apparently it doesn't work very well anyway.\nhttps://play.google.com/store/apps/details?id=com.google.android.apps.pixelmigrate",
+    "description": "Migrate data to your new Pixel device with a USB-C cable or whatever. Reviews say it doesn't work very well anyway.\n(https://play.google.com/store/apps/details?id=com.google.android.apps.pixelmigrate)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
