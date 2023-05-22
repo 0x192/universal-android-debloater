@@ -2691,6 +2691,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.motorola.discovery",
+    "list": "Oem",
+    "description": "Help you find your lost phone. An excuse to track your location.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.motorola.email",
     "list": "Oem",
     "description": "Motorola Easy Prefix (https://play.google.com/store/apps/details?id=com.motorola.easyprefix)\nAuto add CSP (Service Provider code) prefix to your phone when you're abroad.\nhttps://en.wikipedia.org/wiki/List_of_country_calling_codes\n\nThis seems to not work correctly and it's generally not a good idea to call home (via GSM) when you're abroad.\nIt's better and cheaper to use chat apps like Signal/Wire)\n\nMoto Email (https://play.google.com/store/apps/details?id=com.motorola.email)\n",
