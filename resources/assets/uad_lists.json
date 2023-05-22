@@ -2720,7 +2720,7 @@
   {
     "id": "com.motorola.gamemode",
     "list": "Oem",
-    "description": "A gamer themed app that displays an overlay in games.",
+    "description": "Some sort of game center\nA gamer themed app that displays an overlay in games that lets you block calls, turn off adaptive brightness and keeps your games up-to-date.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
