@@ -2693,7 +2693,7 @@
   {
     "id": "com.motorola.discovery",
     "list": "Oem",
-    "description": "Help you find your lost phone. An excuse to track your location.",
+    "description": "Helps you find your lost phone. Might also be an excuse to track your location.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
