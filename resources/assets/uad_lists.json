@@ -17631,6 +17631,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.android.safetycenter.resources",
+    "list": "Google",
+    "description": "Google safety center anti-virus spyware\n(https://safety.google). Disables the 'Please enable google play\nprotect' prompt when installing from F-Droid after disabling it in the\nPlay Store. Probably also disables gmail and browser malware notifications.\n\nUse a libre spam-blocking and DNS-blocking solution instead.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.google.samples.apps.cardboarddemo",
     "list": "Google",
     "description": "Google Cardboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.samples.apps.cardboarddemo)\n",
