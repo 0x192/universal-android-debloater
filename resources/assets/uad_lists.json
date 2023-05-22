@@ -2963,7 +2963,7 @@
   {
     "id": "com.motorola.launcherconfig",
     "list": "Oem",
-    "description": "PIN unlock config, apparently! Delete it and you won't need a pin to unlock the launcher anymore.\nYou could still have the PIN for other admin tasks.\n",
+    "description": "PIN unlock config\nDelete it and you won't need a pin to unlock the launcher anymore. You could still have the PIN for other admin tasks.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
