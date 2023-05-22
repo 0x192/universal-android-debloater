@@ -17786,7 +17786,7 @@
   {
     "id": "com.google.android.gms.nearby",
     "list": "Google",
-    "description": "API to share files to nearby android devices over bluetooth.\nSafe to remove if you don't want this feature. There are many other options.",
+    "description": "API to share files to nearby Android devices over Bluetooth.\nSafe to remove if you don't want this feature. There are many other options.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
