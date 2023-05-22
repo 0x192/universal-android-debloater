@@ -17784,6 +17784,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.google.android.gms.nearby",
+    "list": "Google",
+    "description": "API to share files to nearby Android devices over Bluetooth.\nSafe to remove if you don't want this feature. There are many other options.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.google.android.overlay.gmsgsaconfig",
     "list": "Oem",
     "description": "Overlay theme for gmsgsaconfig? Probably an RRO? https://source.android.com/devices/architecture/rros",
