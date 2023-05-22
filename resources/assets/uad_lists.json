@@ -14771,7 +14771,7 @@
   {
     "id": "com.uscc.ecid",
     "list": "Misc",
-    "description": "Call Guardian (anti-spam), possibly the caller ID service.",
+    "description": "Probably Call Guardian (anti-spam), or a caller ID service provided by U.S. Cellular.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
