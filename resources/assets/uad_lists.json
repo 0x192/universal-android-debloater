@@ -14769,6 +14769,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.uscc.ecid",
+    "list": "Misc",
+    "description": "Call guardian (anti-spam), possibly the caller ID service.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.wb.goog.got.conquest",
     "list": "Misc",
     "description": "Game of Thrones: Conquest (https://play.google.com/store/apps/details?id=com.wb.goog.got.conquest)\nMobile game\n",
