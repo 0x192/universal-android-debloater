@@ -2963,11 +2963,11 @@
   {
     "id": "com.motorola.launcherconfig",
     "list": "Oem",
-    "description": "Config file of the motorola launcher? \nI guess launcher will not work anymore if you delete this package. Can someone confirm?\nDON'T REMOVE THIS IF YOU DIDN'T INSTALL ANOTHER LAUNCHER!\n",
+    "description": "PIN unlock config\nDelete it and you won't need a pin to unlock the launcher anymore. You could still have the PIN for other admin tasks.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   {
     "id": "com.motorola.launcher.secondarydisplay",
