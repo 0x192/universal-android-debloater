@@ -17633,7 +17633,7 @@
   {
     "id": "com.google.android.safetycenter.resources",
     "list": "Google",
-    "description": "Related to Google Safety Center (https://safety.google). Probably effects malware detection in new app installs, gmail, and chrome. Use a libre spam-blocking and DNS-blocking solution instead.",
+    "description": "Related to Google Safety Center (https://safety.google). Probably affects malware detection in new app installs, Gmail, and Chrome. Alternatively, you can use a libre spam-blocking and DNS-blocking solution instead.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
