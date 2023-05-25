@@ -17631,6 +17631,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.android.safetycenter.resources",
+    "list": "Google",
+    "description": "Related to Google Safety Center (https://safety.google). Probably affects malware detection in new app installs, Gmail, and Chrome. Alternatively, you can use a libre spam-blocking and DNS-blocking solution instead.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.google.samples.apps.cardboarddemo",
     "list": "Google",
     "description": "Google Cardboard (VR stuff) (https://play.google.com/store/apps/details?id=com.google.samples.apps.cardboarddemo)\n",
