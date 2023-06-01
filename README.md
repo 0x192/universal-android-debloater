@@ -158,7 +158,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
   doesn't launch.
 
   <details>
-  <summary>Installing using `cargo`</summary>
+  <summary>Installing using <code>cargo</code></summary>
 
   If you have the rust toolchain installed, you can install this app as a binary using one of the following commands
 
