@@ -157,6 +157,22 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
   Take the `opengl` version only if the default version (with a Vulkan backend)
   doesn't launch.
 
+  <details>
+  <summary>Installing using `cargo`</summary>
+
+  If you have the rust toolchain installed, you can install this app as a binary using one of the following commands
+
+    ```bash
+    cargo install --git https://github.com/0x192/universal-android-debloater.git --locked
+    ```
+
+  OpenGL Version
+    ```bash
+    cargo install --git https://github.com/0x192/universal-android-debloater.git --features glow --locked
+    ```
+
+    </details>
+
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock
 apps because those Chinese manufacturers (especially Xiaomi and Huawei) have been
 using the name of AOSP packages for their own (modified & closed-source) apps.
