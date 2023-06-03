@@ -9,6 +9,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.android.mapsagent",
+    "list": "Oem",
+    "description": "Recommends \"important\" applications.\nGives you an option to skip installing actually useful/important apps such as Samsung 321, but will force you to install useless apps such as Shoppee and TikTok.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.sonyericsson.android.addoncamera.artfilter",
     "list": "Oem",
     "description": "Sony Creative effect\nGives options for various photographic toning effects in the Sony camera app.\nI'm not 100% sure for this one. Can someone confirm ? \n",
