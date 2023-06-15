@@ -16175,7 +16175,7 @@
   {
     "id": "com.xiaomi.glgm",
     "list": "Oem",
-    "description": "Xiaomi Games\nReappeared on MIUI 14 (POCO)\nAd infested game browser which is just an embedded web browser\n",
+    "description": "Xiaomi Games\nReappeared on MIUI 14 (POCO)\nAd infested game browser which uses an embedded web browser. I couldn't find where these games come from. Happymod also has these.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
