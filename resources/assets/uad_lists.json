@@ -5807,7 +5807,7 @@
   {
     "id": "com.osp.app.signin",
     "list": "Oem",
-    "description": "Samsung Account app\nLots of trackers in this app.\nHas a huge list of permissions. It is an essential app for a lot of samsung apps (which will be removed with the default selection in this list)\nSettings apps will crash if removed on Android 11/OneUI 3.0 (https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/39)\nThis issue happens only if you are running Android 11. If not, you can can (and should) remove this package!\n",
+    "description": "Samsung Account app\nLots of trackers in this app.\nHas a huge list of permissions. It is an essential app for a lot of samsung apps (which will be removed with the default selection in this list)\nSettings apps will crash if removed on Android 11/OneUI 3.0 (https://gitlab.com/W1nst0n/universal-android-debloater/-/issues/39)\nThis issue happens only if you are running Android 11. If not, you can (and should) remove this package!\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10585,8 +10585,8 @@
   },
   {
     "id": "com.samsung.android.providers.contacts",
-    "list": "Pending",
-    "description": "Likely same as com.android.providers.contacts, but for Samsung phones.\nProbably breaks contact functionality if disabled.",
+    "list": "Oem",
+    "description": "Breaks contact functionality if disabled.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10855,12 +10855,12 @@
   },
   {
     "id": "com.sec.factory.cameralyzer",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Camera Test",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.sec.mhs.smarttethering",
