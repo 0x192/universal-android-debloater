@@ -4601,7 +4601,7 @@
   {
     "id": "com.samsung.ipservice",
     "list": "Oem",
-    "description": "Set of hidden network settings (inlcuding frequency bands choice)\nHow to see these settings : https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4\n\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\nUsed by Galaxy Finder & Galaxy Vision to access web data\nDo removing this package break face/content recognition?  \n#\nName and permissions of this package suggest that it is used by Galaxy Finder to seek stuff on the web.\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\n",
+    "description": "Set of hidden network settings (including frequency bands choice)\nHow to see these settings : https://forum.xda-developers.com/galaxy-note-8/help/q-hidden-network-settings-pie-t3914421/page4\n\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\nUsed by Galaxy Finder & Galaxy Vision to access web data\nDo removing this package break face/content recognition?  \n#\nName and permissions of this package suggest that it is used by Galaxy Finder to seek stuff on the web.\nSame shared user id as com.samsung.faceservice, com.samsung.mlp, com.samsung.cmh\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
