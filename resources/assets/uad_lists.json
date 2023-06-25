@@ -7607,7 +7607,7 @@
   {
     "id": "com.android.shell",
     "list": "Aosp",
-    "description": "Shell\nUnix shell that receives ADB commands sent from a PC.\nThis is what UAD uses to execute commands on Android devices. Proobably a bad idea to disable ;)",
+    "description": "Shell\nUnix shell that receives ADB commands sent from a PC.\nThis is what UAD uses to execute commands on Android devices. Probably a bad idea to disable ;)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
