@@ -131,8 +131,8 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
     brew install android-platform-tools
     ```
 
-    </details>
-    </p>
+  </details>
+  </p>
 
   <p>
   <details>
@@ -150,8 +150,10 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
      adb devices
     ```
 
-    </details>
-    </p>
+  </details>
+  </p>
+
+
 
 - Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases).
   Take the `opengl` version only if the default version (with a Vulkan backend)
