@@ -4745,11 +4745,11 @@
   {
     "id": "com.samsung.SMT",
     "list": "Oem",
-    "description": "Samsung TTS (Text-to-speech)\nWorks with applications such as S Voice; translation apps, GPS that require Text-To-Speech (TTS) functionality and reads back text\nhttps://galaxystore.samsung.com/detail/com.samsung.SMT\n",
+    "description": "Samsung TTS (Text-to-speech)\nWorks with applications such as S Voice; translation apps, GPS that require Text-To-Speech (TTS) functionality and reads back text\nhttps://galaxystore.samsung.com/detail/com.samsung.SMT. WARNING: SOME VERSIONS OF THIS APP ARE VULNERABLE TO PRIVILEGE ESCALATION ATTACKS! It can allow arbitrary RCE as system (UID 1000). Identifier: CVE-2019-16253.\nSource: https://github.com/flankerhqd/vendor-android-cves/tree/master/SMT-CVE-2019-16253",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.storyservice",
