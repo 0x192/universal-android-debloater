@@ -4016,7 +4016,7 @@
   {
     "id": "com.samsung.android.net.wifi.wifiguider",
     "list": "Oem",
-    "description": "Wi-Fi Tips\nI've never seen any \"wifi tips\" so I'm not sure if this app has any other functionality\nUpon reinstalling a notification pops up saying \"Analyzing Wi-Fi\" for a few seconds, no idea what it's doing\n",
+    "description": "Wi-Fi Tips\nShows a question-mark button next to Wi-Fi networks that failed to connect for any reason, providing info to fix the specific issue. It also has a dedicated Settings activity that lists all possible help-tips, accessible via the \"More tips\" button when reading a tip.\nUpon reinstalling a notification pops up saying \"Analyzing Wi-Fi\" for a few seconds, no idea what it's doing",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
