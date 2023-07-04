@@ -12935,7 +12935,7 @@
   {
     "id": "com.coloros.weather.service",
     "list": "Oem",
-    "description": "colorOS weather service. Removal seems to trigger a bootloop on some phones.\nSee: https://github.com/0x192/universal-android-debloater/issues/211",
+    "description": "colorOS weather service. Removal seems to trigger a bootloop on some phones. However, it can be disabled instead without triggering bootloop (tested on ColorOS 11): adb shell 'pm disable-user com.coloros.weather.service'\n Disabling it would disable fetching weather related information in the clock widget and you won't be able to set dual clock in settings, probably other weather related functions in some apps won't work properly too. \nSee: https://github.com/0x192/universal-android-debloater/issues/211",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
