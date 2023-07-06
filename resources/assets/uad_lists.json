@@ -15662,7 +15662,7 @@
   {
     "id": "com.miui.gallery",
     "list": "Oem",
-    "description": "MIUI Gallery app.\nSimple Gallery is way better, lighter and open-source (https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)\nNote: Removing the Gallery will break the send screenshot feature (swipe 3 fingers to show the screenshot preview)",
+    "description": "MIUI Gallery app.\nSimple Gallery is way better, lighter and open-source (https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro/)\nNote: Removing the Gallery will break the send screenshot feature (swipe 3 fingers to show the screenshot preview) and might break the show photo feature of the camera app.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
