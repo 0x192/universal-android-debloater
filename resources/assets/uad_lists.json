@@ -16643,7 +16643,7 @@
   {
     "id": "com.xiaomi.finddevice",
     "list": "Oem",
-    "description": "Find My Device feature (in the Settings)\nEnables you to locate your lost phone and erase your data remotely. \nYour phone needs to be connected to internet (Wifi/mobile data) for this feature to work. \nREMOVING THIS PACKAGE WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : You cannot disable it via adb\nAccording some sources, disabling MIUI optimizations in the Developer\nsettings and removing the apk file in a custom recovery does not cause a\nbootloop, but I didn't test this.\n",
+    "description": "Find My Device feature (in the Settings)\nEnables you to locate your lost phone and erase your data remotely. \nYour phone needs to be connected to internet (Wifi/mobile data) for this feature to work. \nREMOVING THIS PACKAGE WILL BOOTLOOP YOUR DEVICE!\n\nNOTE : You cannot disable it via adb\nAccording some sources, disabling MIUI optimizations in the Developer\nsettings and removing the apk file in a custom recovery does not cause a\nbootloop, but I didn't test this.\nDisabing doesn't work. You can uninstall it safely if you properly disbale xiaomi cloud and xiaomi service framework and restart your device before unistalling finddevice",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
