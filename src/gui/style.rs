@@ -312,6 +312,7 @@ impl text_input::StyleSheet for Theme {
             border_radius: 5.0,
             border_width: 0.0,
             border_color: self.palette().base.foreground,
+            icon_color: self.palette().base.foreground,
         }
     }
 
@@ -323,6 +324,26 @@ impl text_input::StyleSheet for Theme {
             border_color: Color {
                 a: 0.5,
                 ..self.palette().normal.primary
+            },
+            icon_color: Color {
+                a: 0.5,
+                ..self.palette().normal.primary
+            },
+        }
+    }
+
+    fn disabled(&self, _style: &Self::Style) -> text_input::Appearance {
+        text_input::Appearance {
+            background: Background::Color(self.palette().base.background),
+            border_radius: 2.0,
+            border_width: 1.0,
+            border_color: Color {
+                a: 0.5,
+                ..self.palette().base.foreground
+            },
+            icon_color: Color {
+                a: 0.5,
+                ..self.palette().base.foreground
             },
         }
     }
@@ -339,9 +360,8 @@ impl text_input::StyleSheet for Theme {
         self.palette().normal.primary
     }
 
-    /// Produces the style of an hovered text input.
-    fn hovered(&self, style: &Self::Style) -> text_input::Appearance {
-        self.focused(style)
+    fn disabled_color(&self, _style: &Self::Style) -> Color {
+        self.palette().base.foreground
     }
 }
 
