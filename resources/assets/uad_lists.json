@@ -17055,6 +17055,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.android.apps.mediahome.launcher",
+    "list": "Google",
+    "description": "Entertainment Space\nAll-in-one application for entertainment purposes like movies, games, books etc.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.google.android.apps.meetings",
     "list": "Google",
     "description": "Hangout Meet (discontinued) (https://play.google.com/store/apps/details?id=com.google.android.apps.meetings)",
