@@ -6554,7 +6554,7 @@
   {
     "id": "com.samsung.android.sm.policy",
     "list": "Oem",
-    "description": "SCPM (SeCurity Policy Manager?) client.\nIt kills rarely used apps running in background.\nSurely linked to Smart Manager. I think it can have a very bad impact on battery performance if deleted. I'm testing.\nPerhaps the replacement of Samsung Security Policy Update\nhttps://www.samsung.com/levant/support/mobile-devices/what-is-security-enhancement-for-android/",
+    "description": "SCPM (SeCurity Policy Manager?) client.\nIt kills rarely used apps running in background.\nSurely linked to Smart Manager. On some devices, the app icon is cloud-shaped, which implies it's related to S Cloud.\nI think it can have a very bad impact on battery performance if deleted. I'm testing.\nPerhaps the replacement of Samsung Security Policy Update\nhttps://www.samsung.com/levant/support/mobile-devices/what-is-security-enhancement-for-android/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
