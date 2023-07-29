@@ -3818,7 +3818,7 @@
   {
     "id": "com.samsung.android.game.gos",
     "list": "Oem",
-    "description": "Samsung Game Optimizing Service \nIs supposed to \"improve\" game performance.\n",
+    "description": "Samsung Game Optimizing Service \nIs supposed to \"improve\" game performance.Has a \"Game Intent Service\" that runs occasionally. More info:\nhttps://pcgamer.com/samsungs-game-optimization-service-might-be-throttling-the-performance-of-over-10000-apps",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
