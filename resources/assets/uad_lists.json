@@ -3141,6 +3141,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.kyocera.ecomode",
+    "list": "Oem",
+    "description": "Custom power-saving mode",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  {
     "id": "com.knox.vpn.proxyhandler",
     "list": "Oem",
     "description": "Third-party package that provides caller profile information to help consumers identify incoming calls and block unwanted ones.\nhttps://en.wikipedia.org/wiki/Hiya_(company)\nhttps://hiya.com/\nNOTE: Never trust a company that promotes spam blocking features.\nhttps://itmunch.com/robocall-caught-sending-customers-confidential-data-without-consent/\nHave a look at their privacy policy. It's... pretty scary: https://hiya.com/fr/hiya-data-policy\nNeeded for Samsung Smart Call (com.samsung.android.smartcallprovider)\nSamsung Knox allows business and personal content to \"securely\" coexist on the same handset.\nThis package handles proxies alongside KNOX.",
@@ -17359,6 +17368,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.gallery3d",
+    "list": "Aosp",
+    "description": "Built-in Gallery app.\nThe ID could be \"recycled\" by OEMs for their own gallery implementations.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.google.android.googlequicksearchbox",
