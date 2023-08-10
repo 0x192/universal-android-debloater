@@ -10729,8 +10729,8 @@
   },
   {
     "id": "com.samsung.ims.smk",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "SimMobilityKit",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
