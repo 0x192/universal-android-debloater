@@ -9739,8 +9739,8 @@
   },
   {
     "id": "com.android.hotspot2.osulogin",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "OsuLogin\nRegister online to hotspot? Reinstalls after reboot.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9826,6 +9826,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.cellbroadcastreceiver.overlay.miui",
+    "list": "Oem",
+    "description": "MiuiCellBroadcastReceiverOverlay APK\nCell Broadcast Service is related but can't use it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.cellbroadcastservice.overlay.miui",
+    "list": "Oem",
+    "description": "MiuiCellBroadcastLegacyApp APK\nCell Broadcast Service is related but can't use it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.google.android.cellbroadcastservice",
@@ -13545,6 +13563,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "org.mipay.android.manager",
+    "list": "Oem",
+    "description": "MipayService\nXiaomi Payment related services, not used!",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.qti.qualcomm.datastatusnotification",
     "list": "Misc",
     "description": "Sends you a message when you reach a specified data limit?\nContains a service, but I've never it run. But I've also never run out of data or used the Android data warning system.",
@@ -13827,6 +13854,15 @@
     "id": "com.qualcomm.qti.rcsimsbootstraputil",
     "list": "Misc",
     "description": "RCS Service\nRCS = Rich Communication Services.\nRCS is a communication protocol between mobile telephone carriers and between phone and carrier, aiming at replacing SMS.\nhttps://en.wikipedia.org/wiki/Rich_Communication_Services\nUses IP protocol so it needs an internet connection.\nIt's a hot mess right now. It aims at being universal but only exists in Samsung Messages and Google Messages, because Google hasn't released a public API yet, so 3rd-party apps can't support it.\nIn a lot of countries messages go through Google's Jibe servers.\nhttps://jibe.google.com/policies/terms/\nhttps://pocketnow.com/why-you-should-probably-avoid-googles-rcs-text-messaging-chat-feature\nCan anybody check if this is needed for VolTE/VoWifi?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.qualcomm.qti.ridemodeaudio",
+    "list": "Misc",
+    "description": "Ridemode Recording list\nHidden app, not available for users that should be the audio playback of the drive mode.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15183,6 +15219,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "android.autoinstalls.config.xiaomi.qssi",
+    "list": "Oem",
+    "description": "PlayAutoInstalls\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "android.romstats",
     "list": "Oem",
     "description": "Misleading package name. This is a Xiaomi-only package.\nCan someone provide the .apk?\nTelemetry stuff\n",
@@ -15426,6 +15471,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.miui.extraphoto",
+    "list": "Oem",
+    "description": "Bokeh\nThe document mode of the Xiaomi camera (for taking IDs), deleting it doesn't affect the editing of albums.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.miuix.editor",
+    "list": "Oem",
+    "description": "Text action\nIts problably used for FrequentPhrase(com.miui.phrase) but also Frequent Phrases is unknown app so its safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.miui.greenguard",
     "list": "Oem",
     "description": "Security Guard Service\nThe app includes three different antivirus brands built in that the user can choose from to keep their phone protected: Avast, AVL and Tencent. \nUpon selecting the app, the user selects one of these providers as the default Anti-Virus engine to scan the device.\nIt the app that scan an app before installing it\nNOTE : A vulnerability was found in 2019 : https://research.checkpoint.com/2019/vulnerability-in-xiaomi-pre-installed-security-app/\n",
@@ -15465,6 +15528,24 @@
     "id": "com.miui.miwallpaper",
     "list": "Oem",
     "description": "Mi Wallpaper \nRemoving this might make it impossible to set a lock or home wallpaper, resulting in a black solid wallpaper.\nNote: it may also result in longer boot times (~15s) because the system try to call miwallpaper during boot",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.miwallpaper.overlay",
+    "list": "Oem",
+    "description": "Reinstalls after reboot. But looks like safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.miwallpaper.overlay.customize",
+    "list": "Oem",
+    "description": "Reinstalls after reboot. But looks like safe to remove.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15876,6 +15957,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.miui.wallpaper.overlay",
+    "list": "Oem",
+    "description": "Reinstalls after reboot. But looks like safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.wallpaper.overlay.customize",
+    "list": "Oem",
+    "description": "Reinstalls after reboot. But looks like safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.miui.yellowpage",
     "list": "Oem",
     "description": "Yellow Page from MIUI.\nREMINDER : Yellow pages contain phone numbers of companies and services. They are provided by Xiaomi partners or businesses themselves.\n",
@@ -15921,6 +16020,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.miaudiovisual",
+    "list": "Oem",
+    "description": "MiAudioVisual\nSafe to remove if you not use audio visuals when screen is off.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.mi_connect_service",
     "list": "Oem",
     "description": "MiConnectService\nHandles connection to IoT stuff\nSeems to be linked to Mi Home (com.xiaomi.smarthome)\n",
@@ -15958,6 +16066,15 @@
   },
   {
     "id": "com.mi.health",
+    "list": "Oem",
+    "description": "Heart Rate\nHidden app, not available for users.\nhttps://www.reddit.com/r/Xiaomi/comments/v0uhhx/found_hidden_heart_rate_app_in_miui_1304_i_opened/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mi.healthglobal",
     "list": "Oem",
     "description": "Mi Health\nPedometer, menstrual and sleep tracker\nYour data are synchronized in the cloud. \nDo you really want Xiaomi to know you didn't sleep much yesterday (your ovulation day btw...)\n",
     "dependencies": [],
@@ -16200,6 +16317,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.mircs",
+    "list": "Oem",
+    "description": "Mi RCS\nHidden unused Xiaomi free web messaging.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.oversea.ecom",
     "list": "Oem",
     "description": "Xiaomi ShopPlus.\nGiven its name I think this package is useless.\n",
@@ -16370,6 +16496,15 @@
     "labels": [],
     "removal": "Advanced"
   },
+    {
+    "id": "com.android.cameraextensions",
+    "list": "Oem",
+    "description": "CameraExtensionsProxy.\nCamera-related third-party apps can call Android camera extensions such as Portrait, Night Mode, and HDR, which doesn't seem to work significantly on MIUI.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   {
     "id": "com.android.fileexplorer",
     "list": "Oem",
@@ -16407,6 +16542,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.thememanager.gliobal_config.config.overlay",
+    "list": "Oem",
+    "description": "Gliobal_Config APK\nIt is problably used for MIUI theme manager but not sure, I removed it without issues.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.android.thememanager.module",
     "list": "Oem",
     "description": "Something related to Xiaomi's theme manager?",
@@ -16416,9 +16560,27 @@
     "removal": "Expert"
   },
   {
+    "id": "ccom.fido.asm",
+    "list": "Oem",
+    "description": "FIDO UAF1.0 ASM\nRelated to app fingerprint unlocking and payments. Safe to remove if you don't use password-less authentification to access online services.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.fido.xiaomi.uafclient",
     "list": "Oem",
     "description": "UAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online services.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.miui.aod",
+    "list": "Oem",
+    "description": "Always-on display\nSafe to remove if you don't use \"Always-on display\" features in settings.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16452,6 +16614,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.miui.face.overlay.miui",
+    "list": "Oem",
+    "description": "MiuiBiometricResOverlay\nFace Unlock feature will be unavailable.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.miui.freeform",
     "list": "Oem",
     "description": "Floating window\nI think the name of the app is pretty straightforward\nYou can make apps appear above other applications\nhttps://forum.xda-developers.com/android/miui/floating-windows-miui-12-t4125661\n",
@@ -16477,6 +16648,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.mi.emapal",
+    "list": "Oem",
+    "description": "GamePal\nIn China language game mode tracing menu not available for users. Safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.miui.mediafeature",
+    "list": "Oem",
+    "description": "MediaFeature合集\nIs this something for media? Unused app, problably for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.miui.mishare.connectivity",
@@ -16596,6 +16785,15 @@
     "removal": "Expert"
   },
   {
+    "id": "miui.systemui.plugin",
+    "list": "Oem",
+    "description": "System UI Plug-in. When removed, Android will use the AOSP style volume bar.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.xiaomi.discover",
     "list": "Oem",
     "description": "System Apps Updater\nWARNING: Disable System app updates (but not firmware updates)\n",
@@ -16702,6 +16900,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Unsafe"
+  },
+  {
+    "id": "com.xiaomi.mtb",
+    "list": "Oem",
+    "description": "Rueban(MTB)V2.4\nHidden debugging baseband tools, not available for users.\nhttps://i.postimg.cc/GpSxmNyj/Bez-n-zvu.png",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.asus.calculator",
@@ -19710,6 +19917,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.cameratools",
+    "list": "Oem",
+    "description": "CameraTools\nCamera calibration. Deleting it does not affect the camera.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.calendar",
     "list": "Oem",
     "description": "Mi Calendar. Google trackers inside and needs 48 permissions! Obviously talks to Xiaomi servers. The com.mi.health.provider.permission.read_menstruation permissions is really creepy... There are better alternatives.\nPithus analysis: https://beta.pithus.org/report/6c68ddd1f9e2d1f9e1df2eab572c07f1e34c4a6490c0ba98554a7356ca2a351d\n\nNote: Since MIUI 12, you can no longer uninstall this app. Disabling it still works fine.",
@@ -20829,6 +21045,15 @@
     "id": "com.bbk.iqoo.logsystem",
     "list": "Oem",
     "description": "User experience service\nTelemetry app.\nNote:Disabling this will break trial version system upgrade feature.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mobile.iroaming",
+    "list": "Oem",
+    "description": "com.modemdebug\nHidden running in the background debugs for data traffic and all that, not useful for the average person.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
