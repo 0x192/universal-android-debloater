@@ -16058,11 +16058,11 @@
   {
     "id": "com.xiaomi.joyose",
     "list": "Oem",
-    "description": "Joyse Analytics and advertising\nRuns in background and can't be stopped. \n",
+    "description": "GPU Tuner\nOptimizes your game for gaming. Some people have noticed that it locks the fps at 60 after selecting 90.\nhttps://youtu.be/gavEuH3Ck5o?t=550. If you want, you can test it by yourself.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.xiaomi.jr",
@@ -16625,7 +16625,7 @@
   {
     "id": "com.android.updater",
     "list": "Oem",
-    "description": "Mi Updater\nProvides system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE!\n",
+    "description": "Mi Updater\nProvides system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE! Doesn't bootloop on MIUI 14.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
