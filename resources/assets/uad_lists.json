@@ -729,6 +729,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.wdstechnology.android.kryten",
+    "list": "Oem",
+    "description": "OTA Access Point Configuration. Might break OTA updates but on some xiaomi devices it doesnt exist, so what exacly does it do?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.whitepages.nameid.tmobile",
     "list": "Carrier",
     "description": "T-mobile NAME ID by WhitePages (https://www.whitepages.com/)\nDiscontinued. Replaced by com.tmobile.services.nameid\nhttps://www.fiercewireless.com/wireless/t-mobile-to-offer-name-id-service-from-whitepages\nhttps://www.geekwire.com/2016/whitepages-spins-caller-id-spam-blocking-app-startup-hiya/\n",
@@ -759,6 +768,51 @@
     "id": "com.customermobile.preload.vzw",
     "list": "Carrier",
     "description": "Verizon Store/Retail Demo Mode\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.longcheertel.AutoTest",
+    "list": "Oem",
+    "description": "Autotest\nHidden hardware tests.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.longcheertel.cit",
+    "list": "Oem",
+    "description": "Cit test\nHidden hardware tests.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.longcheertel.midtest",
+    "list": "Oem",
+    "description": "Assemble test\nHidden hardware tests.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.longcheertel.modemlog",
+    "list": "Oem",
+    "description": "Modem log\nHidden app that includes TcardLog, modem log, Tcpdump.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.longcheertel.sarauth",
+    "list": "Oem",
+    "description": "Autotest\nHidden hardware tests.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7662,6 +7716,15 @@
     "id": "com.example.wifirftest",
     "list": "Oem",
     "description": "Wifi Radio Frequency test\nProbably used in factory. No hidden test menu to use it.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.fingerprints.extension.service",
+    "list": "Oem",
+    "description": "FingerprintExtensionService\nNeeded for fingerprint sensor test.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15228,6 +15291,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "android.autoinstalls.config.Xiaomi.willow",
+    "list": "Oem",
+    "description": "PlayAutoInstalls\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "android.romstats",
     "list": "Oem",
     "description": "Misleading package name. This is a Xiaomi-only package.\nCan someone provide the .apk?\nTelemetry stuff\n",
@@ -15829,6 +15901,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.miui.screenshot",
+    "list": "Oem",
+    "description": "MIUI Screenshot\nScreenshots will not work.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.miui.spock",
@@ -16589,7 +16670,7 @@
   {
     "id": "com.miui.audiomonitor",
     "list": "Oem",
-    "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this? \n",
+    "description": "Recording Assistant. Voice Call Recorder (only in MIUI dialer app). Unused on Global, EEA MIUI",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16720,6 +16801,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.xiaomi.bluetooth",
+    "list": "Oem",
+    "description": "MIUI Bluetooth Control\nYou must keep this if you want Bluethooth to work properly.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.xiaomi.bluetooth.overlay",
@@ -21823,5 +21913,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.goodix.gftest",
+    "list": "Oem",
+    "description": "Fingerprint test\nHidden app that tests your fingerprint. Not available for users.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
