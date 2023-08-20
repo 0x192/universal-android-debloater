@@ -15993,6 +15993,33 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.miui.voicetrigger",
+    "list": "Oem",
+    "description": "Voice commands won't work, like waking up the device.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.voiceassist",
+    "list": "Oem",
+    "description": "Core of the voice to command features, commonly dubbed as AI these days. Removing this will probably break the voiceassist and voiceassistoverlay too.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.miui.voiceassistoverlay",
+    "list": "Oem",
+    "description": "The overlay won't show up when you trigger it, which makes the voice to command features largely inaccessible.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.miui.vsimcore",
     "list": "Oem",
     "description": "Virtual Sim core service\n",
@@ -16227,6 +16254,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.aiasst.vision",
+    "list": "Oem",
+    "description": "Translator app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.xiaomi.account",
     "list": "Oem",
     "description": "Mi Account\nHas a LOT of permissions + Facebook trackers. Collects many information, including your phone number, your unique International mobile subscriber identity (IMSI) and your clipboard).\nYou should remove this if you don't have or don't want a Mi account.\nWARNING: Make sure to log out of your Mi Account and unbind your phone from it. If you don't you could be locked out from your phone after removing this package.\nRemove Mi Account: https://xiaomiui.net/how-to-remove-mi-account-7606/\n\nPithus analysis: https://beta.pithus.org/report/3f5abc9d7215dd0be5c3ac137b0cd528217640b5778e9f849a9beb0a34eda8dc",
@@ -16290,6 +16326,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.xiaomi.migameservice",
+    "list": "Oem",
+    "description": "Games run the same even after uninstalling it, so It's safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.xiaomi.macro",
     "list": "Oem",
     "description": "MiMacro is an automation task from Xiaomi like touch on MIUI Game Turbo.\nHas INTERNET and READ_PHONE_STATE permission allowing access to the phone number, serial number, whether a call is active, the number that a call is connected to...\nWhat is sure (from the code) is that the app collects the IMEI.\n\nPithus analysis: https://beta.pithus.org/report/2b056ed84fe500552a58184035b962ba68af29457c24930c0aa8c9eba4af7bcf",
@@ -16297,6 +16342,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+    {
+    "id": "com.xiaomi.market",
+    "list": "Oem",
+    "description": "GetApps is the official Xiaomi App Store.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.xiaomi.midrop.overlay",
@@ -16774,6 +16828,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.miui.powerkeeper",
+    "list": "Oem",
+    "description": "Makes the device bootloop, probably because It's tight integration with the built in \"Security\" features of MIUI.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
   },
   {
     "id": "com.miui.powerkeeper",
