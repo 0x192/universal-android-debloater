@@ -21598,5 +21598,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.hoffnung",
+    "list": "Oem",
+    "description": "Warning: Disable only, do not uninstall.\n\nTecno/Infinix TPMS app.\nPhones home, requires a lot of permission, and sends ads/unnecessary notifs to your notification.\nUninstalling disables the lockscreen notification, and upon reboot, the lockscreen won't launch, resulting with the user being stuck unable to open their phone.\nDisabling the app only results with the lockscreen notifications being disabled.\n\nPithus Analysis: https://beta.pithus.org/report/7134f94c7006673a4acc1687ce7b509837d3397957e0730f8a9d4eb908658b97",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   }
 ]
