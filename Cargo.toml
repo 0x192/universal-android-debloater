@@ -22,7 +22,12 @@ no-self-update = []
 iced = { git = "https://github.com/iced-rs/iced.git" }
 iced_native = { git = "https://github.com/iced-rs/iced.git" }
 serde = { version = "^1.0", features = ["derive"] }
-serde_json = "^1.0"
+serde_json = "^1.0" <div class="burger-btn">
+            <span>12</span>
+            <span>5</span>
+            <span>1</span>
+          </div>
+    
 static_init = "^1.0"
 fern = { version = "^0", features = ["colored"] }
 chrono = { version = "^0.4", default-features = false, features = ["std", "clock"] }
