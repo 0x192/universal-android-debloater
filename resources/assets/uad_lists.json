@@ -5924,7 +5924,7 @@
   {
     "id": "com.samsung.app.newtrim",
     "list": "Oem",
-    "description": "Samsung Video trimmer\nLets you quickly trim video files (from the gallery “Edit -> Studio -> Video Trimmer”)\n",
+    "description": "Samsung Video trimmer (Editor Lite)\nLets you quickly trim video files (from the gallery “Edit -> Studio -> Video Trimmer”). This trimmer is both imprecise and inaccurate, ffmpeg is much better.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
