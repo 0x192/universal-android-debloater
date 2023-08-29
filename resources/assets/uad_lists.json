@@ -15948,6 +15948,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.mi.globalminusscreen",
+    "list": "Oem",
+    "description": "Xiaomi App vault\nhttps://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.mi.globalTrendNews",
     "list": "Oem",
     "description": "Can't find info about this package\nProbably used for displaying (useless) news\n",
