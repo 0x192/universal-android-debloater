@@ -6554,7 +6554,7 @@
   {
     "id": "com.samsung.android.sm.policy",
     "list": "Oem",
-    "description": "SCPM (Samsung Cloud Platform Manager) client.\nAllows the app to read data from the Samsung Cloud Platform Manager in order to authenticate your phone and configure your apps and services. It kills rarely used apps running in background.\nSurely linked to Smart Manager. On some devices, the app icon is cloud-shaped.\nI think it can have a very bad impact on battery performance if deleted.",
+    "description": "SCPM (Samsung Cloud Platform Manager) client.\nAllows the app to read data from the Samsung Cloud Platform Manager in order to authenticate your phone and configure your apps and services. Surely linked to Smart Manager. On some devices, the app icon is cloud-shaped.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
