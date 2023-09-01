@@ -4007,7 +4007,7 @@
   {
     "id": "com.samsung.android.mobileservice",
     "list": "Oem",
-    "description": "Samsung Experience Service (https://play.google.com/store/apps/details?id=com.samsung.android.mobileservice)\nHandle you samsung account and is needed to use some samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\n",
+    "description": "Its name was Samsung Experience Service, before One UI 1.0 (Samsung Experience version 10.0, Android 8.1). Now, it's Group Sharing. Both have similar functionality, but the legacy version was more akin to Samsung Core Services (citation needed). Handles your Samsung account and is needed to use some Samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\nhttps://techshift.net/what-is-samsung-group-sharing/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6554,7 +6554,7 @@
   {
     "id": "com.samsung.android.sm.policy",
     "list": "Oem",
-    "description": "SPCM (Striped Phase Change Memory ?) client.\nIt kills rarely used apps running in background.\nSurely linked to Smart Manager. I think it can have a very bad impact on battery performance if deleted. I'm testing.\n",
+    "description": "SCPM (Samsung Cloud Platform Manager) client.\nAllows the app to read data from the Samsung Cloud Platform Manager in order to authenticate your phone and configure your apps and services. Surely linked to Smart Manager. On some devices, the app icon is cloud-shaped.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10441,12 +10441,12 @@
   },
   {
     "id": "com.samsung.android.app.sharelive",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Samsung QuickShare\nRelated to `com.samsung.android.aware.service`.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.app.telephonyui",
