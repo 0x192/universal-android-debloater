@@ -4826,7 +4826,7 @@
   {
     "id": "com.samsung.vvm.se",
     "list": "Oem",
-    "description": "Samsung Verizon Voicemail \nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox.\nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://mobile.spectrum.com/support/article/360001296667/samsung-visual-voicemail\n",
+    "description": "Samsung Visual Voicemail (carrier-agnostic) \nAllows you to review and manage your voicemail directly from your smartphone, eliminating the need to dial into your mailbox. \nYou can scroll through your messages, pick the ones you want to listen to, and erase them right from your device's screen.\nhttps://galaxystore.samsung.com/prepost/000004716281"
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -21585,6 +21585,78 @@
     "id": "com.android.modulemetadata",
     "list": "Aosp",
     "description": "It's used to manage and store metadata about installed modules, and is accessed by the system server. Breaks some core functionality if disabled.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.app.notes.addons",
+    "list": "Oem",
+    "description": "Allows for marking up/drawing on notes in the Samsung Notes app (designed for use with S Pen). Removal likely breaks com.samsung.android.app.notes. Safe to remove otherwise. \nMay reinstall itself automatically (removal has persisted for me this time around, and through multiple reboots). \n    https://galaxystore.samsung.com/prepost/000005769652?appId=com.samsung.android.app.notes.addons"
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.samsung.android.app.parentalcare",
+    "list": "Oem",
+    "description": "Allows for setup of parental controls through Samsung's Device Wellbeing settings (com.samsung.android.forest or com.samsung.android.wellbeing, depending on Android version). Seems to serve no function otherwise. \nNote: the stock Android equivalent of this package is named com.google.android.apps.wellbeing. \n This app has literally EVERY possible permission, and could be categorized as an MDM (mobile device management) utility. \nhttps://www.samsung.com/us/support/answer/ANS00086102/ \nhttps://galaxystore.samsung.com/prepost/000006108375?appId=com.samsung.android.forest \nhttps://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing"
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": com.sec.android.dexsystemui"",
+    "list": "Oem",
+    "description": "Part of Samsung DeX. \nSeems safe to remove otherwise, so far."
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.dkey",
+    "list": "Oem",
+    "description": "Framework for storing digital keys in Samsung Wallet. \nRelated to com.samsung.android.carkey. \nSamsung Wallet will still function with this package removed. \nWorth noting that there is a reddit thread which observed this an older version of this app repeatedly crashing on a rooted device (however, this may be unrelated). \n https://www.reddit.com/r/S21Ultra/comments/xzl8i6/psa_access_denied_screen_popping_up_out_of/ \nhttps://galaxystore.samsung.com/prepost/000006233313?appId=com.samsung.android.dkey"
+    "dependencies": [],
+    "neededBy": "com.samsung.android.carkey",
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.carkey",
+    "list": "Oem",
+    "description": "Allows you to store a copy of your car key digitally in Samsung Wallet (not a joke). \nAppears to depend on com.samsung.android.dkey. \nSamsung Wallet will still function with this package removed. \nhttps://galaxystore.samsung.com/prepost/000006654293?appId=com.samsung.android.carkey"
+    "dependencies": "com.samsung.android.dkey",
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.coldwalletservice",
+    "list": "Oem",
+    "description": "Allows you to create and manage cryptocurrency cold wallets in Samsung Wallet. \nProbably defeats the purpose of using crypto in the first place, if you put it in the hands of Samsung. \nSamsung Wallet will still function with this package removed. \nhttps://galaxystore.samsung.com/prepost/000003905809?amp=&appId=com.samsung.android.coldwalletservice"
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.android.internal.systemui.onehanded.gestural",
+    "list": "Misc",
+    "description": "Appears to be what allows for the use of a gesture to activate one-handed mode. \nThe setting itself will remain visible (even after also removing com.sec.android.easyonehand), and can even be toggled on/off, but you will not be able to actually enter one-handed mode. \nhttps://www.samsung.com/in/support/mobile-devices/samsung-galaxy-smartphones-one-hand-mode/"
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.google.android.gms.supervision",
+    "list": "Google",
+    "description": "Backend for Android parental settings. \nThis app has literally EVERY possible permission, and could be categorized as an MDM (mobile device management) utility. \nThis is part of the gms (Google Mobile Services) group, and is being labeled "expert" as such - removal will almost certainly break Samsung's Digital Wellbeing (screen time, focus mode, bedtime mode, etc). If you rely on any of these, proceed with caution. \nWork/user profiles likely do not function without this, however I have not tested this fully. \nhttps://play.google.com/store/apps/details?id=com.google.android.gms.supervision \nhttps://play.google.com/store/apps/details?id=com.google.android.apps.wellbeing \nhttps://www.android.com/digital-wellbeing/"
     "dependencies": [],
     "neededBy": [],
     "labels": [],
