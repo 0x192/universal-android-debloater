@@ -19,8 +19,8 @@ self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
-iced = { git = "https://github.com/iced-rs/iced.git" }
-iced_native = { git = "https://github.com/iced-rs/iced.git" }
+iced = "^0.8.0"
+iced_native = "^0.9.1"
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"

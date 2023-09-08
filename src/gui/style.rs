@@ -210,7 +210,7 @@ impl scrollable::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: &Self::Style, _mouse_over_scrollbar: bool) -> scrollable::Scrollbar {
+    fn hovered(&self, style: &Self::Style) -> scrollable::Scrollbar {
         scrollable::Scrollbar {
             scroller: self.active(style).scroller,
             ..self.active(style)
@@ -218,7 +218,7 @@ impl scrollable::StyleSheet for Theme {
     }
 
     fn dragging(&self, style: &Self::Style) -> scrollable::Scrollbar {
-        let hovered = self.hovered(style, true);
+        let hovered = self.hovered(style);
         scrollable::Scrollbar {
             scroller: hovered.scroller,
             ..hovered
