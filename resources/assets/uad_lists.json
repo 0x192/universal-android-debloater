@@ -2495,7 +2495,7 @@
   {
     "id": "com.huawei.search",
     "list": "Oem",
-    "description": "HiSearch\nAllows you to search through settings, files, contacts and notes while keeping a record of your search history.\nHi Search is really annonying because it's triggered as soon as you wipe down from the middle part of the home.\n",
+    "description": "HiSearch\nAllows you to search through settings, files, contacts and notes while keeping a record of your search history.\nHi Search is really annoying because it's triggered as soon as you wipe down from the middle part of the home.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2549,7 +2549,7 @@
   {
     "id": "com.motorola.android.jvtcmd",
     "list": "Oem",
-    "description": "Java Tcmd Helper\ntcmd = commandes types. Seems to be a tools wich help find Java commands types.\nUseless for normal user.\n",
+    "description": "Java Tcmd Helper\ntcmd = commands types. Seems to be a tools which help find Java commands types.\nUseless for normal user.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2954,7 +2954,7 @@
   {
     "id": "com.motorola.launcher3",
     "list": "Oem",
-    "description": "Motorola system launcher\nA default home screen app, provides a layout and display for app icons and listing.\nWARNING: Do not remove this package if you did not switch to a 3rd-pary launcher.\nKeep in mind that removing this package will break the `recent apps` button (even from another launcher).",
+    "description": "Motorola system launcher\nA default home screen app, provides a layout and display for app icons and listing.\nWARNING: Do not remove this package if you did not switch to a 3rd-party launcher.\nKeep in mind that removing this package will break the `recent apps` button (even from another launcher).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3872,7 +3872,7 @@
   {
     "id": "com.samsung.android.intelligenceservice2",
     "list": "Oem",
-    "description": "It seems that this package is a kind of spyware. Very difficult to find information about this.\nSome people say it's linked to Carrier IQ (which is a carrier rootkit for the NSA).\nhttps://en.wikipedia.org/wiki/Carrier_IQ\nhttps://forum.xda-developers.com/showpost.php?s=c85df628dfc39c3a971e6f9cfa98cbb8&p=54071328&postcount=6\nThis package also have very stranges permissions : READ_PLACE / WRITE_PLACE. I couldn't find any explaination on the web. \nSo either it's a useless samsung package either it's a spyware. I delete it and I didn't notice anything bad.\n",
+    "description": "It seems that this package is a kind of spyware. Very difficult to find information about this.\nSome people say it's linked to Carrier IQ (which is a carrier rootkit for the NSA).\nhttps://en.wikipedia.org/wiki/Carrier_IQ\nhttps://forum.xda-developers.com/showpost.php?s=c85df628dfc39c3a971e6f9cfa98cbb8&p=54071328&postcount=6\nThis package also have very strange permissions : READ_PLACE / WRITE_PLACE. I couldn't find any explanation on the web. \nSo either it's a useless samsung package either it's a spyware. I delete it and I didn't notice anything bad.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3917,7 +3917,7 @@
   {
     "id": "com.samsung.android.knox.containercore",
     "list": "Oem",
-    "description": "KNOX Work profile/space\nProvidess an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
+    "description": "KNOX Work profile/space\nProvides an isolated environment to store data (see Secure Folder)\n\nNote : With Knox 3.4, Knox containers are now deprecated and replaced by Android work profiles.\nComunicate with Samsung servers :\n- https://vas.samsungapps.com (App updates)\n- http://cn-ms.samsungapps.com (APK Server)\n#\nhttps://support.samsungknox.com/hc/en-us/articles/115012547907-What-URLs-do-I-have-to-whitelist-to-make-Samsung-apps-work-with-an-authenticated-proxy-\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4043,7 +4043,7 @@
   {
     "id": "com.samsung.android.provider.shootingmodeprovider",
     "list": "Oem",
-    "description": "Provide camera modes (when you swipe left fromt the camera app)\nSafe to remove (but it is quite useful)",
+    "description": "Provide camera modes (when you swipe left from the camera app)\nSafe to remove (but it is quite useful)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4205,7 +4205,7 @@
   {
     "id": "com.samsung.android.scloud.auth",
     "list": "Oem",
-    "description": "Handle authentifcation for Samsung cloud",
+    "description": "Handle authentication for Samsung cloud",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4214,7 +4214,7 @@
   {
     "id": "com.samsung.android.sconnect",
     "list": "Oem",
-    "description": "Samsung Quick connect (discontinued ?)\nIn theorie, it lets you connect your phone to a variety of devices over Wifi\nthat support multiple protocols — including Wifi Direct and Miracast — to display photos, video or audio.\nhttps://www.samsung.com/uk/support/tv-audio-video/what-is-screen-mirroring-and-how-do-i-use-it-with-my-samsung-tv-and-samsung-mobile-device/\n",
+    "description": "Samsung Quick connect (discontinued ?)\nIn theory, it lets you connect your phone to a variety of devices over Wifi\nthat support multiple protocols — including Wifi Direct and Miracast — to display photos, video or audio.\nhttps://www.samsung.com/uk/support/tv-audio-video/what-is-screen-mirroring-and-how-do-i-use-it-with-my-samsung-tv-and-samsung-mobile-device/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4223,7 +4223,7 @@
   {
     "id": "com.samsung.android.securitylogagent",
     "list": "Oem",
-    "description": "Security Log Agent\nhttps://www.androidexplained.com/galaxy-note-9-disable-security-log-agent/\nRun in the background and monitore your device for any change to the /system partition.\nNOTE : When you root your phone, it will constantly tell you that your device is modified.\n",
+    "description": "Security Log Agent\nhttps://www.androidexplained.com/galaxy-note-9-disable-security-log-agent/\nRuns in the background and monitors your device for any change to the /system partition.\nNOTE : When you root your phone, it will constantly tell you that your device is modified.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4619,7 +4619,7 @@
   {
     "id": "com.samsung.android.knox.analytics.uploader",
     "list": "Oem",
-    "description": "Knox Analytics Uploader\nSends analytcs to Samsung\n",
+    "description": "Knox Analytics Uploader\nSends analytics to Samsung\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5258,7 +5258,7 @@
   {
     "id": "com.sec.android.fido.uaf.asm",
     "list": "Oem",
-    "description": "Fido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients to detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nhttps://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html\nSafe to remove if you don't use password-less authentification to access online services.",
+    "description": "Fido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients to detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nhttps://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html\nSafe to remove if you don't use password-less authentication to access online services.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5267,7 +5267,7 @@
   {
     "id": "com.sec.android.fido.uaf.client",
     "list": "Oem",
-    "description": "Fido UAF client. It's a layer that connects authenticator and RP (the application owner) and ensures validity of the connection. \nSo it can be browser, desktop application, mobile application, platform(i.e. android/ios).\nSee above\n\nSafe to remove if you don't use password-less authentification to acess online servics\n",
+    "description": "Fido UAF client. It's a layer that connects authenticator and RP (the application owner) and ensures validity of the connection. \nSo it can be browser, desktop application, mobile application, platform(i.e. android/ios).\nSee above\n\nSafe to remove if you don't use password-less authentication to access online services\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5474,7 +5474,7 @@
   {
     "id": "com.sec.enterprise.mdm.services.simpin",
     "list": "Oem",
-    "description": "Entreprise Sim Pin Service\nI couldn't find information about this package. No permissions asked. It's quite strange.\n#\nMobile device management (MDM) is a type of security software used by an IT department to monitor employees' mobile devices.\nKNOX-dependent.\nhttps://developer.samsung.com/tech-insights/knox/mobile-device-management\n",
+    "description": "Enterprise Sim Pin Service\nI couldn't find information about this package. No permissions asked. It's quite strange.\n#\nMobile device management (MDM) is a type of security software used by an IT department to monitor employees' mobile devices.\nKNOX-dependent.\nhttps://developer.samsung.com/tech-insights/knox/mobile-device-management\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5483,7 +5483,7 @@
   {
     "id": "com.sec.enterprise.mdm.vpn",
     "list": "Oem",
-    "description": "Entreprise VPN service\nI couldn't find information about this package. No permissions asked too.\nSee above for MDM signification\n",
+    "description": "Enterprise VPN service\nI couldn't find information about this package. No permissions asked too.\nSee above for MDM signification\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6068,7 +6068,7 @@
   {
     "id": "com.samsung.android.tadownloader",
     "list": "Oem",
-    "description": "Seems to check if a trusted application needs an update and downloads it. \nThis package probably does more than that. There is a LOT of lines of code (obfuscated obviously)\nIt was used to push an update to fix a security issue with the fingerprint sensor in 2019.\nhttps://libredd.it/r/galaxys10/comments/bcy93f/adb_how_to_get_the_fingerprint_update_pushed_to/\nSeems to be only used for biometrics stuff\nThere is Samsung analytics inside. You may want to remove it if you don't use biometrics authentification.\n",
+    "description": "Seems to check if a trusted application needs an update and downloads it. \nThis package probably does more than that. There is a LOT of lines of code (obfuscated obviously)\nIt was used to push an update to fix a security issue with the fingerprint sensor in 2019.\nhttps://libredd.it/r/galaxys10/comments/bcy93f/adb_how_to_get_the_fingerprint_update_pushed_to/\nSeems to be only used for biometrics stuff\nThere is Samsung analytics inside. You may want to remove it if you don't use biometrics authentication.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6077,7 +6077,7 @@
   {
     "id": "com.samsung.android.tapack.authfw",
     "list": "Oem",
-    "description": "AuthFw TaPack\nAuthentification Framework for Trusted Application? (don't know what 'Pack' could mean)\nHard to know what this app really does. Seems to be an assets provider used by com.samsung.android.tadownloader\n",
+    "description": "AuthFw TaPack\nAuthentication Framework for Trusted Application? (don't know what 'Pack' could mean)\nHard to know what this app really does. Seems to be an assets provider used by com.samsung.android.tadownloader\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6437,7 +6437,7 @@
   {
     "id": "com.samsung.android.applock",
     "list": "Oem",
-    "description": "Samsung App Lock\nLets you lock your app (Settins > Advanced fuctions > App lock)\nYou should lock your apps storing private data (provides data at rest encryption when your phone is locked)\n",
+    "description": "Samsung App Lock\nLets you lock your app (Settings > Advanced functions > App lock)\nYou should lock your apps storing private data (provides data at rest encryption when your phone is locked)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6446,7 +6446,7 @@
   {
     "id": "com.samsung.android.SettingsReceiver",
     "list": "Oem",
-    "description": "Samsung overlay of AOSP Settings. It has 39 permissions. Handles interactions with features controled by the settings.\n",
+    "description": "Samsung overlay of AOSP Settings. It has 39 permissions. Handles interactions with features controlled by the settings.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7868,7 +7868,7 @@
   {
     "id": "com.oneplus.factorymode",
     "list": "Oem",
-    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to acess the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK pre-installed.\nFor now, this only works in ADB, which requires local access to the device.",
+    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to access the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK pre-installed.\nFor now, this only works in ADB, which requires local access to the device.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
