@@ -32,6 +32,7 @@ toml = "^0"
 dirs = "^5.0.0"
 ureq = { version = "*", features = ["json"] }
 retry = { version = "^2.0.0" }
+proc-macro2 = "1.0.66" 
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }
@@ -41,3 +42,4 @@ tar = { version = "^0.4", optional = true }
 opt-level = "s"
 lto = true
 strip = "symbols"
+
