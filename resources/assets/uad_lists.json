@@ -801,6 +801,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.telus.myaccount",
+    "list": "Carrier",
+    "description": "My TELUS app\nIt's used for managing your telus account\nSafe to remove if you don't use it",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.vcast.mediamanager",
     "list": "Carrier",
     "description": "Verizon Cloud (https://play.google.com/store/apps/details?id=com.vcast.mediamanager)\n",
