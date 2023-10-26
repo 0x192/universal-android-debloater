@@ -20817,7 +20817,7 @@
     "removal": "Recommended"
   },
   {
-    "id": "com.bkk.theme",
+    "id": "com.bbk.theme",
     "list": "Oem",
     "description": "Vivo theme (https://play.google.com/store/apps/details?id=com.bbk.theme)\nLets you add new themes, fonts and wallpapers.\nIt has annoying notifications that cannot be disabled by going to the app settings. This app use 50 permissions and can install packages (REQUEST_INSTALL_PACKAGES)\nNote: Removing this app will prevent you to change themes.\n\nPithus analysis: https://beta.pithus.org/report/0f15055131637d3dbc55d3a49b8e79b4f76ca09871abf9eb43b5f88afde11800",
     "dependencies": [],
