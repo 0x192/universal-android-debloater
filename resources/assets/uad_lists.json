@@ -19892,20 +19892,20 @@
   {
     "id": "com.transsion.filemanagerx",
     "list": "Oem",
-    "description": "File Manager App (https://play.google.com/store/apps/details?id=com.transsion.filemanagerx)\nComes with 3 analytics/ads trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.filemanagerx/latest/)\n",
+    "description": "File Manager App (https://play.google.com/store/apps/details?id=com.transsion.filemanagerx)\nComes with 3 analytics/ads trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.filemanagerx/latest/)\nIt doesn't break anything upon disable, and uses telemetry. Similar to Google Files. Probably safe to disable. Further testing needed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.gallery20",
     "list": "Oem",
-    "description": "AI Gallery (https://play.google.com/store/apps/details?id=com.gallery20)\nStock gallery app with picture editing (filters, crop, add text, watermark, frame, bloor. Sends analytics to api.meishesdk.com\nPithus analysis: https://beta.pithus.org/report/d9cf633450ed90d2c89c941c5c202845b2789ceffe6d6337ecf772d223d157de",
+    "description": "AI Gallery (https://play.google.com/store/apps/details?id=com.gallery20)\nStock gallery app with picture editing (filters, crop, add text, watermark, frame, bloor. The phone comes with Photos app which is a better alternative and disabling it doesn't break anything.\nPithus analysis: https://beta.pithus.org/report/d9cf633450ed90d2c89c941c5c202845b2789ceffe6d6337ecf772d223d157de",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.transsion.videocallenhancer",
@@ -19955,11 +19955,11 @@
   {
     "id": "com.transsion.microintelligence",
     "list": "Oem",
-    "description": "Micro Intelligence\nProvides features like tap to awake, awake on device raise, etc.\nPhones home\n\nPithus analysis: https://beta.pithus.org/report/f7358ad68b27d9fa75a8e742ad43c64f2710b4ba5378ee825215ebbd08549275",
+    "description": "Micro Intelligence\nProvides features like tap to awake, awake on device raise, etc. Disabling this app makes you unable to use specific settings like Gesture Navigation and Action & Gesture along with other phone features. I recommend using RUN_IN_BACKGROUND ignore if you wanna keep them.\nPithus analysis: https://beta.pithus.org/report/f7358ad68b27d9fa75a8e742ad43c64f2710b4ba5378ee825215ebbd08549275",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.transsion.phonemaster",
