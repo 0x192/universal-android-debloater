@@ -19892,7 +19892,7 @@
   {
     "id": "com.transsion.filemanagerx",
     "list": "Oem",
-    "description": "File Manager App (https://play.google.com/store/apps/details?id=com.transsion.filemanagerx)\nComes with 3 analytics/ads trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.filemanagerx/latest/)\nIt doesnt break anything upon disable, and uses telemetry, if Google Files is recommended then this also counts.",
+    "description": "File Manager App (https://play.google.com/store/apps/details?id=com.transsion.filemanagerx)\nComes with 3 analytics/ads trackers (https://reports.exodus-privacy.eu.org/fr/reports/com.transsion.filemanagerx/latest/)\nIt doesn't break anything upon disable, and uses telemetry. Similar to Google Files. Probably safe to disable. Further testing needed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -19901,7 +19901,7 @@
   {
     "id": "com.gallery20",
     "list": "Oem",
-    "description": "AI Gallery (https://play.google.com/store/apps/details?id=com.gallery20)\nStock gallery app with picture editing (filters, crop, add text, watermark, frame, bloor. The phone comes with Photos app which is a better alternative and disabling it doesnt break anything.\nPithus analysis: https://beta.pithus.org/report/d9cf633450ed90d2c89c941c5c202845b2789ceffe6d6337ecf772d223d157de",
+    "description": "AI Gallery (https://play.google.com/store/apps/details?id=com.gallery20)\nStock gallery app with picture editing (filters, crop, add text, watermark, frame, bloor. The phone comes with Photos app which is a better alternative and disabling it doesn't break anything.\nPithus analysis: https://beta.pithus.org/report/d9cf633450ed90d2c89c941c5c202845b2789ceffe6d6337ecf772d223d157de",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
