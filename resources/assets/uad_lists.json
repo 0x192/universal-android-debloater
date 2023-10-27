@@ -3648,7 +3648,7 @@
   {
     "id": "com.samsung.android.app.omcagent",
     "list": "Oem",
-    "description": "Open Market Customization Agent\nBy default, the device prevents from being customized by a source other than Knox Configure.\nhttps://docs.samsungknox.com/admin/knox-configure/normal-mode.html\n",
+    "description": "Open Market Customization Agent (AKA 'Recommended Apps')\nBy default, the device prevents from being customized by a source other than Knox Configure.\nhttps://docs.samsungknox.com/admin/knox-configure/normal-mode.html\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
