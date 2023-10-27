@@ -16320,7 +16320,7 @@
   {
     "id": "com.miui.phrase",
     "list": "Oem",
-    "description": "Frequent Phrases\nNot sure how exactly it can be used but it is supposed to predict phrases you'll want to write.\nI don't know why it isn't handled in the keyboard app. This seems to be something else.\nIn any case it has access to internet, is linked to MiCloud and contains a weird CloudTelephonyManager java class in his code.\n",
+    "description": "Frequent Phrases\nThis adds a button next to paste on input fields containing a list of phrases you can edit and paste at any time.\nIn any case it has access to internet, is linked to MiCloud and contains a weird CloudTelephonyManager java class in the code.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
