@@ -4518,6 +4518,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.cmfa.AuthTouch",
+    "list": "Oem",
+    "description": "Continous Multi-Factor Authentication AuthTouchService\nRelated to `com.samsung.android.cmfa.framework`.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.samsung.crane",
     "list": "Oem",
     "description": "Call+ (https://support.vodafone.co.uk/Vodafone-apps/Call-and-Message/60900956/What-is-Call.htm)\nCall+ features on Samsung dialer\nNOTE: I have the feeling that these features are carrier/country dependant because I don't have them. But I have this package anyway.\n",
@@ -10288,12 +10297,12 @@
   },
   {
     "id": "com.samsung.android.cmfa.framework",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Continous Multi-Factor Authentication Framework\nSeems useless if you aren't logged-in to a Samsung Account.\nhttps://docs.samsungknox.com/dev/knox-sdk/additional-aac-enhancements.htm",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   {
     "id": "com.samsung.android.incall.contentprovider",
