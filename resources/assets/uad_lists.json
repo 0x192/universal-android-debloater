@@ -4365,6 +4365,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.samsung.android.tzdata.update_M",
+    "list": "Oem",
+    "description": "Samsung Timezone Data Updater",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.samsung.android.themecenter",
     "list": "Oem",
     "description": "Samsung Theme Center (AKA Galaxy Themes Service)\nRuns at startup and allows you to apply themes from `com.samsung.android.themestore`. Has of lot of permissions (including INTERNET and INSTALL_PACKAGES) and connects to Samsung domains for analytics.\n\nPithus analysis: https://beta.pithus.org/report/973ba78ddd74a13dcf5268e980010a64ba42a3d2a1c4c62df277ead5a17cd10c",
@@ -6253,6 +6262,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.sec.android.inputmethod",
+    "list": "Oem",
+    "description": "Samsung Keyboard\nSuperseded by `com.samsung.android.honeyboard`.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.inputmethod.beta",
