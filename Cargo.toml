@@ -9,7 +9,7 @@ repository = "https://github.com/0x192/universal-android-debloater"
 readme = "README.md"
 keywords = ["debloater", "android", "adb", "privacy", "bloatware"]
 categories = ["gui"]
-edition = "2023"
+edition = "2021"
 
 [features]
 default = ["wgpu", "self-update"]
