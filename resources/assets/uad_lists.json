@@ -4530,7 +4530,7 @@
   {
     "id": "com.samsung.android.securitylogagent",
     "list": "Oem",
-    "description": "Security Log Agent\nhttps://www.androidexplained.com/galaxy-note-9-disable-security-log-agent/\nRun in the background and monitore your device for any change to the /system partition.\nNOTE : When you root your phone, it will constantly tell you that your device is modified.\n",
+    "description": "Security Log Agent\nhttps://www.androidexplained.com/galaxy-note-9-disable-security-log-agent/\nRuns in the background and monitors your device for any change to the /system partition. It also listens for use of permissions by 3rd-party apps. This is a feature found in Security settings, named 'permission monitor'\nNOTE: when you root your phone, it will constantly tell you that your device is modified.\n- https://samsung.com/levant/support/mobile-devices/what-is-app-permission-monitor-feature-and-how-to-turn-it-off\n- https://howtogeek.com/332816/how-to-stop-samsungs-app-permission-monitor-from-displaying-notifications",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
