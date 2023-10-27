@@ -1,7 +1,7 @@
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.5.1"
+version = "0.5.2"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
 homepage = "https://github.com/0x192/universal-android-debloater"
@@ -9,7 +9,7 @@ repository = "https://github.com/0x192/universal-android-debloater"
 readme = "README.md"
 keywords = ["debloater", "android", "adb", "privacy", "bloatware"]
 categories = ["gui"]
-edition = "2021"
+edition = "2023"
 
 [features]
 default = ["wgpu", "self-update"]

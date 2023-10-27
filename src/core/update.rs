@@ -167,13 +167,13 @@ pub fn get_latest_release() -> Result<Option<Release>, ()> {
 }
 
 // UAD only has pre-releases so we can't use
-// https://api.github.com/repos/0x192/universal-android-debloater/releases/latest
+// https://api.github.com/repos/Frigyes06/universal-android-debloater/releases/latest
 // to only get the latest release
 #[cfg(feature = "self-update")]
 pub fn get_latest_release() -> Result<Option<Release>, ()> {
     debug!("Checking for UAD update");
 
-    match ureq::get("https://api.github.com/repos/0x192/universal-android-debloater/releases")
+    match ureq::get("https://api.github.com/repos/Frigyes06/universal-android-debloater/releases")
         .call()
     {
         Ok(res) => {
