@@ -5761,6 +5761,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.sec.app.samsungprintservice",
+    "list": "Misc",
+    "description": "Samsung Print Service Plugin.\nPublished by HP, see:\nhttps://play.google.com/store/apps/details?id=com.sec.app.samsungprintservice",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.sec.bcservice",
     "list": "Oem",
     "description": "Broadcast Service\nDiagnostic/debug hidden app. TCP dump.\n",
