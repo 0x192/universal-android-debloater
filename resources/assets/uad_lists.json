@@ -19802,11 +19802,11 @@
   {
     "id": "com.lenovo.ue.device",
     "list": "Oem",
-    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join this user experience program.",
+    "description": "User Experience Program\nAnalytics stuff. Displays an annoying notification after every reboot prompting you to join Lenovo's user experience program.\nNOTE: Removing this package may cause a hard reboot after unlocking the device. If USB debugging is still active you can safely reinstall the package and the device will start working again, but if USB debugging is disabled you might fail to do so - what leaves you no option other than to perform a factory reset. See:\nhttps://github.com/0x192/universal-android-debloater/issues/713",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Unsafe"
   },
   {
     "id": "com.tblenovo.lenovotips",
