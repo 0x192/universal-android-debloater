@@ -20854,6 +20854,33 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.huawei.honorclub.android",
+    "list": "Oem",
+    "description": "Honor Club\nHuawei's social media app. Safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.FMRadio",
+    "list": "Oem",
+    "description": "FM-Radio\nHuawei's stock radio player. Remove if FM isn't relevant for you.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.systemmanager",
+    "list": "Oem",
+    "description": "System Manager\nHuawei's stock phone cleaner. Consumes a lot of battery power for useless 'security' checks.\nSafe to remove unless you need any anti-virus (while there are better ones to be found).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "ca.bell.wt.android.tunesappswidget",
     "list": "Carrier",
     "description": "App Widget (https://play.google.com/store/apps/details?id=ca.bell.wt.android.tunesappswidget)\nDevelopped by Bell Canada, it is a home screen widget which shows advertisements, promotions, news, sports & entertainment.",
