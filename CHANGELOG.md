@@ -13,12 +13,12 @@ and `Removed`.
 ## [0.5.3] - Unreleased
 
 ### Added
-- [[#13]] com.telus.myaccount package
+- [[#13](https://github.com/Frigyes06/universal-android-debloater/pull/13)] com.telus.myaccount package
 
 ### Changed
 
 ### Fixed
-- [[#14]] Fixed typos in uad_list.json
+- [[#14](https://github.com/Frigyes06/universal-android-debloater/pull/14)] Fixed typos in uad_list.json
 
 ### Removed
 
@@ -27,7 +27,7 @@ and `Removed`.
 **WARNING: Settings specification has changed. Previous user settings will be erased**.
 
 ### Added
-- [[#11]] All of AnonymousWP's patches. This release notes will probably be restarted as issue counter is reset on fork.
+- [[#11](https://github.com/Frigyes06/universal-android-debloater/pull/11)] All of AnonymousWP's patches. This release notes will probably be restarted as issue counter is reset on fork.
 
 - [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] **Device-specific persistent configuration:** Some settings are now device-specific which means you can maintain different settings across several devices.
 
