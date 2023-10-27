@@ -7665,7 +7665,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Advanced"
   },
   {
     "id": "com.android.systemui",
