@@ -42,31 +42,31 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [x] Qualcomm / Mediatek / Miscellaneous
 
 ## Manufacturers debloat lists
-
-- [ ] Archos
-- [x] Asus
-- [ ] Blackberry
-- [ ] Gionee
-- [x] LG
-- [x] Google
-- [ ] iQOO
-- [x] Fairphone
-- [ ] HTC
-- [x] Huawei
-- [x] Motorola
-- [x] Nokia
-- [x] OnePlus
-- [x] Oppo
-- [x] Realme
-- [x] Samsung
-- [x] Sony
-- [x] Tecno
-- [ ] TCL
-- [x] Unihertz
-- [x] Vivo/iQOO
-- [ ] Wiko
-- [x] Xiaomi
-- [x] ZTE
+* [ ] Archos
+* [X] Asus
+* [ ] Blackberry
+* [ ] Gionee
+* [X] LG
+* [X] Google
+* [ ] iQOO
+* [X] Fairphone
+* [x] Honor
+* [ ] HTC
+* [X] Huawei
+* [X] Motorola
+* [X] Nokia
+* [X] OnePlus
+* [X] Oppo
+* [X] Realme
+* [X] Samsung
+* [X] Sony
+* [X] Tecno
+* [ ] TCL
+* [X] Unihertz
+* [X] Vivo/iQOO
+* [ ] Wiko
+* [X] Xiaomi
+* [X] ZTE
 
 ## Mobile carriers debloat lists
 
