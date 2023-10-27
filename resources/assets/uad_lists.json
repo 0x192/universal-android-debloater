@@ -20414,7 +20414,7 @@
   {
     "id": "com.realme.securitycheck",
     "list": "Oem",
-    "description": "Security Analysis\n. Antivirus analysis on app install. It's up to you. Removing it may decrease your security for a bit more privacy (if we consider this app does this job well which is to be verified) [APK NEEDED]",
+    "description": "Security Analysis\n. Antivirus analysis on app install. It's up to you. Removing it may decrease your security for a bit more privacy (if we consider this app does this job well which is to be verified).\nThis APK is pulled from a Russian phone and might be different from other countries' versions. Application shows highly suspicious activities, sends analytics to HeyTap, connects to Facebook Ads, Google Ads, \"Vungle\" and seems to have anti-debug. Was not tested if the phone bootloops once removed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
