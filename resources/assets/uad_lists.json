@@ -7679,7 +7679,7 @@
   {
     "id": "com.android.statementservice",
     "list": "Aosp",
-    "description": "Intent Filter Verification Service\nIntent: https://developer.android.com/reference/android/content/Intent\nIntent Filters: https://developer.android.com/guide/components/intents-filters\nhttps://android.stackexchange.com/questions/191163/what-does-the-intent-filter-verification-service-app-from-google-do",
+    "description": "Intent Filter Verification Service\nA Statement protocol allows websites to certify that some assets represent them. Android package can to subscribe to handling chosen URIs. This package will then be called to query the website and verify that it allows this. Android package can subscribe to handling chosen URIs. This package will then be called to query the website and verify that it allows this. Sources:\n- https://developer.android.com/reference/android/content/Intent\n- https://developer.android.com/guide/components/intents-filters\n - https://android.stackexchange.com/questions/191163/what-does-the-intent-filter-verification-service-app-from-google-do\n - https://github.com/google/digitalassetlinks/blob/master/well-known/details.md\n - https://android.googlesource.com/platform/frameworks/base/+/6a34bb2",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
