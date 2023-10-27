@@ -17220,7 +17220,7 @@
   {
     "id": "com.miui.securitycenter",
     "list": "Oem",
-    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nNOTE: uninstalling this on the Redmi Pad is not causing any bootloop, but you will lose some functionality like the battery status/usage page, as well as the app usage/removal page.",
+    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nNOTE: REMOVING THIS MIGHT BOOTLOOP YOUR DEVICE! Uninstalling this on the Redmi Pad is not causing any bootloop, but you will lose some functionality like the battery status/usage page, as well as the app usage/removal page.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
