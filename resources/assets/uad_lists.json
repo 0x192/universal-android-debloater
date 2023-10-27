@@ -4950,6 +4950,15 @@
     "labels": [],
     "removal": "Recommended"
   },
+    {
+    "id": "com.samsung.android.knox.kpecore",
+    "list": "Oem",
+    "description": "Samsung KPECore\nKPE stands for 'Knox Platform for Enterprise'",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   {
     "id": "com.samsung.android.knox.pushmanager",
     "list": "Oem",
