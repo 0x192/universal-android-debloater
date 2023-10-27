@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
-## [0.5.2] - Unreleased
+## [0.5.2] - Released
 
 **WARNING: Settings specification has changed. Previous user settings will be erased**.
 **THIS IS AN UNOFFICIAL FORK**
