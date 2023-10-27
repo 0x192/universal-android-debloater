@@ -13671,6 +13671,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "org.mipay.android.manager",
+    "list": "Oem",
+    "description": "Probably a left over service for the app Mi Pay\nhttps://play.google.com/store/apps/details?id=com.qianbaotong.qianbaotongao&gl=US",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.qti.qualcomm.datastatusnotification",
     "list": "Misc",
     "description": "Sends you a message when you reach a specified data limit?\nContains a service, but I've never it run. But I've also never run out of data or used the Android data warning system.",
@@ -14367,6 +14376,15 @@
     "id": "com.gotv.nflgamecenter.us.lite",
     "list": "Misc",
     "description": "Football NFL (https://play.google.com/store/apps/details?id=com.gotv.nflgamecenter.us.lite)\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.goodix.fingerprint",
+    "list": "Misc",
+    "description": "Driver for in-display fingerprint.\nWorks only with AMOLED screens, but for some reason can exist on devices without it.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15156,9 +15174,18 @@
     "removal": "Expert"
   },
   {
+    "id": "org.simalliance.openmobileapi.uicc1terminal",
+    "list": "Misc",
+    "description": "Open Mobile API (\"interface\") to access UICC secure elements\nUICC stands for Universal Integrated Circuit Card.\nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "org.simalliance.openmobileapi.uicc2terminal",
     "list": "Misc",
-    "description": "Open Mobile API (\"interface\") to access UICC secure elements \nUICC stands for Universal Integrated Circuit Card. \nIt is the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
+    "description": "Open Mobile API (\"interface\") to access UICC secure elements \nUICC stands for Universal Integrated Circuit Card.\nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nhttps://bluesecblog.wordpress.com/2016/11/18/uicc-sim-usim/\nGood read: https://arxiv.org/ftp/arxiv/papers/1601/1601.03027.pdf\nNote2: The term SIM is widely used in the industry and especially with consumers to mean both SIMs and UICCs.\nhttps://www.justaskgemalto.com/us/what-uicc-and-how-it-different-sim-card/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15303,6 +15330,15 @@
     "id": "android.autoinstalls.config.Xiaomi.cepheus",
     "list": "Oem",
     "description": "Cepheus is the device codename.\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "android.autoinstalls.config.Xiaomi.cereus",
+    "list": "Oem",
+    "description": "Cepheus is the device codename.\nAutoInstalls a set of OEM apps on device setup (first boot/factory reset). For example, Personal Activity Intelligence.\nAn algorithm that determines a personal activity index based on resting heart rate, heart condition during exercise, gender, weight, and age. Requires smart bracelet to work.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16506,6 +16542,15 @@
     "removal": "Unsafe"
   },
   {
+    "id": "com.android.camera",
+    "list": "Aosp",
+    "description": "Stock camera app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.android.camera2",
     "list": "Oem",
     "description": "Xiaomi Camera (I don't know why they kept this package name. It's really confusing.)\nIt's a proprietary app based on the AOSP sources:\nhttps://android.googlesource.com/platform/packages/apps/Camera2/+/master/src/com/android/camera\n",
@@ -16569,9 +16614,18 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.fido.asm",
+    "list": "Aosp",
+    "description": "FIDO UAF Authentication-Specific Module.\nSee `com.xiaomi.fido.uafclient` for FIDO explanation. The UAF Authentication-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients to detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nhttps://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.miui.audiomonitor",
     "list": "Oem",
-    "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this? \n",
+    "description": "My guess is this is a feature allowing to control the sound of multiples apps.\nIt's just a guess based on existing Xiaomi devices features. Can someone check this?\nMight be related to the recording app, as it has the same icon.\nNOTE: at least for MIUI 13 this setting doesn't come activated by default. You need to go to: Settings - Sound & vibration - Sound assistant - Adjust Media sound in multiple apps.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16621,6 +16675,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.mi.globalminusscreen",
+    "list": "Oem",
+    "description": "Xiaomi App Vault\nhttps://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen&gl=US",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.miui.mishare.connectivity",
@@ -16677,6 +16740,15 @@
     "removal": "Advanced"
   },
   {
+    "id": "com.xiaomi.bluetooth",
+    "list": "Oem",
+    "description": "The GUI for Bluetooth section in settings\nRemoving it doesn't hurt the Bluetooth itself. Can be replaced with a third-party Bluetooth app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.xiaomi.bluetooth.overlay",
     "list": "Oem",
     "description": "MIUI Bluetooth Control.\nYou need to keep this if you want the bluetooth to work.",
@@ -16697,11 +16769,11 @@
   {
     "id": "com.miui.core",
     "list": "Oem",
-    "description": "MIUI SDK\nIt is obviously needed for MIUI to work correctly. FYI, it manages the MIUI Analytics service.\nWill cause bootloop if removed.\nI read you can freeze it without issue. I'm... a bit dubious about this.\nIf someone wants to try it report the result:\nadb shell am force-stop com.miui.core && adb shell pm disable-user com.miui.core && adb shell pm clear com.miui.core\n",
+    "description": "MIUI SDK\nIt is obiously needed for MIUI to work correctly. FYI, it manages the MIUI Analytics service.\nWill cause bootloop if removed.\nI read you can freeze it without issue. I'm... a bit dubious about this.\nIf someone want to try et report the result:\nadb shell am force-stop com.miui.core && adb shell pm disable-user com.miui.core && adb shell pm clear com.miui.core\nCan be disabled and uninstalled with MIUI 13.0.6, see\nhttps://github.com/0x192/universal-android-debloater/issues/632\nNOTE: uninstalling/disabling this package causes the Settings app to crash when searching in Settings.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   {
     "id": "com.miui.global.packageinstaller",
@@ -16729,6 +16801,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.miui.systemui.devices.overlay",
+    "list": "Oem",
+    "description": "The empty space between the status bar and the edges of the screen\nElements at edges ignore screen fillets and cutouts when removed.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.miui.systemui.overlay.devices.android",
