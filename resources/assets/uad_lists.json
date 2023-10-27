@@ -20548,6 +20548,42 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.transsion.wezone",
+    "list": "Oem",
+    "description": "Related to 'Gaming Mode' and 'Palm Store'",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.healthlife",
+    "list": "Oem",
+    "description": "My Health App.\nRuns in background to count daily steps, etc. Removing will cause the news screen/screen, where it counts your steps, to no longer work on Stock Launcher (XOS Launcher).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.infinix.xclub",
+    "list": "Oem",
+    "description": "Pre-installed social network app:\nhttps://www.infinix.club/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.transsion.wifiplaytogether",
+    "list": "Oem",
+    "description": "Play music together over Wi-Fi",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.rlk.weathers",
     "list": "Misc",
     "description": "Daily Weather (https://play.google.com/store/apps/details?id=com.rlk.weathers)\nWeather app with ads and trackers. Can access phone calls and SMS.\nPithus analysis: https://beta.pithus.org/report/c3fa30c66192c458f93456401421d3c74f9122191b561781af142c42c24fe603",
