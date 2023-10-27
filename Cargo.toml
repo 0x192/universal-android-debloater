@@ -1,11 +1,11 @@
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.5.1"
+version = "0.5.2"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
-homepage = "https://github.com/0x192/universal-android-debloater"
-repository = "https://github.com/0x192/universal-android-debloater"
+homepage = "https://github.com/Frigyes06/universal-android-debloater"
+repository = "https://github.com/Frigyes06/universal-android-debloater"
 readme = "README.md"
 keywords = ["debloater", "android", "adb", "privacy", "bloatware"]
 categories = ["gui"]
@@ -14,13 +14,11 @@ edition = "2021"
 [features]
 default = ["wgpu", "self-update"]
 wgpu = []                         # Iced/wgpu is default
-glow = ["iced/glow"]              # OpenGL support
+glow = []              # OpenGL support
 self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
-iced = { git = "https://github.com/iced-rs/iced.git" }
-iced_native = { git = "https://github.com/iced-rs/iced.git" }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"
@@ -32,6 +30,15 @@ toml = "^0"
 dirs = "^5.0.0"
 ureq = { version = "*", features = ["json"] }
 retry = { version = "^2.0.0" }
+iced = "0.8.0"
+iced_native = "0.9.1"
+iced_wgpu = "0.11.1"
+iced_glow = "0.8.0"
+iced_core = "0.10.0"
+iced_futures = "0.7.0"
+iced_glutin = "0.8.0"
+iced_graphics = "0.9.0"
+iced_winit = "0.10.0"
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }
