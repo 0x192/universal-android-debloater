@@ -705,6 +705,7 @@
     "id": "com.ape.walkfit",
     "list": "Oem",
     "description": "Walk counter and health for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -713,6 +714,7 @@
     "id": "com.ape.wikolegal",
     "list": "Oem",
     "description": "Provides legal for first time setup in Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -721,6 +723,7 @@
     "id": "com.wiko.packageinstaller",
     "list": "Oem",
     "description": "Provides first time app install for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
@@ -729,6 +732,7 @@
     "id": "com.ape.cleanassist",
     "list": "Oem",
     "description": "Provides junk cleaner feature for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -737,6 +741,7 @@
     "id": "com.ape.cleanassistoverlay",
     "list": "Oem",
     "description": "Overlay app for com.ape.cleanassist.\n If we uninstall com.ape.cleanassist this package should be removed also.",
+    "dependencies": [],
     "neededBy": ["com.ape.cleanassist"],
     "labels": [],
     "removal": "Advanced"
@@ -745,6 +750,7 @@
     "id": "com.ape.fmradio",
     "list": "Oem",
     "description": "FM Radio app for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -753,6 +759,7 @@
     "id": "com.ape.fmradiooverlay",
     "list": "Oem",
     "description": "Overlay app for com.ape.fmradio.\n If we uninstall com.ape.fmradio this package should be removed also.",
+    "dependencies": [],
     "neededBy": ["com.ape.fmradio"],
     "labels": [],
     "removal": "Advanced"
@@ -761,6 +768,7 @@
     "id": "com.wiko.services",
     "list": "Oem",
     "description": "Support app for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -769,6 +777,7 @@
     "id": "com.ape.massageexpress",
     "list": "Oem",
     "description": "Provides Wiko screen message feature",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -777,6 +786,7 @@
     "id": "com.ape.weatherlive",
     "list": "Oem",
     "description": "Weather app for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -785,6 +795,7 @@
     "id": "com.ape.weatherliveoverlay",
     "list": "Oem",
     "description": "Overlay app for com.ape.weatherlive.\n If we uninstall com.ape.weatherlive this package should be removed also.",
+    "dependencies": [],
     "neededBy": ["com.ape.weatherlive"],
     "labels": [],
     "removal": "Advanced"
@@ -793,6 +804,7 @@
     "id": "com.ape.gamemode",
     "list": "Oem",
     "description": "Provides game mode feature for Wiko mobilee",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -801,6 +813,7 @@
     "id": "com.ape.wikosetupwizard",
     "list": "Oem",
     "description": "Provides first time app install for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -809,6 +822,7 @@
     "id": "com.ape.soundrecorder",
     "list": "Oem",
     "description": "Sound recorder app for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -817,6 +831,7 @@
     "id": "com.ape.soundrecorderoverlay",
     "list": "Oem",
     "description": "Overlay app for com.ape.soundrecorder.\n If we uninstall com.ape.soundrecorder this package should be removed also.",
+    "dependencies": [],
     "neededBy": ["com.ape.soundrecorder"],
     "labels": [],
     "removal": "Advanced"
@@ -825,6 +840,7 @@
     "id": "com.ape.easymode1",
     "list": "Oem",
     "description": "Provides easy mode for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -833,6 +849,7 @@
     "id": "com.ape.oneclean",
     "list": "Oem",
     "description": "Provides memory cleaner feature for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
@@ -841,6 +858,7 @@
     "id": "com.ape.smartgesture",
     "list": "Oem",
     "description": "Provide smart gesture feature for Wiko mobile",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
