@@ -4475,7 +4475,7 @@
   {
     "id": "com.samsung.android.weather",
     "list": "Oem",
-    "description": "Samsung Weather\nLets you see updates on the weather at all times, specific to your current location. \nYou can also check the weather in other areas even\nDependency: \"com.sec.android.daemonapp\"\n",
+    "description": "Unified Daemon app. Named \"Weather\" on some Samsung Galaxy devices.\nProvides support for a number of different apps on your device. These include the Weather, Yahoo Finance and Yahoo News apps amongst others. The data is used by apps such as the Alarm, Calendar app and the Camera (including the \"Scan QR code\" Quick-Panel tile). If the display-name is \"Weather\", it doubles as the Samsung Weather app, which provides weather widgets.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
