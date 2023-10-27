@@ -2718,6 +2718,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.motorola.gamemode",
+    "list": "Oem",
+    "description": "Some sort of game center\nA gamer themed app that displays an overlay in games that lets you block calls, turn off adaptive brightness and keeps your games up-to-date.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.motorola.genie",
     "list": "Oem",
     "description": "Device Help (previously Moto Help) (https://play.google.com/store/apps/details?id=com.motorola.genie)\nAn app that checks hardware status and gives the user contacts for support.\n",
