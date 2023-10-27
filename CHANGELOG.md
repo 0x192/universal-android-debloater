@@ -8,11 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
-## [0.6] - Unreleased
+## [0.5.2] - Unreleased
 
 **WARNING: Settings specification has changed. Previous user settings will be erased**.
+**THIS IS AN UNOFFICIAL FORK**
 
 ### Added
+- All of AnonymousWP's patches. This release notes will probably be restarted as issue counter is reset on fork.
+
 - [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] **Device-specific persistent configuration:** Some settings are now device-specific which means you can maintain different settings across several devices.
 
 - [[#447](https://github.com/0x192/universal-android-debloater/pull/447)] **Backup/Restore the state of a device:** Quick and easy way to save the state of all the system apps on a device and restore it.
