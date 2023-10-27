@@ -20306,7 +20306,7 @@
   {
     "id": "com.heytap.browser",
     "list": "Oem",
-    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20324,11 +20324,11 @@
   {
     "id": "com.heytap.music",
     "list": "Oem",
-    "description": "Default Oppo Music App with insecure WebView Implementation (execution of user controlled code in WebView is an important security hole.\nHas also weird permissions (QUERY_ALL_PACKAGES and BLUETOOTH ?)\n\nhttps://beta.pithus.org/report/befa0ec0616c553632379f069453b0ca74ee29fd1428b9fce19c1657e6f97d8b",
+    "description": "Default Oppo Music App with insecure WebView Implementation (execution of user controlled code in WebView is an important security hole.\nHas also weird permissions (QUERY_ALL_PACKAGES and BLUETOOTH?)\n\nhttps://beta.pithus.org/report/befa0ec0616c553632379f069453b0ca74ee29fd1428b9fce19c1657e6f97d8b",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Recommended"
   },
   {
     "id": "com.heytap.pictorial",
@@ -20356,6 +20356,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.heytap.yoli",
+    "list": "Oem",
+    "description": "Video streaming platform that comes with OPPO phones\nIt's a junk app, and cannot be uninstalled the normal way. we have Bilibili, IQIYI and Tencent Video. These apps may only exist on OPPO phones sold in China. Here, the manufacturers do whatever they want.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.oplus.kekepay",
