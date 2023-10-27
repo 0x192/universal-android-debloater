@@ -15751,6 +15751,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.basicsmsreceiver",
+    "list": "Aosp",
+    "description": "Gets SMS and creates notifications:\nhttps://android.googlesource.com/platform/packages/apps/BasicSmsReceiver/+/jb-dev/src/com/android/basicsmsreceiver/BasicSmsReceiverApp.java",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.midrive",
     "list": "Oem",
     "description": "Mi Drive \nMisleading package name. It is indeed a closed-source Xiaomi application.\nAllow for cloud storage (on Mi Cloud) and syncing across multiple Android devices.\n",
