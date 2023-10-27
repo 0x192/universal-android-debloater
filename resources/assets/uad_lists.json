@@ -13131,6 +13131,42 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.nttdocomo.android.applicationmanager",
+    "list": "Carrier",
+    "description": "Docomo Application Manager",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nttdocomo.android.store",
+    "list": "Carrier",
+    "description": "Docomo App Market",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.nttdocomo.android.dhome",
+    "list": "Carrier",
+    "description": "Docomo Launcher",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.nttdocomo.android.initialization",
+    "list": "Carrier",
+    "description": "Docomo Initialization app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.oppo.fingerprints.fingerprintsensortest",
     "list": "Oem",
     "description": "Fingerprint sensort test\n",
