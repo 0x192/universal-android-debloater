@@ -6258,7 +6258,7 @@
   {
     "id": "com.samsung.android.bio.face.service",
     "list": "Oem",
-    "description": "Handles Face recognition unlock \nhttps://kp-cdn.samsungknox.com/b60a7f0f59df8f466e8054f783fbbfe2.pdf\n",
+    "description": "Handles Face recognition unlock \nhttps://kp-cdn.samsungknox.com/b60a7f0f59df8f466e8054f783fbbfe2.pdf\nNOTE: removing this package causes biometric prompts in apps to be delayed by 5-8 seconds before appearing. Selecting 'Biometrics and security' in the settings app also locks up the Settings app for about 5-8 seconds but eventually loads and functions as normal.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -6348,7 +6348,7 @@
   {
     "id": "com.samsung.android.server.iris",
     "list": "Oem",
-    "description": "Provides iris recognition feature\n",
+    "description": "Provides iris recognition feature\nNOTE: removing this package causes biometric prompts in apps to be delayed by 5-8 seconds before appearing. Selecting 'Biometrics and security' in the settings app also locks up the Settings app for about 5-8 seconds but eventually loads and functions as normal.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
