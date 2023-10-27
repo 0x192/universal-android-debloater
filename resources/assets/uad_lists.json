@@ -16796,11 +16796,11 @@
   {
     "id": "com.android.chrome",
     "list": "Google",
-    "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background.\nJust use Firefox instead, it's FOSS and functionally superior.. not that it's a high bar to clear when Chrome on Android has been slowly getting worse over the last few years.",
+    "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background. NOTE: disabling or uninstalling Chrome breaks functionality for creating and storing passkeys (https://fidoalliance.org/passkeys/) on your phone, so keep this enabled if you want to use that form of authentication.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   {
     "id": "com.chrome.beta",
