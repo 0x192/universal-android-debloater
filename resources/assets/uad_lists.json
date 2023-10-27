@@ -10164,7 +10164,16 @@
   {
     "id": "com.google.android.as",
     "list": "Google",
-    "description": "Android System Intelligence (previously Device Personalization Services) (https://play.google.com/store/apps/details?id=com.google.android.as)\nRuns in the background.\n\"Enables intelligent features across Android\", like: Live Caption, Screen Attention, Improved Copy-Paste, App Predictions in the launcher, Notification Smart Actions, Smart Text Selection and Linkifying text in apps.",
+    "description": "Android System Intelligence (previously Device Personalization Services) (https://play.google.com/store/apps/details?id=com.google.android.as)\nRuns in the background.\n\"Enables intelligent features across Android\", like: Live Caption, Screen Attention, Improved Copy-Paste, App Predictions in the launcher, Notification Smart Actions, Smart Text Selection and Linkifying text in apps.\nAlso known as device learning, e.g. enhanced keyboard auto suggestions, keeps the screen on when looking at it (with help of the camera), smart replies.\nhttps://milaq.net/android-bloatware",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.as.oss",
+    "list": "Google",
+    "description": "On-device behavior analysis\nEnables live caption, music recognition and smart replies.\nhttps://milaq.net/android-bloatware",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17758,6 +17767,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.google.android.apps.scone",
+    "list": "Google",
+    "description": "Automatically switches basebands between LTE and 5G on demand",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.google.android.apps.subscriptions.red",
     "list": "Google",
     "description": "Google One (https://play.google.com/store/apps/details?id=com.google.android.apps.subscriptions.red)\nLets you manage your Google cloud storage.\nOccasionally runs in the background.",
@@ -22333,6 +22351,42 @@
     "id": "com.android.huawei.HiMediaEngine",
     "list": "Oem",
     "description": "Either it's a core of Huawei Music online part or the Huawei's TV app remote control. In both ways it isn't useful anyway.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.omusic.gPhone",
+    "list": "Misc",
+    "description": "friDay music\nA treasure house of global music, thousands of situational playlists, complete classification of Chinese, Western, Japanese and Korean, classical, and original soundtracks, allowing you to easily travel the digital music world.\nhttps://play.google.com/store/apps/details?id=com.omusic.gPhone",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.gohappy.mobileapp",
+    "list": "Misc",
+    "description": "Shopping app of friDay\nhttps://play.google.com/store/apps/details?id=com.gohappy.mobileacom.fetself",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.fet.fridaywallet",
+    "list": "Misc",
+    "description": "friDay Wealth Management\nProvides customized deposit goal progress management services\nhttps://play.google.com/store/apps/details?id=com.fet.fridaywallet",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "net.fetnet.fetvod",
+    "list": "Misc",
+    "description": "Streaming service\nRegistered members can watch the movies, dramas, variety shows and animations\nhttps://play.google.com/store/apps/details?id=net.fetnet.fetvod",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
