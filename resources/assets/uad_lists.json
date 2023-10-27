@@ -1763,6 +1763,15 @@
     "labels": [],
     "removal": "Recommended"
   },
+    {
+    "id": "com.huawei.android.dsdscardmanager",
+    "list": "Oem",
+    "description": "SIM management",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   {
     "id": "com.huawei.android.FloatTasks",
     "list": "Oem",
@@ -1789,6 +1798,33 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.hwaps",
+    "list": "Oem",
+    "description": "Bonuses program from Honor Club. They don't work outside China anyway. It's part of the PowerGenie, the task killer app.\nIf you want to remove it, uninstall `com.huawei.powergenie` along the way.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.hwouc",
+    "list": "Oem",
+    "description": "OTA updates. Safe to remove if you have a very outdated device or flashed recovery.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.android.hwupgradeguide",
+    "list": "Oem",
+    "description": "Responsible for the initial setup of the device after the first launch, or rather one of the stages of the initial setup",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.huawei.android.instantonline",
@@ -1825,6 +1861,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.android.projectmenu",
+    "list": "Oem",
+    "description": "Referred as Huawei phones' secret menu\nMore info:\nhttps://consumer.huawei.com/en/community/details/Tips-Tricks-5-Secret-Menu-Codes-That-Unlock-Hidden-Features-on-Your-Huawei-Smartphone/topicId_5248/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.android.pushagent",
@@ -1890,6 +1935,15 @@
     "removal": "Recommended"
   },
   {
+  "id": "com.huawei.autoinstallapkfrommcc",
+  "list": "Oem",
+  "description": "This service after system boots up, is checking what mobile carrier you are using, then loads a list of packages and then installs/uninstalls them based on MCC codes.\nCan possibly be abused by malware. More info:\nhttps://forum.xda-developers.com/t/investigating-huawei-system-app-your-help-needed.3995621/",
+  "dependencies": [],
+  "neededBy": [],
+  "labels": [],
+  "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.bd",
     "list": "Oem",
     "description": "HwUE (Huawei UserExperience)\nWhen a company call a something 'UserExperience' you know you don't need this.\nAnalytics service, run at boot. Collect information about packages/apps usages.\nHas a nice custom permission called com.huawei.permission.BIG_DATA\n",
@@ -1920,6 +1974,15 @@
     "id": "com.huawei.browserhomepage",
     "list": "Oem",
     "description": "Huawei Browser component.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.behaviorauth",
+    "list": "Oem",
+    "description": "Pre-installed spyware which continuously analyses the user’s behaviour, using nothing but the sensor data produced by the device.\nIt looks at the way a user interacts with the device, what activities are being performed and how these activities are being performed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1980,6 +2043,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.filemanager",
+    "list": "Oem",
+    "description": "Huawei file manager\nProbably fine to remove as long as you have another file manager.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.game.kitserver",
     "list": "Oem",
     "description": "Probably safe to remove if you don't play games\n",
@@ -2014,6 +2086,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.hms5gkit.agentservice",
+    "list": "Oem",
+    "description": "Something to do with 5G? For some reason this is also installed on a non-5G device. Can be uninstalled from phone settings so should be safe if you don't have 5G.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.huawei.hwid",
@@ -2085,7 +2166,16 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
+  },
+    {
+    "id": "com.huawei.hiview",
+    "list": "Oem",
+    "description": "Provides info on exposure and so on in the gallery",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.himovie.overseas",
@@ -2133,9 +2223,27 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.hwdockbar",
+    "list": "Oem",
+    "description": "Huawei Multi-Window dock\nProbably fine to remove if you're not using Huawei Multi-Window features.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.HwMultiScreenShot",
     "list": "Oem",
     "description": "Scrolling screenshot feature\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.hwpanpayservice",
+    "list": "Oem",
+    "description": "Payment related service. Safe to remove.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2160,6 +2268,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.mediacontroller",
+    "list": "Oem",
+    "description": "Can be disabled via Settings. Will disable the media controls in quick settings. Won't remove them however.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.huawei.ohos.inputmethod",
     "list": "Oem",
     "description": "Huawei default Keyboard\nWARNING: Before unistalling, make sure to have a third-party keyboard installed.\n",
@@ -2167,6 +2284,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.ohos.inputmethod",
+    "list": "Oem",
+    "description": "SMS/MMS recieving/sending service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.mycenter",
@@ -2212,6 +2338,33 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.iconnect",
+    "list": "Oem",
+    "description": "AppGallery Connect\nDedicated to providing one-stop services for app creation, development, distribution, operations and engagement. Useless for ordinary users.\nMore info:\nhttps://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-introduction-0000001057492641",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.imedia.sws",
+    "list": "Oem",
+    "description": "Huawei Histen\nAn equaliser for Huawei devices. Removing it will cause other music apps' equalisers stop working.\nMore info:\nhttps://www.honor.ru/club/topicdetail/topicid-23039/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.imedia.sws",
+    "list": "Oem",
+    "description": "Related to Wi-Fi calling",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.intelligent",
@@ -2277,6 +2430,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.permissioncontroller",
+    "list": "Oem",
+    "description": "Can be disabled via Settings as well",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.phoneservice",
     "list": "Oem",
     "description": "HiCare (https://play.google.com/store/apps/details?id=com.huawei.phoneservice)\nProvides you common online services including customer services, issue feedback, user guides, service centers and self-service. \n",
@@ -2312,6 +2474,16 @@
     "labels": [],
     "removal": "Recommended"
   },
+  {
+    "id": "com.huawei.systemmanager",
+    "list": "Oem",
+    "description": "Huawei System Manager app\nDO NOT remove this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  
   {
     "id": "com.huawei.tips",
     "list": "Oem",
@@ -2358,6 +2530,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.wallet.sdk.walletsdk",
+    "list": "Oem",
+    "description": "Wallet app\nSafe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.watch.sync",
     "list": "Oem",
     "description": "Huawei Watch sync function\nIs it only used to sync Huawei watch ?\nSafe to remove according to several users\n",
@@ -2365,6 +2546,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.wifiprobqeservice",
+    "list": "Oem",
+    "description": "Performs Wi-Fi diagnostics",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   {
     "id": "com.iflytek.speechsuite",
@@ -2392,6 +2582,15 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+    {
+    "id": "com.hisi.mapcon",
+    "list": "Oem",
+    "description": "Provides GPS services",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   },
   {
     "id": "com.huawei.KoBackup",
@@ -2423,7 +2622,7 @@
   {
     "id": "com.huawei.android.internal.app",
     "list": "Oem",
-    "description": "Component of Huawei sharing. I read someone saying \"Do not remove or you won't be able to send files to apps\".\nCan someone test it ? \n",
+    "description": "Component of Huawei sharing\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2442,6 +2641,15 @@
     "id": "com.huawei.calendar",
     "list": "Oem",
     "description": "Huawei Calendar app.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.camera",
+    "list": "Oem",
+    "description": "Huawei's stock Camera app",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2473,6 +2681,24 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.printservice",
+    "list": "Oem",
+    "description": "Print service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.rcsserviceapplication",
+    "list": "Oem",
+    "description": "Huawei Rich Communication Service\nProvides sending messages to another Huawei phone",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   {
     "id": "com.android.mediacenter",
@@ -7011,6 +7237,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.cts.ctsshim",
+    "list": "Aosp",
+    "description": "Compatibility Test Suite\nUsed by manufacturer to test your copy of the device for performance. It just exists and doesn't run in background. More info:\nhttps://source.android.com/docs/compatibility/cts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.android.deskclock",
     "list": "Aosp",
     "description": "AOSP Clock app\nSome OEMs (like Huawei & Xiaomi) use the same package name for their app.\n",
@@ -7119,6 +7354,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.internal.display.cutout.emulation.narrow",
+    "list": "Aosp",
+    "description": "Display cutout variant\nhttps://developer.android.com/develop/ui/views/layout/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.internal.display.cutout.emulation.noCutout",
     "list": "Aosp",
     "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
@@ -7138,6 +7382,15 @@
   },
   {
     "id": "com.android.internal.display.cutout.emulation.waterfall",
+    "list": "Aosp",
+    "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.internal.display.cutout.emulation.wide",
     "list": "Aosp",
     "description": "Display cutout variant\nhttps://developer.android.com/guide/topics/display-cutout\nhttps://source.android.com/devices/tech/display/display-cutouts",
     "dependencies": [],
@@ -16974,6 +17227,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.android.partnerbrowsercustomizations.tmobile",
+    "list": "Carrier",
+    "description": "The proprietary application of the mobile operator T-Mobile, presumably displays ads, is responsible for the operation of some of the operator's settings",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.android.chrome",
     "list": "Google",
     "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background. NOTE: disabling or uninstalling Chrome breaks functionality for creating and storing passkeys (https://fidoalliance.org/passkeys/) on your phone, so keep this enabled if you want to use that form of authentication.",
@@ -19332,6 +19594,24 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.languagedownloader",
+    "list": "Oem",
+    "description": "Allows you to load the system languages when changing them",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.lbs",
+    "list": "Oem",
+    "description": "(China only) Huawei's own services needed to determine the location of the smartphone during screen locking by GPS. Also has the fingerprints permission. It sends this data to:\nwww.google.com\nstreamback.ff.avast.com\nconnectivitycheck.android.com",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.mirror",
     "list": "Oem",
     "description": "Huawei Mirror app.\nMirror like \"Glass\"",
@@ -19341,9 +19621,54 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.huawei.motionservice",
+    "list": "Oem",
+    "description": "Gestures pack related to device movement by your hand. Example: flip your phone to hang up a call",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.huawei.nb.service",
+    "list": "Oem",
+    "description": "Service for discovering nearby devices by GPS",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.nearby",
+    "list": "Oem",
+    "description": "Service for discovering nearby devices by anything but GPS",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.huawei.numberidentity",
+    "list": "Oem",
+    "description": "Designed to block unwanted calls, but only works properly in China",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.huawei.scanner",
     "list": "Oem",
     "description": "AI Lens. Shop for objects that you take a picture of. This de-clutters the camera interface by removing the AI Lens button on the top left corner and does not break the AR Measure app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.huawei.screenrecorder",
+    "list": "Oem",
+    "description": "Stock screen recorder\nUseful only in pre-Android Pie for having system audio recording without root",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -20853,6 +21178,15 @@
     "removal": "Expert"
   },
   {
+  "id": "com.android.supl",
+  "list": "Aosp",
+  "description": "Secure User Plane Location\nA required thing for A-GPS to work",
+  "dependencies": [],
+  "neededBy": [],
+  "labels": [],
+  "removal": "Expert"
+  },
+  {
     "id": "com.oneplus.geoiptime",
     "list": "Oem",
     "description": "Sets the Timezone (it is not an NTP client). Automatically starts at boot and connects to `checkip.amazonaws.com` and `gateway.oneplus.com`.\n\nPithus analysis: https://beta.pithus.org/report/5e375a6b8da588a1490e42266f4e33975ce73207d79755a109101bd5fb07cc7c",
@@ -21055,6 +21389,15 @@
     "list": "Google",
     "description": "Overlay (theme/notification) module for com.google.android.cellbroadcastreceiver",
     "dependencies": ["com.google.android.cellbroadcastreceiver"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.google.android.overlay.settingsProvider",
+    "list": "Aosp",
+    "description": "Receives and applies settings received in a text or service message. It's better to leave it, because some wrote about the fall of programs after removal",
+    "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
@@ -21850,5 +22193,50 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "androidhwext",
+    "list": "Oem",
+    "description": "EMUI Graphical User Interface:\nhttps://fixyourandroid.com/about/androidhwext\nThe framework responsible for the themes (even the standard one) of EMUI to launch. Also, it's the core for the Themes app. REMOVING IT CAUSES A BOOTLOOP!",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  {
+    "id": "com.android.frameworkres.overlay",
+    "list": "Aosp",
+    "description": "Runtime Resource Overlay\nThis framework provides the ability to replace application resources while the application is running. More info:\nhttps://source.android.com/docs/core/runtime/rros",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.frameworkhwnext.honor",
+    "list": "Oem",
+    "description": "Framework necessary for Themes app to launch",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+    {
+    "id": "com.android.frameworkhwext",
+    "list": "Oem",
+    "description": "There is not much info but others seem to have disabled this and similar, see:\nhttps://forum.xda-developers.com/t/guide-list-of-bloatware-safe-to-remove-how-to-do-it.3866647.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.android.huawei.HiMediaEngine",
+    "list": "Oem",
+    "description": "Either it's a core of Huawei Music online part or the Huawei's TV app remote control. In both ways it isn't useful anyway.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
