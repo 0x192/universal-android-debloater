@@ -10944,6 +10944,24 @@
     "removal": "Expert"
   },
   {
+    "id": "com.softwinner.explore",
+    "list": "Oem",
+    "description": "File Manager of SoftWinner\nCan be disabled via system settings.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.softwinner.service",
+    "list": "Oem",
+    "description": "Possibly related to the firmware updater, since the updater has a similar name",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
     "id": "com.sonymobile.devicesecurity.service",
     "list": "Pending",
     "description": "",
