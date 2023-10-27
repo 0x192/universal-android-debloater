@@ -14139,6 +14139,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.debug.loggerui",
+    "list": "Misc",
+    "description": "DebugLoggerUI\nSimilar to logcat, in some sense. Mostly focused on video graphics logging and network logging (includes Bluetooth). On some devices, it runs in the background (working non-cache RAM) even while not in use.\nhttps://peterelst.com/what-is-debug-logger-ui-android",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.diotek.sec.lookup.dictionary",
     "list": "Misc",
     "description": "Samsung dictionary from Diotek (Korean company)\nhttp://en.diotek.com/\n",
