@@ -4970,7 +4970,7 @@
   {
     "id": "com.sec.android.diagmonagent",
     "list": "Oem",
-    "description": "Diagnostic Monitoring Agent\nUsed to send diagnostic data to Samsung\nData collection from Settings > Biometrics and security > Send diagnostic data\n",
+    "description": "Diagnostic Monitoring Agent\nUsed to send diagnostic data to Samsung\nData collection from Settings > Biometrics and security > Send diagnostic data\nDisabling this causes scheduled services to aggressively launch it every second, spamming the android crash log and overheating the device, thus draining battery. More info is needed on the dependencies that trigger this behavior. Version tested: 9.0.11.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
