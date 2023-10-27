@@ -10487,7 +10487,7 @@
   {
     "id": "com.samsung.android.app.sharelive",
     "list": "Oem",
-    "description": "Samsung QuickShare\nRelated to `com.samsung.android.aware.service`.",
+    "description": "Samsung Quick Share from the Galaxy Store\nDoesn't break anything if you remove it. But obviously you can't use Quick Share.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
