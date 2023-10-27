@@ -1,11 +1,11 @@
 [package]
 name = "uad_gui"
 description = "A cross-platform GUI debloater for android devices"
-version = "0.5.1"
+version = "0.5.2"
 authors = ["w1nst0n"]
 license = "GPL-3.0"
-homepage = "https://github.com/0x192/universal-android-debloater"
-repository = "https://github.com/0x192/universal-android-debloater"
+homepage = "https://github.com/Frigyes06/universal-android-debloater"
+repository = "https://github.com/Frigyes06/universal-android-debloater"
 readme = "README.md"
 keywords = ["debloater", "android", "adb", "privacy", "bloatware"]
 categories = ["gui"]
