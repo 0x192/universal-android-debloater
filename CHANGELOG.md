@@ -1,5 +1,7 @@
 # Changelog
 
+**THIS IS AN UNOFFICIAL FORK**
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -8,13 +10,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.5.3] - Unreleased
+
+### Added
+- [[#13]] com.telus.myaccount package
+
+### Changed
+
+### Fixed
+- [[#14]] Fixed typos in uad_list.json
+
+### Removed
+
 ## [0.5.2] - Released
 
 **WARNING: Settings specification has changed. Previous user settings will be erased**.
-**THIS IS AN UNOFFICIAL FORK**
 
 ### Added
-- All of AnonymousWP's patches. This release notes will probably be restarted as issue counter is reset on fork.
+- [[#11]] All of AnonymousWP's patches. This release notes will probably be restarted as issue counter is reset on fork.
 
 - [[#374](https://github.com/0x192/universal-android-debloater/pull/374)] **Device-specific persistent configuration:** Some settings are now device-specific which means you can maintain different settings across several devices.
 
