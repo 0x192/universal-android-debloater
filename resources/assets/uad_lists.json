@@ -6897,7 +6897,7 @@
   {
     "id": "com.android.bookmarkprovider",
     "list": "Aosp",
-    "description": "Only exists for compatibility reasons to prevent apps querying it from getting null cursors they do not expect and crash.\n",
+    "description": "Only exists for compatibility reasons to prevent apps querying it from getting null cursors they do not expect and crash.\nDisabling this on LDPlayer emulator crashes the default browser (`com.android.browser`).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
