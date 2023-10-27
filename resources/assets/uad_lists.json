@@ -4880,11 +4880,11 @@
   {
     "id": "com.sec.android.app.apex",
     "list": "Oem",
-    "description": "Samsung ApexService\nProvides a motion photos player/viewer\nhttps://www.samsung.com/global/galaxy/what-is/motion-photo/\n",
+    "description": "Samsung ApexService\nEnables taking motion photos and provides a motion photos player/viewer\nhttps://www.samsung.com/global/galaxy/what-is/motion-photo/\nIt also does face recognition in the gallery.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   {
     "id": "com.sec.android.app.applinker",
