@@ -12,14 +12,13 @@ and `Removed`.
 
 ## [0.5.3] - Unreleased
 
-### Added
+### Apps
 - [[#13](https://github.com/Frigyes06/universal-android-debloater/pull/13)] com.telus.myaccount package
-- [[#15](https://github.com/Frigyes06/universal-android-debloater/pull/15)] more Wiko oem packages
+- [[#15](https://github.com/Frigyes06/universal-android-debloater/pull/15)] more Wiko oem packages/
 
-### Changed
-- [[#16](https://github.com/Frigyes06/universal-android-debloater/pull/16)] com.android.companiondevicemanager description improved
 ### Fixed
 - [[#14](https://github.com/Frigyes06/universal-android-debloater/pull/14)] Fixed typos in uad_list.json
+- [[#18](https://github.com/Frigyes06/universal-android-debloater/pull/18)] Fixed ABD command to include all packages, not just system packages. Also fixed uad_list update url.
 
 ### Removed
 

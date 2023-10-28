@@ -142,7 +142,7 @@ pub fn user_flag(user_id: Option<&User>) -> String {
 }
 
 pub fn list_all_system_packages(user_id: Option<&User>) -> String {
-    let action = format!("pm list packages -s -u{}", user_flag(user_id));
+    let action = format!("pm list packages -u{}", user_flag(user_id));
 
     adb_shell_command(true, &action)
         .unwrap_or_else(|_| String::new())
@@ -152,8 +152,8 @@ pub fn list_all_system_packages(user_id: Option<&User>) -> String {
 pub fn hashset_system_packages(state: PackageState, user_id: Option<&User>) -> HashSet<String> {
     let user = user_flag(user_id);
     let action = match state {
-        PackageState::Enabled => format!("pm list packages -s -e{user}"),
-        PackageState::Disabled => format!("pm list package -s -d{user}"),
+        PackageState::Enabled => format!("pm list packages -e{user}"),
+        PackageState::Disabled => format!("pm list package -d{user}"),
         _ => String::new(), // You probably don't need to use this function for anything else
     };
 
