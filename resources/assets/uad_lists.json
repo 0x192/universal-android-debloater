@@ -23237,5 +23237,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "android.autoinstalls.config.Xiaomi.model",
+    "list": "Oem",
+    "description": "it works similar to android.autoinstalls.config.Xiaomi.cepheus, by installing apps on first setup, some phones use this instead of a codename.\nLike my redmi 9c which uses android.autoinstalls.config.Xiaomi.model.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
