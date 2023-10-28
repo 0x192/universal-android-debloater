@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
+## [0.6.1] - Uneleased
+
+### Apps
+- [[#21](https://github.com/Frigyes06/universal-android-debloater/pull/21)] added android.autoinstalls.config.Xiaomi.model package
+
 ## [0.6.0] - Released
 
 ### Apps
