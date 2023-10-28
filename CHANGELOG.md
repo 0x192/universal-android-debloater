@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 The sections should follow the order `Apps`, `Added`, `Changed`, `Fixed`, `Packaging`
 and `Removed`.
 
-## [0.5.3] - Unreleased
+## [0.6.0] - Released
 
 ### Apps
 - [[#13](https://github.com/Frigyes06/universal-android-debloater/pull/13)] com.telus.myaccount package
@@ -19,8 +19,7 @@ and `Removed`.
 ### Fixed
 - [[#14](https://github.com/Frigyes06/universal-android-debloater/pull/14)] Fixed typos in uad_list.json
 - [[#18](https://github.com/Frigyes06/universal-android-debloater/pull/18)] Fixed ABD command to include all packages, not just system packages. Also fixed uad_list update url.
-
-### Removed
+- TikTok app description
 
 ## [0.5.2] - Released
 
