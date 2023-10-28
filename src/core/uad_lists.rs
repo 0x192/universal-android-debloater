@@ -179,7 +179,7 @@ pub fn load_debloat_lists(remote: bool) -> (Result<PackageHashMap, PackageHashMa
     let list: Vec<Package> = if remote {
         retry(Fixed::from_millis(1000).take(60), || {
             match ureq::get(
-                "https://raw.githubusercontent.com/0x192/universal-android-debloater/\
+                "https://raw.githubusercontent.com/Frigyes06/universal-android-debloater/\
            main/resources/assets/uad_lists.json",
             )
             .call()
