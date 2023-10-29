@@ -14,6 +14,7 @@ and `Removed`.
 
 ### Apps
 - [[#21](https://github.com/Frigyes06/universal-android-debloater/pull/21)] added android.autoinstalls.config.Xiaomi.model package
+- [[#23](https://github.com/Frigyes06/universal-android-debloater/pull/23)] modified the description for ASOP camera app.
 
 ## [0.6.0] - Released
 
