@@ -23241,7 +23241,7 @@
   {
     "id": "android.autoinstalls.config.Xiaomi.model",
     "list": "Oem",
-    "description": "it works similar to android.autoinstalls.config.Xiaomi.cepheus, by installing apps on first setup, some phones use this instead of a codename.\nLike my redmi 9c which uses android.autoinstalls.config.Xiaomi.model.",
+    "description": "It works similar to android.autoinstalls.config.Xiaomi.cepheus, by installing apps on first setup, some phones use this instead of a codenamed package.\nLike the Redmi 9C which uses android.autoinstalls.config.Xiaomi.model.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
