@@ -25,20 +25,19 @@ static_init = "^1.0"
 fern = { version = "^0", features = ["colored"] }
 chrono = { version = "^0.4", default-features = false, features = ["std", "clock"] }
 log = "^0.4"
-regex = "^1.5"
+regex = "^1.10.2"
 toml = "^0"
 dirs = "^5.0.0"
 ureq = { version = "*", features = ["json"] }
 retry = { version = "^2.0.0" }
-iced = "0.8.0"
-iced_native = "0.9.1"
-iced_wgpu = "0.11.1"
-iced_glow = "0.8.0"
-iced_core = "0.10.0"
-iced_futures = "0.7.0"
-iced_glutin = "0.8.0"
-iced_graphics = "0.9.0"
-iced_winit = "0.10.0"
+iced = "0.9.0"
+iced_native = "^0.10.3"
+iced_wgpu = "^0.11.1"
+iced_glow = "^0.8.0"
+iced_core = "^0.10.0"
+iced_futures = "^0.7.0"
+iced_graphics = "^0.9.0"
+iced_winit = "^0.10.1"
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }

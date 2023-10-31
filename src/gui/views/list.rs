@@ -311,8 +311,8 @@ impl List {
                 let search_packages = text_input(
                     "Search packages...",
                     &self.input_value,
-                    Message::SearchInputChanged,
                 )
+                .on_input(Message::SearchInputChanged)
                 .padding(5);
 
                 let user_picklist = pick_list(

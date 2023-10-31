@@ -210,7 +210,7 @@ impl scrollable::StyleSheet for Theme {
         }
     }
 
-    fn hovered(&self, style: &Self::Style) -> scrollable::Scrollbar {
+    fn hovered(&self, style: &Self::Style, _mouse_over_scrollbar: bool) -> scrollable::Scrollbar {
         scrollable::Scrollbar {
             scroller: self.active(style).scroller,
             ..self.active(style)
@@ -218,7 +218,7 @@ impl scrollable::StyleSheet for Theme {
     }
 
     fn dragging(&self, style: &Self::Style) -> scrollable::Scrollbar {
-        let hovered = self.hovered(style);
+        let hovered = self.hovered(style, true);
         scrollable::Scrollbar {
             scroller: hovered.scroller,
             ..hovered
@@ -312,6 +312,10 @@ impl text_input::StyleSheet for Theme {
             border_radius: 5.0,
             border_width: 0.0,
             border_color: self.palette().base.foreground,
+            icon_color: Color {
+                a: 0.5,
+                ..self.palette().normal.primary
+            },
         }
     }
 
@@ -323,6 +327,28 @@ impl text_input::StyleSheet for Theme {
             border_color: Color {
                 a: 0.5,
                 ..self.palette().normal.primary
+            },
+            icon_color: Color {
+                a: 0.5,
+                ..self.palette().normal.primary
+            },
+        }
+    }
+
+    fn disabled_color(&self, _: &<Self as iced::widget::text_input::StyleSheet>::Style) -> iced::Color { todo!() }
+
+    fn disabled(&self, _style: &Self::Style) -> text_input::Appearance {
+        text_input::Appearance {
+            background: Background::Color(self.palette().base.background),
+            border_radius: 2.0,
+            border_width: 1.0,
+            border_color: Color {
+                a: 0.5,
+                ..self.palette().base.foreground
+            },
+            icon_color: Color {
+                a: 0.5,
+                ..self.palette().base.foreground
             },
         }
     }
