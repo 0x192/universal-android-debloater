@@ -23246,5 +23246,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  {
+    "id": "com.mi.android.globallauncher",
+    "list": "Oem",
+    "description": "Poco Launcher\nSystem Launcher for POCO Phone, the way icons apps are organized and displayed.\nIf you remove this package you will loose navigation gestures and recent apps view.\nhttps://play.google.com/store/apps/details?id=com.mi.android.globallauncher",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
   }
 ]
