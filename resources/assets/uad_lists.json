@@ -23255,5 +23255,14 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  {
+    "id": "com.mediatek.mt6879.gamedriver",
+    "list": "Misc",
+    "description": "Mediatek Arm GPU Game Driver\nGPU Game drivers for Mediatek MT6879CPU.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
   }
 ]
