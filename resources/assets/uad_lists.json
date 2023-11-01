@@ -7516,6 +7516,15 @@
     "removal": "Expert"
   },
   {
+    "id": "com.android.cellbroadcastreceiver.module",
+    "list": "Aosp",
+    "description": "Same as com.android.cellbroadcastreceiver.\nCell broadcasting used to send emergency alerts.\nhttps://en.wikipedia.org/wiki/Cell_Broadcast.",
+    "dependencies": ["com.android.cellbroadcastreceiver"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
     "id": "com.android.contacts",
     "list": "Aosp",
     "description": "AOSP Contacts\nSome OEMs(for example Xiaomi) use the same package name for their app.",
