@@ -14,7 +14,7 @@ edition = "2021"
 [features]
 default = ["wgpu", "self-update"]
 wgpu = []                         # Iced/wgpu is default
-glow = []              # OpenGL support
+glow = ["iced/glow"]              # OpenGL support
 self-update = ["flate2", "tar"]
 no-self-update = []
 
@@ -32,13 +32,6 @@ ureq = { version = "*", features = ["json"] }
 retry = { version = "^2.0.0" }
 iced = "0.8.0"
 iced_native = "0.9.1"
-iced_wgpu = "0.11.1"
-iced_glow = "0.8.0"
-iced_core = "0.10.0"
-iced_futures = "0.7.0"
-iced_glutin = "0.8.0"
-iced_graphics = "0.9.0"
-iced_winit = "0.10.0"
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
 flate2 = { version = "^1", optional = true }
