@@ -10513,7 +10513,7 @@
   },
   {
     "id": "com.samsung.android.dialer",
-    "list": "Unsafe",
+    "list": "Oem",
     "description": "Samsung Phone app\n",
     "dependencies": [],
     "neededBy": [],
