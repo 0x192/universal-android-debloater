@@ -10288,7 +10288,7 @@
   },
   {
     "id": "com.samsung.android.service.tagservice",
-    "list": "Advanced",
+    "list": "Oem",
     "description": "Tags in Samsung Gallery app.",
     "dependencies": [],
     "neededBy": [],
@@ -10657,7 +10657,7 @@
   },
   {
     "id": "com.samsung.android.setting.multisound",
-    "list": "Advanced",
+    "list": "Oem",
     "description": "Samsung Separate app sound\nUsed to split audio different apps between phone speaker and bluetooth speaker. Pretty handy.\n",
     "dependencies": [],
     "neededBy": [],
@@ -10702,12 +10702,12 @@
   },
   {
     "id": "com.samsung.android.vtcamerasettings",
-    "list": "Advanced",
+    "list": "Oem",
     "description": "Samsung Video call effects\nAbility to change your in-call video background with a color, photo, or blur it. Unfortunately, only supports a few apps (Meet, Whatsapp, Zoom).\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   {
     "id": "com.samsung.android.wifi.softapwpathree.resources",
