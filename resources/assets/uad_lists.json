@@ -3449,7 +3449,7 @@
   {
     "id": "com.samsung.android.app.routines",
     "list": "Oem",
-    "description": "Samsung bixby routines (https://www.samsung.com/global/galaxy/what-is/bixby-routines/)\nAutomating actions triggered by context clues: location, time, or event\n",
+    "description": "Samsung Modes and Routines (previously aka Bixby Routines) (https://www.samsung.com/global/galaxy/what-is/bixby-routines/)\nAutomating actions triggered by context clues: location, time, or event\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3628,6 +3628,15 @@
   },
   {
     "id": "com.samsung.android.aware.service",
+    "list": "Oem",
+    "description": "Samsung Quick Share Agent\nUse Wifi direct to share files between 2 Samsung Galaxy phones (it's only for Samsung Galaxy users)\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.samsung.android.app.sharelive",
     "list": "Oem",
     "description": "Samsung Quick Share\nUse Wifi direct to share files between 2 Samsung Galaxy phones (it's only for Samsung Galaxy users)\nQuick Share also lets you temporarily upload files to Samsung Cloud\nThere are better alternatives (compatible with all Android devices and free and open-source):\nFor instance: https://f-droid.org/packages/com.genonbeta.TrebleShot/\n",
     "dependencies": [],
@@ -3989,7 +3998,7 @@
   {
     "id": "com.samsung.android.mdx.kit",
     "list": "Oem",
-    "description": "MDE Service Framework\nMDE = Multi Devices Experience (https://www.samsung.com/levant/multi-device-experience/)\nFramework for IoT stuff.\nAsks for a LOT of dangerous permissions\nInteracts with \"com.samsung.android.mobileservice\" and \"com.osp.app.signin\"\n",
+    "description": "MDE Service Framework / Quick Share Connectivity\nMDE = Multi Devices Experience (https://www.samsung.com/levant/multi-device-experience/)\nFramework for IoT stuff.\nContinuousy runs in background.\nAsks for a LOT of dangerous permissions\nInteracts with \"com.samsung.android.mobileservice\" and \"com.osp.app.signin\"\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4007,7 +4016,7 @@
   {
     "id": "com.samsung.android.mobileservice",
     "list": "Oem",
-    "description": "Samsung Experience Service (https://play.google.com/store/apps/details?id=com.samsung.android.mobileservice)\nHandle you samsung account and is needed to use some samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\n",
+    "description": "Samsung Group Sharing / Samsung Experience Service (https://play.google.com/store/apps/details?id=com.samsung.android.mobileservice)\nHandle you samsung account and is needed to use some samsung apps features.\nIt allows you to use multiple Samsung apps, such as Samsung Health, Samsung Pay, Galaxy Apps, Samsung Members, and SmartThings, \nwith your Samsung account credentials.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10279,8 +10288,8 @@
   },
   {
     "id": "com.samsung.android.service.tagservice",
-    "list": "Pending",
-    "description": "",
+    "list": "Advanced",
+    "description": "Tags in Samsung Gallery app.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10504,8 +10513,8 @@
   },
   {
     "id": "com.samsung.android.dialer",
-    "list": "Pending",
-    "description": "",
+    "list": "Unsafe",
+    "description": "Samsung Phone app\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10648,8 +10657,8 @@
   },
   {
     "id": "com.samsung.android.setting.multisound",
-    "list": "Pending",
-    "description": "",
+    "list": "Advanced",
+    "description": "Samsung Separate app sound\nUsed to split audio different apps between phone speaker and bluetooth speaker. Pretty handy.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10693,8 +10702,8 @@
   },
   {
     "id": "com.samsung.android.vtcamerasettings",
-    "list": "Pending",
-    "description": "",
+    "list": "Advanced",
+    "description": "Samsung Video call effects\nAbility to change your in-call video background with a color, photo, or blur it. Unfortunately, only supports a few apps (Meet, Whatsapp, Zoom).\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -13484,7 +13493,7 @@
   {
     "id": "com.microsoft.appmanager",
     "list": "Misc",
-    "description": "Your Phone Companion - Link to Windows (https://play.google.com/store/apps/details?id=com.microsoft.appmanager)\nMicrosoft app for synchronising your phone with a W10 PC.\n",
+    "description": "Link to Windows (https://play.google.com/store/apps/details?id=com.microsoft.appmanager)\nMicrosoft app for synchronising your phone with a Windows PC.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
