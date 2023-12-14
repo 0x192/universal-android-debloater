@@ -4002,7 +4002,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Unsafe"
   },
   {
     "id": "com.samsung.android.mobileservice",
