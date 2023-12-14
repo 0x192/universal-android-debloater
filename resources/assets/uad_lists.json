@@ -4002,7 +4002,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Unsafe"
   },
   {
     "id": "com.samsung.android.mobileservice",
@@ -5010,7 +5010,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Unsafe"
   },
   {
     "id": "com.sec.android.app.ringtoneBR",
@@ -10450,8 +10450,17 @@
   },
   {
     "id": "com.samsung.android.app.telephonyui",
-    "list": "Pending",
-    "description": "",
+    "list": "Oem",
+    "description": "Allow to manage Phone app and SIM settings. ",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.samsung.android.app.telephonyui.esimclient",
+    "list": "Oem",
+    "description": "Allow to manage Phone app and eSIM settings. ",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
