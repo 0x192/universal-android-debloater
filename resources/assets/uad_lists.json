@@ -5010,7 +5010,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Unsafe"
   },
   {
     "id": "com.sec.android.app.ringtoneBR",
