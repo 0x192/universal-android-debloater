@@ -15806,7 +15806,7 @@
   {
     "id": "com.miui.videoplayer",
     "list": "Oem",
-    "description": "Mi Video (https://play.google.com/store/apps/details?id=com.miui.videoplayer)\n",
+    "description": "Mi Video (https://play.google.com/store/apps/details?id=com.miui.videoplayer)\n Seems to be a dependency for viewing/editing slow motion videos recorded with the stock camera on some Xiaomi devices.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
