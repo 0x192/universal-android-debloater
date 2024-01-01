@@ -21599,4 +21599,22 @@
     "labels": [],
     "removal": "Advanced"
   }
+  {
+    "id": "com.android.DeviceAsWebcam",
+    "list": "Oem",
+    "description": "Allows using certain Pixel phones as a USB webcam.\nMay break USB function picker.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.android.healthconnect.overlay",
+    "list": "Google",
+    "description": "Permission picker for apps using Health Connect\n. Can be uninstalled if you don't care about Health Connect.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
 ]
