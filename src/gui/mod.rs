@@ -13,12 +13,15 @@ use views::list::{List as AppsView, LoadingState as ListLoadingState, Message as
 use views::settings::{Message as SettingsMessage, Settings as SettingsView};
 use widgets::navigation_menu::nav_menu;
 
+use iced::font;
 use iced::widget::column;
 use iced::{
     window::Settings as Window, Alignment, Application, Command, Element, Length, Renderer,
-    Settings,
+    Settings, Font,
 };
 use std::{env, path::PathBuf};
+
+pub const ICON_FONT: Font = Font::with_name("icons");
 
 #[cfg(feature = "self-update")]
 use crate::core::update::{bin_name, download_update_to_temp_file, remove_file};
@@ -65,6 +68,7 @@ pub enum Message {
     _NewReleaseDownloaded(Result<(PathBuf, PathBuf), ()>),
     GetLatestRelease(Result<Option<Release>, ()>),
     Nothing,
+    FontLoaded(Result<(), font::Error>),
 }
 
 impl Application for UadGui {
@@ -77,6 +81,7 @@ impl Application for UadGui {
         (
             Self::default(),
             Command::batch([
+                font::load(include_bytes!("../../resources/assets/icons.ttf").as_slice()).map(Message::FontLoaded),
                 Command::perform(get_devices_list(), Message::LoadDevices),
                 Command::perform(
                     async move { get_latest_release() },
@@ -317,6 +322,7 @@ impl Application for UadGui {
                 Command::none()
             }
             Message::Nothing => Command::none(),
+            Message::FontLoaded(_) => Command::none(),
         }
     }
 
@@ -355,12 +361,15 @@ impl UadGui {
     pub fn start() -> iced::Result {
         Self::run(Settings {
             window: Window {
-                size: (1050, 800),
+                size: {
+                    iced::Size {
+                        width: 1050.0, height: 800.0}
+                    },
                 resizable: true,
                 decorations: true,
                 ..iced::window::Settings::default()
             },
-            default_text_size: 17.0,
+            default_text_size: iced::Pixels(17.0),
             ..Settings::default()
         })
     }

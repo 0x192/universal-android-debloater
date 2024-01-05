@@ -6,7 +6,7 @@ use crate::core::uad_lists::{
 };
 use crate::core::utils::fetch_packages;
 use crate::gui::style;
-use crate::gui::widgets::navigation_menu::ICONS;
+use crate::gui::ICON_FONT;
 use std::collections::HashMap;
 use std::env;
 
@@ -311,8 +311,8 @@ impl List {
                 let search_packages = text_input(
                     "Search packages...",
                     &self.input_value,
-                    Message::SearchInputChanged,
                 )
+                .on_input(Message::SearchInputChanged)
                 .padding(5);
 
                 let user_picklist = pick_list(
@@ -515,7 +515,7 @@ impl List {
                     .style(style::Text::Danger),
                 tooltip(
                     text("\u{EA0C}")
-                        .font(ICONS)
+                        .font(ICON_FONT)
                         .width(17)
                         .horizontal_alignment(alignment::Horizontal::Center)
                         .style(style::Text::Commentary)
@@ -574,18 +574,16 @@ impl List {
                                                 row![text(
                                                     self.phone_packages[selection.0][selection.1]
                                                         .removal
-                                                )]
-                                                .width(100),
+                                                )],
                                                 row![text(
                                                     self.phone_packages[selection.0][selection.1]
                                                         .uad_list
-                                                )]
-                                                .width(60),
+                                                )],
                                                 row![text(
                                                     self.phone_packages[selection.0][selection.1]
                                                         .name
                                                         .clone()
-                                                ),],
+                                                )],
                                                 horizontal_space(Length::Fill),
                                                 row![match self.phone_packages[selection.0]
                                                     [selection.1]
@@ -605,8 +603,7 @@ impl List {
                                                         text("Restore").style(style::Text::Ok),
                                                     PackageState::All => text("Impossible")
                                                         .style(style::Text::Danger),
-                                                },]
-                                                .width(60),
+                                                },],
                                             ]
                                             .width(Length::Fill)
                                             .spacing(20),
@@ -615,7 +612,7 @@ impl List {
                                 )
                         },
                     )
-                    .padding(10)
+                    .padding([10, 20, 10, 10])
                     .width(Length::Fill),
                 )
                 .style(style::Scrollable::Description),
@@ -805,7 +802,7 @@ fn recap<'a>(
 ) -> Element<'a, Message, Renderer<Theme>> {
     container(
         row![
-            text(removal).size(25).width(Length::FillPortion(1)),
+            text(removal).width(Length::FillPortion(1)),
             vertical_rule(5),
             row![
                 if settings.device.disable_mode {

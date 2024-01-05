@@ -12,22 +12,19 @@ categories = ["gui"]
 edition = "2021"
 
 [features]
-default = ["wgpu", "self-update"]
-wgpu = []                         # Iced/wgpu is default
-glow = ["iced/glow"]              # OpenGL support
+default = ["self-update"]
 self-update = ["flate2", "tar"]
 no-self-update = []
 
 [dependencies]
-iced = { git = "https://github.com/iced-rs/iced.git" }
-iced_native = { git = "https://github.com/iced-rs/iced.git" }
+iced = { git = "https://github.com/iced-rs/iced.git", features = ["advanced"] }
 serde = { version = "^1.0", features = ["derive"] }
 serde_json = "^1.0"
 static_init = "^1.0"
-fern = { version = "^0", features = ["colored"] }
+fern = { version = "^0", features = ["colored"] } # TO CHANGE // no longer maintained
 chrono = { version = "^0.4", default-features = false, features = ["std", "clock"] }
 log = "^0.4"
-regex = "^1.5"
+regex = "^1.0"
 toml = "^0"
 dirs = "^5.0.0"
 ureq = { version = "*", features = ["json"] }

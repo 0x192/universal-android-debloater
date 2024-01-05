@@ -3,14 +3,9 @@ use crate::core::theme::Theme;
 use crate::core::update::{SelfUpdateState, SelfUpdateStatus};
 pub use crate::gui::views::about::Message as AboutMessage;
 pub use crate::gui::views::list::{List as AppsView, LoadingState as ListLoadingState};
-use crate::gui::{style, Message};
+use crate::gui::{style, Message, ICON_FONT};
 use iced::widget::{button, container, pick_list, row, text, Space, Text};
-use iced::{alignment, Alignment, Element, Font, Length, Renderer};
-
-pub const ICONS: Font = Font::External {
-    name: "Icons",
-    bytes: include_bytes!("../../../resources/assets/icons.ttf"),
-};
+use iced::{alignment, Alignment, Element, Length, Renderer};
 
 pub fn nav_menu<'a>(
     device_list: &'a Vec<Phone>,
@@ -19,8 +14,8 @@ pub fn nav_menu<'a>(
     self_update_state: &SelfUpdateState,
 ) -> Element<'a, Message, Renderer<Theme>> {
     let apps_refresh_btn = button(
-        Text::new("\u{E900}")
-            .font(ICONS)
+        Text::new("\u{e900}")
+            .font(ICON_FONT)
             .width(17)
             .horizontal_alignment(alignment::Horizontal::Center)
             .size(17),
