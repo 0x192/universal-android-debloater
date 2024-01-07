@@ -75,12 +75,12 @@ impl About {
         let self_update_row = row![uad_version_text, self_update_btn, last_self_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(550);
+            .width(600);
 
         let uad_list_row = row![uad_list_text, uad_lists_btn, last_update_text,]
             .align_items(Alignment::Center)
             .spacing(10)
-            .width(550);
+            .width(600);
 
         #[cfg(feature = "self-update")]
         let update_column = column![uad_list_row, self_update_row]
