@@ -16184,7 +16184,7 @@
   {
     "id": "com.xiaomi.micloud.sdk",
     "list": "Oem",
-    "description": "Mi Cloud sdk \nsdk = Software development kit\nSeems to be a dependency for \"com.miui.gallery\" (the MIUI may not work if you remove this package)\n",
+    "description": "Mi Cloud sdk \nsdk = Software development kit\nSeems to be a dependency for \"com.miui.gallery\"May create an annoying popup (or even a popup loop) everytime you save an image/video\n (the MIUI may not work if you remove this package)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
