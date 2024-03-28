@@ -21598,5 +21598,140 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.easyshare",
+    "list": "Oem",
+    "description": "EasyShare",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.feedback",
+    "list": "Oem",
+    "description": "Feedback Vivo",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.weather",
+    "list": "Oem",
+    "description": "Weather",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.widgetweather",
+    "list": "Oem",
+    "description": "Weather components",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vivo.notes",
+    "list": "Oem",
+    "description": "Notes",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.stepcount",
+    "list": "Oem",
+    "description": "Step count service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  {
+    "id": "com.vivo.magazine",
+    "list": "Oem",
+    "description": "Lock Screen Poster Service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.vlife.vivo.wallpaper",
+    "list": "Oem",
+    "description": "Dynamic lockscreen service",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  {
+    "id": "com.opera.browser",
+    "list": "Play Store Opera Browser",
+    "description": "Opera Browser",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.google.android.apps.playconsole",
+    "list": "Google",
+    "description": "Google Play Console (It is for developer publishes their Apps on Google Play Store.)",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.valvesoftware.android.steam.community",
+    "list": "Steam",
+    "description": "Steam",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vanced.manager",
+    "list": "Vanced Manager",
+    "description": "Vanced Manager",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.mgoogle.android.gms",
+    "list": "Vanced Manager",
+    "description": "Vanced MicroG services(similar like google services).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.vanced.android.apps.youtube.music",
+    "list": "Vanced Manager",
+    "description": "Youtube Vanced Music",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
+    "id": "com.heytap.headset",
+    "list": "Oem",
+    "description": "HeyTap Melody App used to manage Oppo Bluetooth Earphones.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 ]
