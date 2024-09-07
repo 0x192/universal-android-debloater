@@ -86,7 +86,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - From the settings, disconnect from any OEM accounts (when you delete an OEM
   account package it could lock you on the lockscreen because the phone can't
   associate your identity anymore)
-- Install ADB (see the intructions by clicking on your OS below):
+- Install ADB (see the instructions by clicking on your OS below):
   <p>
   <details>
   <summary>LINUX</summary>
