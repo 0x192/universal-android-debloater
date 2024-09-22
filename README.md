@@ -86,7 +86,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - From the settings, disconnect from any OEM accounts (when you delete an OEM
   account package it could lock you on the lockscreen because the phone can't
   associate your identity anymore)
-- Install ADB (see the intructions by clicking on your OS below):
+- Install ADB (see the instructions by clicking on your OS below):
   <p>
   <details>
   <summary>LINUX</summary>
@@ -131,8 +131,8 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
     brew install android-platform-tools
     ```
 
-    </details>
-    </p>
+  </details>
+  </p>
 
   <p>
   <details>
@@ -150,12 +150,10 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
      adb devices
     ```
 
-    </details>
-    </p>
+  </details>
+  </p>
 
-- Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases).
-  Take the `opengl` version only if the default version (with a Vulkan backend)
-  doesn't launch.
+- Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases). Take the `opengl` version only if the default version (with a Vulkan backend) doesn't launch.
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock
 apps because those Chinese manufacturers (especially Xiaomi and Huawei) have been
