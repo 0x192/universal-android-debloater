@@ -11900,7 +11900,7 @@
   {
     "id": "com.lge.leccp",
     "list": "Oem",
-    "description": "LG Connectivity Service\nI didn't find any info about this package.\n",
+    "description": "LG Connectivity Service\nEnables connection between devices, providing features like audio output switching in supported devices.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
