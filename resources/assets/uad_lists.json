@@ -15912,6 +15912,15 @@
     "removal": "Recommended"
   },
   {
+    "id": "com.mi.globalminusscreen",
+    "list": "Oem",
+    "description": "App Vault (https://play.google.com/store/apps/details?id=com.mi.android.globalminusscreen)\nGoogle Feed replica from Xiaomi\nCompletely useless app which displays all the trending stories from the web + a bunch of other stupid things.\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  {
     "id": "com.mi.AutoTest",
     "list": "Oem",
     "description": "Assemble test\nHidden app used by the manufacturer to test various hardware components\n",
@@ -16139,7 +16148,7 @@
   {
     "id": "com.xiaomi.payment",
     "list": "Oem",
-    "description": "Old package name for Mi Credit (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\nMi Credit is a personal loan platform from Xiaomi.\n",
+    "description": "Old package name for Mi Coin, which used to be called Mi Credit (https://play.google.com/store/apps/details?id=com.micredit.in.gp)\nMi Credit is a personal loan platform from Xiaomi.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16174,8 +16183,8 @@
   },
   {
     "id": "com.xiaomi.glgm",
-    "list": "Oem",
-    "description": "Xiaomi Games\nNot sure if this app still exists.\n",
+    "list": "Oem", 
+    "description": "Game Center\nIt's a gaming platform from Xiaomi that provides game recommendations, news, and social features.\nIncludes achievements, leaderboards, and friend lists for supported games.\nAlso displays ads and collects usage data.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
