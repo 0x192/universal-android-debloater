@@ -1,3 +1,5 @@
 debug/
 target/
 *.log
+.github/
+.cargo/
