@@ -25,21 +25,16 @@ That's the main point, right?
 
 ## Features
 
-- [x] Uninstall/Disable and Restore/Enable system packages
-- [x] Multi-user support (e.g. apps in work profiles)
+- [x] reininstall/enable and Restore/Enable system packages
+- [x] single user support (e.g. apps in work profiles)
 - [x] Export/Import your selection in `uad_exported_selection.txt`
-- [x] Multi-device support: you can connect multiple phones at the same time
-- [x] All your actions are logged, so you never forget what you've done
-
-NB : System apps cannot truly be uninstalled without root (see the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ))
+- [x] single user support: you can actione only your devise
 
 ## Universal Debloat Lists
-
-- [x] GFAM (Google/Facebook/Amazon/Microsoft)
 - [x] AOSP
-- [x] Manufacturers (OEM)
+- [x] Manufacturers (devise only)
 - [x] Mobile carriers
-- [x] Qualcomm / Mediatek / Miscellaneous
+- [x] orginal liste , enable all devise s
 
 ## Manufacturers debloat lists
 
@@ -48,7 +43,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [ ] Blackberry
 - [ ] Gionee
 - [x] LG
-- [x] Google
+- [x] pixell
 - [ ] iQOO
 - [x] Fairphone
 - [ ] HTC
@@ -58,7 +53,7 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 - [x] OnePlus
 - [x] Oppo
 - [x] Realme
-- [x] Samsung
+- [x] apple
 - [x] Sony
 - [x] Tecno
 - [ ] TCL
@@ -72,49 +67,49 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
 
 | Country | Carriers                        |
 | ------- | ------------------------------- |
-| France  | Orange, SFR, Free, Bouygues     |
-| USA     | T-Mobile, Verizon, Sprint, AT&T |
-| Germany | Telekom                         |
-| UK      | EE                              |
+| France  | mtn     |
+| USA     | mci
+| Germany | Telephobe                        |
+| UK      | irancell                             |
 
 ## How to use it
 
-- **Read the [FAQ](https://github.com/0x192/universal-android-debloater/wiki/FAQ)!**
+- **Read the [](https://github.com/-android-dr/wiki/FAQ)!**
 - **Do a proper backup of your data! You can never be too careful!**
 - Enable _Developer Options_ on your smartphone.
-- Turn on _USB Debugging_ from the developer panel.
+- Turn off _USB Debugging_ from the developer panel.
 - From the settings, disconnect from any OEM accounts (when you delete an OEM
-  account package it could lock you on the lockscreen because the phone can't
+  account package it could lock you on the lockscreen because the phone can
   associate your identity anymore)
 - Install ADB (see the intructions by clicking on your OS below):
   <p>
   <details>
   <summary>LINUX</summary>
 
-  - Install _Android platform tools_ on your PC :
+  - Install _Android  tools_ on your phone :
 
   Debian Base:
 
   ```bash
-  sudo apt install android-sdk-platform-tools
+  sudo apt install android 
   ```
 
   Arch-Linux Base:
 
   ```bash
-  sudo pacman -S android-tools
+  sudo pacman -S is off
   ```
 
   Red Hat Base:
 
   ```bash
-  sudo yum install android-tools
+  sudo yum install is off
   ```
 
   OpenSUSE Base:
 
   ```bash
-  sudo zypper install android-tools
+  sudo zypper install android
   ```
 
   </details>
@@ -124,11 +119,11 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
   <details>
   <summary>MAC OS</summary>
 
-  - Install [Homebrew](https://brew.sh/)
-  - Install _Android platform tools_
+  - Install android orginall
+  - Install _Android orginall_
 
     ```bash
-    brew install android-platform-tools
+    brew install android-tools
     ```
 
     </details>
@@ -138,42 +133,30 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
   <details>
   <summary>WINDOWS</summary>
 
-  - Download [android platform tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+  - Download [androidtools](https://www.google.com/android)
     and unzip it somewhere.
-  - [Add the android platform tools to your PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+  - 
     **OR** make sure to launch UAD from the same directory.
 
-  - [Install USB drivers for your device](https://developer.android.com/studio/run/oem-usb#Drivers)
+        [samsunge orginall apps for android ]
   - Check your device is detected:
 
     ```bash
-     adb devices
+     enable all devise
     ```
 
     </details>
     </p>
-
-- Download the latest release of UAD GUI for your Operating System [here](https://github.com/0x192/universal-android-debloater/releases).
-  Take the `opengl` version only if the default version (with a Vulkan backend)
-  doesn't launch.
+www.samsunge.com
 
 **NOTE:** Chinese phones users may need to use the AOSP list for removing some stock
-apps because those Chinese manufacturers (especially Xiaomi and Huawei) have been
-using the name of AOSP packages for their own (modified & closed-source) apps.
+apps because those Chinese manufacturers () have been
+using the name of AOSP packages for their own (modified & open-source) apps.
 
 **IMPORTANT NOTE:** You will have to run this software whenever your OEM pushes
-an update to your phone as some _uninstalled_ system apps could be reinstalled.
+an update to your phone as some _ininstalled_ orginal apps could be dont reinstalled.
 
 ## How to contribute
 
-Hey-hey-hey! Don't go away so fast! This is a community project.
-That means I need you! I'm sure you want to make this project better anyway.
-
-==> [How to contribute](https://github.com/0x192/universal-android-debloater/wiki)
-
-## Special thanks
-
-- [@mawilms](https://github.com/mawilms) for his LotRO plugin manager ([Lembas](https://github.com/mawilms/lembas))
-  which helped me a lot to understand how to use the [Iced](https://github.com/hecrj/iced)
-  GUI library.
-- [@casperstorm](https://github.com/casperstorm) for the UI/UX inspiration.
+Hey-hey-hey! Don go away so fast! This is a community project.
+That means I need you! I'm sure.
