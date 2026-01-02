@@ -131,8 +131,8 @@ NB : System apps cannot truly be uninstalled without root (see the [FAQ](https:/
     brew install android-platform-tools
     ```
 
-    </details>
-    </p>
+  </details>
+  </p>
 
   <p>
   <details>
